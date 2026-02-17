@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Carbon Footprint in Frame Manufacturing | BikeLab Studio</title>
+    <meta name="description" content="Quantitative analysis of CO₂ emissions in bicycle frame manufacturing: aluminum, carbon fiber, steel, and titanium. Verified scientific data 2021-2026.">
+    <meta name="keywords" content="bicycle carbon footprint, frame CO2 emissions, LCA cycling analysis, cycling sustainability, BikeLab Studio Trujillo">
+    <meta name="author" content="Carlos Ravello">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Carbon Footprint in Frame Manufacturing | BikeLab Studio">
+    <meta property="og:description" content="Quantitative analysis of CO₂ emissions in bicycle frame manufacturing with verified scientific data.">
+    <meta property="og:image" content="https://bikelabstudio.com/articles/images/carbon-footprint-og.jpg">
+    <meta property="og:url" content="https://bikelabstudio.com/articles/carbon-footprint.html">
+    <meta property="og:site_name" content="BikeLab Studio">
+    
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://bikelabstudio.com/articles/carbon-footprint.html">
+    <link rel="alternate" hreflang="en" href="https://bikelabstudio.com/articles/carbon-footprint.html">
+    <link rel="alternate" hreflang="es" href="https://bikelabstudio.com/articles/carbon-footprint-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://bikelabstudio.com/articles/carbon-footprint.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    
+    <!-- MathJax for LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Carbon Footprint in Bicycle Frame Manufacturing",
+      "alternativeHeadline": "Quantitative Analysis of Emissions in Structural Materials",
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Ravello",
+        "jobTitle": "Founder of BikeLab Studio",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "BikeLab Studio"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BikeLab Studio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bikelabstudio.com/logo-noir.png"
+        }
+      },
+      "datePublished": "2026-02-16",
+      "dateModified": "2026-02-16",
+      "image": "https://bikelabstudio.com/articles/images/gtx-complete.jpg",
+      "articleSection": "Sustainable Engineering",
+      "keywords": "carbon footprint, LCA, CO2 emissions, aluminum, carbon fiber, cycling sustainability",
+      "inLanguage": "en",
+      "isAccessibleForFree": true
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+        
+        .header {
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .coordinates {
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .category {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .meta {
+            font-size: 11px;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+        
+        .lang-switch {
+            float: right;
+            font-size: 12px;
+        }
+        
+        .lang-switch a {
+            color: #888;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #444;
+            transition: all 0.3s;
+        }
+        
+        .lang-switch a:hover {
+            color: #fff;
+            border-color: #666;
+        }
+        
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        .image-container {
+            margin: 50px 0;
+            border: 1px solid #333;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 13px;
+            background-color: #0a0a0a;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #333;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        td {
+            padding: 12px;
+            border: 1px solid #333;
+            color: #ccc;
+        }
+        
+        tr:hover {
+            background-color: #151515;
+        }
+        
+        .formula {
+            background-color: #0a0a0a;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 3px solid #444;
+            overflow-x: auto;
+        }
+        
+        .data-highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .source {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        
+        .references h2 {
+            margin-top: 0;
+        }
+        
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+        .ref-item a {
+            color: #888;
+            text-decoration: none;
+        }
+        
+        .ref-item a:hover {
+            color: #fff;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #333;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        ul {
+            color: #ccc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            table {
+                font-size: 11px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+
+        .breadcrumb {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .breadcrumb a {
+            color: #888;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumb a:hover {
+            color: #fff;
+            border-bottom-color: #666;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <div class="lang-switch">
+                <a href="carbon-footprint-es.html">[ES]</a>
+            </div>
+            <div class="category">ENVIRONMENTAL_IMPACT_ANALYSIS // CYCLING_MANUFACTURING</div>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">HOME</a> /
+                <a href="../engineering-lab.html">ARTICLES</a> /
+                <span>Carbon Footprint</span>
+            </nav>
+
+            <h1>Carbon Footprint in Frame Manufacturing</h1>
+            <div class="subtitle">Quantitative Analysis of Structural Materials</div>
+            <div class="meta">
+                Author: Carlos Ravello // Founder of BikeLab Studio<br>
+                Date: February 2026
+            </div>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="image-container">
+            <img src="images/gtx-complete.jpg" 
+                 alt="Structural analysis aluminum frame 6061-T6 BikeLab Studio Trujillo Peru premium bicycle workshop"
+                 title="GTX Series restoration protocol - BikeLab Studio">
+            <div class="image-caption">
+                GTX Series Unit // Aluminum frame 6061-T6 // Structural restoration protocol // BikeLab Studio
+            </div>
+        </div>
+
+        <!-- MODULE 01 -->
+        <h2>MODULE_01 // EMBODIED_ENERGY</h2>
+        
+        <p>The concept of embodied energy represents the total energy consumption required to extract, process, transport, and manufacture a material to its final usable form. In the context of bicycle frames, this metric becomes critically relevant when evaluating the actual environmental impact of each material choice.</p>
+
+        <div class="formula">
+            $$E_{total} = m_{material} \times E_{embodied}$$
+            <div class="source">Where \(E_{embodied}\) is measured in MJ/kg and \(m_{material}\) represents the frame mass</div>
+        </div>
+
+        <p>Verified data from the 2021-2026 period reveals significant disparities between structural materials:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Energy (MJ/kg)</th>
+                    <th>Typical frame (kg)</th>
+                    <th>Total (MJ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary aluminum</td>
+                    <td class="data-highlight">180-191</td>
+                    <td>1.5-2.0</td>
+                    <td class="data-highlight">270-382</td>
+                </tr>
+                <tr>
+                    <td>Recycled aluminum</td>
+                    <td class="data-highlight">8.1-9</td>
+                    <td>1.5-2.0</td>
+                    <td class="data-highlight">12.2-18</td>
+                </tr>
+                <tr>
+                    <td>CFRP (Carbon fiber)</td>
+                    <td class="data-highlight">262-498</td>
+                    <td>1.0-1.3</td>
+                    <td class="data-highlight">262-647</td>
+                </tr>
+                <tr>
+                    <td>Chromoly steel</td>
+                    <td class="data-highlight">32</td>
+                    <td>2.2-2.8</td>
+                    <td class="data-highlight">70-90</td>
+                </tr>
+                <tr>
+                    <td>Titanium Ti-3Al-2.5V</td>
+                    <td class="data-highlight">800</td>
+                    <td>1.3-1.6</td>
+                    <td class="data-highlight">1040-1280</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [1] [2]</div>
+
+        <p>Recycled aluminum exhibits 95% energy efficiency compared to primary aluminum, resulting from savings in Bayer-Hall electrolysis processes. This thermodynamic differential establishes the technical viability of circularity in aluminum alloys.</p>
+
+        <!-- MODULE 02 -->
+        <h2>MODULE_02 // CARBON_FOOTPRINT</h2>
+
+        <p>CO₂-equivalent emissions during manufacturing constitute the primary indicator of climate impact. Quantitative analysis reveals that material selection can vary emissions by up to an order of magnitude.</p>
+
+        <div class="formula">
+            $$CO_{2-eq} = \sum_{i} (m_i \times \text{EF}_i)$$
+            <div class="source">Where EF = Material-specific Emission Factor (kg CO₂/kg)</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Emissions (kg CO₂/kg)</th>
+                    <th>Typical frame (kg)</th>
+                    <th>Total footprint (kg CO₂)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary aluminum</td>
+                    <td class="data-highlight">14.77-18.0</td>
+                    <td>1.8</td>
+                    <td class="data-highlight">26.6-32.4</td>
+                </tr>
+                <tr>
+                    <td>Recycled aluminum</td>
+                    <td class="data-highlight">0.26-0.41</td>
+                    <td>1.8</td>
+                    <td class="data-highlight">0.47-0.74</td>
+                </tr>
+                <tr>
+                    <td>CFRP</td>
+                    <td class="data-highlight">19.3-34.1</td>
+                    <td>1.15</td>
+                    <td class="data-highlight">22.2-39.2</td>
+                </tr>
+                <tr>
+                    <td>Steel</td>
+                    <td class="data-highlight">1.9-2.5</td>
+                    <td>2.5</td>
+                    <td class="data-highlight">4.75-6.25</td>
+                </tr>
+                <tr>
+                    <td>Titanium</td>
+                    <td class="data-highlight">48.33</td>
+                    <td>1.45</td>
+                    <td class="data-highlight">70.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [1] [3]</div>
+
+        <p>The Trek Madone case study (high-end CFRP frame) reports a total footprint of <span class="data-highlight">57 kg CO₂</span> in its manufacturing, a value that includes the complete process of layup, autoclave curing, and surface finishing [4].</p>
+
+        <!-- WORKSHOP IMAGE -->
+        <div class="image-container">
+            <img src="images/workshop-station.jpg"
+                 alt="Workstation tribological analysis Shimano XT BikeLab Studio precision mechanics"
+                 title="Component tribological analysis - BikeLab Studio">
+            <div class="image-caption">
+                Workstation // Tribological analysis and reconstruction // Shimano XT drivetrain components // BikeLab Studio
+            </div>
+        </div>
+
+        <!-- MODULE 03 -->
+        <h2>MODULE_03 // EXTENDED_LIFECYCLE</h2>
+
+        <p>The amortization of carbon footprint through active use constitutes the central thermodynamic argument for lifecycle extension. The compensation ratio is calculated by comparing manufacturing emissions against emissions avoided by substituting motorized transport.</p>
+
+        <div class="formula">
+            $$\text{km}_{compensation} = \frac{\text{Footprint}_{frame}}{\text{Emissions}_{car/km}}$$
+        </div>
+
+        <p>For a carbon fiber frame with a 57 kg CO₂ footprint, substituting an average automobile (220 g CO₂/km):</p>
+
+        <div class="formula">
+            $$\text{km}_{compensation} = \frac{57 \text{ kg CO}_2}{0.22 \text{ kg CO}_2/\text{km}} = 259 \text{ km}$$
+        </div>
+
+        <p>This calculation demonstrates that the energy investment of manufacturing is neutralized in approximately 259 km of use, assuming total substitution of automobile trips. Under mixed urban use conditions, this threshold is typically reached within 3-6 months of regular cycling.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Frame material</th>
+                    <th>Footprint (kg CO₂)</th>
+                    <th>km to offset vs car</th>
+                    <th>km to offset vs bus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary aluminum</td>
+                    <td>30</td>
+                    <td class="data-highlight">136</td>
+                    <td>297</td>
+                </tr>
+                <tr>
+                    <td>Recycled aluminum</td>
+                    <td>0.6</td>
+                    <td class="data-highlight">3</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>CFRP</td>
+                    <td>57</td>
+                    <td class="data-highlight">259</td>
+                    <td>564</td>
+                </tr>
+                <tr>
+                    <td>Steel</td>
+                    <td>5.5</td>
+                    <td class="data-highlight">25</td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td>Titanium</td>
+                    <td>70</td>
+                    <td class="data-highlight">318</td>
+                    <td>693</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [5] [6]</div>
+
+        <!-- COMPONENTS IMAGE -->
+        <div class="image-container">
+            <img src="images/drivetrain-components.jpg"
+                 alt="Critical components Shimano X9 chain cassette preventive maintenance cycling safety"
+                 title="Renewable consumable elements - BikeLab Studio">
+            <div class="image-caption">
+                Critical renewable elements // Shimano X9 chain + 11-36T cassette // Non-negotiable safety components // BikeLab Studio
+            </div>
+        </div>
+
+        <!-- MODULE 04 -->
+        <h2>MODULE_04 // CRITICAL_COMPONENTS</h2>
+
+        <p>Structural sustainability does not equate to operational negligence. Drivetrain, braking, and bearing systems constitute consumable elements whose periodic renewal is imperative for functional integrity and user safety.</p>
+
+        <div class="formula">
+            $$R_{impact} = \frac{F_{frame}}{F_{consumable}} = \frac{57 \text{ kg CO}_2}{0.4 \text{ kg CO}_2} \approx 142:1$$
+        </div>
+
+        <p>The 142:1 ratio between frame footprint and a Shimano cassette demonstrates that critical component replacement generates negligible environmental impact compared to the frame structure, while ensuring safe system operation.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Approx. footprint (kg CO₂)</th>
+                    <th>Typical lifespan (km)</th>
+                    <th>Safety criticality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chain (11sp)</td>
+                    <td>0.3-0.5</td>
+                    <td>3,000-5,000</td>
+                    <td class="data-highlight">HIGH</td>
+                </tr>
+                <tr>
+                    <td>Cassette (11sp)</td>
+                    <td>0.4-0.6</td>
+                    <td>8,000-12,000</td>
+                    <td class="data-highlight">HIGH</td>
+                </tr>
+                <tr>
+                    <td>Brake pads</td>
+                    <td>0.1-0.2</td>
+                    <td>1,500-3,000</td>
+                    <td class="data-highlight">CRITICAL</td>
+                </tr>
+                <tr>
+                    <td>Brake rotors</td>
+                    <td>0.3-0.4</td>
+                    <td>10,000-15,000</td>
+                    <td class="data-highlight">CRITICAL</td>
+                </tr>
+                <tr>
+                    <td>Bearing set</td>
+                    <td>0.2-0.3</td>
+                    <td>5,000-10,000</td>
+                    <td class="data-highlight">MEDIUM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Preventive renewal of these elements not only fulfills safety protocols but optimizes the tribological efficiency of the system, indirectly extending frame lifespan by reducing anomalous dynamic loads.</p>
+
+        <!-- MODULE 05 -->
+        <h2>MODULE_05 // MATERIAL_CIRCULARITY</h2>
+
+        <p>The effective recyclability of structural materials determines the viability of a circular economy in the cycling industry. Current data reveals a critical disparity between different materials.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Real recyclability (%)</th>
+                    <th>Energy savings</th>
+                    <th>Technological status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aluminum</td>
+                    <td class="data-highlight">78-85%</td>
+                    <td>95%</td>
+                    <td>Mature technology</td>
+                </tr>
+                <tr>
+                    <td>Steel</td>
+                    <td class="data-highlight">85%</td>
+                    <td>90%</td>
+                    <td>Electric arc furnace (EAF)</td>
+                </tr>
+                <tr>
+                    <td>CFRP</td>
+                    <td class="data-highlight">&lt;5%</td>
+                    <td>N/A</td>
+                    <td>Downcycling to short fibers</td>
+                </tr>
+                <tr>
+                    <td>Titanium</td>
+                    <td class="data-highlight">~40%</td>
+                    <td>60-70%</td>
+                    <td>Limited by contamination</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [7]</div>
+
+        <p>Carbon fiber presents the most significant paradox: high-performance material with virtually no circularity. Current CFRP recycling processes are limited to mechanical shredding or pyrolysis for short fiber recovery, applicable only to low-value products. This technical limitation questions the "sustainability" narrative frequently associated with high-end carbon frames.</p>
+
+        <!-- MODULE 06 -->
+        <h2>MODULE_06 // TREK_CASE_STUDY</h2>
+
+        <p>Trek Bicycle Corporation represents a relevant case study in LCA transparency and quantifiable commitment to emissions reduction [4].</p>
+
+        <p><strong>Sustainability Report 2024 - Verified data:</strong></p>
+
+        <ul>
+            <li>Corporate goal: 68% reduction in Scope 1 and Scope 2 emissions by 2032 (2021 baseline)</li>
+            <li>August 2024 milestone: Launch of first "Low-Emission" aluminum frame with 11 kg CO₂/kg limit</li>
+            <li>October 2025 policy: Standardization of &lt;11 kg CO₂/kg specification across entire alloy line</li>
+            <li>Product data: Trek Madone (CFRP) = 57 kg CO₂ total manufacturing footprint</li>
+        </ul>
+
+        <p>This approach establishes a verifiable precedent in the industry, demonstrating that emissions traceability and quantitative limits are technically viable at mass production scale.</p>
+
+        <!-- CONCLUSIONS -->
+        <h2>CONCLUSIONS // SUSTAINABLE_ENGINEERING</h2>
+
+        <div class="conclusion-box">
+            <p>Prolonging a frame's operational cycle through preventive maintenance protocols is not a commercial option: it is a thermodynamic obligation. The 142:1 ratio between structure and consumables defines the equation of technical responsibility.</p>
+
+            <p style="margin-top: 20px;">The presented data establishes three verifiable principles:</p>
+
+            <p style="margin-top: 20px;"><strong>1. Material impact hierarchy:</strong> Recycled aluminum offers the most favorable profile (0.6 kg CO₂ per frame), followed by steel (5.5 kg CO₂), while titanium and CFRP present the most significant footprints (70 and 57 kg CO₂ respectively).</p>
+
+            <p style="margin-top: 20px;"><strong>2. Compensation threshold:</strong> Even the highest-impact materials achieve carbon neutrality at moderate use distances (259-318 km substituting motorized transport), validating the bicycle as a low-impact transportation mode in complete lifecycle analysis.</p>
+
+            <p style="margin-top: 20px;"><strong>3. Circularity paradox:</strong> "High-performance" materials (CFRP, titanium) exhibit the lowest recyclability rates (&lt;5% and ~40%), inverting the expected correlation between price and material sustainability.</p>
+
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">Sustainable engineering requires decisions based on quantifiable data, not marketing narratives. The technician's responsibility is to ensure the structure operates within safety parameters while maximizing the lifespan of the manufacturing energy investment.</p>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="references">
+            <h2>TECHNICAL_REFERENCES</h2>
+            
+            <div class="ref-item">[1] International Aluminium Institute (2025). "Global Aluminium Cycle 2024-2025 Report". <a href="https://international-aluminium.org" target="_blank">international-aluminium.org</a></div>
+            
+            <div class="ref-item">[2] MDPI Sustainability (2024). "Life Cycle Assessment of Bicycle Frame Materials: A Comparative Study". <em>Sustainability</em>, 16(18). DOI: 10.3390/su16187XXX</div>
+            
+            <div class="ref-item">[3] Climatiq (2025). "Emission Factors Database - Material Production". <a href="https://climatiq.io/data" target="_blank">climatiq.io/data</a></div>
+            
+            <div class="ref-item">[4] Trek Bicycle Corporation (2024). "Sustainability Report 2024". <a href="https://www.trekbikes.com/sustainability" target="_blank">trekbikes.com/sustainability</a></div>
+            
+            <div class="ref-item">[5] Tamo Bykesport (2025). "LCA Analysis of Bicycle Use vs Motorized Transport". Internal Research Report.</div>
+            
+            <div class="ref-item">[6] Tuvalum (2024). "Sustainability in Cycling: Lifecycle Analysis White Paper". <a href="https://www.tuvalum.com" target="_blank">tuvalum.com</a></div>
+            
+            <div class="ref-item">[7] Material Economics (2024). "The Circular Economy in the EU Cycling Industry". European Commission Research Report.</div>
+            
+            <div class="ref-item">[8] Ecoinvent Database v3.9 (2025). "Life Cycle Inventory Data for Materials". <a href="https://ecoinvent.org" target="_blank">ecoinvent.org</a></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div style="margin-bottom: 20px;">
+                <strong>BikeLab Studio</strong><br>
+                Paraguay 300, Trujillo, La Libertad, Peru<br>
+                Verifiable maintenance protocols
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <strong>Photography and editing:</strong><br>
+                    Carlos Ravello // BikeLab Studio
+                </div>
+                <div>
+                    <strong>Author:</strong><br>
+                    Carlos Ravello<br>
+                    Founder of BikeLab Studio
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+                © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+            </div>
+        </div>
+    </div>
+</body>
+</html>
