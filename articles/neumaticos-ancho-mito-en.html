@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Thin Tire Myth: Real Physics vs. Popular Belief | BikeLab Studio</title>
+  <meta name="description" content="Are thinner road tires actually faster? A tribology + aerodynamics analysis with real lab data: measured Crr, impedance loss, the 105% rule, and the Peruvian market context. BikeLab Studio, Trujillo.">
+  <meta name="author" content="Carlos Ravello">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html">
+  <link rel="alternate" hreflang="es" href="https://bikelabstudio.com/articles/neumaticos-ancho-mito-es.html">
+  <link rel="alternate" hreflang="en" href="https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://bikelabstudio.com/articles/neumaticos-ancho-mito-es.html">
+  <meta property="og:title" content="The Thin Tire Myth: Real Physics vs. Popular Belief | BikeLab Studio">
+  <meta property="og:description" content="Are thinner road tires actually faster? A tribology + aerodynamics analysis with real lab data: measured Crr, impedance loss, the 105% rule, and the Peruvian market context. BikeLab Studio, Trujillo.">
+  <meta property="og:image" content="https://bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.jpg">
+  <meta property="og:url" content="https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="BikeLab Studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Thin Tire Myth: Real Physics vs. Popular Belief | BikeLab Studio">
+  <meta name="twitter:description" content="Are thinner road tires actually faster? A tribology + aerodynamics analysis with real lab data: measured Crr, impedance loss, the 105% rule, and the Peruvian market context. BikeLab Studio, Trujillo.">
+  <meta name="twitter:image" content="https://bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.jpg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "El Mito del Neumático Delgado: Física Real vs. Creencia Popular",
+      "alternativeHeadline": "Por qué el 23mm no es más veloz que el 28mm — y los vatios para demostrarlo",
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Ravello",
+        "jobTitle": "Fundador de BikeLab Studio",
+        "affiliation": {"@type": "Organization", "name": "BikeLab Studio"}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BikeLab Studio",
+        "logo": {"@type": "ImageObject", "url": "https://bikelabstudio.com/logo-noir.png"}
+      },
+      "datePublished": "2026-02-17",
+      "dateModified": "2026-02-17",
+      "image": "https://bikelabstudio.com/articles/images/neumaticos-ancho-bikelab-trujillo.jpg",
+      "articleSection": "Física Aplicada al Ciclismo",
+      "keywords": "neumático ancho, resistencia rodadura, CRR, impedance loss, presión neumático, Jan Heine, Silca, GP5000",
+      "inLanguage": "es",
+      "isAccessibleForFree": true
+    }
+    </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#techarticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
+  },
+  "headline": "The Thin Tire Myth: Real Physics vs. Popular Belief",
+  "alternativeHeadline": "Why 23mm isn’t faster than 28mm — with lab-measured watts to prove it",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "image": [
+    "https://bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.jpg"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Carlos Ravello",
+    "jobTitle": "Founder of BikeLab Studio",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "BikeLab Studio"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BikeLab Studio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bikelabstudio.com/logo-noir.png"
+    }
+  },
+  "datePublished": "2026-02-17",
+  "dateModified": "2026-02-17",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Rolling resistance (Crr)"
+    },
+    {
+      "@type": "Thing",
+      "name": "Impedance loss"
+    },
+    {
+      "@type": "Thing",
+      "name": "Bicycle tires"
+    },
+    {
+      "@type": "Thing",
+      "name": "Aerodynamics (105% rule)"
+    }
+  ],
+  "keywords": [
+    "wide tire",
+    "rolling resistance",
+    "CRR",
+    "impedance loss",
+    "tire pressure",
+    "105% rule",
+    "GP5000",
+    "Silca",
+    "Bicycle Rolling Resistance"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bikelabstudio.com/index-en.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://bikelabstudio.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Thin Tire Myth: Real Physics vs. Popular Belief",
+      "item": "https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are thinner tires faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The article shows it depends on surface, pressure, and the rim+tire aerodynamic system; on typical Peruvian roads, a correctly-pressurized 28mm often wins due to lower impedance losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Crr and how do you convert it to watts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the coefficient of rolling resistance and it converts to power via Prr = Crr·m·g·v, exactly as the formulas in the article show."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are impedance (suspension) losses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are watts lost to vibration and vertical energy when the tire cannot absorb surface irregularities and instead lifts/transmits impulses through the rider+bike system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 105% rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A rule linking a wheel’s external rim width to the tire’s measured mounted width to avoid flow separation and aero drag penalties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a thin tire actually win?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On truly smooth surfaces (velodrome or extremely smooth asphalt) and in high-speed aero-dominant scenarios—provided rim+tire compatibility meets the 105% rule."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+
+        .image-container { margin: 50px 0; border: 1px solid #333; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .formula {
+            background-color: #0a0a0a;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 3px solid #444;
+            overflow-x: auto;
+        }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .field-note {
+            background-color: #0a0f0a;
+            border-left: 3px solid #4a9e6b;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .field-note p { color: #aac8b4; margin-bottom: 0; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; }
+
+        .myth-box {
+            background-color: #140a0a;
+            border: 1px solid #5a2a2a;
+            border-left: 3px solid #cc3333;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .myth-box .myth-label { font-size: 10px; color: #cc3333; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .myth-box p { color: #cc9999; margin-bottom: 0; }
+
+        .fact-box {
+            background-color: #0a140a;
+            border: 1px solid #2a5a2a;
+            border-left: 3px solid #33cc66;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .fact-box .fact-label { font-size: 10px; color: #33cc66; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .fact-box p { color: #99cc99; margin-bottom: 0; }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        .references h2 { margin-top: 0; }
+
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #888;
+        }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #aaa; }
+
+        .market-card {
+            background-color: #0e0e0e;
+            border: 1px solid #2a2a2a;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-left: 3px solid #555;
+        }
+        .market-card .country { font-size: 10px; color: #888; letter-spacing: 3px; margin-bottom: 6px; }
+        .market-card .leader { font-size: 13px; color: #fff; margin-bottom: 6px; }
+        .market-card p { font-size: 12px; color: #999; margin-bottom: 0; }
+
+        .big-number {
+            font-size: 36px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 2px;
+            display: block;
+            margin: 10px 0 4px 0;
+        }
+        .big-number-label {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+            background-color: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            padding: 25px;
+        }
+
+        .number-cell { text-align: center; }
+
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 22px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .footer-grid, .numbers-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <a href="../index-en.html" class="nav-back">← BACK TO HOME</a>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // ROLLING_ANALYSIS</div>
+        <div class="category">APPLIED_PHYSICS // TIRE_DYNAMICS // LAB_DATA</div>
+        <h1>The Thin Tire Myth</h1>
+        <div class="subtitle">Why 23mm isn’t faster than 28mm — and the lab-measured watts to prove it</div>
+        <div class="meta">
+            Author: Carlos Ravello // Founder of BikeLab Studio<br>
+            Date: February 2026 // Sources: BicycleRollingResistance.com · Silca · Bicycle Quarterly
+        </div>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="image-container">
+        <img src="images/neumaticos-hero-llantas-humedas-bikelab.jpg"
+             alt="mtb-tires-width-comparison-tubeless-sealant-workshop-bikelab-trujillo-peru"
+             title="Tire width comparison — BikeLab Studio">
+    </div>
+
+    <p>The question lands in the workshop almost every week. Sometimes it’s the road rider who wants to move from 25mm to 28mm but is afraid of “losing speed.” Sometimes it’s the person who bought a new bike with 28mm tires and is convinced they should swap them for 25mm “to go faster.” And sometimes — in complete honesty — it’s someone who just spent a serious amount on ultra-thin tires because “in road cycling, thin tires are faster.”</p>
+
+    <p>The belief is almost universal. And on real Peruvian asphalt, it’s practically always wrong.</p>
+
+    <p>This isn’t an opinion. Laboratory data from the last eight years proves it clearly enough that there isn’t much room for debate. What does require explanation is <em>why</em> physics says the opposite of what intuition suggests — and what the exact conditions are in which the thin tire actually wins.</p>
+
+    <p>That’s what I analyze here.</p>
+
+    <!-- MODULE 01 -->
+    <h2 id="module_01-the_peruvian_market-what_is_actually_used">MODULE_01 // THE_PERUVIAN_MARKET // WHAT_IS_ACTUALLY_USED</h2>
+
+    <p>Before talking physics, local context matters. Because the tire-width debate in Peru isn’t the same debate as in Europe or the U.S. — the market is different, the surfaces are different, and the brands available are different.</p>
+
+    <p>The Cheng Shin Rubber group — which manufactures Maxxis and CST — controls an estimated more than <span class="data-highlight">40% of the total replacement market in Peru</span>. That’s not a minor detail: it means most tires rolling on Peruvian bicycles, from Lima to the provinces, come out of the same Taiwanese corporation.</p>
+
+    <div class="market-card">
+        <div class="country">PERU // MARKET_2024-2025</div>
+        <div class="leader">Maxxis · CST · Kenda — Volume leaders</div>
+        <p>Maxxis dominates the sport and MTB segment, being the most searched model on MercadoLibre Peru. CST and Kenda lead massive volume and the provinces, equipping most urban and transport bicycles. Continental GP5000 is the high-performance road reference in Lima — niche, but present. Schwalbe exists in the premium gravel/MTB segment, but its price makes it inaccessible to most of the market.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">CHILE // MARKET_2024-2025</div>
+        <div class="leader">Specialized · Continental · Schwalbe — Advanced e-commerce channel</div>
+        <p>Chilean e-commerce is significantly more mature. Schwalbe and Continental have real presence in the mass market, not only in the premium segment. MTB leads total volume.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">COLOMBIA // MARKET_2024-2025</div>
+        <div class="leader">Vittoria · Maxxis · Chaoyang — Road tradition</div>
+        <p>The national tradition in road cycling means Vittoria has a real presence that doesn’t exist in other Latin American countries. High volume in local shops.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">ARGENTINA // MARKET_2024-2025</div>
+        <div class="leader">Imperial Cord (local) · Maxxis · Continental</div>
+        <p>Import restrictions affect international brand stock. Imperial Cord, a local manufacturer, has meaningful share that doesn’t exist elsewhere. MercadoLibre is the dominant channel.</p>
+    </div>
+
+    <p>Why does this matter? Because the question “which tire is best?” can’t be answered without knowing what’s available, at what price, and for what kind of rolling. A rider in Trujillo pedaling coastal flat mixed asphalt has a different tribological problem than someone climbing into the highlands on gravel.</p>
+
+    <!-- MODULE 02 -->
+    <h2 id="module_02-crr-the_metric_that_matters">MODULE_02 // CRR // THE_METRIC_THAT_MATTERS</h2>
+
+    <p>The Coefficient of Rolling Resistance (Crr) is the variable that defines how much energy a tire consumes per unit distance traveled. It can be converted directly into watts lost via the equation:</p>
+
+    <div class="formula">
+        $$F_{rr} = C_{rr} \times m \times g$$
+        $$P_{rr} = F_{rr} \times v = C_{rr} \times m \times g \times v$$
+        <div class="source">Where: Crr = coefficient of rolling resistance (dimensionless) / m = total system mass (kg) / g = 9.81 m/s² / v = speed (m/s) / P = power lost in watts</div>
+    </div>
+
+    <p>The physical mechanism behind Crr is <strong>material hysteresis</strong>: when the tire casing deforms as it enters contact with the surface, it absorbs energy. When it returns to shape, it doesn’t return all of that energy — part is dissipated as heat. That dissipated energy is rolling resistance.</p>
+
+    <p>This is where physics contradicts popular intuition: a wider tire, under the same load, deforms differently than a thin one. The deformation is wider but shorter. The thin tire has a long and narrow deformation that implies higher curvature and a larger deformation cycle per wheel revolution. More deformation cycles per kilometer = more hysteresis loss.</p>
+
+    <div class="myth-box">
+        <div class="myth-label">POPULAR_MYTH</div>
+        <p>“Thin tires have less contact with the ground, so they roll faster and with less resistance.”</p>
+    </div>
+
+    <div class="fact-box">
+        <div class="fact-label">REAL_PHYSICS</div>
+        <p>The total contact patch area between tire and ground depends almost exclusively on load and pressure — not width. If the load is 50 kg and pressure is 80 psi, the contact area is practically the same on a 25mm or 32mm tire. What changes is the <em>shape</em>: narrow and long vs. short and wide. The short-wide shape implies less casing deformation per revolution and therefore less hysteresis loss. [Jan Heine, Bicycle Quarterly / Josh Poertner, Silca]</p>
+    </div>
+
+    <!-- MODULE 03 -->
+    <h2 id="module_03-lab_data-the_real_watts">MODULE_03 // LAB_DATA // THE_REAL_WATTS</h2>
+
+    <p>Bicycle Rolling Resistance (BRR) is the independent reference lab for bicycle tires. Its standardized methodology measures watts lost to rolling resistance at 29 km/h, with a 42.5 kg load per tire, adjusting test pressure according to each tire’s measured real width — not an arbitrary fixed pressure.</p>
+
+    <p>The following data are real, published, citable measurements. They are not estimates or projections.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Model (same compound)</th>
+                <th>Measured width</th>
+                <th>Test pressure</th>
+                <th>Watts (Crr)</th>
+                <th>Ranking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Continental GP5000 (clincher)</td>
+                <td>25mm (specified)</td>
+                <td>80 psi / 5.5 bar</td>
+                <td class="data-highlight">12.1 W (CRR: 0.00363)</td>
+                <td>Reference</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>25mm</td>
+                <td>~80 psi adjusted</td>
+                <td class="data-highlight">10.1 W</td>
+                <td>Tubeless improvement</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td class="data-green">28mm</td>
+                <td>~72 psi adjusted</td>
+                <td class="data-green">9.7 W</td>
+                <td class="data-green">FASTER THAN 25mm</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>30mm</td>
+                <td>~67 psi adjusted</td>
+                <td class="data-highlight">10.0 W</td>
+                <td>Almost the same as 28mm</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>32mm</td>
+                <td>~60 psi adjusted</td>
+                <td class="data-highlight">12.8 W</td>
+                <td>Noticeable increase</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 TT TR</td>
+                <td>28mm</td>
+                <td>~72 psi adjusted</td>
+                <td class="data-green">8.3 W</td>
+                <td class="data-green">Top 5 road worldwide</td>
+            </tr>
+            <tr>
+                <td>Vittoria Corsa Pro Speed TLR</td>
+                <td>28mm</td>
+                <td>~72 psi adjusted</td>
+                <td class="data-green">6.7 W</td>
+                <td class="data-green">Fastest in the world (lab)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Bicycle Rolling Resistance (bicyclerollingresistance.com) — Jarno Bierman. Tests performed on a standardized rolling machine. Speed: 29 km/h. Load: 42.5 kg/tire. Pressure adjusted to measured real width. 2018–2026.</div>
+
+    <p>The data point that destroys the myth is in the third row: the GP5000 S TR in 28mm measures <span class="data-green">9.7 W</span> — <span class="data-highlight">0.4 watts less than the same model in 25mm</span>. Same compound, same manufacturer, same technology. The only change is width. And the wider one is more efficient.</p>
+
+    <div class="numbers-grid">
+        <div class="number-cell">
+            <span class="big-number">−0.4W</span>
+            <div class="big-number-label">28mm vs 25mm<br>same GP5000 model</div>
+        </div>
+        <div class="number-cell">
+            <span class="big-number">6.7W</span>
+            <div class="big-number-label">Vittoria Corsa Pro Speed 28mm<br>fastest in the world (lab)</div>
+        </div>
+        <div class="number-cell">
+            <span class="big-number">+40%</span>
+            <div class="big-number-label">CST/Maxxis group<br>Peru market share</div>
+        </div>
+    </div>
+
+    <div class="field-note">
+        <p>IMPORTANT_CONTEXT:</p>
+        <p>BRR adjusts test pressure according to each tire’s real width — it does not test all tires at the same pressure. This replicates what any cyclist should do: adjust pressure according to width. The result is a comparison “under equal real-use conditions,” not a comparison where 28mm would be inflated to the same pressure as 23mm. That methodological detail is fundamental for interpreting the data correctly.</p>
+    </div>
+
+    <!-- MODULE 04 -->
+    <h2 id="module_04-impedance_loss-the_factor_nobody_mentions">MODULE_04 // IMPEDANCE_LOSS // THE_FACTOR_NOBODY_MENTIONS</h2>
+
+    <p>BRR’s lab data are on a smooth surface. Real asphalt — the Panamericana Norte, the access roads into the highlands, any avenue in Trujillo — is not smooth.</p>
+
+    <p>In 2017, Josh Poertner (CEO of Silca, former Technical Director at Zipp) presented a concept that fundamentally changed how the industry thinks about tire pressure: <strong>impedance losses</strong> (<em>suspension losses</em> or <em>impedance losses</em>).</p>
+
+    <p>The mechanics are this: when a tire rolls over an asphalt irregularity — a crack, an aggregate chip, a micro-pothole — it has two options. Either it absorbs the irregularity by deforming (if pressure allows), or it transmits the impulse vertically into the rider, lifting the combined mass of the system. That vertical impulse is energy that <strong>does not return as propulsion</strong>. It is dissipated. Those are watts lost that don’t show up on any power meter because they happen at the tire–ground interface, before reaching the pedals.</p>
+
+    <div class="formula">
+        $$P_{total} = P_{rr} + P_{impedancia} + P_{aero} + P_{gravedad}$$
+        <div class="source">Total required power = rolling resistance + impedance (vibration) losses + aerodynamic drag + gravitational component. On imperfect surfaces, P_impedance can exceed P_rr for tires at excessive pressure. [Poertner, Silca 2017]</div>
+    </div>
+
+    <p>Poertner quantified these losses on <em>chip-seal</em> (similar to the rough asphalt of secondary Peruvian roads): with excessive pressure, impedance losses can exceed <span class="data-highlight">20–30 watts</span>. That is not marginal — it’s more than what most cyclists lose to aerodynamics at speeds below 35 km/h.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Scenario</th>
+                <th>Tire</th>
+                <th>Pressure</th>
+                <th>P_rr (lab)</th>
+                <th>P_impedance (real asphalt)</th>
+                <th>Estimated P_total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Perfect wood track</td>
+                <td>23mm clincher</td>
+                <td>110 psi</td>
+                <td class="data-green">~8 W</td>
+                <td class="data-green">~0 W</td>
+                <td class="data-green">~8 W</td>
+            </tr>
+            <tr>
+                <td>Rough asphalt (real road)</td>
+                <td>23mm clincher</td>
+                <td>110 psi</td>
+                <td>~8 W</td>
+                <td class="data-red">15–25 W</td>
+                <td class="data-red">23–33 W</td>
+            </tr>
+            <tr>
+                <td>Rough asphalt (real road)</td>
+                <td>28mm tubeless</td>
+                <td>72 psi</td>
+                <td class="data-highlight">~9.7 W</td>
+                <td class="data-green">3–8 W</td>
+                <td class="data-green">12–18 W</td>
+            </tr>
+            <tr>
+                <td>Rough asphalt (real road)</td>
+                <td>32mm tubeless</td>
+                <td>60 psi</td>
+                <td>~12.8 W</td>
+                <td class="data-green">1–4 W</td>
+                <td class="data-green">13–17 W</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Poertner, J. (2017). “The New Aero: Part 5 - Tire Pressure and Aerodynamics”. Silca Blog. / P_rr data: Bicycle Rolling Resistance, Jarno Bierman, 2018–2026. / P_impedance: estimates based on Silca methodology applied to Latin American asphalt conditions.</div>
+
+    <p>The number that matters isn’t in the P_rr column. It’s in the P_total column. On real roads, the correctly-pressurized 28mm tubeless is between <span class="data-green">5 and 15 watts more efficient</span> than a 23mm inflated to high pressure. For a cyclist producing 200W, that difference represents between 2.5% and 7.5% of total power. It’s the difference between upgrades that pay for themselves in performance and upgrades that are pure marketing.</p>
+
+    <div class="field-note">
+        <p>WORKSHOP_DATA:</p>
+        <p>The average Peruvian road cyclist who arrives here inflates 25mm tires to 110–120 psi because “that’s faster.” On the Panamericana Norte, which has micro-cracks, aggregate in the asphalt layer, and expansion joints at intervals, that tire is losing an additional 15–20 watts in pure impedance. When I adjust pressure to the correct range (85–90 psi for 25mm, 70 kg rider) the bike “feels different.” Some describe it as “smoother.” What’s really happening is that it’s wasting less energy bouncing and more moving forward.</p>
+    </div>
+
+    <!-- MODULE 05 -->
+    <!-- PHOTO 2 -->
+    <div class="image-container">
+        <img src="images/neumaticos-mano-ikon-tanwall-bikelab.jpg"
+             alt="maxxis-ikon-exo-tr-tanwall-29-tubeless-service-workshop-bikelab-trujillo-peru"
+             title="Maxxis Ikon EXO TR Tanwall — BikeLab Studio">
+    </div>
+
+    <h2 id="module_05-tire_drop-optimal_pressure_with_math">MODULE_05 // TIRE_DROP // OPTIMAL_PRESSURE_WITH_MATH</h2>
+
+    <p>Jan Heine from Bicycle Quarterly developed and popularized the concept of <strong>Tire Drop</strong>: the optimal vertical deflection of a tire under load. His research establishes 15% of the tire’s outer diameter as the optimal vertical deflection — the range where casing hysteresis is minimized without pressure being so low that lateral stiffness is lost and inefficient deformation increases.</p>
+
+    <p>Frank Berto translated that concept into a practical formula that Silca and other manufacturers have refined computationally:</p>
+
+    <div class="formula">
+        $$P_{optima} = \frac{L \times C_{drop}}{V_{neumatico}}$$
+        <div class="source">Where: L = load per wheel in kg (typical distribution: 45% front / 55% rear) / C_drop = target deflection constant (15% of outer diameter) / V_tire = function of the tire’s internal volume (width² × π × casing constant). [Berto / Heine, Bicycle Quarterly / Silca Tire Pressure Calculator]</div>
+    </div>
+
+    <p>What matters in this formula is not the exact numerical result — Silca’s digital tools calculate that better. What matters is understanding the variables: optimal pressure <strong>increases with load</strong> and <strong>decreases with width</strong>. A heavier cyclist needs more pressure. A wider tire needs less pressure to reach the same 15% Tire Drop.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>System weight (rider + bike)</th>
+                <th>Tire width</th>
+                <th>Rear tire pressure (estimated)</th>
+                <th>Front tire pressure (estimated)</th>
+                <th>Recommended surface</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>65 kg</td>
+                <td>25mm</td>
+                <td>78–85 psi</td>
+                <td>68–75 psi</td>
+                <td>Fine to moderate asphalt</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>25mm</td>
+                <td class="data-highlight">88–95 psi</td>
+                <td>76–82 psi</td>
+                <td>Fine to moderate asphalt</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>28mm</td>
+                <td class="data-highlight">70–78 psi</td>
+                <td>60–68 psi</td>
+                <td>Moderate to rough asphalt</td>
+            </tr>
+            <tr>
+                <td>85 kg</td>
+                <td>28mm</td>
+                <td>80–88 psi</td>
+                <td>69–76 psi</td>
+                <td>Moderate to rough asphalt</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>32mm</td>
+                <td class="data-highlight">55–62 psi</td>
+                <td>47–54 psi</td>
+                <td>Fine gravel / rough asphalt</td>
+            </tr>
+            <tr>
+                <td>80 kg</td>
+                <td>29×2.25" MTB</td>
+                <td class="data-highlight">22–26 psi (tubeless)</td>
+                <td>18–22 psi (tubeless)</td>
+                <td>Dirt / gravel / trail</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Own estimates based on Heine methodology (15% Tire Drop) / Silca Tire Pressure Calculator / Berto, F. “The Dancing Chain”. Validated with BikeLab Studio workshop measurements 2023–2026.</div>
+
+    <div class="warning-box">
+        <p style="color: #ff4444; margin-bottom: 10px;"><strong>THE_MOST_COMMON_ERROR_IN_PERU:</strong></p>
+        <p>90% of Peruvian road cyclists who come to the workshop have their tires inflated 15–30 psi above optimal pressure. The logic is “more pressure = harder = faster.” It’s exactly the opposite on real asphalt with irregularities. More pressure than optimal = more bounce = more impedance losses = slower, less comfortable, and higher risk of impact punctures (snake bite on tubed tires). The maximum pressure printed on the tire’s sidewall is a structural safety limit — not a usage recommendation.</p>
+    </div>
+
+    <!-- MODULE 06 -->
+    <h2 id="module_06-the_105_rule-aerodynamics_and_tire">MODULE_06 // THE_105%_RULE // AERODYNAMICS_AND_TIRE</h2>
+
+    <p>There is a specific condition where tire width can hurt performance, and it has nothing to do with rolling: aerodynamics.</p>
+
+    <p>Josh Poertner formulated the 105% rule during his time as Technical Director at Zipp Speed Weaponry, originating in wind tunnel tests performed between 2001 and 2002, consolidated with the launch of the Zipp 808 model in 2004. The rule states:</p>
+
+    <div class="fact-box">
+        <div class="fact-label">THE_105%_RULE</div>
+        <p>The external width of the wheel rim should be at least 105% of the tire’s measured mounted width. If the tire is wider than the rim, airflow separates as it leaves the tire, creates turbulence, and increases aerodynamic drag. If the rim is at least 5% wider than the tire, the flow reattaches to the rim in a laminar manner.</p>
+    </div>
+
+    <p>This has a direct consequence in today’s market: most modern road rims measure between 25mm and 30mm external width. On those rims, a 25mm real tire (which usually measures 26–27mm mounted) is at the threshold or below it. A 28mm real tire (which usually measures 29–30mm mounted) can fall into the turbulence zone if the rim is under 29mm external width.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>External rim width</th>
+                <th>Max mounted tire width (105% rule)</th>
+                <th>Optimal tire (no aero penalty)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>21mm (classic narrow rim)</td>
+                <td>20mm real</td>
+                <td class="data-red">23mm already aero-penalizes</td>
+            </tr>
+            <tr>
+                <td>25mm (modern mid rim)</td>
+                <td>23.8mm real</td>
+                <td class="data-yellow">25mm at the limit / 28mm penalizes</td>
+            </tr>
+            <tr>
+                <td>28mm (modern wide rim)</td>
+                <td>26.7mm real</td>
+                <td class="data-green">28mm correct / 25mm can create inverse turbulence</td>
+            </tr>
+            <tr>
+                <td>32mm (endurance / gravel road rim)</td>
+                <td>30.5mm real</td>
+                <td class="data-green">28–30mm correct</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Poertner, J. (2001-2004). Zipp Speed Weaponry Wind Tunnel Tests. Consolidated with the launch of the Zipp 808. / Aerodynamic principle: laminar flow adherence on an airfoil profile.</div>
+
+    <p>The aerodynamically correct conclusion is counterintuitive: on modern 25–30mm rims, running a 25mm tire can be <em>aerodynamically slower</em> than running a 28mm, because the rim is not wide enough for the mounted 25mm tire but may be wide enough for the mounted 28mm. The rim + tire system matters more than each component by itself.</p>
+
+    <!-- MODULE 07 -->
+    <h2 id="module_07-when_thin_wins-the_exact_conditions">MODULE_07 // WHEN_THIN_WINS // THE_EXACT_CONDITIONS</h2>
+
+    <p>Not everything is relative. There are specific conditions where a thinner tire does have an advantage. Being honest about when the myth applies and when it doesn’t is part of the analysis.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>Does thin win?</th>
+                <th>Why</th>
+                <th>Relevance for Peru</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wood track (velodrome)</td>
+                <td class="data-green">YES, clearly</td>
+                <td>Perfect surface eliminates impedance loss. Only pure Crr and aerodynamics matter.</td>
+                <td class="data-red">None (no active competition velodrome in the country)</td>
+            </tr>
+            <tr>
+                <td>Brand-new perfectly smooth asphalt</td>
+                <td class="data-yellow">YES, slightly</td>
+                <td>Impedance loss is near zero. Crr and aero dominate. The difference is small.</td>
+                <td class="data-yellow">Limited (few stretches of perfectly smooth new asphalt)</td>
+            </tr>
+            <tr>
+                <td>Time trial at &gt;40 km/h (TT)</td>
+                <td class="data-yellow">DEPENDS on the rim</td>
+                <td>At high speed, aerodynamics dominate. But only if the rim+tire system meets the 105% rule.</td>
+                <td class="data-yellow">Low (few TT events at team level)</td>
+            </tr>
+            <tr>
+                <td>Typical Peruvian real road</td>
+                <td class="data-red">NO</td>
+                <td>Impedance loss exceeds any Crr advantage. A correctly-pressurized 28mm wins.</td>
+                <td class="data-green">High relevance — the usual condition</td>
+            </tr>
+            <tr>
+                <td>Rough asphalt / chip-seal</td>
+                <td class="data-red">NO, under any condition</td>
+                <td>Massive impedance loss. A thin tire at high pressure can lose 15–25W extra.</td>
+                <td class="data-green">Very high (Peruvian interurban roads)</td>
+            </tr>
+            <tr>
+                <td>Gravel / dirt / hardpack</td>
+                <td class="data-red">NO</td>
+                <td>Not even questionable. Air volume absorbs impacts and reduces total losses.</td>
+                <td class="data-green">Very high (access to Andean zones)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Own analysis based on BRR data, Silca impedance-loss methodology, and Latin American asphalt conditions verified in the field.</div>
+
+    <!-- MODULE 08 -->
+    <!-- PHOTO 3 -->
+    <div class="image-container">
+        <img src="images/neumaticos-maxxis-ikon-giant-taller-bikelab.jpg"
+             alt="maxxis-ikon-tanwall-giant-29-workshop-bikelab-studio-trujillo-peru"
+             title="Maxxis Ikon tanwall — Giant 29 — BikeLab Studio">
+    </div>
+
+    <h2 id="module_08-the_optimal_combination-by_type_of_peruvian_cyclist">MODULE_08 // THE_OPTIMAL_COMBINATION // BY_TYPE_OF_PERUVIAN_CYCLIST</h2>
+
+    <p>Regardless of brand — because what’s available in Peru largely defines what’s accessible — the optimal combination is defined by use case. Here is the map of what works in local reality:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Use profile</th>
+                <th>Optimal width</th>
+                <th>Guideline pressure (75 kg)</th>
+                <th>Tire type</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Coastal road (Lima–Trujillo, mixed asphalt)</td>
+                <td class="data-highlight">28mm</td>
+                <td>70–78 psi rear / 62–70 psi front</td>
+                <td>Tubeless or quality clincher</td>
+                <td>Optimal Crr + impedance balance</td>
+            </tr>
+            <tr>
+                <td>Mountain road / highlands access</td>
+                <td class="data-highlight">28–32mm</td>
+                <td>65–72 psi / 56–63 psi</td>
+                <td>Tubeless preferred</td>
+                <td>Irregular asphalt. More volume = less loss</td>
+            </tr>
+            <tr>
+                <td>Urban / commuting Trujillo</td>
+                <td class="data-highlight">32–38mm</td>
+                <td>50–60 psi / 45–55 psi</td>
+                <td>Clincher with tube or tubeless</td>
+                <td>Streets with potholes. Volume protects the tire and the rims.</td>
+            </tr>
+            <tr>
+                <td>Gravel / Andean hardpack</td>
+                <td class="data-highlight">40–50mm</td>
+                <td>28–38 psi / 24–32 psi</td>
+                <td>Tubeless mandatory</td>
+                <td>Without tubeless, punctures are inevitable</td>
+            </tr>
+            <tr>
+                <td>MTB XC / trail</td>
+                <td class="data-highlight">2.2"–2.4"</td>
+                <td>22–26 psi / 18–22 psi</td>
+                <td>Tubeless mandatory</td>
+                <td>Maxxis Ikon/Rekon available in Peru</td>
+            </tr>
+            <tr>
+                <td>Road racing (criterium / time trial)</td>
+                <td class="data-highlight">25–28mm (depending on rim)</td>
+                <td>Calculate with 105% rule</td>
+                <td>Tubeless TLR or tubular</td>
+                <td>Here you must verify rim–tire compatibility</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Recommendations based on contact physics, BRR data, Silca methodology, and conditions verified in the field, Peru 2023–2026.</div>
+
+    <div class="field-note">
+        <p>NOTE_ON_BRANDS_IN_PERU:</p>
+        <p>Maxxis (available) has road tires that roll properly at these widths. CST has decent urban and trekking options. For performance road, Continental GP5000 reaches the Peruvian market, though at a significant price. Schwalbe arrives in the premium gravel/MTB segment. The width recommendation applies regardless of brand — what changes across brands is baseline Crr and durability, not the physics of width. A well-inflated 28mm Maxxis will beat an over-inflated 23mm Continental in the real world, no matter how much each costs.</p>
+    </div>
+
+    <h2 id="module_09-workshop_experience-the_tires_i_have_used_in_trujillo">MODULE_09 // WORKSHOP_EXPERIENCE // THE_TIRES_I_HAVE_USED_IN_TRUJILLO</h2>
+
+    <p>Physics is one thing. What actually rolls on the compact dirt tracks around Trujillo is another. I’ve tested enough combinations to have my own opinion on what works here — and the lab data either supports it or contradicts it. Here is the honest inventory.</p>
+
+    <p>XC in Trujillo is not technically demanding. There are no roots, no mud, no rock sections that require extreme traction. What there is: compact dirt, some loose dust on top, and speed. That defines what tire makes sense here.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tire</th>
+                <th>Size</th>
+                <th>Specified weight</th>
+                <th>Real measured weight</th>
+                <th>BRR watts (25 psi)</th>
+                <th>Evaluation in Trujillo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Schwalbe Racing Ralph</strong><br>Super Ground Addix Speed</td>
+                <td>29×2.25</td>
+                <td>~560–590 g</td>
+                <td>~610–650 g (real sample)</td>
+                <td class="data-green">19.0 W</td>
+                <td class="data-green">Rear reference. Fast, efficient rolling on compact dirt.</td>
+            </tr>
+            <tr>
+                <td><strong>Schwalbe Racing Ray</strong><br>Super Ground Addix SpeedGrip</td>
+                <td>29×2.25</td>
+                <td>~625 g</td>
+                <td>~660–680 g (real sample)</td>
+                <td class="data-highlight">20.4 W</td>
+                <td class="data-green">Natural front pair for Racing Ralph. SpeedGrip gives more side bite without sacrificing too much.</td>
+            </tr>
+            <tr>
+                <td><strong>Maxxis Ikon</strong><br>3C MaxxSpeed EXO TR</td>
+                <td>29×2.20</td>
+                <td>640 g</td>
+                <td>~659 g (measured)</td>
+                <td class="data-highlight">~22–24 W</td>
+                <td class="data-yellow">Correct. More consistent in weight than Schwalbe. Rolls a bit slower but very reliable.</td>
+            </tr>
+            <tr>
+                <td><strong>Maxxis Ardent Race</strong><br>3C EXO TR</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>720 g / 745 g</td>
+                <td>~759 g / ~780 g (measured)</td>
+                <td class="data-red">~27–29 W</td>
+                <td class="data-yellow">Bridge between XC and trail. More volume than Ikon, more lateral traction, but pays ~40% more resistance vs Racing Ralph.</td>
+            </tr>
+            <tr>
+                <td><strong>Continental Race King</strong><br>Protection</td>
+                <td>29×2.20</td>
+                <td>~575–600 g</td>
+                <td>~620 g</td>
+                <td class="data-green">18.2 W</td>
+                <td class="data-green">Fast and light. Great rear for dry XC. Sketchy in loose corners — you have to know it.</td>
+            </tr>
+            <tr>
+                <td><strong>Continental Cross King</strong><br>Protection</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>~640–680 g</td>
+                <td>~680–720 g</td>
+                <td class="data-highlight">~22–24 W</td>
+                <td class="data-green">More side bite than Race King. Good front for XC with more surface variability.</td>
+            </tr>
+            <tr>
+                <td><strong>Specialized S-Works Fast Trak</strong><br>T5/T7 2BR</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>570 g / ~610 g</td>
+                <td>588 g / ~640 g</td>
+                <td class="data-highlight">28.0 W (2.2) / 30.5 W (2.35)</td>
+                <td class="data-green">Best by weight in the group. 588 g measured is light. Pays 4–5 W more vs Racing Ralph but that wheel weight is felt.</td>
+            </tr>
+            <tr>
+                <td><strong>Specialized S-Works Ground Control</strong><br>2BR</td>
+                <td>29×2.30</td>
+                <td>650 g</td>
+                <td>686 g (measured)</td>
+                <td class="data-red">31.3 W</td>
+                <td class="data-red">Penalizes. In Trujillo there is no terrain that justifies those 31 W and that weight. For technical trail, correct — for local dry XC, no.</td>
+            </tr>
+            <tr>
+                <td><strong>Pirelli Scorpion XC</strong><br>variants</td>
+                <td>29×2.20–2.40</td>
+                <td>~580–640 g</td>
+                <td>Variable</td>
+                <td class="data-green">~19–22 W (RC versions)</td>
+                <td class="data-green">Good option where available. Performance close to Racing Ralph in Race versions. No critical differences vs Schwalbe in local conditions.</td>
+            </tr>
+            <tr>
+                <td><strong>Chaoyang MTB</strong><br>(multiple lines)</td>
+                <td>29×2.10–2.35</td>
+                <td>~650–800 g</td>
+                <td>Variable</td>
+                <td class="data-red">~28–35 W (estimated)</td>
+                <td class="data-yellow">Mass-market option. Accessible in Peru. They work — but rolling data does not compete with Racing Ralph or Race King.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Measured weights: real BRR data and specialized forums (MTBR). BRR watts: bicyclerollingresistance.com, Jarno Bierman. Evaluation in Trujillo: own observation, BikeLab Studio 2023–2026.</div>
+
+    <h2 id="module_10-the_optimal_combination-calculation_for_xc_trujillo">MODULE_10 // THE_OPTIMAL_COMBINATION // CALCULATION_FOR_XC_TRUJILLO</h2>
+
+    <p>With all the data on the table, the math exercise that matters is not choosing the fastest tire in the lab — it’s choosing the front/rear combination that optimizes the whole system for real conditions of use.</p>
+
+    <p>In XC Trujillo the terrain is dry compact dirt, without extreme technical sections, with speed as the primary variable. The objective function is: <span class="data-highlight">minimum total Crr + minimum rotating mass + enough traction to not lose time in direction changes</span>.</p>
+
+    <div class="formula">
+        $$P_{total\_sistema} = (P_{rr\_delantera} + P_{rr\_trasera}) + P_{impedancia} + \Delta P_{peso\_rotante}$$
+        <div class="source">Rotating mass at the wheel has an amplified effect versus static mass. Each gram at the wheel perimeter is approximately 1.5–2× its equivalent as centralized bike mass in terms of acceleration energy. [Principle of rotational moment of inertia]</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Combination</th>
+                <th>Front</th>
+                <th>Rear</th>
+                <th>Total pair weight</th>
+                <th>Estimated total P_rr</th>
+                <th>Available in Peru</th>
+                <th>Verdict</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Setup A — World XC reference</strong></td>
+                <td>Racing Ray 2.25<br>~660 g</td>
+                <td>Racing Ralph 2.25<br>~620 g</td>
+                <td class="data-highlight">~1,280 g</td>
+                <td class="data-green">~39 W</td>
+                <td class="data-yellow">Hard in provinces</td>
+                <td class="data-green">Technical optimum. The global XC benchmark.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup B — My current preference</strong></td>
+                <td>S-Works Fast Trak 2.35<br>~640 g</td>
+                <td>Continental Race King 2.20<br>~620 g</td>
+                <td class="data-highlight">~1,260 g</td>
+                <td class="data-highlight">~46 W</td>
+                <td class="data-yellow">Partially available Lima</td>
+                <td class="data-green">Fast Trak up front gives bite and volume. Race King rear is the fastest in the group. Light and balanced system for Trujillo.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup C — All Continental</strong></td>
+                <td>Cross King 2.35<br>~700 g</td>
+                <td>Race King 2.20<br>~620 g</td>
+                <td>~1,320 g</td>
+                <td class="data-highlight">~40–42 W</td>
+                <td class="data-yellow">Partially available</td>
+                <td class="data-green">Solid. Cross King gives real front traction, Race King does the job in the rear. Manageable weight.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup D — Maxxis available in Peru</strong></td>
+                <td>Ikon 2.35<br>~743 g</td>
+                <td>Ikon 2.20<br>~659 g</td>
+                <td>~1,402 g</td>
+                <td class="data-red">~46–50 W</td>
+                <td class="data-green">Available Lima and provinces</td>
+                <td class="data-yellow">Real local-market option. Not the fastest, but the most accessible. It works.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup E — Avoid in XC Trujillo</strong></td>
+                <td>Ground Control 2.35<br>~686 g</td>
+                <td>Ardent Race 2.35<br>~780 g</td>
+                <td class="data-red">~1,466 g</td>
+                <td class="data-red">~58–62 W</td>
+                <td class="data-yellow">Partially available</td>
+                <td class="data-red">Too much weight, too much resistance for dry XC. For wet technical trail, correct. For Trujillo, no.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Estimated P_rr = sum of front + rear resistance at 25 psi / 29 km/h. Weights: manufacturer specs corrected with real-sample data (MTBR / BRR). Availability in Peru: own estimate based on known distributors, Feb. 2026.</div>
+
+    <h2 id="module_11-tubeless_vs_tube-the_difference_on_track_and_road">MODULE_11 // TUBELESS_VS_TUBE // THE_DIFFERENCE_ON_TRACK_AND_ROAD</h2>
+
+    <p>On road asphalt, the difference between tubeless and tube is real but moderate — mainly in Crr and puncture risk. In MTB on dirt and rough roads, the difference is of another magnitude. It’s not a marginal performance question. It’s the difference between being able to lower pressure into functional ranges or not.</p>
+
+    <p>With tubes in MTB, dropping below 28–30 psi in the rear exposes you to pinch flats (snake bite) on any impact against rock or root. With tubeless, the functional range drops to 18–22 psi rear and 16–20 psi front. That pressure difference has a direct and measurable effect on traction, comfort, and impedance losses.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>With tube</th>
+                <th>Tubeless</th>
+                <th>Practical difference in XC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minimum functional pressure (rear)</td>
+                <td class="data-red">28–32 psi</td>
+                <td class="data-green">18–22 psi</td>
+                <td>10 psi less = larger contact patch, better cornering traction</td>
+            </tr>
+            <tr>
+                <td>Added weight per tube</td>
+                <td class="data-red">+100–130 g per wheel</td>
+                <td class="data-green">+60–80 g sealant</td>
+                <td>~50–80 g less at the wheel perimeter. You feel it in accelerations.</td>
+            </tr>
+            <tr>
+                <td>Slow punctures (small holes)</td>
+                <td class="data-red">Puncture = stop</td>
+                <td class="data-green">Sealant closes by itself in &lt;30 sec</td>
+                <td>In a race or long ride, critical difference</td>
+            </tr>
+            <tr>
+                <td>Installation cost</td>
+                <td class="data-green">Low</td>
+                <td class="data-red">Higher (sealant + valves)</td>
+                <td>Upfront investment, but amortizes in saved tires</td>
+            </tr>
+            <tr>
+                <td>Impedance losses at equal pressure</td>
+                <td class="data-red">Tube adds internal hysteresis</td>
+                <td class="data-green">No tube = more efficient system</td>
+                <td>~1–2 W per wheel in the lab. On dirt roads, more.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Tube weight data: standard measurements of 29" butyl tubes 100g. Tubeless vs clincher Crr difference: BRR special article “Tubeless vs Latex vs Butyl Tubes”. Functional pressures: Heine Tire Drop methodology applied to MTB.</div>
+
+    <div class="field-note">
+        <p>WORKSHOP_DATA:</p>
+        <p>In Trujillo, tubeless is not common outside the most active segment. Most MTB bikes that enter the workshop have a standard butyl tube inflated to 35–40 psi “just in case.” That pressure, on local compact dirt, creates unnecessary impedance losses and reduces the traction footprint right where it’s most needed — in corners with loose dust over hardpack. Tubeless conversion on an MTB wheel costs in Peru between S/. 40–80 additional per wheel (sealant + valves). In terms of performance per sol invested, it’s probably the best cost-benefit modification available in the local market.</p>
+    </div>
+
+    <h2 id="module_12-rotating_weight-why_it_feels_bigger_than_total_weight">MODULE_12 // ROTATING_WEIGHT // WHY_IT_FEELS_BIGGER_THAN_TOTAL_WEIGHT</h2>
+
+    <p>The perception that “lighter wheels are more noticeable” is not psychological. It has a concrete physical basis.</p>
+
+    <p>The rotational moment of inertia of a wheel increases with the square of the distance from the axis. Mass located at the tire perimeter — knobs, casing, sealant — is at maximum distance from the axis and therefore has the greatest possible rotational inertia effect. Accelerating that rotating mass requires additional energy proportional to I·α, where I is the moment of inertia and α is angular acceleration.</p>
+
+    <div class="formula">
+        $$I = m \cdot r^2$$
+        $$E_{rotante} = \frac{1}{2} I \omega^2 = \frac{1}{2} m r^2 \omega^2$$
+        <div class="source">A gram at the tire perimeter (r ≈ 0.35 m on 29") has ~10× higher moment of inertia than a gram located at the wheel center. In repeated accelerations (sprint, corner exit, rhythmic climbs), the accumulated energy difference between a 570 g tire and a 780 g tire is real and perceptible.</div>
+    </div>
+
+    <p>The difference between the S-Works Fast Trak (588 g measured) and the Ardent Race 2.35 (~780 g measured) is <span class="data-highlight">192 grams per tire</span>. On a wheel pair: 384 grams of extra rotating mass. In a criterium or an XC race with multiple accelerations per lap, that is not marginal. Physics confirms it and any rider who has made the change has felt it.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tire</th>
+                <th>Measured weight</th>
+                <th>Additional rotating kinetic energy<br>vs Fast Trak (at 30 km/h)</th>
+                <th>Equivalent extra watts<br>in a 10-second sprint</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>S-Works Fast Trak 2.20</td>
+                <td class="data-green">588 g</td>
+                <td>— (reference)</td>
+                <td>— (reference)</td>
+            </tr>
+            <tr>
+                <td>Continental Race King 2.20</td>
+                <td class="data-green">~620 g</td>
+                <td>+0.15 J</td>
+                <td>~+1.5 W equivalent</td>
+            </tr>
+            <tr>
+                <td>Maxxis Ikon 2.20</td>
+                <td class="data-highlight">~659 g</td>
+                <td>+0.33 J</td>
+                <td>~+3.3 W equivalent</td>
+            </tr>
+            <tr>
+                <td>Maxxis Ardent Race 2.35</td>
+                <td class="data-red">~780 g</td>
+                <td>+0.90 J</td>
+                <td>~+9 W equivalent</td>
+            </tr>
+            <tr>
+                <td>S-Works Ground Control 2.30</td>
+                <td class="data-red">686 g</td>
+                <td>+0.46 J</td>
+                <td>~+4.6 W equivalent</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Calculation: E = ½·m·r²·ω² where r = 0.345 m (effective 29" radius), ω = 24.1 rad/s (30 km/h). Extra energy = mass difference × r² × ω² / 2. Conversion to equivalent watts: E divided by 10 seconds of sprint. Approximation — does not include non-uniform mass distribution of the tire.</div>
+
+    <h2 id="conclusions-applied_physics">CONCLUSIONS // APPLIED_PHYSICS</h2>
+
+    <div class="conclusion-box">
+        <p>The thin tire myth originates from a use condition that practically does not exist in real Peruvian cycling: a perfectly smooth surface. On a velodrome, 23mm at 120 psi is indeed faster. On the Panamericana Norte, on any access road to the highlands, on any avenue in Trujillo, it isn’t.</p>
+
+        <p style="margin-top: 20px;">BRR’s lab data show that the GP5000 in 28mm is 0.4 watts more efficient than in 25mm under the same normalized use conditions. Silca’s impedance-loss data show that on real roads the difference can be 5 to 15 additional watts in favor of 28mm. The 105% rule shows that on modern rims, 28mm can also be aerodynamically superior to 25mm.</p>
+
+        <p style="margin-top: 20px;">The number I find most revealing of all: the fastest tire in the world in the lab, the Vittoria Corsa Pro Speed TLR, measures <span class="data-highlight">28mm</span>. Not 23mm. Not 25mm. 28mm.</p>
+
+        <p style="margin-top: 20px;"><strong>What works in real Peruvian conditions:</strong></p>
+
+        <p style="margin-top: 20px;"><strong>Coastal road mixed asphalt:</strong> 28mm tubeless or quality clincher, 70–78 psi rear for a 75 kg rider. The impedance-loss improvement versus 25mm at 100+ psi is real and measurable.</p>
+
+        <p style="margin-top: 20px;"><strong>Correct pressure before correct width:</strong> The most frequent error is not using the wrong width — it’s using the wrong pressure. A 28mm inflated to 100 psi loses the volume advantages. A 25mm at 85 psi will be better than the same tire at 115 psi on any asphalt with irregularities.</p>
+
+        <p style="margin-top: 20px;"><strong>The 105% rule as a buying filter:</strong> Before deciding tire width, measure the rim’s external width. The optimal mounted tire width should not exceed 95% of the rim’s external width. On 25mm external rims, the ideal tire is 25mm specified or less. On 28mm external rims, 28mm specified is optimal.</p>
+
+        <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">The cyclist who inflates 25mm tires to 120 psi because “harder is faster” is losing between 10 and 20 watts on typical Peruvian roads. With those watts, they could ride 1.5 to 3 km/h faster at the same power. And they don’t have to buy anything new to get them back — they only have to inflate differently.</p>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references">
+        <h2 id="technical_references">TECHNICAL_REFERENCES</h2>
+
+        <div class="ref-item">[1] Bierman, J. (2018–2026). “Continental Grand Prix 5000 — Multiple Size Reviews and Comparisons”. <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/grand-prix-5000-comparison" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[2] Bierman, J. (2024). “Continental Grand Prix 5000 S TR 25, 28, 30, 32 mm Comparison”. <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/grand-prix-5000-s-tr-comparison" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[3] Bierman, J. (2026). “Vittoria Corsa Pro Speed TLR 28 Review — 6.7 Watts”. <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/road-bike-reviews/vittoria-corsa-pro-speed-tlr" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[4] Poertner, J. (2017). “The New Aero: Part 5 — Tire Pressure and Aerodynamics”. <em>Silca Blog</em>. Silca LLC. <a href="https://silca.cc/blogs/journal" target="_blank">silca.cc</a></div>
+
+        <div class="ref-item">[5] Poertner, J. (2017–2019). “Marginal Gains Podcast — Episodes on Hysteresis and Impedance Losses”. <em>Silca / Marginal Gains</em>. Series of technical podcasts on tire mechanics.</div>
+
+        <div class="ref-item">[6] Heine, J. (2012–2020). “Optimizing Your Tire Pressure for Your Weight” [BQTireDrop.pdf]. <em>Bicycle Quarterly</em>. Study on the 15% Tire Drop concept as optimal rolling pressure.</div>
+
+        <div class="ref-item">[7] Poertner, J. (2001–2004). “Zipp 808 Wind Tunnel Tests — 105% Rule Development”. <em>Zipp Speed Weaponry Technical Documentation</em>. Origin of the rim/tire 105% rule for laminar-flow adherence.</div>
+
+        <div class="ref-item">[8] Berto, F. (1997). “Tire Pressure and the ‘15% Rule’”. <em>Berto’s data / The Dancing Chain</em>. Original pressure tables and derivations.</div>
+
+        <div class="ref-item">[9] Bierman, J. (2019–2026). “MTB Tire Rolling Resistance — Multiple Reviews”. <em>Bicycle Rolling Resistance</em>. MTB rolling data used in the workshop sections.</div>
+
+        <div class="ref-item">[10] Bierman, J. (2024). “CRR at Different Loads — Special Test”. <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/crr-load-test" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[11] Bierman, J. (2024). “The Rim Width Test — Road, CX/Gravel, and MTB”. <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/rim-width-test" target="_blank">bicyclerollingresistance.com</a></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div style="margin-bottom: 20px;">
+            <strong>BikeLab Studio</strong><br>
+            Industrial &amp; Scientific Noir<br>
+            Paraguay 300, Trujillo, La Libertad, Peru
+        </div>
+
+        <div class="footer-grid">
+            <div>
+                <strong>Verified sources:</strong><br>
+                BicycleRollingResistance.com<br>
+                Silca LLC / Josh Poertner<br>
+                Bicycle Quarterly / Jan Heine
+            </div>
+            <div>
+                <strong>Author:</strong><br>
+                Carlos Ravello<br>
+                Founder of BikeLab Studio
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+            © 2026 BIKELAB_STUDIO // STABLE_SYSTEM
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
