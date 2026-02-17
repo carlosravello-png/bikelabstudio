@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Hydraulic Braking Systems at Altitude | BikeLab Studio</title>
+    <meta name="description" content="Thermodynamic analysis of hydraulic brake behavior at altitude. Verified data on atmospheric pressure, volumetric compliance, and boiling point. BikeLab Studio, Trujillo.">
+    <meta name="keywords" content="hydraulic brakes altitude, Magura MT7, Andes brakes, mountain hydraulic systems, BikeLab Studio Trujillo, MTB brakes Peru">
+    <meta name="author" content="Carlos Ravello">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://bikelabstudio.com/articles/frenos-altitud.html">
+    <!-- Descomentar cuando exista versión ES:
+    <link rel="alternate" hreflang="es" href="https://bikelabstudio.com/articles/frenos-altitud-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://bikelabstudio.com/articles/frenos-altitud.html">
+    -->
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hydraulic Braking Systems at Altitude | BikeLab Studio">
+    <meta property="og:description" content="Verified thermodynamic analysis of brake behavior at altitude. Data from NASA, ASM Materials, and FMVSS.">
+    <meta property="og:image" content="https://bikelabstudio.com/articles/images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg">
+    <meta property="og:url" content="https://bikelabstudio.com/articles/frenos-altitud.html">
+    <meta property="og:type" content="article">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://bikelabstudio.com/articles/frenos-altitud.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    
+    <!-- MathJax for LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Hydraulic Braking Systems at Altitude: Thermodynamic Analysis",
+      "alternativeHeadline": "Why your brakes fail above 3,000 meters",
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Ravello",
+        "jobTitle": "Founder of BikeLab Studio",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "BikeLab Studio"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BikeLab Studio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bikelabstudio.com/logo-noir.png"
+        }
+      },
+      "datePublished": "2026-02-16",
+      "dateModified": "2026-02-16",
+      "image": "https://bikelabstudio.com/articles/images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg",
+      "articleSection": "Systems Engineering",
+      "keywords": "hydraulic brakes, altitude, thermodynamics, Magura, Jagwire, braking systems",
+      "inLanguage": "en",
+      "isAccessibleForFree": true
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+        
+        .header {
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .coordinates {
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .category {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .meta {
+            font-size: 11px;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        .image-container {
+            margin: 50px 0;
+            border: 1px solid #333;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 13px;
+            background-color: #0a0a0a;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #333;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        td {
+            padding: 12px;
+            border: 1px solid #333;
+            color: #ccc;
+        }
+        
+        tr:hover {
+            background-color: #151515;
+        }
+        
+        .formula {
+            background-color: #0a0a0a;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 3px solid #444;
+            overflow-x: auto;
+        }
+        
+        .data-highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .source {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        
+        .references h2 {
+            margin-top: 0;
+        }
+        
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+        .ref-item a {
+            color: #888;
+            text-decoration: none;
+        }
+        
+        .ref-item a:hover {
+            color: #fff;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #333;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        ul {
+            color: #ccc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            table {
+                font-size: 11px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <!-- Descomentar cuando exista versión ES:
+            <div class="lang-switch" style="float: right; font-size: 12px;">
+                <a href="frenos-altitud-es.html" style="color: #888; text-decoration: none; padding: 5px 10px; border: 1px solid #444; transition: all 0.3s;">[ES]</a>
+            </div>
+            -->
+            <div class="category">SYSTEMS_ENGINEERING // APPLIED_THERMODYNAMICS</div>
+            <h1>Hydraulic Braking Systems at Altitude</h1>
+            <div class="subtitle">Why your brakes fail above 3,000 meters</div>
+            <div class="meta">
+                Author: Carlos Ravello // Founder of BikeLab Studio<br>
+                Date: February 2026
+            </div>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="image-container">
+            <img src="images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg" 
+                 alt="best-bike-shop-trujillo-peru-magura-brakes-mtb-specialized-service-altitude-braking-bikelab"
+                 title="Magura monoblock caliper - BikeLab Studio">
+            <div class="image-caption">
+                Magura MT7 System // Forged aluminum monoblock architecture // Hand tuned: BikeLab Studio
+            </div>
+        </div>
+
+        <!-- INTRODUCTION -->
+        <p>At 3,000 meters above sea level, your lungs aren't the first to fail. Neither are your legs. It's your brakes.</p>
+
+        <p>Atmospheric pressure drops. Hydraulic systems—human or mechanical—enter stress. Hoses expand. Compounds fatigue. Dead volume multiplies. Hysteresis appears.</p>
+
+        <p>This is where engineering stops being marketing and becomes survival.</p>
+
+        <!-- MODULE 01 -->
+        <h2>MODULE_01 // ATMOSPHERIC_PRESSURE</h2>
+
+        <p>Earth's atmosphere is not uniform. As you ascend, the column of air above you decreases, and with it the pressure exerted on every closed or semi-open system.</p>
+
+        <div class="formula">
+            $$P = P_0 \times e^{-\frac{Mgh}{RT}}$$
+            <div class="source">NASA standard barometric model (U.S. Standard Atmosphere, 1976)</div>
+        </div>
+
+        <p>Where:</p>
+        <ul>
+            <li>\(P_0\) = Sea level pressure (101.325 kPa)</li>
+            <li>\(M\) = Molar mass of air (0.029 kg/mol)</li>
+            <li>\(g\) = Gravitational acceleration (9.81 m/s²)</li>
+            <li>\(h\) = Altitude (meters)</li>
+            <li>\(R\) = Universal gas constant (8.314 J/(mol·K))</li>
+            <li>\(T\) = Absolute temperature (K)</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Altitude (m)</th>
+                    <th>Pressure (kPa)</th>
+                    <th>Relative density</th>
+                    <th>Loss vs sea level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td class="data-highlight">101.33</td>
+                    <td>1.000</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>3,000</td>
+                    <td class="data-highlight">70.12</td>
+                    <td>0.742</td>
+                    <td class="data-highlight">-30.8%</td>
+                </tr>
+                <tr>
+                    <td>4,000</td>
+                    <td class="data-highlight">61.66</td>
+                    <td>0.668</td>
+                    <td class="data-highlight">-39.1%</td>
+                </tr>
+                <tr>
+                    <td>5,000</td>
+                    <td class="data-highlight">54.05</td>
+                    <td>0.601</td>
+                    <td class="data-highlight">-46.7%</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: NASA-TM-X-74335 (U.S. Standard Atmosphere, 1976)</div>
+
+        <p>This drop doesn't directly affect internal hydraulic pressure—the circuit is closed—but it does modify three critical variables that most workshops ignore:</p>
+
+        <ul>
+            <li>DOT fluid boiling point</li>
+            <li>Convective air cooling capacity</li>
+            <li>Elastomeric seal behavior under trans-mural pressure gradients</li>
+        </ul>
+
+        <!-- MODULE 02 -->
+        <h2>MODULE_02 // BOILING_POINT</h2>
+
+        <p>DOT 4—standard in MTB systems—has a "dry" boiling point of 230°C at sea level. But that value isn't constant. It depends directly on atmospheric pressure.</p>
+
+        <div class="formula">
+            $$\ln\left(\frac{P_2}{P_1}\right) = \frac{\Delta H_{vap}}{R} \left(\frac{1}{T_1} - \frac{1}{T_2}\right)$$
+            <div class="source">Clausius-Clapeyron equation</div>
+        </div>
+
+        <p>At 4,000 meters, pressure is 0.61 atm. Applying Clausius-Clapeyron with the latent heat of vaporization of glycol (ΔH ≈ 50 kJ/mol), the boiling point drops to approximately <span class="data-highlight">195°C</span>.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Altitude</th>
+                    <th>Pressure (atm)</th>
+                    <th>DOT 4 boiling point</th>
+                    <th>Thermal margin lost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0 m</td>
+                    <td>1.00</td>
+                    <td class="data-highlight">230°C</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>3,000 m</td>
+                    <td>0.69</td>
+                    <td class="data-highlight">205°C</td>
+                    <td>-25°C</td>
+                </tr>
+                <tr>
+                    <td>4,000 m</td>
+                    <td>0.61</td>
+                    <td class="data-highlight">195°C</td>
+                    <td>-35°C</td>
+                </tr>
+                <tr>
+                    <td>5,000 m</td>
+                    <td>0.53</td>
+                    <td class="data-highlight">185°C</td>
+                    <td>-45°C</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: FMVSS No. 116 (Motor Vehicle Brake Fluids) + thermodynamic calculation</div>
+
+        <div class="warning-box">
+            <p style="color: #ff4444; margin-bottom: 10px;"><strong>TECHNICAL WARNING:</strong></p>
+            <p>On a prolonged mountain descent, rotors easily reach 300-400°C. Heat transfers to the fluid through the caliper. At 4,000 meters, with only a 195°C margin, the risk of local boiling—and consequent vapor lock—multiplies.</p>
+        </div>
+
+        <p>This isn't theory. It's basic thermodynamics that translates to levers going to the grip without braking.</p>
+
+        <!-- MODULE 03 -->
+        <h2>MODULE_03 // VOLUMETRIC_COMPLIANCE</h2>
+        <!-- TECH IMAGE: HOSE SYSTEM -->
+        <div class="image-container">
+            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg"
+                 alt="Jagwire Pro Hydraulic Hose kit for MTB disc brakes — low expansion hydraulic line used for precision braking response"
+                 title="Jagwire Pro Hydraulic Hose — low expansion line">
+            <div class="image-caption">
+                Jagwire Pro Hydraulic Hose // Low-expansion line architecture // Response control under thermal and pressure gradients
+            </div>
+        </div>
+
+
+        <p>Hydraulic hoses are not rigid tubes. They're viscoelastic structures that expand under internal pressure. That expansion—called volumetric compliance—steals volume from the system.</p>
+
+        <div class="formula">
+            $$C_v = \frac{\Delta V}{\Delta P}$$
+            <div class="source">Volumetric compliance (ml/bar)</div>
+        </div>
+
+        <p>In a standard reinforced Nylon hose (like most OEM), compliance can be in the range of 0.15-0.25 ml/bar. Doesn't sound like much. But under braking pressures of 60-80 bar, that means <span class="data-highlight">9-20 ml of lost volume</span> in hose expansion.</p>
+
+        <p>That volume doesn't reach the piston. It stays inflating the hose.</p>
+
+        <!-- JAGWIRE IMAGE -->
+        <div class="image-container">
+            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg" 
+                 alt="professional-bike-shop-trujillo-peru-jagwire-hydraulic-hoses-brake-service-mtb-bikelab"
+                 title="Jagwire Pro Hydro - BikeLab Studio">
+            <div class="image-caption">
+                Jagwire Pro Hydro // Kevlar reinforcement + PTFE core // Zero parasitic expansion // BikeLab Studio
+            </div>
+        </div>
+
+        <p>Jagwire Pro-Hydro hoses use a PTFE (Teflon) core reinforced with Kevlar fiber. Kevlar's elastic modulus is approximately 3 times higher than Nylon. Result: <span class="data-highlight">30% reduction in volumetric compliance</span>.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Hose type</th>
+                    <th>Reinforcement material</th>
+                    <th>Relative expansion</th>
+                    <th>Lost volume at 70 bar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard OEM</td>
+                    <td>Braided Nylon</td>
+                    <td>1.0x (baseline)</td>
+                    <td>~15 ml</td>
+                </tr>
+                <tr>
+                    <td>Jagwire Pro-Hydro</td>
+                    <td>Kevlar + PTFE</td>
+                    <td class="data-highlight">0.7x</td>
+                    <td class="data-highlight">~10 ml</td>
+                </tr>
+                <tr>
+                    <td>Gain</td>
+                    <td>—</td>
+                    <td class="data-highlight">-30%</td>
+                    <td class="data-highlight">5 ml recovered</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: Jagwire Technical Manual / SAE J1401 Standards</div>
+
+        <p>That 5 ml difference is the line between a brake that bites and one that feels spongy halfway through a switchback at 4,500 meters.</p>
+
+        <!-- MODULE 04 -->
+        <h2>MODULE_04 // CALIPER_RIGIDITY</h2>
+
+        <p>A split caliper—the traditional two-piece bolted design—experiences microflexion under load. That flexion is elastic, reversible, but steals pressure from the system the same way hose compliance does.</p>
+
+        <p>Deflection is calculated with the cantilever beam equation:</p>
+
+        <div class="formula">
+            $$\delta = \frac{FL^3}{3EI}$$
+            <div class="source">Where E = Young's modulus, I = Moment of inertia, F = Applied force</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Young's modulus (GPa)</th>
+                    <th>Relative deflection</th>
+                    <th>Application</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aluminum 7075-T6</td>
+                    <td class="data-highlight">71.7</td>
+                    <td>1.0x</td>
+                    <td>Standard split calipers</td>
+                </tr>
+                <tr>
+                    <td>Forged aluminum monoblock</td>
+                    <td class="data-highlight">71.7</td>
+                    <td class="data-highlight">0.6x</td>
+                    <td>Magura MT7 (optimized geometry)</td>
+                </tr>
+                <tr>
+                    <td>Carbon composite</td>
+                    <td>~140</td>
+                    <td>0.5x</td>
+                    <td>High-end master cylinders</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: ASM International Materials Handbook / Magura Service Manual 2023</div>
+
+        <p>Magura's monoblock design eliminates the bolted joint. No deforming gasket. No yielding interface. The entire structure acts as a single element, reducing deflection by approximately <span class="data-highlight">40%</span> compared to a split caliper of equivalent geometry.</p>
+
+        <p>This isn't magic. It's basic structural geometry applied correctly.</p>
+
+        <!-- MODULE 05 -->
+        <h2>MODULE_05 // CONVECTIVE_COOLING</h2>
+
+        <p>At 5,000 meters, air density is 40% lower than at sea level. Convective cooling—which depends directly on fluid density—drops proportionally.</p>
+
+        <div class="formula">
+            $$Q = hA(T_s - T_\infty)$$
+            <div class="source">Where h = heat transfer coefficient (function of air density)</div>
+        </div>
+
+        <p>Rotors and calipers generate the same frictional heat. But they dissipate less. The result is faster thermal accumulation, especially on prolonged descents where there's no cooling time between braking events.</p>
+
+        <p>Combined with the reduced DOT 4 boiling point, this creates a dangerously narrow operational window.</p>
+
+        <div class="warning-box">
+            <p style="color: #ff4444; margin-bottom: 10px;"><strong>FIELD DATA:</strong></p>
+            <p>In Colca Canyon (4,160 m), we've seen OEM systems reach complete fade in less than 15 minutes of continuous descent. The same system at sea level would handle 45 minutes without issues.</p>
+        </div>
+
+        <!-- CONCLUSIONS -->
+        <h2>CONCLUSIONS // APPLIED_ENGINEERING</h2>
+
+        <div class="conclusion-box">
+            <p>The hydraulic braking system is not an isolated component. It's a thermodynamic assembly that responds to atmospheric pressure, temperature, materials, and geometry.</p>
+
+            <p style="margin-top: 20px;">That's why we use:</p>
+
+            <p style="margin-top: 20px;"><strong>Magura MT7 monoblock:</strong> Elimination of deflection through unified structural design. Forged 7075-T6 aluminum with geometry optimized for maximum rigidity.</p>
+
+            <p style="margin-top: 20px;"><strong>Jagwire Pro-Hydro:</strong> 30% reduction in volumetric compliance through Kevlar reinforcement and PTFE core. Zero parasitic expansion.</p>
+
+            <p style="margin-top: 20px;"><strong>DOT 5.1:</strong> Dry boiling point of 260°C (vs 230°C for DOT 4). At 4,000 meters, this means 225°C instead of 195°C. Critical thermal margin.</p>
+
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">What you apply at the lever is exactly what reaches the rotor. No delay. No deviation. No margin for error.</p>
+
+            <p style="margin-top: 20px;">This isn't an upgrade. It's engineering applied to survival at altitude.</p>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="references">
+            <h2>TECHNICAL_REFERENCES</h2>
+            
+            <div class="ref-item">[1] NASA (1976). "U.S. Standard Atmosphere, 1976". NASA-TM-X-74335. <a href="https://ntrs.nasa.gov/citations/19770009539" target="_blank">ntrs.nasa.gov</a></div>
+            
+            <div class="ref-item">[2] ASM International. "Materials Properties Handbook: Aluminum Alloys". ASM Materials Database. <a href="https://www.asminternational.org" target="_blank">asminternational.org</a></div>
+            
+            <div class="ref-item">[3] NHTSA (2023). "Federal Motor Vehicle Safety Standard No. 116 - Motor Vehicle Brake Fluids". FMVSS 116. <a href="https://www.nhtsa.gov/fmvss/116" target="_blank">nhtsa.gov</a></div>
+            
+            <div class="ref-item">[4] SAE International. "SAE J1401 - Road Vehicle Brake Hose Assemblies". SAE Standards.</div>
+            
+            <div class="ref-item">[5] Blau, P. J. (2001). "Compositions, Functions, and Testing of Friction Brake Materials and Their Additives". Oak Ridge National Laboratory. ORNL/TM-2001/64.</div>
+            
+            <div class="ref-item">[6] Magura (2023). "MT7 Pro Service Manual". Magura Technical Documentation.</div>
+            
+            <div class="ref-item">[7] Jagwire (2024). "Pro Hydraulic Hose Technical Specifications". Jagwire Component Manual.</div>
+            
+            <div class="ref-item">[8] Incropera, F. P., DeWitt, D. P. (2007). "Fundamentals of Heat and Mass Transfer" (6th ed.). John Wiley & Sons.</div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div style="margin-bottom: 20px;">
+                <strong>BikeLab Studio</strong><br>
+                Industrial & Scientific Noir<br>
+                Paraguay 300, Trujillo, La Libertad, Peru
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <strong>Photography and editing:</strong><br>
+                    Carlos Ravello // BikeLab Studio<br>
+                    Post-production: DaVinci Resolve
+                </div>
+                <div>
+                    <strong>Author:</strong><br>
+                    Carlos Ravello<br>
+                    Founder of BikeLab Studio
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+                © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+            </div>
+        </div>
+    </div>
+</body>
+</html>
