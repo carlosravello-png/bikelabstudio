@@ -224,6 +224,34 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
+        /* FIX MODULO 3 MOBILE */
+@media (max-width: 768px) {
+
+  #projects .case-study,
+  #projects .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects .visual-evidence {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects img {
+    width: 100% !important;
+    height: auto;
+    display: block;
+  }
+}
+
+#projects .visual-evidence img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+#projects .visual-evidence img[style*="grid-column: span 2"] {
+  aspect-ratio: auto;
+}
+
     </style>
 </head>
 <body>
@@ -685,6 +713,7 @@
 </body>
 
 </html>
+
 
 
 
