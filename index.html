@@ -224,44 +224,6 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
-        /* Responsive para móviles */
-@media (max-width: 768px) {
-    .container { padding: 0 20px; }
-    h2 { font-size: 2rem !important; }
-    section { padding: 80px 0 !important; }
-    
-    #projects .case-study {
-        display: block !important;
-    }
-    
-    #projects .specs,
-    #projects .visual-evidence,
-    #projects .lab-report {
-        width: 100% !important;
-        margin-bottom: 30px;
-    }
-    
-    #projects img {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: auto !important;
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 769px) {
-    #projects .case-study {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 40px;
-    }
-    
-    #projects .visual-evidence {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-}
     </style>
 </head>
 <body>
@@ -490,7 +452,7 @@
         <section id="projects">
             <span class="data-label">Módulo_03 // Documentación Activa</span>
             <h2>Vida del Taller</h2>
-           <div class="case-study" style="margin-bottom: 80px; border-bottom: 1px solid #222; padding-bottom: 40px;">
+           <div class="case-study" style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
     
     <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
         <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; color: #666;">HARDTAIL_RACE // OPTIMIZACIÓN_ESTRUCTURAL</span>
@@ -527,14 +489,14 @@
         </div>
     </div>
 
- <div class="visual-evidence">
-    <img src="articles/images/scott-white-full.jpg" class="full-width" alt="Scott Scale">
-    <img src="articles/images/scott-white-frame.jpg" class="full-width" alt="Detalle">
-    <img src="articles/images/scott-white-bb.jpg" alt="BB">
-    <img src="articles/images/scott-white-drivetrain.jpg" alt="Transmision">
-    <img src="articles/images/scott-white-tools.jpg" alt="Herramientas">
-    <img src="articles/images/scott-white-finish.jpg" alt="Resultado">
-</div>
+    <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <img src="articles/images/scott-white-full.jpg" alt="Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-frame.jpg" alt="Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-bb.jpg" alt="Mantenimiento pedalier Scott Scale Trujillo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-drivetrain.jpg" alt="Transmisión optimizada Scott Scale" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-tools.jpg" alt="Herramientas profesionales Bikelab Studio El Recreo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-finish.jpg" alt="Resultado final Scott Scale White Trujillo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+    </div>
 
 </div>
            <div class="case-study" style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
@@ -674,7 +636,7 @@
                     <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.jpg" alt="resultado-final-rockshox-sid-ultimate" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
                 </div>
             </div>
-      
+       
         </section>
 
         <section id="art">
@@ -723,9 +685,6 @@
 </body>
 
 </html>
-
-
-
 
 
 
