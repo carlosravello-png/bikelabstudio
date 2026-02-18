@@ -224,6 +224,30 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
+        /* Corrección para fotos en celulares */
+@media (max-width: 768px) {
+    #projects .case-study {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    #projects .visual-evidence {
+        grid-template-columns: 1fr !important;
+    }
+    #projects img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    h2 { font-size: 2.2rem !important; }
+}
+
+#projects .visual-evidence img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+#projects .visual-evidence img[style*="grid-column: span 2"] {
+    aspect-ratio: auto;
+}
     </style>
 </head>
 <body>
@@ -636,7 +660,7 @@
                     <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.jpg" alt="resultado-final-rockshox-sid-ultimate" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
                 </div>
             </div>
-        </section>
+      
         </section>
 
         <section id="art">
@@ -685,6 +709,7 @@
 </body>
 
 </html>
+
 
 
 
