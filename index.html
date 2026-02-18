@@ -157,8 +157,7 @@
         
         body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Single_Color_Noise.png'); opacity: 0.02; pointer-events: none; z-index: 1000; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        section { padding: 140px 0; border-bottom: 1px solid #111; opacity: 1; transform: none; }
-
+        section { padding: 140px 0; border-bottom: 1px solid #111; opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
         section.visible { opacity: 1; transform: translateY(0); }
         .data-label { font-family: var(--mono); font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
         h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
@@ -225,34 +224,6 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
-        /* FIX MODULO 3 MOBILE */
-@media (max-width: 768px) {
-
-  #projects .case-study,
-  #projects .grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  #projects .visual-evidence {
-    grid-template-columns: 1fr !important;
-  }
-
-  #projects img {
-    width: 100% !important;
-    height: auto;
-    display: block;
-  }
-}
-
-#projects .visual-evidence img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
-#projects .visual-evidence img[style*="grid-column: span 2"] {
-  aspect-ratio: auto;
-}
-
     </style>
 </head>
 <body>
@@ -666,7 +637,7 @@
                 </div>
             </div>
         </section>
-      
+        </section>
 
         <section id="art">
             <span class="data-label">Módulo_04 // Artes Visuales</span>
@@ -714,10 +685,6 @@
 </body>
 
 </html>
-
-
-
-
 
 
 
