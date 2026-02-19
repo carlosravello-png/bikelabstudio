@@ -131,7 +131,7 @@
     </script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     
     <!-- MathJax -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -165,7 +165,7 @@
         .card { background: var(--surface); border: 1px solid #151515; padding: 40px; position: relative; transition: 0.3s; }
         .card:hover { border-color: #333; }
         .card h3 { font-size: 1.2rem; margin-bottom: 15px; }
-        .card p { font-family: 'Playfair Display', serif; color: #888; font-size: 0.95rem; }
+        .card p { font-family: 'JetBrains Mono', monospace; font-style: normal; color: #a0a0a0; font-size: 0.95rem; }
         
         /* Language Switcher */
         .lang-switch {
@@ -225,6 +225,19 @@
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
         
+        /* Modificación específica para el subtítulo del Hero - Scientific & Industrial Noir */
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-style: normal !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #a0a0a0;
+            line-height: 1.5;
+            margin-top: 30px;
+            font-size: 1.8rem;
+            max-width: 600px;
+        }
+        
         /* Prueba responsive móvil - Si algo falla, elimina desde aquí hasta el cierre del @media */
         @media (max-width: 768px) {
             section { opacity: 1 !important; transform: none !important; }
@@ -255,8 +268,8 @@
         <div class="container">
             <span class="data-label">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</span>
             <h1 style="font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.9;">BIKELAB<br>STUDIO_</h1>
-            <p style="margin-top: 30px; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #666; max-width: 600px;">
-                Laboratorio de ingeniería científica y documentación visual técnica.
+            <p class="hero-subtitle">
+                Taller técnico especializado en mantenimiento, suspensiones y optimización de bicicletas. Ingeniería aplicada al ciclismo.
             </p>
         </div>
     </section>
@@ -270,7 +283,7 @@
                     <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
                         <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 004</span>
                         <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">El Mito del Neumático Delgado</h3>
-                        <p style="font-size:0.9rem; color:#888; margin-bottom: 20px; line-height: 1.4;">
+                        <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">
                             Física real vs. creencia popular: Por qué el 23mm te hace más lento en el asfalto peruano y los vatios que lo demuestran.
                         </p>
                         <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">DESMONTAR MITO // LEER INFORME</span>
@@ -280,7 +293,7 @@
                 <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
                     <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 001</span>
                     <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Tribología: Grasa Correcta</h3>
-                    <p style="font-size:0.9rem; color:#888; margin-bottom: 20px; line-height: 1.4;">Análisis técnico de compuestos y por qué la lubricación genérica daña componentes premium.</p>
+                    <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">Análisis técnico de compuestos y por qué la lubricación genérica daña componentes premium.</p>
                     <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER INFORME TÉCNICO</span>
                 </article>
             </a>
@@ -316,7 +329,7 @@
             <div style="padding: 25px;">
                 <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 001</span>
                 <h3 style="font-size: 1.1rem; margin: 10px 0;">Proper Torque in Modern Bicycles</h3>
-                <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">Newton-meters vs. Structural Integrity in carbon frames.</p>
+                <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">Newton-meters vs. Structural Integrity in carbon frames.</p>
                 <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
             </div>
         </article>
@@ -329,7 +342,7 @@
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 005</span>
                     <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ruidos: Diagnóstico Profesional</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                    <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                         Aislando la fuente: por qué el cuadro actúa como caja de resonancia y cómo atrapar el sonido por eliminación.
                     </p>
                     <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -344,7 +357,7 @@
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 006</span>
                     <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Lubricantes y Grasas: Química Aplicada</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                    <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                         Diferenciando penetración vs. permanencia: por qué el error en la viscosidad acelera el desgaste mecánico.
                     </p>
                     <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -359,7 +372,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 003</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">El Error del Agua a Presión</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Por qué el chorro directo destruye los sellos de rodamientos y contamina la grasa interna.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -374,7 +387,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 010</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Herramientas de Alta Gama</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Por qué las tolerancias del carbono no perdonan llaves baratas: Torquímetros y precisión industrial.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -389,7 +402,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 004</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Freno de Disco: Roce Fantasma</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             No es solo alineación: diagnóstico de pistones vagos, runout de rotor y contaminación invisible.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -404,7 +417,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 007</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Carbono: Grieta vs. Rayón</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Coin Tap Test y diagnóstico visual: cómo identificar delaminación interna antes del fallo catastrófico.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -419,7 +432,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 009</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Transmisión: Desgaste Prematuro</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Limpieza agresiva vs. lubricación correcta: cómo evitar que tu cassette muera antes de tiempo.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -434,7 +447,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 002</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Cadena: El Límite del 0.5%</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Por qué medir el desgaste con herramienta calibrada salva tu cassette de una muerte prematura.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -449,7 +462,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 008</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ajuste Pro vs. Casero</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Herramientas calibradas y protocolos de torque: por qué la "sensación" no es suficiente en bicicletas modernas.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
@@ -489,7 +502,7 @@
 
         <div style="margin-top: 30px;">
             <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-            <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                 "La Scott Scale es una máquina diseñada para la máxima rigidez. En este protocolo ejecutado en nuestro taller de Trujillo (Paraguay 300), nos centramos en la pureza mecánica. Realizamos una descontaminación manual exhaustiva del eje pedalier para aplicar un sellado hidrofóbico con Motorex 2000, eliminando fricciones parásitas en vatios críticos. El objetivo es que la bicicleta desaparezca bajo el ciclista, asegurando que cada gramo de fuerza se traduzca en velocidad pura en el terreno."
             </p>
         </div>
@@ -536,7 +549,7 @@
 
         <div style="margin-top: 30px;">
             <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-            <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                 "En esta unidad, ejecutamos un protocolo de ingeniería centrado en la coherencia sistémica. La gestión de la fricción se rige por una lubricación diferencial: aplicamos grasa SKF LGHP 2/1 en mazas DT Swiss y puntos de alta carga, mientras usamos Finish Line Teflon White y pasta de cobre Liqui Moly en las interfaces para prevenir la corrosión galvánica. El cockpit Renthal ha sido calibrado con torquímetros Park Tool bajo estrictos estándares de límite elástico. La horquilla SID recibió un servicio de 50h con aceite Maxima Plush, optimizando la sensibilidad inicial a la espera del ciclo de servicio del sistema Brain. El frenado híbrido 'Shigura' (XTR + Magura) garantiza una respuesta incompresible a través del fluido mineral Shimano."
             </p>
         </div>
@@ -582,7 +595,7 @@
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-                        <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                             "Este servicio no es un simple engrase; es una reconstrucción de la bicicleta. Desarmamos el sistema hasta llegar a la arquitectura base de cada rodamiento para eliminar cualquier rastro de arrastre parásito en la bicicleta. No limpiamos por encima: descontaminamos pieza por pieza, verificando que las pistas de rodadura de la bicicleta estén impecables antes de aplicar la grasa específica para cada carga. El resultado es una mecánica silenciosa donde cada vatio llega directo al suelo a través de la bicicleta."
                         </p>
                     </div>
@@ -627,7 +640,7 @@
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE LABORATORIO:</strong></p>
-                        <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                             "Se ejecutó un despiece integral del resorte neumático <strong>DebonAir</strong> para verificar la integridad de la cámara positiva y negativa. El cartucho <strong>Charger Race Day 2</strong> fue sometido a purgado por vacío para garantizar una transición de bloqueo (Lock) a abierto (Open) sin latencia. Finalizamos con torque de precisión en los pernos de las botellas según especificación de 7.3 Nm."
                         </p>
                     </div>

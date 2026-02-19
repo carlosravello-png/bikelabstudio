@@ -131,7 +131,7 @@
     </script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     
     <!-- MathJax -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -165,7 +165,7 @@
         .card { background: var(--surface); border: 1px solid #151515; padding: 40px; position: relative; transition: 0.3s; }
         .card:hover { border-color: #333; }
         .card h3 { font-size: 1.2rem; margin-bottom: 15px; }
-        .card p { font-family: 'Playfair Display', serif; color: #888; font-size: 0.95rem; }
+        .card p { font-family: 'JetBrains Mono', monospace; font-style: normal; color: #a0a0a0; font-size: 0.95rem; }
         
         /* Language Switcher */
         .lang-switch {
@@ -225,6 +225,19 @@
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
         
+        /* Modificación específica para el subtítulo del Hero - Scientific & Industrial Noir */
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-style: normal !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #a0a0a0;
+            line-height: 1.5;
+            margin-top: 30px;
+            font-size: 1.8rem;
+            max-width: 600px;
+        }
+        
         /* Prueba responsive móvil - Si algo falla, elimina desde aquí hasta el cierre del @media */
         @media (max-width: 768px) {
             section { opacity: 1 !important; transform: none !important; }
@@ -255,8 +268,8 @@
         <div class="container">
             <span class="data-label">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</span>
             <h1 style="font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.9;">BIKELAB<br>STUDIO_</h1>
-            <p style="margin-top: 30px; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #666; max-width: 600px;">
-                Scientific engineering lab & technical visual documentation.
+            <p class="hero-subtitle">
+                Technical workshop specialized in maintenance, suspensions, and bicycle optimization. Engineering applied to cycling.
             </p>
         </div>
     </section>
@@ -270,7 +283,7 @@
                     <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
                         <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 004</span>
                         <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">The Thin Tire Myth</h3>
-                        <p style="font-size:0.9rem; color:#888; margin-bottom: 20px; line-height: 1.4;">
+                        <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">
                             Real physics vs. popular belief: Why 23mm tires are slower on real-world roads and the lab data to prove it.
                         </p>
                         <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">DEBUNK MYTH // READ REPORT</span>
@@ -280,7 +293,7 @@
                 <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
                     <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 001</span>
                     <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Applied Tribology: The Right Grease</h3>
-                    <p style="font-size:0.9rem; color:#888; margin-bottom: 20px; line-height: 1.4;">Technical analysis of compounds and why generic lubrication damages premium components.</p>
+                    <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">Technical analysis of compounds and why generic lubrication damages premium components.</p>
                     <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">READ TECHNICAL REPORT</span>
                 </article>
             </a>
@@ -316,7 +329,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 001</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0;">Proper Torque in Modern Bicycles</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Newton-meters vs. Structural Integrity in carbon frames.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -332,7 +345,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 005</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0;">Bicycle Noises: Diagnosis</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Isolating the source and acoustic analysis protocols.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -348,7 +361,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 006</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0;">Bike Lubes: Applied Tribology</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Penetration vs. retention: chemical specs of lithium, calcium, and synthetic compounds.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -363,7 +376,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 003</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">The Pressure Washer Mistake</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Why high-pressure jets destroy bearing seals and contaminate internal grease.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -378,7 +391,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 010</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Essential High-End Tools</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Why carbon tolerances do not forgive cheap keys: Torque wrenches and industrial precision.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -393,7 +406,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 004</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Disc Brake: Phantom Rub</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             It's not just alignment: diagnosing lazy pistons, rotor runout, and invisible contamination.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -408,7 +421,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 007</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Carbon: Crack vs. Scratch</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Coin Tap Test and visual diagnosis: identifying internal delamination before catastrophic failure.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -423,7 +436,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 009</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Drivetrain: Premature Wear</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Aggressive cleaning vs. correct lubrication: how to stop your cassette from dying early.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -438,7 +451,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 002</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Chain: The 0.5% Threshold</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Why measuring wear with a calibrated tool saves your expensive cassette from early death.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -453,7 +466,7 @@
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 008</span>
                         <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Pro Tune vs. Home Tune</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #777; font-family: 'Playfair Display', serif;">
+                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
                             Calibrated tools and torque protocols: why "feel" is not enough for modern high-end bicycles.
                         </p>
                         <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">READ_TECHNICAL_LOG_</span>
@@ -496,7 +509,7 @@
 
         <div style="margin-top: 30px;">
             <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>WORKSHOP ANALYSIS:</strong></p>
-            <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                 "The Scott Scale is a machine built for absolute stiffness. In this protocol performed at our Trujillo workshop (Paraguay 300), we focused on mechanical purity. We carried out an exhaustive manual decontamination of the bottom bracket to apply a Motorex 2000 hydrophobic seal, neutralizing parasitic friction at critical watt-output points. Our goal is for the bike to disappear beneath the rider, ensuring every ounce of power translates into pure speed on the trail."
             </p>
         </div>
@@ -545,7 +558,7 @@
 
         <div style="margin-top: 30px;">
             <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>WORKSHOP ANALYSIS:</strong></p>
-            <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                 "In this unit, we executed an engineering protocol focused on systemic coherence. Friction management is governed by differential lubrication: we applied SKF LGHP 2/1 grease to DT Swiss hubs and high-load points, while using Finish Line Teflon White and Liqui Moly copper paste on interfaces to prevent galvanic corrosion. The Renthal cockpit has been calibrated with Park Tool torque wrenches under strict elastic limit standards. The SID fork received a 50h service with Maxima Plush oil, optimizing initial sensitivity while awaiting the Brain system's service cycle. The 'Shigura' hybrid braking (XTR + Magura) guarantees an incompressible response through Shimano mineral fluid."
             </p>
         </div>
@@ -592,7 +605,7 @@
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>WORKSHOP ANALYSIS:</strong></p>
-                        <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                             "This service is not a simple re-grease; it is a full bicycle reconstruction. We strip the system down to the core architecture of every bearing to eliminate any trace of parasitic drag on the bicycle. We don't just clean; we decontaminate part by part, ensuring that every bicycle race surface is flawless before applying load-specific industrial grease. The result is a silent, efficient machine where every watt goes directly to the ground through the bicycle."
                         </p>
                     </div>
@@ -637,7 +650,7 @@
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>LABORATORY ANALYSIS:</strong></p>
-                        <p style="color: #888; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif;">
+                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
                             "A full teardown of the <strong>DebonAir</strong> air spring was performed to verify the integrity of the positive and negative chambers. The <strong>Charger Race Day 2</strong> damper underwent vacuum bleeding to ensure a seamless transition from Lock to Open without latency. We finalized with precision torque on the lower leg bolts according to the 7.3 Nm specification."
                         </p>
                     </div>
