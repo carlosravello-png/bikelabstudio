@@ -224,6 +224,16 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
+        
+        /* Prueba responsive móvil - Si algo falla, elimina desde aquí hasta el cierre del @media */
+        @media (max-width: 768px) {
+            section { opacity: 1 !important; transform: none !important; }
+            .case-study { grid-template-columns: 1fr !important; }
+            .visual-evidence { display: flex !important; flex-direction: column !important; gap: 8px !important; }
+            #projects .grid { grid-template-columns: 1fr !important; }
+            .container { padding: 0 16px; }
+            .visual-evidence img { min-height: 160px; width: 100% !important; min-width: 100%; object-fit: cover; flex-shrink: 0; display: block; }
+        }
     </style>
 </head>
 <body>
