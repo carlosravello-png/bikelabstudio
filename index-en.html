@@ -237,10 +237,24 @@
             font-size: 1.8rem;
             max-width: 600px;
         }
+
+        /* Firma de identidad INDUSTRIAL NOIR - Elemento de cierre técnico */
+        .identity-signature {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: #555555;
+            text-transform: uppercase;
+            text-align: left;
+            margin-top: 2rem;
+            display: block;
+        }
         
         /* Prueba responsive móvil - Si algo falla, elimina desde aquí hasta el cierre del @media */
         @media (max-width: 768px) {
             section { opacity: 1 !important; transform: none !important; }
+            .identity-signature { margin-top: 0.75rem; font-size: 0.9rem; }
             .case-study { grid-template-columns: 1fr !important; }
             .visual-evidence { display: flex !important; flex-direction: column !important; gap: 8px !important; }
             #projects .grid { grid-template-columns: 1fr !important; }
@@ -271,6 +285,7 @@
             <p class="hero-subtitle">
                 Technical workshop specialized in maintenance, suspensions, and bicycle optimization. Engineering applied to cycling.
             </p>
+            <span class="identity-signature">INDUSTRIAL NOIR.</span>
         </div>
     </section>
 
