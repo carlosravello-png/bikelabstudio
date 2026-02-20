@@ -18,6 +18,7 @@
         body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Single_Color_Noise.png'); opacity: 0.02; pointer-events: none; z-index: 1000; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         .data-label { font-family: var(--mono); font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .servicios-h1 { font-family: var(--mono); font-size: 0.95rem; font-weight: 400; color: #555; letter-spacing: 2px; line-height: 1.6; margin-bottom: 36px; }
         h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
         .nav-toggle { display: none; }
         .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
@@ -54,7 +55,7 @@
         .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 12px 18px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
         .wa-float:hover { background: var(--text); color: var(--bg); }
         .wa-float svg { transition: 0.4s; } .wa-float:hover svg { transform: scale(1.1); }
-        .hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        .site-signature { display: block; font-family: var(--mono); font-size: 0.85rem; color: #555; letter-spacing: 1px; text-align: center; margin-top: 24px; line-height: 1.6; }
         @media (max-width: 768px) { .container { padding: 0 16px; } .servicios-triptico { grid-template-columns: 1fr; gap: 8px; } }
     </style>
 </head>
@@ -94,8 +95,8 @@
 
     <section style="padding: 140px 0 60px;">
         <div class="container">
-            <h1 class="hidden">[ BIKELAB TECHNICAL SERVICE PROTOCOLS / TRUJILLO ]</h1>
             <span class="data-label">Module_00 // Technical Protocols</span>
+            <h1 class="servicios-h1">TECHNICAL SERVICE PROTOCOL<br>Trujillo · Peru</h1>
             <h2>Services</h2>
             <div class="servicios-triptico">
                 <div class="slot">
@@ -206,6 +207,17 @@
         </div>
     </section>
 
+    <footer style="padding: 48px 0; background: #080808; border-top: 1px solid #111;">
+        <div class="container" style="text-align: center;">
+            <small class="site-signature">Diseño y propiedad: Carlos Ravello Joo<br>Modelo de coherencia dinámico · MCD</small>
+        </div>
+    </footer>
+
+    <!--
+    Site design and ownership:
+    Carlos Ravello Joo
+    Modelo de coherencia dinámico · MCD
+    -->
     <script>
         document.querySelectorAll('.nav-overlay a').forEach(a => {
             if (a.getAttribute('href')?.startsWith('#') || a.getAttribute('href')?.includes('#')) {

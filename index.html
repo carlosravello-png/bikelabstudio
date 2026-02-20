@@ -84,30 +84,18 @@
         "@type": "OfferCatalog",
         "name": "Servicios de Ingeniería Ciclista",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Taller de bicicletas y mecánica de precisión",
-              "description": "Mantenimiento preventivo y correctivo especializado"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Análisis estructural de carbono",
-              "description": "Especialista en diagnóstico estructural de bicicletas y cuadros de bicicletas en fibra de carbono (Toray), aleaciones de Aluminio 6061-T6/7005/7075, Acero 4130 Chromoly y Titanio. Servicio técnico integral de suspensiones de todas las gamas, incluyendo sistemas de muelle (Coil) y aire para marcas como SR Suntour, RST, RockShox, Fox, Öhlins, Marzocchi, y marcas de nicho o emergentes como Bolany, Himalo, Bucklos y Zeron. Experto en mantenimiento, ajuste y compatibilidad de transmisiones y frenado Shimano, SRAM, Campagnolo, y marcas alternativas como L-TWOO, Sensah y Microshift."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Documentación audiovisual técnica",
-              "description": "Cinematografía científica con tecnología Blackmagic"
-            }
-          }
+          { "@id": "https://www.bikelabstudio.com/mantenimiento-general-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/mantenimiento-general-en.html#service" },
+          { "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-en.html#service" },
+          { "@id": "https://www.bikelabstudio.com/suspension-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/suspension-en.html#service" },
+          { "@id": "https://www.bikelabstudio.com/purgado-frenos-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/purgado-frenos-en.html#service" },
+          { "@id": "https://www.bikelabstudio.com/tubelizado-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/tubelizado-en.html#service" },
+          { "@id": "https://www.bikelabstudio.com/centrado-ruedas-es.html#service" },
+          { "@id": "https://www.bikelabstudio.com/centrado-ruedas-en.html#service" }
         ]
       },
       "sameAs": [
@@ -228,6 +216,7 @@
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
         .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
         .footer-link:hover { color: var(--text); }
+        .site-signature { display: block; font-family: var(--mono); font-size: 0.85rem; color: #555; letter-spacing: 1px; text-align: center; margin-top: 32px; line-height: 1.6; }
         
         /* Modificación específica para el subtítulo del Hero - Scientific & Industrial Noir */
         .hero-subtitle {
@@ -304,9 +293,18 @@
         .hero-links a:first-child { text-align: left; }
         .hero-links a:last-child { text-align: right; }
         .hero-links a:hover { color: var(--text); }
-        /* Prueba responsive móvil - Si algo falla, elimina desde aquí hasta el cierre del @media */
+        /* Móvil: menú compacto top-right, sin tapar hero */
         @media (max-width: 768px) {
+            .nav-bar {
+                top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right));
+                left: auto; width: auto; padding: 10px 14px; gap: 12px;
+                background: rgba(5,5,5,0.92); border: 1px solid #222; border-radius: 4px;
+            }
+            .nav-bar-left { gap: 8px; }
+            .nav-menu-label { display: none; }
+            .lang-switch { position: static; }
             section { opacity: 1 !important; transform: none !important; }
+            section[style*="height: 90vh"] { padding-top: max(88px, env(safe-area-inset-top)) !important; min-height: 380px !important; align-items: flex-start !important; }
             .identity-signature { margin-top: 0.75rem; font-size: 0.9rem; }
             .case-study { grid-template-columns: 1fr !important; }
             .visual-evidence { display: flex !important; flex-direction: column !important; gap: 8px !important; }
@@ -333,6 +331,12 @@
         <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
         <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
             <a href="servicios.html">SERVICIOS</a>
+            <a href="mantenimiento-general-es.html">MANTENIMIENTO GENERAL</a>
+            <a href="mantenimiento-preventivo-es.html">MANTENIMIENTO PREVENTIVO</a>
+            <a href="suspension-es.html">SUSPENSIÓN</a>
+            <a href="purgado-frenos-es.html">PURGADO DE FRENOS</a>
+            <a href="tubelizado-es.html">TUBELIZADO</a>
+            <a href="centrado-ruedas-es.html">CENTRADO DE RUEDAS</a>
             <a href="#science">DATOS TÉCNICOS</a>
             <a href="#tips">TIPS</a>
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
@@ -798,9 +802,15 @@
                 </div>
             </div>
             <p style="margin-top: 60px; opacity: 0.3;">© 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE_</p>
+            <small class="site-signature">Diseño y propiedad: Carlos Ravello Joo<br>Modelo de coherencia dinámico · MCD</small>
         </div>
     </footer>
 
+    <!--
+    Site design and ownership:
+    Carlos Ravello Joo
+    Modelo de coherencia dinámico · MCD
+    -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

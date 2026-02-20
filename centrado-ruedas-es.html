@@ -14,6 +14,9 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.bikelabstudio.com/servicios.html"},{"@type":"ListItem","position":3,"name":"Centrado de Ruedas en Trujillo","item":"https://www.bikelabstudio.com/centrado-ruedas-es.html"}]}
     </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/centrado-ruedas-es.html#service","name":"Centrado de Ruedas de Bicicleta en Trujillo","description":"Servicio profesional de centrado de ruedas en Trujillo con medición precisa de tensión de radios. Incluye corrección lateral y radial, verificación de alineación (dish) y balance estructural para mejorar estabilidad, eficiencia y durabilidad en bicicletas MTB y ruta.","url":"https://www.bikelabstudio.com/centrado-ruedas-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Centrado de ruedas","Alineación de ruedas MTB","Reparación de ruedas de bicicleta","Taller de bicicletas en Trujillo"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB y ruta"}}
+    </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,6 +32,7 @@
         .breadcrumb { font-family: var(--mono); font-size: 0.65rem; color: #555; letter-spacing: 1px; margin-bottom: 24px; }
         .breadcrumb a { color: #888; text-decoration: none; }
         .breadcrumb a:hover { color: var(--text); }
+        .protocol-rotulo { font-family: var(--mono); font-size: 0.9rem; font-weight: 400; color: #555; letter-spacing: 2px; margin-bottom: 16px; display: block; }
         .hero-img { width: 100%; max-height: 400px; object-fit: cover; border: 1px solid #151515; margin-bottom: 40px; }
         .formula { font-family: var(--mono); color: #f2f2f2; font-size: 1.3rem; font-weight: 600; letter-spacing: 0.4px; line-height: 1.7; margin: 28px 0; padding: 26px 32px; background: linear-gradient(135deg, #111 0%, #0a0a0a 100%); border: 2px solid #444; border-left: 6px solid #aaa; box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04); overflow-x: auto; }
         .nav-toggle { display: none; }
@@ -54,6 +58,7 @@
         .wa-float:hover { background: var(--text); color: var(--bg); }
         .cta { display: inline-block; margin-top: 24px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; padding: 10px 16px; border: 1px solid var(--accent); color: var(--text); text-decoration: none; transition: background 0.3s, color 0.3s; }
         .cta:hover { background: var(--text); color: var(--bg); }
+        .site-signature { display: block; font-family: var(--mono); font-size: 0.85rem; color: #555; letter-spacing: 1px; text-align: center; margin-top: 24px; line-height: 1.6; }
         @media (max-width: 768px) { .container { padding: 0 16px; } }
     </style>
 </head>
@@ -95,7 +100,7 @@
         <div class="container">
             <nav class="breadcrumb" aria-label="Breadcrumb">Inicio › <a href="servicios.html">Servicios</a> › Centrado de Ruedas</nav>
             <img src="assets/img/servicios/centrado-rines-accuracy.webp" alt="centrado profesional de rueda MTB con tensiómetro calibrado" class="hero-img" width="800" height="400" loading="eager">
-
+            <span class="protocol-rotulo">[ PROTOCOL 0.02 — STRUCTURAL ALIGNMENT ]</span>
             <h1>CENTRADO DE RUEDAS EN TRUJILLO – TENSIÓN UNIFORME Y PRECISIÓN ESTRUCTURAL</h1>
 
             <h2>Centrado profesional de ruedas bajo criterio de tensión uniforme</h2>
@@ -137,6 +142,17 @@
         </div>
     </section>
 
+    <footer style="padding: 48px 0; background: #080808; border-top: 1px solid #111;">
+        <div class="container" style="text-align: center;">
+            <small class="site-signature">Diseño y propiedad: Carlos Ravello Joo<br>Modelo de coherencia dinámico · MCD</small>
+        </div>
+    </footer>
+
+    <!--
+    Site design and ownership:
+    Carlos Ravello Joo
+    Modelo de coherencia dinámico · MCD
+    -->
     <script>
         document.querySelectorAll('.nav-overlay a[href*="index.html#"]').forEach(a => {
             a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
