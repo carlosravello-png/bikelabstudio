@@ -17,7 +17,7 @@
         body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.5; }
         body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Single_Color_Noise.png'); opacity: 0.02; pointer-events: none; z-index: 1000; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        .data-label { font-family: var(--mono); font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .data-label { font-family: var(--mono); font-size: 0.55rem; color: #4a4a4a; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .servicios-h1 { font-family: var(--mono); font-size: 0.95rem; font-weight: 400; color: #555; letter-spacing: 2px; line-height: 1.6; margin-bottom: 36px; }
         h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
         /* Nav bar */
@@ -60,9 +60,11 @@
         .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 12px 18px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
         .wa-float:hover { background: var(--text); color: var(--bg); }
         .wa-float svg { transition: 0.4s; } .wa-float:hover svg { transform: scale(1.1); }
-        .site-signature { display: block; font-family: var(--mono); font-size: 0.85rem; color: #555; letter-spacing: 1px; text-align: center; margin-top: 24px; line-height: 1.6; }
+        .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         .protocol-label { font-family: var(--mono); font-size: 0.85rem; font-weight: 400; color: #555; letter-spacing: 2px; margin-bottom: 10px; display: block; }
         @media (max-width: 768px) {
+            .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+            .nav-toggle:checked ~ .nav-overlay { z-index: 1004; }
             .container { padding: 0 16px; }
             .servicios-triptico { grid-template-columns: 1fr; gap: 8px; }
         }
@@ -94,7 +96,7 @@
             <a href="index.html#science">DATOS TÉCNICOS</a>
             <a href="index.html#tips">TIPS</a>
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">DIRECCIÓN</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">UBICACIÓN</a>
         </nav>
     </div>
 
