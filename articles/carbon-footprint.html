@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" href="../favicon.png">
     
     <!-- MathJax for LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <!-- Schema.org JSON-LD -->
@@ -217,12 +217,18 @@
         }
         
         .formula {
-            background-color: #0a0a0a;
-            padding: 20px;
-            margin: 30px 0;
-            border-left: 3px solid #444;
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
             overflow-x: auto;
         }
+        .formula mjx-container { color: #f2f2f2 !important; }
         
         .data-highlight {
             color: #fff;
@@ -362,7 +368,7 @@
 
         <!-- HERO IMAGE -->
         <div class="image-container">
-            <img src="images/gtx-complete.jpg" 
+            <img src="images/gtx-complete.jpg" width="800" height="533"
                  alt="Structural analysis aluminum frame 6061-T6 BikeLab Studio Trujillo Peru premium bicycle workshop"
                  title="GTX Series restoration protocol - BikeLab Studio">
             <div class="image-caption">
@@ -486,7 +492,7 @@
 
         <!-- WORKSHOP IMAGE -->
         <div class="image-container">
-            <img src="images/workshop-station.jpg"
+            <img src="images/workshop-station.jpg" width="800" height="533"
                  alt="Workstation tribological analysis Shimano XT BikeLab Studio precision mechanics"
                  title="Component tribological analysis - BikeLab Studio">
             <div class="image-caption">
@@ -557,7 +563,7 @@
 
         <!-- COMPONENTS IMAGE -->
         <div class="image-container">
-            <img src="images/drivetrain-components.jpg"
+            <img src="images/drivetrain-components.jpg" width="800" height="533"
                  alt="Critical components Shimano X9 chain cassette preventive maintenance cycling safety"
                  title="Renewable consumable elements - BikeLab Studio">
             <div class="image-caption">

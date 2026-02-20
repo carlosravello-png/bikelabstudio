@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="../favicon.png">
     
     <!-- MathJax for LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <!-- Schema.org JSON-LD -->
@@ -200,12 +200,18 @@
         }
         
         .formula {
-            background-color: #0a0a0a;
-            padding: 20px;
-            margin: 30px 0;
-            border-left: 3px solid #444;
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
             overflow-x: auto;
         }
+        .formula mjx-container { color: #f2f2f2 !important; }
         
         .data-highlight {
             color: #fff;
@@ -335,7 +341,7 @@
 
         <!-- HERO IMAGE -->
         <div class="image-container">
-            <img src="images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg" 
+            <img src="images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg" width="800" height="533"
                  alt="mejor-taller-bicicletas-trujillo-peru-frenos-magura-mtb-servicio-especializado-frenado-altitud-bikelab"
                  title="Caliper Magura monoblock - BikeLab Studio">
             <div class="image-caption">
@@ -477,7 +483,7 @@
         <h2>MÓDULO_03 // COMPLIANCIA_VOLUMÉTRICA</h2>
         <!-- IMAGEN TÉCNICA: SISTEMA DE MANGUERA -->
         <div class="image-container">
-            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg"
+            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg" width="800" height="533"
                  alt="Kit Jagwire Pro Hydraulic Hose para frenos de disco MTB — línea hidráulica de baja expansión para respuesta de frenado precisa"
                  title="Jagwire Pro Hydraulic Hose — línea de baja expansión">
             <div class="image-caption">
@@ -499,7 +505,7 @@
 
         <!-- JAGWIRE IMAGE -->
         <div class="image-container">
-            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg" 
+            <img src="images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.jpg" width="800" height="533"
                  alt="taller-bicicletas-profesional-trujillo-peru-mangueras-jagwire-hidraulicas-servicio-frenos-mtb-bikelab"
                  title="Jagwire Pro Hydro - BikeLab Studio">
             <div class="image-caption">

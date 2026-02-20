@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | BikeLab Studio — Cycling Engineering Trujillo</title>
+    <meta name="description" content="BikeLab technical protocols: Tubeless, preventive maintenance, brake bleed, wheel truing, suspensions. Precision workshop in Trujillo.">
+    <link rel="canonical" href="https://www.bikelabstudio.com/servicios-en.html">
+    <link rel="alternate" hreflang="es-PE" href="https://www.bikelabstudio.com/servicios.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/servicios-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/servicios.html">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.5; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Single_Color_Noise.png'); opacity: 0.02; pointer-events: none; z-index: 1000; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        .data-label { font-family: var(--mono); font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 28px; height: 20px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; height: 2px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line-1 { width: 22px; } .nav-trigger .line-2 { width: 16px; margin-left: 6px; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(9px) rotate(45deg); width: 28px; margin-left: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { transform: translateY(-9px) rotate(-45deg); width: 28px; margin-left: 0; }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s, pointer-events 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: block; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 0; border-bottom: 1px solid #151515; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:hover { color: var(--accent); border-color: #333; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .lang-switch { position: fixed; top: 40px; right: 40px; z-index: 1002; }
+        .nav-bar .lang-switch { position: static; }
+        .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); text-decoration: none; padding: 8px 16px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); transition: all 0.3s; display: inline-block; }
+        .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .servicios-triptico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 60px; }
+        .servicios-triptico .slot { aspect-ratio: 2/3; overflow: hidden; background: #0a0a0a; border: 1px solid #151515; }
+        .servicios-triptico .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .servicio-card { background: var(--surface); border: 1px solid #151515; overflow: hidden; transition: border-color 0.3s; }
+        .servicio-card:hover { border-color: #333; }
+        .servicio-card .img-wrap { width: 100%; height: 200px; overflow: hidden; background: #0a0a0a; }
+        .servicio-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .servicio-card .body { padding: 25px; }
+        .servicio-card .body h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 2px; color: var(--accent); margin-bottom: 10px; }
+        .servicio-card .cta { display: inline-block; margin-top: 20px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; padding: 10px 16px; border: 1px solid var(--accent); color: var(--text); text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .servicio-card .cta:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 12px 18px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+        .wa-float svg { transition: 0.4s; } .wa-float:hover svg { transform: scale(1.1); }
+        .hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        @media (max-width: 768px) { .container { padding: 0 16px; } .servicios-triptico { grid-template-columns: 1fr; gap: 8px; } }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Open menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="index-en.html">HOME</a> · <a href="servicios.html">ES</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="servicios-en.html">SERVICES</a>
+            <a href="tubelizado-en.html">TUBELESS</a>
+            <a href="suspension-en.html">SUSPENSION</a>
+            <a href="centrado-ruedas-en.html">WHEEL TRUING</a>
+            <a href="purgado-frenos-en.html">BRAKE BLEED</a>
+            <a href="mantenimiento-general-en.html">GENERAL MAINT.</a>
+            <a href="mantenimiento-preventivo-en.html">PREVENTIVE MAINT.</a>
+            <a href="index-en.html#science">TECHNICAL DATA</a>
+            <a href="index-en.html#tips">TIPS</a>
+            <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20schedule%20a%20technical%20appointment">CONTACT</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">ADDRESS</a>
+        </nav>
+    </div>
+
+    <a href="https://wa.me/51934391545?text=Hello%2C%20I'm%20interested%20in%20BikeLab%20Studio%20services" class="wa-float" aria-label="Contact via WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WHATSAPP_
+    </a>
+
+    <section style="padding: 140px 0 60px;">
+        <div class="container">
+            <h1 class="hidden">[ BIKELAB TECHNICAL SERVICE PROTOCOLS / TRUJILLO ]</h1>
+            <span class="data-label">Module_00 // Technical Protocols</span>
+            <h2>Services</h2>
+            <div class="servicios-triptico">
+                <div class="slot">
+                    <picture>
+                        <source srcset="assets/img/servicios/servicios-vertical-01.webp" type="image/webp">
+                        <img src="assets/img/servicios/servicios-vertical-01.webp" alt="BikeLab Studio - Workshop Trujillo" width="600" height="900" loading="eager">
+                    </picture>
+                </div>
+                <div class="slot">
+                    <picture>
+                        <source srcset="assets/img/servicios/servicios-vertical-02.webp" type="image/webp">
+                        <img src="assets/img/servicios/servicios-vertical-02.webp" alt="BikeLab Studio - Cycling engineering" width="600" height="900" loading="eager">
+                    </picture>
+                </div>
+                <div class="slot">
+                    <picture>
+                        <source srcset="assets/img/servicios/servicios-vertical-03.webp" type="image/webp">
+                        <img src="assets/img/servicios/servicios-vertical-03.webp" alt="BikeLab Studio - Precision mechanics" width="600" height="900" loading="eager">
+                    </picture>
+                </div>
+            </div>
+            <div class="servicios-grid">
+                <article class="servicio-card">
+                    <a href="mantenimiento-general-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/mantenimiento-general-industrial.webp" type="image/webp">
+                            <img src="assets/img/servicios/mantenimiento-general-industrial.webp" alt="full bicycle maintenance with complete disassembly in Trujillo" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="mantenimiento-general-en.html" style="color:inherit;text-decoration:none;">GENERAL MAINTENANCE</a></p>
+                        <a href="mantenimiento-general-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20General%20Maintenance.%0A%0AWorkshop%20check-in%20with%20full%20disassembly%2C%20cleaning%20and%20calibration.%0A%0ATo%20book%2C%20send%3A%20your%20name%2C%20bike%20model%2C%20the%20exact%20issue%20and%20your%20available%20day%20%2B%20time%20range%20for%20drop-off." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="servicio-card">
+                    <a href="mantenimiento-preventivo-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/mantenimiento-preventivo-noir.webp" type="image/webp">
+                            <img src="assets/img/servicios/mantenimiento-preventivo-noir.webp" alt="preventive bicycle maintenance in Trujillo cleaning and adjustment" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="mantenimiento-preventivo-en.html" style="color:inherit;text-decoration:none;">PREVENTIVE MAINTENANCE</a></p>
+                        <a href="mantenimiento-preventivo-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20Preventive%20Maintenance.%0A%0ACleaning%2C%20lubrication%20and%20basic%20adjustment%20service.%0A%0ATo%20reserve%3A%20your%20name%2C%20bike%20model%2C%20current%20condition%20and%20your%20available%20day%20%2B%20time%20range." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="servicio-card">
+                    <a href="suspension-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/suspensiones-protocolo-tecnico.webp" type="image/webp">
+                            <img src="assets/img/servicios/suspensiones-protocolo-tecnico.webp" alt="professional MTB suspension service in Trujillo Peru" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="suspension-en.html" style="color:inherit;text-decoration:none;">SUSPENSION MAINTENANCE</a></p>
+                        <a href="suspension-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20Suspension%20Service.%0A%0AInternal%20maintenance%20and%20calibration%20to%20restore%20control%20and%20response.%0A%0AProvide%3A%20your%20name%2C%20suspension%20model%2C%20exact%20symptom%20and%20available%20day%20%2B%20time%20range%20for%20check-in." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="servicio-card">
+                    <a href="purgado-frenos-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/purgado-frenos-scientific.webp" type="image/webp">
+                            <img src="assets/img/servicios/purgado-frenos-scientific.webp" alt="professional hydraulic brake bleeding in Trujillo Peru" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="purgado-frenos-en.html" style="color:inherit;text-decoration:none;">BRAKE BLEED</a></p>
+                        <a href="purgado-frenos-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20Hydraulic%20Brake%20Bleeding.%0A%0AWe%20restore%20hydraulic%20pressure%20and%20inspect%20lever%20and%20caliper.%0A%0ATo%20schedule%3A%20your%20name%2C%20brake%20model%2C%20the%20exact%20issue%20and%20your%20available%20day%20%2B%20time%20range." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="servicio-card">
+                    <a href="tubelizado-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/tubeless-precision.webp" type="image/webp">
+                            <img src="assets/img/servicios/tubeless-precision.webp" alt="professional MTB tubeless conversion in Trujillo" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="tubelizado-en.html" style="color:inherit;text-decoration:none;">TUBELESS</a></p>
+                        <a href="tubelizado-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20Tubeless%20Conversion.%0A%0AStable%20sealing%20setup%20with%20working%20pressure%20verification.%0A%0ATo%20book%3A%20your%20name%2C%20wheel%2Ftire%20size%2C%20goal%20or%20issue%20and%20your%20available%20day%20%2B%20time%20range." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="servicio-card">
+                    <a href="centrado-ruedas-en.html" class="img-wrap" style="display:block;text-decoration:none;">
+                        <picture>
+                            <source srcset="assets/img/servicios/centrado-rines-accuracy.webp" type="image/webp">
+                            <img src="assets/img/servicios/centrado-rines-accuracy.webp" alt="professional wheel truing with calibrated tension meter" width="400" height="200" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="body">
+                        <h3>[ TECHNICAL PROTOCOL ]</h3>
+                        <p style="font-size: 1.1rem; color: var(--text);"><a href="centrado-ruedas-en.html" style="color:inherit;text-decoration:none;">WHEEL TRUING</a></p>
+                        <a href="centrado-ruedas-en.html" class="cta" style="margin-right:10px;">VIEW DETAILS</a>
+                        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20Wheel%20Truing.%0A%0ALateral%2Fradial%20correction%20and%20spoke%20tension%20balancing.%0A%0ASend%3A%20your%20name%2C%20wheel%20size%2C%20exact%20issue%20and%20your%20available%20day%20%2B%20time%20range%20for%20drop-off." class="cta">BOOK APPOINTMENT</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.nav-overlay a').forEach(a => {
+            if (a.getAttribute('href')?.startsWith('#') || a.getAttribute('href')?.includes('#')) {
+                a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+            }
+        });
+    </script>
+</body>
+</html>

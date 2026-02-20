@@ -33,7 +33,7 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <!-- MathJax for LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <!-- Schema.org JSON-LD -->
@@ -167,12 +167,18 @@
         tr:hover { background-color: #151515; }
         
         .formula {
-            background-color: #0a0a0a;
-            padding: 20px;
-            margin: 30px 0;
-            border-left: 3px solid #444;
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
             overflow-x: auto;
         }
+        .formula mjx-container { color: #f2f2f2 !important; }
         
         .data-highlight { color: #fff; font-weight: bold; }
         .data-red { color: #ff6b6b; font-weight: bold; }
@@ -321,25 +327,25 @@
                 <p class="small">Imágenes reales de taller — aplicación, productos y casos típicos. (No se redimensionan; solo se etiquetan para SEO).</p>
                 <div class="gallery-grid">
                     <figure>
-                        <img src="images/bicycle-hub-bearing-grease-application-precision-service-bikelab.jpg"
+                        <img src="images/bicycle-hub-bearing-grease-application-precision-service-bikelab.jpg" width="600" height="400"
                              alt="Aplicación precisa de grasa en rodamientos de maza de bicicleta durante servicio; taller Bikelab Studio, Trujillo"
                              loading="lazy" decoding="async">
                         <figcaption>Aplicación precisa en rodamientos de maza (servicio de rueda).</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.jpg"
+                        <img src="images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.jpg" width="600" height="400"
                              alt="Arsenal de lubricación en banco de trabajo: SKF LGHP 2/1, Motorex Fett 2000, Finish Line, Liqui Moly y Muc-Off en Bikelab Studio"
                              loading="lazy" decoding="async">
                         <figcaption>Arsenal de grasas/pastas: selección por carga, temperatura y compatibilidad.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/liqui-moly-kupferpaste-copper-anti-seize-bicycle-workshop-trujillo-peru.jpg"
+                        <img src="images/liqui-moly-kupferpaste-copper-anti-seize-bicycle-workshop-trujillo-peru.jpg" width="600" height="400"
                              alt="Pasta de cobre anti-seize Liqui Moly Kupferpaste en banco de trabajo; uso en tornillería y zonas de alta temperatura/corrosión"
                              loading="lazy" decoding="async">
                         <figcaption>Pasta de cobre (anti-seize): tornillería, interfaces y corrosión/temperatura.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/skf-lghp-2-1-high-temperature-bearing-grease.jpg"
+                        <img src="images/skf-lghp-2-1-high-temperature-bearing-grease.jpg" width="600" height="400"
                              alt="Grasa SKF LGHP 2/1 de alta temperatura para rodamientos; producto en primer plano"
                              loading="lazy" decoding="async">
                         <figcaption>SKF LGHP 2/1: ejemplo de grasa de alto desempeño para rodamientos.</figcaption>
@@ -355,7 +361,7 @@
 
         <!-- HERO IMAGE -->
         <div class="image-container">
-            <img src="images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.jpg" 
+            <img src="images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.jpg" width="800" height="533"
                  alt="grasas-tribologia-bicicleta-SKF-Motorex-FinishLine-LiquiMoly-MucOff-taller-profesional-trujillo-peru-bikelab"
                  title="Arsenal de lubricación BikeLab Studio — SKF, Motorex, Finish Line, Liqui-Moly, Muc-Off">
             <div class="image-caption">

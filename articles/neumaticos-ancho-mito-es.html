@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="¿Las llantas delgadas son más veloces? Análisis tribológico y aerodinámico con datos reales de laboratorio. CRR medido, impedance loss, regla del 105%, y mercado peruano. BikeLab Studio, Trujillo.">
   <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.jpg">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script type="application/ld+json">
     {
@@ -263,12 +263,18 @@
         tr:hover { background-color: #151515; }
 
         .formula {
-            background-color: #0a0a0a;
-            padding: 20px;
-            margin: 30px 0;
-            border-left: 3px solid #444;
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
             overflow-x: auto;
         }
+        .formula mjx-container { color: #f2f2f2 !important; }
 
         .data-highlight { color: #fff; font-weight: bold; }
         .data-red { color: #ff6b6b; font-weight: bold; }
@@ -425,7 +431,7 @@
 
     <!-- HERO IMAGE -->
     <div class="image-container">
-        <img src="images/neumaticos-hero-llantas-humedas-bikelab.jpg"
+        <img src="images/neumaticos-hero-llantas-humedas-bikelab.jpg" width="800" height="533"
              alt="llantas-mtb-ancho-comparativa-tubeless-sellante-taller-bikelab-trujillo-peru"
              title="Comparativa de anchos de neumático — BikeLab Studio">
     </div>
@@ -664,7 +670,7 @@
     <!-- MÓDULO 05 -->
     <!-- FOTO 2 -->
     <div class="image-container">
-        <img src="images/neumaticos-mano-ikon-tanwall-bikelab.jpg"
+        <img src="images/neumaticos-mano-ikon-tanwall-bikelab.jpg" width="800" height="533"
              alt="maxxis-ikon-exo-tr-tanwall-29-servicio-tubeless-taller-bikelab-trujillo-peru"
              title="Maxxis Ikon EXO TR Tanwall — BikeLab Studio">
     </div>
@@ -851,7 +857,7 @@
     <!-- MÓDULO 08 -->
     <!-- FOTO 3 -->
     <div class="image-container">
-        <img src="images/neumaticos-maxxis-ikon-giant-taller-bikelab.jpg"
+        <img src="images/neumaticos-maxxis-ikon-giant-taller-bikelab.jpg" width="800" height="533"
              alt="maxxis-ikon-tanwall-rueda-giant-29-taller-bikelab-studio-trujillo-peru"
              title="Maxxis Ikon tanwall — Giant 29 — BikeLab Studio">
     </div>
