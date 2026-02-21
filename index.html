@@ -34,6 +34,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
     
+    <!-- Fase 1: Preconnect + Preload para LCP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Single_Color_Noise.png">
+    
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
@@ -437,7 +442,7 @@
     <a href="articles/torque-bicicleta-es.html" style="text-decoration:none; color:inherit;">
         <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
             <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                <img src="articles/images/torque-bicicleta.jpg" alt="Torque correcto en bicicletas" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3);">
+                <img src="articles/images/torque-bicicleta.jpg" alt="Torque correcto en bicicletas" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3);">
             </div>
             <div style="padding: 25px;">
                 <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 001</span>
@@ -450,7 +455,7 @@
 <a href="articles/ruidos-bicicleta-es.html" style="text-decoration:none; color:inherit;">
             <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                 <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                    <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                 </div>
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 005</span>
@@ -465,7 +470,7 @@
                 <a href="articles/lubricantes-grasas-es.html" style="text-decoration:none; color:inherit;">
             <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                 <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                    <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                 </div>
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 006</span>
@@ -480,7 +485,7 @@
                 <a href="articles/lavar-bicicleta-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/lavar-bicicleta.jpg" alt="Lavado correcto de bicicleta" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/lavar-bicicleta.jpg" alt="Lavado correcto de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 003</span>
@@ -495,7 +500,7 @@
                 <a href="articles/herramientas-gama-alta-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/herramientas-gama-alta.jpg" alt="Herramientas de precisión para ciclismo" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/herramientas-gama-alta.jpg" alt="Herramientas de precisión para ciclismo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 010</span>
@@ -510,7 +515,7 @@
                 <a href="articles/freno-disco-roza-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 004</span>
@@ -525,7 +530,7 @@
                 <a href="articles/danos-cuadro-carbono-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/danos-cuadro-carbono.jpg" alt="Inspección de daños en carbono" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/danos-cuadro-carbono.jpg" alt="Inspección de daños en carbono" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 007</span>
@@ -540,7 +545,7 @@
                 <a href="articles/cuidado-transmision-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 009</span>
@@ -555,7 +560,7 @@
                 <a href="articles/cambio-cadena-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 002</span>
@@ -570,7 +575,7 @@
                 <a href="articles/ajuste-profesional-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 008</span>
@@ -626,12 +631,12 @@
     </div>
 
     <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/scott-white-full.jpg" alt="Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-frame.jpg" alt="Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-bb.jpg" alt="Mantenimiento pedalier Scott Scale Trujillo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-drivetrain.jpg" alt="Transmisión optimizada Scott Scale" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-tools.jpg" alt="Herramientas profesionales Bikelab Studio El Recreo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-finish.jpg" alt="Resultado final Scott Scale White Trujillo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-full.jpg" alt="Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-frame.jpg" alt="Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-bb.jpg" alt="Mantenimiento pedalier Scott Scale Trujillo" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-drivetrain.jpg" alt="Transmisión optimizada Scott Scale" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-tools.jpg" alt="Herramientas profesionales Bikelab Studio El Recreo" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-finish.jpg" alt="Resultado final Scott Scale White Trujillo" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
     </div>
 
 </div>
@@ -673,12 +678,12 @@
     </div>
 
     <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/epic-red-full.jpg" alt="Specialized Epic Roja" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-front.jpg" alt="Alineación Frontal" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-brain.jpg" alt="Válvula Brain" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-cockpit.jpg" alt="Cockpit Renthal" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-rear.jpg" alt="Transmisión" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-hub.jpg" alt="Maza DT Swiss" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-full.jpg" alt="Specialized Epic Roja" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/epic-red-front.jpg" alt="Alineación Frontal" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/epic-red-brain.jpg" alt="Válvula Brain" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-cockpit.jpg" alt="Cockpit Renthal" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-rear.jpg" alt="Transmisión" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-hub.jpg" alt="Maza DT Swiss" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
     </div>
 
 </div>
@@ -718,12 +723,12 @@
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="articles/images/overhaul-despiece-total.jpg" alt="Inventario técnico de componentes de bicicleta desarmados" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/overhaul-lavado-rodamientos.jpg" alt="Lavado por inmersión de rodamientos de bicicleta" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/overhaul-limpieza-transmision.jpg" alt="Remoción de grasa en transmisión de bicicleta" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/overhaul-inspeccion-pedalier.jpg" alt="Inspección de pistas del pedalier de bicicleta" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/overhaul-preparacion-nucleo.jpg" alt="Preparación de maza de bicicleta" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/overhaul-ajuste-final.jpg" alt="Ajuste final del sistema de cambios de la bicicleta" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-despiece-total.jpg" alt="Inventario técnico de componentes de bicicleta desarmados" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-lavado-rodamientos.jpg" alt="Lavado por inmersión de rodamientos de bicicleta" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-limpieza-transmision.jpg" alt="Remoción de grasa en transmisión de bicicleta" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-inspeccion-pedalier.jpg" alt="Inspección de pistas del pedalier de bicicleta" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-preparacion-nucleo.jpg" alt="Preparación de maza de bicicleta" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-ajuste-final.jpg" alt="Ajuste final del sistema de cambios de la bicicleta" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
                 </div>
             </div>
             
@@ -764,12 +769,12 @@
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.jpg" alt="despiece-tecnico-rockshox-sid" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.jpg" alt="mantenimiento-retenes-skf-bikelab" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.jpg" alt="purgado-cartucho-rockshox-charger" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.jpg" alt="analisis-debonair-rockshox" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.jpg" alt="engrase-especifico-sram-butter" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.jpg" alt="resultado-final-rockshox-sid-ultimate" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.jpg" alt="despiece-tecnico-rockshox-sid" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.jpg" alt="mantenimiento-retenes-skf-bikelab" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.jpg" alt="purgado-cartucho-rockshox-charger" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.jpg" alt="analisis-debonair-rockshox" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.jpg" alt="engrase-especifico-sram-butter" loading="lazy" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.jpg" alt="resultado-final-rockshox-sid-ultimate" loading="lazy" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
                 </div>
             </div>
        
