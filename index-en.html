@@ -22,7 +22,7 @@
     <meta property="og:title" content="BikeLab Studio | Engineering Lab">
     <meta property="og:description" content="Leading bicycle engineering lab in Trujillo. Precision mechanics and technical cinematography.">
     <meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
-   <meta property="og:url" content="https://www.bikelabstudio.com/index-en.html">
+    <meta property="og:url" content="https://www.bikelabstudio.com/index-en.html">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card -->
@@ -33,6 +33,10 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Preconnect (Fase 2) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -121,11 +125,9 @@
     }
     </script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-    
-    <!-- MathJax -->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Fonts: carga no bloqueante (Fase 2) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital@1&display=swap"></noscript>
 
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -150,6 +152,8 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         section { padding: 140px 0; border-bottom: 1px solid #111; opacity: 0; transform: translateY(30px); transition: 1s ease-out; scroll-margin-top: 70px; }
         section.visible { opacity: 1; transform: translateY(0); }
+        #projects { opacity: 1; transform: none; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+        #projects > .data-label, #projects > h2 { grid-column: 1 / -1; }
         .data-label { font-family: var(--mono); font-size: 0.55rem; color: #4a4a4a; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; display: block; }
         h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
@@ -317,6 +321,7 @@
             .identity-signature { margin-top: 0.75rem; font-size: 0.7rem; }
             .case-study { grid-template-columns: 1fr !important; }
             .visual-evidence { display: flex !important; flex-direction: column !important; gap: 8px !important; }
+            #projects { grid-template-columns: 1fr !important; }
             #projects .grid { grid-template-columns: 1fr !important; }
             .container { padding: 0 16px; }
             .visual-evidence img { min-height: 160px; width: 100% !important; min-width: 100%; object-fit: cover; flex-shrink: 0; display: block; }
@@ -439,7 +444,7 @@
             <a href="articles/torque-bicicleta.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/torque-bicicleta.jpg" alt="Proper Torque" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3);">
+                        <img src="articles/images/torque-bicicleta.webp" alt="Proper Torque" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3);">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 001</span>
@@ -486,7 +491,7 @@
             <a href="articles/lavar-bicicleta.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/lavar-bicicleta.jpg" alt="Correct bike washing" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/lavar-bicicleta.webp" alt="Correct bike washing" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 003</span>
@@ -501,7 +506,7 @@
             <a href="articles/herramientas-gama-alta.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/herramientas-gama-alta.jpg" alt="High-end bicycle tools" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/herramientas-gama-alta.webp" alt="High-end bicycle tools" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 010</span>
@@ -531,7 +536,7 @@
             <a href="articles/danos-cuadro-carbono.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/danos-cuadro-carbono.jpg" alt="Carbon frame damage inspection" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/danos-cuadro-carbono.webp" alt="Carbon frame damage inspection" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">TECH_GUIDE // 007</span>
@@ -635,12 +640,12 @@
     </div>
 
     <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/scott-white-full.jpg" alt="Scott Scale White - Bicycle workshop Trujillo Urb El Recreo" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-frame.jpg" alt="Scott Scale frame detail - Bikelab Studio Paraguay 300" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-bb.jpg" alt="Bottom bracket service Scott Scale Trujillo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-drivetrain.jpg" alt="Optimized drivetrain Scott Scale" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-tools.jpg" alt="Professional tools Bikelab Studio El Recreo" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-finish.jpg" alt="Final result Scott Scale White Trujillo Peru" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-full.webp" alt="Scott Scale White - Bicycle workshop Trujillo Urb El Recreo" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-frame.webp" alt="Scott Scale frame detail - Bikelab Studio Paraguay 300" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/scott-white-bb.webp" alt="Bottom bracket service Scott Scale Trujillo" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-drivetrain.webp" alt="Optimized drivetrain Scott Scale" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-tools.webp" alt="Professional tools Bikelab Studio El Recreo" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/scott-white-finish.webp" alt="Final result Scott Scale White Trujillo Peru" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
     </div>
 
 </div>
@@ -684,12 +689,12 @@
     </div>
 
     <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/epic-red-full.jpg" alt="Specialized Epic Red" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-front.jpg" alt="Frontal Alignment" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-brain.jpg" alt="Brain Valve" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-cockpit.jpg" alt="Renthal Cockpit" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-rear.jpg" alt="Drivetrain" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-hub.jpg" alt="DT Swiss Hub" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-full.webp" alt="Specialized Epic Red" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/epic-red-front.webp" alt="Frontal Alignment" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+        <img src="articles/images/epic-red-brain.webp" alt="Brain Valve" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-cockpit.webp" alt="Renthal Cockpit" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-rear.webp" alt="Drivetrain" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+        <img src="articles/images/epic-red-hub.webp" alt="DT Swiss Hub" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
     </div>
 
 </div>
@@ -730,16 +735,16 @@
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="./articles/images/overhaul-despiece-total.jpg" alt="Technical inventory of disassembled bicycle components" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/overhaul-lavado-rodamientos.jpg" alt="Immersion cleaning of precision bicycle bearings" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/overhaul-limpieza-transmision.jpg" alt="Bicycle drivetrain grease removal and cleaning" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/overhaul-inspeccion-pedalier.jpg" alt="Bicycle bottom bracket race inspection" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/overhaul-preparacion-nucleo.jpg" alt="Bicycle freehub body preparation for reassembly" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/overhaul-ajuste-final.jpg" alt="Final drivetrain tuning and bicycle setup" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/overhaul-despiece-total.webp" alt="Technical inventory of disassembled bicycle components" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-lavado-rodamientos.webp" alt="Immersion cleaning of precision bicycle bearings" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-limpieza-transmision.webp" alt="Bicycle drivetrain grease removal and cleaning" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-inspeccion-pedalier.webp" alt="Bicycle bottom bracket race inspection" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-preparacion-nucleo.webp" alt="Bicycle freehub body preparation for reassembly" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-ajuste-final.webp" alt="Final drivetrain tuning and bicycle setup" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
                 </div>
             </div>
             
-            <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start;">
+            <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; grid-column: 1 / -1;">
                 <div class="lab-report" style="border-left: 2px solid var(--accent); padding-left: 25px;">
                     <p style="font-size: 0.7rem; color: #666; letter-spacing: 2px; margin-bottom: 5px;">CASE_STUDY // RS_SID_ULTIMATE_2026</p>
                     <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Protocol: <span style="color: var(--accent);">200h SID SL Restoration</span></h3>
@@ -776,12 +781,12 @@
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.jpg" alt="rockshox-sid-technical-teardown" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.jpg" alt="skf-seal-maintenance-bikelab" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.jpg" alt="rockshox-charger-damper-bleeding" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.jpg" alt="debonair-air-spring-analysis" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.jpg" alt="sram-butter-application" style="width: 100%; border: 1px solid #333; filter: brightness(0.85);">
-                    <img src="./articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.jpg" alt="final-rockshox-sid-ultimate-result" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85);">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.webp" alt="rockshox-sid-technical-teardown" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.webp" alt="skf-seal-maintenance-bikelab" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.webp" alt="rockshox-charger-damper-bleeding" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.webp" alt="debonair-air-spring-analysis" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.webp" alt="sram-butter-application" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp" alt="final-rockshox-sid-ultimate-result" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
                 </div>
             </div>
         </section>
@@ -838,6 +843,8 @@
             a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
         });
     </script>
+    <!-- MathJax: diferido al final (Fase 2) -->
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
