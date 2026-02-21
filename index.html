@@ -125,8 +125,8 @@
     }
     </script>
 
-    <!-- Fonts: carga no bloqueante (Fase 2) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fonts: carga no bloqueante (media=print evita render-blocking; PageSpeed Fase 3) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media')">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"></noscript>
 
     <style>
