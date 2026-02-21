@@ -34,7 +34,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
     
-    <!-- Preconnect a fuentes (sin preload de ruido: no es LCP) -->
+    <!-- Preconnect a fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -125,7 +125,7 @@
     }
     </script>
 
-    <!-- Fonts: carga no bloqueante (media=print evita render-blocking; PageSpeed Fase 3) -->
+    <!-- Fonts: carga no bloqueante -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media')">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"></noscript>
 
@@ -328,7 +328,6 @@
     </style>
 </head>
 <body>
-    <!-- Nav Bar + Overlay (Checkbox Hack - sin JS) -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
     <div class="nav-bar">
         <div class="nav-bar-left">
@@ -357,7 +356,6 @@
         </nav>
     </div>
 
-    <!-- WhatsApp Button -->
     <a href="https://wa.me/51934391545?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20BikeLab%20Studio" class="wa-float" aria-label="Contactar por WhatsApp">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -442,7 +440,7 @@
     <a href="articles/torque-bicicleta-es.html" style="text-decoration:none; color:inherit;">
         <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
             <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                <img src="articles/images/torque-bicicleta.webp" alt="Torque correcto en bicicletas" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3);">
+                <img src="articles/images/torque-bicicleta.webp" alt="Torque correcto en bicicletas" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
             </div>
             <div style="padding: 25px;">
                 <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 001</span>
@@ -455,7 +453,7 @@
 <a href="articles/ruidos-bicicleta-es.html" style="text-decoration:none; color:inherit;">
             <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                 <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                    <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                 </div>
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 005</span>
@@ -470,7 +468,7 @@
                 <a href="articles/lubricantes-grasas-es.html" style="text-decoration:none; color:inherit;">
             <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                 <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                    <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                 </div>
                 <div style="padding: 25px;">
                     <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 006</span>
@@ -485,7 +483,7 @@
                 <a href="articles/lavar-bicicleta-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/lavar-bicicleta.webp" alt="Lavado correcto de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/lavar-bicicleta.webp" alt="Lavado correcto de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 003</span>
@@ -500,7 +498,7 @@
                 <a href="articles/herramientas-gama-alta-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/herramientas-gama-alta.webp" alt="Herramientas de precisión para ciclismo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/herramientas-gama-alta.webp" alt="Herramientas de precisión para ciclismo" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 010</span>
@@ -515,7 +513,7 @@
                 <a href="articles/freno-disco-roza-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 004</span>
@@ -530,7 +528,7 @@
                 <a href="articles/danos-cuadro-carbono-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/danos-cuadro-carbono.webp" alt="Inspección de daños en carbono" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/danos-cuadro-carbono.webp" alt="Inspección de daños en carbono" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 007</span>
@@ -545,7 +543,7 @@
                 <a href="articles/cuidado-transmision-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 009</span>
@@ -560,7 +558,7 @@
                 <a href="articles/cambio-cadena-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 002</span>
@@ -575,7 +573,7 @@
                 <a href="articles/ajuste-profesional-es.html" style="text-decoration:none; color:inherit;">
                 <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
                     <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
                     </div>
                     <div style="padding: 25px;">
                         <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 008</span>
@@ -786,7 +784,7 @@
             <div class="grid">
                 <div class="card" style="text-align:center; padding: 60px 20px;">
                     <p>Documentación Blackmagic // Flujo de trabajo DaVinci Resolve.</p>
-                    <a href="https://www.behance.net/bikelabstudio" class="btn-cta" style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;">ACCEDER PORTAFOLIO</a>
+                    <a href="https://www.behance.net/bikelabstudio" class="btn-cta" style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;" aria-label="Acceder al portafolio de BikeLab Studio en Behance">ACCEDER PORTAFOLIO</a>
                 </div>
             </div>
         </section>
@@ -801,12 +799,12 @@
                 </div>
                 <div>
                     <span class="data-label">Nodo_Digital</span>
-                    <a href="https://www.instagram.com/bikelab.studio" class="footer-link">Instagram</a>
-                    <a href="https://www.facebook.com/bikelabstudio.peru" class="footer-link">Facebook</a>
-                    <a href="https://es.pinterest.com/bikelabstudioper" class="footer-link">Pinterest</a>
-                    <a href="https://www.tiktok.com/@bikelabstudio.peru" class="footer-link">TikTok</a>
-                    <a href="https://www.youtube.com/@bikelabstudio" class="footer-link">YouTube</a>
-                    <a href="https://www.behance.net/bikelabstudio" class="footer-link">Behance</a>
+                    <a href="https://www.instagram.com/bikelab.studio" class="footer-link" aria-label="Ir a Instagram de BikeLab Studio">Instagram</a>
+                    <a href="https://www.facebook.com/bikelabstudio.peru" class="footer-link" aria-label="Ir a Facebook de BikeLab Studio">Facebook</a>
+                    <a href="https://es.pinterest.com/bikelabstudioper" class="footer-link" aria-label="Ir a Pinterest de BikeLab Studio">Pinterest</a>
+                    <a href="https://www.tiktok.com/@bikelabstudio.peru" class="footer-link" aria-label="Ir a TikTok de BikeLab Studio">TikTok</a>
+                    <a href="https://www.youtube.com/@bikelabstudio" class="footer-link" aria-label="Ir a YouTube de BikeLab Studio">YouTube</a>
+                    <a href="https://www.behance.net/bikelabstudio" class="footer-link" aria-label="Ir a Behance de BikeLab Studio">Behance</a>
                 </div>
                 <div>
                     <span class="data-label">Autoridad_Fundador</span>
@@ -818,11 +816,6 @@
         </div>
     </footer>
 
-    <!--
-    Site design and ownership:
-    Carlos Ravello Joo
-    Modelo de coherencia dinámico · MCD
-    -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
@@ -832,19 +825,11 @@
             a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
         });
     </script>
-    <!-- MathJax: diferido al final (Fase 2) -->
+    <!-- MathJax -->
     <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
 
 
 
