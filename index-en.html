@@ -133,6 +133,12 @@
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
+        img { min-width: 0; max-width: 100%; }
+        .grid > * { min-width: 0; }
+        .visual-evidence > * { min-width: 0; }
+        .case-study > * { min-width: 0; }
+        .container { width: 100%; overflow-x: clip; }
         
         /* Smooth page load animation */
         body {
@@ -334,7 +340,10 @@
             .visual-evidence { display: grid !important; grid-template-columns: repeat(2, 1fr); flex-direction: unset !important; gap: 10px !important; }
             #projects { grid-template-columns: 1fr !important; }
             #projects .grid { grid-template-columns: 1fr !important; }
-            .container { padding: 0 16px; }
+            .container { padding: 0 16px; width: 100%; overflow-x: clip; }
+            table { table-layout: fixed; }
+            td, th { overflow-wrap: break-word; word-break: break-word; }
+            code { overflow-wrap: break-word; word-break: break-word; display: inline-block; max-width: 100%; }
             .visual-evidence img { max-height: 180px; width: 100% !important; min-width: 0; object-fit: cover; display: block; }
             .visual-evidence img[style*="grid-column: span 2"] { max-height: 200px; }
             /* Cards Technical & Tips - industrial design (mobile 2 cols) */
