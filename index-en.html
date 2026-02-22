@@ -337,10 +337,62 @@
             .container { padding: 0 16px; }
             .visual-evidence img { max-height: 180px; width: 100% !important; min-width: 0; object-fit: cover; display: block; }
             .visual-evidence img[style*="grid-column: span 2"] { max-height: 200px; }
-            #science .grid, #tips .grid { gap: 20px !important; }
-            #science .card { padding: 16px !important; }
-            #tips .card > div:first-child { height: 140px !important; }
-            #tips .card > div:last-child { padding: 16px !important; }
+            /* Cards Technical & Tips - industrial design (mobile 2 cols) */
+            #science .grid, #tips .grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+            }
+            #science .grid > a, #tips .grid > a { display: flex; min-height: 0; }
+            #science .card, #tips .card {
+                height: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                width: 100%;
+            }
+            #science .card { padding: 12px !important; }
+            #tips .card > div:first-child {
+                width: 100% !important;
+                height: 140px !important;
+                min-height: 140px !important;
+                overflow: hidden !important;
+                flex-shrink: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 0 !important;
+                border-bottom: 1px solid #222 !important;
+            }
+            #tips .card > div:first-child img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+                display: block !important;
+                margin: 0 !important;
+            }
+            #tips .card > div:last-child {
+                padding: 12px !important;
+                flex: 1 !important;
+                min-height: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            #tips .card h3, #science .card h3 {
+                display: -webkit-box !important;
+                -webkit-line-clamp: 2 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            #tips .card p, #science .card p {
+                display: -webkit-box !important;
+                -webkit-line-clamp: 4 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            #tips .card > div:last-child > span:last-of-type,
+            #science .card > span:last-of-type {
+                margin-top: auto !important;
+                padding-top: 12px !important;
+            }
             .btn-cta { padding: 14px 24px !important; min-height: 44px !important; min-width: 44px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
         }
     </style>

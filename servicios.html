@@ -48,18 +48,63 @@
         .nav-bar .lang-switch { position: static; }
         .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); text-decoration: none; padding: 12px 20px; min-height: 44px; min-width: 44px; box-sizing: border-box; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; }
         .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
-        /* Servicios - Triptico vertical: 3 slots, ratio 2:3 | (1200-80-24)/3 ≈ 365px col → 548px alto */
+        /* Servicios - Grid industrial minimalista (estilo Berlín/Estocolmo) */
         .servicios-triptico {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
             margin-bottom: 60px;
         }
-        .servicios-triptico .slot { aspect-ratio: 2/3; overflow: hidden; background: #0a0a0a; border: 1px solid #151515; }
-        .servicios-triptico .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .servicio-card { background: var(--surface); border: 1px solid #151515; overflow: hidden; transition: border-color 0.3s; }
-        .servicio-card:hover { border-color: #333; }
-        .servicio-card .img-wrap { width: 100%; height: 200px; overflow: hidden; background: #0a0a0a; }
-        .servicio-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .servicios-triptico .slot {
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+        .servicios-triptico .slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.4s ease;
+        }
+        .servicios-triptico .slot:hover img {
+            transform: scale(1.02);
+        }
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2px;
+        }
+        .servicio-card {
+            background: var(--surface);
+            overflow: hidden;
+        }
+        .servicio-card .img-wrap {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+        .servicio-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.4s ease;
+        }
+        .servicio-card:hover .img-wrap img {
+            transform: scale(1.02);
+        }
         .servicio-card .body { padding: 25px; }
         .servicio-card .body h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 2px; color: var(--accent); margin-bottom: 10px; }
         .servicio-card .cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 20px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; padding: 14px 24px; min-height: 44px; min-width: 44px; box-sizing: border-box; border: 1px solid var(--accent); color: var(--text); text-decoration: none; transition: background 0.3s, color 0.3s; }
@@ -74,7 +119,36 @@
             .nav-toggle:checked ~ .nav-overlay { z-index: 1004; }
             .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; gap: 12px; background: rgba(5,5,5,0.92); border: 1px solid #222; border-radius: 4px; }
             .container { padding: 0 16px; }
-            .servicios-triptico { grid-template-columns: 1fr; gap: 8px; }
+            .servicios-triptico {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2px !important;
+                margin-bottom: 40px;
+            }
+            .servicios-triptico .slot { aspect-ratio: 4/5 !important; }
+            .servicios-triptico .slot img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+                display: block !important;
+            }
+            .servicios-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 2px !important;
+            }
+            .servicio-card .img-wrap {
+                aspect-ratio: 4/5 !important;
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            .servicio-card .img-wrap img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+                display: block !important;
+            }
+            .servicio-card .body { padding: 16px !important; }
         }
     </style>
 </head>
