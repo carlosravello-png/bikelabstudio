@@ -40,13 +40,13 @@
         .signature { margin-top: 60px; padding-top: 40px; border-top: 1px solid #222; font-family: var(--mono); font-size: 0.8rem; color: #666; line-height: 1.8; }
         .nav-toggle { display: none; }
         .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
-        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
-        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
-        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
-        .nav-trigger .line { display: block; height: 2px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
-        .nav-trigger .line-1 { width: 22px; } .nav-trigger .line-2 { width: 16px; margin-left: 6px; }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(9px) rotate(45deg); width: 28px; margin-left: 0; }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { transform: translateY(-9px) rotate(-45deg); width: 28px; margin-left: 0; }
+        .nav-bar-left { display: flex; align-items: center; gap: 12px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.7rem; font-weight: 300; letter-spacing: 0.18em; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
         .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s, pointer-events 0.4s; }
         .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
         .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
@@ -70,6 +70,7 @@
             <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation menu">
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
         </div>
         <div class="lang-switch"><a href="../index-en.html">HOME</a> · <a href="freno-disco-roza-es.html">ES</a></div>
