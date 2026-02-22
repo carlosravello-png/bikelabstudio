@@ -29,7 +29,7 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
+  "@type": "ScholarlyArticle",
   "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html#article",
   "headline": "Comparative Analysis of MTB 11-Speed vs 12-Speed Drivetrain Systems",
   "alternativeHeadline": "Thermodynamic, Biomechanical and Economic Evaluation",
@@ -85,8 +85,8 @@
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; background: #121212; padding: 40px; border: 1px solid #333; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); padding: 20px; overflow-x: hidden; }
+        .container { max-width: 900px; margin: 0 auto; background: #121212; padding: 40px; border: 1px solid #333; min-width: 0; }
         .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
         .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
         .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
@@ -109,12 +109,13 @@
         .methodology-box { background: #0a0a0a; border: 1px solid #333; padding: 25px; margin: 30px 0; }
         .limitation-box { background: #0f0a0a; border: 1px solid #443; padding: 25px; margin: 30px 0; }
         .note { background: #0a0f12; border-left: 4px solid var(--accent); padding: 20px; margin: 25px 0; font-style: italic; color: #aaa; }
-        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: #0a0a0a; }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 30px 0; }
+        table { width: 100%; min-width: 480px; border-collapse: collapse; background: #0a0a0a; }
         thead { background: #1a1a1a; color: #aaa; }
         th, td { padding: 12px; text-align: center; border: 1px solid #333; color: #ccc; }
         tbody tr:nth-child(even) { background: #0c0c0c; }
         tbody tr:hover { background: #151515; }
-        .equation { background: #0a0a0a; border: 1px solid #333; border-left: 4px solid var(--accent); padding: 25px; margin: 30px 0; font-family: var(--mono); color: #e0e0e0; }
+        .equation { background: #0a0a0a; border: 1px solid #333; border-left: 4px solid var(--accent); padding: 25px; margin: 30px 0; font-family: var(--mono); color: #e0e0e0; overflow-x: auto; max-width: 100%; }
         .references ol { list-style-position: inside; color: #ccc; }
         .conclusion-box { background: #0a0a0a; border: 1px solid #333; padding: 30px; margin: 40px 0; }
         .chart-container { margin: 35px 0; text-align: center; }
@@ -144,7 +145,7 @@
         .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
         .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; color: var(--text); text-decoration: none; font-family: var(--mono), monospace; font-size: 0.7rem; z-index: 1001; background: var(--bg); display: flex; align-items: center; justify-content: center; gap: 10px; }
         .wa-float:hover { background: var(--text); color: var(--bg); }
-        @media (max-width: 768px) { .nav-overlay { z-index: 1004; overflow-y: auto; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } .container { padding: 20px; padding-top: 100px !important; } h1 { font-size: 22px; } }
+        @media (max-width: 768px) { html, body { overflow-x: hidden; } .nav-overlay { z-index: 1004; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } .container { padding: 20px 16px; padding-top: 100px !important; min-width: 0; } h1 { font-size: 22px; } }
     </style>
 </head>
 <body>
@@ -196,6 +197,7 @@
         </div>
 
         <h2>EXECUTIVE SUMMARY</h2>
+        <p><a href="11v-12v-mtb-worth-it.html" style="color:#888;text-decoration:underline;font-size:0.9em;">→ Reader-friendly summary: 11v vs 12v — Is the $245 extra worth it?</a> · <a href="11v-12v-mtb-worth-it-es.html" style="color:#888;text-decoration:underline;font-size:0.9em;">ES</a></p>
         <p><strong>Objective:</strong> Quantify mechanical, thermodynamic, and biomechanical differences between MTB 11-speed and 12-speed drivetrain systems using validated experimental models.</p>
         
         <p><strong>Methodology:</strong> Quantitative analysis based on friction loss models (Spicer et al. 2001, Lodge & Al-Sahlani 2019), chainline analysis (Bertucci et al. 2005), and exercise physiology (Abbiss & Laursen 2005, Lucía et al. 2001). Thermodynamic calculations were applied under controlled conditions with parametric sensitivity evaluation.</p>
@@ -247,7 +249,7 @@
 
         <h2>2. Comparative Geometry</h2>
 
-        <table>
+        <div class="table-wrap"><table>
             <thead>
                 <tr>
                     <th>Position</th>
@@ -287,7 +289,7 @@
                     <td><strong>100% equivalent</strong></td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
 
         <div class="note">
             <strong>Critical implication:</strong> Under modelled conditions, in the ≥18T cog range (where prolonged climbing and technical terrain concentrate usage), both systems exhibit identical mechanical behaviour. Differences are confined to the high-speed end of the cassette (10–16T cogs).
@@ -312,7 +314,7 @@
 
         <h3>3.2 Lodge & Al-Sahlani (2019) Experimental Data</h3>
 
-        <table>
+        <div class="table-wrap"><table>
             <thead>
                 <tr>
                     <th>Sprocket Size</th>
@@ -342,7 +344,7 @@
                     <td><strong>7.6 W</strong></td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
 
         <div class="chart-container">
             <img src="images/whitepaper-chart1-loss-vs-sprocket.svg" alt="Friction losses vs sprocket size (10–52T)" width="700" height="438">
@@ -353,7 +355,7 @@
 
         <p>The absolute loss differential scales linearly with input power, while the relative impact remains approximately constant:</p>
 
-        <table>
+        <div class="table-wrap"><table>
             <thead>
                 <tr>
                     <th>Power (W)</th>
@@ -393,10 +395,10 @@
                     <td>0.50%</td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
 
         <div class="chart-container">
-            <img src="images/whitepaper-chart2-diff-10t-11t.svg" alt="10T vs 11T loss difference vs power (150–300 W)" width="700" height="438">
+            <img src="images/whitepaper-chart2-diff-10t-11t.svg" alt="Gráfica de dispersión Monte Carlo mostrando la pérdida de vatios entre piñones 10T y 11T; se observa una divergencia media de 1.3W con banda de confianza al 95%" width="700" height="438">
             <p class="chart-legend">Figure generated via Python-based Monte Carlo simulation (10,000 iterations) using the model described in this document. Mean values and 95% confidence band are shown.</p>
         </div>
 
@@ -460,7 +462,7 @@
 
         <h3>6.1 Five-Year Total Cost of Ownership (TCO)</h3>
 
-        <table>
+        <div class="table-wrap"><table>
             <thead>
                 <tr>
                     <th>Item</th>
@@ -495,7 +497,7 @@
                     <td><strong>+$245 (+46%)</strong></td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
 
         <h3>6.2 Cost per Unit of Improvement</h3>
 
@@ -515,7 +517,7 @@
         </div>
 
         <div class="chart-container">
-            <img src="images/whitepaper-chart3-cost-vs-improvement.svg" alt="Relative cost vs relative energy improvement" width="700" height="438">
+            <img src="images/whitepaper-chart3-cost-vs-improvement.svg" alt="Diagrama de barras comparando el costo por kWh de energía ganada entre sistemas de transmisión y baterías de litio industriales" width="700" height="438">
             <p class="chart-legend">Figure generated via Python-based Monte Carlo simulation (10,000 iterations) using the model described in this document. Mean values and 95% confidence band are shown.</p>
         </div>
 
