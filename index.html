@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeLab Studio | Taller de Bicicletas en Trujillo – Mecánica de Precisión MTB y Ruta</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Taller de bicicletas en Trujillo especializado en mecánica de precisión para MTB y ruta. Mantenimiento general, suspensión y sistemas hidráulicos con enfoque técnico profesional.">
-    <meta name="keywords" content="taller de bicicletas Trujillo, mecánica de precisión, reparación de carbono, análisis estructural, BikeLab Studio, La Libertad, Perú">
+    <meta name="description"
+        content="Taller de bicicletas en Trujillo especializado en mecánica de precisión para MTB y ruta. Mantenimiento general, suspensión y sistemas hidráulicos con enfoque técnico profesional.">
+    <meta name="keywords"
+        content="taller de bicicletas Trujillo, mecánica de precisión, reparación de carbono, análisis estructural, BikeLab Studio, La Libertad, Perú">
     <meta name="author" content="Carlos Eduardo Ravello Joo">
-    
+
     <!-- Canonical -->
     <link rel="canonical" href="https://www.bikelabstudio.com/">
-    
+
     <!-- Hreflang Tags -->
     <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/">
     <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/">
-    
+
     <!-- Open Graph -->
     <meta property="og:locale" content="es_PE">
     <meta property="og:title" content="BikeLab Studio | Laboratorio de Ingeniería">
-    <meta property="og:description" content="Laboratorio de ingeniería ciclista líder en Trujillo. Mecánica de precisión y cinematografía técnica.">
+    <meta property="og:description"
+        content="Laboratorio de ingeniería ciclista líder en Trujillo. Mecánica de precisión y cinematografía técnica.">
     <meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
     <meta property="og:url" content="https://www.bikelabstudio.com/">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BikeLab Studio">
     <meta name="twitter:description" content="Laboratorio de ingeniería ciclista en Trujillo">
     <meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    
+
     <!-- Preconnect a fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
@@ -127,19 +131,55 @@
     </script>
 
     <!-- Fonts: carga no bloqueante -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media')">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"></noscript>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"
+        media="print" onload="this.onload=null;this.removeAttribute('media')">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap">
+    </noscript>
 
     <style>
-        :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { overflow-x: hidden; }
-        img { min-width: 0; max-width: 100%; }
-        .grid > * { min-width: 0; }
-        .visual-evidence > * { min-width: 0; }
-        .case-study > * { min-width: 0; }
-        .container { width: 100%; overflow-x: clip; }
-        
+        :root {
+            --bg: #050505;
+            --surface: #0c0c0c;
+            --accent: #444;
+            --text: #e0e0e0;
+            --mono: 'IBM Plex Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        img {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .grid>* {
+            min-width: 0;
+        }
+
+        .visual-evidence>* {
+            min-width: 0;
+        }
+
+        .case-study>* {
+            min-width: 0;
+        }
+
+        .container {
+            width: 100%;
+            overflow-x: clip;
+        }
+
         /* Smooth page load animation */
         body {
             background: var(--bg);
@@ -149,26 +189,111 @@
             line-height: 1.5;
             animation: fadeIn 0.8s ease-in-out;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
-        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity: 0.025; pointer-events: none; z-index: 1000; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        section { padding: 140px 0; border-bottom: 1px solid #111; opacity: 0; transform: translateY(30px); transition: 1s ease-out; scroll-margin-top: 70px; }
-        section.visible { opacity: 1; transform: translateY(0); }
-        #projects { opacity: 1; transform: none; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
-        #projects > .data-label, #projects > h2 { grid-column: 1 / -1; }
-        .data-label { font-family: var(--mono); font-size: 0.55rem; color: #4a4a4a; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        h2 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-        .card { background: var(--surface); border: 1px solid #151515; padding: 40px; position: relative; transition: 0.3s; }
-        .card:hover { border-color: #333; }
-        .card h3 { font-size: 1.2rem; margin-bottom: 15px; }
-        .card p { font-family: 'JetBrains Mono', monospace; font-style: normal; color: #a0a0a0; font-size: 0.95rem; }
-        
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 140px 0;
+            border-bottom: 1px solid #111;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s ease-out;
+            scroll-margin-top: 70px;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #projects {
+            opacity: 1;
+            transform: none;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        #projects>.data-label,
+        #projects>h2 {
+            grid-column: 1 / -1;
+        }
+
+        .data-label {
+            font-family: var(--mono);
+            font-size: 0.55rem;
+            color: #4a4a4a;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 3rem;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid #151515;
+            padding: 40px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #333;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-family: 'JetBrains Mono', monospace;
+            font-style: normal;
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
         /* Language Switcher */
         .lang-switch {
             position: fixed;
@@ -176,7 +301,13 @@
             right: 40px;
             z-index: 1002;
         }
-        .nav-bar .lang-switch { position: static; top: auto; right: auto; }
+
+        .nav-bar .lang-switch {
+            position: static;
+            top: auto;
+            right: auto;
+        }
+
         .lang-switch a {
             font-family: var(--mono);
             font-size: 0.7rem;
@@ -193,51 +324,91 @@
             align-items: center;
             justify-content: center;
         }
+
         .lang-switch a:hover {
             background: var(--text);
             color: var(--bg);
             border-color: var(--text);
         }
-        
+
         /* WhatsApp Button */
-        .wa-float { 
-            position: fixed; 
-            bottom: 40px; 
-            right: 40px; 
-            border: 1px solid var(--text); 
-            padding: 14px 22px; 
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            border: 1px solid var(--text);
+            padding: 14px 22px;
             min-height: 44px;
             min-width: 44px;
             box-sizing: border-box;
-            color: var(--text); 
-            text-decoration: none; 
-            font-family: var(--mono); 
-            font-size: 0.7rem; 
-            z-index: 1001; 
-            background: var(--bg); 
+            color: var(--text);
+            text-decoration: none;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            z-index: 1001;
+            background: var(--bg);
             transition: 0.4s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
         }
-        .wa-float:hover { 
-            background: var(--text); 
-            color: var(--bg); 
+
+        .wa-float:hover {
+            background: var(--text);
+            color: var(--bg);
         }
+
         .wa-float svg {
             transition: 0.4s;
         }
+
         .wa-float:hover svg {
             transform: scale(1.1);
         }
-        
-        footer { padding: 80px 0; background: #080808; border-top: 1px solid #111; font-family: var(--mono); font-size: 0.7rem; color: #555; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
-        .footer-link { color: #888; text-decoration: none; display: block; margin-bottom: 8px; padding: 12px 0; min-height: 44px; box-sizing: border-box; transition: 0.3s; }
-        .footer-link:hover { color: var(--text); }
-        .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 28px; line-height: 1.5; }
-        
+
+        footer {
+            padding: 80px 0;
+            background: #080808;
+            border-top: 1px solid #111;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: #555;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .footer-link {
+            color: #888;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            padding: 12px 0;
+            min-height: 44px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--text);
+        }
+
+        .site-signature {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            color: #3d3d3d;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin-top: 28px;
+            line-height: 1.5;
+        }
+
         /* Modificación específica para el subtítulo del Hero - Scientific & Industrial Noir */
         .hero-subtitle {
             font-family: 'JetBrains Mono', monospace;
@@ -263,105 +434,309 @@
             margin-top: 1.5rem;
             display: block;
         }
-        
+
         /* === NAV BAR + OVERLAY (Checkbox Hack) === */
-        .nav-toggle { display: none; }
+        .nav-toggle {
+            display: none;
+        }
+
         .nav-bar {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1003;
-            display: flex; align-items: center; justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1003;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left));
-            background: var(--bg); border-bottom: 1px solid #151515;
+            background: var(--bg);
+            border-bottom: 1px solid #151515;
         }
-        .nav-bar-left { display: flex; align-items: center; gap: 12px; }
+
+        .nav-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         .nav-menu-label {
-            font-family: var(--mono); font-size: 0.7rem; font-weight: 300;
-            letter-spacing: 0.18em; color: var(--text); text-transform: uppercase;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.18em;
+            color: var(--text);
+            text-transform: uppercase;
         }
+
         .nav-trigger {
-            width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            min-height: 44px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
+
         .nav-trigger .line {
-            display: block; width: 20px; height: 1.5px; background: var(--text);
+            display: block;
+            width: 20px;
+            height: 1.5px;
+            background: var(--text);
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-1 {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-2 {
+            opacity: 0;
+        }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-3 {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
         .nav-overlay {
-            position: fixed; inset: 0; background: var(--bg); z-index: 1002;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden; pointer-events: none;
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
             transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s, pointer-events 0.4s;
         }
-        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
-        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
-        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
-        .nav-overlay a {
-            display: block; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px;
-            color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px;
-            box-sizing: border-box; border-bottom: 1px solid #151515;
-            transition: color 0.3s, border-color 0.3s;
-            display: flex; align-items: center; justify-content: center;
+
+        .nav-toggle:checked~.nav-overlay {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
-        .nav-overlay a:hover { color: var(--accent); border-color: #333; }
-        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+
+        .nav-overlay-backdrop {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        .nav-overlay nav {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-overlay a {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 16px 24px;
+            min-height: 44px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #151515;
+            transition: color 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-overlay a:hover {
+            color: var(--accent);
+            border-color: #333;
+        }
+
+        .nav-overlay a:first-of-type {
+            border-top: 1px solid #151515;
+        }
+
         /* Hero quick links - ocupan ancho completo bajo la línea, armonía visual */
         .hero-links {
-            display: flex; width: 100%; justify-content: space-between; align-items: center;
-            margin-top: 36px; padding-top: 28px; border-top: 1px solid #222;
-            font-family: var(--mono); font-size: 1.05rem; letter-spacing: 2.5px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 36px;
+            padding-top: 28px;
+            border-top: 1px solid #222;
+            font-family: var(--mono);
+            font-size: 1.05rem;
+            letter-spacing: 2.5px;
         }
-        .hero-links a { color: #a0a0a0; text-decoration: none; transition: color 0.3s; flex: 1; text-align: center; min-height: 44px; display: flex; align-items: center; justify-content: center; }
-        .hero-links a:first-child { text-align: left; }
-        .hero-links a:last-child { text-align: right; }
-        .hero-links a:hover { color: var(--text); }
+
+        .hero-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.3s;
+            flex: 1;
+            text-align: center;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-links a:first-child {
+            text-align: left;
+        }
+
+        .hero-links a:last-child {
+            text-align: right;
+        }
+
+        .hero-links a:hover {
+            color: var(--text);
+        }
+
         /* Móvil: menú compacto top-right, overlay full-screen */
         @media (max-width: 768px) {
             .nav-overlay {
                 z-index: 1004;
-                top: 0; left: 0; right: 0; bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 overflow-y: auto;
                 -webkit-overflow-scrolling: touch;
             }
-            .nav-toggle:checked ~ .nav-overlay { z-index: 1004; }
+
+            .nav-toggle:checked~.nav-overlay {
+                z-index: 1004;
+            }
+
             .nav-bar {
-                top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right));
-                left: auto; width: auto; padding: 10px 14px; gap: 12px;
-                background: rgba(5,5,5,0.92); border: 1px solid #222; border-radius: 4px;
+                top: max(12px, env(safe-area-inset-top));
+                right: max(12px, env(safe-area-inset-right));
+                left: auto;
+                width: auto;
+                padding: 10px 14px;
+                gap: 12px;
+                background: rgba(5, 5, 5, 0.92);
+                border: 1px solid #222;
+                border-radius: 4px;
                 z-index: 1005;
             }
-            .nav-bar-left { gap: 8px; }
-            .nav-menu-label { display: none; }
-            .lang-switch { position: static; }
-            section { opacity: 1 !important; transform: none !important; }
-            section[style*="height: 90vh"] { padding-top: max(88px, env(safe-area-inset-top)) !important; min-height: 380px !important; align-items: flex-start !important; }
-            .identity-signature { margin-top: 0.75rem; font-size: 0.7rem; }
-            .case-study { grid-template-columns: 1fr !important; }
-            .visual-evidence { display: grid !important; grid-template-columns: repeat(2, 1fr); flex-direction: unset !important; gap: 10px !important; }
-            #projects { grid-template-columns: 1fr !important; }
-            #projects .grid { grid-template-columns: 1fr !important; }
-            .container { padding: 0 16px; width: 100%; overflow-x: clip; }
-            table { table-layout: fixed; }
-            td, th { overflow-wrap: break-word; word-break: break-word; }
-            code { overflow-wrap: break-word; word-break: break-word; display: inline-block; max-width: 100%; }
-            .visual-evidence img { max-height: 180px; width: 100% !important; min-width: 0; object-fit: cover; display: block; }
-            .visual-evidence img[style*="grid-column: span 2"] { max-height: 200px; }
+
+            .nav-bar-left {
+                gap: 8px;
+            }
+
+            .nav-menu-label {
+                display: none;
+            }
+
+            .lang-switch {
+                position: static;
+            }
+
+            section {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            section[style*="height: 90vh"] {
+                padding-top: max(88px, env(safe-area-inset-top)) !important;
+                min-height: 380px !important;
+                align-items: flex-start !important;
+            }
+
+            .identity-signature {
+                margin-top: 0.75rem;
+                font-size: 0.7rem;
+            }
+
+            .case-study {
+                grid-template-columns: 1fr !important;
+            }
+
+            .visual-evidence {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr);
+                flex-direction: unset !important;
+                gap: 10px !important;
+            }
+
+            #projects {
+                grid-template-columns: 1fr !important;
+            }
+
+            #projects .grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .container {
+                padding: 0 16px;
+                width: 100%;
+                overflow-x: clip;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            td,
+            th {
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+
+            code {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                display: inline-block;
+                max-width: 100%;
+            }
+
+            .visual-evidence img {
+                max-height: 180px;
+                width: 100% !important;
+                min-width: 0;
+                object-fit: cover;
+                display: block;
+            }
+
+            .visual-evidence img[style*="grid-column: span 2"] {
+                max-height: 200px;
+            }
+
             /* Cards Datos Técnicos y Tips - diseño industrial (móvil 2 cols) */
-            #science .grid, #tips .grid {
+            #science .grid,
+            #tips .grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
             }
-            #science .grid > a, #tips .grid > a { display: flex; min-height: 0; }
-            #science .card, #tips .card {
+
+            #science .grid>a,
+            #tips .grid>a {
+                display: flex;
+                min-height: 0;
+            }
+
+            #science .card,
+            #tips .card {
                 height: 100% !important;
                 display: flex !important;
                 flex-direction: column !important;
                 width: 100%;
             }
-            #science .card { padding: 12px !important; }
-            #tips .card > div:first-child {
+
+            #science .card {
+                padding: 12px !important;
+            }
+
+            #tips .card>div:first-child {
                 width: 100% !important;
                 height: 140px !important;
                 min-height: 140px !important;
@@ -372,7 +747,8 @@
                 line-height: 0 !important;
                 border-bottom: 1px solid #222 !important;
             }
-            #tips .card > div:first-child img {
+
+            #tips .card>div:first-child img {
                 width: 100% !important;
                 height: 100% !important;
                 object-fit: cover !important;
@@ -380,34 +756,50 @@
                 display: block !important;
                 margin: 0 !important;
             }
-            #tips .card > div:last-child {
+
+            #tips .card>div:last-child {
                 padding: 12px !important;
                 flex: 1 !important;
                 min-height: 0 !important;
                 display: flex !important;
                 flex-direction: column !important;
             }
-            #tips .card h3, #science .card h3 {
+
+            #tips .card h3,
+            #science .card h3 {
                 display: -webkit-box !important;
                 -webkit-line-clamp: 2 !important;
                 -webkit-box-orient: vertical !important;
                 overflow: hidden !important;
             }
-            #tips .card p, #science .card p {
+
+            #tips .card p,
+            #science .card p {
                 display: -webkit-box !important;
                 -webkit-line-clamp: 4 !important;
                 -webkit-box-orient: vertical !important;
                 overflow: hidden !important;
             }
-            #tips .card > div:last-child > span:last-of-type,
-            #science .card > span:last-of-type {
+
+            #tips .card>div:last-child>span:last-of-type,
+            #science .card>span:last-of-type {
                 margin-top: auto !important;
                 padding-top: 12px !important;
             }
-            .btn-cta { padding: 14px 24px !important; min-height: 44px !important; min-width: 44px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+
+            .btn-cta {
+                padding: 14px 24px !important;
+                min-height: 44px !important;
+                min-width: 44px !important;
+                box-sizing: border-box !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
     <div class="nav-bar">
@@ -433,93 +825,191 @@
             <a href="centrado-ruedas-es.html">CENTRADO DE RUEDAS</a>
             <a href="#science">DATOS TÉCNICOS</a>
             <a href="#tips">TIPS</a>
-            <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">UBICACIÓN</a>
+            <a
+                href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru"
+                target="_blank" rel="noopener">UBICACIÓN</a>
         </nav>
     </div>
 
-    <a href="https://wa.me/51934391545?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20BikeLab%20Studio" class="wa-float" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/51934391545?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20BikeLab%20Studio"
+        class="wa-float" aria-label="Contactar por WhatsApp">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
         </svg>
         WHATSAPP_
     </a>
 
-    <section style="height: 90vh; min-height: 400px; display: flex; align-items: center; padding-top: 56px; box-sizing: border-box;">
+    <section
+        style="height: 90vh; min-height: 400px; display: flex; align-items: center; padding-top: 56px; box-sizing: border-box;">
         <div class="container">
             <span class="data-label">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</span>
             <h1 style="font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.9;">BIKELAB<br>STUDIO_</h1>
             <p class="hero-subtitle">
-                Taller técnico especializado en mantenimiento, suspensiones y optimización de bicicletas. Ingeniería aplicada al ciclismo.
+                Taller técnico especializado en mantenimiento, suspensiones y optimización de bicicletas. Ingeniería
+                aplicada al ciclismo.
             </p>
             <span class="identity-signature">INDUSTRIAL NOIR.</span>
             <div class="hero-links">
                 <a href="servicios.html">Servicios</a>
-                <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">Contacto</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">Ubicación</a>
+                <a
+                    href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">Contacto</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru"
+                    target="_blank" rel="noopener">Ubicación</a>
             </div>
         </div>
     </section>
 
     <div class="container">
-        <section id="about" style="background:#080808; padding: 100px 0;">
+        <section id="about"
+            style="background:#080808; padding: 40px; border-radius: 4px; max-width: 850px; margin: 100px auto;">
             <span class="data-label">PROTOCOLO_00 // QUIÉNES SOMOS</span>
             <h2>Taller de Bicicletas en Trujillo_</h2>
-            <div style="max-width: 850px; font-family: 'JetBrains Mono', monospace; font-weight: 500; line-height: 1.8;">
-                <p>BikeLab Studio no es una bicicletería convencional. Es un taller técnico especializado en Trujillo donde el mantenimiento se ejecuta como ingeniería aplicada: diagnóstico estructural, control de torque, análisis de fricción, evaluación de fatiga de material y verificación de tolerancias.</p>
+            <div
+                style="max-width: 850px; font-family: 'JetBrains Mono', monospace; font-weight: 500; line-height: 1.8;">
+                <p>BikeLab Studio no es una bicicletería convencional. Es un taller técnico especializado en Trujillo
+                    donde el mantenimiento se ejecuta como ingeniería aplicada: diagnóstico estructural, control de
+                    torque, análisis de fricción, evaluación de fatiga de material y verificación de tolerancias.</p>
                 <p>Aquí no se improvisa. Se mide, se comprueba y se documenta.</p>
-                <p>Una bicicleta no falla por azar. Falla por desgaste no detectado, lubricación incorrecta, contaminación invisible o aprietes fuera de especificación. Nuestro trabajo es identificar esas variables antes de que se conviertan en avería.</p>
-                <p>El estándar es claro: Si no puede explicarse con precisión, no se ejecuta. Si no puede verificarse, no se entrega.</p>
+                <p>Una bicicleta no falla por azar. Falla por desgaste no detectado, lubricación incorrecta,
+                    contaminación invisible o aprietes fuera de especificación. Nuestro trabajo es identificar esas
+                    variables antes de que se conviertan en avería.</p>
+                <p>El estándar es claro: Si no puede explicarse con precisión, no se ejecuta. Si no puede verificarse,
+                    no se entrega.</p>
                 <p>BikeLab Studio — Industrial, Scientific & Aesthetic Noir</p>
             </div>
         </section>
+
+        <!-- Tool / Standalone Tool (Posición posterior a Quiénes Somos) -->
+        <aside aria-label="Herramienta Destacada: Calculadora SAG" style="margin-bottom:80px;">
+            <a href="articles/sag-calculator-es.html" style="text-decoration:none;color:inherit;display:block;">
+                <article class="card"
+                    style="cursor:pointer;border:1px solid var(--accent);background:#080808;padding:0;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:0.3s; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <div style="padding:20px 25px 0;border-bottom:1px solid #111">
+                        <span
+                            style="font-family:var(--mono);font-size:9px;color:#e8ff00;letter-spacing:4px;text-transform:uppercase;display:block;margin-bottom:8px;position:relative;z-index:2">Herramienta
+                            Técnica Profesional // Suspensión MTB</span>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+                            <span
+                                style="font-family:var(--mono);font-size:8px;color:#333;padding:3px 8px;border:1px solid #1a1a1a;letter-spacing:1px">132
+                                MODELOS</span>
+                            <span
+                                style="font-family:var(--mono);font-size:8px;color:#333;padding:3px 8px;border:1px solid #1a1a1a;letter-spacing:1px">16
+                                MARCAS</span>
+                            <span
+                                style="font-family:var(--mono);font-size:8px;color:#333;padding:3px 8px;border:1px solid #1a1a1a;letter-spacing:1px">MONTE
+                                CARLO 10K</span>
+                        </div>
+                    </div>
+                    <div style="padding:25px">
+                        <h3
+                            style="font-size:1.4rem;margin:0 0 10px;color:#fff;font-weight:900;letter-spacing:-.02em;line-height:1.1;position:relative;z-index:2">
+                            BIKELAB STUDIO<br>SAG CALCULATOR_</h3>
+                        <p
+                            style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#444;letter-spacing:3px;text-transform:uppercase;margin:0 0 14px;font-weight:100;position:relative;z-index:2">
+                            Pressure at work</p>
+                        <p
+                            style="font-size:0.88rem;color:#777;margin-bottom:20px;line-height:1.5;font-family:'JetBrains Mono',monospace;font-weight:100;position:relative;z-index:2">
+                            Fox, RockShox, Öhlins, SR Suntour, Manitou, Marzocchi, DVO, Cane Creek. Modelo físico
+                            calibrado
+                            con datos oficiales. El más completo en español.</p>
+                        <span
+                            style="display:inline-block;color:#e8ff00;font-size:0.75rem;letter-spacing:2px;font-family:var(--mono);border-bottom:1px solid #e8ff00;padding-bottom:2px">ABRIR
+                            CALCULADORA →</span>
+                    </div>
+                </article>
+            </a>
+        </aside>
 
         <section id="science">
             <span class="data-label">Módulo_01 // Protocolos de Ciencia Dura</span>
             <h2>Datos Técnicos</h2>
             <div class="grid">
-                <a href="articles/neumaticos-ancho-mito-es.html" style="text-decoration:none; color:inherit; display:block;">
-                    <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
-                        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 004</span>
-                        <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">El Mito del Neumático Delgado</h3>
+                <a href="articles/white-paper-sag-model-es.html"
+                    style="text-decoration:none; color:inherit; display:block;">
+                    <article class="card"
+                        style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
+                        <span class="data-label"
+                            style="font-size: 0.7rem; letter-spacing: 2px;">INGENIERÍA_DE_SUSPENSIÓN //
+                            WHITE_PAPER_TÉCNICO</span>
+                        <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Modelo Físico de Cámara Dual — SAG
+                            Suspensión MTB</h3>
                         <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">
-                            Física real vs. creencia popular: Por qué el 23mm te hace más lento en el asfalto peruano y los vatios que lo demuestran.
+                            Modelo politrópico de doble cámara, calibración inversa, Monte Carlo 10,000 iteraciones, 132
+                            suspensiones.
                         </p>
-                        <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">DESMONTAR MITO // LEER INFORME</span>
+                        <span
+                            style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER
+                            WHITE PAPER</span>
                     </article>
                 </a>
-                <a href="articles/grasas-tribologia-es.html" style="text-decoration:none; color:inherit; display:block;">
-                <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
-                    <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report // 001</span>
-                    <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Tribología: Grasa Correcta</h3>
-                    <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">Análisis técnico de compuestos y por qué la lubricación genérica daña componentes premium.</p>
-                    <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER INFORME TÉCNICO</span>
-                </article>
+                <a href="articles/neumaticos-ancho-mito-es.html"
+                    style="text-decoration:none; color:inherit; display:block;">
+                    <article class="card"
+                        style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
+                        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report //
+                            004</span>
+                        <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">El Mito del Neumático Delgado</h3>
+                        <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">
+                            Física real vs. creencia popular: Por qué el 23mm te hace más lento en el asfalto peruano y
+                            los vatios que lo demuestran.
+                        </p>
+                        <span
+                            style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">DESMONTAR
+                            MITO // LEER INFORME</span>
+                    </article>
                 </a>
-               <a href="articles/frenos-hidraulicos-altitud-termodinamica-es.html" style="text-decoration:none; color:inherit; display:block;">
+                <a href="articles/grasas-tribologia-es.html"
+                    style="text-decoration:none; color:inherit; display:block;">
+                    <article class="card"
+                        style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
+                        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">Technical_Report //
+                            001</span>
+                        <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Tribología: Grasa Correcta</h3>
+                        <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">Análisis
+                            técnico de compuestos y por qué la lubricación genérica daña componentes premium.</p>
+                        <span
+                            style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER
+                            INFORME TÉCNICO</span>
+                    </article>
+                </a>
+                <a href="articles/frenos-hidraulicos-altitud-termodinamica-es.html"
+                    style="text-decoration:none; color:inherit; display:block;">
                     <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s;">
                         <h3>Frenos en Altitud</h3>
                         <p>Análisis termodinámico: Por qué los sistemas hidráulicos fallan sobre los 3,000 msnm.</p>
                         <div style="margin-top:20px; color:var(--accent);">\[ P = P_0 \cdot e^{-\frac{Mgh}{RT}} \]</div>
-                        <span style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">LEER INFORME TÉCNICO_</span>
+                        <span
+                            style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">LEER
+                            INFORME TÉCNICO_</span>
                     </article>
                 </a>
-<a href="articles/carbon-footprint-es.html" style="text-decoration:none; color:inherit; display:block;">
-                <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s;">
-                    <h3>Huella de Carbono</h3>
-                    <p>Análisis de CO2 en manufactura: Aluminio, Carbono, Acero y Titanio.</p>
-                    <div style="margin-top:20px; color:var(--accent);">\[ CO_{2-eq} \]</div>
-                    <span style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">ENTRAR AL LABORATORIO_</span>
-                </article>
+                <a href="articles/carbon-footprint-es.html" style="text-decoration:none; color:inherit; display:block;">
+                    <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s;">
+                        <h3>Huella de Carbono</h3>
+                        <p>Análisis de CO2 en manufactura: Aluminio, Carbono, Acero y Titanio.</p>
+                        <div style="margin-top:20px; color:var(--accent);">\[ CO_{2-eq} \]</div>
+                        <span
+                            style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">ENTRAR
+                            AL LABORATORIO_</span>
+                    </article>
                 </a>
-                <a href="articles/white-paper-11v-12v-es.html" style="text-decoration:none; color:inherit; display:block;">
-                    <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
-                        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">White_Paper // Monte_Carlo</span>
+                <a href="articles/white-paper-11v-12v-es.html"
+                    style="text-decoration:none; color:inherit; display:block;">
+                    <article class="card"
+                        style="cursor:pointer; border:1px solid #333; transition:0.3s; background:#0a0a0a; padding: 25px;">
+                        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">White_Paper //
+                            Monte_Carlo</span>
                         <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">11v vs 12v: Modelo y Simulación</h3>
                         <p style="font-size:0.9rem; color:#a0a0a0; margin-bottom: 20px; line-height: 1.4;">
-                            Modelo termodinámico Spicer + Lodge. Simulación Monte Carlo 10,000 iteraciones. Pérdidas vs piñón, diferencia 10T–11T, costo vs mejora energética. Datos CSV descargables. Las fórmulas implementadas son exactamente las descritas en el white paper.
+                            Modelo termodinámico Spicer + Lodge. Simulación Monte Carlo 10,000 iteraciones. Pérdidas vs
+                            piñón, diferencia 10T–11T, costo vs mejora energética. Datos CSV descargables. Las fórmulas
+                            implementadas son exactamente las descritas en el white paper.
                         </p>
-                        <span style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER WHITE PAPER</span>
+                        <span
+                            style="display:inline-block; color:var(--accent); font-size:0.8rem; letter-spacing:1px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">LEER
+                            WHITE PAPER</span>
                     </article>
                 </a>
             </div>
@@ -528,279 +1018,440 @@
         <section id="tips">
             <span class="data-label">Módulo_02 // Inteligencia de Campo</span>
             <h2>Consejos Generales</h2>
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); gap: 20px; justify-content: center;">
-    <a href="articles/11v-12v-mtb-worth-it-es.html" style="text-decoration:none; color:inherit;">
-        <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-            <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                <img src="articles/images/11vs12.webp" alt="Comparativa visual de componentes de transmisión MTB 11v y 12v destacando la reducción de grosor en eslabones y piñones" loading="lazy" width="400" height="225" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-            </div>
-            <div style="padding: 25px;">
-                <span class="data-label" style="font-size: 0.6rem; color: #555;">DRIVETRAIN_ANALYSIS // 11v_12v</span>
-                <h3 style="font-size: 1.1rem; margin: 10px 0;">11 velocidades vs 12 velocidades en MTB: análisis real de vatios, fricción y costo a 5 años</h3>
-                <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                    Análisis técnico sobre eficiencia real y costos de mantenimiento 11v vs 12v. Descubre por qué el upgrade de 12v cuesta $7,650/kWh. Sin hype. Sin mentiras de tienda.
-                </p>
-                <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_ANÁLISIS_</span>
-            </div>
-        </article>
-    </a>
-    <a href="articles/torque-bicicleta-es.html" style="text-decoration:none; color:inherit;">
-        <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-            <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                <img src="articles/images/torque-bicicleta.webp" alt="Torque correcto en bicicletas" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-            </div>
-            <div style="padding: 25px;">
-                <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 001</span>
-                <h3 style="font-size: 1.1rem; margin: 10px 0;">Torque Correcto en Bicicletas Modernas</h3>
-                <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">Newton-metro vs. integridad estructural en cuadros de carbono.</p>
-                <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-            </div>
-        </article>
-    </a>
-<a href="articles/ruidos-bicicleta-es.html" style="text-decoration:none; color:inherit;">
-            <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                </div>
-                <div style="padding: 25px;">
-                    <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 005</span>
-                    <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ruidos: Diagnóstico Profesional</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                        Aislando la fuente: por qué el cuadro actúa como caja de resonancia y cómo atrapar el sonido por eliminación.
-                    </p>
-                    <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                </div>
-            </article>
-        </a>
+            <div class="grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); gap: 20px; justify-content: center;">
+
+                <a href="articles/como-ajustar-sag-suspension-mtb-es.html" style="text-decoration:none; color:inherit;">
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid var(--accent); background: #0c0c0c; box-shadow: 0 0 15px rgba(232, 255, 0, 0.05);">
+                        <div style="width: 100%; height: 200px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/sagsuspensio_calculadora.webp"
+                                alt="BikeLab Studio Calculadora profesional de SAG para suspensiones de MTB con modelo físico"
+                                loading="lazy" width="400" height="200"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label"
+                                style="font-size: 0.65rem; color: var(--accent); letter-spacing: 2px;">PRO_GUIDE //
+                                132_MODELOS</span>
+                            <h3 style="font-size: 1.3rem; margin: 10px 0; color: #fff;">Guía de Uso: Calculadora SAG
+                            </h3>
+                            <p
+                                style="font-size: 0.9rem; line-height: 1.5; color: #aaa; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Manual técnico y fundamentos de la herramienta iterativa. Cómo medir, entender la
+                                variabilidad y elegir tokens.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:20px; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); border-bottom: 1px solid var(--accent); letter-spacing: 1px;">LEER_GUÍA_➔</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="articles/11v-12v-mtb-worth-it-es.html" style="text-decoration:none; color:inherit;">
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/11vs12.webp"
+                                alt="Comparativa visual de componentes de transmisión MTB 11v y 12v destacando la reducción de grosor en eslabones y piñones"
+                                loading="lazy" width="400" height="225"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">DRIVETRAIN_ANALYSIS //
+                                11v_12v</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0;">11 velocidades vs 12 velocidades en MTB:
+                                análisis real de vatios, fricción y costo a 5 años</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Análisis técnico sobre eficiencia real y costos de mantenimiento 11v vs 12v. Descubre
+                                por qué el upgrade de 12v cuesta $7,650/kWh. Sin hype. Sin mentiras de tienda.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_ANÁLISIS_</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/torque-bicicleta-es.html" style="text-decoration:none; color:inherit;">
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/torque-bicicleta.webp" alt="Torque correcto en bicicletas"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 001</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0;">Torque Correcto en Bicicletas Modernas</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Newton-metro vs. integridad estructural en cuadros de carbono.</p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ruidos-bicicleta-es.html" style="text-decoration:none; color:inherit;">
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/ruidos-bicicleta.jpg" alt="Diagnóstico acústico de bicicleta"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 005</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ruidos: Diagnóstico
+                                Profesional</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Aislando la fuente: por qué el cuadro actúa como caja de resonancia y cómo atrapar el
+                                sonido por eliminación.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/lubricantes-grasas-es.html" style="text-decoration:none; color:inherit;">
-            <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                    <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                </div>
-                <div style="padding: 25px;">
-                    <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 006</span>
-                    <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Lubricantes y Grasas: Química Aplicada</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                        Diferenciando penetración vs. permanencia: por qué el error en la viscosidad acelera el desgaste mecánico.
-                    </p>
-                    <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                </div>
-            </article>
-        </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/lubricantes-grasas.jpg" alt="Tribología aplicada en ciclismo"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 006</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Lubricantes y Grasas:
+                                Química Aplicada</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Diferenciando penetración vs. permanencia: por qué el error en la viscosidad acelera el
+                                desgaste mecánico.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/lavar-bicicleta-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/lavar-bicicleta.webp" alt="Lavado correcto de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 003</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">El Error del Agua a Presión</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Por qué el chorro directo destruye los sellos de rodamientos y contamina la grasa interna.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/lavar-bicicleta.webp" alt="Lavado correcto de bicicleta"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 003</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">El Error del Agua a
+                                Presión</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Por qué el chorro directo destruye los sellos de rodamientos y contamina la grasa
+                                interna.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/herramientas-gama-alta-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/herramientas-gama-alta.webp" alt="Herramientas de precisión para ciclismo" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 010</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Herramientas de Alta Gama</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Por qué las tolerancias del carbono no perdonan llaves baratas: Torquímetros y precisión industrial.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/herramientas-gama-alta.webp"
+                                alt="Herramientas de precisión para ciclismo" loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 010</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Herramientas de Alta Gama
+                            </h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Por qué las tolerancias del carbono no perdonan llaves baratas: Torquímetros y precisión
+                                industrial.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/freno-disco-roza-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 004</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Freno de Disco: Roce Fantasma</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            No es solo alineación: diagnóstico de pistones vagos, runout de rotor y contaminación invisible.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/freno-disco-roza.jpg" alt="Diagnóstico de freno de disco"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 004</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Freno de Disco: Roce
+                                Fantasma</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                No es solo alineación: diagnóstico de pistones vagos, runout de rotor y contaminación
+                                invisible.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/danos-cuadro-carbono-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/danos-cuadro-carbono.webp" alt="Inspección de daños en carbono" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 007</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Carbono: Grieta vs. Rayón</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Coin Tap Test y diagnóstico visual: cómo identificar delaminación interna antes del fallo catastrófico.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/danos-cuadro-carbono.webp" alt="Inspección de daños en carbono"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 007</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Carbono: Grieta vs. Rayón
+                            </h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Coin Tap Test y diagnóstico visual: cómo identificar delaminación interna antes del
+                                fallo catastrófico.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/cuidado-transmision-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 009</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Transmisión: Desgaste Prematuro</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Limpieza agresiva vs. lubricación correcta: cómo evitar que tu cassette muera antes de tiempo.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/cuidado-transmision.jpg" alt="Cuidado de transmisión"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 009</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Transmisión: Desgaste
+                                Prematuro</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Limpieza agresiva vs. lubricación correcta: cómo evitar que tu cassette muera antes de
+                                tiempo.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/cambio-cadena-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 002</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Cadena: El Límite del 0.5%</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Por qué medir el desgaste con herramienta calibrada salva tu cassette de una muerte prematura.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/cambio-cadena.jpg" alt="Medición de cadena" loading="lazy"
+                                width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 002</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Cadena: El Límite del 0.5%
+                            </h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Por qué medir el desgaste con herramienta calibrada salva tu cassette de una muerte
+                                prematura.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
                 <a href="articles/ajuste-profesional-es.html" style="text-decoration:none; color:inherit;">
-                <article class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
-                    <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
-                        <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta" loading="lazy" width="400" height="240" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
-                    </div>
-                    <div style="padding: 25px;">
-                        <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 008</span>
-                        <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ajuste Pro vs. Casero</h3>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
-                            Herramientas calibradas y protocolos de torque: por qué la "sensación" no es suficiente en bicicletas modernas.
-                        </p>
-                        <span style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
-                    </div>
-                </article>
-            </a>
-</div>
+                    <article class="card"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 1px solid #151515;">
+                        <div style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid #222;">
+                            <img src="articles/images/ajuste-profesional.jpg" alt="Ajuste profesional de bicicleta"
+                                loading="lazy" width="400" height="240"
+                                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(0.3); transition: 0.5s;">
+                        </div>
+                        <div style="padding: 25px;">
+                            <span class="data-label" style="font-size: 0.6rem; color: #555;">GUÍA_TÉCNICA // 008</span>
+                            <h3 style="font-size: 1.1rem; margin: 10px 0; letter-spacing: 0;">Ajuste Pro vs. Casero</h3>
+                            <p
+                                style="font-size: 0.85rem; line-height: 1.4; color: #a0a0a0; font-family: 'JetBrains Mono', monospace; font-style: normal;">
+                                Herramientas calibradas y protocolos de torque: por qué la "sensación" no es suficiente
+                                en bicicletas modernas.
+                            </p>
+                            <span
+                                style="display:inline-block; margin-top:15px; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); border-bottom: 1px solid #333;">LEER_INFORME_TÉCNICO_</span>
+                        </div>
+                    </article>
+                </a>
+            </div>
         </section>
 
         <section id="projects">
             <span class="data-label">Módulo_03 // Documentación Activa</span>
             <h2>Vida del Taller</h2>
-           <div class="case-study" style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
-    
-    <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
-        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; color: #666;">HARDTAIL_RACE // OPTIMIZACIÓN_ESTRUCTURAL</span>
-        <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase;">Protocolo: <span style="color: var(--accent);">Restitución Integral // Scott Scale White</span></h3>
+            <div class="case-study"
+                style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
 
-        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666; width: 30%;">SISTEMA:</td>
-                <td style="padding: 10px 0;">Scott Scale / Cuadro HMF / Carbono de alto módulo</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">UBICACIÓN:</td>
-                <td style="padding: 10px 0;">Calle Paraguay 300, Urb. El Recreo, Trujillo</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">TRANSMISIÓN:</td>
-                <td style="padding: 10px 0;">Descontaminación manual profunda y sellado hidrofóbico</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">INTERFACES:</td>
-                <td style="padding: 10px 0;">Mantenimiento de caja pedalier con grasa Motorex 2000</td>
-            </tr>
-        </table>
-
-        <div style="margin-top: 30px;">
-            <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
-                "La Scott Scale es una máquina diseñada para la máxima rigidez. En este protocolo ejecutado en nuestro taller de Trujillo (Paraguay 300), nos centramos en la pureza mecánica. Realizamos una descontaminación manual exhaustiva del eje pedalier para aplicar un sellado hidrofóbico con Motorex 2000, eliminando fricciones parásitas en vatios críticos. El objetivo es que la bicicleta desaparezca bajo el ciclista, asegurando que cada gramo de fuerza se traduzca en velocidad pura en el terreno."
-            </p>
-        </div>
-
-        <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
-            <code style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: INTEGRIDAD_ESTRUCTURAL_100% // ZERO_FRICTION</code>
-        </div>
-    </div>
-
-    <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/scott-white-full.webp" alt="Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-frame.webp" alt="Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/scott-white-bb.webp" alt="Mantenimiento pedalier Scott Scale Trujillo" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-drivetrain.webp" alt="Transmisión optimizada Scott Scale" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-tools.webp" alt="Herramientas profesionales Bikelab Studio El Recreo" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/scott-white-finish.webp" alt="Resultado final Scott Scale White Trujillo" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-    </div>
-
-</div>
-           <div class="case-study" style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
-    
-    <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
-        <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; color: #666;">SISTEMA_XC // INGENIERÍA_APLICADA</span>
-        <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase;">Protocolo: <span style="color: var(--accent);">Setup XC // Specialized Epic</span></h3>
-
-        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666; width: 30%;">SISTEMA:</td>
-                <td style="padding: 10px 0;">Plataforma XC / Specialized Epic 2021 Gloss Flo Red</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">OBJETIVO:</td>
-                <td style="padding: 10px 0;">Calibración de eficiencia mecánica y reducción de fricción</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">FRENADO:</td>
-                <td style="padding: 10px 0;">Configuración 'Shigura' (XTR M9100 + Magura MT7)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #222;">
-                <td style="padding: 10px 0; color: #666;">SUSPENSIÓN:</td>
-                <td style="padding: 10px 0;">Servicio SID SL 50h + Calibración Brain</td>
-            </tr>
-        </table>
-
-        <div style="margin-top: 30px;">
-            <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-            <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
-                "En esta unidad, ejecutamos un protocolo de ingeniería centrado en la coherencia sistémica. La gestión de la fricción se rige por una lubricación diferencial: aplicamos grasa SKF LGHP 2/1 en mazas DT Swiss y puntos de alta carga, mientras usamos Finish Line Teflon White y pasta de cobre Liqui Moly en las interfaces para prevenir la corrosión galvánica. El cockpit Renthal ha sido calibrado con torquímetros Park Tool bajo estrictos estándares de límite elástico. La horquilla SID recibió un servicio de 50h con aceite Maxima Plush, optimizando la sensibilidad inicial a la espera del ciclo de servicio del sistema Brain. El frenado híbrido 'Shigura' (XTR + Magura) garantiza una respuesta incompresible a través del fluido mineral Shimano."
-            </p>
-        </div>
-
-        <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
-            <code style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: SISTEMA_XC_ESTABLE // READY_TO_RACE</code>
-        </div>
-    </div>
-
-    <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img src="articles/images/epic-red-full.webp" alt="Specialized Epic Roja" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-front.webp" alt="Alineación Frontal" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-        <img src="articles/images/epic-red-brain.webp" alt="Válvula Brain" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-cockpit.webp" alt="Cockpit Renthal" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-rear.webp" alt="Transmisión" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-        <img src="articles/images/epic-red-hub.webp" alt="Maza DT Swiss" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
-    </div>
-
-</div>
-            <div class="case-study" style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2;">
                 <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
-                    <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">ESTUDIO_DE_CASO // MANTENIMIENTO_MAYOR_BICICLETA_002</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Protocolo: <span style="color: var(--accent);">Reconstrucción Integral de Bicicleta Stage 3</span></h3>
-                    
+                    <span class="data-label"
+                        style="font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; color: #666;">HARDTAIL_RACE
+                        // OPTIMIZACIÓN_ESTRUCTURAL</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase;">Protocolo: <span
+                            style="color: var(--accent);">Restitución Integral // Scott Scale White</span></h3>
+
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666; width: 30%;">SISTEMA:</td>
+                            <td style="padding: 10px 0;">Scott Scale / Cuadro HMF / Carbono de alto módulo</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">UBICACIÓN:</td>
+                            <td style="padding: 10px 0;">Calle Paraguay 300, Urb. El Recreo, Trujillo</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">TRANSMISIÓN:</td>
+                            <td style="padding: 10px 0;">Descontaminación manual profunda y sellado hidrofóbico</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">INTERFACES:</td>
+                            <td style="padding: 10px 0;">Mantenimiento de caja pedalier con grasa Motorex 2000</td>
+                        </tr>
+                    </table>
+
+                    <div style="margin-top: 30px;">
+                        <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
+                        <p
+                            style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
+                            "La Scott Scale es una máquina diseñada para la máxima rigidez. En este protocolo ejecutado
+                            en nuestro taller de Trujillo (Paraguay 300), nos centramos en la pureza mecánica.
+                            Realizamos una descontaminación manual exhaustiva del eje pedalier para aplicar un sellado
+                            hidrofóbico con Motorex 2000, eliminando fricciones parásitas en vatios críticos. El
+                            objetivo es que la bicicleta desaparezca bajo el ciclista, asegurando que cada gramo de
+                            fuerza se traduzca en velocidad pura en el terreno."
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
+                        <code
+                            style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: INTEGRIDAD_ESTRUCTURAL_100% // ZERO_FRICTION</code>
+                    </div>
+                </div>
+
+                <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <img src="articles/images/scott-white-full.webp"
+                        alt="Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo" loading="lazy"
+                        width="1200" height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/scott-white-frame.webp"
+                        alt="Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300" loading="lazy" width="1200"
+                        height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/scott-white-bb.webp" alt="Mantenimiento pedalier Scott Scale Trujillo"
+                        loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/scott-white-drivetrain.webp" alt="Transmisión optimizada Scott Scale"
+                        loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/scott-white-tools.webp"
+                        alt="Herramientas profesionales Bikelab Studio El Recreo" loading="lazy" width="1200"
+                        height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/scott-white-finish.webp" alt="Resultado final Scott Scale White Trujillo"
+                        loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                </div>
+
+            </div>
+            <div class="case-study"
+                style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2; align-items: start;">
+
+                <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
+                    <span class="data-label"
+                        style="font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; color: #666;">SISTEMA_XC
+                        // INGENIERÍA_APLICADA</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase;">Protocolo: <span
+                            style="color: var(--accent);">Setup XC // Specialized Epic</span></h3>
+
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666; width: 30%;">SISTEMA:</td>
+                            <td style="padding: 10px 0;">Plataforma XC / Specialized Epic 2021 Gloss Flo Red</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">OBJETIVO:</td>
+                            <td style="padding: 10px 0;">Calibración de eficiencia mecánica y reducción de fricción</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">FRENADO:</td>
+                            <td style="padding: 10px 0;">Configuración 'Shigura' (XTR M9100 + Magura MT7)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222;">
+                            <td style="padding: 10px 0; color: #666;">SUSPENSIÓN:</td>
+                            <td style="padding: 10px 0;">Servicio SID SL 50h + Calibración Brain</td>
+                        </tr>
+                    </table>
+
+                    <div style="margin-top: 30px;">
+                        <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
+                        <p
+                            style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
+                            "En esta unidad, ejecutamos un protocolo de ingeniería centrado en la coherencia sistémica.
+                            La gestión de la fricción se rige por una lubricación diferencial: aplicamos grasa SKF LGHP
+                            2/1 en mazas DT Swiss y puntos de alta carga, mientras usamos Finish Line Teflon White y
+                            pasta de cobre Liqui Moly en las interfaces para prevenir la corrosión galvánica. El cockpit
+                            Renthal ha sido calibrado con torquímetros Park Tool bajo estrictos estándares de límite
+                            elástico. La horquilla SID recibió un servicio de 50h con aceite Maxima Plush, optimizando
+                            la sensibilidad inicial a la espera del ciclo de servicio del sistema Brain. El frenado
+                            híbrido 'Shigura' (XTR + Magura) garantiza una respuesta incompresible a través del fluido
+                            mineral Shimano."
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
+                        <code
+                            style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: SISTEMA_XC_ESTABLE // READY_TO_RACE</code>
+                    </div>
+                </div>
+
+                <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <img src="articles/images/epic-red-full.webp" alt="Specialized Epic Roja" loading="lazy"
+                        width="1200" height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/epic-red-front.webp" alt="Alineación Frontal" loading="lazy" width="1200"
+                        height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/epic-red-brain.webp" alt="Válvula Brain" loading="lazy" width="1200"
+                        height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/epic-red-cockpit.webp" alt="Cockpit Renthal" loading="lazy" width="1200"
+                        height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/epic-red-rear.webp" alt="Transmisión" loading="lazy" width="1200"
+                        height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="articles/images/epic-red-hub.webp" alt="Maza DT Swiss" loading="lazy" width="1200"
+                        height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); aspect-ratio: 1/1; object-fit: cover;">
+                </div>
+
+            </div>
+            <div class="case-study"
+                style="margin-bottom: 80px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; grid-column: span 2;">
+                <div class="specs" style="border-left: 2px solid var(--accent); padding-left: 25px;">
+                    <span class="data-label" style="font-size: 0.7rem; letter-spacing: 2px;">ESTUDIO_DE_CASO //
+                        MANTENIMIENTO_MAYOR_BICICLETA_002</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Protocolo: <span
+                            style="color: var(--accent);">Reconstrucción Integral de Bicicleta Stage 3</span></h3>
+
                     <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
                         <tr style="border-bottom: 1px solid #222;">
                             <td style="padding: 10px 0; color: #666;">SISTEMA:</td>
-                            <td style="padding: 10px 0;">Despiece total de transmisión y rodamientos de la bicicleta</td>
+                            <td style="padding: 10px 0;">Despiece total de transmisión y rodamientos de la bicicleta
+                            </td>
                         </tr>
                         <tr style="border-bottom: 1px solid #222;">
                             <td style="padding: 10px 0; color: #666;">LIMPIEZA:</td>
@@ -812,36 +1463,61 @@
                         </tr>
                         <tr style="border-bottom: 1px solid #222;">
                             <td style="padding: 10px 0; color: #666;">CHEQUEO:</td>
-                            <td style="padding: 10px 0;">Inspección de desgaste y ajuste de tolerancias de la bicicleta</td>
+                            <td style="padding: 10px 0;">Inspección de desgaste y ajuste de tolerancias de la bicicleta
+                            </td>
                         </tr>
                     </table>
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE TALLER:</strong></p>
-                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
-                            "Este servicio no es un simple engrase; es una reconstrucción de la bicicleta. Desarmamos el sistema hasta llegar a la arquitectura base de cada rodamiento para eliminar cualquier rastro de arrastre parásito en la bicicleta. No limpiamos por encima: descontaminamos pieza por pieza, verificando que las pistas de rodadura de la bicicleta estén impecables antes de aplicar la grasa específica para cada carga. El resultado es una mecánica silenciosa donde cada vatio llega directo al suelo a través de la bicicleta."
+                        <p
+                            style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
+                            "Este servicio no es un simple engrase; es una reconstrucción de la bicicleta. Desarmamos el
+                            sistema hasta llegar a la arquitectura base de cada rodamiento para eliminar cualquier
+                            rastro de arrastre parásito en la bicicleta. No limpiamos por encima: descontaminamos pieza
+                            por pieza, verificando que las pistas de rodadura de la bicicleta estén impecables antes de
+                            aplicar la grasa específica para cada carga. El resultado es una mecánica silenciosa donde
+                            cada vatio llega directo al suelo a través de la bicicleta."
                         </p>
                     </div>
                     <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
-                        <code style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: BICICLETA_ESTABLE // LISTA_PARA_RODAR</code>
+                        <code
+                            style="color: var(--accent); font-size: 0.8rem;">[ESTADO]: BICICLETA_ESTABLE // LISTA_PARA_RODAR</code>
                     </div>
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="articles/images/overhaul-despiece-total.webp" alt="Inventario técnico de componentes de bicicleta desarmados" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/overhaul-lavado-rodamientos.webp" alt="Lavado por inmersión de rodamientos de bicicleta" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/overhaul-limpieza-transmision.webp" alt="Remoción de grasa en transmisión de bicicleta" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/overhaul-inspeccion-pedalier.webp" alt="Inspección de pistas del pedalier de bicicleta" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/overhaul-preparacion-nucleo.webp" alt="Preparación de maza de bicicleta" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/overhaul-ajuste-final.webp" alt="Ajuste final del sistema de cambios de la bicicleta" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-despiece-total.webp"
+                        alt="Inventario técnico de componentes de bicicleta desarmados" loading="lazy" width="1200"
+                        height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-lavado-rodamientos.webp"
+                        alt="Lavado por inmersión de rodamientos de bicicleta" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-limpieza-transmision.webp"
+                        alt="Remoción de grasa en transmisión de bicicleta" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-inspeccion-pedalier.webp"
+                        alt="Inspección de pistas del pedalier de bicicleta" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-preparacion-nucleo.webp" alt="Preparación de maza de bicicleta"
+                        loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/overhaul-ajuste-final.webp"
+                        alt="Ajuste final del sistema de cambios de la bicicleta" loading="lazy" width="1200"
+                        height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
                 </div>
             </div>
-            
-            <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; grid-column: 1 / -1;">
+
+            <div class="grid"
+                style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; grid-column: 1 / -1;">
                 <div class="lab-report" style="border-left: 2px solid var(--accent); padding-left: 25px;">
-                    <p style="font-size: 0.7rem; color: #666; letter-spacing: 2px; margin-bottom: 5px;">ESTUDIO_DE_CASO // RS_SID_ULTIMATE_2026</p>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Protocolo: <span style="color: var(--accent);">Restauración 200h SID SL</span></h3>
-                    
+                    <p style="font-size: 0.7rem; color: #666; letter-spacing: 2px; margin-bottom: 5px;">ESTUDIO_DE_CASO
+                        // RS_SID_ULTIMATE_2026</p>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Protocolo: <span
+                            style="color: var(--accent);">Restauración 200h SID SL</span></h3>
+
                     <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #ccc;">
                         <tr style="border-bottom: 1px solid #222;">
                             <td style="padding: 10px 0; color: #666;">SISTEMA:</td>
@@ -863,26 +1539,44 @@
 
                     <div style="margin-top: 30px;">
                         <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>ANÁLISIS DE LABORATORIO:</strong></p>
-                        <p style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
-                            "Se ejecutó un despiece integral del resorte neumático <strong>DebonAir</strong> para verificar la integridad de la cámara positiva y negativa. El cartucho <strong>Charger Race Day 2</strong> fue sometido a purgado por vacío para garantizar una transición de bloqueo (Lock) a abierto (Open) sin latencia. Finalizamos con torque de precisión en los pernos de las botellas según especificación de 7.3 Nm."
+                        <p
+                            style="color: #a0a0a0; font-style: normal; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
+                            "Se ejecutó un despiece integral del resorte neumático <strong>DebonAir</strong> para
+                            verificar la integridad de la cámara positiva y negativa. El cartucho <strong>Charger Race
+                                Day 2</strong> fue sometido a purgado por vacío para garantizar una transición de
+                            bloqueo (Lock) a abierto (Open) sin latencia. Finalizamos con torque de precisión en los
+                            pernos de las botellas según especificación de 7.3 Nm."
                         </p>
                     </div>
-                    
+
                     <div style="margin-top: 30px; padding: 15px; background: #0a0a0a; border: 1px solid #333;">
-                        <code style="color: var(--accent); font-size: 0.8rem;">[STATUS]: CALIBRACIÓN_WC_READY // SISTEMA_ESTABLE</code>
+                        <code
+                            style="color: var(--accent); font-size: 0.8rem;">[STATUS]: CALIBRACIÓN_WC_READY // SISTEMA_ESTABLE</code>
                     </div>
                 </div>
 
                 <div class="visual-evidence" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.webp" alt="despiece-tecnico-rockshox-sid" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.webp" alt="mantenimiento-retenes-skf-bikelab" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.webp" alt="purgado-cartucho-rockshox-charger" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.webp" alt="analisis-debonair-rockshox" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.webp" alt="engrase-especifico-sram-butter" loading="lazy" width="1200" height="800" style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
-                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp" alt="resultado-final-rockshox-sid-ultimate" loading="lazy" width="1200" height="800" style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.webp"
+                        alt="despiece-tecnico-rockshox-sid" loading="lazy" width="1200" height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.webp"
+                        alt="mantenimiento-retenes-skf-bikelab" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.webp"
+                        alt="purgado-cartucho-rockshox-charger" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.webp"
+                        alt="analisis-debonair-rockshox" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.webp"
+                        alt="engrase-especifico-sram-butter" loading="lazy" width="1200" height="800"
+                        style="width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
+                    <img src="articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp"
+                        alt="resultado-final-rockshox-sid-ultimate" loading="lazy" width="1200" height="800"
+                        style="grid-column: span 2; width: 100%; border: 1px solid #333; filter: brightness(0.85); object-fit: cover;">
                 </div>
             </div>
-       
+
         </section>
 
         <section id="art">
@@ -891,7 +1585,9 @@
             <div class="grid">
                 <div class="card" style="text-align:center; padding: 60px 20px;">
                     <p>Documentación Blackmagic // Flujo de trabajo DaVinci Resolve.</p>
-                    <a href="https://www.behance.net/bikelabstudio" class="btn-cta" style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;" aria-label="Acceder al portafolio de BikeLab Studio en Behance">ACCEDER PORTAFOLIO</a>
+                    <a href="https://www.behance.net/bikelabstudio" class="btn-cta"
+                        style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;"
+                        aria-label="Acceder al portafolio de BikeLab Studio en Behance">ACCEDER PORTAFOLIO</a>
                 </div>
             </div>
         </section>
@@ -906,12 +1602,18 @@
                 </div>
                 <div>
                     <span class="data-label">Nodo_Digital</span>
-                    <a href="https://www.instagram.com/bikelab.studio" class="footer-link" aria-label="Ir a Instagram de BikeLab Studio">Instagram</a>
-                    <a href="https://www.facebook.com/bikelabstudio.peru" class="footer-link" aria-label="Ir a Facebook de BikeLab Studio">Facebook</a>
-                    <a href="https://es.pinterest.com/bikelabstudioper" class="footer-link" aria-label="Ir a Pinterest de BikeLab Studio">Pinterest</a>
-                    <a href="https://www.tiktok.com/@bikelabstudio.peru" class="footer-link" aria-label="Ir a TikTok de BikeLab Studio">TikTok</a>
-                    <a href="https://www.youtube.com/@bikelabstudio" class="footer-link" aria-label="Ir a YouTube de BikeLab Studio">YouTube</a>
-                    <a href="https://www.behance.net/bikelabstudio" class="footer-link" aria-label="Ir a Behance de BikeLab Studio">Behance</a>
+                    <a href="https://www.instagram.com/bikelab.studio" class="footer-link"
+                        aria-label="Ir a Instagram de BikeLab Studio">Instagram</a>
+                    <a href="https://www.facebook.com/bikelabstudio.peru" class="footer-link"
+                        aria-label="Ir a Facebook de BikeLab Studio">Facebook</a>
+                    <a href="https://es.pinterest.com/bikelabstudioper" class="footer-link"
+                        aria-label="Ir a Pinterest de BikeLab Studio">Pinterest</a>
+                    <a href="https://www.tiktok.com/@bikelabstudio.peru" class="footer-link"
+                        aria-label="Ir a TikTok de BikeLab Studio">TikTok</a>
+                    <a href="https://www.youtube.com/@bikelabstudio" class="footer-link"
+                        aria-label="Ir a YouTube de BikeLab Studio">YouTube</a>
+                    <a href="https://www.behance.net/bikelabstudio" class="footer-link"
+                        aria-label="Ir a Behance de BikeLab Studio">Behance</a>
                 </div>
                 <div>
                     <span class="data-label">Autoridad_Fundador</span>
@@ -919,7 +1621,8 @@
                 </div>
             </div>
             <p style="margin-top: 60px; opacity: 0.3;">© 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE_</p>
-            <small class="site-signature">Diseño y propiedad: Carlos Ravello Joo<br>Modelo de coherencia dinámico · MCD</small>
+            <small class="site-signature">Diseño y propiedad: Carlos Ravello Joo<br>Modelo de coherencia dinámico ·
+                MCD</small>
         </div>
     </footer>
 
@@ -935,20 +1638,5 @@
     <!-- MathJax -->
     <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

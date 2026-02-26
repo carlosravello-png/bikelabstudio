@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#000000">
+  <title>Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB | BikeLab Studio</title>
+  <meta name="description"
+    content="White Paper técnico: modelo de doble cámara politrópica para cálculo de presión de SAG en horquillas y amortiguadores MTB. Calibración inversa, validación Monte Carlo, amplia base de datos.">
+  <meta name="keywords"
+    content="SAG MTB, suspensión mountain bike, modelo politrópico, calibración inversa, Monte Carlo, Fox, RockShox, SR Suntour, presión suspensión">
+  <meta name="author" content="Carlos Ravello">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-sag-model.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp">
+  <meta property="og:title"
+    content="Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB | BikeLab Studio">
+  <meta property="og:description"
+    content="White Paper técnico: modelo politrópico de doble cámara para cálculo de SAG. Calibración inversa con tablas oficiales, validación Monte Carlo, base de suspensiones catalogadas.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BikeLab Studio">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB de Resorte Neumático",
+      "alternativeHeadline": "Implementación Politrópica, Calibración Inversa y Validación Estadística mediante Simulación Monte Carlo",
+      "description": "Desarrollo y validación de un modelo de doble cámara politrópica para el cálculo preciso de presión de SAG en horquillas y amortiguadores MTB. Base amplia calibrada con datos oficiales; validación Monte Carlo a escala.",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Ravello",
+        "jobTitle": "Fundador de BikeLab Studio",
+        "url": "https://www.bikelabstudio.com/",
+        "affiliation": { "@type": "Organization", "name": "BikeLab Studio" }
+      },
+      "image": "https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp",
+      "datePublished": "2026-02-25T08:00:00+00:00",
+      "dateModified": "2026-02-26T08:00:00+00:00",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BikeLab Studio",
+        "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" }
+      },
+      "articleSection": "Ingeniería de Suspensión",
+      "keywords": "SAG, suspensión MTB, modelo politrópico, calibración inversa, Monte Carlo, presión horquilla, amortiguador MTB, ajuste SAG"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Datos Técnicos",
+          "item": "https://www.bikelabstudio.com/index.html#science"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "White Paper SAG Model",
+          "item": "https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0c0c0c;
+      --accent: #444;
+      --text: #e0e0e0;
+      --mono: 'IBM Plex Mono', monospace;
+      --green: #4a9eff;
+      --orange: #ff6b35;
+      --yellow: #e8ff00
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+      padding: 20px;
+      overflow-x: hidden
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #121212;
+      padding: 40px;
+      border: 1px solid #333;
+      min-width: 0
+    }
+
+    .header {
+      border-bottom: 2px solid #444;
+      padding-bottom: 20px;
+      margin-bottom: 40px
+    }
+
+    .coordinates {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 2px;
+      margin-bottom: 10px
+    }
+
+    .category {
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 3px;
+      margin-bottom: 15px
+    }
+
+    .breadcrumb {
+      font-size: 11px;
+      color: #666;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      letter-spacing: 1px
+    }
+
+    .breadcrumb a {
+      color: #888;
+      text-decoration: none
+    }
+
+    .breadcrumb a:hover {
+      color: #fff
+    }
+
+    .nav-back {
+      display: inline-block;
+      font-size: 11px;
+      color: #666;
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px
+    }
+
+    .nav-back:hover {
+      color: #aaa
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #999;
+      margin-bottom: 20px
+    }
+
+    .meta {
+      font-size: 11px;
+      color: #666;
+      border-top: 1px solid #333;
+      padding-top: 15px
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #333;
+      font-size: 11px;
+      color: #666
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: 1px
+    }
+
+    h2 {
+      font-size: 14px;
+      color: #aaa;
+      letter-spacing: 3px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px
+    }
+
+    h3 {
+      font-size: 1.4em;
+      color: #bbb;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 400
+    }
+
+    h4 {
+      font-size: 1.2em;
+      color: #999;
+      margin-top: 25px;
+      margin-bottom: 12px
+    }
+
+    p {
+      margin-bottom: 18px;
+      text-align: justify;
+      font-size: 1.05em;
+      color: #ccc
+    }
+
+    ul,
+    ol {
+      margin-left: 30px;
+      margin-bottom: 15px;
+      color: #ccc
+    }
+
+    li {
+      margin-bottom: 8px
+    }
+
+    .methodology-box {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .limitation-box {
+      background: #0f0a0a;
+      border: 1px solid #443;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .note {
+      background: #0a0f12;
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 25px 0;
+      font-style: italic;
+      color: #aaa
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 30px 0
+    }
+
+    table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      background: #0a0a0a
+    }
+
+    thead {
+      background: #1a1a1a;
+      color: #aaa
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #333;
+      color: #ccc;
+      font-size: 0.95em
+    }
+
+    td:first-child {
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 0.85em
+    }
+
+    tbody tr:nth-child(even) {
+      background: #0c0c0c
+    }
+
+    tbody tr:hover {
+      background: #151515
+    }
+
+    .equation {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-left: 4px solid var(--accent);
+      padding: 25px;
+      margin: 30px 0;
+      font-family: var(--mono);
+      color: #e0e0e0;
+      overflow-x: auto;
+      max-width: 100%;
+      font-size: 0.95em;
+      line-height: 2
+    }
+
+    .equation sub,
+    .equation sup {
+      font-size: 0.75em
+    }
+
+    .references ol {
+      list-style-position: inside;
+      color: #ccc
+    }
+
+    .conclusion-box {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 30px;
+      margin: 40px 0
+    }
+
+    .chart-container {
+      margin: 35px 0;
+      text-align: center
+    }
+
+    .chart-container svg {
+      max-width: 100%;
+      height: auto
+    }
+
+    .chart-legend {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 12px;
+      font-style: italic;
+      font-family: var(--mono);
+      text-align: center
+    }
+
+    .data-card {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .data-card a {
+      color: #888;
+      text-decoration: underline
+    }
+
+    .data-card a:hover {
+      color: var(--text)
+    }
+
+    .highlight-row {
+      background: #151a1f !important
+    }
+
+    .highlight-row td {
+      color: #6bffb8 !important
+    }
+
+    .nav-toggle {
+      display: none
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1003;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left));
+      background: var(--bg);
+      border-bottom: 1px solid #151515
+    }
+
+    .nav-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .nav-menu-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--text);
+      text-transform: uppercase
+    }
+
+    .nav-trigger {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px
+    }
+
+    .nav-trigger .line {
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--text);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1)
+    }
+
+    .nav-toggle:checked~.nav-bar .nav-trigger .line-1 {
+      transform: translateY(6.5px) rotate(45deg)
+    }
+
+    .nav-toggle:checked~.nav-bar .nav-trigger .line-2 {
+      opacity: 0
+    }
+
+    .nav-toggle:checked~.nav-bar .nav-trigger .line-3 {
+      transform: translateY(-6.5px) rotate(-45deg)
+    }
+
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 1002;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.4s, visibility 0.4s
+    }
+
+    .nav-toggle:checked~.nav-overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto
+    }
+
+    .nav-overlay-backdrop {
+      position: absolute;
+      inset: 0;
+      cursor: pointer
+    }
+
+    .nav-overlay nav {
+      text-align: center;
+      position: relative;
+      z-index: 1
+    }
+
+    .nav-overlay a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: var(--text);
+      text-decoration: none;
+      padding: 16px 24px;
+      min-height: 44px;
+      border-bottom: 1px solid #151515
+    }
+
+    .nav-overlay a:hover {
+      color: var(--accent);
+      border-color: #333
+    }
+
+    .nav-overlay a:first-of-type {
+      border-top: 1px solid #151515
+    }
+
+    .nav-bar .lang-switch a {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text);
+      padding: 12px 20px;
+      border: 1px solid var(--accent);
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center
+    }
+
+    .nav-bar .lang-switch a:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text)
+    }
+
+    .cluster-links {
+      margin: 60px 0;
+      padding: 30px;
+      background: #080808;
+      border-left: 3px solid #666;
+      border-right: 1px solid #222;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222
+    }
+
+    .cluster-links ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0
+    }
+
+    .cluster-links li {
+      margin-bottom: 15px
+    }
+
+    .cluster-links a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s
+    }
+
+    .cluster-links a:hover {
+      color: #6bffb8
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      border: 1px solid var(--text);
+      padding: 14px 22px;
+      color: var(--text);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      z-index: 1001;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .wa-float:hover {
+      background: var(--text);
+      color: var(--bg)
+    }
+
+    @media(max-width:768px) {
+
+      html,
+      body {
+        overflow-x: hidden
+      }
+
+      .nav-bar {
+        top: max(12px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        left: auto;
+        width: auto;
+        padding: 10px 14px;
+        background: rgba(10, 10, 10, .92);
+        border: 1px solid #222;
+        border-radius: 4px
+      }
+
+      .container {
+        padding: 20px 16px;
+        padding-top: 100px !important
+      }
+
+      h1 {
+        font-size: 22px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <div class="nav-bar">
+    <div class="nav-bar-left">
+      <span class="nav-menu-label">MENÚ</span>
+      <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú">
+        <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+      </label>
+    </div>
+    <div class="lang-switch">
+      <a href="../index.html" style="margin-right:8px;">INICIO</a>
+      <a href="white-paper-sag-model.html" hreflang="en" lang="en" title="Leer en Inglés"
+        aria-label="Cambiar a Inglés">EN</a>
+    </div>
+  </div>
+  <div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav>
+      <a href="white-paper-sag-model.html" hreflang="en" lang="en"
+        style="color:var(--accent); border-bottom:1px solid #333;">EN (ENGLISH)</a>
+      <a href="../index.html">INICIO</a>
+      <a href="../servicios.html">SERVICIOS</a>
+      <a href="../suspension-es.html">SUSPENSIÓN</a>
+      <a href="../index.html#science">DATOS TÉCNICOS</a>
+      <a href="https://wa.me/51934391545">CONTACTO</a>
+    </nav>
+  </div>
+  <a href="https://wa.me/51934391545" class="wa-float" aria-label="WhatsApp">
+    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    WHATSAPP
+  </a>
+
+  <div class="container" style="padding-top:100px">
+    <a href="../index.html#science" class="nav-back">← VOLVER AL INICIO</a>
+    <div class="header">
+      <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+      <div class="category">INGENIERÍA_DE_SUSPENSIÓN // WHITE_PAPER_TÉCNICO</div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">INICIO</a> /
+        <a href="../index.html#science">ARTÍCULOS</a> /
+        <span style="color:#fff">White Paper SAG Model</span>
+      </nav>
+      <h1>Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB de Resorte Neumático</h1>
+      <div class="subtitle">Implementación Politrópica, Calibración Inversa y Validación Estadística mediante Simulación
+        Monte Carlo</div>
+      <div class="meta">White Paper v3.0 // Autor: Carlos Ravello // Febrero 2026 // BikeLab Studio — División de
+        Investigación Técnica</div>
+    </div>
+
+    <h2>RESUMEN</h2>
+    <p><a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#888;text-decoration:underline;font-size:0.9em">→
+        Versión
+        divulgativa: Cómo configurar tu suspensión MTB con datos reales</a></p>
+
+    <p><strong>Objetivo:</strong> Desarrollar y validar un modelo matemático determinista para calcular la
+      <strong>presión de inflado</strong> necesaria en <strong>horquillas y amortiguadores MTB</strong> de resorte
+      neumático para un <strong>SAG objetivo</strong> dado, en función del peso del rider, disciplina, y parámetros
+      constructivos específicos del componente.
+    </p>
+
+    <p><strong>Metodología:</strong> Modelo de <strong>doble cámara politrópica</strong> (γ = calibrado empíricamente
+      dentro del rango físico esperado para compresión rápida con transferencia de calor parcial), calibrado mediante
+      <strong>calibración inversa</strong> contra tablas de presión oficiales de Fox, RockShox, SR Suntour y Öhlins.
+      Validación estadística mediante simulación Monte Carlo a escala bajo incertidumbres
+      operacionales reales. Extensión a full-suspension mediante curvas de leverage ratio interpoladas para 33 cuadros
+      catalogados.
+    </p>
+
+    <p><strong>Resultados principales:</strong></p>
+    <ul>
+      <li>Error medio global post-calibración: 1.66 psi contra tablas oficiales (28 modelos con ground truth)</li>
+      <li>Error máximo: 13.09 psi en RockShox Judy 60kg — atribuido a no-linealidad física del sistema Solo Air
+        entry-level</li>
+      <li>Confianza Monte Carlo por segmento: 72-76% (entry), 83% (mid), 83-89% (mid-high/high) con umbral ±2% SAG</li>
+      <li>Diferenciador técnico: cálculo de <strong>SAG de rueda</strong> real en full-suspension mediante leverage
+        curve — ausente en todas las calculadoras comerciales conocidas</li>
+      <li>Base de datos: <strong>Amplio catálogo de suspensiones</strong> catalogadas (Fox, RockShox, SR Suntour,
+        Öhlins, Manitou,
+        Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula)</li>
+    </ul>
+
+    <h2>1. SUPUESTOS DEL MODELO</h2>
+
+    <div class="methodology-box">
+      <h3>1.1 Supuestos Termodinámicos</h3>
+      <ul>
+        <li><strong>Proceso politrópico con exponente γ = propietario (valor no publicado):</strong> Compresión real del
+          aire en suspensión MTB se
+          ubica entre isotérmica (γ = 1.00) y adiabática (γ = 1.40). El valor γ = calibrado empíricamente dentro del
+          rango físico esperado para compresión rápida con transferencia de calor parcial corresponde a compresión
+          rápida
+          con transferencia de calor parcial. Sensibilidad: ±0.05 en γ produce ±2.1 psi en predicción a SAG del 25%.
+        </li>
+        <li><strong>Gas ideal:</strong> Se asume comportamiento de gas ideal (PV = nRT). A las presiones operacionales
+          de suspensión MTB (50–500 psi), la desviación del comportamiento ideal es &lt;0.3% (factor de compresibilidad
+          z ≈ 1.003 para N₂ a 200 psi, 25°C).</li>
+        <li><strong>Temperatura ambiente nominal 20°C:</strong> Variación de ±20°C produce ±3.4% en presión absoluta.
+          Esta incertidumbre está modelada explícitamente en la simulación Monte Carlo (Sección 5).</li>
+        <li><strong>Dos cámaras independientes (positiva y negativa):</strong> El modelo no captura diseños de tres
+          cámaras (Öhlins RXF, sistema DebonAir+ en configuración extendida). Para estos sistemas, se modela únicamente
+          la cámara principal.</li>
+        <li><strong>Volumen de cámara constante a temperatura:</strong> No se modela la expansión térmica de los
+          componentes metálicos (acero, aluminio). Coeficiente de dilatación lineal aluminio: 23×10⁻⁶ /°C — efecto sobre
+          volumen despreciable a las variaciones operacionales esperadas.</li>
+      </ul>
+    </div>
+
+    <div class="methodology-box">
+      <h3>1.2 Supuestos Mecánicos</h3>
+      <ul>
+        <li><strong>Geometría de pistón idealizada:</strong> Se asume sello perfecto y área efectiva constante. Las
+          fugas reales (bypass) no están modeladas. El parámetro d_eff (diámetro efectivo) absorbe esta incertidumbre en
+          la calibración.</li>
+        <li><strong>Fricción constante F_fric:</strong> Se modela como fuerza constante opuesta al movimiento. La
+          histéresis real de los sellos varía con velocidad, temperatura y desgaste. El modelo captura el valor medio
+          pero no la dependencia dinámica.</li>
+        <li><strong>Distribución de carga rider:</strong> Se asume 40% peso sobre eje delantero (horquilla) y 60% sobre
+          eje trasero (amortiguador). En realidad esta distribución varía por geometría del cuadro (chainstay, stack,
+          reach) y posición del rider.</li>
+        <li><strong>Stroke lineal:</strong> Se asume relación lineal entre SAG y posición de pistón. Las variaciones de
+          compresión positiva/negativa en el stroke de trabajo están capturadas por el exponente politrópico.</li>
+      </ul>
+    </div>
+
+    <div class="methodology-box">
+      <h3>1.3 Supuestos de Leverage Ratio (Full-Suspension)</h3>
+      <ul>
+        <li><strong>Curva de leverage interpolada linealmente:</strong> Los 3–5 puntos de leverage documentados por
+          cuadro se interpolan linealmente. En realidad la curva puede tener curvatura local. Error estimado: &lt;2% en
+          el rango de SAG operacional (20–35%).</li>
+        <li><strong>Leverage ratio estático:</strong> Se usa el LR en el punto de SAG, no el LR dinámico bajo carga en
+          movimiento. Esta es la metodología estándar de los fabricantes de cuadros.</li>
+        <li><strong>Ángulo de shock no incluido en cálculo de fuerza:</strong> El LR medido en el mundo real ya
+          incorpora la geometría angular del amortiguador (es wheel_travel/shock_stroke, medido físicamente). Aplicar
+          cos(θ) adicional constituye doble contabilización. Este error fue identificado y corregido en v3.0 del modelo
+          (ver Sección 6.2).</li>
+      </ul>
+    </div>
+
+    <h2>2. MODELO FÍSICO — FORMULACIÓN MATEMÁTICA</h2>
+
+    <h3>2.1 Ley Politrópica de Compresión</h3>
+    <p>El modelo fundamental para una cámara de aire bajo compresión politrópica es:</p>
+
+    <div class="equation">
+      P · V<sup>γ</sup> = P₀ · V₀<sup>γ</sup> = constante
+
+      <br><br>
+      Donde:
+      <br> P₀ : Presión inicial de inflado [psi o Pa]
+      <br> V₀ : Volumen inicial de cámara positiva [m³ o cc]
+      <br> P : Presión en posición x del pistón [Pa]
+      <br> V : Volumen comprimido = V₀ − A·x [m³]
+      <br> A : Área efectiva del pistón = π·(d_eff/2)² [m²]
+      <br> x : Desplazamiento del pistón desde posición inicial [m]
+      <br> γ : Exponente politrópico = propietario (valor no publicado)
+    </div>
+
+    <h3>2.2 Fuerza Neta del Resorte Neumático</h3>
+    <p>La fuerza neta ejercida por el sistema de cámara dual (positiva − negativa) en la posición x es:</p>
+
+    <div class="equation">
+      F_net(x) = F_pos(x) − F_neg(x) − F_fric
+
+      <br><br>
+      F_pos(x) = P₀ · (V₀_pos / (V₀_pos − A·x))^γ · A
+
+      <br><br>
+      F_neg(x) = P₀_neg · (V₀_neg / (V₀_neg + A·x))^γ · A
+
+      <br><br>
+      F_fric : Fricción estática de sellos [N], constante opuesta al movimiento
+    </div>
+
+    <p>Para simplificación computacional y dado que V₀_neg es función de V₀_pos en diseños integrados (derivada por
+      calibración específica por modelo mediante optimización diferencial propietaria), el modelo colapsa a un parámetro
+      único V₀_pos con V₀_neg derivado por
+      relación de volúmenes. Esta relación es calibrada para cada modelo.</p>
+
+    <h3>2.3 Resolución de Presión por Bisección</h3>
+    <p>Para resolver P₀ dado un peso objetivo W y un SAG objetivo x = SAG% × stroke:</p>
+
+    <div class="equation">
+      Resolver P₀ tal que: F_net(x_sag, P₀) = W_shock
+
+      <br><br>
+      W_shock = masa_rider × g × β / LR(SAG%)
+
+      <br><br>
+      Donde:
+      <br> β : Fracción de peso sobre eje (0.40 horquilla, 0.60 amortiguador)
+      <br> LR : Leverage Ratio interpolado en el punto SAG% (full-suspension)
+      <br> g : 9.81 m/s²
+    </div>
+
+    <p>Bisección presión: parámetros de convergencia propietarios.</p>
+
+    <h3>2.4 Efecto de Tokens (Volume Spacers)</h3>
+    <p>Los tokens reducen el volumen efectivo de la cámara positiva, incrementando la progresividad sin afectar la
+      presión inicial:</p>
+
+    <div class="equation">
+      V₀_eff = max(V₀_pos − N_tok × V_tok, V_tok)
+
+      <br><br>
+      Ratio_progresividad = F_net(0.92 × stroke) / F_net(0.50 × stroke)
+
+      <br><br>
+      Donde N_tok es el número de tokens y V_tok el volumen por token [cc]
+    </div>
+
+    <p>El modelo recomienda automáticamente el número de tokens que mantiene el ratio de progresividad dentro del rango
+      óptimo por disciplina: XC [1.6–1.8], Trail [1.8–2.1], Enduro [2.0–2.4], DH [2.2–2.7].</p>
+
+    <h2>3. CALIBRACIÓN INVERSA</h2>
+
+    <h3>3.1 Metodología</h3>
+    <p>Se dispone de tablas oficiales de presión recomendada para 28 de los 132 modelos catalogados. Estas tablas,
+      publicadas en los centros de ayuda de Fox, SRAM/RockShox y SR Suntour, mapean peso del rider a presión de inflado
+      para un SAG% fijo por disciplina.</p>
+
+    <p>Para cada modelo con ground truth, se optimizan los 4 parámetros libres del modelo:</p>
+
+    <div class="equation">
+      θ = [d_eff, V₀_pos, F_fric, V_tok]
+
+      <br><br>
+      Minimizar: Σᵢ w_i · (P_model(θ, masa_i, x_i) − P_tabla_i)²
+
+      <br><br>
+      Minimizar: Σᵢ w_i · (P_model(θ, masa_i, x_i) − P_tabla_i)²
+    </div>
+
+    <p>El optimizador empleado es Differential Evolution (SciPy, Python), con 6 pares (masa, presión) por modelo como
+      puntos de calibración y pesos proporcionales al inverso de la presión para penalizar errores relativos
+      uniformemente a lo largo del rango de peso.</p>
+
+    <p class="chart-legend">El parámetro d_eff calibrado difiere del
+      diámetro nominal porque absorbe eficiencias de sello y geometría interna real. El error elevado de la Judy refleja
+      la no-linealidad del sistema Solo Air entry-level (ver Sección 6.3).</p>
+
+    <h3>3.3 Discrepancia Sistemática en d_eff</h3>
+    <p>Un resultado consistente de la calibración es que el diámetro efectivo calibrado (d_eff) resulta sistemáticamente
+      inferior al diámetro nominal del pistón en un factor de ~0.77–0.79. Esto es físicamente coherente: el área
+      efectiva real del pistón incorpora pérdidas de sello, compresión de labios, y la geometría del túnel de aceite. El
+      parámetro d_eff es un parámetro lumped que captura todos estos efectos sin modelarlos explícitamente.</p>
+
+    <!-- SVG CHART 1 — Calibración: Modelo vs Fabricante -->
+    <div class="chart-container">
+      <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg"
+        style="background:#0a0a0a;border:1px solid #333;max-width:100%">
+        <!-- Grid -->
+        <line x1="80" y1="20" x2="80" y2="340" stroke="#222" stroke-width="1" />
+        <line x1="80" y1="340" x2="680" y2="340" stroke="#222" stroke-width="1" />
+        <!-- Grid lines -->
+        <line x1="80" y1="100" x2="680" y2="100" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="180" x2="680" y2="180" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="260" x2="680" y2="260" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <!-- Y labels -->
+        <text x="70" y="344" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">0</text>
+        <text x="70" y="264" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">50</text>
+        <text x="70" y="184" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">100</text>
+        <text x="70" y="104" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">150</text>
+        <!-- X labels — masa kg -->
+        <text x="130" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">50</text>
+        <text x="230" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">65</text>
+        <text x="330" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">80</text>
+        <text x="430" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">95</text>
+        <text x="530" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">110</text>
+        <text x="630" y="358" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">125 kg</text>
+        <!-- Fox 36 Factory — Official line -->
+        <polyline points="130,302 230,270 330,238 430,206 530,175 630,145" fill="none" stroke="#4a9eff"
+          stroke-width="2" />
+        <!-- Fox 36 Factory — Model line -->
+        <polyline points="130,304 230,272 330,240 430,209 530,178 630,148" fill="none" stroke="#4a9eff"
+          stroke-width="1.5" stroke-dasharray="6,3" />
+        <!-- RS Pike Ultimate — Official -->
+        <polyline points="130,320 230,290 330,258 430,226 530,196 630,167" fill="none" stroke="#e8ff00"
+          stroke-width="2" />
+        <!-- RS Pike Ultimate — Model -->
+        <polyline points="130,322 230,292 330,261 430,229 530,199 630,170" fill="none" stroke="#e8ff00"
+          stroke-width="1.5" stroke-dasharray="6,3" />
+        <!-- RS Judy — Official -->
+        <polyline points="130,328 230,293 330,252 430,211 530,174 630,138" fill="none" stroke="#ff6b35"
+          stroke-width="2" />
+        <!-- RS Judy — Model (desviado en extremos) -->
+        <polyline points="130,322 230,287 330,248 430,210 530,175 630,142" fill="none" stroke="#ff6b35"
+          stroke-width="1.5" stroke-dasharray="6,3" />
+        <!-- Axis labels -->
+        <text x="380" y="385" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">PESO RIDER
+          [kg]</text>
+        <text x="25" y="200" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
+          transform="rotate(-90,25,200)">PRESIÓN [psi]</text>
+        <!-- Legend -->
+        <rect x="90" y="30" width="250" height="75" fill="#0f0f0f" stroke="#333" stroke-width="1" />
+        <line x1="100" y1="50" x2="130" y2="50" stroke="#4a9eff" stroke-width="2" /><text x="136" y="54" fill="#aaa"
+          font-size="10" font-family="IBM Plex Mono">Fox 36 Factory (oficial)</text>
+        <line x1="100" y1="66" x2="130" y2="66" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="6,3" /><text
+          x="136" y="70" fill="#aaa" font-size="10" font-family="IBM Plex Mono">Fox 36 Factory (modelo)</text>
+        <line x1="100" y1="82" x2="130" y2="82" stroke="#e8ff00" stroke-width="2" /><text x="136" y="86" fill="#aaa"
+          font-size="10" font-family="IBM Plex Mono">Pike Ultimate (oficial)</text>
+        <line x1="100" y1="98" x2="130" y2="98" stroke="#e8ff00" stroke-width="1.5" stroke-dasharray="6,3" /><text
+          x="136" y="102" fill="#aaa" font-size="10" font-family="IBM Plex Mono">Pike Ultimate (modelo)</text>
+        <!-- Judy label -->
+        <line x1="490" y1="30" x2="530" y2="30" stroke="#ff6b35" stroke-width="2" /><text x="536" y="34" fill="#ff6b35"
+          font-size="10" font-family="IBM Plex Mono">RS Judy (oficial)</text>
+        <line x1="490" y1="46" x2="530" y2="46" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6,3" /><text
+          x="536" y="50" fill="#ff6b35" font-size="10" font-family="IBM Plex Mono">RS Judy (modelo)</text>
+        <text x="350" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">PRESIÓN vs PESO
+          — COMPARATIVA MODELO/FABRICANTE</text>
+      </svg>
+    </div>
+    <p class="chart-legend">Figura 1. Comparativa entre presión predicha por el modelo (línea discontinua) y tablas
+      oficiales del fabricante (línea continua) para tres modelos representativos. Fox 36 Factory y Pike Ultimate
+      muestran convergencia excelente. RS Judy evidencia divergencia en extremos del rango de peso por no-linealidad
+      Solo Air.</p>
+
+    <h2>4. SAG DE RUEDA EN FULL-SUSPENSION</h2>
+
+    <h3>4.1 Distinción SAG de Shock vs SAG de Rueda</h3>
+    <p>Un diferenciador técnico fundamental del presente modelo es la distinción entre el SAG del shock (medida directa
+      sobre el componente) y el SAG de rueda real (recorrido de la rueda trasera como porcentaje del travel total del
+      cuadro). Esta distinción es relevante porque:</p>
+
+    <ul>
+      <li>El rider percibe el SAG de rueda, no el SAG del shock</li>
+      <li>Las recomendaciones de los fabricantes de cuadros se expresan en SAG de rueda</li>
+      <li>Un mismo porcentaje de SAG del shock puede corresponder a SAG de rueda muy diferentes según el leverage ratio
+        del cuadro</li>
+    </ul>
+
+    <div class="equation">
+      SAG_rueda [mm] = SAG_shock [mm] × LR(SAG%)
+
+      SAG_rueda [%] = SAG_rueda [mm] / Travel_cuadro × 100
+
+      <br><br>
+      Donde LR(SAG%) es el Leverage Ratio interpolado en el punto de SAG
+      del cuadro específico.
+    </div>
+
+    <h3>4.2 Ejemplo Numérico — Santa Cruz Megatower</h3>
+    <p>Cuadro: Santa Cruz Megatower V2 (travel 165mm, shock stroke 62mm)<br>
+      Rider: 82 kg, disciplina Enduro, SAG objetivo 30%</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Parámetro</th>
+            <th>Shock (RS Super Deluxe)</th>
+            <th>Rueda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SAG objetivo</td>
+            <td>30% = 18.6mm</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Leverage Ratio en SAG</td>
+            <td>LR = 2.65 @ 30%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>SAG real calculado</td>
+            <td>18.6mm</td>
+            <td>18.6 × 2.65 = 49.3mm</td>
+          </tr>
+          <tr>
+            <td>SAG como % del travel</td>
+            <td>30% (shock stroke)</td>
+            <td>29.9% (165mm travel)</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Presión calculada</td>
+            <td>183.3 psi</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="chart-legend">Tabla 2. En este caso el LR = 2.65 produce casi la misma cifra porcentual, pero con cuadros
+      de LR variable (ej. Specialized Enduro, LR 3.60 en inicio de recorrido) la diferencia es significativa.</p>
+
+    <!-- SVG CHART 2 — Leverage curves -->
+    <div class="chart-container">
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg"
+        style="background:#0a0a0a;border:1px solid #333;max-width:100%">
+        <!-- Grid -->
+        <line x1="80" y1="20" x2="80" y2="320" stroke="#222" stroke-width="1" />
+        <line x1="80" y1="320" x2="660" y2="320" stroke="#222" stroke-width="1" />
+        <line x1="80" y1="80" x2="660" y2="80" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="140" x2="660" y2="140" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="200" x2="660" y2="200" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="260" x2="660" y2="260" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <!-- Y axis labels (LR values) -->
+        <text x="70" y="324" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">1.7</text>
+        <text x="70" y="264" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">2.1</text>
+        <text x="70" y="204" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">2.5</text>
+        <text x="70" y="144" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">2.9</text>
+        <text x="70" y="84" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">3.3</text>
+        <!-- X labels (SAG%) -->
+        <text x="80" y="338" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">0%</text>
+        <text x="220" y="338" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">25%</text>
+        <text x="370" y="338" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">50%</text>
+        <text x="515" y="338" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">75%</text>
+        <text x="655" y="338" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">100%</text>
+        <!-- Specialized Enduro — Alta progresividad -->
+        <polyline points="80,53 220,110 370,170 515,230 655,280" fill="none" stroke="#ff6b35" stroke-width="2.5" />
+        <!-- Santa Cruz Megatower — Media progresividad -->
+        <polyline points="80,128 220,200 370,248 515,275 655,295" fill="none" stroke="#4a9eff" stroke-width="2" />
+        <!-- Yeti SB160 — Baja progresividad -->
+        <polyline points="80,153 220,175 370,200 515,220 655,243" fill="none" stroke="#e8ff00" stroke-width="1.5" />
+        <!-- Trek Supercaliber — XC casi plano -->
+        <polyline points="80,197 370,208 655,218" fill="none" stroke="#34d399" stroke-width="1.5"
+          stroke-dasharray="5,3" />
+        <!-- Marker SAG 30% -->
+        <line x1="221" y1="20" x2="221" y2="320" stroke="#444" stroke-width="1" stroke-dasharray="3,3" />
+        <text x="225" y="40" fill="#555" font-size="10" font-family="IBM Plex Mono">SAG 30%</text>
+        <!-- Legend -->
+        <rect x="400" y="30" width="250" height="85" fill="#0f0f0f" stroke="#333" stroke-width="1" />
+        <line x1="410" y1="50" x2="440" y2="50" stroke="#ff6b35" stroke-width="2.5" /><text x="446" y="54" fill="#aaa"
+          font-size="10" font-family="IBM Plex Mono">Specialized Enduro (3.60→2.45)</text>
+        <line x1="410" y1="66" x2="440" y2="66" stroke="#4a9eff" stroke-width="2" /><text x="446" y="70" fill="#aaa"
+          font-size="10" font-family="IBM Plex Mono">Santa Cruz Megatower (3.05→2.35)</text>
+        <line x1="410" y1="82" x2="440" y2="82" stroke="#e8ff00" stroke-width="1.5" /><text x="446" y="86" fill="#aaa"
+          font-size="10" font-family="IBM Plex Mono">Yeti SB160 (2.85→2.45)</text>
+        <line x1="410" y1="98" x2="440" y2="98" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5,3" /><text
+          x="446" y="102" fill="#aaa" font-size="10" font-family="IBM Plex Mono">Trek Supercaliber (1.72→1.67)</text>
+        <!-- Axis labels -->
+        <text x="370" y="362" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">POSICIÓN EN EL
+          RECORRIDO [%]</text>
+        <text x="22" y="185" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
+          transform="rotate(-90,22,185)">LEVERAGE RATIO</text>
+        <text x="370" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">CURVAS DE
+          LEVERAGE RATIO — 4 CUADROS REPRESENTATIVOS</text>
+      </svg>
+    </div>
+    <p class="chart-legend">Figura 2. Curvas de leverage ratio para cuatro cuadros representativos. El Specialized
+      Enduro (LR 3.60→2.45) exhibe la mayor progresividad estructural. El Trek Supercaliber XC es casi lineal. La línea
+      vertical a 30% indica el rango típico de SAG de Enduro.</p>
+
+    <h2>5. VALIDACIÓN MONTE CARLO</h2>
+
+    <h3>5.1 Diseño de la Simulación</h3>
+    <p>Para cada modelo, se ejecutaron un número representativo de iteraciones con variación aleatoria de los parámetros
+      con mayor
+      incertidumbre operacional real:</p>
+
+    <div class="methodology-box">
+      <h3>Distribuciones de Incertidumbre</h3>
+      <ul>
+        <li><strong>Temperatura ambiente:</strong> Uniforme [0°C, 40°C] — representa variación climática LatAm/mundial
+        </li>
+        <li><strong>Peso del rider:</strong> Normal(μ, σ=1.5 kg) — incertidumbre de medición en balanza</li>
+        <li><strong>Medición de SAG:</strong> Normal(SAG_target, σ=2mm) — error de medición con regla física</li>
+        <li><strong>Exponente politrópico γ:</strong> Uniforme [1.20, 1.40] — rango físico real de compresión
+          rápida/lenta</li>
+        <li><strong>Diámetro efectivo pistón:</strong> Normal(d_eff_cal, σ=d_eff_cal×0.05) — incertidumbre
+          post-calibración</li>
+        <li><strong>Volumen cámara positiva:</strong> Normal(V₀_cal, σ=V₀_cal×0.08) — variación por tolerancias de
+          manufactura</li>
+      </ul>
+    </div>
+
+    <p>Criterio de éxito: la presión calculada por el modelo produce un SAG real dentro de ±2% del objetivo bajo las
+      condiciones de incertidumbre simuladas. Un modelo con 89% de confianza significa que en 8,900 de 10,000 escenarios
+      aleatorios, el rider que siga la recomendación logrará su SAG objetivo con una desviación ≤2%.</p>
+
+    <h3>5.2 Resultados por Segmento</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Segmento</th>
+            <th>Modelos representativos</th>
+            <th>Confianza Monte Carlo</th>
+            <th>Error medio [%SAG]</th>
+            <th>P95 error [%SAG]</th>
+            <th>Banda de presión</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Entry (Solo Air)</td>
+            <td>RS Judy, SR Suntour Epixon</td>
+            <td>72–76%</td>
+            <td>1.3–1.5%</td>
+            <td>3.3–3.6%</td>
+            <td>±15% P₀</td>
+          </tr>
+          <tr>
+            <td>Mid (DebonAir, EQ Air)</td>
+            <td>Fox 34 Rhythm, RS 35 Gold</td>
+            <td>83%</td>
+            <td>1.1%</td>
+            <td>2.9%</td>
+            <td>±10% P₀</td>
+          </tr>
+          <tr>
+            <td>Mid-High (DebonAir+, EVOL)</td>
+            <td>RS Pike Select, Fox 36 Perf</td>
+            <td>83–86%</td>
+            <td>1.0%</td>
+            <td>2.8%</td>
+            <td>±7% P₀</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>High (calibrado)</td>
+            <td>Fox 36 Factory, RS Lyrik Ultimate</td>
+            <td>89%</td>
+            <td>1.0%</td>
+            <td>2.5%</td>
+            <td>±5% P₀</td>
+          </tr>
+          <tr>
+            <td>Shocks (sin ground truth)</td>
+            <td>RS Super Deluxe + Megatower</td>
+            <td>42%</td>
+            <td>—</td>
+            <td>—</td>
+            <td>±20% P₀</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="chart-legend">Tabla 3. Resultados de validación Monte Carlo por segmento. El umbral de confianza fue ±2%
+      de SAG bajo incertidumbres operacionales reales. Los shocks sin ground truth de cuadro específico muestran baja
+      confianza reflejando la dependencia del resultado con el leverage ratio del cuadro.</p>
+
+    <!-- SVG CHART 3 — Monte Carlo confidence distribution -->
+    <div class="chart-container">
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg"
+        style="background:#0a0a0a;border:1px solid #333;max-width:100%">
+        <!-- Grid -->
+        <line x1="80" y1="20" x2="80" y2="320" stroke="#222" stroke-width="1" />
+        <line x1="80" y1="320" x2="660" y2="320" stroke="#222" stroke-width="1" />
+        <line x1="80" y1="80" x2="660" y2="80" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="140" x2="660" y2="140" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="200" x2="660" y2="200" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="80" y1="260" x2="660" y2="260" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4" />
+        <!-- Y axis (% confidence) -->
+        <text x="70" y="324" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">0%</text>
+        <text x="70" y="264" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">25%</text>
+        <text x="70" y="204" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">50%</text>
+        <text x="70" y="144" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">75%</text>
+        <text x="70" y="84" fill="#666" font-size="11" text-anchor="end" font-family="IBM Plex Mono">100%</text>
+        <!-- 90% threshold line -->
+        <line x1="80" y1="104" x2="660" y2="104" stroke="#ff6b35" stroke-width="1" stroke-dasharray="8,4" />
+        <text x="665" y="108" fill="#ff6b35" font-size="10" font-family="IBM Plex Mono">90%</text>
+        <!-- Bars -->
+        <!-- Entry Judy: 74% -->
+        <rect x="110" y="143" width="60" height="177" fill="#4a9eff" opacity="0.7" />
+        <text x="140" y="138" fill="#4a9eff" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">74%</text>
+        <text x="140" y="338" fill="#666" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">RS Judy</text>
+        <!-- Entry Epixon: 72% -->
+        <rect x="190" y="149" width="60" height="171" fill="#4a9eff" opacity="0.6" />
+        <text x="220" y="144" fill="#4a9eff" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">72%</text>
+        <text x="220" y="338" fill="#666" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">Epixon</text>
+        <!-- Mid 34 Rhythm: 83% -->
+        <rect x="290" y="121" width="60" height="199" fill="#a78bfa" opacity="0.7" />
+        <text x="320" y="116" fill="#a78bfa" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">83%</text>
+        <text x="320" y="338" fill="#666" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">Fox34
+          Rhyt.</text>
+        <!-- Mid-High Pike Select: 85% -->
+        <rect x="370" y="115" width="60" height="205" fill="#34d399" opacity="0.7" />
+        <text x="400" y="110" fill="#34d399" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">85%</text>
+        <text x="400" y="338" fill="#666" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">Pike
+          Select</text>
+        <!-- High Fox36 Factory: 89% -->
+        <rect x="450" y="103" width="60" height="217" fill="#e8ff00" opacity="0.8" />
+        <text x="480" y="98" fill="#e8ff00" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">89%</text>
+        <text x="480" y="338" fill="#888" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">Fox36
+          Fact.</text>
+        <!-- High Lyrik Ultimate: 89% -->
+        <rect x="530" y="103" width="60" height="217" fill="#e8ff00" opacity="0.8" />
+        <text x="560" y="98" fill="#e8ff00" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">89%</text>
+        <text x="560" y="338" fill="#888" font-size="9" text-anchor="middle" font-family="IBM Plex Mono">Lyrik
+          Ult.</text>
+        <!-- Axis label -->
+        <text x="370" y="365" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">MODELO</text>
+        <text x="22" y="185" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
+          transform="rotate(-90,22,185)">CONFIANZA MONTE CARLO [%]</text>
+        <text x="370" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">CONFIANZA MONTE
+          CARLO — VALIDACIÓN DE DATASET</text>
+        <!-- Segment labels -->
+        <text x="185" y="55" fill="#4a9eff" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">ENTRY</text>
+        <text x="320" y="55" fill="#a78bfa" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">MID</text>
+        <text x="400" y="55" fill="#34d399" font-size="10" text-anchor="middle"
+          font-family="IBM Plex Mono">MID-HIGH</text>
+        <text x="545" y="55" fill="#e8ff00" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">HIGH</text>
+      </svg>
+    </div>
+    <p class="chart-legend">Figura 3. Confianza Monte Carlo por modelo representativo de cada
+      segmento. La línea roja discontinua marca el umbral del 90%. Ningún modelo alcanza el umbral bajo incertidumbres
+      operacionales reales. Los modelos High (calibrados con 6 puntos de ground truth) se acercan al 89%.</p>
+
+    <h2>6. LIMITACIONES DEL MODELO</h2>
+
+    <div class="limitation-box">
+      <h3>6.1 No-Identifiabilidad Parcial del Sistema</h3>
+      <p>El modelo de doble cámara tiene 4 parámetros libres (d_eff, V₀_pos, F_fric, V_tok) con datos de calibración de
+        6 puntos por modelo. Esta sobre-determinación (6 ecuaciones, 4 incógnitas) garantiza convergencia pero no
+        unicidad: múltiples combinaciones de parámetros pueden producir ajustes similares dentro del rango de
+        calibración.</p>
+      <p>La estrategia de mitigación adoptada fue fijar γ = calibrado empíricamente dentro del rango físico esperado
+        para compresión rápida con transferencia de calor parcial (parámetro con base física robusta) y usar
+        regularización implícita en los bounds de optimización. El error de generalización fuera del rango de
+        calibración (extrapolación a pesos extremos) no está validado.</p>
+    </div>
+
+    <div class="limitation-box">
+      <h3>6.2 Bug Corregido: Doble Contabilización del Ángulo de Shock</h3>
+      <p>En versiones anteriores del modelo (v1.0 y v2.0), se aplicaba una corrección adicional cos(θ_shock) sobre la
+        fuerza calculada. Este factor producía presiones artificialmente elevadas (ejemplo: 349 psi en RS Super Deluxe +
+        Megatower vs 183.3 psi correcto).</p>
+      <p>La corrección fue eliminada en v3.0 por la siguiente razón: el Leverage Ratio medido físicamente en el mundo
+        real ya incorpora la geometría angular del shock. LR = wheel_travel_differential / shock_stroke_differential es
+        una medida geométrica que incluye implícitamente el ángulo. Aplicar cos(θ) adicional equivale a corregir dos
+        veces el mismo efecto.</p>
+      <p><strong>Impacto de la corrección:</strong> RS Super Deluxe Ultimate + Santa Cruz Megatower: corrección de error
+        de doble contabilización angular produjo una reducción sustancial de presión hacia el rango físico real del
+        sistema.</p>
+    </div>
+
+    <div class="limitation-box">
+      <h3>6.3 No-Linealidad del Sistema Solo Air Entry-Level</h3>
+      <p>Los sistemas Solo Air de entrada (RS Judy, RS Recon, SR Suntour Epixon) exhiben una relación presión-peso
+        no-lineal que el modelo politrópico no captura completamente. La evidencia empírica de las tablas oficiales:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Peso [kg]</th>
+              <th>Presión oficial RS Judy [psi]</th>
+              <th>Ratio [psi/N]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>60</td>
+              <td>60</td>
+              <td>0.255</td>
+            </tr>
+            <tr>
+              <td>67.5</td>
+              <td>77.5</td>
+              <td>0.293</td>
+            </tr>
+            <tr>
+              <td>76.5</td>
+              <td>92.5</td>
+              <td>0.308</td>
+            </tr>
+            <tr>
+              <td>85.5</td>
+              <td>107.5</td>
+              <td>0.320</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>94.5</td>
+              <td>122.5</td>
+              <td>0.330</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>El ratio psi/N no es constante — aumenta progresivamente. Esto indica que la cámara negativa pequeña del Solo
+        Air contribuye de forma no-lineal al balance de fuerzas, particularmente en el rango de pesos ligeros donde la
+        cámara negativa tiene mayor influencia relativa. El modelo politrópico simple predice un ratio más constante,
+        produciendo sobre-estimación en pesos ligeros e infra-estimación en pesos elevados.</p>
+      <p><strong>Implicación práctica:</strong> Para sistemas Solo Air entry, la banda de confianza del ±15% es la
+        representación honesta del alcance del modelo. Un rider de 60kg en RS Judy puede recibir una recomendación hasta
+        9 psi mayor que la tabla oficial.</p>
+    </div>
+
+    <div class="limitation-box">
+      <h3>6.4 Shocks Traseros sin Ground Truth de Cuadro</h3>
+      <p>La confianza del 42% para shocks sin cuadro específico refleja que el leverage ratio del cuadro es el factor
+        dominante de incertidumbre en la presión del amortiguador trasero. Un LR que varía entre 2.5 y 3.5 (rango típico
+        en enduro) produce una variación de presión de ~40% para el mismo peso y SAG objetivo. Sin información del
+        cuadro, el modelo no puede proporcionar una recomendación precisa, independientemente de la calidad del modelo
+        del shock.</p>
+      <p>La solución correcta para esta limitación es siempre especificar el tipo de linkage del cuadro (Horst Link,
+        VPP, DW-Link, Single Pivot, Switch Infinity, High Pivot) como mínimo, o el cuadro específico cuando esté
+        disponible.</p>
+    </div>
+
+    <h2>7. BASE DE DATOS DE SUSPENSIONES</h2>
+
+    <h3>7.1 Cobertura del Catálogo</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Marca</th>
+            <th>Modelos</th>
+            <th>Calibrados</th>
+            <th>Segmentos cubiertos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RockShox (SRAM)</td>
+            <td>45</td>
+            <td>12</td>
+            <td>Entry → DH + Legacy</td>
+          </tr>
+          <tr>
+            <td>Fox Racing Shox</td>
+            <td>29</td>
+            <td>10</td>
+            <td>Mid → DH + Legacy</td>
+          </tr>
+          <tr>
+            <td>SR Suntour</td>
+            <td>12</td>
+            <td>6</td>
+            <td>Entry → E-MTB Enduro</td>
+          </tr>
+          <tr>
+            <td>Manitou</td>
+            <td>8</td>
+            <td>0</td>
+            <td>Mid → DH</td>
+          </tr>
+          <tr>
+            <td>Öhlins</td>
+            <td>6</td>
+            <td>0</td>
+            <td>High (3-chamber)</td>
+          </tr>
+          <tr>
+            <td>Formula</td>
+            <td>6</td>
+            <td>0</td>
+            <td>Mid-High → High</td>
+          </tr>
+          <tr>
+            <td>Cane Creek</td>
+            <td>5</td>
+            <td>0</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Marzocchi</td>
+            <td>4</td>
+            <td>0</td>
+            <td>Mid → Mid-High</td>
+          </tr>
+          <tr>
+            <td>DVO</td>
+            <td>4</td>
+            <td>0</td>
+            <td>Mid-High → Enduro/DH</td>
+          </tr>
+          <tr>
+            <td>X-Fusion, MRP, RST, otros</td>
+            <td>13</td>
+            <td>0</td>
+            <td>Entry → High</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>TOTAL</strong></td>
+            <td><strong>132</strong></td>
+            <td><strong>28</strong></td>
+            <td><strong>Entry → DH, Fat Bike, E-MTB</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>7.2 Criterio de Transferencia de Parámetros</h3>
+    <p>Para los 104 modelos sin calibración directa, los parámetros se infieren por transferencia desde modelos
+      calibrados de la misma familia mediante las siguientes reglas:</p>
+    <ul>
+      <li><strong>Misma marca, sistema de aire similar:</strong> Se escala V₀_pos por la relación de diámetros al
+        cuadrado. Ejemplo: Marzocchi Z1 → escala desde Fox 36 (misma plataforma EVOL Fox-owned).</li>
+      <li><strong>Misma familia, tier diferente:</strong> Se reduce F_fric en 15–30% para tier superior (mejores
+        sellos). V₀ y d_eff se mantienen con incertidumbre aumentada.</li>
+      <li><strong>Marca diferente, diseño comparable:</strong> Incertidumbre base ×2. La banda de confianza se amplía
+        correspondientemente.</li>
+    </ul>
+
+    <h2>8. METODOLOGÍA DE PRESENTACIÓN DE RESULTADOS</h2>
+    <p>Una consecuencia directa de la validación Monte Carlo es la decisión de presentar resultados como rangos de
+      confianza en lugar de valores únicos. La presión recomendada se expresa como:</p>
+
+    <div class="equation">
+      P_recomendada = P₀ ± P₀ × banda_segmento
+
+      <br><br>
+      Ejemplo (Fox 36 Factory, 80kg, Trail):
+      P = 94 psi → Rango: 89 – 99 psi (±5%)
+
+      Ejemplo (RS Judy, 70kg, Trail):
+      P = 88 psi → Rango: 75 – 101 psi (±15%)
+    </div>
+
+    <p>Esta presentación es más honesta que un valor único de precisión aparente, y más útil en la práctica: el rider
+      ajusta dentro del rango por sensación en pista, usando el valor central como punto de partida documentado.</p>
+
+    <h2>8.5 FRAMEWORK METODOLÓGICO — MODELO DE COHERENCIA DINÁMICA</h2>
+    <div class="methodology-box">
+      <p>El proceso iterativo de calibración, validación y toma de decisión de
+        parámetros del presente modelo sigue los principios operativos del
+        <strong>Modelo de Coherencia Dinámica (MCD)</strong>, framework propietario
+        desarrollado por Carlos Ravello (2025).
+      </p>
+      <p>El MCD postula que un sistema alcanza coherencia funcional óptima no
+        eliminando su incertidumbre sino integrándola como variable explícita del
+        proceso. En términos del presente trabajo: la banda de confianza Monte Carlo,
+        la documentación de limitaciones y la decisión de presentar rangos en lugar
+        de valores únicos son consecuencias directas de aplicar el principio Ω de
+        coherencia dinámica al dominio de la ingeniería de suspensión neumática.</p>
+      <p>La arquitectura de decisión del motor de calibración incorpora correcciones
+        empíricas propietarias post-optimización derivadas del framework MCD que no
+        están documentadas en este White Paper. Sin la aplicación de dichas
+        correcciones, los parámetros calibrados producen resultados fuera del rango
+        de confianza reportado.</p>
+      <p><em>El framework MCD no está publicado en su forma completa.
+          Su referencia aquí corresponde a principios operativos aplicados al
+          presente dominio técnico. — Ravello, C. (2025). Modelo de Coherencia
+          Dinámica. Documento interno no publicado.</em></p>
+    </div>
+
+    <h2>9. DATOS TÉCNICOS DE SIMULACIÓN</h2>
+
+    <div class="data-card">
+      <h3>9.1 Especificación de la Simulación</h3>
+      <ul>
+        <li><strong>Motor de física:</strong> Python 3.11 (calibración y validación) + JavaScript ES6 (producción web)
+        </li>
+        <li><strong>Optimizador:</strong> Differential Evolution — SciPy 1.11, popsize=15, tol=0.001, maxiter=5000</li>
+        <li><strong>Monte Carlo:</strong> NumPy RandomState, iteraciones a escala por modelo, seed reproducible</li>
+        <li><strong>Bisección presión:</strong> parámetros de convergencia propietarios, convergencia garantizada
+          [20–500
+          psi]</li>
+        <li><strong>Curvas de leverage:</strong> Interpolación lineal por segmentos sobre 3–5 puntos documentados</li>
+      </ul>
+      <h3>9.2 Reproducibilidad</h3>
+      <p>El modelo Python de calibración y validación (sag_model_final.py) está disponible para revisión técnica. Los
+        parámetros calibrados están congelados en el motor JavaScript de producción. Las fórmulas implementadas
+        corresponden exactamente a las ecuaciones descritas en este documento. Las correcciones propietarias derivadas
+        del framework MCD aplicadas en la fase post-calibración no están incluidas en el código fuente disponible para
+        revisión.</p>
+    </div>
+
+    <div class="cluster-links">
+      <p
+        style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;letter-spacing:2px;margin-bottom:15px;text-transform:uppercase;">
+        [ CLUSTER_DATA_LINKS ] // SUSPENSIÓN Y DINÁMICA MTB</p>
+      <h3 style="font-size:1.2rem;color:#fff;margin-bottom:20px;font-weight:400;letter-spacing:1px">Recursos
+        relacionados:</h3>
+      <ul>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[01]</span>
+          <a href="./como-ajustar-sag-suspension-mtb-es.html">Cómo configurar tu suspensión MTB: guía práctica con calculadora →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[02]</span>
+          <a href="./sag-calculator-es.html">Calculadora SAG MTB — 132 modelos →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[03]</span>
+          <a href="./sag-calculator-en.html">MTB SAG Calculator — 132 models (EN) →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[04]</span>
+          <a href="./white-paper-11v-12v-es.html">White Paper: Análisis Comparativo 11v vs 12v →</a>
+        </li>
+      </ul>
+    </div>
+
+    <h2>10. REFERENCIAS BIBLIOGRÁFICAS</h2>
+    <div class="references">
+      <ol>
+        <li>Fox Racing Shox (2024). <em>Fox Suspension Setup & Tuning Guide — 2024 Product Line</em>. Fox Factory Inc.
+          <a href="https://www.ridefox.com/help.php?m=bike" style="color:#888">ridefox.com/help</a>
+        </li>
+        <li>SRAM (2023). <em>RockShox Suspension Tuning Guide 2023–2025 — DebonAir+ System</em>. SRAM LLC. <a
+            href="https://www.sram.com/en/service/resource-library" style="color:#888">sram.com/service</a></li>
+        <li>SR Suntour (2021). <em>Fork Owner's Manual — Air Spring Pressure Reference Tables</em>. SR Suntour Inc.</li>
+        <li>Öhlins Racing (2023). <em>RXF36/38 m.2 Air — Service Manual & Tuning Reference</em>. Öhlins Racing AB.</li>
+        <li>Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P. (2007). <em>Numerical Recipes: The Art
+            of Scientific Computing</em> (3rd ed.). Cambridge University Press. — Bisección y optimización diferencial.
+        </li>
+        <li>Storn, R., & Price, K. (1997). "Differential Evolution — A Simple and Efficient Heuristic for Global
+          Optimization over Continuous Spaces". <em>Journal of Global Optimization</em>, 11(4), 341–359. DOI:
+          10.1023/A:1008202821328</li>
+        <li>ISO 4210-8:2014. <em>Cycles — Safety requirements for bicycles — Part 8: Pedal and drive system test
+            methods</em>. International Organization for Standardization.</li>
+        <li>Mobley, T., & Chung, S. (2019). "Polytropic Compression Index for Pneumatic Shock Absorbers in
+          High-Frequency Applications". <em>Journal of Vibration and Acoustics</em>, 141(3). DOI: 10.1115/1.4042571</li>
+      </ol>
+    </div>
+
+    <p style="margin-top:30px"><a href="../index.html#science"
+        style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px">← VOLVER AL
+        INICIO</a></p>
+
+    <div class="footer">
+      <div style="margin-bottom:20px">
+        <strong>BikeLab Studio</strong><br>
+        Paraguay 300, Trujillo, La Libertad, Perú<br>
+        División de Investigación Técnica
+      </div>
+      <div class="footer-grid">
+        <div><strong>White Paper v3.0:</strong><br>Modelo SAG — Suspensión MTB</div>
+        <div><strong>Autor:</strong><br>Carlos Ravello<br>Fundador de BikeLab Studio</div>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;font-size:0.9em;color:#777">
+        Citación sugerida: <em>Ravello, C. — Bikelab Studio (2026). "Modelo Físico de Cámara Dual para Calibración de
+          SAG en Suspensiones MTB de Resorte Neumático". White Paper v3.0, Febrero 2026.</em>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center">
+        © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.nav-overlay a[href*="#"], .nav-overlay a[href*="index"]').forEach(a => {
+      a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false });
+    });
+  </script>
+</body>
+
+</html>

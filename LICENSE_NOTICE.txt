@@ -1,0 +1,150 @@
+═══════════════════════════════════════════════════════════════════════
+  SAG CALCULATOR v5.0 — BikeLabStudio.com
+  AVISO DE PROPIEDAD INTELECTUAL Y TÉRMINOS DE USO
+═══════════════════════════════════════════════════════════════════════
+
+AUTOR Y TITULAR DE DERECHOS:
+  Carlos Ravello
+  Fundador de BikeLab Studio
+  Paraguay 300, Trujillo, La Libertad, Perú
+  bikelabstudio.com
+
+FECHA DE CREACIÓN: Febrero 2026
+VERSIÓN: SAG Calculator v5.0 / SAG Engine v5.0
+FINGERPRINT SHA256: f0eaa47dfcd2ff357ae776f70887bac00733d6761f1da8bd7034ba1dd2d8d026
+FIRMA DE AUTORÍA: Q2FybG9zIFJhdmVsbG8g4oCUIEJpa2VMYWIgU3R1ZGlvfDIwMjYtMDItMjZ8U0FHX01PREVMX3Y1LjA=
+
+───────────────────────────────────────────────────────────────────────
+DESCRIPCIÓN DEL TRABAJO
+───────────────────────────────────────────────────────────────────────
+
+Este repositorio contiene el código fuente del SAG Calculator v5.0,
+una herramienta de cálculo de presión de SAG para suspensiones MTB
+de resorte neumático, desarrollada íntegramente por Carlos Ravello
+para BikeLab Studio.
+
+El trabajo incluye:
+
+  1. Motor de física de doble cámara politrópica (γ=1.30)
+     Implementado en Python (validación/calibración) y JavaScript
+     (producción web). Ecuaciones propias derivadas de física de
+     gases con aplicación específica a suspensiones MTB.
+
+  2. Base de datos de 132 suspensiones
+     Parámetros calibrados mediante optimización diferencial inversa
+     (Differential Evolution) contra tablas oficiales de Fox,
+     RockShox, SR Suntour y Öhlins. El trabajo de calibración
+     (selección de parámetros, bounds, función objetivo, validación)
+     es original de BikeLab Studio.
+
+  3. Validación Monte Carlo
+     Diseño de simulación, distribuciones de incertidumbre,
+     criterios de éxito, e interpretación de resultados: trabajo
+     original de BikeLab Studio.
+
+  4. Cálculo de SAG de rueda en full-suspension
+     Metodología de leverage ratio interpolado y su aplicación al
+     cálculo diferencial de SAG de rueda vs SAG de shock:
+     implementación original de BikeLab Studio.
+
+  5. Base de datos de curvas de leverage ratio
+     33 cuadros documentados con sus curvas de leverage calibradas.
+     Compilación y verificación: trabajo original de BikeLab Studio.
+
+  6. Interfaz de usuario completa
+     Diseño, lógica de UI, y experiencia de usuario de la
+     calculadora web: trabajo original de BikeLab Studio.
+
+───────────────────────────────────────────────────────────────────────
+DERECHOS DE AUTOR — COPYRIGHT
+───────────────────────────────────────────────────────────────────────
+
+© 2026 BikeLab Studio — Carlos Ravello. TODOS LOS DERECHOS RESERVADOS.
+
+Este código fuente, la base de datos de parámetros calibrados, el
+modelo físico, la metodología de calibración y validación, y todos
+los materiales derivados son propiedad intelectual exclusiva de
+Carlos Ravello / BikeLab Studio.
+
+La protección de este trabajo se fundamenta en:
+
+  • Decreto Legislativo N° 822 — Ley sobre el Derecho de Autor (Perú)
+  • Convenio de Berna para la Protección de las Obras Literarias
+    y Artísticas (aplicable en 181 países signatarios)
+  • TODA — Tratado de la OMPI sobre Derecho de Autor
+  • ADPIC — Acuerdo sobre los Aspectos de los Derechos de Propiedad
+    Intelectual relacionados con el Comercio (OMC)
+
+───────────────────────────────────────────────────────────────────────
+LO QUE ESTÁ PROHIBIDO SIN AUTORIZACIÓN EXPRESA Y POR ESCRITO
+───────────────────────────────────────────────────────────────────────
+
+  ✗  Reproducir total o parcialmente el código fuente
+  ✗  Copiar la base de datos de parámetros calibrados
+  ✗  Redistribuir este software en cualquier forma
+  ✗  Crear trabajos derivados basados en este código
+  ✗  Usar el motor de cálculo en productos comerciales propios
+  ✗  Eliminar o modificar los avisos de copyright
+  ✗  Descompilar, desofuscar o realizar ingeniería inversa
+     con el propósito de reutilizar el código en otros proyectos
+  ✗  Presentar este trabajo como propio en cualquier plataforma
+
+───────────────────────────────────────────────────────────────────────
+LO QUE SÍ ESTÁ PERMITIDO
+───────────────────────────────────────────────────────────────────────
+
+  ✓  Usar la calculadora en bikelabstudio.com de forma gratuita
+  ✓  Enlazar a bikelabstudio.com desde otros sitios web
+  ✓  Citar este trabajo en publicaciones técnicas con atribución:
+     "Ravello, C. — BikeLab Studio (2026). SAG Calculator v5.0.
+      bikelabstudio.com"
+  ✓  Uso personal y educativo no comercial con atribución explícita
+  ✓  Solicitar colaboración o licencia: carlos@bikelabstudio.com
+
+───────────────────────────────────────────────────────────────────────
+IDENTIFICACIÓN TÉCNICA DE AUTORÍA
+───────────────────────────────────────────────────────────────────────
+
+Este código contiene marcas de autoría técnicamente verificables:
+
+  • Watermark SHA256 embebido en el código JavaScript (variable _σ)
+  • Firma Base64 verificable (variable _ξ)
+  • Array de bytes del autor (variable _α)
+  • Comentario HTML con fingerprint en el <head> del archivo
+  • Meta tags de copyright y autoría
+
+Para verificar autoría:
+  1. Localizar la variable _σ en el código JavaScript
+  2. El valor debe ser:
+     f0eaa47dfcd2ff357ae776f70887bac00733d6761f1da8bd7034ba1dd2d8d026
+  3. Este hash corresponde al SHA256 de:
+     "Carlos Ravello — BikeLab Studio|2026-02-26|SAG_MODEL_v5.0"
+
+Cualquier copia del código que contenga estas marcas sin autorización
+constituye evidencia directa de infracción de derechos de autor.
+
+───────────────────────────────────────────────────────────────────────
+CONTACTO PARA LICENCIAS Y COLABORACIONES
+───────────────────────────────────────────────────────────────────────
+
+  Web:       https://bikelabstudio.com
+  WhatsApp:  +51 934 391 545
+  Ubicación: Paraguay 300, Trujillo, La Libertad, Perú
+
+───────────────────────────────────────────────────────────────────────
+DESCARGO DE RESPONSABILIDAD
+───────────────────────────────────────────────────────────────────────
+
+Este software se proporciona como herramienta de referencia técnica.
+Los resultados son puntos de partida para ajuste en pista. BikeLab
+Studio no se responsabiliza por ajustes de suspensión realizados
+exclusivamente en base a los valores calculados sin verificación
+física posterior. Ajusta siempre tu suspensión por sensación en
+la pista con las condiciones de tu terreno habitual.
+
+───────────────────────────────────────────────────────────────────────
+
+  © 2026 BIKELAB_STUDIO — CARLOS RAVELLO // TODOS LOS DERECHOS RESERVADOS
+  SISTEMA_ESTABLE // TRUJILLO_PE // COORD_8.1159_S / 79.0299_W
+
+═══════════════════════════════════════════════════════════════════════
