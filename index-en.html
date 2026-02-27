@@ -976,7 +976,10 @@
                     <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s;">
                         <h3>Brakes at Altitude</h3>
                         <p>Thermodynamic analysis: Why hydraulic systems fail above 3,000 meters.</p>
-                        <div style="margin-top:20px; color:var(--accent);">\[ P = P_0 \cdot e^{-\frac{Mgh}{RT}} \]</div>
+                        <math display="block" style="color:var(--accent);margin-top:20px;font-size:1.05em">
+                          <mi>P</mi><mo>=</mo><msub><mi>P</mi><mn>0</mn></msub><mo>&#x22C5;</mo>
+                          <msup><mi>e</mi><mrow><mo>&#x2212;</mo><mfrac><mrow><mi>M</mi><mi>g</mi><mi>h</mi></mrow><mrow><mi>R</mi><mi>T</mi></mrow></mfrac></mrow></msup>
+                        </math>
                         <span
                             style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">ENTER
                             LABORATORY_</span>
@@ -986,7 +989,9 @@
                     <article class="card" style="cursor:pointer; border:1px solid #333; transition:0.3s;">
                         <h3>Carbon Footprint</h3>
                         <p>Quantitative analysis of manufacturing emissions: Aluminum, Carbon, Steel, and Titanium.</p>
-                        <div style="margin-top:20px; color:var(--accent);">\[ CO_{2-eq} \]</div>
+                        <math display="block" style="color:var(--accent);margin-top:20px;font-size:1.05em">
+                          <msub><mrow><mi>C</mi><mi>O</mi></mrow><mrow><mn>2</mn><mo lspace="0em" rspace="0.1em">-</mo><mtext>eq</mtext></mrow></msub>
+                        </math>
                         <span
                             style="display:inline-block; margin-top:15px; color:var(--accent); font-size:0.8rem; letter-spacing:1px;">ENTER
                             LABORATORY_</span>
@@ -1632,8 +1637,7 @@
             a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
         });
     </script>
-    <!-- MathJax -->
-    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </body>
 
 </html>
