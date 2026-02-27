@@ -778,12 +778,12 @@
     .calc-frame-wrap {
       position: relative;
       width: 100%;
-      min-height: 95vh
+      min-height: 100vh
     }
 
     .calc-frame {
       width: 100%;
-      min-height: 95vh;
+      min-height: 100vh;
       border: none;
       display: block;
       background: var(--bg)
@@ -1043,7 +1043,7 @@
     <p class="hero-subtitle">Pressure at work</p>
     <div class="hero-stats" aria-label="Estadísticas de la calculadora">
       <div class="stat"><span class="stat-num">1<span>32</span></span><span class="stat-label">Suspensiones</span></div>
-      <div class="stat"><span class="stat-num">1<span>6</span></span><span class="stat-label">Marcas</span></div>
+      <div class="stat"><span class="stat-num">1<span>0</span></span><span class="stat-label">Marcas</span></div>
       <div class="stat"><span class="stat-num">10<span>K</span></span><span class="stat-label">Simulaciones Monte
           Carlo</span></div>
       <div class="stat"><span class="stat-num">2<span>8</span></span><span class="stat-label">Calibrados con datos
@@ -1100,19 +1100,60 @@
       </div>
       <div class="calc-header-right">
         <span class="calc-badge">132 MODELOS</span>
-        <span class="calc-badge">16 MARCAS</span>
+        <span class="calc-badge">10 MARCAS</span>
         <span class="calc-badge">© 2026 BLS</span>
       </div>
     </div>
     <div class="calc-frame-wrap">
-      <iframe class="calc-frame" src="./sag_calculator_v2.html"
+      <iframe class="calc-frame" src="./sag_calculator_v2.html?embed=1"
         title="BikeLab Studio SAG Calculator — Calculadora de Presión SAG para Suspensión MTB" loading="lazy"
         sandbox="allow-scripts allow-same-origin" aria-label="Calculadora interactiva de SAG para suspensión MTB">
       </iframe>
     </div>
   </section>
 
-  
+  <!-- ═══════════ AVISO DATOS COMUNIDAD ═══════════ -->
+  <section id="datos-comunidad" style="padding:clamp(48px,7vh,96px) clamp(20px,6vw,80px);border-bottom:1px solid #111;background:#060603">
+    <div style="max-width:780px;margin:0 auto">
+      <p style="font-family:var(--mono);font-size:9px;color:#555;letter-spacing:4px;text-transform:uppercase;margin-bottom:32px">// TRANSPARENCIA — ESTADO DE CALIBRACIÓN</p>
+      <div style="border:1px solid #2a2200;border-left:3px solid var(--yellow);padding:32px 36px;background:#0a0800">
+
+        <p style="font-family:var(--jet);font-size:.92rem;color:#ccc;font-weight:400;margin-bottom:18px;line-height:1.5">
+          <strong>Un aviso honesto sobre algunos modelos de la lista.</strong>
+        </p>
+
+        <p style="font-family:var(--jet);font-size:.82rem;color:#888;line-height:1.85;font-weight:300;margin-bottom:22px">
+          Marcas como Fox, RockShox u Öhlins publican tablas técnicas oficiales de volúmenes y presiones que nos permiten calibrar sus modelos con alta confianza. Los siguientes modelos de <strong style="color:#aaa">gama de entrada</strong>, en cambio, no cuentan con esa documentación pública de parte de sus fabricantes. Sus parámetros fueron estimados a partir de mediciones propias y referencias indirectas — lo que los convierte en una <strong style="color:#aaa">aproximación útil como punto de partida</strong>, pero con una banda de incertidumbre más amplia que en los modelos premium.<br><br>
+          No son datos incorrectos. Son datos que les falta respaldo oficial para ser tan precisos como quisiéramos.
+        </p>
+
+        <p style="font-family:var(--mono);font-size:9px;color:#666;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px">Modelos con parámetros estimados (en revisión):</p>
+
+        <div style="font-family:var(--jet);font-size:.8rem;color:#777;line-height:2.1;font-weight:300;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0 32px;margin-bottom:24px">
+          <span>RST · Aerial Air 34mm [XC/Trail]</span>
+          <span>RST · Blaze Air 30mm [XC]</span>
+          <span>SR Suntour · NCX Air [Trekking/E-bike]</span>
+          <span>SR Suntour · NCX-D Air [Trekking/E-bike]</span>
+          <span>SR Suntour · XCR 32mm Air [XC]</span>
+          <span>SR Suntour · XCR 34 Air [XC/Trail]</span>
+          <span>Zoom · C30 Air [XC]</span>
+          <span>Sturdy · EM100 Air E-MTB [E-MTB]</span>
+          <span>Wintek · Air 32mm [XC/Trail]</span>
+        </div>
+
+        <p style="font-family:var(--jet);font-size:.82rem;color:#888;line-height:1.85;font-weight:300;margin-bottom:24px">
+          Si tienes uno de estos modelos y quieres ayudar a mejorar la calibración, <strong style="color:#aaa">nos sería muy valioso recibir tu experiencia</strong>: la presión con la que sueles rodar, tu peso con equipo, el stroke de tu horquilla y el SAG medido con el O-ring. Con suficiente data de la comunidad actualizaremos los parámetros y lo comunicaremos aquí.
+        </p>
+
+        <a href="https://wa.me/51934391545?text=Hola%20BikeLab%2C%20quiero%20aportar%20datos%20de%20calibraci%C3%B3n%20para%20mi%20horquilla"
+          style="font-family:var(--mono);font-size:.7rem;color:var(--yellow);letter-spacing:2px;text-decoration:none;border:1px solid #2a2200;padding:11px 22px;display:inline-block">
+          ENVIAR MIS DATOS →
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════ MANIFESTO ═══════════ -->
   <section style="padding:clamp(60px,10vh,120px) clamp(20px,6vw,80px);border-bottom:1px solid #111">
     <div style="max-width:780px;margin:0 auto">
@@ -1130,7 +1171,7 @@
           Hasta que la física dejó de mentir.
         </p>
         <p>El resultado: un motor de doble cámara politrópica.<br>
-          132 suspensiones. 16 marcas. Un solo número que puedes usar hoy.</p>
+          132 suspensiones. 10 marcas. Un solo número que puedes usar hoy.</p>
         <p>Para horquillas delanteras, el cuadro no interviene — la horquilla es independiente del linkage.<br>
           Para shocks traseros, trabajamos con el leverage ratio real: <strong>33 cuadros catalogados</strong>.<br>
           Si el tuyo no está, selecciona tu tipo de linkage — cubre el 99% de los full suspension del mercado.</p>
@@ -1154,7 +1195,7 @@
           <p class="step-n">PASO_01</p>
           <p class="step-h">Selecciona tu suspensión</p>
           <p class="step-p">Busca por nombre en el campo de búsqueda o filtra por segmento. <strong>Fox, RockShox,
-              Öhlins, SR Suntour, Manitou</strong> y 11 marcas más. Si tienes un modelo legacy (2013–2022), está en la
+              Öhlins, SR Suntour, Manitou</strong> y 5 marcas más. Si tienes un modelo legacy (2013–2022), está en la
             lista.</p>
         </div>
         <div class="guide-step">

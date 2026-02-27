@@ -39,6 +39,17 @@
   }
 }
 </script>
+  <!-- BLS: embed mode — hides intro sections when loaded inside landing iframe -->
+  <script>
+    (function () {
+      if (new URLSearchParams(window.location.search).has('embed')) {
+        var s = document.createElement('style');
+        s.textContent = 'header,.hero,.brands-bar,footer{display:none!important}body{padding-top:0!important}.main{padding-top:8px}';
+        document.head.appendChild(s);
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -1201,7 +1212,43 @@
         _sc.textContent = _0x3c4d;
         document.body.appendChild(_sc);
     })();
-    
+
+  </script>
+
+  <!-- BLS: UTF-8 Mojibake repair — fixes garbled chars injected by dynamic JS -->
+  <script>
+    (function () {
+      var dec = new TextDecoder('utf-8', { fatal: false });
+      function fixStr(str) {
+        if (!str || !/[\u0080-\u00FF]/.test(str)) return str;
+        try {
+          var bytes = new Uint8Array(str.length);
+          for (var i = 0; i < str.length; i++) bytes[i] = str.charCodeAt(i) & 0xFF;
+          return dec.decode(bytes);
+        } catch (e) { return str; }
+      }
+      function fixNode(node) {
+        if (node.nodeType === 3) {
+          var f = fixStr(node.textContent);
+          if (f !== node.textContent) node.textContent = f;
+        } else if (node.nodeType === 1) {
+          if (node.tagName === 'OPTION') { node.text = fixStr(node.text); return; }
+          if (node.tagName === 'INPUT' && node.placeholder) node.placeholder = fixStr(node.placeholder);
+          for (var c = node.firstChild; c; c = c.nextSibling) fixNode(c);
+        }
+      }
+      function run() {
+        fixNode(document.body);
+        document.querySelectorAll('select option').forEach(function (o) { o.text = fixStr(o.text); });
+      }
+      setTimeout(run, 120);
+      var obs = new MutationObserver(function (ms) {
+        ms.forEach(function (m) {
+          m.addedNodes.forEach(function (n) { setTimeout(function () { fixNode(n); }, 30); });
+        });
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+    })();
   </script>
 </body>
 

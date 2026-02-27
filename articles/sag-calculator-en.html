@@ -154,7 +154,7 @@
       "name": "Which suspension brands does the calculator cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fox Racing Shox (29 models), RockShox (45 models), SR Suntour (12 models), Öhlins (6 models), Manitou (8 models), Marzocchi (4 models), DVO (4 models), Cane Creek (5 models), X-Fusion (4 models), MRP (3 models), Formula (6 models), RST, Wintek, Zoom, Sturdy and Push Industries. Total: 132 suspensions across 16 brands."
+        "text": "Fox Racing Shox (29 models), RockShox (45 models), SR Suntour (12 models), Öhlins (6 models), Manitou (8 models), Marzocchi (4 models), DVO (4 models), Cane Creek (5 models), X-Fusion (4 models), MRP (3 models), Formula (6 models), RST, Wintek, Zoom, Sturdy and Push Industries. Total: 132 suspensions across 10 brands."
       }
     }
   ]
@@ -722,7 +722,7 @@
 
     .calc-frame {
       width: 100%;
-      min-height: 95vh;
+      min-height: 100vh;
       border: none;
       display: block;
       background: var(--bg)
@@ -964,7 +964,7 @@
     <p class="hero-subtitle">Pressure at work</p>
     <div class="hero-stats" aria-label="Calculator statistics">
       <div class="stat"><span class="stat-num">1<span>32</span></span><span class="stat-label">Models</span></div>
-      <div class="stat"><span class="stat-num">1<span>6</span></span><span class="stat-label">Brands</span></div>
+      <div class="stat"><span class="stat-num">1<span>0</span></span><span class="stat-label">Brands</span></div>
       <div class="stat"><span class="stat-num">10<span>K</span></span><span class="stat-label">Monte Carlo
           iterations</span></div>
       <div class="stat"><span class="stat-num">2<span>8</span></span><span class="stat-label">Official
@@ -1016,16 +1016,58 @@
       </div>
       <div class="calc-header-right">
         <span class="calc-badge">132 MODELS</span>
-        <span class="calc-badge">16 BRANDS</span>
+        <span class="calc-badge">10 BRANDS</span>
         <span class="calc-badge">© 2026 BLS</span>
       </div>
     </div>
-    <iframe class="calc-frame" src="./sag_calculator_v2.html"
+    <iframe class="calc-frame" src="./sag_calculator_v2.html?embed=1"
       title="BikeLab Studio SAG Calculator — MTB Suspension Air Pressure Calculator" loading="lazy"
       sandbox="allow-scripts allow-same-origin" aria-label="Interactive MTB suspension SAG calculator">
     </iframe>
   </section>
 
+
+  <!-- ═══════════ COMMUNITY DATA NOTICE ═══════════ -->
+  <section id="data-notice" style="padding:clamp(48px,7vh,96px) clamp(20px,6vw,80px);border-bottom:1px solid #111;background:#060603">
+    <div style="max-width:780px;margin:0 auto">
+      <p style="font-family:var(--mono);font-size:9px;color:#555;letter-spacing:4px;text-transform:uppercase;margin-bottom:32px">// TRANSPARENCY — CALIBRATION STATUS</p>
+      <div style="border:1px solid #2a2200;border-left:3px solid var(--yellow);padding:32px 36px;background:#0a0800">
+
+        <p style="font-family:var(--jet);font-size:.92rem;color:#ccc;font-weight:400;margin-bottom:18px;line-height:1.5">
+          <strong>An honest note about some models in the list.</strong>
+        </p>
+
+        <p style="font-family:var(--jet);font-size:.82rem;color:#888;line-height:1.85;font-weight:300;margin-bottom:22px">
+          Brands like Fox, RockShox, and Öhlins publish official technical specs — pressure-volume tables that let us calibrate their models with high confidence. The following <strong style="color:#aaa">entry-level models</strong>, however, don't have that documentation publicly available from their manufacturers. Their internal parameters were estimated from our own measurements and indirect references — which makes them a <strong style="color:#aaa">useful starting point</strong>, but with a wider uncertainty band than the premium models.<br><br>
+          The data isn't wrong. It's data that lacks official backing to be as precise as we'd like.
+        </p>
+
+        <p style="font-family:var(--mono);font-size:9px;color:#666;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px">Models with estimated parameters (under review):</p>
+
+        <div style="font-family:var(--jet);font-size:.8rem;color:#777;line-height:2.1;font-weight:300;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0 32px;margin-bottom:24px">
+          <span>RST · Aerial Air 34mm [XC/Trail]</span>
+          <span>RST · Blaze Air 30mm [XC]</span>
+          <span>SR Suntour · NCX Air [Trekking/E-bike]</span>
+          <span>SR Suntour · NCX-D Air [Trekking/E-bike]</span>
+          <span>SR Suntour · XCR 32mm Air [XC]</span>
+          <span>SR Suntour · XCR 34 Air [XC/Trail]</span>
+          <span>Zoom · C30 Air [XC]</span>
+          <span>Sturdy · EM100 Air E-MTB [E-MTB]</span>
+          <span>Wintek · Air 32mm [XC/Trail]</span>
+        </div>
+
+        <p style="font-family:var(--jet);font-size:.82rem;color:#888;line-height:1.85;font-weight:300;margin-bottom:24px">
+          If you ride one of these models and want to help improve the calibration, <strong style="color:#aaa">your real-world data would be very valuable to us</strong>: the pressure you normally run, your total riding weight, your fork stroke, and the SAG you measure with the O-ring. With enough community data we'll update the parameters and announce it here.
+        </p>
+
+        <a href="https://wa.me/51934391545?text=Hi%20BikeLab%2C%20I%20want%20to%20share%20calibration%20data%20for%20my%20fork"
+          style="font-family:var(--mono);font-size:.7rem;color:var(--yellow);letter-spacing:2px;text-decoration:none;border:1px solid #2a2200;padding:11px 22px;display:inline-block">
+          SHARE MY DATA →
+        </a>
+
+      </div>
+    </div>
+  </section>
 
   <!-- MANIFESTO -->
   <section style="padding:clamp(60px,10vh,120px) clamp(20px,6vw,80px);border-bottom:1px solid #111">
@@ -1045,7 +1087,7 @@
           Until the physics stopped lying.
         </p>
         <p>The result: a dual-chamber polytropic air spring engine.<br>
-          132 suspensions. 16 brands. One number you can use today.</p>
+          132 suspensions. 10 brands. One number you can use today.</p>
         <p>For front forks, the frame doesn't matter — the fork is independent of the linkage.<br>
           For rear shocks, we work with the real leverage ratio: <strong>33 frames catalogued</strong>.<br>
           If yours isn't listed, select your linkage type — it covers 99% of full suspension frames on the market.</p>
@@ -1071,7 +1113,7 @@
           <p class="step-n">STEP_01</p>
           <p class="step-h">Select your suspension</p>
           <p class="step-p">Search by name or filter by segment. <strong>Fox, RockShox, Öhlins, SR Suntour,
-              Manitou</strong> and 11 more brands. Legacy models (2013–2022) are included.</p>
+              Manitou</strong> and 5 more brands. Legacy models (2013–2022) are included.</p>
         </div>
         <div class="guide-step">
           <p class="step-n">STEP_02</p>
