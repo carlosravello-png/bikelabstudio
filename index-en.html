@@ -146,6 +146,64 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of bikes do you service at BikeLab Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with MTB (hardtail and full suspension), road and gravel bikes. We specialize in high-end components: Fox, RockShox suspensions, Shimano, SRAM and Magura brakes, and carbon frames. We do not service low-cost city bikes or e-bikes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a general maintenance service take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A complete general maintenance takes 2 to 4 hours of technical work depending on the bike's condition. It includes deep cleaning, chain and drivetrain lubrication, brake and derailleur calibration, and structural inspection. Same-day delivery in most cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you service high-end suspension components?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We perform complete service (lower leg service and full service) on Fox, RockShox, DVO and Marzocchi forks and shocks. We use original-spec technical oils and certified workshop tools. We recommend servicing every 50–100 riding hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with carbon frames?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with a specific protocol. We apply certified torque values using a digital torque wrench, carbon paste at contact points, and perform visual structural integrity inspection before and after every intervention. Carbon does not tolerate torque errors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a technical appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Via WhatsApp at +51 934 391 545. Describe the issue or service you need, your bike model and your availability. We confirm date and time. We're located at Paraguay 300, Trujillo, La Libertad, Monday to Saturday from 11:00 to 19:00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between preventive and general maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Preventive maintenance is a light check recommended every 1–2 months: drivetrain cleaning, lubrication and cable adjustment. General maintenance is a deep intervention that includes full disassembly, total degreasing, bearing inspection and complete calibration."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Fonts: carga no bloqueante -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"
@@ -437,6 +495,31 @@
             margin-top: 30px;
             font-size: 1.8rem;
             max-width: 600px;
+        }
+
+        /* FAQ Module */
+        .faq-item {
+            border-top: 1px solid #151515;
+            padding: 28px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: 1px solid #151515;
+        }
+        .faq-question {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .faq-answer {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 720px;
         }
 
         /* Firma de identidad INDUSTRIAL NOIR - Elemento de cierre técnico */
@@ -1608,6 +1691,37 @@
                     <a href="https://www.behance.net/bikelabstudio" class="btn-cta"
                         style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;"
                         aria-label="Access BikeLab Studio portfolio on Behance">ACCESS PORTFOLIO</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <span class="data-label">Module_05 // Query Protocol</span>
+            <h2>Frequently Asked Questions</h2>
+            <div style="max-width: 800px;">
+                <div class="faq-item">
+                    <h3 class="faq-question">What types of bikes do you service at BikeLab Studio?</h3>
+                    <p class="faq-answer">We work with MTB (hardtail and full suspension), road and gravel bikes. We specialize in high-end components: Fox, RockShox suspensions, Shimano, SRAM and Magura brakes, and carbon frames. We do not service low-cost city bikes or e-bikes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does a general maintenance service take?</h3>
+                    <p class="faq-answer">A complete general maintenance takes 2 to 4 hours of technical work depending on the bike's condition. It includes deep cleaning, chain and drivetrain lubrication, brake and derailleur calibration, and structural inspection. Same-day delivery in most cases.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you service high-end suspension components?</h3>
+                    <p class="faq-answer">Yes. We perform complete service (lower leg service and full service) on Fox, RockShox, DVO and Marzocchi forks and shocks. We use original-spec technical oils and certified workshop tools. We recommend servicing every 50–100 riding hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you work with carbon frames?</h3>
+                    <p class="faq-answer">Yes, with a specific protocol. We apply certified torque values using a digital torque wrench, carbon paste at contact points, and perform visual structural integrity inspection before and after every intervention. Carbon does not tolerate torque errors.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I book a technical appointment?</h3>
+                    <p class="faq-answer">Via WhatsApp at +51 934 391 545. Describe the issue or service you need, your bike model and your availability. We confirm date and time. We're located at Paraguay 300, Trujillo, La Libertad, Monday to Saturday from 11:00 to 19:00.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the difference between preventive and general maintenance?</h3>
+                    <p class="faq-answer">Preventive maintenance is a light check recommended every 1–2 months: drivetrain cleaning, lubrication and cable adjustment. General maintenance is a deep intervention that includes full disassembly, total degreasing, bearing inspection and complete calibration. Each bike has its optimal service cycle based on use.</p>
                 </div>
             </div>
         </section>

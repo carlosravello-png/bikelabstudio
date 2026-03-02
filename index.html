@@ -146,6 +146,64 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipos de bicicletas atienden en BikeLab Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabajamos con MTB (hardtail y doble suspensión), bicicletas de ruta y gravel. Nos especializamos en componentes de alta gama: suspensiones Fox, RockShox, frenos Shimano, SRAM y Magura, y cuadros de carbono. No atendemos bicicletas urbanas de bajo costo ni e-bikes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo demora un mantenimiento general?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un mantenimiento general completo toma entre 2 y 4 horas de trabajo técnico según el estado de la bicicleta. Incluye limpieza profunda, lubricación de cadena y transmisión, calibración de frenos y cambios, y revisión estructural. Entrega el mismo día en la mayoría de casos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacen servicio a suspensiones de alta gama?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Realizamos servicio completo (lower leg service y full service) a horquillas y amortiguadores Fox, RockShox, DVO y Marzocchi. Usamos aceites técnicos de especificación original y herramientas de taller certificadas. Recomendamos el servicio cada 50–100 horas de rodaje."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan con cuadros de carbono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, con protocolo específico. Aplicamos torques certificados con llave digital, pasta de carbono en los puntos de contacto y realizamos inspección visual de la integridad estructural antes y después de cada intervención. El carbono no admite errores de torque."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo agendo una cita técnica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por WhatsApp al +51 934 391 545. Describí el problema o servicio que necesitás, el modelo de tu bicicleta y tu disponibilidad. Confirmamos fecha y hora. Estamos en Paraguay 300, Trujillo, La Libertad, de lunes a sábado de 11:00 a 19:00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre mantenimiento preventivo y general?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El mantenimiento preventivo es una revisión liviana recomendada cada 1–2 meses: limpieza de transmisión, lubricación y ajuste de cables. El mantenimiento general es una intervención profunda que incluye desmontaje completo, desengrase total, revisión de rodamientos y calibración integral."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Fonts: carga no bloqueante -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@900&family=JetBrains+Mono:wght@100;400;500&family=Playfair+Display:ital@1&display=swap"
@@ -437,6 +495,31 @@
             margin-top: 30px;
             font-size: 1.8rem;
             max-width: 600px;
+        }
+
+        /* FAQ Module */
+        .faq-item {
+            border-top: 1px solid #151515;
+            padding: 28px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: 1px solid #151515;
+        }
+        .faq-question {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .faq-answer {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 720px;
         }
 
         /* Firma de identidad INDUSTRIAL NOIR - Elemento de cierre técnico */
@@ -1611,6 +1694,37 @@
                     <a href="https://www.behance.net/bikelabstudio" class="btn-cta"
                         style="margin-top:30px; display:inline-block; border:1px solid #444; padding:10px 20px; color:#eee; text-decoration:none;"
                         aria-label="Acceder al portafolio de BikeLab Studio en Behance">ACCEDER PORTAFOLIO</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <span class="data-label">Módulo_05 // Protocolo de Consultas</span>
+            <h2>Preguntas Frecuentes</h2>
+            <div style="max-width: 800px;">
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Qué tipos de bicicletas atienden en BikeLab Studio?</h3>
+                    <p class="faq-answer">Trabajamos con MTB (hardtail y doble suspensión), bicicletas de ruta y gravel. Nos especializamos en componentes de alta gama: suspensiones Fox, RockShox, frenos Shimano, SRAM y Magura, y cuadros de carbono. No atendemos bicicletas urbanas de bajo costo ni e-bikes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Cuánto tiempo demora un mantenimiento general?</h3>
+                    <p class="faq-answer">Un mantenimiento general completo toma entre 2 y 4 horas de trabajo técnico según el estado de la bicicleta. Incluye limpieza profunda, lubricación de cadena y transmisión, calibración de frenos y cambios, y revisión estructural. Entrega el mismo día en la mayoría de casos.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Hacen servicio a suspensiones de alta gama?</h3>
+                    <p class="faq-answer">Sí. Realizamos servicio completo (lower leg service y full service) a horquillas y amortiguadores Fox, RockShox, DVO y Marzocchi. Usamos aceites técnicos de especificación original y herramientas de taller certificadas. Recomendamos el servicio cada 50–100 horas de rodaje.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Trabajan con cuadros de carbono?</h3>
+                    <p class="faq-answer">Sí, con protocolo específico. Aplicamos torques certificados con llave digital, pasta de carbono en los puntos de contacto y realizamos inspección visual de la integridad estructural antes y después de cada intervención. El carbono no admite errores de torque.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Cómo agendo una cita técnica?</h3>
+                    <p class="faq-answer">Por WhatsApp al +51 934 391 545. Describí el problema o servicio que necesitás, el modelo de tu bicicleta y tu disponibilidad. Confirmamos fecha y hora. Estamos en Paraguay 300, Trujillo, La Libertad, de lunes a sábado de 11:00 a 19:00.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">¿Cuál es la diferencia entre mantenimiento preventivo y general?</h3>
+                    <p class="faq-answer">El mantenimiento preventivo es una revisión liviana recomendada cada 1–2 meses: limpieza de transmisión, lubricación y ajuste de cables. El mantenimiento general es una intervención profunda que incluye desmontaje completo, desengrase total, revisión de rodamientos y calibración integral. Cada bicicleta tiene su ciclo óptimo según uso.</p>
                 </div>
             </div>
         </section>
