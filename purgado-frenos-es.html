@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.bikelabstudio.com/servicios.html"},{"@type":"ListItem","position":3,"name":"Purgado de Frenos en Trujillo","item":"https://www.bikelabstudio.com/purgado-frenos-es.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/purgado-frenos-es.html#service","name":"Purgado de Frenos Hidráulicos en Trujillo","description":"Servicio profesional de purgado de frenos hidráulicos en Trujillo para MTB y ruta. Incluye extracción de fluido contaminado, eliminación de aire en línea hidráulica, reposición con fluido especificado e inspección técnica de maneta y cáliper para garantizar transmisión de presión y fuerza de frenado eficiente.","url":"https://www.bikelabstudio.com/purgado-frenos-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Purgado de frenos hidráulicos","Servicio de frenos MTB","Reparación de frenos de bicicleta","Taller de bicicletas en Trujillo"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB y ruta"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/purgado-frenos-es.html#service","name":"Purgado de Frenos Hidráulicos en Trujillo","description":"Servicio profesional de purgado de frenos hidráulicos en Trujillo para MTB y ruta. Incluye extracción de fluido contaminado, eliminación de aire en línea hidráulica, reposición con fluido especificado e inspección técnica de maneta y cáliper para garantizar transmisión de presión y fuerza de frenado eficiente.","url":"https://www.bikelabstudio.com/purgado-frenos-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Purgado de frenos hidráulicos","Servicio de frenos MTB","Reparación de frenos de bicicleta","Taller de bicicletas en Trujillo"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB y ruta"},"offers":{"@type":"AggregateOffer","priceCurrency":"PEN","lowPrice":"40","highPrice":"80","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -67,7 +67,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto tiempo tarda el purgado de frenos?","acceptedAnswer":{"@type":"Answer","text":"El purgado de un freno hidráulico toma entre 30 y 50 minutos por unidad, usando un bleed kit certificado y fluido en especificación original: Shimano Mineral Oil para sistemas Shimano, DOT 4 o DOT 5.1 para SRAM y Magura. Realizamos el procedimiento en nuestro taller de Trujillo con equipo de vacío profesional."}},{"@type":"Question","name":"¿Qué marcas de frenos atienden?","acceptedAnswer":{"@type":"Answer","text":"Atendemos sistemas hidráulicos Shimano (XTR, XT, SLX, Deore), SRAM (Maven, Code, Guide, Level), Magura (MT5, MT7, MT Trail) y TRP. Cada marca requiere fluido y procedimiento distintos. Usamos el protocolo oficial del fabricante, sin improvisación."}},{"@type":"Question","name":"¿Cómo sé si mis frenos necesitan purgado?","acceptedAnswer":{"@type":"Answer","text":"Los síntomas son: palanca blanda o con recorrido excesivo, pérdida de potencia de frenado, sensación esponjosa al accionar, o ruido interno en la línea. En zonas con variación de altitud como Trujillo y sus alrededores, el fluido absorbe humedad y pierde eficiencia. Recomendamos purga anual como mínimo."}},{"@type":"Question","name":"¿El purgado incluye cambio de pastillas?","acceptedAnswer":{"@type":"Answer","text":"No. El purgado es exclusivamente del circuito hidráulico. Si el diagnóstico detecta pastillas desgastadas —menos de 1.5mm de material orgánico o metálico— lo comunicamos y cotizamos por separado. Disponemos de pastillas originales Shimano, SRAM y Galfer en nuestro estudio."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -157,6 +185,44 @@
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20el%20servicio%20de%20Purgado%20de%20Frenos" class="cta">AGENDAR CITA - PURGADO</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Protocolo_Económico // Honorarios Técnicos</span>
+          <h2>Inversión_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Tarifa por Freno</span>
+              <span class="honorarios-value">Desde S/ 40</span>
+              <p class="honorarios-desc">Purgado unitario por freno. Incluye bleed kit certificado, fluido original (Mineral Oil o DOT 4/5.1 según marca) y verificación de presión.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Método de Pago</span>
+              <span class="honorarios-value">Efectivo · Visa</span>
+              <p class="honorarios-desc">Pago en soles (PEN). Visa con recarga del 5%. Pastillas o adaptadores cotizados aparte si el diagnóstico lo requiere.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">Protocolo_FAQ // Consultas Frecuentes</span>
+          <h2>Preguntas Frecuentes_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Cuánto tiempo tarda el purgado de frenos?</h3>
+            <p class="faq-answer">El purgado de un freno hidráulico toma entre 30 y 50 minutos por unidad, usando un bleed kit certificado y fluido en especificación original: Shimano Mineral Oil para sistemas Shimano, DOT 4 o DOT 5.1 para SRAM y Magura. Realizamos el procedimiento en nuestro taller de Trujillo con equipo de vacío profesional.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué marcas de frenos atienden?</h3>
+            <p class="faq-answer">Atendemos sistemas hidráulicos Shimano (XTR, XT, SLX, Deore), SRAM (Maven, Code, Guide, Level), Magura (MT5, MT7, MT Trail) y TRP. Cada marca requiere fluido y procedimiento distintos. Usamos el protocolo oficial del fabricante, sin improvisación.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Cómo sé si mis frenos necesitan purgado?</h3>
+            <p class="faq-answer">Los síntomas son: palanca blanda o con recorrido excesivo, pérdida de potencia de frenado, sensación esponjosa al accionar, o ruido interno en la línea. En zonas con variación de altitud como Trujillo y sus alrededores, el fluido absorbe humedad y pierde eficiencia. Recomendamos purga anual como mínimo.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿El purgado incluye cambio de pastillas?</h3>
+            <p class="faq-answer">No. El purgado es exclusivamente del circuito hidráulico. Si el diagnóstico detecta pastillas desgastadas —menos de 1.5mm de material orgánico o metálico— lo comunicamos y cotizamos por separado. Disponemos de pastillas originales Shimano, SRAM y Galfer en nuestro estudio.</p>
+          </div>
+        </div>
 
     </main>
 

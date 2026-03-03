@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bikelabstudio.com/index-en.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.bikelabstudio.com/servicios-en.html"},{"@type":"ListItem","position":3,"name":"Suspension Service in Trujillo","item":"https://www.bikelabstudio.com/suspension-en.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/suspension-en.html#service","name":"MTB Suspension Service in Trujillo","description":"Professional MTB suspension service in Trujillo for forks and rear shocks (air and oil systems). Includes internal disassembly, seal inspection, seal replacement, oil change with specified viscosity and damping calibration to restore dynamic control and traction.","url":"https://www.bikelabstudio.com/suspension-en.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["MTB suspension service","Fork maintenance","Rear shock service","Mountain bike workshop in Peru"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Peru"}}},{"@type":"Country","name":"Peru"}],"inLanguage":"en","audience":{"@type":"Audience","audienceType":"Mountain bike riders"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/suspension-en.html#service","name":"MTB Suspension Service in Trujillo","description":"Professional MTB suspension service in Trujillo for forks and rear shocks (air and oil systems). Includes internal disassembly, seal inspection, seal replacement, oil change with specified viscosity and damping calibration to restore dynamic control and traction.","url":"https://www.bikelabstudio.com/suspension-en.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["MTB suspension service","Fork maintenance","Rear shock service","Mountain bike workshop in Peru"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Peru"}}},{"@type":"Country","name":"Peru"}],"inLanguage":"en","audience":{"@type":"Audience","audienceType":"Mountain bike riders"},"offers":{"@type":"AggregateOffer","priceCurrency":"PEN","lowPrice":"70","highPrice":"130","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -67,7 +67,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the suspension service include?","acceptedAnswer":{"@type":"Answer","text":"The lower leg service includes lower leg removal, dust and oil wiper cleaning, oil replenishment to specified viscosity (15WT or 20WT depending on model) and preload adjustment. The full service adds damper cartridge inspection, internal seal replacement and air chamber bleeding."}},{"@type":"Question","name":"Which suspension brands do you service in Trujillo?","acceptedAnswer":{"@type":"Answer","text":"We work with Fox (Float, Rhythm, Factory), RockShox (Lyrik, Pike, SID, Zeb, Super Deluxe), DVO, Marzocchi and X-Fusion. Each brand has specific oil and torque requirements, which we execute at our Trujillo workshop with dedicated suspension tooling."}},{"@type":"Question","name":"How often should suspension service be performed?","acceptedAnswer":{"@type":"Answer","text":"Lower leg service is recommended every 50 riding hours or every 6 months. Full service every 100 to 200 hours or once a year for regular use. An unserviced suspension loses sensitivity, increases internal friction and accelerates seal and air chamber wear."}},{"@type":"Question","name":"Does the service include rebound and compression calibration?","acceptedAnswer":{"@type":"Answer","text":"Yes. Once the mechanical service is complete, we calibrate SAG to your body weight and adjust rebound (LSR) and compression (HSC/LSC) to your declared riding style. At BikeLab Studio, Trujillo, no suspension leaves without verified functional calibration."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -164,6 +192,49 @@
             <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20schedule%20Suspension%20Maintenance" class="cta">BOOK APPOINTMENT - SUSPENSION</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Economic_Protocol // Technical Fees</span>
+          <h2>Investment_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Lower Leg Service</span>
+              <span class="honorarios-value">From S/ 70</span>
+              <p class="honorarios-desc">Coil shock service. Includes disassembly, wiper seal cleaning, oil replenishment to specified viscosity and preload adjustment.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Full Service (Air)</span>
+              <span class="honorarios-value">From S/ 130</span>
+              <p class="honorarios-desc">Fox or RockShox air system. Includes air chamber inspection, internal seal replacement, technical oil and SAG + rebound calibration.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Payment Method</span>
+              <span class="honorarios-value">Cash · Visa</span>
+              <p class="honorarios-desc">Payment in soles (PEN). Visa with 5% processing surcharge. Parts (seals, wipers) quoted separately by brand and model.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">FAQ_Protocol // Frequently Asked Questions</span>
+          <h2>Frequently Asked Questions_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">What does the suspension service include?</h3>
+            <p class="faq-answer">The lower leg service includes lower leg removal, dust and oil wiper cleaning, oil replenishment to specified viscosity (15WT or 20WT depending on model) and preload adjustment. The full service adds damper cartridge inspection, internal seal replacement and air chamber bleeding.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Which suspension brands do you service in Trujillo?</h3>
+            <p class="faq-answer">We work with Fox (Float, Rhythm, Factory), RockShox (Lyrik, Pike, SID, Zeb, Super Deluxe), DVO, Marzocchi and X-Fusion. Each brand has specific oil and torque requirements, which we execute at our Trujillo workshop with dedicated suspension tooling.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How often should suspension service be performed?</h3>
+            <p class="faq-answer">Lower leg service is recommended every 50 riding hours or every 6 months. Full service every 100 to 200 hours or once a year for regular use. An unserviced suspension loses sensitivity, increases internal friction and accelerates seal and air chamber wear.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Does the service include rebound and compression calibration?</h3>
+            <p class="faq-answer">Yes. Once the mechanical service is complete, we calibrate SAG to your body weight and adjust rebound (LSR) and compression (HSC/LSC) to your declared riding style. At BikeLab Studio, Trujillo, no suspension leaves without verified functional calibration.</p>
+          </div>
+        </div>
 
     </main>
 

@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.bikelabstudio.com/servicios.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento Preventivo en Trujillo","item":"https://www.bikelabstudio.com/mantenimiento-preventivo-es.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/mantenimiento-preventivo-es.html#service","name":"Mantenimiento Preventivo de Bicicletas en Trujillo","description":"Mantenimiento preventivo de bicicletas en Trujillo orientado a conservación mecánica y reducción de desgaste. Incluye limpieza funcional de transmisión, lubricación de cadena, ajustes básicos de frenos y cambios, verificación de presión de llantas e inspección visual de componentes. Servicio ideal para bicicletas en condición operativa.","url":"https://www.bikelabstudio.com/mantenimiento-preventivo-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Mantenimiento preventivo de bicicleta","Ajuste y lubricación de bicicleta","Servicio básico de bicicleta en Trujillo","Taller de bicicletas en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas urbanos y MTB recreativo"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/mantenimiento-preventivo-es.html#service","name":"Mantenimiento Preventivo de Bicicletas en Trujillo","description":"Mantenimiento preventivo de bicicletas en Trujillo orientado a conservación mecánica y reducción de desgaste. Incluye limpieza funcional de transmisión, lubricación de cadena, ajustes básicos de frenos y cambios, verificación de presión de llantas e inspección visual de componentes. Servicio ideal para bicicletas en condición operativa.","url":"https://www.bikelabstudio.com/mantenimiento-preventivo-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Mantenimiento preventivo de bicicleta","Ajuste y lubricación de bicicleta","Servicio básico de bicicleta en Trujillo","Taller de bicicletas en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas urbanos y MTB recreativo"},"offers":{"@type":"Offer","priceCurrency":"PEN","price":"50","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -67,7 +67,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué se diferencia del mantenimiento general?","acceptedAnswer":{"@type":"Answer","text":"El mantenimiento preventivo es una intervención funcional para bicicletas en buen estado mecánico. Se enfoca en transmisión limpia, lubricación de cadena, ajuste básico de frenos y cambios, y verificación de presión. El mantenimiento general implica desarme completo y recalibración total del sistema."}},{"@type":"Question","name":"¿Cada cuánto se recomienda el mantenimiento preventivo?","acceptedAnswer":{"@type":"Answer","text":"Cada 4 a 6 semanas para ciclistas regulares en Trujillo. En condiciones con polvo o lluvia ocasional, el intervalo ideal es de 3 a 4 semanas. El preventivo regular extiende significativamente la vida útil de cadena, piñones y platos."}},{"@type":"Question","name":"¿Incluye revisión de frenos y cambios?","acceptedAnswer":{"@type":"Answer","text":"Sí. El protocolo incluye ajuste de cables de freno y cambios, verificación del recorrido de palanca, limpieza del mecanismo delantero y trasero, y lubricación de puntos de pivote. Cables, fundas o pastillas de repuesto se cotizan por separado si el diagnóstico los requiere."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -153,6 +181,40 @@
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20el%20servicio%20de%20Mantenimiento%20Preventivo" class="cta">AGENDAR CITA - MANTENIMIENTO PREVENTIVO</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Protocolo_Económico // Honorarios Técnicos</span>
+          <h2>Inversión_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Tarifa Base</span>
+              <span class="honorarios-value">S/ 50</span>
+              <p class="honorarios-desc">Intervención funcional con lubricantes y ajuste de cables. Herramienta calibrada. Sin costos adicionales para el protocolo estándar.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Método de Pago</span>
+              <span class="honorarios-value">Efectivo · Visa</span>
+              <p class="honorarios-desc">Pago en soles (PEN). Visa con recarga del 5% por procesamiento. Cables o fundas de repuesto se cotizan aparte si son necesarios.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">Protocolo_FAQ // Consultas Frecuentes</span>
+          <h2>Preguntas Frecuentes_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">¿En qué se diferencia del mantenimiento general?</h3>
+            <p class="faq-answer">El mantenimiento preventivo es una intervención funcional para bicicletas en buen estado mecánico. Se enfoca en transmisión limpia, lubricación de cadena, ajuste básico de frenos y cambios, y verificación de presión. El mantenimiento general implica desarme completo y recalibración total del sistema.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Cada cuánto se recomienda el mantenimiento preventivo?</h3>
+            <p class="faq-answer">Cada 4 a 6 semanas para ciclistas regulares en Trujillo. En condiciones con polvo o lluvia ocasional, el intervalo ideal es de 3 a 4 semanas. El preventivo regular extiende significativamente la vida útil de cadena, piñones y platos.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Incluye revisión de frenos y cambios?</h3>
+            <p class="faq-answer">Sí. El protocolo incluye ajuste de cables de freno y cambios, verificación del recorrido de palanca, limpieza del mecanismo delantero y trasero, y lubricación de puntos de pivote. Cables, fundas o pastillas de repuesto se cotizan por separado si el diagnóstico los requiere.</p>
+          </div>
+        </div>
 
     </main>
 

@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.bikelabstudio.com/servicios.html"},{"@type":"ListItem","position":3,"name":"Tubelizado en Trujillo","item":"https://www.bikelabstudio.com/tubelizado-es.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/tubelizado-es.html#service","name":"Tubelizado de Llantas en Trujillo","description":"Conversión profesional a sistema tubeless en Trujillo para bicicletas MTB y ruta. Incluye preparación interna del aro, instalación de cinta tubeless bajo tensión calibrada, válvula sellada correctamente y aplicación de sellante específico para mejorar estabilidad de presión y reducir pinchazos.","url":"https://www.bikelabstudio.com/tubelizado-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Tubelizado de bicicleta","Conversión a tubeless","Servicio tubeless MTB","Taller de bicicletas en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB y ruta"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/tubelizado-es.html#service","name":"Tubelizado de Llantas en Trujillo","description":"Conversión profesional a sistema tubeless en Trujillo para bicicletas MTB y ruta. Incluye preparación interna del aro, instalación de cinta tubeless bajo tensión calibrada, válvula sellada correctamente y aplicación de sellante específico para mejorar estabilidad de presión y reducir pinchazos.","url":"https://www.bikelabstudio.com/tubelizado-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Tubelizado de bicicleta","Conversión a tubeless","Servicio tubeless MTB","Taller de bicicletas en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB y ruta"},"offers":{"@type":"AggregateOffer","priceCurrency":"PEN","lowPrice":"40","highPrice":"350","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -68,7 +68,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué consiste el tubelizado completo?","acceptedAnswer":{"@type":"Answer","text":"El tubelizado completo incluye retiro del neumático y cámara, limpieza interna del aro, instalación de cinta tubeless bajo tensión calibrada sin burbujas ni cantos levantados, válvula tubeless sellada con o-ring, montaje del neumático tubeless-ready e inyección de sellante Stans NoTubes o Muc-Off a caudal especificado. Servicio disponible en BikeLab Studio, Trujillo."}},{"@type":"Question","name":"¿Mi llanta es compatible con el sistema tubeless?","acceptedAnswer":{"@type":"Answer","text":"La mayoría de llantas MTB modernas son tubeless-ready o tubeless-compatible. Si tu aro no tiene el perfil TL-R, evaluamos la viabilidad de la conversión con cinta de mayor espesor. Las llantas de ruta requieren compatibilidad específica del neumático y del aro. Realizamos diagnóstico de compatibilidad previo al servicio."}},{"@type":"Question","name":"¿Cada cuánto debo renovar el sellante?","acceptedAnswer":{"@type":"Answer","text":"El sellante pierde efectividad entre 3 y 6 meses según temperatura, humedad y uso. En el clima de Trujillo, con temperaturas entre 18°C y 25°C, el ciclo recomendado es cada 4 meses. El relleno se realiza sin desmontar el neumático si el sistema tubeless está íntegro."}},{"@type":"Question","name":"¿Qué ventajas reales tiene el tubeless frente a la cámara?","acceptedAnswer":{"@type":"Answer","text":"Reducción de pinchazos superior al 80% en uso trail y XC. Posibilidad de rodar con presiones inferiores (1.8–2.2 psi menos) mejorando tracción y amortiguación natural del neumático. Menor peso rotativo. En caso de pinchazo mayor, se puede instalar una cámara de emergencia sin herramienta especializada."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -148,6 +176,49 @@
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20el%20servicio%20de%20Tubelizado" class="cta">AGENDAR CITA - TUBELIZADO</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Protocolo_Económico // Honorarios Técnicos</span>
+          <h2>Inversión_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Relleno de Sellante</span>
+              <span class="honorarios-value">Desde S/ 40 / llanta</span>
+              <p class="honorarios-desc">Para sistemas tubeless ya instalados. Incluye desmontaje del neumático, limpieza interior, reinyección de sellante Stans NoTubes o Muc-Off y montaje.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Conversión Completa</span>
+              <span class="honorarios-value">S/ 350 (ambas llantas)</span>
+              <p class="honorarios-desc">Incluye cinta tubeless, válvulas, sellante y montaje profesional. Variables como tipo de aro, cinta especial o compatibilidad pueden ajustar el honorario — consultamos antes de iniciar.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Método de Pago</span>
+              <span class="honorarios-value">Efectivo · Visa</span>
+              <p class="honorarios-desc">Pago en soles (PEN). Visa con recarga del 5%. Diagnóstico de compatibilidad previo sin costo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">Protocolo_FAQ // Consultas Frecuentes</span>
+          <h2>Preguntas Frecuentes_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">¿En qué consiste el tubelizado completo?</h3>
+            <p class="faq-answer">El tubelizado completo incluye retiro del neumático y cámara, limpieza interna del aro, instalación de cinta tubeless bajo tensión calibrada sin burbujas ni cantos levantados, válvula tubeless sellada con o-ring, montaje del neumático tubeless-ready e inyección de sellante Stans NoTubes o Muc-Off a caudal especificado. Servicio disponible en BikeLab Studio, Trujillo.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Mi llanta es compatible con el sistema tubeless?</h3>
+            <p class="faq-answer">La mayoría de llantas MTB modernas son tubeless-ready o tubeless-compatible. Si tu aro no tiene el perfil TL-R, evaluamos la viabilidad de la conversión con cinta de mayor espesor. Las llantas de ruta requieren compatibilidad específica del neumático y del aro. Realizamos diagnóstico de compatibilidad previo al servicio.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Cada cuánto debo renovar el sellante?</h3>
+            <p class="faq-answer">El sellante pierde efectividad entre 3 y 6 meses según temperatura, humedad y uso. En el clima de Trujillo, con temperaturas entre 18°C y 25°C, el ciclo recomendado es cada 4 meses. El relleno se realiza sin desmontar el neumático si el sistema tubeless está íntegro.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué ventajas reales tiene el tubeless frente a la cámara?</h3>
+            <p class="faq-answer">Reducción de pinchazos superior al 80% en uso trail y XC. Posibilidad de rodar con presiones inferiores (1.8–2.2 psi menos) mejorando tracción y amortiguación natural del neumático. Menor peso rotativo. En caso de pinchazo mayor, se puede instalar una cámara de emergencia sin herramienta especializada.</p>
+          </div>
+        </div>
 
     </main>
 

@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.bikelabstudio.com/servicios.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento de Suspensión en Trujillo","item":"https://www.bikelabstudio.com/suspension-es.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/suspension-es.html#service","name":"Mantenimiento de Suspensión MTB en Trujillo","description":"Servicio técnico de suspensión MTB en Trujillo para horquillas y amortiguadores de aire y aceite. Incluye desarme interno, inspección de sellos, reemplazo de retenes, cambio de aceite con viscosidad especificada y calibración de amortiguación para restaurar control dinámico y tracción.","url":"https://www.bikelabstudio.com/suspension-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Mantenimiento de suspensión MTB","Servicio técnico de horquilla","Reparación de amortiguador de bicicleta","Taller especializado MTB en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/suspension-es.html#service","name":"Mantenimiento de Suspensión MTB en Trujillo","description":"Servicio técnico de suspensión MTB en Trujillo para horquillas y amortiguadores de aire y aceite. Incluye desarme interno, inspección de sellos, reemplazo de retenes, cambio de aceite con viscosidad especificada y calibración de amortiguación para restaurar control dinámico y tracción.","url":"https://www.bikelabstudio.com/suspension-es.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Mantenimiento de suspensión MTB","Servicio técnico de horquilla","Reparación de amortiguador de bicicleta","Taller especializado MTB en Perú"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Perú"}}},{"@type":"Country","name":"Perú"}],"inLanguage":"es-PE","audience":{"@type":"Audience","audienceType":"Ciclistas MTB"},"offers":{"@type":"AggregateOffer","priceCurrency":"PEN","lowPrice":"70","highPrice":"130","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -67,7 +67,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué incluye el servicio de suspensión?","acceptedAnswer":{"@type":"Answer","text":"El lower leg service incluye desmontaje de las patas inferiores, limpieza de retenes de polvo y aceite, reposición de aceite de patas a viscosidad especificada (15WT o 20WT según modelo) y ajuste de precarga. El full service añade revisión del cartucho de amortiguación, reemplazo de sellos internos y purga de la cámara de aire."}},{"@type":"Question","name":"¿Qué marcas de suspensión atienden en Trujillo?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con Fox (Float, Rhythm, Factory), RockShox (Lyrik, Pike, SID, Zeb, Super Deluxe), DVO, Marzocchi y X-Fusion. Cada marca tiene especificaciones de aceite y torque distintas, y así lo ejecutamos en nuestro taller de Trujillo con herramienta específica de suspensión."}},{"@type":"Question","name":"¿Cada cuánto debo hacer el servicio de suspensión?","acceptedAnswer":{"@type":"Answer","text":"El lower leg service se recomienda cada 50 horas de rodaje o cada 6 meses. El full service cada 100 a 200 horas o una vez al año para uso regular. Una suspensión sin servicio pierde sensibilidad, aumenta la fricción interna y acelera el desgaste de sellos y cámara."}},{"@type":"Question","name":"¿El servicio incluye calibración de rebote y compresión?","acceptedAnswer":{"@type":"Answer","text":"Sí. Una vez realizado el servicio mecánico, calibramos el SAG según tu peso corporal, ajustamos el rebote (LSR) y la compresión (HSC/LSC) según el estilo de rodaje declarado. En BikeLab Studio, Trujillo, no entregamos ninguna suspensión sin calibración funcional verificada."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -164,6 +192,49 @@
             <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20el%20servicio%20de%20Mantenimiento%20de%20Suspensiones" class="cta">AGENDAR CITA - SUSPENSIÓN</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Protocolo_Económico // Honorarios Técnicos</span>
+          <h2>Inversión_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Lower Leg Service</span>
+              <span class="honorarios-value">Desde S/ 70</span>
+              <p class="honorarios-desc">Amortiguador de muelle. Incluye desmontaje, limpieza de retenes, reposición de aceite a viscosidad especificada y ajuste de precarga.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Full Service (Aire)</span>
+              <span class="honorarios-value">Desde S/ 130</span>
+              <p class="honorarios-desc">Sistema de aire Fox o RockShox. Incluye revisión de cámara de aire, reemplazo de sellos internos, aceite técnico y calibración de SAG + rebote.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Método de Pago</span>
+              <span class="honorarios-value">Efectivo · Visa</span>
+              <p class="honorarios-desc">Pago en soles (PEN). Visa con recarga del 5%. Repuestos (sellos, retenes) cotizados por separado según marca y modelo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">Protocolo_FAQ // Consultas Frecuentes</span>
+          <h2>Preguntas Frecuentes_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué incluye el servicio de suspensión?</h3>
+            <p class="faq-answer">El lower leg service incluye desmontaje de las patas inferiores, limpieza de retenes de polvo y aceite, reposición de aceite de patas a viscosidad especificada (15WT o 20WT según modelo) y ajuste de precarga. El full service añade revisión del cartucho de amortiguación, reemplazo de sellos internos y purga de la cámara de aire.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Qué marcas de suspensión atienden en Trujillo?</h3>
+            <p class="faq-answer">Trabajamos con Fox (Float, Rhythm, Factory), RockShox (Lyrik, Pike, SID, Zeb, Super Deluxe), DVO, Marzocchi y X-Fusion. Cada marca tiene especificaciones de aceite y torque distintas, y así lo ejecutamos en nuestro taller de Trujillo con herramienta específica de suspensión.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿Cada cuánto debo hacer el servicio de suspensión?</h3>
+            <p class="faq-answer">El lower leg service se recomienda cada 50 horas de rodaje o cada 6 meses. El full service cada 100 a 200 horas o una vez al año para uso regular. Una suspensión sin servicio pierde sensibilidad, aumenta la fricción interna y acelera el desgaste de sellos y cámara.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">¿El servicio incluye calibración de rebote y compresión?</h3>
+            <p class="faq-answer">Sí. Una vez realizado el servicio mecánico, calibramos el SAG según tu peso corporal, ajustamos el rebote (LSR) y la compresión (HSC/LSC) según el estilo de rodaje declarado. En BikeLab Studio, Trujillo, no entregamos ninguna suspensión sin calibración funcional verificada.</p>
+          </div>
+        </div>
 
     </main>
 

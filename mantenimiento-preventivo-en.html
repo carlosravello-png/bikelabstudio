@@ -22,7 +22,7 @@
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bikelabstudio.com/index-en.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.bikelabstudio.com/servicios-en.html"},{"@type":"ListItem","position":3,"name":"Preventive Maintenance in Trujillo","item":"https://www.bikelabstudio.com/mantenimiento-preventivo-en.html"}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/mantenimiento-preventivo-en.html#service","name":"Preventive Bicycle Maintenance in Trujillo","description":"Preventive bike maintenance in Trujillo focused on mechanical preservation and wear reduction. Includes drivetrain cleaning, chain lubrication, basic brake and shifting adjustments, tire pressure verification and visual inspection. Ideal for bikes in operational condition.","url":"https://www.bikelabstudio.com/mantenimiento-preventivo-en.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Preventive bike maintenance","Bicycle cleaning and adjustment","Bike service in Trujillo","Bicycle workshop in Peru"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Peru"}}},{"@type":"Country","name":"Peru"}],"inLanguage":"en","audience":{"@type":"Audience","audienceType":"Urban and recreational cyclists"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://www.bikelabstudio.com/mantenimiento-preventivo-en.html#service","name":"Preventive Bicycle Maintenance in Trujillo","description":"Preventive bike maintenance in Trujillo focused on mechanical preservation and wear reduction. Includes drivetrain cleaning, chain lubrication, basic brake and shifting adjustments, tire pressure verification and visual inspection. Ideal for bikes in operational condition.","url":"https://www.bikelabstudio.com/mantenimiento-preventivo-en.html","provider":{"@id":"https://www.bikelabstudio.com/#business"},"serviceType":["Preventive bike maintenance","Bicycle cleaning and adjustment","Bike service in Trujillo","Bicycle workshop in Peru"],"category":"Bicycle Repair","areaServed":[{"@type":"City","name":"Trujillo","containedInPlace":{"@type":"State","name":"La Libertad","containedInPlace":{"@type":"Country","name":"Peru"}}},{"@type":"Country","name":"Peru"}],"inLanguage":"en","audience":{"@type":"Audience","audienceType":"Urban and recreational cyclists"},"offers":{"@type":"Offer","priceCurrency":"PEN","price":"50","eligibleRegion":{"@type":"City","name":"Trujillo"}}}
     </script>
     <style>
         :root { --bg: #050505; --surface: #0c0c0c; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
@@ -67,7 +67,35 @@
         .cta:hover { background: var(--text); color: var(--bg); }
         .site-signature { display: block; font-family: var(--mono); font-size: 0.6rem; color: #3d3d3d; letter-spacing: 0.5px; text-align: center; margin-top: 24px; line-height: 1.5; }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-toggle:checked ~ .nav-overlay { z-index: 1004; } .container { padding: 0 16px; } }
+
+        /* FAQ + Honorarios Noir */
+        .faq-section { padding: 60px 0 20px; border-top: 1px solid #111; }
+        .faq-item { border-top: 1px solid #151515; padding: 24px 0; }
+        .faq-item:last-child { border-bottom: 1px solid #151515; }
+        .faq-question { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.02em; color: #e0e0e0;
+            margin-bottom: 10px; line-height: 1.5; }
+        .faq-answer { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+            color: #666; line-height: 1.8; }
+        .honorarios-block { padding: 40px 0 20px; border-top: 1px solid #111; }
+        .honorarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-top: 20px; }
+        .honorarios-item { border: 1px solid #151515; padding: 24px; background: #0a0a0a; }
+        .honorarios-label { font-family: var(--mono); font-size: 0.55rem; color: #555;
+            letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .honorarios-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem;
+            font-weight: 500; color: #e0e0e0; display: block; margin-bottom: 10px;
+            letter-spacing: -0.5px; }
+        .honorarios-desc { font-family: var(--mono); font-size: 0.7rem; color: #555;
+            line-height: 1.6; margin: 0; }
+        .protocol-tag { font-family: var(--mono); font-size: 0.55rem; color: #444;
+            letter-spacing: 2px; text-transform: uppercase; display: block;
+            margin-bottom: 12px; }
+        @media (max-width: 600px) { .honorarios-grid { grid-template-columns: 1fr; } }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does it differ from general maintenance?","acceptedAnswer":{"@type":"Answer","text":"Preventive maintenance is a functional intervention for bikes in good mechanical condition. It focuses on clean drivetrain, chain lubrication, basic brake and derailleur adjustment, and pressure check. General maintenance involves complete disassembly and full system recalibration."}},{"@type":"Question","name":"How often is preventive maintenance recommended?","acceptedAnswer":{"@type":"Answer","text":"Every 4 to 6 weeks for regular cyclists in Trujillo. In dusty or occasionally rainy conditions, the ideal interval is every 3 to 4 weeks. Regular preventive service significantly extends the service life of chain, cassette and chainrings."}},{"@type":"Question","name":"Does it include brake and derailleur inspection?","acceptedAnswer":{"@type":"Answer","text":"Yes. The protocol includes brake and shift cable adjustment, lever travel verification, front and rear derailleur cleaning, and pivot point lubrication. Replacement cables, housing or brake pads are quoted separately if the diagnosis requires them."}}]}
+    </script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -153,6 +181,40 @@
             <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20schedule%20Preventive%20Maintenance" class="cta">BOOK APPOINTMENT - PREVENTIVE MAINTENANCE</a>
         </div>
     </section>
+
+
+        <div class="honorarios-block">
+          <span class="protocol-tag">Economic_Protocol // Technical Fees</span>
+          <h2>Investment_</h2>
+          <div class="honorarios-grid">
+            <div class="honorarios-item">
+              <span class="honorarios-label">Base Fee</span>
+              <span class="honorarios-value">S/ 50</span>
+              <p class="honorarios-desc">Functional intervention with lubricants and cable adjustment. Calibrated tooling. No additional costs for the standard protocol.</p>
+            </div>
+            <div class="honorarios-item">
+              <span class="honorarios-label">Payment Method</span>
+              <span class="honorarios-value">Cash · Visa</span>
+              <p class="honorarios-desc">Payment in soles (PEN). Visa with 5% processing surcharge. Replacement cables or housing quoted separately if required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <span class="protocol-tag">FAQ_Protocol // Frequently Asked Questions</span>
+          <h2>Frequently Asked Questions_</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">How does it differ from general maintenance?</h3>
+            <p class="faq-answer">Preventive maintenance is a functional intervention for bikes in good mechanical condition. It focuses on clean drivetrain, chain lubrication, basic brake and derailleur adjustment, and pressure check. General maintenance involves complete disassembly and full system recalibration.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How often is preventive maintenance recommended?</h3>
+            <p class="faq-answer">Every 4 to 6 weeks for regular cyclists in Trujillo. In dusty or occasionally rainy conditions, the ideal interval is every 3 to 4 weeks. Regular preventive service significantly extends the service life of chain, cassette and chainrings.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Does it include brake and derailleur inspection?</h3>
+            <p class="faq-answer">Yes. The protocol includes brake and shift cable adjustment, lever travel verification, front and rear derailleur cleaning, and pivot point lubrication. Replacement cables, housing or brake pads are quoted separately if the diagnosis requires them.</p>
+          </div>
+        </div>
 
     </main>
 
