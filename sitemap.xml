@@ -1,132 +1,542 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.bikelabstudio.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+      <image:caption>BikeLab Studio Calculadora profesional de SAG para suspensiones de MTB con modelo físico</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/11vs12.webp</image:loc>
+      <image:caption>Comparativa visual de componentes de transmisión MTB 11v y 12v destacando la reducción de grosor en eslabones y piñones</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/torque-bicicleta.webp</image:loc>
+      <image:caption>Aplicación de torque correcto en componentes de bicicleta MTB con llave dinamométrica en BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ruidos-bicicleta.jpg</image:loc>
+      <image:caption>Diagnóstico técnico de ruidos en bicicleta MTB y ruta — BikeLab Studio Trujillo Perú</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lubricantes-grasas.jpg</image:loc>
+      <image:caption>Selección técnica de lubricantes y grasas para ciclismo — tribología aplicada en taller Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lavar-bicicleta.webp</image:loc>
+      <image:caption>Lavado técnico correcto de bicicleta MTB sin dañar rodamientos ni sellos — BikeLab Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/herramientas-gama-alta.webp</image:loc>
+      <image:caption>Herramientas profesionales de precisión para mecánica de bicicletas de alta gama en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/freno-disco-roza.jpg</image:loc>
+      <image:caption>Diagnóstico técnico de freno de disco hidráulico en bicicleta MTB — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/danos-cuadro-carbono.webp</image:loc>
+      <image:caption>Inspección técnica de daños estructurales en cuadro de carbono de bicicleta — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cuidado-transmision.jpg</image:loc>
+      <image:caption>Cuidado y mantenimiento de transmisión de bicicleta MTB de alta gama en taller Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambio-cadena.jpg</image:loc>
+      <image:caption>Medición de desgaste de cadena de bicicleta MTB con medidor de precisión — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ajuste-profesional.jpg</image:loc>
+      <image:caption>Ajuste profesional integral de bicicleta MTB y ruta en BikeLab Studio Trujillo Perú</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-full.webp</image:loc>
+      <image:caption>Scott Scale Blanca - Taller de bicicletas Trujillo Urb El Recreo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-frame.webp</image:loc>
+      <image:caption>Detalle cuadro Scott Scale - Bikelab Studio Paraguay 300</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-bb.webp</image:loc>
+      <image:caption>Mantenimiento pedalier Scott Scale Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-drivetrain.webp</image:loc>
+      <image:caption>Transmisión optimizada Scott Scale</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-tools.webp</image:loc>
+      <image:caption>Herramientas profesionales Bikelab Studio El Recreo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-finish.webp</image:loc>
+      <image:caption>Resultado final Scott Scale White Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-full.webp</image:loc>
+      <image:caption>Specialized Epic roja en proceso de mantenimiento completo — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-front.webp</image:loc>
+      <image:caption>Alineación frontal de horquilla Specialized Epic en taller de bicicletas BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-brain.webp</image:loc>
+      <image:caption>Ajuste de válvula Brain Specialized Epic — calibración de suspensión de precisión en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-cockpit.webp</image:loc>
+      <image:caption>Instalación de cockpit Renthal Fatbar en bicicleta MTB Specialized — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-rear.webp</image:loc>
+      <image:caption>Limpieza técnica de transmisión de bicicleta de montaña Specialized en BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-hub.webp</image:loc>
+      <image:caption>Revisión y lubricación de maza DT Swiss — ajuste de rodamientos en taller BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-despiece-total.webp</image:loc>
+      <image:caption>Inventario técnico de componentes de bicicleta desarmados</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-lavado-rodamientos.webp</image:loc>
+      <image:caption>Lavado por inmersión de rodamientos de bicicleta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-limpieza-transmision.webp</image:loc>
+      <image:caption>Remoción de grasa en transmisión de bicicleta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-inspeccion-pedalier.webp</image:loc>
+      <image:caption>Inspección de pistas del pedalier de bicicleta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-preparacion-nucleo.webp</image:loc>
+      <image:caption>Preparación de maza de bicicleta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-ajuste-final.webp</image:loc>
+      <image:caption>Ajuste final del sistema de cambios de la bicicleta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.webp</image:loc>
+      <image:caption>Despiece técnico completo de suspensión RockShox SID en BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.webp</image:loc>
+      <image:caption>Mantenimiento y reemplazo de retenes SKF en suspensión MTB — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.webp</image:loc>
+      <image:caption>Purgado de cartucho RockShox Charger 3 RC en taller de suspensiones Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.webp</image:loc>
+      <image:caption>Análisis y calibración del sistema Debonair RockShox — cámara de aire negativa en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.webp</image:loc>
+      <image:caption>Aplicación de grasa específica SRAM Butter en internos de suspensión MTB — BikeLab Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp</image:loc>
+      <image:caption>Resultado final RockShox SID Ultimate restaurada con retenes nuevos — BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/index-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+      <image:caption>BikeLab Studio Professional MTB Suspension SAG Calculator with physical dual-chamber modeling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/11vs12.webp</image:loc>
+      <image:caption>Visual comparison of 11v and 12v MTB transmission components highlighting chain link and sprocket thickness reduction</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/torque-bicicleta.webp</image:loc>
+      <image:caption>Applying correct torque to MTB bicycle components with torque wrench at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ruidos-bicicleta.jpg</image:loc>
+      <image:caption>Technical acoustic diagnosis of noises on MTB and road bicycles — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lubricantes-grasas.jpg</image:loc>
+      <image:caption>Technical selection of lubricants and greases for cycling — applied tribology at BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lavar-bicicleta.webp</image:loc>
+      <image:caption>Correct technical wash of MTB bicycle without damaging bearings or seals — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/herramientas-gama-alta.webp</image:loc>
+      <image:caption>Professional precision tools for high-end bicycle mechanics at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/freno-disco-roza.jpg</image:loc>
+      <image:caption>Technical diagnosis of hydraulic disc brake rub on MTB bicycle — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/danos-cuadro-carbono.webp</image:loc>
+      <image:caption>Technical inspection of structural damage on carbon bicycle frame — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cuidado-transmision.jpg</image:loc>
+      <image:caption>Care and maintenance of high-end MTB bicycle drivetrain at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambio-cadena.jpg</image:loc>
+      <image:caption>MTB bicycle chain wear measurement with precision gauge — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ajuste-profesional.jpg</image:loc>
+      <image:caption>Professional full bicycle tune-up for MTB and road bikes at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-full.webp</image:loc>
+      <image:caption>Scott Scale White - Bicycle workshop Trujillo Urb El Recreo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-frame.webp</image:loc>
+      <image:caption>Scott Scale frame detail - Bikelab Studio Paraguay 300</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-bb.webp</image:loc>
+      <image:caption>Bottom bracket service Scott Scale Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-drivetrain.webp</image:loc>
+      <image:caption>Optimized drivetrain Scott Scale</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-tools.webp</image:loc>
+      <image:caption>Professional tools Bikelab Studio El Recreo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/scott-white-finish.webp</image:loc>
+      <image:caption>Final result Scott Scale White Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-full.webp</image:loc>
+      <image:caption>Red Specialized Epic undergoing complete maintenance service at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-front.webp</image:loc>
+      <image:caption>Front fork alignment on Specialized Epic at BikeLab Studio bicycle workshop Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-brain.webp</image:loc>
+      <image:caption>Specialized Epic Brain valve adjustment — precision suspension calibration at BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-cockpit.webp</image:loc>
+      <image:caption>Renthal Fatbar cockpit installation on Specialized MTB bicycle — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-rear.webp</image:loc>
+      <image:caption>Technical drivetrain cleaning on Specialized mountain bike at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/epic-red-hub.webp</image:loc>
+      <image:caption>DT Swiss hub inspection and bearing lubrication at BikeLab Studio workshop Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-despiece-total.webp</image:loc>
+      <image:caption>Technical inventory of disassembled bicycle components</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-lavado-rodamientos.webp</image:loc>
+      <image:caption>Immersion cleaning of precision bicycle bearings</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-limpieza-transmision.webp</image:loc>
+      <image:caption>Bicycle drivetrain grease removal and cleaning</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-inspeccion-pedalier.webp</image:loc>
+      <image:caption>Bicycle bottom bracket race inspection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-preparacion-nucleo.webp</image:loc>
+      <image:caption>Bicycle freehub body preparation for reassembly</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/overhaul-ajuste-final.webp</image:loc>
+      <image:caption>Final drivetrain tuning and bicycle setup</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-3.webp</image:loc>
+      <image:caption>Full technical teardown of RockShox SID suspension fork at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-1.webp</image:loc>
+      <image:caption>SKF seal replacement and maintenance on MTB suspension fork — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-5.webp</image:loc>
+      <image:caption>RockShox Charger 3 RC damper cartridge bleed at BikeLab Studio suspension workshop Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-4.webp</image:loc>
+      <image:caption>RockShox Debonair negative air chamber analysis and calibration at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-6.webp</image:loc>
+      <image:caption>Application of SRAM Butter grease on MTB suspension internals — BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp</image:loc>
+      <image:caption>Restored RockShox SID Ultimate with new seals — final result at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/servicios.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/servicios-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/servicios.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-01.webp</image:loc>
+      <image:caption>BikeLab Studio - Taller Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-02.webp</image:loc>
+      <image:caption>BikeLab Studio - Ingeniería ciclista</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-03.webp</image:loc>
+      <image:caption>BikeLab Studio - Mecánica de precisión</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-general-industrial.webp</image:loc>
+      <image:caption>mantenimiento general de bicicleta con desarme total en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-preventivo-noir.webp</image:loc>
+      <image:caption>mantenimiento preventivo de bicicleta en Trujillo limpieza y ajuste</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/suspensiones-protocolo-tecnico.webp</image:loc>
+      <image:caption>mantenimiento profesional de suspensión MTB en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/purgado-frenos-scientific.webp</image:loc>
+      <image:caption>purgado profesional de frenos hidráulicos en Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/tubeless-precision.webp</image:loc>
+      <image:caption>tubelizado profesional MTB en Trujillo con sellado técnico</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/centrado-rines-accuracy.webp</image:loc>
+      <image:caption>centrado profesional de rueda MTB con tensiómetro calibrado</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/servicios-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/servicios-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/servicios.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-01.webp</image:loc>
+      <image:caption>BikeLab Studio - Workshop Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-02.webp</image:loc>
+      <image:caption>BikeLab Studio - Cycling engineering</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/servicios-vertical-03.webp</image:loc>
+      <image:caption>BikeLab Studio - Precision mechanics</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-general-industrial.webp</image:loc>
+      <image:caption>full bicycle maintenance with complete disassembly in Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-preventivo-noir.webp</image:loc>
+      <image:caption>preventive bicycle maintenance in Trujillo cleaning and adjustment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/suspensiones-protocolo-tecnico.webp</image:loc>
+      <image:caption>professional MTB suspension service in Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/purgado-frenos-scientific.webp</image:loc>
+      <image:caption>professional hydraulic brake bleeding in Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/tubeless-precision.webp</image:loc>
+      <image:caption>professional MTB tubeless conversion in Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/centrado-rines-accuracy.webp</image:loc>
+      <image:caption>professional wheel truing with calibrated tension meter</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/mantenimiento-general-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/mantenimiento-general-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/mantenimiento-general-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/mantenimiento-general-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-general-industrial.webp</image:loc>
+      <image:caption>mantenimiento general de bicicleta con desarme total en Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/mantenimiento-general-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/mantenimiento-general-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/mantenimiento-general-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/mantenimiento-general-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-general-industrial.webp</image:loc>
+      <image:caption>full bicycle maintenance with complete disassembly in Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/mantenimiento-preventivo-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/mantenimiento-preventivo-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/mantenimiento-preventivo-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/mantenimiento-preventivo-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-preventivo-noir.webp</image:loc>
+      <image:caption>mantenimiento preventivo de bicicleta en Trujillo limpieza y ajuste</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/mantenimiento-preventivo-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/mantenimiento-preventivo-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/mantenimiento-preventivo-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/mantenimiento-preventivo-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/mantenimiento-preventivo-noir.webp</image:loc>
+      <image:caption>preventive bicycle maintenance in Trujillo cleaning and adjustment</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/suspension-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/suspension-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/suspension-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/suspension-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/suspensiones-protocolo-tecnico.webp</image:loc>
+      <image:caption>mantenimiento profesional de suspensión MTB en Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/suspension-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/suspension-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/suspension-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/suspension-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/suspensiones-protocolo-tecnico.webp</image:loc>
+      <image:caption>professional MTB suspension service in Trujillo Peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/purgado-frenos-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/purgado-frenos-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/purgado-frenos-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/purgado-frenos-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/purgado-frenos-scientific.webp</image:loc>
+      <image:caption>purgado profesional de frenos hidráulicos en Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/purgado-frenos-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/purgado-frenos-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/purgado-frenos-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/purgado-frenos-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/purgado-frenos-scientific.webp</image:loc>
+      <image:caption>professional hydraulic brake bleeding in Trujillo Peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/tubelizado-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/tubelizado-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/tubelizado-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/tubelizado-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/tubeless-precision.webp</image:loc>
+      <image:caption>tubelizado profesional MTB en Trujillo con sellado técnico</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/tubelizado-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/tubelizado-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/tubelizado-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/tubelizado-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/tubeless-precision.webp</image:loc>
+      <image:caption>professional MTB tubeless conversion in Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/centrado-ruedas-es.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/centrado-ruedas-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/centrado-ruedas-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/centrado-ruedas-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/centrado-rines-accuracy.webp</image:loc>
+      <image:caption>centrado profesional de rueda MTB con tensiómetro calibrado</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/centrado-ruedas-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/centrado-ruedas-es.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/centrado-ruedas-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/centrado-ruedas-es.html"/>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/assets/img/servicios/centrado-rines-accuracy.webp</image:loc>
+      <image:caption>professional wheel truing with calibrated tension meter</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/ajuste-profesional-es.html</loc>
@@ -135,6 +545,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/ajuste-profesional-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ajuste-profesional.jpg</image:loc>
+      <image:caption>Ajuste profesional de bicicleta con herramientas calibradas - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/ajuste-profesional.html</loc>
@@ -143,6 +557,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/ajuste-profesional-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ajuste-profesional.jpg</image:loc>
+      <image:caption>Professional bicycle tune-up with calibrated tools - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/cambio-cadena-es.html</loc>
@@ -151,6 +569,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cambio-cadena-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambio-cadena.jpg</image:loc>
+      <image:caption>Medición profesional de desgaste de cadena con herramienta - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/cambio-cadena.html</loc>
@@ -159,6 +581,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cambio-cadena-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambio-cadena.jpg</image:loc>
+      <image:caption>Professional chain wear measurement with a gauge - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/carbon-footprint-es.html</loc>
@@ -167,6 +593,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/carbon-footprint-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/gtx-complete.jpg</image:loc>
+      <image:caption>Análisis estructural cuadro aluminio 6061-T6 BikeLab Studio Trujillo Perú taller bicicletas alta gama</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/workshop-station.jpg</image:loc>
+      <image:caption>Estación trabajo análisis tribológico Shimano XT BikeLab Studio mecánica precisión</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/drivetrain-components.jpg</image:loc>
+      <image:caption>Componentes críticos cadena Shimano X9 cassette mantenimiento preventivo seguridad ciclismo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/carbon-footprint.html</loc>
@@ -175,6 +613,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/carbon-footprint-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/gtx-complete.jpg</image:loc>
+      <image:caption>Structural analysis aluminum frame 6061-T6 BikeLab Studio Trujillo Peru premium bicycle workshop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/workshop-station.jpg</image:loc>
+      <image:caption>Workstation tribological analysis Shimano XT BikeLab Studio precision mechanics</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/drivetrain-components.jpg</image:loc>
+      <image:caption>Critical components Shimano X9 chain cassette preventive maintenance cycling safety</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/cuidado-transmision-es.html</loc>
@@ -183,6 +633,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cuidado-transmision-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cuidado-transmision.jpg</image:loc>
+      <image:caption>Cuidado técnico de transmisión: limpieza, lubricación y control de desgaste - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/cuidado-transmision.html</loc>
@@ -191,6 +645,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cuidado-transmision-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cuidado-transmision.jpg</image:loc>
+      <image:caption>Technical drivetrain care: cleaning, lubrication, and wear control - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/danos-cuadro-carbono-es.html</loc>
@@ -199,6 +657,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/danos-cuadro-carbono-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/danos-cuadro-carbono.webp</image:loc>
+      <image:caption>Inspección técnica de cuadro de carbono para detectar grietas y delaminación - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/danos-cuadro-carbono.html</loc>
@@ -207,6 +669,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/danos-cuadro-carbono-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/danos-cuadro-carbono.webp</image:loc>
+      <image:caption>Technical inspection of a carbon frame to detect cracks and delamination - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/freno-disco-roza-es.html</loc>
@@ -215,6 +681,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/freno-disco-roza-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/freno-disco-roza.jpg</image:loc>
+      <image:caption>Diagnóstico de roce en freno de disco y rotor - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/freno-disco-roza.html</loc>
@@ -223,6 +693,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/freno-disco-roza-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/freno-disco-roza.jpg</image:loc>
+      <image:caption>Disc brake rub and rotor diagnosis - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/frenos-hidraulicos-altitud-termodinamica-es.html</loc>
@@ -231,6 +705,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/frenos-hidraulicos-altitud-termodinamica-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg</image:loc>
+      <image:caption>mejor-taller-bicicletas-trujillo-peru-frenos-magura-mtb-servicio-especializado-frenado-altitud-bikelab</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.webp</image:loc>
+      <image:caption>taller-bicicletas-profesional-trujillo-peru-mangueras-jagwire-hidraulicas-servicio-frenos-mtb-bikelab</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/hydraulic-brakes-altitude-thermodynamics.html</loc>
@@ -239,6 +721,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/frenos-hidraulicos-altitud-termodinamica-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/magura-monoblock-caliper-frenos-altitud-bikelab-trujillo.jpg</image:loc>
+      <image:caption>best-bike-shop-trujillo-peru-magura-brakes-mtb-specialized-service-altitude-braking-bikelab</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/jagwire-pro-hydro-manguera-hidraulica-bikelab-trujillo.webp</image:loc>
+      <image:caption>professional-bike-shop-trujillo-peru-jagwire-hydraulic-hoses-brake-service-mtb-bikelab</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/grasas-tribologia-es.html</loc>
@@ -247,6 +737,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/grasas-tribologia-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/bicycle-hub-bearing-grease-application-precision-service-bikelab.jpg</image:loc>
+      <image:caption>Aplicación precisa de grasa en rodamientos de maza de bicicleta durante servicio; taller Bikelab Studio, Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.webp</image:loc>
+      <image:caption>Arsenal de lubricación en banco de trabajo: SKF LGHP 2/1, Motorex Fett 2000, Finish Line, Liqui Moly y Muc-Off en Bikelab Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/liqui-moly-kupferpaste-copper-anti-seize-bicycle-workshop-trujillo-peru.jpg</image:loc>
+      <image:caption>Pasta de cobre anti-seize Liqui Moly Kupferpaste en banco de trabajo; uso en tornillería y zonas de alta temperatura/corrosión</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/skf-lghp-2-1-high-temperature-bearing-grease.jpg</image:loc>
+      <image:caption>Grasa SKF LGHP 2/1 de alta temperatura para rodamientos; producto en primer plano</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/grease-tribology-en.html</loc>
@@ -255,6 +761,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/grasas-tribologia-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/bikelab-lubrication-arsenal-skf-motorex-finish-line-liqui-moly-muc-off.webp</image:loc>
+      <image:caption>bicycle-grease-tribology-SKF-Motorex-FinishLine-LiquiMoly-MucOff-professional-workshop-trujillo-peru-bikelab</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/herramientas-gama-alta-es.html</loc>
@@ -263,6 +773,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/herramientas-gama-alta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/herramientas-gama-alta.webp</image:loc>
+      <image:caption>Herramientas esenciales para bicicletas de alta gama: torquimetro, llaves y herramientas de transmisión - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/herramientas-gama-alta.html</loc>
@@ -271,6 +785,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/herramientas-gama-alta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/herramientas-gama-alta.webp</image:loc>
+      <image:caption>Essential tools for high-end bicycles: torque wrench, hex keys, drivetrain tools - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/lavar-bicicleta-es.html</loc>
@@ -279,6 +797,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/lavar-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lavar-bicicleta.webp</image:loc>
+      <image:caption>Lavado correcto de bicicleta sin agua a presión - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/lavar-bicicleta.html</loc>
@@ -287,6 +809,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/lavar-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lavar-bicicleta.webp</image:loc>
+      <image:caption>Correct bike washing without pressure water - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/lubricantes-grasas-es.html</loc>
@@ -295,6 +821,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/lubricantes-grasas-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lubricantes-grasas.jpg</image:loc>
+      <image:caption>Lubricantes y grasas de bicicleta para transmisión y rodamientos - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/lubricantes-grasas.html</loc>
@@ -303,6 +833,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/lubricantes-grasas-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/lubricantes-grasas.jpg</image:loc>
+      <image:caption>Bicycle lubes and greases for drivetrain and bearings - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html</loc>
@@ -311,6 +845,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp</image:loc>
+      <image:caption>llantas-mtb-ancho-comparativa-tubeless-sellante-taller-bikelab-trujillo-peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-mano-ikon-tanwall-bikelab.webp</image:loc>
+      <image:caption>maxxis-ikon-exo-tr-tanwall-29-servicio-tubeless-taller-bikelab-trujillo-peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-maxxis-ikon-giant-taller-bikelab.webp</image:loc>
+      <image:caption>maxxis-ikon-tanwall-rueda-giant-29-taller-bikelab-studio-trujillo-peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html</loc>
@@ -319,6 +865,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp</image:loc>
+      <image:caption>mtb-tires-width-comparison-tubeless-sealant-workshop-bikelab-trujillo-peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-mano-ikon-tanwall-bikelab.webp</image:loc>
+      <image:caption>maxxis-ikon-exo-tr-tanwall-29-tubeless-service-workshop-bikelab-trujillo-peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/neumaticos-maxxis-ikon-giant-taller-bikelab.webp</image:loc>
+      <image:caption>maxxis-ikon-tanwall-giant-29-workshop-bikelab-studio-trujillo-peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/ruidos-bicicleta-es.html</loc>
@@ -327,6 +885,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/ruidos-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ruidos-bicicleta.jpg</image:loc>
+      <image:caption>Diagnóstico profesional de ruidos en bicicleta - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/ruidos-bicicleta.html</loc>
@@ -335,6 +897,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/ruidos-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/ruidos-bicicleta.jpg</image:loc>
+      <image:caption>Professional bicycle noise diagnosis - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/torque-bicicleta-es.html</loc>
@@ -343,6 +909,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/torque-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/torque-bicicleta.webp</image:loc>
+      <image:caption>Torquímetro profesional Park Tool para bicicletas - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/torque-bicicleta.html</loc>
@@ -351,6 +921,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/torque-bicicleta-es.html"/>
     <lastmod>2026-02-19</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/torque-bicicleta.webp</image:loc>
+      <image:caption>Professional Park Tool torque wrench for bicycles - BikeLab Studio Trujillo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/11v-12v-mtb-worth-it-es.html</loc>
@@ -359,6 +933,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/11v-12v-mtb-worth-it-es.html"/>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/11vs12.webp</image:loc>
+      <image:caption>Comparativa visual de componentes de transmisión MTB 11v y 12v destacando la reducción de grosor en eslabones y piñones</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/11v-12v-mtb-worth-it.html</loc>
@@ -367,6 +945,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/11v-12v-mtb-worth-it-es.html"/>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/11vs12.webp</image:loc>
+      <image:caption>Visual comparison of 11v and 12v MTB transmission components highlighting chain link and sprocket thickness reduction</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/white-paper-11v-12v-es.html</loc>
@@ -383,5 +965,29 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-es.html"/>
     <lastmod>2026-02-21</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/sag-calculator-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/sag-calculator-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/sag-calculator-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/sag-calculator-es.html"/>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/./images/sag-guide-photo.webp</image:loc>
+      <image:caption>Suspensión MTB — SAG y presión</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/sag-calculator-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/sag-calculator-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/sag-calculator-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/sag-calculator-es.html"/>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/./images/sag-guide-photo.webp</image:loc>
+      <image:caption>MTB suspension — SAG and pressure</image:caption>
+    </image:image>
   </url>
 </urlset>
