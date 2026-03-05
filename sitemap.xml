@@ -967,6 +967,31 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"/>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp</image:loc>
+      <image:caption>BikeLab Studio — Árbol de diagnóstico para cambios electrónicos Shimano Di2 y SRAM AXS</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"/>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp</image:loc>
+      <image:caption>BikeLab Studio — Diagnostic tree for Shimano Di2 and SRAM AXS electronic shifting</image:caption>
+    </image:image>
+  </url>
   <url>
     <loc>https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"/>

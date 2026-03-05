@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Shifting Di2 & AXS: Failures Beyond Mechanics — BikeLab Studio</title>
+<meta name="description" content="60% of Shimano Di2 and SRAM AXS failures aren't mechanical — they're communication protocol issues. Learn how to correctly diagnose electronic shifting problems.">
+<meta name="keywords" content="shimano di2 not shifting, sram axs problems, electronic shifting failure, di2 won't respond, axs diagnostic, di2 battery drain, sram axs pairing lost, electronic groupset troubleshooting">
+<meta name="author" content="Carlos Ravello — BikeLab Studio">
+<link rel="canonical" href="https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html">
+<link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html">
+<link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html">
+<link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electronic Shifting Di2 & AXS: Failures Beyond Mechanics">
+<meta property="og:description" content="60% of Di2 and AXS failures are communication protocol issues, not mechanical. BikeLab Studio explains how to diagnose them correctly.">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html">
+<meta property="og:site_name" content="BikeLab Studio">
+<meta property="og:image" content="https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="676">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electronic Shifting Di2 & AXS: Failures Beyond Mechanics">
+<meta name="twitter:description" content="60% of Di2 and AXS failures are communication protocol issues, not mechanical. Learn how to diagnose them correctly.">
+<meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Electronic Shifting in Bicycles: Failures Beyond Mechanics",
+  "description": "60% of Shimano Di2 and SRAM AXS failures aren't mechanical — they're communication protocol and power management issues.",
+  "author": {"@type": "Person", "name": "Carlos Ravello", "affiliation": {"@type": "Organization", "name": "BikeLab Studio"}},
+  "publisher": {"@type": "Organization", "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com"},
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-03-04",
+  "inLanguage": "en",
+  "url": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BikeLab Studio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"General Tips","item":"https://www.bikelabstudio.com/index-en.html#tips"},{"@type":"ListItem","position":3,"name":"Electronic Shifting Di2 & AXS","item":"https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do electronic shifting systems fail differently from mechanical ones?","acceptedAnswer":{"@type":"Answer","text":"Electronic drivetrains are IoT devices on a bike: they have microcontrollers, proprietary communication protocols, and updatable firmware. Around 60% of Di2 and AXS failures aren't mechanical — they're communication or power-layer issues. The correct first question isn't 'what part is broken?' but 'at which layer did the disruption occur?'"}},{"@type":"Question","name":"What are the three failure layers in Di2 and AXS?","acceptedAnswer":{"@type":"Answer","text":"Layer 1 — Power (~35%): dead battery, active Bluetooth module draining power, AXS accelerometers draining battery during transport. Layer 2 — Communication (~25%): 2.4 GHz interference, outdated firmware, lost pairing, E-Tube protocol affected by vibration. Layer 3 — Mechanical (~20%): pinched cable, collapsed pogo pin, bent hanger. Layers 1 and 2 can be resolved without specialized tools."}},{"@type":"Question","name":"Which Di2 and AXS problems can I fix at home?","acceptedAnswer":{"@type":"Answer","text":"Dead system: remove battery for 30 seconds, reinstall and press RD button 5–10 sec (Di2) or press AXS button without battery before reinstalling (AXS). Intermittent shifts on climbs: disable Synchro Shift. AXS re-pairing: slow green on RD opens session, fast green on each component confirms. Layers 1 and 2 cover 60% of failures and are fixable at home."}},{"@type":"Question","name":"Why should I never update Di2 firmware over Bluetooth?","acceptedAnswer":{"@type":"Answer","text":"An interrupted update corrupts the system EPROM memory. Recovery requires the SM-PCE02 tool exclusive to certified Shimano dealers. There is no documented safe alternative. Always update Di2 via USB cable using E-TUBE PROJECT."}},{"@type":"Question","name":"When should I take my Di2 or AXS to a workshop?","acceptedAnswer":{"@type":"Answer","text":"When the failure reappears within 48 hours of a home fix, or the system doesn't respond after a full hard reset. Also when there's damage to the Di2 shifter PCB, a broken AXS pogo pin, an Orbit fluid leak (Red/Force AXS), or when you need a Di2 firmware update. Continuing to use a damaged system can cause secondary damage to adjacent components."}}]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=JetBrains+Mono:wght@300;400&display=swap">
+
+<style>
+:root {
+  --bg: #050505;
+  --s1: #080808;
+  --s2: #0c0c0c;
+  --border: #141414;
+  --border2: #1e1e1e;
+  --text: #c8c8c8;
+  --dim: #666;
+  --dim2: #333;
+  --mono: 'IBM Plex Mono', monospace;
+  --jet: 'JetBrains Mono', monospace;
+  --body: 'Fraunces', serif;
+  --yellow: #e8ff00;
+  --orange: #ff6b35;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); overflow-x: hidden; font-family: var(--body); }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(20px, 5vw, 60px); background: rgba(5,5,5,.97); border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
+.nav-brand { font-family: var(--mono); font-size: 10px; letter-spacing: 3px; color: var(--dim); text-decoration: none; text-transform: uppercase; }
+.nav-brand span { color: var(--yellow); }
+.nav-right { display: flex; gap: 16px; align-items: center; }
+.nav-link { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; color: var(--dim); text-decoration: none; text-transform: uppercase; transition: color .2s; }
+.nav-link:hover { color: var(--text); }
+.lang-link { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; color: var(--dim); text-decoration: none; border: 1px solid var(--border2); padding: 6px 12px; text-transform: uppercase; transition: all .2s; }
+.lang-link:hover { color: var(--yellow); border-color: var(--yellow); }
+.hero { padding-top: 80px; border-bottom: 1px solid var(--border); }
+.hero-inner { padding: clamp(60px, 10vh, 120px) clamp(20px, 8vw, 120px) 0; max-width: 1100px; margin: 0 auto; }
+.hero-label { font-family: var(--mono); font-size: 9px; letter-spacing: 4px; color: var(--yellow); text-transform: uppercase; margin-bottom: 24px; opacity: .8; }
+.hero-title { font-family: var(--body); font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 900; line-height: .92; letter-spacing: -.03em; color: #fff; margin-bottom: 32px; max-width: 900px; }
+.hero-title em { font-style: italic; color: var(--yellow); font-weight: 300; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: clamp(20px, 3vh, 32px) 0; border-top: 1px solid var(--border); margin-top: 40px; }
+.meta-item { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; color: var(--dim); text-transform: uppercase; }
+.meta-item span { color: #555; }
+.article-wrap { max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 8vw, 120px); display: grid; grid-template-columns: 1fr 280px; gap: 80px; align-items: start; padding-top: clamp(48px, 8vh, 80px); padding-bottom: clamp(48px, 8vh, 80px); }
+@media(max-width: 900px) { .article-wrap { grid-template-columns: 1fr; gap: 48px; } .sidebar { order: -1; } }
+.article-body p { font-family: var(--body); font-size: clamp(1rem, 1.8vw, 1.15rem); color: #999; line-height: 1.85; font-weight: 300; margin-bottom: 1.6em; }
+.article-body p strong { color: #ccc; font-weight: 700; }
+.article-body p em { font-style: italic; color: #aaa; }
+.section-break { display: flex; align-items: center; gap: 16px; margin: 48px 0 32px; }
+.section-break-line { flex: 1; height: 1px; background: var(--border); }
+.section-break-label { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; color: var(--dim2); text-transform: uppercase; white-space: nowrap; }
+.pull-quote { border-left: 3px solid var(--yellow); padding: 20px 28px; margin: 40px 0; background: #0a0900; }
+.pull-quote p { font-family: var(--body); font-size: clamp(1.1rem, 2vw, 1.4rem) !important; font-style: italic; color: #bbb !important; line-height: 1.6 !important; margin: 0 !important; font-weight: 300; }
+.data-box { border: 1px solid var(--border2); padding: 24px 28px; margin: 36px 0; background: var(--s1); }
+.data-box-label { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; color: var(--orange); text-transform: uppercase; margin-bottom: 16px; }
+.data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 11px; }
+.data-row:last-child { border-bottom: none; }
+.data-row-label { color: var(--dim); letter-spacing: 1px; }
+.data-row-val { color: #ccc; font-size: 13px; }
+.data-row-val.yellow { color: var(--yellow); }
+.data-row-val.orange { color: var(--orange); }
+.cta-diagnostic { border: 1px solid #2a2000; background: #0a0800; border-left: 3px solid var(--yellow); padding: 32px 28px; margin: 48px 0 0; }
+.cta-label { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; color: var(--yellow); text-transform: uppercase; margin-bottom: 12px; }
+.cta-title { font-family: var(--body); font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -.02em; }
+.cta-desc { font-family: var(--jet); font-size: 12px; color: var(--dim); line-height: 1.7; font-weight: 300; margin-bottom: 20px; }
+.cta-btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: #050505; background: var(--yellow); padding: 12px 24px; text-decoration: none; text-transform: uppercase; border: 1px solid var(--yellow); transition: all .2s; }
+.cta-btn:hover { background: transparent; color: var(--yellow); }
+.sidebar { position: sticky; top: 100px; }
+.sidebar-card { border: 1px solid var(--border); padding: 24px 20px; margin-bottom: 16px; background: var(--s1); }
+.sidebar-label { font-family: var(--mono); font-size: 8px; letter-spacing: 3px; color: var(--dim2); text-transform: uppercase; margin-bottom: 12px; }
+.sidebar-title { font-family: var(--body); font-size: .95rem; font-weight: 700; color: #bbb; margin-bottom: 8px; letter-spacing: -.01em; }
+.sidebar-text { font-family: var(--jet); font-size: 10px; color: var(--dim); line-height: 1.6; font-weight: 300; margin-bottom: 14px; }
+.sidebar-btn { display: block; font-family: var(--mono); font-size: 9px; letter-spacing: 2px; color: var(--yellow); text-decoration: none; text-transform: uppercase; border: 1px solid #2a2000; padding: 10px 14px; text-align: center; transition: all .2s; background: #0a0800; }
+.sidebar-btn:hover { background: var(--yellow); color: #050505; border-color: var(--yellow); }
+.toc-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
+.toc-item:last-child { border-bottom: none; }
+.toc-num { font-family: var(--mono); font-size: 9px; color: var(--dim2); flex-shrink: 0; padding-top: 2px; }
+.toc-text { font-family: var(--jet); font-size: 11px; color: var(--dim); line-height: 1.4; font-weight: 300; transition: color .2s; }
+.toc-item:hover .toc-text { color: var(--text); }
+.footer { padding: clamp(32px, 5vh, 60px) clamp(20px, 8vw, 120px); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+.footer-copy { font-family: var(--mono); font-size: 9px; color: var(--dim2); letter-spacing: 2px; text-transform: uppercase; line-height: 2; }
+.footer-links { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.footer-links a { font-family: var(--mono); font-size: 9px; color: var(--dim2); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+.footer-links a:hover { color: var(--yellow); }
+@media(max-width: 600px) { .footer { flex-direction: column; align-items: flex-start; } .footer-links { align-items: flex-start; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.hero-inner > * { animation: fadeUp .6s cubic-bezier(.23,1,.32,1) both; }
+.hero-label { animation-delay: .1s; }
+.hero-title { animation-delay: .2s; }
+.hero-meta { animation-delay: .3s; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">BIKELAB <span>STUDIO</span></a>
+  <div class="nav-right">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="./di2-axs-diagnostic.html" class="nav-link">Tool</a>
+    <a href="./cambios-electronicos-di2-axs-es.html" class="lang-link">ES</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">// Technical Article — Shimano Di2 · SRAM AXS</p>
+    <h1 class="hero-title">Electronic Shifting<br>Fails <em>Differently</em></h1>
+    <div class="hero-meta">
+      <span class="meta-item">AUTHOR <span>—</span> Carlos Ravello</span>
+      <span class="meta-item">BIKELAB STUDIO <span>—</span> Trujillo, Peru</span>
+      <span class="meta-item">READ TIME <span>—</span> 6 min</span>
+      <span class="meta-item">Di2 · AXS <span>—</span> Road · MTB</span>
+    </div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <article class="article-body">
+
+    <p>Picture yourself mid-climb, pressing the shifter, and nothing happens. No mechanical noise. No resistance. Just silence. Battery is charged. Components are clean. The shift doesn't come.</p>
+
+    <p>This scenario — documented in thousands of threads across Reddit, BikeRadar, and Weight Weenies — has one distinctive characteristic: <strong>the problem is almost never where it appears to be</strong>. Diagnosing it correctly starts by understanding a distinction that most manuals ignore entirely.</p>
+
+    <div class="section-break">
+      <div class="section-break-line"></div>
+      <span class="section-break-label">// The question nobody asks</span>
+      <div class="section-break-line"></div>
+    </div>
+
+    <p>When a mechanical groupset fails, the diagnosis is physical and linear: stretched cable, deteriorated housing, bent hanger, misadjusted limits. The problem has a visible cause and a tangible fix. You can touch it, measure it, correct it.</p>
+
+    <p>Electronic shifting operates under a completely different logic. These are, in essence, <strong>IoT devices mounted on a bicycle</strong>. They have microcontrollers, proprietary communication protocols, active power management, and updateable firmware. When they fail, the first question isn't "which part is broken?" — it's "at which layer of the system did the disruption occur?"</p>
+
+    <div class="pull-quote">
+      <p>"According to analyses of user reports in technical communities, around 60% of Di2 and AXS failures don't stem from worn parts or broken cables, but from disruptions in communication protocols and digital connections."</p>
+    </div>
+
+    <p>This distinction isn't semantic. It changes the entire diagnostic protocol, the tools required, and — crucially — what you can resolve at home versus what requires dealer equipment.</p>
+
+    <div class="section-break">
+      <div class="section-break-line"></div>
+      <span class="section-break-label">// The three failure layers</span>
+      <div class="section-break-line"></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-label">// Failure distribution by layer — Di2 &amp; AXS</div>
+      <div class="data-row"><span class="data-row-label">Layer 1 — Power (battery, charging, drain)</span><span class="data-row-val yellow">~35%</span></div>
+      <div class="data-row"><span class="data-row-label">Layer 2 — Communication (pairing, firmware, signal)</span><span class="data-row-val yellow">~25%</span></div>
+      <div class="data-row"><span class="data-row-label">Layer 3 — Mechanical (cable, pogo pin, hanger)</span><span class="data-row-val orange">~20%</span></div>
+      <div class="data-row"><span class="data-row-label">Mixed or undetermined</span><span class="data-row-val">~20%</span></div>
+    </div>
+
+    <p><strong>Layer 1 — Power.</strong> Most frequent, most resolvable at home. Depleted main battery, Bluetooth module staying awake and consuming power (a documented issue of the EW-WU111 in Di2 11v), or internal accelerometers in AXS activating from vehicle vibrations during transport — draining batteries completely before you reach the trailhead. The physics here is straightforward: resistance in contacts from minimal corrosion, increased impedance from humidity or dust, insufficient current to trigger the servo.</p>
+
+    <p><strong>Layer 2 — Communication.</strong> The least intuitive and most frequently misdiagnosed. Wireless systems like AXS operate on the 2.4 GHz band — the same one used by home WiFi, microwave ovens, and most Bluetooth devices in a city. When electromagnetic interference is present, the data packet representing a shift command arrives corrupted or not at all. The derailleur receives partial instructions and enters an error state. Di2 semi-wireless has a different vulnerability: the E-Tube protocol depends on physical connections that vibration can gradually loosen, creating intermittent failures impossible to reproduce in a workshop but constant on the trail.</p>
+
+    <p><strong>Layer 3 — Mechanical.</strong> The one manuals describe best, and the one that happens least. Cable pinched during a poorly executed internal routing, collapsed pogo pin in AXS from use or abuse, bent hanger after a crash. These failures have defined solutions but generally require professional intervention or part replacement.</p>
+
+    <div class="section-break">
+      <div class="section-break-line"></div>
+      <span class="section-break-label">// What you can fix at home</span>
+      <div class="section-break-line"></div>
+    </div>
+
+    <p>Layers 1 and 2 — concentrating 60% of all failures — are accessible without specialized tools. The correct protocol isn't trying random steps, but following a layer-by-layer elimination logic, always starting with power.</p>
+
+    <p>Completely dead system: remove the battery, wait 30 seconds, reinstall. This "hard reset" discharges the internal capacitors and forces the microcontroller to a clean state. On Di2, press the rear derailleur button for 5–10 seconds after reinstalling. On AXS, press the AXS button without the battery before reinstalling to drain residual energy. This single step resolves a significant fraction of "dead system" cases without further intervention.</p>
+
+    <p>Intermittent shifts on climbs: Di2's Synchro Shift mode and AXS's Orbit algorithms can reject commands under load, interpreting mechanical stress as a risk condition. Disabling these modes — via app or through a documented button sequence — solves the problem in most cases without touching any mechanical adjustment.</p>
+
+    <p>Lost AXS pairing: the rear derailleur is always the master. The complete manual re-pair — without the app — follows a specific LED sequence: slow green on the RD to open the session, fast green on each secondary component to confirm pairing. Disrupting the order or attempting it with other Bluetooth devices active nearby is the most common cause of repeated failure.</p>
+
+    <div class="section-break">
+      <div class="section-break-line"></div>
+      <span class="section-break-label">// The point of no return</span>
+      <div class="section-break-line"></div>
+    </div>
+
+    <p>There are failures where home diagnosis ends and continuing without the right tools only worsens the problem. The most important: <strong>never update Di2 firmware via Bluetooth</strong>. An update interrupted by connection instability corrupts the system's EPROM memory. Recovery requires a wired connection to a PC using the SM-PCE02 tool — equipment exclusive to certified Shimano dealers. No documented safe alternative exists.</p>
+
+    <p>The broken AXS pogo pin, Orbit system fluid leak in Red and Force, and internal PCB damage in a Di2 shifter are equally unrepairable at home. Not because the diagnosis is complex, but because the solution requires part replacement — and continuing to use the damaged system can cause secondary damage to adjacent components.</p>
+
+    <p>The most reliable indicator that this limit has been reached: the system doesn't respond after a complete hard reset and charge cycle, or the same failure reappears within 48 hours of a home fix. In those cases, the time invested in further diagnosis has a clear opportunity cost.</p>
+
+    <div class="cta-diagnostic">
+      <p class="cta-label">// Interactive Tool</p>
+      <p class="cta-title">Di2 &amp; AXS Diagnostic Tool</p>
+      <p class="cta-desc">One question at a time. Shimano Di2 and SRAM AXS. Verified official procedures. Ends in a home fix, documented limit, or referral to certified service.</p>
+      <a href="./di2-axs-diagnostic.html" class="cta-btn">USE THE TOOL →</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <p class="sidebar-label">// Tool</p>
+      <p class="sidebar-title">Di2 &amp; AXS Interactive Diagnostic</p>
+      <p class="sidebar-text">One question at a time. Verified Shimano and SRAM official procedures. Free.</p>
+      <a href="./di2-axs-diagnostic.html" class="sidebar-btn">OPEN TOOL →</a>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-label">// Also at BikeLab</p>
+      <p class="sidebar-title">SAG Calculator v5.0</p>
+      <p class="sidebar-text">132 Fox, RockShox, Öhlins, SR Suntour models. Calibrated physics model. Monte Carlo 10K iterations.</p>
+      <a href="./sag-calculator-en.html" class="sidebar-btn">SAG CALCULATOR →</a>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-label">// Contents</p>
+      <div class="toc-item"><span class="toc-num">01</span><span class="toc-text">The question nobody asks</span></div>
+      <div class="toc-item"><span class="toc-num">02</span><span class="toc-text">The three failure layers</span></div>
+      <div class="toc-item"><span class="toc-num">03</span><span class="toc-text">What you can fix at home</span></div>
+      <div class="toc-item"><span class="toc-num">04</span><span class="toc-text">The point of no return</span></div>
+    </div>
+    <div class="sidebar-card" style="border-color:#2a1500;background:#0a0400">
+      <p class="sidebar-label" style="color:#ff6b35">// Contact</p>
+      <p class="sidebar-text">In Peru with a Di2 or AXS that won't respond? Send us your diagnostic result.</p>
+      <a href="https://wa.me/51934391545?text=Hi%20BikeLab%2C%20I%20have%20a%20problem%20with%20my%20electronic%20shifting" class="sidebar-btn" style="border-color:#2a1500;color:#ff6b35;background:#0d0500" target="_blank" rel="noopener">WHATSAPP BIKELAB →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-copy">
+    BikeLab Studio — Technical Articles<br>
+    © 2026 Carlos Ravello — bikelabstudio.com<br>
+    Industrial &amp; Scientific Noir
+  </div>
+  <div class="footer-links">
+    <a href="../index.html">← Back to home</a>
+    <a href="./di2-axs-diagnostic.html">Diagnostic tool</a>
+    <a href="./cambios-electronicos-di2-axs-es.html">← Versión en español</a>
+    <a href="./sag-calculator-en.html">SAG Calculator</a>
+  </div>
+</footer>
+
+</body>
+</html>
