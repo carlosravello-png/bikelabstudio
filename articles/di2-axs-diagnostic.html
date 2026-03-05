@@ -1067,7 +1067,11 @@ body {
 
 <script>
 // ─── LANGUAGE ──────────────────────────────────────────────────────────────
-let LANG = (new URLSearchParams(location.search).get('lang') === 'es') ? 'es' : 'en';
+let LANG = (function(){
+  var p = new URLSearchParams(location.search).get('lang');
+  if (p === 'es' || p === 'en') return p;
+  return (navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+})();
 
 const T = {
   en: {
@@ -1696,6 +1700,7 @@ function restart() {
 }
 
 // Init
+updateStaticText();
 render('q0');
 </script>
 </body>

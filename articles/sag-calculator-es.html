@@ -1403,6 +1403,25 @@
         if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }) }
       });
     });
+    // Auto-resize iframe to full calculator content height (same-origin)
+    (function () {
+      var f = document.querySelector('.calc-frame');
+      if (!f) return;
+      function syncH() {
+        try {
+          var h = f.contentDocument.documentElement.scrollHeight;
+          if (h > 200) { f.style.minHeight = h + 'px'; f.style.height = h + 'px'; }
+        } catch (e) {}
+      }
+      f.addEventListener('load', function () {
+        syncH();
+        setTimeout(syncH, 600);
+        setTimeout(syncH, 1800);
+        try {
+          new ResizeObserver(syncH).observe(f.contentDocument.documentElement);
+        } catch (e) {}
+      });
+    })();
   </script>
 </body>
 
