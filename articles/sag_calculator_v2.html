@@ -206,6 +206,19 @@ footer a:hover{color:var(--accent)}
 </head>
 <body>
 
+<script>
+// Embed mode: fix scroll when loaded inside iframe via ?embed=1
+if (new URLSearchParams(location.search).get('embed') === '1') {
+  var _es = document.createElement('style');
+  _es.textContent = [
+    'body{min-height:auto!important;overflow:hidden!important}',
+    'header{position:relative!important;top:auto!important}',
+    '.results-panel{position:relative!important;top:0!important;max-height:none!important;overflow-y:visible!important}'
+  ].join('');
+  document.head.appendChild(_es);
+}
+</script>
+
 <header>
   <div class="logo">BikeLabStudio <span class="logo-sub">SAG CALCULATOR</span></div>
   <div class="header-right">

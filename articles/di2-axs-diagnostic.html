@@ -948,8 +948,8 @@ body {
   </div>
   <div class="nav-bar-right">
     <a href="../index.html">INICIO · HOME</a>
-    <button class="lang-btn active" id="btn-en" onclick="setLang('en')" style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--yellow);background:none;border:1px solid var(--yellow);padding:8px 14px;cursor:pointer;text-transform:uppercase;transition:all .2s;">EN</button>
-    <a href="./di2-axs-diagnostic-es.html" style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--dim);text-decoration:none;border:1px solid var(--border2);padding:8px 14px;text-transform:uppercase;transition:all .2s;">ES</a>
+    <button id="btn-en" onclick="setLang('en')" style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--dim);background:none;border:1px solid var(--border2);padding:8px 14px;cursor:pointer;text-transform:uppercase;transition:all .2s;">EN</button>
+    <button id="btn-es" onclick="setLang('es')" style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--dim);background:none;border:1px solid var(--border2);padding:8px 14px;cursor:pointer;text-transform:uppercase;transition:all .2s;">ES</button>
   </div>
 </div>
 <div class="nav-overlay">
@@ -1076,6 +1076,15 @@ let LANG = (function(){
   if (p === 'es' || p === 'en') return p;
   return (navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
 })();
+// Set initial button active state once DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  ['en','es'].forEach(function(lang) {
+    var btn = document.getElementById('btn-' + lang);
+    if (!btn) return;
+    btn.style.color = (lang === LANG) ? 'var(--yellow)' : 'var(--dim)';
+    btn.style.borderColor = (lang === LANG) ? 'var(--yellow)' : 'var(--border2)';
+  });
+});
 
 const T = {
   en: {
@@ -1115,6 +1124,12 @@ function t(key) { return T[LANG][key] || T.en[key]; }
 function setLang(l) {
   LANG = l;
   document.documentElement.lang = l;
+  ['en','es'].forEach(function(lang) {
+    var btn = document.getElementById('btn-' + lang);
+    if (!btn) return;
+    btn.style.color = (lang === l) ? 'var(--yellow)' : 'var(--dim)';
+    btn.style.borderColor = (lang === l) ? 'var(--yellow)' : 'var(--border2)';
+  });
   updateStaticText();
   restart();
 }
