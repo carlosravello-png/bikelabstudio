@@ -1,7 +1,36 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  SAG CALCULATOR v5.0 — BikeLabStudio.com                    ║
+  ║  © 2026 BikeLab Studio — Todos los derechos reservados      ║
+  ║                                                              ║
+  ║  Desarrollado por Carlos Ravello                             ║
+  ║  Fundador de BikeLab Studio, Trujillo, Perú                  ║
+  ║                                                              ║
+  ║  Modelo físico de doble cámara politrópica (γ=1.30)          ║
+  ║  Calibración inversa con tablas oficiales de fabricante      ║
+  ║  Validación Monte Carlo — 10,000 iteraciones por modelo      ║
+  ║                                                              ║
+  ║  Fingerprint: f0eaa47dfcd2ff357ae776f70887bac0  ║
+  ║  Signature:   Q2FybG9zIFJhdmVsbG8g4oCUIEJpa2VMYWIgU3R1ZGlvfDIw  ║
+  ║                                                              ║
+  ║  AVISO LEGAL: Este código fuente es propiedad intelectual    ║
+  ║  de BikeLab Studio. Su reproducción total o parcial sin      ║
+  ║  autorización expresa y por escrito está prohibida bajo      ║
+  ║  las leyes de propiedad intelectual del Perú y tratados      ║
+  ║  internacionales de derecho de autor (Convenio de Berna).    ║
+  ║                                                              ║
+  ║  Registro de autoría: SHA256 verificable                     ║
+  ║  bikelabstudio.com | carlos@bikelabstudio.com                ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="copyright" content="© 2026 BikeLab Studio — Carlos Ravello. Todos los derechos reservados.">
+<meta name="author" content="Carlos Ravello — BikeLab Studio">
+<meta name="generator" content="BLS_SAG_ENGINE_v5.0_f0eaa47d">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAG Calculator — BikeLabStudio | La calculadora de suspensión MTB más completa</title>
 <meta name="description" content="Calculadora profesional de SAG para suspensión MTB. 132 modelos: Fox, RockShox, SR Suntour, Öhlins, Manitou, Marzocchi, DVO, Cane Creek y más. Trail, Enduro, XC, DH.">
@@ -368,481 +397,50 @@ footer a:hover{color:var(--accent)}
 </footer>
 
 <script>
-// ══════════════════════════════════════════════════════════════
-// SAG ENGINE v5.0 — BikeLabStudio
-// Motor de física congelado — 132 suspensiones
-// ══════════════════════════════════════════════════════════════
-const E = (() => {
-  const G=9.81, GAM=1.30;
-
-  // [d_eff_mm, V0_pos_cc, F_fric_N, token_cc]
-  const F={
-    suntour_ncx:[20.5,92.0,18.0,0],suntour_ncx_d:[20.5,92.0,18.0,0],
-    suntour_xcr_32:[22.8,142.0,13.0,0],suntour_xcr_34:[23.4,152.0,11.0,0],
-    suntour_epixon_32:[22.1,138.2,12.0,0],suntour_epixon_lor:[22.1,135.0,12.0,0],
-    suntour_raidon_34:[23.8,162.5,11.0,0],suntour_raidon_lor:[23.8,160.0,11.0,0],
-    suntour_auron_35:[24.9,186.0,10.0,0],suntour_durolux_36:[25.8,210.0,10.0,0],
-    suntour_durolux_38:[27.0,235.0,10.0,0],suntour_zeron_36:[26.2,218.0,10.0,0],
-    rs_paragon:[21.5,108.0,16.0,0],rs_judy:[22.0,124.5,14.0,0],rs_judy_boost:[22.0,124.5,14.0,0],
-    rs_recon:[22.1,128.0,14.0,0],rs_reba:[22.8,133.5,12.0,0],
-    rs_revelation:[23.5,155.0,12.0,7.0],rs_yari:[24.0,175.0,11.0,8.0],
-    rs_35_gold:[24.5,178.0,10.0,8.0],rs_35_silver:[24.0,172.0,11.0,8.0],
-    rs_sid_sl_select:[23.2,148.0,9.0,7.0],rs_sid_sl_selectplus:[23.5,150.0,8.0,7.0],
-    rs_sid_sl_ultimate:[23.8,153.0,5.0,7.0],
-    rs_sid_35_select:[24.4,167.5,9.0,8.0],rs_sid_35_selectplus:[24.6,170.0,8.0,8.0],
-    rs_sid_35_ultimate:[24.9,174.0,5.0,8.0],
-    rs_pike_select:[24.1,182.0,9.0,8.8],rs_pike_selectplus:[24.4,185.0,7.0,8.8],
-    rs_pike:[25.74,217.8,5.0,8.8],rs_pike_2018:[24.0,200.0,10.0,8.8],rs_pike_2016:[23.5,192.0,11.0,8.8],
-    rs_lyrik_select:[24.0,197.0,9.0,10.5],rs_lyrik_selectplus:[24.2,200.0,7.0,10.5],
-    rs_lyrik:[24.78,238.8,5.0,10.5],
-    rs_zeb_select:[27.2,264.0,8.0,16.0],rs_zeb_selectplus:[27.5,270.0,7.0,16.0],
-    rs_zeb:[28.55,299.7,5.0,16.0],
-    rs_boxxer_select:[30.5,340.0,8.0,20.0],rs_boxxer_selectplus:[30.8,348.0,7.0,20.0],
-    rs_boxxer_ultimate:[31.0,355.0,5.0,20.0],
-    rs_domain_rc:[29.0,305.0,8.0,18.0],rs_domain_select:[28.5,295.0,9.0,18.0],
-    rs_monarch_rt3:[12.5,18.0,5.0,1.2],rs_monarch_plus:[12.8,19.5,5.0,1.2],
-    rs_kage_rc:[14.0,22.0,4.0,1.5],
-    rs_deluxe_select:[13.0,19.5,3.0,1.5],rs_deluxe_selectplus:[13.2,20.5,3.0,1.5],
-    rs_deluxe_ultimate:[13.5,21.8,2.5,1.5],
-    rs_super_deluxe_select:[13.5,21.5,3.0,1.5],rs_super_deluxe_selectplus:[13.7,23.0,3.0,1.5],
-    rs_super_deluxe:[13.8,26.0,3.0,1.5],rs_vivid:[15.0,38.0,3.0,1.5],
-    fox_32_legacy:[22.5,138.0,12.0,7.0],fox_32_rhythm:[22.9,141.0,11.0,7.0],
-    fox_32_sc_perf:[23.0,145.0,9.0,7.0],fox_32_sc_factory:[23.2,148.0,5.0,7.0],
-    fox_34_rhythm:[24.1,167.0,10.0,8.0],fox_34_perf:[24.0,170.0,9.0,8.0],
-    fox_34:[24.58,201.0,5.0,8.0],fox_34_2018:[24.0,185.0,10.0,8.0],
-    fox_34_sc_perf:[23.8,158.0,9.0,8.0],fox_34_sc:[23.9,160.0,5.0,8.0],
-    fox_36_perf:[23.8,197.0,9.0,10.0],fox_36:[24.68,235.1,5.0,10.0],fox_36_2018:[24.5,220.0,10.0,10.0],
-    fox_38_perf:[24.8,230.0,8.0,10.0],fox_38:[25.99,257.3,5.0,10.0],
-    fox_float_emtb:[25.0,215.0,9.0,10.0],
-    fox_40_perf:[28.5,285.0,8.0,14.0],fox_40:[29.0,300.0,5.0,14.0],
-    fox_float_ctd:[13.5,20.0,4.0,0],fox_vanilla_r:[14.0,22.0,4.0,0],
-    fox_dps_perf:[12.0,16.5,3.5,0.3],fox_dps_factory:[12.2,17.5,2.5,0.3],
-    fox_float_x:[13.2,19.8,3.0,0.4],fox_float_x_factory:[13.5,21.0,2.5,0.4],
-    fox_floatx2_perf:[14.2,26.5,3.0,0.5],fox_floatx2:[14.5,28.0,2.5,0.5],
-    fox_dhx2_perf:[15.5,35.0,3.0,0.0],fox_dhx2:[16.0,38.0,2.5,0.0],
-    ohlins_rxf32:[23.5,150.0,8.0,0],ohlins_rxf36:[26.5,205.0,8.0,0],
-    ohlins_rxf38:[28.0,235.0,8.0,0],ohlins_ttx_air:[14.0,24.0,3.0,0],
-    ohlins_ttx22:[13.5,22.0,3.0,0],ohlins_ttxl:[14.5,27.0,3.0,0],
-    marzocchi_z1:[24.5,195.0,9.0,10.0],marzocchi_z1_coil:[24.5,195.0,9.0,10.0],
-    marzocchi_z2:[23.5,175.0,10.0,8.0],marzocchi_cr:[23.0,155.0,11.0,7.0],
-    manitou_mezzer_pro:[25.0,205.0,9.0,9.0],manitou_mezzer_exp:[24.5,198.0,10.0,9.0],
-    manitou_mattoc_pro:[24.0,185.0,9.0,8.5],manitou_mattoc_exp:[23.5,178.0,10.0,8.5],
-    manitou_marvel_pro:[23.0,160.0,9.0,7.5],manitou_machete_pro:[24.2,182.0,10.0,8.5],
-    manitou_r7_pro:[22.5,145.0,12.0,0],manitou_circus_pro:[28.0,280.0,8.0,15.0],
-    dvo_diamond:[27.5,260.0,8.0,14.0],dvo_jade_x:[24.5,192.0,10.0,9.0],
-    dvo_beryl:[23.0,165.0,11.0,7.5],dvo_topaz:[14.0,23.0,3.5,0],
-    cc_helm_mkii:[25.0,202.0,9.0,9.5],cc_helm_mk1:[24.5,195.0,10.0,9.5],
-    cc_db_air:[14.5,25.0,3.0,0],cc_kitsuma:[13.8,22.0,3.5,0],cc_db_coil:[14.5,25.0,3.0,0],
-    xfusion_slide:[24.0,185.0,10.0,8.5],xfusion_vector:[25.0,205.0,9.0,9.5],
-    xfusion_utan:[24.5,192.0,10.0,9.0],xfusion_hilo:[23.0,162.0,11.0,8.0],
-    mrp_ribbon:[24.5,190.0,10.0,9.0],mrp_stage:[23.5,172.0,11.0,8.0],mrp_ravn:[24.8,198.0,9.5,9.5],
-    formula_selva_r:[25.5,208.0,9.0,9.0],formula_selva_c:[26.0,215.0,9.0,9.5],
-    formula_thirty5:[23.8,180.0,10.0,8.5],formula_25:[22.5,148.0,12.0,7.0],
-    formula_nero_air:[14.2,24.0,3.0,0],formula_stane:[13.5,21.5,3.5,0],
-    push_elevensix:[14.8,28.0,2.5,0],
-    rs_revelation_2015:[23.0,148.0,13.0,7.0],rs_sektor:[23.8,158.0,12.0,7.5],
-    rs_sector_rlt:[22.5,140.0,13.0,0],rs_bluto:[22.0,120.0,14.0,0],
-    fox_32_100:[22.5,135.0,12.0,7.0],
-    wintek_air_32:[21.5,128.0,14.0,0],rst_aerial:[22.0,130.0,14.0,0],
-    rst_blaze:[21.0,112.0,16.0,0],zoom_c30:[20.0,105.0,18.0,0],
-    sturdy_em100:[22.5,138.0,14.0,0],
-  };
-
-  // [brand, model, type, segment, strokes[], tokens, commonBikes, airSystem, discipline]
-  const C={
-    suntour_ncx:["SR Suntour","NCX Air","fork","entry",[63],false,"Trek FX 3/4, Orbea Vector, Cannondale Quick, e-bikes urbanas","Solo Air","Trekking/E-bike"],
-    suntour_ncx_d:["SR Suntour","NCX-D Air (lockout remoto)","fork","entry",[63],false,"E-bikes remote lockout, commuters premium","Solo Air","Trekking/E-bike"],
-    suntour_xcr_32:["SR Suntour","XCR 32mm Air","fork","entry",[100,120],false,"Decathlon Rockrider, Bulls, Cannondale Trail entry","Solo Air","XC"],
-    suntour_xcr_34:["SR Suntour","XCR 34 Air","fork","entry",[100,120,130],false,"Merida Big Nine 100, Fuji Nevada, Polygon Xtrada","Solo Air","XC/Trail"],
-    suntour_epixon_32:["SR Suntour","Epixon 32mm Air","fork","entry",[100,110,120],false,"Trek Marlin 7, Scott Aspect 950, Orbea MX 50","Solo Air","XC/Trail"],
-    suntour_epixon_lor:["SR Suntour","Epixon LO-R 32mm Air","fork","entry",[100,110,120],false,"Giant Talon LO-R, Decathlon Rockrider LO-R","Solo Air","XC/Trail"],
-    suntour_raidon_34:["SR Suntour","Raidon 34mm Air","fork","mid",[120,130,140],false,"Trek Marlin 8, Scott Scale 970, Cube Aim SL","Solo Air","Trail"],
-    suntour_raidon_lor:["SR Suntour","Raidon LO-R 34mm Air","fork","mid",[120,130,140],false,"Trek Marlin 8 LO-R, Giant Talon 1 29er","Solo Air","Trail"],
-    suntour_auron_35:["SR Suntour","Auron 35 EQ Air","fork","mid",[130,140,150,160],false,"Ghost Riot Trail, Cube Stereo 120, Cannondale Trail Neo","EQ Air","Trail"],
-    suntour_durolux_36:["SR Suntour","Durolux 36 EQ Air","fork","mid",[150,160,170,180],false,"Ghost Riot Enduro, NS Bikes Fuzz, Nukeproof Mega AL","EQ Air","Enduro"],
-    suntour_durolux_38:["SR Suntour","Durolux 38 EQ Air","fork","mid",[160,170,180],false,"Nukeproof Mega 290, Commencal Meta HT AM","EQ Air","Enduro"],
-    suntour_zeron_36:["SR Suntour","Zeron 36 E-MTB Air","fork","mid",[140,150,160],false,"Haibike Nduro, Cube Stereo Hybrid 160, Scott Patron","EQ Air","E-MTB Enduro"],
-    rs_paragon:["RockShox","Paragon Gold/Silver Air","fork","entry",[50,60,63],false,"Trek FX, Scott Sub, trekking y commuter","Solo Air","Trekking"],
-    rs_judy:["RockShox","Judy Gold/Silver Air","fork","entry",[80,100,110,120],false,"Trek Marlin 5/6, Specialized Rockhopper Comp, Giant Talon","Solo Air","XC/Trail"],
-    rs_judy_boost:["RockShox","Judy Gold Air B+ (Boost)","fork","entry",[100,110,120],false,"Scott Aspect 760 boost, Polygon Premier","Solo Air","XC/Trail"],
-    rs_recon:["RockShox","Recon Gold/Silver Air","fork","entry",[80,100,120,130,140,150],false,"Specialized Rockhopper Expert, Giant Talon 29, Cannondale Trail 5","Solo Air","XC/Trail"],
-    rs_sector_rlt:["RockShox","Sector RLT Solo Air (legacy)","fork","entry",[100,130,140],false,"Trek Marlin 2012-17, hardtails entry legacy","Solo Air","XC/Trail"],
-    rs_bluto:["RockShox","Bluto RL Solo Air (fat bike)","fork","entry",[80,100,120],false,"Trek Farley, Specialized Fatboy, Surly Pugsley","Solo Air","Fat Bike"],
-    rs_reba:["RockShox","Reba RL Solo Air","fork","mid",[100,110,120],false,"Trek X-Caliber, Giant XTC, Scott Spark 960, Cannondale F-Si","Solo Air","XC"],
-    rs_35_gold:["RockShox","35 Gold RL DebonAir","fork","mid",[100,120,130,140,150,160],true,"Trek Fuel EX entry, Stumpjumper Comp, Norco Fluid","DebonAir","Trail"],
-    rs_35_silver:["RockShox","35 Silver DebonAir","fork","mid",[120,130,140,150],true,"Marin Hawk Hill entry, Polygon Premier, budget trail","DebonAir","Trail"],
-    rs_revelation:["RockShox","Revelation RC DebonAir (legacy 2016-19)","fork","mid",[100,120,130,140],true,"Specialized Stumpjumper 2015-18, Trek Fuel EX 2016","DebonAir","Trail"],
-    rs_revelation_2015:["RockShox","Revelation RC (legacy 2013-15)","fork","mid",[120,130,140],true,"Specialized Stumpjumper 2013-15, Trek Fuel EX 2013-15","Solo Air","Trail"],
-    rs_sektor:["RockShox","Sektor Gold RL (legacy)","fork","mid",[100,120,130,140,150],true,"Scott Genius 2012-16, Cannondale Trigger 2013-16","Solo Air","Trail"],
-    rs_yari:["RockShox","Yari RC DebonAir (legacy 2016-21)","fork","mid",[140,150,160,170],true,"Trek Slash 2016-21, Norco Range AL 2017-21, Polygon Collosus","DebonAir","Enduro"],
-    rs_pike_2016:["RockShox","Pike RCT3 (legacy 2015-2017)","fork","mid",[120,130,140,150,160],true,"Trek Fuel EX 2016, Giant Trance 2016, Kona Process 2016","Solo Air","Trail"],
-    rs_sid_sl_select:["RockShox","SID SL Select 32mm DebonAir","fork","mid_high",[100,110,120],true,"Trek Supercaliber Comp, Specialized Epic EVO, Scott Spark 930","DebonAir","XC"],
-    rs_sid_sl_selectplus:["RockShox","SID SL Select+ 32mm DebonAir+","fork","mid_high",[100,110,120],true,"Giant Anthem Adv 29, Cannondale Scalpel SE, Trek Supercaliber 9.6","DebonAir+","XC"],
-    rs_sid_sl_ultimate:["RockShox","SID SL Ultimate 32mm DebonAir+","fork","high",[100,110,120],true,"Scott Spark RC 900, Yeti SB100, Specialized Epic S-Works 32","DebonAir+","XC"],
-    rs_sid_35_select:["RockShox","SID 35mm Select DebonAir+","fork","mid_high",[100,110,120],true,"Trek Top Fuel 9.7, Giant Anthem 29, Cannondale Scalpel Hi-MOD","DebonAir+","XC"],
-    rs_sid_35_selectplus:["RockShox","SID 35mm Select+ DebonAir+","fork","mid_high",[100,110,120],true,"Trek Top Fuel 9.9 XO, Giant Anthem Advanced Pro 29","DebonAir+","XC"],
-    rs_sid_35_ultimate:["RockShox","SID 35mm Ultimate DebonAir+","fork","high",[100,110,120],true,"Trek Top Fuel 9.9 XX1, Orbea Oiz TR, BMC Fourstroke 01","DebonAir+","XC"],
-    rs_pike_select:["RockShox","Pike Select DebonAir+","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 7/8, Stumpjumper EVO Comp, Norco Sight, Marin Rift Zone","DebonAir+","Trail"],
-    rs_pike_selectplus:["RockShox","Pike Select+ DebonAir+","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 8, Santa Cruz Tallboy Comp, Canyon Neuron CF 8","DebonAir+","Trail"],
-    rs_pike:["RockShox","Pike Ultimate DebonAir+","fork","high",[120,130,140,150],true,"Trek Fuel EX 9, Santa Cruz Tallboy CC, Yeti SB140, Ibis Ripley","DebonAir+","Trail"],
-    rs_pike_2018:["RockShox","Pike RC DebonAir (legacy 2018 B1)","fork","mid_high",[120,130,140,150,160],true,"Trek Fuel EX 2018, Specialized Stumpjumper 2018, Norco Sight 2018","DebonAir","Trail"],
-    rs_lyrik_select:["RockShox","Lyrik Select DebonAir+","fork","mid_high",[140,150,160,170],true,"Trek Slash entry, Norco Range Comp AL, Transition Sentinel Alloy","DebonAir+","Enduro"],
-    rs_lyrik_selectplus:["RockShox","Lyrik Select+ DebonAir+","fork","mid_high",[140,150,160,170],true,"Trek Slash 7, Canyon Strive CF 7, Pivot Firebird Comp","DebonAir+","Enduro"],
-    rs_lyrik:["RockShox","Lyrik Ultimate DebonAir+","fork","high",[140,150,160,170],true,"Specialized Enduro, Yeti SB160, Santa Cruz Megatower, Giant Reign","DebonAir+","Enduro"],
-    rs_zeb_select:["RockShox","ZEB Select DebonAir+","fork","mid_high",[160,170,180,190],true,"Trek Slash Comp, Norco Range AL 2022, Canyon Strive entry","DebonAir+","Enduro"],
-    rs_zeb_selectplus:["RockShox","ZEB Select+ DebonAir+","fork","mid_high",[160,170,180,190],true,"Trek Slash 8, Specialized Enduro Comp, Giant Reign Comp","DebonAir+","Enduro"],
-    rs_zeb:["RockShox","ZEB Ultimate DebonAir+","fork","high",[160,170,180,190],true,"Specialized Enduro Expert/Pro, Trek Slash 9, Yeti SB160 Expert","DebonAir+","Enduro"],
-    rs_domain_select:["RockShox","Domain Select DebonAir+ (DH)","fork","high",[180,200],true,"Trek Session entry, Transition TR11, Kona Operator entry","DebonAir+","DH"],
-    rs_domain_rc:["RockShox","Domain RC DebonAir+ (DH)","fork","high",[180,200],true,"Trek Session Comp, Canyon Sender AL, Mondraker Summum Al","DebonAir+","DH"],
-    rs_boxxer_select:["RockShox","BoXXer Select DebonAir (DH)","fork","high",[200],true,"Trek Session 8, Norco Aurum AL, Giant Glory Adv entry","DebonAir","DH"],
-    rs_boxxer_selectplus:["RockShox","BoXXer Select+ DebonAir+ (DH)","fork","high",[200],true,"Trek Session 9.7, YT Tues AL, Santa Cruz V10 AL","DebonAir+","DH"],
-    rs_boxxer_ultimate:["RockShox","BoXXer Ultimate DebonAir+ (DH)","fork","high",[200],true,"Trek Session 9.9, YT Tues CF, Santa Cruz V10 CC","DebonAir+","DH"],
-    rs_monarch_rt3:["RockShox","Monarch RT3 DebonAir (legacy)","shock","mid",[50,55,57,63],true,"Trek Fuel EX 2015-20, Stumpjumper 2015-18, Giant Trance 2015-19","DebonAir","Trail"],
-    rs_monarch_plus:["RockShox","Monarch Plus RC3 DebonAir (legacy)","shock","mid",[50,55,57,63],true,"Giant Trance 2014-20, Kona Process 2015-19, Norco Sight 2015-18","DebonAir","Trail"],
-    rs_kage_rc:["RockShox","Kage RC DebonAir+","shock","mid_high",[50,55,60],true,"Norco Range 2017-20, Canyon Torque, Transition Patrol","DebonAir+","Enduro"],
-    rs_deluxe_select:["RockShox","Deluxe Select DebonAir+","shock","mid",[40,45,47.5,50,55],true,"Trek Fuel EX 5/6/7, Norco Sight entry, Giant Trance 29 entry","DebonAir+","Trail"],
-    rs_deluxe_selectplus:["RockShox","Deluxe Select+ DebonAir+","shock","mid_high",[40,45,47.5,50,55],true,"Trek Fuel EX 8, Yeti SB130, Santa Cruz 5010 Comp","DebonAir+","Trail"],
-    rs_deluxe_ultimate:["RockShox","Deluxe Ultimate DebonAir+","shock","high",[40,45,47.5,50,55],true,"Specialized Stumpjumper EVO, Ibis Ripley Pro, Pivot Trail 429","DebonAir+","Trail"],
-    rs_super_deluxe_select:["RockShox","Super Deluxe Select DebonAir+","shock","mid_high",[45,47.5,50,55,60],true,"Trek Slash 7/8, Specialized Enduro Comp, Norco Range Comp","DebonAir+","Enduro"],
-    rs_super_deluxe_selectplus:["RockShox","Super Deluxe Select+ DebonAir+","shock","mid_high",[45,47.5,50,55,60],true,"Trek Slash 8, Canyon Strive CF Comp, Pivot Firebird Comp","DebonAir+","Enduro"],
-    rs_super_deluxe:["RockShox","Super Deluxe Ultimate DebonAir+","shock","high",[45,47.5,50,55,60,65],true,"Santa Cruz Megatower, Yeti SB160, Trek Slash 9, Giant Reign Adv","DebonAir+","Enduro"],
-    rs_vivid:["RockShox","Vivid Air DebonAir+","shock","high",[55,60,65],true,"Specialized Enduro S-Works, Santa Cruz Megatower CC","DebonAir+","Enduro"],
-    fox_32_legacy:["Fox","32 Float EVOL (pre-2019)","fork","mid",[100,120],true,"Trek Superfly, Specialized Epic 2016-18, Giant XTC Advanced","EVOL Air","XC"],
-    fox_32_100:["Fox","32 Float 100mm EVOL (legacy)","fork","mid",[100],true,"Hardtails XC 2014-18, Trek Marlin legacy","EVOL Air","XC"],
-    fox_32_rhythm:["Fox","32 Rhythm Float EVOL","fork","mid",[100,110,120],true,"Trek X-Caliber 8/9, Specialized Epic Comp, Scott Spark 940","EVOL Air","XC"],
-    fox_32_sc_perf:["Fox","32 Step-Cast Performance EVOL","fork","mid_high",[100,110,120],true,"Specialized Epic EVO Comp, Giant Anthem Adv, Cannondale Scalpel SE","EVOL Air","XC"],
-    fox_32_sc_factory:["Fox","32 Step-Cast Factory EVOL","fork","high",[100,110,120],true,"Specialized Epic S-Works, Giant Anthem Advanced Pro, Trek Top Fuel 9.9","EVOL Air","XC"],
-    fox_34_rhythm:["Fox","34 Rhythm Float EVOL","fork","mid",[120,130,140,150],true,"Trek Fuel EX 7, Stumpjumper Comp, Giant Trance 29 entry","EVOL Air","Trail"],
-    fox_34_perf:["Fox","34 Performance Float EVOL","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 8, Stumpjumper EVO Comp, Canyon Neuron CF","EVOL Air","Trail"],
-    fox_34:["Fox","34 Factory Float EVOL","fork","high",[120,130,140],true,"Trek Top Fuel 9, Specialized Epic EVO Expert, Ibis Ripley LS","EVOL Air","Trail"],
-    fox_34_2018:["Fox","34 Float EVOL GRIP (legacy 2018)","fork","mid_high",[120,130,140,150],true,"Specialized Stumpjumper 2018, Trek Fuel EX 2018","EVOL Air","Trail"],
-    fox_34_sc_perf:["Fox","34 Step-Cast Performance EVOL","fork","mid_high",[100,110,120],true,"Specialized Epic Comp EVO, Scott Spark 940 Comp, Trek Supercaliber 9.8","EVOL Air","XC"],
-    fox_34_sc:["Fox","34 Step-Cast Factory EVOL","fork","high",[100,110,120],true,"Specialized Epic Expert/S-Works, Scott Spark RC 900, Giant Anthem Pro","EVOL Air","XC"],
-    fox_36_perf:["Fox","36 Performance Float EVOL","fork","mid_high",[140,150,160],true,"Trek Slash 7, Norco Range Comp, Transition Sentinel Alloy","EVOL Air","AM/Enduro"],
-    fox_36:["Fox","36 Factory Float EVOL","fork","high",[140,150,160,170],true,"Santa Cruz Hightower, Yeti SB140, Trek Slash 9, Canyon Strive","EVOL Air","AM/Enduro"],
-    fox_36_2018:["Fox","36 Float EVOL GRIP (legacy 2018)","fork","mid_high",[150,160,170],true,"Specialized Enduro 2018, Giant Reign 2018, Canyon Strive 2018","EVOL Air","Enduro"],
-    fox_38_perf:["Fox","38 Performance Float EVOL","fork","mid_high",[160,170,180],true,"Specialized Enduro Comp, Trek Slash 8, Canyon Strive CF","EVOL Air","Enduro"],
-    fox_38:["Fox","38 Factory Float EVOL","fork","high",[160,170,180],true,"Specialized Enduro Expert/S-Works, Yeti SB160, Santa Cruz Megatower","EVOL Air","Enduro"],
-    fox_float_emtb:["Fox","Float 38 E-ATB (E-MTB)","fork","mid_high",[140,150,160],true,"Specialized Turbo Levo Expert, Trek Rail 9.8, Giant Trance X E+","EVOL Air","E-MTB"],
-    fox_40_perf:["Fox","40 Performance Float EVOL (DH)","fork","high",[200],true,"Norco Aurum AL, Giant Glory Comp, YT Tues AL, GT Fury","EVOL Air","DH"],
-    fox_40:["Fox","40 Factory Float EVOL (DH)","fork","high",[200],true,"Norco Aurum HSP, Canyon Sender CFR, Kona Operator DL","EVOL Air","DH"],
-    fox_float_ctd:["Fox","Float CTD Evolution (legacy 2013-16)","shock","mid",[40,44.5,47.5,50,55],true,"Trek Fuel EX 2013-16, Stumpjumper 2013-16, Giant Trance 2013-16","CTD Air","Trail"],
-    fox_vanilla_r:["Fox","Vanilla R Air (legacy 2010-14)","shock","mid",[50,55,57,63],true,"Trek Slash 2010-14, Specialized Enduro 2013","Air","Enduro"],
-    fox_dps_perf:["Fox","Float DPS Performance EVOL","shock","mid",[40,44.5,47.5,50,55],true,"Trek Fuel EX 5/6, Stumpjumper 2017-21, Giant Trance 2017-21","EVOL Air","XC/Trail"],
-    fox_dps_factory:["Fox","Float DPS Factory EVOL","shock","high",[40,44.5,47.5,50,55],true,"Trek Top Fuel 9, Specialized Epic EVO, Ibis Ripley 29","EVOL Air","XC/Trail"],
-    fox_float_x:["Fox","Float X Performance EVOL","shock","mid_high",[40,45,50,55],true,"Trek Fuel EX 8/9, Stumpjumper EVO, Giant Trance 29","EVOL Air","Trail"],
-    fox_float_x_factory:["Fox","Float X Factory EVOL","shock","high",[40,45,50,55],true,"Santa Cruz 5010, Yeti SB130, Pivot Trail 429 Pro","EVOL Air","Trail"],
-    fox_floatx2_perf:["Fox","Float X2 Performance EVOL","shock","mid_high",[45,50,55,60],true,"Trek Slash 7/8, Enduro Comp, Canyon Strive entry","EVOL Air","Enduro"],
-    fox_floatx2:["Fox","Float X2 Factory EVOL","shock","high",[45,50,55,60,65],true,"Yeti SB160, Santa Cruz Megatower, Specialized Enduro Expert","EVOL Air","Enduro"],
-    fox_dhx2_perf:["Fox","DHX2 Performance EVOL","shock","high",[50,55,60,65],true,"Trek Session Comp, Commencal Supreme Comp, Norco Aurum Comp","EVOL Air","DH/Enduro"],
-    fox_dhx2:["Fox","DHX2 Factory EVOL","shock","high",[50,55,60,65],true,"Trek Session 9.9, Giant Glory Factory, Polygon DH Pro","EVOL Air","DH"],
-    ohlins_rxf32:["Öhlins","RXF32 m.2 Air (XC)","fork","high",[100,110,120],false,"Custom XC premium, Ibis Ripley XC, Pivot Mach 4 SL","3-Chamber Air","XC"],
-    ohlins_rxf36:["Öhlins","RXF36 m.2 Air","fork","high",[140,150,160,170],false,"Ibis Ripley LS, Pivot Trail 429, Rocky Mountain Instinct","3-Chamber Air","Trail/Enduro"],
-    ohlins_rxf38:["Öhlins","RXF38 m.2 Air","fork","high",[160,170,180],false,"Pivot Firebird, Ibis HD6, Rocky Mountain Altitude","3-Chamber Air","Enduro"],
-    ohlins_ttx_air:["Öhlins","TTX Air Shock","shock","high",[44,50,55,60],false,"Ibis Ripley/HD6, Pivot Trail/Firebird, Rocky Mountain builds","Air Spring","Trail/Enduro"],
-    ohlins_ttx22:["Öhlins","TTX22 Air Shock","shock","high",[44,50,55],false,"Custom builds premium, Rocky Mountain Instinct 29","Air Spring","Trail"],
-    ohlins_ttxl:["Öhlins","TTX2L Air Shock (enduro)","shock","high",[50,55,60,65],false,"Ibis HD6, Pivot Firebird, custom enduro premium","Air Spring","Enduro"],
-    marzocchi_z1:["Marzocchi","Bomber Z1 Air","fork","mid_high",[140,150,160,170,180],true,"Marin Hawk Hill, Polygon Siskiu, Niner Jet 9 RDO, Kona Hei Hei","EVOL Air","Trail/Enduro"],
-    marzocchi_z1_coil:["Marzocchi","Bomber Z1 Coil (configuración air)","fork","mid_high",[140,150,160,170,180],false,"Custom enduro, Marin Wolf Ridge, hardtails enduro premium","EVOL Air","Enduro"],
-    marzocchi_z2:["Marzocchi","Bomber Z2 Air","fork","mid",[120,130,140,150,160],true,"Marin Rift Zone, Kona Hei Hei 2, Trek Marlin builds, Polygon Siskiu","EVOL Air","Trail"],
-    marzocchi_cr:["Marzocchi","Bomber CR Air","fork","mid",[100,120,130],true,"XC budget builds, Marin Wildcat Trail, entry XC","EVOL Air","XC/Trail"],
-    manitou_mezzer_pro:["Manitou","Mezzer Pro Air","fork","high",[140,150,160,170,180],true,"Evil Offering, Evil Following, Chromag Stylus, custom enduro","IRT Air","Enduro"],
-    manitou_mezzer_exp:["Manitou","Mezzer Expert Air","fork","mid_high",[140,150,160,170,180],true,"Budget enduro builds, Norco Range hardtail builds","IRT Air","Enduro"],
-    manitou_mattoc_pro:["Manitou","Mattoc Pro Air","fork","high",[120,130,140,150,160],true,"Evil Offering, Chromag Stylus, Pole Taival, custom trail","IRT Air","Trail"],
-    manitou_mattoc_exp:["Manitou","Mattoc Expert Air","fork","mid_high",[120,130,140,150],true,"Budget trail builds, custom mid-range","IRT Air","Trail"],
-    manitou_marvel_pro:["Manitou","Marvel Pro Air","fork","high",[100,110,120],true,"XC custom premium, Chromag hardtails XC","IRT Air","XC"],
-    manitou_machete_pro:["Manitou","Machete Pro Comp Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail/enduro, Chromag builds, Evil bikes entry","IRT Air","Trail/Enduro"],
-    manitou_r7_pro:["Manitou","R7 Pro Air (XC hardtail)","fork","mid",[100,120],false,"XC hardtail builds, budget XC market","Solo Air","XC"],
-    manitou_circus_pro:["Manitou","Circus Pro Air (DH)","fork","high",[200],true,"Polygon DH, custom DH builds","IRT Air","DH"],
-    dvo_diamond:["DVO","Diamond Air D1","fork","high",[160,170,180,200],true,"Evil Wreckoning, Pole Evolink, custom enduro/DH","Air","Enduro/DH"],
-    dvo_jade_x:["DVO","Jade X Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail, Evil Offering Comp, DVO-spec builds","Air","Trail"],
-    dvo_beryl:["DVO","Beryl Air (XC)","fork","mid_high",[100,110,120],true,"XC premium builds, custom trail/XC","Air","XC"],
-    dvo_topaz:["DVO","Topaz Air T3 Shock","shock","high",[45,50,55,60],false,"Evil Wreckoning, Pole Evolink 140, custom enduro","Air","Enduro"],
-    cc_helm_mkii:["Cane Creek","Helm Air MKII","fork","high",[140,150,160,170,180],true,"Transition Patrol/Spire, Guerrilla Gravity Megatrail, custom","Helm Air","Trail/Enduro"],
-    cc_helm_mk1:["Cane Creek","Helm Air MK1 (legacy)","fork","high",[130,140,150,160,170],true,"Transition Patrol 2018-21, custom trail/enduro legacy","Helm Air","Trail/Enduro"],
-    cc_db_air:["Cane Creek","Double Barrel Air (DB Air)","shock","high",[44,50,55,60],false,"Transition Patrol/Spire, Guerrilla Gravity, Ibis MD5","DB Air","Trail/Enduro"],
-    cc_kitsuma:["Cane Creek","Kitsuma Air Shock","shock","mid_high",[44,50,55],false,"Entry builds Cane Creek, custom trail mid-range","Kitsuma Air","Trail"],
-    cc_db_coil:["Cane Creek","Double Barrel Coil (air equiv.)","shock","high",[50,55,60],false,"Custom enduro premium, Guerrilla Gravity Race build","DB Coil/Air","Enduro"],
-    xfusion_slide:["X-Fusion","Slide RCX Air","fork","mid",[120,130,140,150],true,"Budget trail builds, Polygon Siskiu T entry","Air","Trail"],
-    xfusion_vector:["X-Fusion","Vector RCX Air","fork","mid_high",[140,150,160,170],true,"Budget enduro, Polygon Siskiu T Pro, custom enduro","Air","Enduro"],
-    xfusion_utan:["X-Fusion","Utan Air RC","fork","mid",[130,140,150],true,"Budget AM, custom trail 29er","Air","Trail/AM"],
-    xfusion_hilo:["X-Fusion","HiLo RC29 Air (XC)","fork","mid",[100,120],false,"XC budget builds, 29er hardtails","Air","XC"],
-    mrp_ribbon:["MRP","Ribbon Air (Coil-Air hybrid)","fork","high",[140,150,160,170,180],true,"Evil Calling/Following, Geometron G1, niche enduro","Air Coil-Air","Enduro"],
-    mrp_stage:["MRP","Stage Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail, MRP-spec bikes","Air","Trail"],
-    mrp_ravn:["MRP","Ravn Carbon Air","fork","high",[130,140,150,160],true,"Custom trail/enduro premium builds","Air","Trail/Enduro"],
-    formula_selva_r:["Formula","Selva R Air 36mm","fork","high",[140,150,160,170,180],true,"Lapierre Spicy, Commencal custom, Italian boutique enduro","OTT Air","Enduro"],
-    formula_selva_c:["Formula","Selva C Air 38mm","fork","high",[160,170,180],true,"Italian enduro premium, BH Five 27.5","OTT Air","Enduro"],
-    formula_thirty5:["Formula","Thirty5 Air 35mm","fork","mid_high",[120,130,140,150,160],true,"Lapierre Zesty/Spicy, custom trail italiana","OTT Air","Trail"],
-    formula_25:["Formula","25 Air 25mm (XC)","fork","high",[100,110,120],true,"XC race boutique, Cipollini builds","OTT Air","XC"],
-    formula_nero_air:["Formula","Nero Air Shock","shock","high",[44,50,55,60],false,"Lapierre Spicy, custom Italian enduro","OTT Air","Enduro"],
-    formula_stane:["Formula","Stane Air Shock","shock","mid_high",[44,50,55],false,"Lapierre Zesty, custom trail italiana","OTT Air","Trail"],
-    push_elevensix:["Push Industries","ElevenSix Air Shock","shock","high",[44,50,55,60],false,"Custom enduro/DH, Evil Wreckoning, Canfield bikes","Air","Enduro/DH"],
-    wintek_air_32:["Wintek","Air 32mm (budget)","fork","entry",[100,120],false,"Bicis de bajo costo, assemblers locales LatAm y Asia","Solo Air","XC/Trail"],
-    rst_aerial:["RST","Aerial Air 34mm","fork","entry",[80,100,120,130],false,"GT, Mongoose, bike shop builds budget, LatAm market","Solo Air","XC/Trail"],
-    rst_blaze:["RST","Blaze Air 30mm","fork","entry",[100,120],false,"Mongoose, GT, budget hardtails, bike shop generic","Solo Air","XC"],
-    zoom_c30:["Zoom","C30 Air (budget)","fork","entry",[100,120],false,"Budget completas, assemblers, Decathlon entry","Solo Air","XC"],
-    sturdy_em100:["Sturdy","EM100 Air E-MTB (budget)","fork","entry",[100,120,140],false,"E-bikes entry LatAm, assemblers locales","Solo Air","E-MTB entry"],
-  };
-
-  // Frames [travel, stroke, angle, lr_curve, progression]
-  const FR={
-    trek_supercaliber:[80,47,55,[[0,1.72],[50,1.70],[95,1.67]]],
-    specialized_epic:[120,42,50,[[0,2.95],[25,2.70],[60,2.50],[95,2.30]]],
-    scott_spark:[120,45,42,[[0,2.80],[25,2.60],[60,2.35],[95,2.20]]],
-    santa_cruz_blur:[120,45,22,[[0,3.05],[20,2.75],[50,2.55],[95,2.40]]],
-    yeti_sb100:[100,42,38,[[0,2.45],[30,2.38],[65,2.30],[95,2.22]]],
-    trek_fuel_ex:[140,52,43,[[0,2.80],[28,2.55],[60,2.35],[95,2.15]]],
-    specialized_stumpy:[140,55,48,[[0,3.00],[28,2.65],[60,2.45],[95,2.25]]],
-    santa_cruz_hightower:[140,52,18,[[0,3.10],[20,2.80],[50,2.55],[95,2.42]]],
-    yeti_sb140:[140,55,36,[[0,2.85],[28,2.75],[60,2.62],[95,2.50]]],
-    giant_trance:[135,50,44,[[0,2.85],[28,2.60],[60,2.40],[95,2.20]]],
-    canyon_neuron:[130,50,46,[[0,2.95],[28,2.65],[60,2.45],[95,2.25]]],
-    norco_sight:[140,55,45,[[0,2.90],[28,2.62],[60,2.42],[95,2.22]]],
-    ibis_ripley:[120,45,38,[[0,2.82],[28,2.72],[60,2.58],[95,2.44]]],
-    rocky_instinct:[140,55,44,[[0,2.88],[28,2.62],[60,2.42],[95,2.24]]],
-    transition_sentinel:[140,55,46,[[0,3.00],[28,2.65],[60,2.44],[95,2.26]]],
-    specialized_enduro:[170,60,65,[[0,3.60],[28,2.95],[60,2.65],[95,2.45]]],
-    santa_cruz_megatower:[165,62,17,[[0,3.05],[28,2.65],[60,2.48],[95,2.35]]],
-    trek_slash:[170,62,35,[[0,2.90],[28,2.60],[60,2.38],[95,2.10]]],
-    yeti_sb160:[160,65,38,[[0,2.85],[28,2.72],[60,2.60],[95,2.45]]],
-    canyon_strive:[170,62,44,[[0,3.05],[28,2.68],[60,2.46],[95,2.28]]],
-    giant_reign:[160,60,44,[[0,2.95],[28,2.65],[60,2.44],[95,2.26]]],
-    norco_range:[165,62,45,[[0,2.92],[28,2.63],[60,2.42],[95,2.24]]],
-    pivot_firebird:[160,60,40,[[0,2.88],[28,2.76],[60,2.60],[95,2.46]]],
-    ibis_hd6:[160,60,39,[[0,2.86],[28,2.74],[60,2.58],[95,2.44]]],
-    transition_spire:[160,62,46,[[0,3.00],[28,2.65],[60,2.44],[95,2.26]]],
-    commencal_meta_tr:[150,55,42,[[0,2.88],[28,2.58],[60,2.38],[95,2.18]]],
-  };
-  const LD={
-    horst:[[0,3.00],[30,2.65],[60,2.45],[95,2.30]],
-    vpp:[[0,3.10],[15,2.90],[40,2.55],[70,2.45],[95,2.40]],
-    dw_link:[[0,2.85],[30,2.75],[60,2.60],[95,2.45]],
-    single_pivot:[[0,2.90],[30,2.55],[60,2.35],[95,2.20]],
-    switch_infinity:[[0,2.85],[30,2.75],[60,2.65],[95,2.50]],
-    high_pivot:[[0,2.90],[30,2.60],[60,2.35],[95,2.10]],
-  };
-  const DISC={
-    XC:{sf:[15,20],ss:[25,28],pm:1.6,px:1.8,rf:.40},
-    Trail:{sf:[20,23],ss:[28,30],pm:1.8,px:2.1,rf:.50},
-    Enduro:{sf:[23,26],ss:[30,33],pm:2.0,px:2.4,rf:.60},
-    DH:{sf:[25,28],ss:[33,38],pm:2.2,px:2.7,rf:.70},
-  };
-  const SM={Smooth:.92,Neutral:1.0,Aggressive:1.08};
-  const TM={flow:.95,mixed:1.0,rough:1.10};
-  const CONF={entry:{b:.15,l:"±15% — punto de partida"},mid:{b:.10,l:"±10%"},mid_high:{b:.07,l:"±7% — alta precisión"},high:{b:.05,l:"±5% — precisión profesional"}};
-
-  function lrAt(c,p){const s=[...c].sort((a,b)=>a[0]-b[0]);if(p<=s[0][0])return s[0][1];if(p>=s[s.length-1][0])return s[s.length-1][1];for(let i=0;i<s.length-1;i++)if(p>=s[i][0]&&p<=s[i+1][0]){const t=(p-s[i][0])/(s[i+1][0]-s[i][0]);return s[i][1]+t*(s[i+1][1]-s[i][1])}return s[0][1]}
-  function aF(x,P,d,V,tc,tok,Ff){const A=Math.PI*(d/2e3)**2,V0=Math.max(V-tok*(tc||0),(tc||1))*1e-6,xm=Math.min(x/1e3,V0/A*.96),Vx=V0-A*xm;if(Vx<=0)return 0;return P*6894.76*Math.pow(V0/Vx,GAM)*A-Ff}
-  function sP(W,x,d,V,tc,tok,Ff){let lo=20,hi=500;for(let i=0;i<70;i++){const m=(lo+hi)/2;aF(x,m,d,V,tc,tok,Ff)<W?lo=m:hi=m;if(hi-lo<.01)break}return(lo+hi)/2}
-  function pR(P,d,V,tc,tok,Ff,st){const m=aF(st*.5,P,d,V,tc,tok,0),e=aF(st*.92,P,d,V,tc,tok,0);return m>0?e/m:1}
-
-  function calc(o){
-    const{mass,disc,style,terrain,key,stroke,frameKey,linkType,tokens}=o;
-    const s=C[key];if(!s)throw new Error('Modelo no encontrado: '+key);
-    const[d,V,Ff,tc]=F[key];
-    const D=DISC[disc];
-    const sk=s[2]==='fork'?'sf':'ss';
-    const[sMin,sMax]=D[sk];
-    const sAdj=(SM[style]-1)*3;
-    const sag=Math.min(Math.max((sMin+sMax)/2+sAdj,sMin-2),sMax+2);
-    let lr=1,travel=stroke;
-    if(s[2]==='shock'){
-      if(frameKey&&FR[frameKey]){const[tr,,a,cv]=FR[frameKey];lr=lrAt(cv,sag);travel=tr;}
-      else if(linkType&&LD[linkType])lr=lrAt(LD[linkType],sag);
-    }
-    const beta=s[2]==='fork'?.40:.60;
-    const W=mass*G*beta/lr;
-    const x=sag*stroke/100;
-    const P0=sP(W,x,d,V,tc,tokens,Ff);
-    let bT=tokens,bP=pR(P0,d,V,tc,tokens,Ff,stroke);
-    for(let t=0;t<=5;t++){const r=pR(P0,d,V,tc,t,Ff,stroke);if(r>=D.pm&&r<=D.px){bT=t;bP=r;break}}
-    const tn=bP<D.pm?'Agregar tokens (+progresividad)':bP>D.px?'Quitar tokens (demasiada progresividad)':'Tokens óptimos para esta disciplina';
-    const Fp=aF(Math.min(x+2,stroke*.97),P0,d,V,tc,bT,0),Fm=aF(Math.max(x-2,.5),P0,d,V,tc,bT,0);
-    let kL=(Fp-Fm)/(4/1e3);if(s[2]==='shock'&&lr>1)kL/=(lr*lr);
-    const K=kL/Math.max(mass*G*beta,1);
-    const rf=D.rf*SM[style]*TM[terrain];
-    const reb=Math.round(Math.min(Math.max(.5+.08*Math.log(Math.max(K,.1))+.15*rf,.2),.85)*18);
-    const comp=Math.round(Math.min(Math.max(rf*18*.6,2),16));
-    let wMm=x,wPct=sag;
-    if(s[2]==='shock'&&lr>1&&travel>0){wMm=x*lr;wPct=wMm/travel*100}
-    const conf=CONF[s[3]];const pB=P0*conf.b;
-    return{psi:Math.round(P0*10)/10,bar:Math.round(P0*.0689476*100)/100,
-      pMin:Math.round((P0-pB)*10)/10,pMax:Math.round((P0+pB)*10)/10,conf:conf.l,
-      sag:Math.round(sag*10)/10,xMm:Math.round(x*10)/10,
-      wMm:Math.round(wMm*10)/10,wPct:Math.round(wPct*10)/10,
-      tokens:bT,prog:Math.round(bP*1e3)/1e3,tokenNote:tn,
-      reb,comp,lr:Math.round(lr*1e3)/1e3,
-      seg:s[3],name:`${s[0]} ${s[1]}`,isShock:s[2]==='shock',disc:s[8]};
-  }
-  return{calc,C,F,FR};
+// ------------------------------------------------------------
+// BIKELAB_STUDIO_ENGINE_v5.0 — SISTEMA_PROTEGIDO
+// ------------------------------------------------------------
+const _ξ='Q2FybG9zIFJhdmVsbG8g4oCUIEJpa2VMYWIgU3R1ZGlvfDIwMjYtMDItMjZ8U0FHX01PREVMX3Y1LjA=';
+const _σ='f0eaa47dfcd2ff357ae776f70887bac00733d6761f1da8bd7034ba1dd2d8d026';
+const _α=[[67, 97, 114, 108, 111, 115, 32, 82, 97, 118, 101, 108, 108, 111, 32, 8212, 32, 66, 105, 107, 101, 76, 97, 98, 32, 83, 116, 117, 100, 105, 111]];
+const _π=atob('wqkgMjAyNiBCaWtlTGFiIFN0dWRpbyDigJQgQ2FybG9zIFJhdmVsbG8uIFRvZG9zIGxvcyBkZXJlY2hvcyByZXNlcnZhZG9zLg==');
+// Verificación de integridad (no remover)
+(function(){
+  const _v=atob(_ξ).split('|');
+  if(_v[0]!==_α.map(c=>String.fromCharCode(c)).join(''))
+    console.warn('[BLS] Watermark integrity check failed');
 })();
+const E =(()=>{const _g=9.81,G=9.81,GAM=1.30;const _fd={suntour_ncx:[20.5,92.0,18.0,0],suntour_ncx_d:[20.5,92.0,18.0,0],suntour_xcr_32:[22.8,142.0,13.0,0],suntour_xcr_34:[23.4,152.0,11.0,0],suntour_epixon_32:[22.1,138.2,12.0,0],suntour_epixon_lor:[22.1,135.0,12.0,0],suntour_raidon_34:[23.8,162.5,11.0,0],suntour_raidon_lor:[23.8,160.0,11.0,0],suntour_auron_35:[24.9,186.0,10.0,0],suntour_durolux_36:[25.8,210.0,10.0,0],suntour_durolux_38:[27.0,235.0,10.0,0],suntour_zeron_36:[26.2,218.0,10.0,0],rs_paragon:[21.5,108.0,16.0,0],rs_judy:[22.0,124.5,14.0,0],rs_judy_boost:[22.0,124.5,14.0,0],rs_recon:[22.1,128.0,14.0,0],rs_reba:[22.8,133.5,12.0,0],rs_revelation:[23.5,155.0,12.0,7.0],rs_yari:[24.0,175.0,11.0,8.0],rs_35_gold:[24.5,178.0,10.0,8.0],rs_35_silver:[24.0,172.0,11.0,8.0],rs_sid_sl_select:[23.2,148.0,9.0,7.0],rs_sid_sl_selectplus:[23.5,150.0,8.0,7.0],rs_sid_sl_ultimate:[23.8,153.0,5.0,7.0],rs_sid_35_select:[24.4,167.5,9.0,8.0],rs_sid_35_selectplus:[24.6,170.0,8.0,8.0],rs_sid_35_ultimate:[24.9,174.0,5.0,8.0],rs_pike_select:[24.1,182.0,9.0,8.8],rs_pike_selectplus:[24.4,185.0,7.0,8.8],rs_pike:[25.74,217.8,5.0,8.8],rs_pike_2018:[24.0,200.0,10.0,8.8],rs_pike_2016:[23.5,192.0,11.0,8.8],rs_lyrik_select:[24.0,197.0,9.0,10.5],rs_lyrik_selectplus:[24.2,200.0,7.0,10.5],rs_lyrik:[24.78,238.8,5.0,10.5],rs_zeb_select:[27.2,264.0,8.0,16.0],rs_zeb_selectplus:[27.5,270.0,7.0,16.0],rs_zeb:[28.55,299.7,5.0,16.0],rs_boxxer_select:[30.5,340.0,8.0,20.0],rs_boxxer_selectplus:[30.8,348.0,7.0,20.0],rs_boxxer_ultimate:[31.0,355.0,5.0,20.0],rs_domain_rc:[29.0,305.0,8.0,18.0],rs_domain_select:[28.5,295.0,9.0,18.0],rs_monarch_rt3:[12.5,18.0,5.0,1.2],rs_monarch_plus:[12.8,19.5,5.0,1.2],rs_kage_rc:[14.0,22.0,4.0,1.5],rs_deluxe_select:[13.0,19.5,3.0,1.5],rs_deluxe_selectplus:[13.2,20.5,3.0,1.5],rs_deluxe_ultimate:[13.5,21.8,2.5,1.5],rs_super_deluxe_select:[13.5,21.5,3.0,1.5],rs_super_deluxe_selectplus:[13.7,23.0,3.0,1.5],rs_super_deluxe:[13.8,26.0,3.0,1.5],rs_vivid:[15.0,38.0,3.0,1.5],fox_32_legacy:[22.5,138.0,12.0,7.0],fox_32_rhythm:[22.9,141.0,11.0,7.0],fox_32_sc_perf:[23.0,145.0,9.0,7.0],fox_32_sc_factory:[23.2,148.0,5.0,7.0],fox_34_rhythm:[24.1,167.0,10.0,8.0],fox_34_perf:[24.0,170.0,9.0,8.0],fox_34:[24.58,201.0,5.0,8.0],fox_34_2018:[24.0,185.0,10.0,8.0],fox_34_sc_perf:[23.8,158.0,9.0,8.0],fox_34_sc:[23.9,160.0,5.0,8.0],fox_36_perf:[23.8,197.0,9.0,10.0],fox_36:[24.68,235.1,5.0,10.0],fox_36_2018:[24.5,220.0,10.0,10.0],fox_38_perf:[24.8,230.0,8.0,10.0],fox_38:[25.99,257.3,5.0,10.0],fox_float_emtb:[25.0,215.0,9.0,10.0],fox_40_perf:[28.5,285.0,8.0,14.0],fox_40:[29.0,300.0,5.0,14.0],fox_float_ctd:[13.5,20.0,4.0,0],fox_vanilla_r:[14.0,22.0,4.0,0],fox_dps_perf:[12.0,16.5,3.5,0.3],fox_dps_factory:[12.2,17.5,2.5,0.3],fox_float_x:[13.2,19.8,3.0,0.4],fox_float_x_factory:[13.5,21.0,2.5,0.4],fox_floatx2_perf:[14.2,26.5,3.0,0.5],fox_floatx2:[14.5,28.0,2.5,0.5],fox_dhx2_perf:[15.5,35.0,3.0,0.0],fox_dhx2:[16.0,38.0,2.5,0.0],ohlins_rxf32:[23.5,150.0,8.0,0],ohlins_rxf36:[26.5,205.0,8.0,0],ohlins_rxf38:[28.0,235.0,8.0,0],ohlins_ttx_air:[14.0,24.0,3.0,0],ohlins_ttx22:[13.5,22.0,3.0,0],ohlins_ttxl:[14.5,27.0,3.0,0],marzocchi_z1:[24.5,195.0,9.0,10.0],marzocchi_z1_coil:[24.5,195.0,9.0,10.0],marzocchi_z2:[23.5,175.0,10.0,8.0],marzocchi_cr:[23.0,155.0,11.0,7.0],manitou_mezzer_pro:[25.0,205.0,9.0,9.0],manitou_mezzer_exp:[24.5,198.0,10.0,9.0],manitou_mattoc_pro:[24.0,185.0,9.0,8.5],manitou_mattoc_exp:[23.5,178.0,10.0,8.5],manitou_marvel_pro:[23.0,160.0,9.0,7.5],manitou_machete_pro:[24.2,182.0,10.0,8.5],manitou_r7_pro:[22.5,145.0,12.0,0],manitou_circus_pro:[28.0,280.0,8.0,15.0],dvo_diamond:[27.5,260.0,8.0,14.0],dvo_jade_x:[24.5,192.0,10.0,9.0],dvo_beryl:[23.0,165.0,11.0,7.5],dvo_topaz:[14.0,23.0,3.5,0],cc_helm_mkii:[25.0,202.0,9.0,9.5],cc_helm_mk1:[24.5,195.0,10.0,9.5],cc_db_air:[14.5,25.0,3.0,0],cc_kitsuma:[13.8,22.0,3.5,0],cc_db_coil:[14.5,25.0,3.0,0],xfusion_slide:[24.0,185.0,10.0,8.5],xfusion_vector:[25.0,205.0,9.0,9.5],xfusion_utan:[24.5,192.0,10.0,9.0],xfusion_hilo:[23.0,162.0,11.0,8.0],mrp_ribbon:[24.5,190.0,10.0,9.0],mrp_stage:[23.5,172.0,11.0,8.0],mrp_ravn:[24.8,198.0,9.5,9.5],formula_selva_r:[25.5,208.0,9.0,9.0],formula_selva_c:[26.0,215.0,9.0,9.5],formula_thirty5:[23.8,180.0,10.0,8.5],formula_25:[22.5,148.0,12.0,7.0],formula_nero_air:[14.2,24.0,3.0,0],formula_stane:[13.5,21.5,3.5,0],push_elevensix:[14.8,28.0,2.5,0],rs_revelation_2015:[23.0,148.0,13.0,7.0],rs_sektor:[23.8,158.0,12.0,7.5],rs_sector_rlt:[22.5,140.0,13.0,0],rs_bluto:[22.0,120.0,14.0,0],fox_32_100:[22.5,135.0,12.0,7.0],wintek_air_32:[21.5,128.0,14.0,0],rst_aerial:[22.0,130.0,14.0,0],rst_blaze:[21.0,112.0,16.0,0],zoom_c30:[20.0,105.0,18.0,0],sturdy_em100:[22.5,138.0,14.0,0],};const _cd={suntour_ncx:["SR Suntour","NCX Air","fork","entry",[63],false,"Trek FX 3/4,Orbea Vector,Cannondale Quick,e-bikes urbanas","Solo Air","Trekking/E-bike"],suntour_ncx_d:["SR Suntour","NCX-D Air(lockout remoto)","fork","entry",[63],false,"E-bikes remote lockout,commuters premium","Solo Air","Trekking/E-bike"],suntour_xcr_32:["SR Suntour","XCR 32mm Air","fork","entry",[100,120],false,"Decathlon Rockrider,Bulls,Cannondale Trail entry","Solo Air","XC"],suntour_xcr_34:["SR Suntour","XCR 34 Air","fork","entry",[100,120,130],false,"Merida Big Nine 100,Fuji Nevada,Polygon Xtrada","Solo Air","XC/Trail"],suntour_epixon_32:["SR Suntour","Epixon 32mm Air","fork","entry",[100,110,120],false,"Trek Marlin 7,Scott Aspect 950,Orbea MX 50","Solo Air","XC/Trail"],suntour_epixon_lor:["SR Suntour","Epixon LO-R 32mm Air","fork","entry",[100,110,120],false,"Giant Talon LO-R,Decathlon Rockrider LO-R","Solo Air","XC/Trail"],suntour_raidon_34:["SR Suntour","Raidon 34mm Air","fork","mid",[120,130,140],false,"Trek Marlin 8,Scott Scale 970,Cube Aim SL","Solo Air","Trail"],suntour_raidon_lor:["SR Suntour","Raidon LO-R 34mm Air","fork","mid",[120,130,140],false,"Trek Marlin 8 LO-R,Giant Talon 1 29er","Solo Air","Trail"],suntour_auron_35:["SR Suntour","Auron 35 EQ Air","fork","mid",[130,140,150,160],false,"Ghost Riot Trail,Cube Stereo 120,Cannondale Trail Neo","EQ Air","Trail"],suntour_durolux_36:["SR Suntour","Durolux 36 EQ Air","fork","mid",[150,160,170,180],false,"Ghost Riot Enduro,NS Bikes Fuzz,Nukeproof Mega AL","EQ Air","Enduro"],suntour_durolux_38:["SR Suntour","Durolux 38 EQ Air","fork","mid",[160,170,180],false,"Nukeproof Mega 290,Commencal Meta HT AM","EQ Air","Enduro"],suntour_zeron_36:["SR Suntour","Zeron 36 E-MTB Air","fork","mid",[140,150,160],false,"Haibike Nduro,Cube Stereo Hybrid 160,Scott Patron","EQ Air","E-MTB Enduro"],rs_paragon:["RockShox","Paragon Gold/Silver Air","fork","entry",[50,60,63],false,"Trek FX,Scott Sub,trekking y commuter","Solo Air","Trekking"],rs_judy:["RockShox","Judy Gold/Silver Air","fork","entry",[80,100,110,120],false,"Trek Marlin 5/6,Specialized Rockhopper Comp,Giant Talon","Solo Air","XC/Trail"],rs_judy_boost:["RockShox","Judy Gold Air B+(Boost)","fork","entry",[100,110,120],false,"Scott Aspect 760 boost,Polygon Premier","Solo Air","XC/Trail"],rs_recon:["RockShox","Recon Gold/Silver Air","fork","entry",[80,100,120,130,140,150],false,"Specialized Rockhopper Expert,Giant Talon 29,Cannondale Trail 5","Solo Air","XC/Trail"],rs_sector_rlt:["RockShox","Sector RLT Solo Air(legacy)","fork","entry",[100,130,140],false,"Trek Marlin 2012-17,hardtails entry legacy","Solo Air","XC/Trail"],rs_bluto:["RockShox","Bluto RL Solo Air(fat bike)","fork","entry",[80,100,120],false,"Trek Farley,Specialized Fatboy,Surly Pugsley","Solo Air","Fat Bike"],rs_reba:["RockShox","Reba RL Solo Air","fork","mid",[100,110,120],false,"Trek X-Caliber,Giant XTC,Scott Spark 960,Cannondale F-Si","Solo Air","XC"],rs_35_gold:["RockShox","35 Gold RL DebonAir","fork","mid",[100,120,130,140,150,160],true,"Trek Fuel EX entry,Stumpjumper Comp,Norco Fluid","DebonAir","Trail"],rs_35_silver:["RockShox","35 Silver DebonAir","fork","mid",[120,130,140,150],true,"Marin Hawk Hill entry,Polygon Premier,budget trail","DebonAir","Trail"],rs_revelation:["RockShox","Revelation RC DebonAir(legacy 2016-19)","fork","mid",[100,120,130,140],true,"Specialized Stumpjumper 2015-18,Trek Fuel EX 2016","DebonAir","Trail"],rs_revelation_2015:["RockShox","Revelation RC(legacy 2013-15)","fork","mid",[120,130,140],true,"Specialized Stumpjumper 2013-15,Trek Fuel EX 2013-15","Solo Air","Trail"],rs_sektor:["RockShox","Sektor Gold RL(legacy)","fork","mid",[100,120,130,140,150],true,"Scott Genius 2012-16,Cannondale Trigger 2013-16","Solo Air","Trail"],rs_yari:["RockShox","Yari RC DebonAir(legacy 2016-21)","fork","mid",[140,150,160,170],true,"Trek Slash 2016-21,Norco Range AL 2017-21,Polygon Collosus","DebonAir","Enduro"],rs_pike_2016:["RockShox","Pike RCT3(legacy 2015-2017)","fork","mid",[120,130,140,150,160],true,"Trek Fuel EX 2016,Giant Trance 2016,Kona Process 2016","Solo Air","Trail"],rs_sid_sl_select:["RockShox","SID SL Select 32mm DebonAir","fork","mid_high",[100,110,120],true,"Trek Supercaliber Comp,Specialized Epic EVO,Scott Spark 930","DebonAir","XC"],rs_sid_sl_selectplus:["RockShox","SID SL Select+ 32mm DebonAir+","fork","mid_high",[100,110,120],true,"Giant Anthem Adv 29,Cannondale Scalpel SE,Trek Supercaliber 9.6","DebonAir+","XC"],rs_sid_sl_ultimate:["RockShox","SID SL Ultimate 32mm DebonAir+","fork","high",[100,110,120],true,"Scott Spark RC 900,Yeti SB100,Specialized Epic S-Works 32","DebonAir+","XC"],rs_sid_35_select:["RockShox","SID 35mm Select DebonAir+","fork","mid_high",[100,110,120],true,"Trek Top Fuel 9.7,Giant Anthem 29,Cannondale Scalpel Hi-MOD","DebonAir+","XC"],rs_sid_35_selectplus:["RockShox","SID 35mm Select+ DebonAir+","fork","mid_high",[100,110,120],true,"Trek Top Fuel 9.9 XO,Giant Anthem Advanced Pro 29","DebonAir+","XC"],rs_sid_35_ultimate:["RockShox","SID 35mm Ultimate DebonAir+","fork","high",[100,110,120],true,"Trek Top Fuel 9.9 XX1,Orbea Oiz TR,BMC Fourstroke 01","DebonAir+","XC"],rs_pike_select:["RockShox","Pike Select DebonAir+","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 7/8,Stumpjumper EVO Comp,Norco Sight,Marin Rift Zone","DebonAir+","Trail"],rs_pike_selectplus:["RockShox","Pike Select+ DebonAir+","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 8,Santa Cruz Tallboy Comp,Canyon Neuron CF 8","DebonAir+","Trail"],rs_pike:["RockShox","Pike Ultimate DebonAir+","fork","high",[120,130,140,150],true,"Trek Fuel EX 9,Santa Cruz Tallboy CC,Yeti SB140,Ibis Ripley","DebonAir+","Trail"],rs_pike_2018:["RockShox","Pike RC DebonAir(legacy 2018 B1)","fork","mid_high",[120,130,140,150,160],true,"Trek Fuel EX 2018,Specialized Stumpjumper 2018,Norco Sight 2018","DebonAir","Trail"],rs_lyrik_select:["RockShox","Lyrik Select DebonAir+","fork","mid_high",[140,150,160,170],true,"Trek Slash entry,Norco Range Comp AL,Transition Sentinel Alloy","DebonAir+","Enduro"],rs_lyrik_selectplus:["RockShox","Lyrik Select+ DebonAir+","fork","mid_high",[140,150,160,170],true,"Trek Slash 7,Canyon Strive CF 7,Pivot Firebird Comp","DebonAir+","Enduro"],rs_lyrik:["RockShox","Lyrik Ultimate DebonAir+","fork","high",[140,150,160,170],true,"Specialized Enduro,Yeti SB160,Santa Cruz Megatower,Giant Reign","DebonAir+","Enduro"],rs_zeb_select:["RockShox","ZEB Select DebonAir+","fork","mid_high",[160,170,180,190],true,"Trek Slash Comp,Norco Range AL 2022,Canyon Strive entry","DebonAir+","Enduro"],rs_zeb_selectplus:["RockShox","ZEB Select+ DebonAir+","fork","mid_high",[160,170,180,190],true,"Trek Slash 8,Specialized Enduro Comp,Giant Reign Comp","DebonAir+","Enduro"],rs_zeb:["RockShox","ZEB Ultimate DebonAir+","fork","high",[160,170,180,190],true,"Specialized Enduro Expert/Pro,Trek Slash 9,Yeti SB160 Expert","DebonAir+","Enduro"],rs_domain_select:["RockShox","Domain Select DebonAir+(DH)","fork","high",[180,200],true,"Trek Session entry,Transition TR11,Kona Operator entry","DebonAir+","DH"],rs_domain_rc:["RockShox","Domain RC DebonAir+(DH)","fork","high",[180,200],true,"Trek Session Comp,Canyon Sender AL,Mondraker Summum Al","DebonAir+","DH"],rs_boxxer_select:["RockShox","BoXXer Select DebonAir(DH)","fork","high",[200],true,"Trek Session 8,Norco Aurum AL,Giant Glory Adv entry","DebonAir","DH"],rs_boxxer_selectplus:["RockShox","BoXXer Select+ DebonAir+(DH)","fork","high",[200],true,"Trek Session 9.7,YT Tues AL,Santa Cruz V10 AL","DebonAir+","DH"],rs_boxxer_ultimate:["RockShox","BoXXer Ultimate DebonAir+(DH)","fork","high",[200],true,"Trek Session 9.9,YT Tues CF,Santa Cruz V10 CC","DebonAir+","DH"],rs_monarch_rt3:["RockShox","Monarch RT3 DebonAir(legacy)","shock","mid",[50,55,57,63],true,"Trek Fuel EX 2015-20,Stumpjumper 2015-18,Giant Trance 2015-19","DebonAir","Trail"],rs_monarch_plus:["RockShox","Monarch Plus RC3 DebonAir(legacy)","shock","mid",[50,55,57,63],true,"Giant Trance 2014-20,Kona Process 2015-19,Norco Sight 2015-18","DebonAir","Trail"],rs_kage_rc:["RockShox","Kage RC DebonAir+","shock","mid_high",[50,55,60],true,"Norco Range 2017-20,Canyon Torque,Transition Patrol","DebonAir+","Enduro"],rs_deluxe_select:["RockShox","Deluxe Select DebonAir+","shock","mid",[40,45,47.5,50,55],true,"Trek Fuel EX 5/6/7,Norco Sight entry,Giant Trance 29 entry","DebonAir+","Trail"],rs_deluxe_selectplus:["RockShox","Deluxe Select+ DebonAir+","shock","mid_high",[40,45,47.5,50,55],true,"Trek Fuel EX 8,Yeti SB130,Santa Cruz 5010 Comp","DebonAir+","Trail"],rs_deluxe_ultimate:["RockShox","Deluxe Ultimate DebonAir+","shock","high",[40,45,47.5,50,55],true,"Specialized Stumpjumper EVO,Ibis Ripley Pro,Pivot Trail 429","DebonAir+","Trail"],rs_super_deluxe_select:["RockShox","Super Deluxe Select DebonAir+","shock","mid_high",[45,47.5,50,55,60],true,"Trek Slash 7/8,Specialized Enduro Comp,Norco Range Comp","DebonAir+","Enduro"],rs_super_deluxe_selectplus:["RockShox","Super Deluxe Select+ DebonAir+","shock","mid_high",[45,47.5,50,55,60],true,"Trek Slash 8,Canyon Strive CF Comp,Pivot Firebird Comp","DebonAir+","Enduro"],rs_super_deluxe:["RockShox","Super Deluxe Ultimate DebonAir+","shock","high",[45,47.5,50,55,60,65],true,"Santa Cruz Megatower,Yeti SB160,Trek Slash 9,Giant Reign Adv","DebonAir+","Enduro"],rs_vivid:["RockShox","Vivid Air DebonAir+","shock","high",[55,60,65],true,"Specialized Enduro S-Works,Santa Cruz Megatower CC","DebonAir+","Enduro"],fox_32_legacy:["Fox","32 Float EVOL(pre-2019)","fork","mid",[100,120],true,"Trek Superfly,Specialized Epic 2016-18,Giant XTC Advanced","EVOL Air","XC"],fox_32_100:["Fox","32 Float 100mm EVOL(legacy)","fork","mid",[100],true,"Hardtails XC 2014-18,Trek Marlin legacy","EVOL Air","XC"],fox_32_rhythm:["Fox","32 Rhythm Float EVOL","fork","mid",[100,110,120],true,"Trek X-Caliber 8/9,Specialized Epic Comp,Scott Spark 940","EVOL Air","XC"],fox_32_sc_perf:["Fox","32 Step-Cast Performance EVOL","fork","mid_high",[100,110,120],true,"Specialized Epic EVO Comp,Giant Anthem Adv,Cannondale Scalpel SE","EVOL Air","XC"],fox_32_sc_factory:["Fox","32 Step-Cast Factory EVOL","fork","high",[100,110,120],true,"Specialized Epic S-Works,Giant Anthem Advanced Pro,Trek Top Fuel 9.9","EVOL Air","XC"],fox_34_rhythm:["Fox","34 Rhythm Float EVOL","fork","mid",[120,130,140,150],true,"Trek Fuel EX 7,Stumpjumper Comp,Giant Trance 29 entry","EVOL Air","Trail"],fox_34_perf:["Fox","34 Performance Float EVOL","fork","mid_high",[120,130,140,150],true,"Trek Fuel EX 8,Stumpjumper EVO Comp,Canyon Neuron CF","EVOL Air","Trail"],fox_34:["Fox","34 Factory Float EVOL","fork","high",[120,130,140],true,"Trek Top Fuel 9,Specialized Epic EVO Expert,Ibis Ripley LS","EVOL Air","Trail"],fox_34_2018:["Fox","34 Float EVOL GRIP(legacy 2018)","fork","mid_high",[120,130,140,150],true,"Specialized Stumpjumper 2018,Trek Fuel EX 2018","EVOL Air","Trail"],fox_34_sc_perf:["Fox","34 Step-Cast Performance EVOL","fork","mid_high",[100,110,120],true,"Specialized Epic Comp EVO,Scott Spark 940 Comp,Trek Supercaliber 9.8","EVOL Air","XC"],fox_34_sc:["Fox","34 Step-Cast Factory EVOL","fork","high",[100,110,120],true,"Specialized Epic Expert/S-Works,Scott Spark RC 900,Giant Anthem Pro","EVOL Air","XC"],fox_36_perf:["Fox","36 Performance Float EVOL","fork","mid_high",[140,150,160],true,"Trek Slash 7,Norco Range Comp,Transition Sentinel Alloy","EVOL Air","AM/Enduro"],fox_36:["Fox","36 Factory Float EVOL","fork","high",[140,150,160,170],true,"Santa Cruz Hightower,Yeti SB140,Trek Slash 9,Canyon Strive","EVOL Air","AM/Enduro"],fox_36_2018:["Fox","36 Float EVOL GRIP(legacy 2018)","fork","mid_high",[150,160,170],true,"Specialized Enduro 2018,Giant Reign 2018,Canyon Strive 2018","EVOL Air","Enduro"],fox_38_perf:["Fox","38 Performance Float EVOL","fork","mid_high",[160,170,180],true,"Specialized Enduro Comp,Trek Slash 8,Canyon Strive CF","EVOL Air","Enduro"],fox_38:["Fox","38 Factory Float EVOL","fork","high",[160,170,180],true,"Specialized Enduro Expert/S-Works,Yeti SB160,Santa Cruz Megatower","EVOL Air","Enduro"],fox_float_emtb:["Fox","Float 38 E-ATB(E-MTB)","fork","mid_high",[140,150,160],true,"Specialized Turbo Levo Expert,Trek Rail 9.8,Giant Trance X E+","EVOL Air","E-MTB"],fox_40_perf:["Fox","40 Performance Float EVOL(DH)","fork","high",[200],true,"Norco Aurum AL,Giant Glory Comp,YT Tues AL,GT Fury","EVOL Air","DH"],fox_40:["Fox","40 Factory Float EVOL(DH)","fork","high",[200],true,"Norco Aurum HSP,Canyon Sender CFR,Kona Operator DL","EVOL Air","DH"],fox_float_ctd:["Fox","Float CTD Evolution(legacy 2013-16)","shock","mid",[40,44.5,47.5,50,55],true,"Trek Fuel EX 2013-16,Stumpjumper 2013-16,Giant Trance 2013-16","CTD Air","Trail"],fox_vanilla_r:["Fox","Vanilla R Air(legacy 2010-14)","shock","mid",[50,55,57,63],true,"Trek Slash 2010-14,Specialized Enduro 2013","Air","Enduro"],fox_dps_perf:["Fox","Float DPS Performance EVOL","shock","mid",[40,44.5,47.5,50,55],true,"Trek Fuel EX 5/6,Stumpjumper 2017-21,Giant Trance 2017-21","EVOL Air","XC/Trail"],fox_dps_factory:["Fox","Float DPS Factory EVOL","shock","high",[40,44.5,47.5,50,55],true,"Trek Top Fuel 9,Specialized Epic EVO,Ibis Ripley 29","EVOL Air","XC/Trail"],fox_float_x:["Fox","Float X Performance EVOL","shock","mid_high",[40,45,50,55],true,"Trek Fuel EX 8/9,Stumpjumper EVO,Giant Trance 29","EVOL Air","Trail"],fox_float_x_factory:["Fox","Float X Factory EVOL","shock","high",[40,45,50,55],true,"Santa Cruz 5010,Yeti SB130,Pivot Trail 429 Pro","EVOL Air","Trail"],fox_floatx2_perf:["Fox","Float X2 Performance EVOL","shock","mid_high",[45,50,55,60],true,"Trek Slash 7/8,Enduro Comp,Canyon Strive entry","EVOL Air","Enduro"],fox_floatx2:["Fox","Float X2 Factory EVOL","shock","high",[45,50,55,60,65],true,"Yeti SB160,Santa Cruz Megatower,Specialized Enduro Expert","EVOL Air","Enduro"],fox_dhx2_perf:["Fox","DHX2 Performance EVOL","shock","high",[50,55,60,65],true,"Trek Session Comp,Commencal Supreme Comp,Norco Aurum Comp","EVOL Air","DH/Enduro"],fox_dhx2:["Fox","DHX2 Factory EVOL","shock","high",[50,55,60,65],true,"Trek Session 9.9,Giant Glory Factory,Polygon DH Pro","EVOL Air","DH"],ohlins_rxf32:["Öhlins","RXF32 m.2 Air(XC)","fork","high",[100,110,120],false,"Custom XC premium,Ibis Ripley XC,Pivot Mach 4 SL","3-Chamber Air","XC"],ohlins_rxf36:["Öhlins","RXF36 m.2 Air","fork","high",[140,150,160,170],false,"Ibis Ripley LS,Pivot Trail 429,Rocky Mountain Instinct","3-Chamber Air","Trail/Enduro"],ohlins_rxf38:["Öhlins","RXF38 m.2 Air","fork","high",[160,170,180],false,"Pivot Firebird,Ibis HD6,Rocky Mountain Altitude","3-Chamber Air","Enduro"],ohlins_ttx_air:["Öhlins","TTX Air Shock","shock","high",[44,50,55,60],false,"Ibis Ripley/HD6,Pivot Trail/Firebird,Rocky Mountain builds","Air Spring","Trail/Enduro"],ohlins_ttx22:["Öhlins","TTX22 Air Shock","shock","high",[44,50,55],false,"Custom builds premium,Rocky Mountain Instinct 29","Air Spring","Trail"],ohlins_ttxl:["Öhlins","TTX2L Air Shock(enduro)","shock","high",[50,55,60,65],false,"Ibis HD6,Pivot Firebird,custom enduro premium","Air Spring","Enduro"],marzocchi_z1:["Marzocchi","Bomber Z1 Air","fork","mid_high",[140,150,160,170,180],true,"Marin Hawk Hill,Polygon Siskiu,Niner Jet 9 RDO,Kona Hei Hei","EVOL Air","Trail/Enduro"],marzocchi_z1_coil:["Marzocchi","Bomber Z1 Coil(configuración air)","fork","mid_high",[140,150,160,170,180],false,"Custom enduro,Marin Wolf Ridge,hardtails enduro premium","EVOL Air","Enduro"],marzocchi_z2:["Marzocchi","Bomber Z2 Air","fork","mid",[120,130,140,150,160],true,"Marin Rift Zone,Kona Hei Hei 2,Trek Marlin builds,Polygon Siskiu","EVOL Air","Trail"],marzocchi_cr:["Marzocchi","Bomber CR Air","fork","mid",[100,120,130],true,"XC budget builds,Marin Wildcat Trail,entry XC","EVOL Air","XC/Trail"],manitou_mezzer_pro:["Manitou","Mezzer Pro Air","fork","high",[140,150,160,170,180],true,"Evil Offering,Evil Following,Chromag Stylus,custom enduro","IRT Air","Enduro"],manitou_mezzer_exp:["Manitou","Mezzer Expert Air","fork","mid_high",[140,150,160,170,180],true,"Budget enduro builds,Norco Range hardtail builds","IRT Air","Enduro"],manitou_mattoc_pro:["Manitou","Mattoc Pro Air","fork","high",[120,130,140,150,160],true,"Evil Offering,Chromag Stylus,Pole Taival,custom trail","IRT Air","Trail"],manitou_mattoc_exp:["Manitou","Mattoc Expert Air","fork","mid_high",[120,130,140,150],true,"Budget trail builds,custom mid-range","IRT Air","Trail"],manitou_marvel_pro:["Manitou","Marvel Pro Air","fork","high",[100,110,120],true,"XC custom premium,Chromag hardtails XC","IRT Air","XC"],manitou_machete_pro:["Manitou","Machete Pro Comp Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail/enduro,Chromag builds,Evil bikes entry","IRT Air","Trail/Enduro"],manitou_r7_pro:["Manitou","R7 Pro Air(XC hardtail)","fork","mid",[100,120],false,"XC hardtail builds,budget XC market","Solo Air","XC"],manitou_circus_pro:["Manitou","Circus Pro Air(DH)","fork","high",[200],true,"Polygon DH,custom DH builds","IRT Air","DH"],dvo_diamond:["DVO","Diamond Air D1","fork","high",[160,170,180,200],true,"Evil Wreckoning,Pole Evolink,custom enduro/DH","Air","Enduro/DH"],dvo_jade_x:["DVO","Jade X Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail,Evil Offering Comp,DVO-spec builds","Air","Trail"],dvo_beryl:["DVO","Beryl Air(XC)","fork","mid_high",[100,110,120],true,"XC premium builds,custom trail/XC","Air","XC"],dvo_topaz:["DVO","Topaz Air T3 Shock","shock","high",[45,50,55,60],false,"Evil Wreckoning,Pole Evolink 140,custom enduro","Air","Enduro"],cc_helm_mkii:["Cane Creek","Helm Air MKII","fork","high",[140,150,160,170,180],true,"Transition Patrol/Spire,Guerrilla Gravity Megatrail,custom","Helm Air","Trail/Enduro"],cc_helm_mk1:["Cane Creek","Helm Air MK1(legacy)","fork","high",[130,140,150,160,170],true,"Transition Patrol 2018-21,custom trail/enduro legacy","Helm Air","Trail/Enduro"],cc_db_air:["Cane Creek","Double Barrel Air(DB Air)","shock","high",[44,50,55,60],false,"Transition Patrol/Spire,Guerrilla Gravity,Ibis MD5","DB Air","Trail/Enduro"],cc_kitsuma:["Cane Creek","Kitsuma Air Shock","shock","mid_high",[44,50,55],false,"Entry builds Cane Creek,custom trail mid-range","Kitsuma Air","Trail"],cc_db_coil:["Cane Creek","Double Barrel Coil(air equiv.)","shock","high",[50,55,60],false,"Custom enduro premium,Guerrilla Gravity Race build","DB Coil/Air","Enduro"],xfusion_slide:["X-Fusion","Slide RCX Air","fork","mid",[120,130,140,150],true,"Budget trail builds,Polygon Siskiu T entry","Air","Trail"],xfusion_vector:["X-Fusion","Vector RCX Air","fork","mid_high",[140,150,160,170],true,"Budget enduro,Polygon Siskiu T Pro,custom enduro","Air","Enduro"],xfusion_utan:["X-Fusion","Utan Air RC","fork","mid",[130,140,150],true,"Budget AM,custom trail 29er","Air","Trail/AM"],xfusion_hilo:["X-Fusion","HiLo RC29 Air(XC)","fork","mid",[100,120],false,"XC budget builds,29er hardtails","Air","XC"],mrp_ribbon:["MRP","Ribbon Air(Coil-Air hybrid)","fork","high",[140,150,160,170,180],true,"Evil Calling/Following,Geometron G1,niche enduro","Air Coil-Air","Enduro"],mrp_stage:["MRP","Stage Air","fork","mid_high",[120,130,140,150,160],true,"Custom trail,MRP-spec bikes","Air","Trail"],mrp_ravn:["MRP","Ravn Carbon Air","fork","high",[130,140,150,160],true,"Custom trail/enduro premium builds","Air","Trail/Enduro"],formula_selva_r:["Formula","Selva R Air 36mm","fork","high",[140,150,160,170,180],true,"Lapierre Spicy,Commencal custom,Italian boutique enduro","OTT Air","Enduro"],formula_selva_c:["Formula","Selva C Air 38mm","fork","high",[160,170,180],true,"Italian enduro premium,BH Five 27.5","OTT Air","Enduro"],formula_thirty5:["Formula","Thirty5 Air 35mm","fork","mid_high",[120,130,140,150,160],true,"Lapierre Zesty/Spicy,custom trail italiana","OTT Air","Trail"],formula_25:["Formula","25 Air 25mm(XC)","fork","high",[100,110,120],true,"XC race boutique,Cipollini builds","OTT Air","XC"],formula_nero_air:["Formula","Nero Air Shock","shock","high",[44,50,55,60],false,"Lapierre Spicy,custom Italian enduro","OTT Air","Enduro"],formula_stane:["Formula","Stane Air Shock","shock","mid_high",[44,50,55],false,"Lapierre Zesty,custom trail italiana","OTT Air","Trail"],push_elevensix:["Push Industries","ElevenSix Air Shock","shock","high",[44,50,55,60],false,"Custom enduro/DH,Evil Wreckoning,Canfield bikes","Air","Enduro/DH"],wintek_air_32:["Wintek","Air 32mm(budget)","fork","entry",[100,120],false,"Bicis de bajo costo,assemblers locales LatAm y Asia","Solo Air","XC/Trail"],rst_aerial:["RST","Aerial Air 34mm","fork","entry",[80,100,120,130],false,"GT,Mongoose,bike shop builds budget,LatAm market","Solo Air","XC/Trail"],rst_blaze:["RST","Blaze Air 30mm","fork","entry",[100,120],false,"Mongoose,GT,budget hardtails,bike shop generic","Solo Air","XC"],zoom_c30:["Zoom","C30 Air(budget)","fork","entry",[100,120],false,"Budget completas,assemblers,Decathlon entry","Solo Air","XC"],sturdy_em100:["Sturdy","EM100 Air E-MTB(budget)","fork","entry",[100,120,140],false,"E-bikes entry LatAm,assemblers locales","Solo Air","E-MTB entry"],};const _fr={trek_supercaliber:[80,47,55,[[0,1.72],[50,1.70],[95,1.67]]],specialized_epic:[120,42,50,[[0,2.95],[25,2.70],[60,2.50],[95,2.30]]],scott_spark:[120,45,42,[[0,2.80],[25,2.60],[60,2.35],[95,2.20]]],santa_cruz_blur:[120,45,22,[[0,3.05],[20,2.75],[50,2.55],[95,2.40]]],yeti_sb100:[100,42,38,[[0,2.45],[30,2.38],[65,2.30],[95,2.22]]],trek_fuel_ex:[140,52,43,[[0,2.80],[28,2.55],[60,2.35],[95,2.15]]],specialized_stumpy:[140,55,48,[[0,3.00],[28,2.65],[60,2.45],[95,2.25]]],santa_cruz_hightower:[140,52,18,[[0,3.10],[20,2.80],[50,2.55],[95,2.42]]],yeti_sb140:[140,55,36,[[0,2.85],[28,2.75],[60,2.62],[95,2.50]]],giant_trance:[135,50,44,[[0,2.85],[28,2.60],[60,2.40],[95,2.20]]],canyon_neuron:[130,50,46,[[0,2.95],[28,2.65],[60,2.45],[95,2.25]]],norco_sight:[140,55,45,[[0,2.90],[28,2.62],[60,2.42],[95,2.22]]],ibis_ripley:[120,45,38,[[0,2.82],[28,2.72],[60,2.58],[95,2.44]]],rocky_instinct:[140,55,44,[[0,2.88],[28,2.62],[60,2.42],[95,2.24]]],transition_sentinel:[140,55,46,[[0,3.00],[28,2.65],[60,2.44],[95,2.26]]],specialized_enduro:[170,60,65,[[0,3.60],[28,2.95],[60,2.65],[95,2.45]]],santa_cruz_megatower:[165,62,17,[[0,3.05],[28,2.65],[60,2.48],[95,2.35]]],trek_slash:[170,62,35,[[0,2.90],[28,2.60],[60,2.38],[95,2.10]]],yeti_sb160:[160,65,38,[[0,2.85],[28,2.72],[60,2.60],[95,2.45]]],canyon_strive:[170,62,44,[[0,3.05],[28,2.68],[60,2.46],[95,2.28]]],giant_reign:[160,60,44,[[0,2.95],[28,2.65],[60,2.44],[95,2.26]]],norco_range:[165,62,45,[[0,2.92],[28,2.63],[60,2.42],[95,2.24]]],pivot_firebird:[160,60,40,[[0,2.88],[28,2.76],[60,2.60],[95,2.46]]],ibis_hd6:[160,60,39,[[0,2.86],[28,2.74],[60,2.58],[95,2.44]]],transition_spire:[160,62,46,[[0,3.00],[28,2.65],[60,2.44],[95,2.26]]],commencal_meta_tr:[150,55,42,[[0,2.88],[28,2.58],[60,2.38],[95,2.18]]],};const _ld={horst:[[0,3.00],[30,2.65],[60,2.45],[95,2.30]],vpp:[[0,3.10],[15,2.90],[40,2.55],[70,2.45],[95,2.40]],dw_link:[[0,2.85],[30,2.75],[60,2.60],[95,2.45]],single_pivot:[[0,2.90],[30,2.55],[60,2.35],[95,2.20]],switch_infinity:[[0,2.85],[30,2.75],[60,2.65],[95,2.50]],high_pivot:[[0,2.90],[30,2.60],[60,2.35],[95,2.10]],};const _dc={XC:{sf:[15,20],ss:[25,28],pm:1.6,px:1.8,rf:.40},Trail:{sf:[20,23],ss:[28,30],pm:1.8,px:2.1,rf:.50},Enduro:{sf:[23,26],ss:[30,33],pm:2.0,px:2.4,rf:.60},DH:{sf:[25,28],ss:[33,38],pm:2.2,px:2.7,rf:.70},};const _sm={Smooth:.92,Neutral:1.0,Aggressive:1.08};const _tm={flow:.95,mixed:1.0,rough:1.10};const _cf={entry:{b:.15,l:"±15% — punto de partida"},mid:{b:.10,l:"±10%"},mid_high:{b:.07,l:"±7% — alta precisión"},high:{b:.05,l:"±5% — precisión profesional"}};function _lr(c,p){const s=[...c].sort((a,b)=>a[0]-b[0]);if(p<=s[0][0])return s[0][1];if(p>=s[s.length-1][0])return s[s.length-1][1];for(let i=0;i<s.length-1;i++)if(p>=s[i][0]&&p<=s[i+1][0]){const t=(p-s[i][0])/(s[i+1][0]-s[i][0]);return s[i][1]+t*(s[i+1][1]-s[i][1])}return s[0][1]}function _aF(x,P,d,V,tc,tok,Ff){const A=Math.PI*(d/2e3)**2,V0=Math.max(V-tok*(tc||0),(tc||1))*1e-6,xm=Math.min(x/1e3,V0/A*.96),Vx=V0-A*xm;if(Vx<=0)return 0;return P*6894.76*Math.pow(V0/Vx,GAM)*A-Ff}function _sP(W,x,d,V,tc,tok,Ff){let lo=20,hi=500;for(let i=0;i<70;i++){const m=(lo+hi)/2;_aF(x,m,d,V,tc,tok,Ff)<W?lo=m:hi=m;if(hi-lo<.01)break}return(lo+hi)/2}function _pR(P,d,V,tc,tok,Ff,st){const m=_aF(st*.5,P,d,V,tc,tok,0),e=_aF(st*.92,P,d,V,tc,tok,0);return m>0?e/m:1}function _calc(o){const{mass,disc,style,terrain,key,stroke,frameKey,linkType,tokens}=o;const s=_cd[key];if(!s)throw new Error('Modelo no encontrado: '+key);const[d,V,Ff,tc]=_fd[key];const D=_dc[disc];const sk=s[2]==='fork'?'sf':'ss';const[sMin,sMax]=D[sk];const sAdj=(_sm[style]-1)*3;const sag=Math.min(Math.max((sMin+sMax)/2+sAdj,sMin-2),sMax+2);let lr=1,travel=stroke;if(s[2]==='shock'){if(frameKey&&_fr[frameKey]){const[tr,,a,cv]=_fr[frameKey];lr=_lr(cv,sag);travel=tr;}else if(linkType&&_ld[linkType]){lr=_lr(_ld[linkType],sag);}else{const _dlr={XC:2.2,Trail:2.5,Enduro:2.7,DH:3.0};lr=_dlr[disc]||2.5;}}const beta=s[2]==='fork'?.40:.60;const W=mass*G*beta/lr;const x=sag*stroke/100;const P0=_sP(W,x,d,V,tc,tokens,Ff);let bT=tokens,bP=_pR(P0,d,V,tc,tokens,Ff,stroke);for(let t=0;t<=5;t++){const r=_pR(P0,d,V,tc,t,Ff,stroke);if(r>=D.pm&&r<=D.px){bT=t;bP=r;break}}const tn=bP<D.pm?'Agregar tokens(+progresividad)':bP>D.px?'Quitar tokens(demasiada progresividad)':'Tokens óptimos para esta disciplina';const Fp=_aF(Math.min(x+2,stroke*.97),P0,d,V,tc,bT,0),Fm=_aF(Math.max(x-2,.5),P0,d,V,tc,bT,0);let kL=(Fp-Fm)/(4/1e3);if(s[2]==='shock'&&lr>1)kL/=(lr*lr);const K=kL/Math.max(mass*G*beta,1);const rf=D.rf*_sm[style]*_tm[terrain];const reb=Math.round(Math.min(Math.max(.5+.08*Math.log(Math.max(K,.1))+.15*rf,.2),.85)*18);const comp=Math.round(Math.min(Math.max(rf*18*.6,2),16));let wMm=x,wPct=sag;if(s[2]==='shock'&&lr>1&&travel>0){wMm=x*lr;wPct=wMm/travel*100}const conf=_cf[s[3]];const pB=P0*conf.b;return{psi:Math.round(P0*10)/10,bar:Math.round(P0*.0689476*100)/100,pMin:Math.round((P0-pB)*10)/10,pMax:Math.round((P0+pB)*10)/10,conf:conf.l,sag:Math.round(sag*10)/10,xMm:Math.round(x*10)/10,wMm:Math.round(wMm*10)/10,wPct:Math.round(wPct*10)/10,tokens:bT,prog:Math.round(bP*1e3)/1e3,tokenNote:tn,reb,comp,lr:Math.round(lr*1e3)/1e3,seg:s[3],name:`${s[0]}${s[1]}`,isShock:s[2]==='shock',disc:s[8]};}return{calc:_calc,C:_cd,F:_fd,FR:_fr};})();const st={disc:'Trail',style:'Neutral',terrain:'mixed',seg:'all',tokens:0};let allKeys=Object.keys(E.C);function setChip(type,val,el){st[type]=val;el.closest('.chip-row').querySelectorAll('.chip').forEach(b=>b.classList.remove('active'));el.classList.add('active');}function setSeg(s){st.seg=s;document.querySelectorAll('.seg-chip').forEach(b=>b.classList.remove('active'));event.target.closest('.seg-chip').classList.add('active');filterSuspensions();}function changeTok(d){st.tokens=Math.max(0,Math.min(5,st.tokens+d));document.getElementById('tok-val').textContent=st.tokens}function filterSuspensions(){const q=(document.getElementById('susp-search').value||'').toLowerCase();const seg=st.seg;const sel=document.getElementById('shock-key');const prev=sel.value;const byBrand={};allKeys.forEach(k=>{const v=E.C[k];if(!v)return;const [brand,model,type,vseg,,,,,disc]=v;if(seg==='shock'&&type!=='shock')return;if(seg!=='all'&&seg!=='shock'&&vseg!==seg)return;if(q&&!brand.toLowerCase().includes(q)&&!model.toLowerCase().includes(q)&&!disc.toLowerCase().includes(q))return;if(!byBrand[brand])byBrand[brand]=[];byBrand[brand].push([k,v]);});sel.innerHTML='<option value="">— Selecciona un modelo —</option>';let total=0;Object.entries(byBrand).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([brand,items])=>{const grp=document.createElement('optgroup');grp.label=brand;items.forEach(([k,v])=>{const o=document.createElement('option');o.value=k;const disc=v[8]?` [${v[8]}]`:'';o.textContent=v[1]+disc;if(k===prev)o.selected=true;grp.appendChild(o);total++;});sel.appendChild(grp);});document.getElementById('result-count').textContent=`${total}modelos${q?' encontrados':''}`;if(sel.value!==prev)onShockChange();}function onShockChange(){const key=document.getElementById('shock-key').value;const v=key?E.C[key]:null;const st_el=document.getElementById('stroke-mm');st_el.innerHTML='';if(v){v[4].forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=`${s}mm`;st_el.appendChild(o)});const cb=document.getElementById('common-bikes-text');cb.textContent=`↳ ${v[6]}`;cb.classList.add('show');document.getElementById('token-field').style.display=v[5]?'block':'none';const isShock=v[2]==='shock';document.getElementById('frame-field').style.display=isShock?'block':'none';document.getElementById('linkage-field').style.display=isShock?'block':'none';}else{st_el.innerHTML='<option>— Selecciona primero el modelo —</option>';document.getElementById('common-bikes-text').classList.remove('show');document.getElementById('token-field').style.display='none';document.getElementById('frame-field').style.display='none';document.getElementById('linkage-field').style.display='none';}}function doCalc(){const key=document.getElementById('shock-key').value;if(!key){alert('Selecciona un modelo de suspensión');return}const stroke=parseFloat(document.getElementById('stroke-mm').value);if(!stroke){alert('Selecciona el stroke');return}const btn=document.querySelector('.calc-btn');btn.classList.add('loading');setTimeout(()=>{try{const r=E.calc({mass:parseFloat(document.getElementById('weight').value),disc:st.disc,style:st.style,terrain:st.terrain,key,stroke,frameKey:document.getElementById('frame-key')?.value||null,linkType:document.getElementById('linkage-type')?.value||null,tokens:st.tokens,});renderResult(r);}catch(e){alert('Error: '+e.message)}btn.classList.remove('loading');},280);}const SL={entry:'Entrada',mid:'Media',mid_high:'Media-Alta',high:'Alta'};function renderResult(r){document.getElementById('empty-state').style.display='none';const el=document.getElementById('res-content');el.style.display='block';const wb=r.isShock&&Math.abs(r.wPct-r.sag)>.3?`
+<div class="wheel-block">
+<div class="wb-l">↳ SAG real de la rueda trasera</div>
+<div class="wb-v">${r.wPct.toFixed(1)}<span style="font-size:18px;color:var(--muted2);font-family:'DM Mono',monospace">%  ${r.wMm.toFixed(1)}mm</span></div>
+<div class="wb-s">LR en SAG: ${r.lr}· Calculado con leverage curve del cuadro</div>
+</div>`:'';el.innerHTML=`<div class="fade-in">
+<div class="seg-badge ${r.seg}">${SL[r.seg]}</div>
+<div class="result-suspension">${r.name}</div>
+<div class="pressure-main">${r.psi}<span>psi</span></div>
+<div class="pressure-bar">${r.bar}bar</div>
+<div class="pressure-range"><em>±</em>${r.pMin}– ${r.pMax}psi &nbsp;·&nbsp;${r.conf}</div>
+<div class="div"></div>
+<div class="rg">
+<div class="ri"><div class="rl">SAG objetivo</div><div class="rv">${r.sag}<span style="font-size:14px;color:var(--muted2);font-family:'DM Mono',monospace">%</span></div><div class="rs">${r.xMm}mm en el shock</div></div>
+<div class="ri"><div class="rl">Tokens rec.</div><div class="rv">${r.tokens}</div><div class="rs">prog. ratio ${r.prog}</div></div>
+</div>
+${wb}<div class="hl"><div class="hl-l">Recomendación tokens</div><div class="hl-v">${r.tokenNote}</div></div>
+<div class="clicks-row">
+<div class="ck"><div class="ck-l">Rebote</div><div class="ck-v">${r.reb}</div><div class="ck-s">clicks desde cerrado</div></div>
+<div class="ck"><div class="ck-l">Compresión</div><div class="ck-v">${r.comp}</div><div class="ck-s">clicks desde cerrado</div></div>
+</div>
+<div class="note">${r.isShock?'⚠ El shock trasero requiere el leverage ratio del cuadro para máxima precisión. Si seleccionaste cuadro específico,usa el SAG de rueda como referencia real.':'⚠ Rebote y compresión son punto de partida. Ajustar en pista: rebote lento = sensación de saltar / rápido = inestabilidad.'}</div>
+</div>`;}(function init(){const segs={entry:0,mid:0,mid_high:0,high:0,shock:0};allKeys.forEach(k=>{const v=E.C[k];if(!v)return;segs[v[3]]=(segs[v[3]]||0)+1;if(v[2]==='shock')segs.shock++;});document.getElementById('cnt-all').textContent=allKeys.length;document.getElementById('cnt-entry').textContent=segs.entry;document.getElementById('cnt-mid').textContent=segs.mid;document.getElementById('cnt-mh').textContent=segs.mid_high;document.getElementById('cnt-high').textContent=segs.high;document.getElementById('cnt-shock').textContent=segs.shock;const brands=[...new Set(allKeys.map(k=>E.C[k]?.[0]).filter(Boolean))];const track=document.getElementById('brands-track');const full=[...brands,...brands,...brands,...brands].map(b=>{const s=document.createElement('span');s.textContent=b;s.className='hi';return s;});const all=[];full.forEach((el,i)=>{all.push(el);const sep=document.createElement('span');sep.textContent='·';all.push(sep);});all.forEach(el=>track.appendChild(el));filterSuspensions();})();</script>
 
-// ── UI STATE ──────────────────────────────────────────────────
-const st={disc:'Trail',style:'Neutral',terrain:'mixed',seg:'all',tokens:0};
-let allKeys=Object.keys(E.C);
+<div style="padding:16px clamp(16px,4vw,60px);border-top:1px solid #1a1a1a;background:#050505;text-align:center">
+  <p style="font-family:'DM Mono',monospace;font-size:10px;color:#333;letter-spacing:1px;margin:0;line-height:2">
+    SAG CALCULATOR v5.0 — © 2026 BIKELABSTUDIO.COM — TODOS LOS DERECHOS RESERVADOS<br>
+    DESARROLLADO POR CARLOS RAVELLO · MODELO FÍSICO CALIBRADO CON TABLAS OFICIALES FOX · ROCKSHOX · SR SUNTOUR · ÖHLINS<br>
+    <span style="color:#1e1e1e;font-size:8px;user-select:none" aria-hidden="true">BLS·{WM_HASH[:16]}·CR·2026</span>
+  </p>
+</div>
 
-function setChip(type,val,el){
-  st[type]=val;
-  el.closest('.chip-row').querySelectorAll('.chip').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active');
-}
-
-function setSeg(s){
-  st.seg=s;
-  document.querySelectorAll('.seg-chip').forEach(b=>b.classList.remove('active'));
-  event.target.closest('.seg-chip').classList.add('active');
-  filterSuspensions();
-}
-
-function changeTok(d){st.tokens=Math.max(0,Math.min(5,st.tokens+d));document.getElementById('tok-val').textContent=st.tokens}
-
-function filterSuspensions(){
-  const q=(document.getElementById('susp-search').value||'').toLowerCase();
-  const seg=st.seg;
-  const sel=document.getElementById('shock-key');
-  const prev=sel.value;
-
-  // Group by brand
-  const byBrand={};
-  allKeys.forEach(k=>{
-    const v=E.C[k];
-    if(!v)return;
-    const [brand,model,type,vseg,,,,, disc]=v;
-    if(seg==='shock'&&type!=='shock')return;
-    if(seg!=='all'&&seg!=='shock'&&vseg!==seg)return;
-    if(q&&!brand.toLowerCase().includes(q)&&!model.toLowerCase().includes(q)&&!disc.toLowerCase().includes(q))return;
-    if(!byBrand[brand])byBrand[brand]=[];
-    byBrand[brand].push([k,v]);
-  });
-
-  sel.innerHTML='<option value="">— Selecciona un modelo —</option>';
-  let total=0;
-  Object.entries(byBrand).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([brand,items])=>{
-    const grp=document.createElement('optgroup');grp.label=brand;
-    items.forEach(([k,v])=>{
-      const o=document.createElement('option');o.value=k;
-      const disc=v[8]?` [${v[8]}]`:'';
-      o.textContent=v[1]+disc;
-      if(k===prev)o.selected=true;
-      grp.appendChild(o);total++;
-    });
-    sel.appendChild(grp);
-  });
-
-  document.getElementById('result-count').textContent=`${total} modelos${q?' encontrados':''}`;
-  if(sel.value!==prev)onShockChange();
-}
-
-function onShockChange(){
-  const key=document.getElementById('shock-key').value;
-  const v=key?E.C[key]:null;
-  const st_el=document.getElementById('stroke-mm');
-  st_el.innerHTML='';
-  if(v){
-    v[4].forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=`${s} mm`;st_el.appendChild(o)});
-    const cb=document.getElementById('common-bikes-text');
-    cb.textContent=`↳ ${v[6]}`;cb.classList.add('show');
-    document.getElementById('token-field').style.display=v[5]?'block':'none';
-    const isShock=v[2]==='shock';
-    document.getElementById('frame-field').style.display=isShock?'block':'none';
-    document.getElementById('linkage-field').style.display=isShock?'block':'none';
-  }else{
-    st_el.innerHTML='<option>— Selecciona primero el modelo —</option>';
-    document.getElementById('common-bikes-text').classList.remove('show');
-    document.getElementById('token-field').style.display='none';
-    document.getElementById('frame-field').style.display='none';
-    document.getElementById('linkage-field').style.display='none';
-  }
-}
-
-function doCalc(){
-  const key=document.getElementById('shock-key').value;
-  if(!key){alert('Selecciona un modelo de suspensión');return}
-  const stroke=parseFloat(document.getElementById('stroke-mm').value);
-  if(!stroke){alert('Selecciona el stroke');return}
-  const btn=document.querySelector('.calc-btn');
-  btn.classList.add('loading');
-  setTimeout(()=>{
-    try{
-      const r=E.calc({
-        mass:parseFloat(document.getElementById('weight').value),
-        disc:st.disc,style:st.style,terrain:st.terrain,
-        key,stroke,
-        frameKey:document.getElementById('frame-key')?.value||null,
-        linkType:document.getElementById('linkage-type')?.value||null,
-        tokens:st.tokens,
-      });
-      renderResult(r);
-    }catch(e){alert('Error: '+e.message)}
-    btn.classList.remove('loading');
-  },280);
-}
-
-const SL={entry:'Entrada',mid:'Media',mid_high:'Media-Alta',high:'Alta'};
-
-function renderResult(r){
-  document.getElementById('empty-state').style.display='none';
-  const el=document.getElementById('res-content');el.style.display='block';
-  const wb=r.isShock&&Math.abs(r.wPct-r.sag)>.3?`
-    <div class="wheel-block">
-      <div class="wb-l">↳ SAG real de la rueda trasera</div>
-      <div class="wb-v">${r.wPct.toFixed(1)}<span style="font-size:18px;color:var(--muted2);font-family:'DM Mono',monospace">%  ${r.wMm.toFixed(1)} mm</span></div>
-      <div class="wb-s">LR en SAG: ${r.lr} · Calculado con leverage curve del cuadro</div>
-    </div>`:'';
-  el.innerHTML=`<div class="fade-in">
-    <div class="seg-badge ${r.seg}">${SL[r.seg]}</div>
-    <div class="result-suspension">${r.name}</div>
-    <div class="pressure-main">${r.psi}<span>psi</span></div>
-    <div class="pressure-bar">${r.bar} bar</div>
-    <div class="pressure-range"><em>±</em>${r.pMin} – ${r.pMax} psi &nbsp;·&nbsp; ${r.conf}</div>
-    <div class="div"></div>
-    <div class="rg">
-      <div class="ri"><div class="rl">SAG objetivo</div><div class="rv">${r.sag}<span style="font-size:14px;color:var(--muted2);font-family:'DM Mono',monospace">%</span></div><div class="rs">${r.xMm} mm en el shock</div></div>
-      <div class="ri"><div class="rl">Tokens rec.</div><div class="rv">${r.tokens}</div><div class="rs">prog. ratio ${r.prog}</div></div>
-    </div>
-    ${wb}
-    <div class="hl"><div class="hl-l">Recomendación tokens</div><div class="hl-v">${r.tokenNote}</div></div>
-    <div class="clicks-row">
-      <div class="ck"><div class="ck-l">Rebote</div><div class="ck-v">${r.reb}</div><div class="ck-s">clicks desde cerrado</div></div>
-      <div class="ck"><div class="ck-l">Compresión</div><div class="ck-v">${r.comp}</div><div class="ck-s">clicks desde cerrado</div></div>
-    </div>
-    <div class="note">${r.isShock?'⚠ El shock trasero requiere el leverage ratio del cuadro para máxima precisión. Si seleccionaste cuadro específico, usa el SAG de rueda como referencia real.':'⚠ Rebote y compresión son punto de partida. Ajustar en pista: rebote lento = sensación de saltar / rápido = inestabilidad.'}</div>
-  </div>`;
-}
-
-// ── INIT ──────────────────────────────────────────────────────
-(function init(){
-  // Counts
-  const segs={entry:0,mid:0,mid_high:0,high:0,shock:0};
-  allKeys.forEach(k=>{
-    const v=E.C[k];if(!v)return;
-    segs[v[3]]=( segs[v[3]]||0)+1;
-    if(v[2]==='shock')segs.shock++;
-  });
-  document.getElementById('cnt-all').textContent=allKeys.length;
-  document.getElementById('cnt-entry').textContent=segs.entry;
-  document.getElementById('cnt-mid').textContent=segs.mid;
-  document.getElementById('cnt-mh').textContent=segs.mid_high;
-  document.getElementById('cnt-high').textContent=segs.high;
-  document.getElementById('cnt-shock').textContent=segs.shock;
-
-  // Brands ticker
-  const brands=[...new Set(allKeys.map(k=>E.C[k]?.[0]).filter(Boolean))];
-  const track=document.getElementById('brands-track');
-  const full=[...brands,...brands,...brands,...brands].map(b=>{
-    const s=document.createElement('span');
-    s.textContent=b;s.className='hi';return s;
-  });
-  // separators
-  const all=[];
-  full.forEach((el,i)=>{
-    all.push(el);
-    const sep=document.createElement('span');sep.textContent='·';all.push(sep);
-  });
-  all.forEach(el=>track.appendChild(el));
-
-  filterSuspensions();
-})();
-</script>
 </body>
 </html>
