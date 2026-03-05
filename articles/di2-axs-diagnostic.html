@@ -1067,7 +1067,7 @@ body {
 
 <script>
 // ─── LANGUAGE ──────────────────────────────────────────────────────────────
-let LANG = 'en';
+let LANG = (new URLSearchParams(location.search).get('lang') === 'es') ? 'es' : 'en';
 
 const T = {
   en: {
