@@ -29,25 +29,133 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Cambios Electrónicos en Bicicletas: Fallas Más Allá de la Mecánica",
-  "description": "El 60% de las fallas en Shimano Di2 y SRAM AXS no son mecánicas — son de protocolo de comunicación y gestión de energía.",
-  "author": {"@type": "Person", "name": "Carlos Ravello", "affiliation": {"@type": "Organization", "name": "BikeLab Studio"}},
-  "publisher": {"@type": "Organization", "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com"},
+  "@id": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html#article",
+  "headline": "Los Cambios Electrónicos en Bicicletas Fallan Diferente — Guía de Diagnóstico Di2 y AXS",
+  "description": "El 60% de las fallas en Shimano Di2 y SRAM AXS no son mecánicas — son de protocolo de comunicación y gestión de energía. Guía técnica con árbol de diagnóstico por capas.",
+  "keywords": [
+    "Shimano Di2",
+    "SRAM AXS",
+    "diagnóstico cambio electrónico",
+    "Di2 no funciona",
+    "AXS falla",
+    "crash mode Di2",
+    "firmware Di2",
+    "pogo pin Di2",
+    "pairing AXS",
+    "cambio electrónico bicicleta"
+  ],
+  "wordCount": 1152,
+  "author": {
+    "@type": "Person",
+    "name": "Carlos Ravello",
+    "jobTitle": "Fundador de BikeLab Studio",
+    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BikeLab Studio",
+    "url": "https://www.bikelabstudio.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.bikelabstudio.com/logo-noir.png"
+    }
+  },
   "datePublished": "2026-03-04",
-  "dateModified": "2026-03-04",
+  "dateModified": "2026-03-05",
   "inLanguage": "es",
   "url": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"},
-  "image": "https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp",
+    "width": 1200,
+    "height": 676
+  }
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BikeLab Studio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Consejos Generales","item":"https://www.bikelabstudio.com/#tips"},{"@type":"ListItem","position":3,"name":"Cambios Electrónicos Di2 y AXS","item":"https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué los cambios electrónicos fallan diferente a los mecánicos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los cambios electrónicos son dispositivos IoT montados en una bicicleta: tienen microcontroladores, protocolos de comunicación propietarios y firmware actualizable. El 60% de las fallas no son mecánicas sino de comunicación o energía. La primera pregunta correcta no es '¿qué pieza está rota?' sino '¿en qué capa del sistema ocurrió la disrupción?'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son los tres niveles de falla en Di2 y AXS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Capa 1 — Energía (~35%): batería agotada, módulo Bluetooth activo, acelerómetros AXS que drenan la batería en transporte. Capa 2 — Comunicación (~25%): interferencia en 2.4 GHz, firmware desactualizado, pairing perdido. Capa 3 — Mecánica (~20%): cable pinchado, pogo pin colapsado, hanger doblado. Las capas 1 y 2 son resolubles sin herramientas especializadas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué problemas de Di2 y AXS puedo resolver en casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sistema muerto: retira la batería 30 seg, reinstala y presiona botón RD 5–10 seg (Di2) o botón AXS sin batería antes de reinstalar (AXS). Shifts intermitentes en cuesta: desactiva Synchro Shift. Re-pairing AXS: verde lento en RD abre sesión, verde rápido en cada componente confirma. Las capas 1 y 2 concentran el 60% de las fallas y son resolubles en casa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué nunca debo actualizar el firmware Di2 por Bluetooth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una actualización interrumpida corrompe la memoria EPROM del sistema. La recuperación requiere la herramienta SM-PCE02 exclusiva de dealers Shimano certificados. No existe alternativa segura documentada. Siempre actualiza Di2 por cable USB con E-TUBE PROJECT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo llevar el Di2 o AXS al taller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando el fallo reaparece dentro de 48 horas de un fix casero, o el sistema no responde tras hard reset completo. También cuando hay daño al PCB del shifter Di2, pogo pin roto en AXS, fuga del sistema Orbit (Red/Force AXS), o cuando necesitas actualizar firmware Di2. Continuar con el sistema dañado genera daños secundarios en componentes adyacentes."
+      }
+    }
+  ]
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué los cambios electrónicos fallan diferente a los mecánicos?","acceptedAnswer":{"@type":"Answer","text":"Los cambios electrónicos son dispositivos IoT montados en una bicicleta: tienen microcontroladores, protocolos de comunicación propietarios y firmware actualizable. El 60% de las fallas no son mecánicas sino de comunicación o energía. La primera pregunta correcta no es '¿qué pieza está rota?' sino '¿en qué capa del sistema ocurrió la disrupción?'"}},{"@type":"Question","name":"¿Cuáles son los tres niveles de falla en Di2 y AXS?","acceptedAnswer":{"@type":"Answer","text":"Capa 1 — Energía (~35%): batería agotada, módulo Bluetooth activo, acelerómetros AXS que drenan la batería en transporte. Capa 2 — Comunicación (~25%): interferencia en 2.4 GHz, firmware desactualizado, pairing perdido. Capa 3 — Mecánica (~20%): cable pinchado, pogo pin colapsado, hanger doblado. Las capas 1 y 2 son resolubles sin herramientas especializadas."}},{"@type":"Question","name":"¿Qué problemas de Di2 y AXS puedo resolver en casa?","acceptedAnswer":{"@type":"Answer","text":"Sistema muerto: retira la batería 30 seg, reinstala y presiona botón RD 5–10 seg (Di2) o botón AXS sin batería antes de reinstalar (AXS). Shifts intermitentes en cuesta: desactiva Synchro Shift. Re-pairing AXS: verde lento en RD abre sesión, verde rápido en cada componente confirma. Las capas 1 y 2 concentran el 60% de las fallas y son resolubles en casa."}},{"@type":"Question","name":"¿Por qué nunca debo actualizar el firmware Di2 por Bluetooth?","acceptedAnswer":{"@type":"Answer","text":"Una actualización interrumpida corrompe la memoria EPROM del sistema. La recuperación requiere la herramienta SM-PCE02 exclusiva de dealers Shimano certificados. No existe alternativa segura documentada. Siempre actualiza Di2 por cable USB con E-TUBE PROJECT."}},{"@type":"Question","name":"¿Cuándo llevar el Di2 o AXS al taller?","acceptedAnswer":{"@type":"Answer","text":"Cuando el fallo reaparece dentro de 48 horas de un fix casero, o el sistema no responde tras hard reset completo. También cuando hay daño al PCB del shifter Di2, pogo pin roto en AXS, fuga del sistema Orbit (Red/Force AXS), o cuando necesitas actualizar firmware Di2. Continuar con el sistema dañado genera daños secundarios en componentes adyacentes."}}]}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "BikeLab Studio",
+      "item": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Artículos",
+      "item": "https://www.bikelabstudio.com/#tips"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cambios Electrónicos Di2 y AXS",
+      "item": "https://www.bikelabstudio.com/articles/cambios-electronicos-di2-axs-es.html"
+    }
+  ]
+}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=JetBrains+Mono:wght@300;400&display=swap">
 

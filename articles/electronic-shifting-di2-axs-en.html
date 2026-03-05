@@ -29,25 +29,133 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Electronic Shifting in Bicycles: Failures Beyond Mechanics",
-  "description": "60% of Shimano Di2 and SRAM AXS failures aren't mechanical — they're communication protocol and power management issues.",
-  "author": {"@type": "Person", "name": "Carlos Ravello", "affiliation": {"@type": "Organization", "name": "BikeLab Studio"}},
-  "publisher": {"@type": "Organization", "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com"},
+  "@id": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html#article",
+  "headline": "Electronic Shifting Fails Differently — Di2 and AXS Diagnosis Guide",
+  "description": "60% of Shimano Di2 and SRAM AXS failures aren't mechanical — they're communication protocol and power management issues. Technical guide with layered diagnostic tree.",
+  "keywords": [
+    "Shimano Di2",
+    "SRAM AXS",
+    "electronic shifting diagnosis",
+    "Di2 not working",
+    "AXS failure",
+    "Di2 crash mode",
+    "Di2 firmware",
+    "Di2 pogo pin",
+    "AXS pairing",
+    "electronic bike shifting"
+  ],
+  "wordCount": 1148,
+  "author": {
+    "@type": "Person",
+    "name": "Carlos Ravello",
+    "jobTitle": "Founder of BikeLab Studio",
+    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BikeLab Studio",
+    "url": "https://www.bikelabstudio.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.bikelabstudio.com/logo-noir.png"
+    }
+  },
   "datePublished": "2026-03-04",
-  "dateModified": "2026-03-04",
+  "dateModified": "2026-03-05",
   "inLanguage": "en",
   "url": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"},
-  "image": "https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.bikelabstudio.com/articles/images/cambioselectronicos_arbol.webp",
+    "width": 1200,
+    "height": 676
+  }
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BikeLab Studio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"General Tips","item":"https://www.bikelabstudio.com/index-en.html#tips"},{"@type":"ListItem","position":3,"name":"Electronic Shifting Di2 & AXS","item":"https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do electronic shifting systems fail differently from mechanical ones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Electronic drivetrains are IoT devices on a bike: they have microcontrollers, proprietary communication protocols, and updatable firmware. Around 60% of Di2 and AXS failures aren't mechanical — they're communication or power-layer issues. The correct first question isn't 'what part is broken?' but 'at which layer did the disruption occur?'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the three failure layers in Di2 and AXS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Layer 1 — Power (~35%): dead battery, active Bluetooth module draining power, AXS accelerometers draining battery during transport. Layer 2 — Communication (~25%): 2.4 GHz interference, outdated firmware, lost pairing, E-Tube protocol affected by vibration. Layer 3 — Mechanical (~20%): pinched cable, collapsed pogo pin, bent hanger. Layers 1 and 2 can be resolved without specialized tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Di2 and AXS problems can I fix at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dead system: remove battery for 30 seconds, reinstall and press RD button 5–10 sec (Di2) or press AXS button without battery before reinstalling (AXS). Intermittent shifts on climbs: disable Synchro Shift. AXS re-pairing: slow green on RD opens session, fast green on each component confirms. Layers 1 and 2 cover 60% of failures and are fixable at home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I never update Di2 firmware over Bluetooth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An interrupted update corrupts the system EPROM memory. Recovery requires the SM-PCE02 tool exclusive to certified Shimano dealers. There is no documented safe alternative. Always update Di2 via USB cable using E-TUBE PROJECT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I take my Di2 or AXS to a workshop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the failure reappears within 48 hours of a home fix, or the system doesn't respond after a full hard reset. Also when there's damage to the Di2 shifter PCB, a broken AXS pogo pin, an Orbit fluid leak (Red/Force AXS), or when you need a Di2 firmware update. Continuing to use a damaged system can cause secondary damage to adjacent components."
+      }
+    }
+  ]
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do electronic shifting systems fail differently from mechanical ones?","acceptedAnswer":{"@type":"Answer","text":"Electronic drivetrains are IoT devices on a bike: they have microcontrollers, proprietary communication protocols, and updatable firmware. Around 60% of Di2 and AXS failures aren't mechanical — they're communication or power-layer issues. The correct first question isn't 'what part is broken?' but 'at which layer did the disruption occur?'"}},{"@type":"Question","name":"What are the three failure layers in Di2 and AXS?","acceptedAnswer":{"@type":"Answer","text":"Layer 1 — Power (~35%): dead battery, active Bluetooth module draining power, AXS accelerometers draining battery during transport. Layer 2 — Communication (~25%): 2.4 GHz interference, outdated firmware, lost pairing, E-Tube protocol affected by vibration. Layer 3 — Mechanical (~20%): pinched cable, collapsed pogo pin, bent hanger. Layers 1 and 2 can be resolved without specialized tools."}},{"@type":"Question","name":"Which Di2 and AXS problems can I fix at home?","acceptedAnswer":{"@type":"Answer","text":"Dead system: remove battery for 30 seconds, reinstall and press RD button 5–10 sec (Di2) or press AXS button without battery before reinstalling (AXS). Intermittent shifts on climbs: disable Synchro Shift. AXS re-pairing: slow green on RD opens session, fast green on each component confirms. Layers 1 and 2 cover 60% of failures and are fixable at home."}},{"@type":"Question","name":"Why should I never update Di2 firmware over Bluetooth?","acceptedAnswer":{"@type":"Answer","text":"An interrupted update corrupts the system EPROM memory. Recovery requires the SM-PCE02 tool exclusive to certified Shimano dealers. There is no documented safe alternative. Always update Di2 via USB cable using E-TUBE PROJECT."}},{"@type":"Question","name":"When should I take my Di2 or AXS to a workshop?","acceptedAnswer":{"@type":"Answer","text":"When the failure reappears within 48 hours of a home fix, or the system doesn't respond after a full hard reset. Also when there's damage to the Di2 shifter PCB, a broken AXS pogo pin, an Orbit fluid leak (Red/Force AXS), or when you need a Di2 firmware update. Continuing to use a damaged system can cause secondary damage to adjacent components."}}]}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "BikeLab Studio",
+      "item": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://www.bikelabstudio.com/index-en.html#tips"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Electronic Shifting Di2 & AXS",
+      "item": "https://www.bikelabstudio.com/articles/electronic-shifting-di2-axs-en.html"
+    }
+  ]
+}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=JetBrains+Mono:wght@300;400&display=swap">
 

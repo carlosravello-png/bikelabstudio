@@ -197,7 +197,74 @@
 }
 </script>
 
-  <!-- Preconnect -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular la presión SAG de tu suspensión MTB",
+  "description": "Guía paso a paso para medir el SAG de horquilla y amortiguador MTB y calcular la presión de aire correcta según tu peso y modelo de suspensión.",
+  "totalTime": "PT15M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "0"
+  },
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Cinta métrica o regla"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Bomba de suspensión con manómetro"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "O-ring de SAG (generalmente incluido con la suspensión)"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Selecciona tu suspensión en la calculadora",
+      "text": "En la Calculadora SAG de BikeLab Studio, selecciona la marca, modelo y año de tu horquilla o amortiguador. La calculadora tiene 132 modelos catalogados — si el tuyo no aparece, selecciona el tipo de cámara (Dual Air, Solo Air) para usar el modelo genérico calibrado."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Ingresa tu peso del rider con equipo",
+      "text": "Ingresa tu peso en kg incluyendo el equipo que usas normalmente: casco, mochila, kit completo. El peso del rider con equipo es la variable más importante en el cálculo de SAG. Una diferencia de 5 kg puede implicar 10–15 PSI de diferencia en la presión recomendada."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Ajusta tokens y parámetros avanzados",
+      "text": "Selecciona el número de tokens instalados en tu suspensión (si aplica) y el porcentaje de SAG objetivo según tu disciplina: XC 15–18%, Trail 20–23% horquilla / 28–30% amortiguador, Enduro 25–28% / 30–33%. La calculadora te dará la presión exacta en PSI."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Ajusta la presión física en la suspensión",
+      "text": "Con la bomba de suspensión, infla o desinfla al valor indicado por la calculadora. Asegúrate de usar una bomba de suspensión de baja presión y alto volumen — no uses bomba de rueda. Coloca el O-ring en el extremo del sello con la suspensión extendida."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Mide el SAG real con tu peso",
+      "text": "Vístete con tu equipo completo y monta la bicicleta en posición neutral de conducción: sentado con las manos en el manubrio, espalda recta. Baja de la bicicleta con cuidado sin rebotar. El O-ring marcará la posición de SAG. Mide la distancia del O-ring al sello en mm."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Calcula el porcentaje de SAG y ajusta",
+      "text": "Calcula: SAG% = (mm medidos / stroke total en mm) × 100. Compara con tu objetivo. Si el SAG es mayor al objetivo, agrega presión en incrementos de 5 PSI. Si es menor, reduce. Repite la medición 3 veces y promedia para eliminar errores. El SAG correcto mejora la tracción, el confort y la geometría dinámica de la bicicleta."
+    }
+  ]
+}
+</script>
+
+    <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
