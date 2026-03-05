@@ -207,18 +207,35 @@ footer a:hover{color:var(--accent)}
 <body>
 
 <script>
-// Embed mode: fix scroll + hide redundant sections when loaded inside iframe via ?embed=1
-if (new URLSearchParams(location.search).get('embed') === '1') {
-  var _es = document.createElement('style');
-  _es.textContent = [
+// Embed mode: fix scroll + hide internal nav when loaded inside iframe via ?embed=1
+(function(){
+  var params = new URLSearchParams(location.search);
+  if (params.get('embed') !== '1') return;
+
+  // CSS: hide duplicate header, fix scroll and results panel
+  var _s = document.createElement('style');
+  _s.textContent = [
     'body{min-height:auto!important;overflow:hidden!important}',
     'header{display:none!important}',
-    '.hero{display:none!important}',
-    '.brands-bar{display:none!important}',
     '.results-panel{position:relative!important;top:0!important;max-height:none!important;overflow-y:visible!important}'
   ].join('');
-  document.head.appendChild(_es);
-}
+  document.head.appendChild(_s);
+
+  // If lang=en: translate hero text to English
+  if (params.get('lang') === 'en') {
+    document.addEventListener('DOMContentLoaded', function() {
+      var ey = document.querySelector('.hero-eyebrow');
+      if (ey) ey.textContent = '// The most complete MTB suspension calculator in the world';
+      var h1 = document.querySelector('.hero h1');
+      if (h1) h1.innerHTML = 'SET UP YOUR<br><em>SUSPENSION</em><br>LIKE A PRO';
+      var p = document.querySelector('.hero p');
+      if (p) p.textContent = 'Dual-chamber physical model calibrated against manufacturer official tables. 132 suspensions, 10 brands, 4 disciplines. Trail, Enduro, XC, DH, E-MTB and legacy.';
+      var lbls = document.querySelectorAll('.hero-stats .stat-lbl');
+      var en = ['Suspensions','Brands','Catalogued frames','Calibrated w/ official data','Monte Carlo simulations'];
+      lbls.forEach(function(l,i){ if(en[i]) l.textContent = en[i]; });
+    });
+  }
+})();
 </script>
 
 <header>
