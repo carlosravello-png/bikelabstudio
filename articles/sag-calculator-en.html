@@ -729,7 +729,8 @@
 
     .calc-frame {
       width: 100%;
-      min-height: 100vh;
+      min-height: 300px;
+      height: auto;
       border: none;
       display: block;
       background: var(--bg)
@@ -907,7 +908,7 @@
       }
 
       .calc-frame {
-        min-height: 120vh
+        min-height: 300px
       }
 
       .wp-cta {
@@ -1028,7 +1029,7 @@
       </div>
     </div>
     <iframe class="calc-frame" src="./sag_calculator_v2.html?embed=1"
-      title="BikeLab Studio SAG Calculator — MTB Suspension Air Pressure Calculator" loading="lazy"
+      title="BikeLab Studio SAG Calculator — MTB Suspension Air Pressure Calculator" loading="eager"
       sandbox="allow-scripts allow-same-origin" aria-label="Interactive MTB suspension SAG calculator">
     </iframe>
   </section>
@@ -1282,8 +1283,10 @@
       }
       f.addEventListener('load', function () {
         syncH();
-        setTimeout(syncH, 600);
-        setTimeout(syncH, 1800);
+        setTimeout(syncH, 300);
+        setTimeout(syncH, 800);
+        setTimeout(syncH, 2000);
+        setTimeout(syncH, 4000);
         try {
           new ResizeObserver(syncH).observe(f.contentDocument.documentElement);
         } catch (e) {}
