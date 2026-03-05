@@ -89,42 +89,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Por qué los cambios electrónicos fallan diferente a los mecánicos?",
+      "name": "¿Por qué mi Di2 no cambia de marcha?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los cambios electrónicos son dispositivos IoT montados en una bicicleta: tienen microcontroladores, protocolos de comunicación propietarios y firmware actualizable. El 60% de las fallas no son mecánicas sino de comunicación o energía. La primera pregunta correcta no es '¿qué pieza está rota?' sino '¿en qué capa del sistema ocurrió la disrupción?'"
+        "text": "Las causas más comunes son: (1) Batería agotada o muy baja — revisa el LED indicador en la caja de unión. (2) Modo crash activado tras un impacto — mantén presionado el botón de la caja de unión 3 segundos para salir. (3) Conector E-Tube suelto — recoloca todas las conexiones de la caja de unión. (4) Firmware desactualizado que causa errores de comunicación entre componentes. Usa la herramienta de diagnóstico Di2 de BikeLab Studio para identificar en qué capa está la falla."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cuáles son los tres niveles de falla en Di2 y AXS?",
+      "name": "¿Cómo reseteo el pairing de SRAM AXS sin la app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Capa 1 — Energía (~35%): batería agotada, módulo Bluetooth activo, acelerómetros AXS que drenan la batería en transporte. Capa 2 — Comunicación (~25%): interferencia en 2.4 GHz, firmware desactualizado, pairing perdido. Capa 3 — Mecánica (~20%): cable pinchado, pogo pin colapsado, hanger doblado. Las capas 1 y 2 son resolubles sin herramientas especializadas."
+        "text": "Retira la batería del desviador trasero. Mantén presionado el botón AXS del RD, luego reinstala la batería mientras sigues presionando el botón — esto inicia un restablecimiento de fábrica. Para volver a emparejar: presiona el botón del RD hasta que el LED parpadee verde lento (modo pairing abierto), luego presiona el botón de cada componente (manetas, tija) hasta ver un parpadeo verde rápido que confirma el emparejamiento. No se requiere la app."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Qué problemas de Di2 y AXS puedo resolver en casa?",
+      "name": "¿Por qué se descarga rápido la batería del Di2?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sistema muerto: retira la batería 30 seg, reinstala y presiona botón RD 5–10 seg (Di2) o botón AXS sin batería antes de reinstalar (AXS). Shifts intermitentes en cuesta: desactiva Synchro Shift. Re-pairing AXS: verde lento en RD abre sesión, verde rápido en cada componente confirma. Las capas 1 y 2 concentran el 60% de las fallas y son resolubles en casa."
+        "text": "El drenaje anormal de la batería Di2 es casi siempre causado por: el módulo Bluetooth activo (Wireless Unit EW-WU111 o EW-WU101) conectado a la app E-Tube en segundo plano, un bug de firmware en versiones antiguas de Di2, o un cable interno defectuoso con cortocircuito parcial. Verifica en E-Tube si el Bluetooth está activo y desactívalo cuando no estés calibrando. Si el drenaje persiste tras desactivar el Bluetooth y actualizar el firmware, el cable interno debe ser inspeccionado en taller."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Por qué nunca debo actualizar el firmware Di2 por Bluetooth?",
+      "name": "¿Qué es el modo crash del Di2 y cómo se soluciona?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Una actualización interrumpida corrompe la memoria EPROM del sistema. La recuperación requiere la herramienta SM-PCE02 exclusiva de dealers Shimano certificados. No existe alternativa segura documentada. Siempre actualiza Di2 por cable USB con E-TUBE PROJECT."
+        "text": "El modo crash es un estado de protección que activa automáticamente la caja de unión al detectar un impacto repentino. En modo crash, el movimiento del desviador delantero queda bloqueado para evitar daños por un hanger doblado o tren de tracción desalineado. El LED de la caja de unión parpadea con un patrón específico. Para salir: primero endereza el hanger, luego mantén presionado el botón de la caja de unión durante 3 segundos hasta que el LED cambie. El sistema reanudará la operación normal."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cuándo llevar el Di2 o AXS al taller?",
+      "name": "¿Puedo actualizar el firmware Di2 por Bluetooth?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cuando el fallo reaparece dentro de 48 horas de un fix casero, o el sistema no responde tras hard reset completo. También cuando hay daño al PCB del shifter Di2, pogo pin roto en AXS, fuga del sistema Orbit (Red/Force AXS), o cuando necesitas actualizar firmware Di2. Continuar con el sistema dañado genera daños secundarios en componentes adyacentes."
+        "text": "No — nunca actualices el firmware Shimano Di2 por Bluetooth. Una actualización interrumpida puede corromper la memoria EPROM y dejar el sistema inoperativo de forma permanente. La recuperación requiere la herramienta de diagnóstico SM-PCE02, disponible solo en centros de servicio Shimano certificados. Siempre actualiza Di2 por cable USB usando E-TUBE PROJECT en un computador, con la batería por encima del 50% y sin interrumpir la conexión."
       }
     }
   ]

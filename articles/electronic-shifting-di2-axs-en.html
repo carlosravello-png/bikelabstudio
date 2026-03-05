@@ -89,42 +89,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why do electronic shifting systems fail differently from mechanical ones?",
+      "name": "Why is my Shimano Di2 not shifting?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Electronic drivetrains are IoT devices on a bike: they have microcontrollers, proprietary communication protocols, and updatable firmware. Around 60% of Di2 and AXS failures aren't mechanical — they're communication or power-layer issues. The correct first question isn't 'what part is broken?' but 'at which layer did the disruption occur?'"
+        "text": "The most common causes are: (1) Dead or low battery — check the indicator LED on the junction box. (2) Di2 crash mode triggered after an impact — press and hold the junction box button for 3 seconds to exit. (3) Loose E-Tube connector — reseat all junction box connections. (4) Outdated firmware causing communication errors between components. Use the BikeLab Di2 diagnostic tool to identify which layer the failure is in."
       }
     },
     {
       "@type": "Question",
-      "name": "What are the three failure layers in Di2 and AXS?",
+      "name": "How do I reset SRAM AXS pairing without the app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Layer 1 — Power (~35%): dead battery, active Bluetooth module draining power, AXS accelerometers draining battery during transport. Layer 2 — Communication (~25%): 2.4 GHz interference, outdated firmware, lost pairing, E-Tube protocol affected by vibration. Layer 3 — Mechanical (~20%): pinched cable, collapsed pogo pin, bent hanger. Layers 1 and 2 can be resolved without specialized tools."
+        "text": "Remove the battery from the rear derailleur. Press and hold the AXS button on the RD, then reinstall the battery while still holding — this initiates a factory reset. To re-pair: press the RD button until the LED blinks slow green (pairing mode open), then press the button on each component (shifters, dropper) until you see a fast green blink confirming pairing. No app required."
       }
     },
     {
       "@type": "Question",
-      "name": "Which Di2 and AXS problems can I fix at home?",
+      "name": "Why does my Di2 battery drain so fast?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dead system: remove battery for 30 seconds, reinstall and press RD button 5–10 sec (Di2) or press AXS button without battery before reinstalling (AXS). Intermittent shifts on climbs: disable Synchro Shift. AXS re-pairing: slow green on RD opens session, fast green on each component confirms. Layers 1 and 2 cover 60% of failures and are fixable at home."
+        "text": "Abnormal Di2 battery drain is almost always caused by: active Bluetooth module (Wireless Unit EW-WU111 or EW-WU101) connected to E-Tube app in the background, a firmware bug on older Di2 versions, or a faulty internal cable with a partial short. Check in E-Tube whether Bluetooth is active and turn it off when not calibrating. If drain persists after disabling Bluetooth and updating firmware, the internal cable should be inspected at a workshop."
       }
     },
     {
       "@type": "Question",
-      "name": "Why should I never update Di2 firmware over Bluetooth?",
+      "name": "What is Di2 crash mode and how do I fix it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An interrupted update corrupts the system EPROM memory. Recovery requires the SM-PCE02 tool exclusive to certified Shimano dealers. There is no documented safe alternative. Always update Di2 via USB cable using E-TUBE PROJECT."
+        "text": "Di2 crash mode is a protective state the junction box enters automatically when it detects a sudden impact. In crash mode, the front derailleur movement is locked to prevent damage from a bent hanger or misaligned drivetrain. The junction box LED blinks in a specific pattern. To exit: straighten the hanger first, then press and hold the junction box button for 3 seconds until the LED pattern changes. The system will resume normal operation."
       }
     },
     {
       "@type": "Question",
-      "name": "When should I take my Di2 or AXS to a workshop?",
+      "name": "Can I update Di2 firmware via Bluetooth?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "When the failure reappears within 48 hours of a home fix, or the system doesn't respond after a full hard reset. Also when there's damage to the Di2 shifter PCB, a broken AXS pogo pin, an Orbit fluid leak (Red/Force AXS), or when you need a Di2 firmware update. Continuing to use a damaged system can cause secondary damage to adjacent components."
+        "text": "No — never update Shimano Di2 firmware via Bluetooth. An interrupted update can corrupt the EPROM memory and permanently brick the system. Recovery requires the SM-PCE02 dealer diagnostic tool, available only at certified Shimano service centers. Always update Di2 via USB cable using E-TUBE PROJECT on a computer, with the battery above 50% and without interrupting the connection."
       }
     }
   ]

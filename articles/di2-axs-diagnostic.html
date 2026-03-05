@@ -112,43 +112,47 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "How to Diagnose Shimano Di2 or SRAM AXS Electronic Shifting Problems",
-  "description": "A structured 3-layer diagnostic process to identify and resolve Shimano Di2 and SRAM AXS electronic shifting failures — covering power, communication, and mechanical issues.",
+  "description": "A step-by-step user journey to identify and resolve Shimano Di2 and SRAM AXS electronic shifting failures at home — from system identification to certified service escalation.",
   "totalTime": "PT10M",
   "estimatedCost": {
     "@type": "MonetaryAmount",
     "currency": "USD",
     "value": "0"
   },
+  "tool": [
+    { "@type": "HowToTool", "name": "Shimano E-TUBE PROJECT (free app)" },
+    { "@type": "HowToTool", "name": "SRAM AXS app (optional — pairing can be done without it)" }
+  ],
   "step": [
     {
       "@type": "HowToStep",
       "position": 1,
-      "name": "Check Power Layer First",
-      "text": "Verify battery charge on the main battery and any satellite batteries. On Di2, check the battery indicator LED. On AXS, press the button on the RD — a solid green means charged, red means low. A dead or very low battery causes ~35% of all Di2 and AXS failures in the field."
+      "name": "Select Your System — Di2 or AXS",
+      "text": "Identify whether you have Shimano Di2 (wired electronic system with E-Tube cables and a junction box) or SRAM AXS (fully wireless system with coin-cell shifters and a rechargeable RD battery). This determines the entire diagnostic path — failure modes, reset procedures, and firmware tools are completely different between the two systems. Di2 uses a wired bus protocol; AXS uses ANT+ wireless at 2.4 GHz."
     },
     {
       "@type": "HowToStep",
       "position": 2,
-      "name": "Attempt a System Hard Reset",
-      "text": "For Di2: remove the battery for 30 seconds, reinstall, then press the RD button for 5–10 seconds. For AXS: with the RD battery removed, press and hold the AXS button, then reinstall the battery while holding. This clears most transient communication errors."
+      "name": "Check for Any Sign of Life — LED or Partial Response",
+      "text": "Look for any LED activity: on Di2, press the junction box button and observe the blink pattern. On AXS, press the button on the rear derailleur and watch for a colored blink (green = OK, red = low battery, no light = dead). A partial response — only rear shifting works, or intermittent response — indicates a communication or firmware issue. Absolutely no response points to the power layer: charge or replace the battery before continuing."
     },
     {
       "@type": "HowToStep",
       "position": 3,
-      "name": "Check Di2 Crash Mode",
-      "text": "If Di2 shifted normally before a crash and now the front derailleur won't move, crash mode may have been triggered. The LED on the junction box will blink in a specific pattern. Press and hold the junction box button for 3 seconds to exit crash mode."
+      "name": "Identify the Exact Symptom from the Diagnostic Tree",
+      "text": "Use the BikeLab Di2 & AXS Diagnostic Tool to select your exact symptom from the interactive tree: system completely dead, won't shift after a crash, battery drains in hours, pairing lost after transport, shifts only in one direction, or intermittent failures on climbs. Matching your symptom to the correct failure layer — power (~35%), communication (~25%), or mechanical (~20%) — is the decisive step that determines whether you can fix it at home."
     },
     {
       "@type": "HowToStep",
       "position": 4,
-      "name": "Verify Communication Layer (Pairing and Interference)",
-      "text": "For AXS components that lost pairing: press the RD button until you see a slow green blink (pairing mode open), then press the button on each component until you see a fast green blink (paired). For Di2, check all E-Tube connectors are fully seated — a partially connected junction box port causes intermittent failures."
+      "name": "Follow the Step-by-Step Fix Procedure",
+      "text": "Execute the indicated procedure for your symptom. Common home fixes: Di2 hard reset — remove battery for 30 seconds, press RD button 5–10 seconds after reinstall. Di2 crash mode exit — press and hold junction box button 3 seconds until LED pattern changes. AXS factory reset — hold AXS button on RD during battery reinstall. AXS re-pairing — slow green blink on RD opens pairing session, then press each component button until fast green confirms pairing. Most power and communication layer fixes take under 10 minutes with no tools required."
     },
     {
       "@type": "HowToStep",
       "position": 5,
-      "name": "Inspect Mechanical Layer",
-      "text": "Check the pogo pins on Di2 battery and junction box for corrosion or collapse. Verify the rear derailleur hanger is straight — a bent hanger causes indexing issues that look like electronic failures. Check all cable routing for pinches on internal-routing frames. If the system powers on but shifts to wrong positions, index the derailleur first before suspecting electronics."
+      "name": "If Home Fix Fails — Contact Certified Service",
+      "text": "If the failure reappears within 48 hours of a home fix, or the system does not respond after a full hard reset, the issue is in the mechanical layer or involves internal component damage (collapsed pogo pin, damaged PCB, bent hanger). Never attempt Di2 firmware updates via Bluetooth — a corrupted update bricks the system and requires the SM-PCE02 dealer tool to recover. Contact BikeLab Studio or a certified Shimano / SRAM service center. Continuing to use a damaged system causes secondary damage to adjacent components."
     }
   ]
 }
