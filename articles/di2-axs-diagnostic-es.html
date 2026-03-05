@@ -1116,7 +1116,6 @@ function t(key) { return T[LANG][key] || T.en[key]; }
 function setLang(l) {
   if (l === 'en') { window.location.href = './di2-axs-diagnostic.html'; return; }
   LANG = l;
-  document.getElementById('btn-es').classList.add('active');
   document.documentElement.lang = l;
   updateStaticText();
   restart();

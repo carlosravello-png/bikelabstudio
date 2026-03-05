@@ -1114,8 +1114,6 @@ function t(key) { return T[LANG][key] || T.en[key]; }
 
 function setLang(l) {
   LANG = l;
-  document.getElementById('btn-en').classList.toggle('active', l === 'en');
-  document.getElementById('btn-es').classList.toggle('active', l === 'es');
   document.documentElement.lang = l;
   updateStaticText();
   restart();
