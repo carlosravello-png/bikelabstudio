@@ -1073,8 +1073,8 @@ body {
 // ─── LANGUAGE ──────────────────────────────────────────────────────────────
 let LANG = (function(){
   var p = new URLSearchParams(location.search).get('lang');
-  if (p === 'es' || p === 'en') return p;
-  return (navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+  if (p === 'es') return 'es'; // explicit override only
+  return 'en'; // EN canonical URL always defaults to English
 })();
 // Set initial button active state once DOM is ready
 document.addEventListener('DOMContentLoaded', function() {

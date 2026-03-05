@@ -207,12 +207,14 @@ footer a:hover{color:var(--accent)}
 <body>
 
 <script>
-// Embed mode: fix scroll when loaded inside iframe via ?embed=1
+// Embed mode: fix scroll + hide redundant sections when loaded inside iframe via ?embed=1
 if (new URLSearchParams(location.search).get('embed') === '1') {
   var _es = document.createElement('style');
   _es.textContent = [
     'body{min-height:auto!important;overflow:hidden!important}',
-    'header{position:relative!important;top:auto!important}',
+    'header{display:none!important}',
+    '.hero{display:none!important}',
+    '.brands-bar{display:none!important}',
     '.results-panel{position:relative!important;top:0!important;max-height:none!important;overflow-y:visible!important}'
   ].join('');
   document.head.appendChild(_es);
