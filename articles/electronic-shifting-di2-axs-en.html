@@ -258,7 +258,7 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; font-famil
 .meta-item { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; color: var(--dim); text-transform: uppercase; }
 .meta-item span { color: #888; }
 .article-wrap { max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 8vw, 120px); display: grid; grid-template-columns: 1fr 280px; gap: 80px; align-items: start; padding-top: clamp(48px, 8vh, 80px); padding-bottom: clamp(48px, 8vh, 80px); }
-@media(max-width: 900px) { .article-wrap { grid-template-columns: 1fr; gap: 48px; } .sidebar { order: -1; } }
+@media(max-width: 900px) { .article-wrap { grid-template-columns: 1fr; gap: 48px; } .article-body { order: -1; } .sidebar { order: 1; position: static; } }
 .article-body p { font-family: var(--body); font-size: clamp(1rem, 1.8vw, 1.15rem); color: #999; line-height: 1.85; font-weight: 300; margin-bottom: 1.6em; }
 .article-body p strong { color: #ccc; font-weight: 700; }
 .article-body p em { font-style: italic; color: #aaa; }
