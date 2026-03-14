@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/"/>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
@@ -153,13 +153,37 @@
       <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp</image:loc>
       <image:caption>Resultado final RockShox SID Ultimate restaurada con retenes nuevos — BikeLab Studio Trujillo</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-santana-workshop-trujillo.webp</image:loc>
+      <image:caption>Konrad Pfeffer con tándem Santana titanio en BikeLab Studio Trujillo — reparación bicicleta tándem touring Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-pfeffer-carlos-trujillo.webp</image:loc>
+      <image:caption>Konrad Pfeffer y Carlos BikeLab — pareja alemana ciclista mundial recalada en Trujillo Peru — tandem tourists trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-titanio-full.webp</image:loc>
+      <image:caption>Santana titanium tandem expedición completo en soporte Park Tool — taller bicicletas Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-cockpit-doble.webp</image:loc>
+      <image:caption>Cockpit doble manillar tándem Santana — cables Shimano SRAM y cinta nueva — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-cable-routing.webp</image:loc>
+      <image:caption>Detalle cableado expedición tándem titanio — servicio ciclista touring Peru — BikeLab Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-dhl-pedalier.webp</image:loc>
+      <image:caption>Paquete DHL con pedalier Shimano enviado desde Dortmund Alemania — world cycling tour bike service peru</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bikelabstudio.com/index-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/"/>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
@@ -304,6 +328,30 @@
     <image:image>
       <image:loc>https://www.bikelabstudio.com/articles/images/servicio-suspension-rockshox-bikelab-trujillo-2.webp</image:loc>
       <image:caption>Restored RockShox SID Ultimate with new seals — final result at BikeLab Studio Trujillo Peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-santana-workshop-trujillo.webp</image:loc>
+      <image:caption>Konrad Pfeffer with Santana titanium tandem at BikeLab Studio Trujillo — touring bike repair peru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-pfeffer-carlos-trujillo.webp</image:loc>
+      <image:caption>Konrad Pfeffer and Carlos BikeLab — German cycling couple world tour stopover Trujillo Peru — tandem tourists cyclist</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-titanio-full.webp</image:loc>
+      <image:caption>Santana titanium expedition tandem on Park Tool stand — tandem bike repair trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-cockpit-doble.webp</image:loc>
+      <image:caption>Dual cockpit tandem Santana — Shimano SRAM cables and new bar tape — BikeLab Studio Trujillo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-cable-routing.webp</image:loc>
+      <image:caption>Expedition tandem cable routing detail — world cycling tour bike service peru — BikeLab Studio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bikelabstudio.com/articles/images/tandem-dhl-pedalier.webp</image:loc>
+      <image:caption>DHL package with Shimano bottom bracket shipped from Dortmund Germany — expedition BB replacement Trujillo Peru</image:caption>
     </image:image>
   </url>
   <url>
