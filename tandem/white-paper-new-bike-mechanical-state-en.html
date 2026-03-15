@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#000000">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Factory Mechanical State of New Bicycles: Tribological and Kinematic Analysis | BikeLab Studio">
+    <meta name="twitter:description" content="Technical analysis of five performance degradation vectors in new box bicycles: lubrication, wheel structural integrity, hydraulic compliance, assembly torque and drivetrain losses. Data from Friction Facts, SKF, PBMA and Shimano.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp">
+
+    <title>Factory Mechanical State of New Bicycles: Tribological and Kinematic Analysis | BikeLab Studio</title>
+    <meta name="description" content="Technical white paper: analysis of five mechanical degradation vectors in new box bicycles. NLGI factory lubrication, spoke tension, hydraulic compliance, carbon torque and drivetrain losses. Quantified data from Zero Friction Cycling, SKF, PBMA and Shimano.">
+    <meta name="keywords" content="new bicycle white paper, bicycle PDI technical analysis, factory NLGI lubrication tribology, spoke tension kgf, carbon bicycle torque, watts drivetrain loss new bike, BikeLab Studio Trujillo">
+    <meta name="author" content="Carlos Ravello">
+
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Factory Mechanical State of New Bicycles: Tribological and Kinematic Analysis | BikeLab Studio">
+    <meta property="og:description" content="Quantitative analysis of performance losses in new bicycles. Five vectors: lubrication, spokes, brakes, torque and drivetrain. Data from Zero Friction Cycling, SKF and Shimano.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="BikeLab Studio">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "proficiencyLevel": "Expert",
+          "locationCreated": "Trujillo, Peru",
+          "headline": "Factory Mechanical State of New Bicycles: Tribological and Kinematic Analysis of Performance Degradation Vectors",
+          "alternativeHeadline": "Quantification of energy losses, structural deviations and integrity risks in new box bicycles",
+          "description": "Technical analysis of five mechanical degradation vectors present in new bicycles without pre-delivery inspection (PDI): friction coefficient of factory lubricant vs. reference technical lubricants, spoke tension uniformity, hydraulic circuit volumetric compliance, assembly torque on carbon components, and total drivetrain losses. Data from Zero Friction Cycling, CeramicSpeed Friction Facts, SKF Group, PBMA standards and Shimano/SRAM technical manuals.",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Carlos Ravello",
+            "jobTitle": "Founder of BikeLab Studio",
+            "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+            "affiliation": { "@type": "Organization", "name": "BikeLab Studio" }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BikeLab Studio",
+            "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" }
+          },
+          "datePublished": "2026-03-15T08:00:00-05:00",
+          "dateModified": "2026-03-15T08:00:00-05:00",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html"
+          },
+          "about": [
+            { "@type": "Thing", "name": "Tribology", "sameAs": "https://en.wikipedia.org/wiki/Tribology" },
+            { "@type": "Thing", "name": "Bicycle drivetrain", "sameAs": "https://en.wikipedia.org/wiki/Bicycle_drivetrain_systems" },
+            { "@type": "Thing", "name": "Hydraulic brake", "sameAs": "https://en.wikipedia.org/wiki/Hydraulic_brake" }
+          ],
+          "articleSection": "Component Engineering",
+          "keywords": "bicycle PDI, NLGI lubrication, spoke tension, hydraulic compliance, carbon torque, chain friction watts, BikeLab Studio",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
+            { "@type": "ListItem", "position": 2, "name": "Technical Articles", "item": "https://www.bikelabstudio.com/index-en.html#science" },
+            { "@type": "ListItem", "position": 3, "name": "White Paper: Factory Mechanical State", "item": "https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; background-color: #0a0a0a; color: #e0e0e0; line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background-color: #121212; padding: 40px; border: 1px solid #333; }
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+        h1 { font-size: 26px; color: #ffffff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 14px; color: #999; margin-bottom: 20px; line-height: 1.7; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+        h2 { font-size: 13px; color: #aaa; letter-spacing: 3px; margin-top: 55px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; text-transform: uppercase; }
+        h3 { font-size: 12px; color: #888; letter-spacing: 2px; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; }
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+        ul, ol { color: #ccc; margin-left: 22px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; line-height: 1.7; }
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+        .source { font-size: 11px; color: #555; font-style: italic; margin-top: -12px; margin-bottom: 22px; }
+        .formula { background: linear-gradient(135deg, #111 0%, #0a0a0a 100%); color: #f2f2f2; font-size: 1.1rem; font-weight: 600; padding: 24px 30px; margin: 28px 0 8px; border: 2px solid #444; border-left: 6px solid #aaa; box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04); overflow-x: auto; }
+        .formula .formula-source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; font-weight: 400; }
+        table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+        .warning-box { background-color: #1a0a0a; border-left: 3px solid #ff4444; padding: 20px; margin: 30px 0; }
+        .warning-box p { color: #cc9999; margin-bottom: 8px; }
+        .warning-box p:first-child { color: #ff6b6b; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+        .field-note { background-color: #0a0f0a; border-left: 3px solid #4a9e6b; padding: 20px; margin: 30px 0; }
+        .field-note p { color: #aac8b4; margin-bottom: 8px; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+        .abstract-box { background: #0d0d0d; border: 1px solid #2a2a2a; border-top: 3px solid #555; padding: 28px 30px; margin: 30px 0 50px; }
+        .abstract-box h3 { margin-top: 0; color: #777; font-size: 10px; letter-spacing: 3px; }
+        .abstract-box p { font-size: 13px; color: #aaa; line-height: 1.9; margin-bottom: 0; }
+        .service-cta { background: #0a0a0a; border: 1px solid #2a2a2a; border-left: 3px solid #555; padding: 20px 24px; margin: 35px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .service-cta-text { font-size: 11px; color: #888; letter-spacing: 0.5px; line-height: 1.9; }
+        .service-cta-text strong { color: #bbb; display: block; font-size: 12px; letter-spacing: 2px; margin-bottom: 4px; }
+        .service-cta a { font-size: 10px; color: #e0e0e0; text-decoration: none; border: 1px solid #444; padding: 10px 16px; letter-spacing: 2px; white-space: nowrap; transition: all 0.3s; display: inline-block; }
+        .service-cta a:hover { background: #e0e0e0; color: #000; border-color: #e0e0e0; }
+        .conclusion-box { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 50px 0; }
+        .references { background-color: #0a0a0a; border: 1px solid #333; padding: 25px 30px; margin: 40px 0; }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 12px; padding-left: 18px; text-indent: -18px; font-size: 11px; line-height: 1.7; color: #666; }
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #555; }
+        .nav-back { display: inline-block; font-size: 11px; color: #666; text-decoration: none; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 4px; transition: color 0.2s; }
+        .nav-back:hover { color: #aaa; }
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'Courier New', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; transition: color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-overlay a:hover { color: #888; }
+        .nav-bar .lang-switch { position: static; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 16px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .container { padding: 20px; } h1 { font-size: 20px; } table { font-size: 11px; } th, td { padding: 8px; } .service-cta { flex-direction: column; } .formula { padding: 16px; font-size: 0.95rem; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } .nav-overlay { z-index: 1004; overflow-y: auto; } .wa-float { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 0.65rem; } }
+    </style>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENU</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Open menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="lang-switch">
+        <a href="../index-en.html">HOME</a> ·
+        <a href="white-paper-bicicleta-nueva-estado-mecanico-es.html">ES</a>
+    </div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index-en.html">HOME</a>
+        <a href="../servicios-en.html">SERVICES</a>
+        <a href="../mantenimiento-general-en.html">GENERAL MAINTENANCE</a>
+        <a href="../purgado-frenos-en.html">BRAKE BLEED</a>
+        <a href="../centrado-ruedas-en.html">WHEEL TRUING</a>
+        <a href="../rodamientos-hardtail-en.html">BEARINGS</a>
+        <a href="../suspension-en.html">SUSPENSION</a>
+        <a href="../index-en.html#science">TECHNICAL ARTICLES</a>
+        <a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20I%20want%20to%20book%20an%20appointment">CONTACT</a>
+    </nav>
+</div>
+
+<a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20I%20want%20to%20inquire%20about%20services" class="wa-float" aria-label="Contact via WhatsApp">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WHATSAPP_
+</a>
+
+<div class="container" style="padding-top: 100px;">
+
+    <a href="../index-en.html#science" class="nav-back">← BACK TO HOME</a>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // BENCH_ANALYSIS</div>
+        <div class="category">COMPONENT_ENGINEERING // APPLIED_TRIBOLOGY // STRUCTURAL_KINEMATICS</div>
+        <nav aria-label="Breadcrumb" style="font-size:11px;color:#666;margin-bottom:20px;letter-spacing:1px;">
+            <a href="../index-en.html" style="color:#888;text-decoration:none;">HOME</a> /
+            <a href="../index-en.html#science" style="color:#888;text-decoration:none;">TECHNICAL ARTICLES</a> /
+            <span style="color:#ddd;">White Paper — Factory Mechanical State</span>
+        </nav>
+        <h1>Factory Mechanical State of New Bicycles</h1>
+        <div class="subtitle">Tribological and kinematic analysis of five performance degradation vectors in new box bicycles: lubrication, wheel structural integrity, hydraulic compliance, assembly torque and total drivetrain losses</div>
+        <div class="meta">
+            Author: Carlos Ravello // Founder of BikeLab Studio<br>
+            Date: March 2026 · Revision: 1.0 ·
+            <!-- INTERLINK: divulgation version → new-bike-factory-calibration-en.html -->
+            Full technical version
+        </div>
+    </div>
+
+    <!-- ABSTRACT -->
+    <div class="abstract-box">
+        <h3>ABSTRACT</h3>
+        <p>This article quantifies the systematic mechanical deviations present in new bicycles without pre-delivery inspection (PDI). Five independent vectors are analyzed: (1) friction coefficient of factory lubricant against reference technical lubricants, with chain power losses of 6–10 W at 250 W input; (2) spoke tension uniformity, with 20–30% variations between adjacent spokes vs. the 100–120 kgf target; (3) hydraulic circuit volumetric compliance from micro air bubbles, with 25% stopping distance increase at 30 km/h; (4) assembly torque at carbon interfaces, with 40% of critical bolts outside tolerance; (5) total drivetrain efficiency loss of 2.5–4% in factory condition. The evidence establishes the professional PDI as a mandatory protocol prior to the first ride.</p>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <h2>MODULE_00 // CONCEPTUAL_FRAMEWORK</h2>
+
+    <p>A new bicycle is not a calibrated bicycle. It is a bicycle assembled under the production tolerance parameters that the industrial supply chain considers sufficient for the product to reach the point of sale without visible damage and with verifiable basic function.</p>
+
+    <p>Those parameters are not the parameters of optimal performance. They are the parameters of minimum acceptable performance for transport and showroom display. The difference between the two is the subject of this analysis.</p>
+
+    <p>Five quantifiable mechanical degradation vectors are defined: <strong>V₁</strong> — factory lubrication; <strong>V₂</strong> — wheel structural integrity; <strong>V₃</strong> — hydraulic compliance; <strong>V₄</strong> — assembly torque; <strong>V₅</strong> — total drivetrain loss. Each vector operates independently and their effects are additive on the overall system performance.</p>
+
+    <!-- V1 LUBRICATION -->
+    <h2>MODULE_01 // V₁ — FACTORY_LUBRICATION</h2>
+
+    <h3>1.1 Composition and classification of factory lubricant</h3>
+
+    <p>Top-tier bicycle manufacturers — Trek, Specialized, Giant, Cannondale — do not formulate their own assembly lubricants. They use industrial greases from suppliers such as Klüber or Mobil, generally classified as <span class="data-highlight">NLGI Grade 2</span> with a base oil viscosity of <span class="data-highlight">100 to 150 cSt</span> at 40°C.</p>
+
+    <p>This classification places factory lubricants in the general-purpose grease range, optimized for sealing, anti-corrosion protection and mechanical resistance during storage — not for minimizing friction during dynamic operation.</p>
+
+    <p>Chains leave the factory with a thick petroleum-based anti-corrosion coating — commonly referred to as "factory grease" or "shipping compound" — which should not be mistaken for a functional lubricant. Its high viscosity acts as a particle trap from the first kilometers.</p>
+
+    <h3>1.2 Friction model and power loss</h3>
+
+    <p>The relationship between kinetic friction coefficient (μ) and chain power loss can be approximated through the per-link drivetrain efficiency model:</p>
+
+    <div class="formula">
+        $$P_{loss} = P_{input} \times (1 - \eta_{chain})$$
+        <div class="formula-source">where η<sub>chain</sub> = chain efficiency as a function of lubricant and load</div>
+    </div>
+
+    <p>Zero Friction Cycling and CeramicSpeed Friction Facts benchmarks, under controlled load protocol at 250 W input power and 100 rpm, establish the following comparative values:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>CHAIN CONDITION</th>
+                <th>P<sub>loss</sub> (W)</th>
+                <th>η (%)</th>
+                <th>ESTIMATED μ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>New, untreated factory coating</td>
+                <td class="data-red">6 – 10</td>
+                <td class="data-red">96.0 – 97.6</td>
+                <td>0.07 – 0.10</td>
+            </tr>
+            <tr>
+                <td>New, clean + premium wet lubricant</td>
+                <td class="data-yellow">4 – 6</td>
+                <td class="data-yellow">97.6 – 98.4</td>
+                <td>0.04 – 0.06</td>
+            </tr>
+            <tr>
+                <td>Hot-melt paraffin wax treated</td>
+                <td class="data-green">3.4 – 4.0</td>
+                <td class="data-green">98.4 – 98.9</td>
+                <td>0.02 – 0.03</td>
+            </tr>
+            <tr>
+                <td>CeramicSpeed UFO Drip (laboratory reference)</td>
+                <td class="data-green">3.78</td>
+                <td class="data-green">98.5</td>
+                <td>~0.018</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Zero Friction Cycling Chain Lubricant Independent Test Results; CeramicSpeed / Friction Facts Chain Efficiency Benchmarks.</div>
+
+    <h3>1.3 Bearing degradation</h3>
+
+    <p>Bottom bracket, hub and headset bearings operate in the viscous range of NLGI 2 industrial grease. The break-away friction coefficient in sealed bearings with this grease sits at <span class="data-red">μ = 0.05 – 0.10</span>. A premium high-temperature technical grease such as SKF LGHP 2/1 operates at <span class="data-green">μ = 0.01 – 0.03</span>.</p>
+
+    <p>The service life of factory lubrication in sealed bearings is <span class="data-yellow">3,000 – 5,000 km</span> under dry conditions. This value drops sharply with pressure washing exposure, as generic NLGI 2 greases have lower water wash-out resistance than bicycle-specific technical formulations.</p>
+
+    <!-- INTERLINK: grease-tribology-en.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>RELATED SERVICE — HARDTAIL BEARINGS</strong>
+            Extraction, ultrasonic cleaning and repacking with SKF LGHP 2/1. Bottom bracket, hubs and headset.
+        </div>
+        <a href="../rodamientos-hardtail-en.html">VIEW PROTOCOL →</a>
+    </div>
+
+    <!-- V2 SPOKES -->
+    <h2>MODULE_02 // V₂ — WHEEL_STRUCTURAL_INTEGRITY</h2>
+
+    <h3>2.1 Spoke tension: target value and acceptable tolerance</h3>
+
+    <p>Spoke tension is the primary variable determining lateral stiffness, load-deformation resistance and structural service life of a built wheel. The target value for the drive side on 29" and 27.5" wheels is in the range of <span class="data-highlight">100 – 120 kgf</span> (980 – 1,177 N), with a uniformity tolerance below <span class="data-green">±10%</span> between adjacent spokes.</p>
+
+    <p>This uniformity criterion is the critical structural indicator: it is not sufficient for the average tension to be within range; the load distribution between spokes must be homogeneous for the rim to function as a continuous system rather than a chain of unequal stress points.</p>
+
+    <h3>2.2 Deviations observed in factory wheels</h3>
+
+    <p>The truing process in mass production — generally automated or semi-automatic with basic manual verification — does not guarantee tension uniformity between individual spokes. Vibrations and compressions during box shipping generate additional settling that further increases variability.</p>
+
+    <p>Reports from specialized workshops and accumulated evidence from PBMA-certified mechanics place the variation between adjacent spokes in uninspected new wheels at <span class="data-red">20 – 30%</span> relative to the mean value.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>PARAMETER</th>
+                <th>FACTORY VALUE (TYPICAL)</th>
+                <th>PDI TARGET VALUE</th>
+                <th>DEVIATION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mean drive-side tension</td>
+                <td>80 – 120 kgf</td>
+                <td class="data-green">100 – 120 kgf</td>
+                <td>Variable</td>
+            </tr>
+            <tr>
+                <td>Uniformity between adjacent spokes</td>
+                <td class="data-red">±20 – 30%</td>
+                <td class="data-green">&lt; ±10%</td>
+                <td class="data-red">2–3× outside tolerance</td>
+            </tr>
+            <tr>
+                <td>Lateral rim deviation</td>
+                <td>0.5 – 2.0 mm</td>
+                <td class="data-green">&lt; 0.5 mm</td>
+                <td>Up to 4× outside tolerance</td>
+            </tr>
+            <tr>
+                <td>Shops verifying tension with meter</td>
+                <td class="data-red">&lt; 30%</td>
+                <td class="data-green">100%</td>
+                <td class="data-red">70% without instrumental verification</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Park Tool Wheel Truing Reference; PBMA Pre-Delivery Inspection Standards; consolidated specialized workshop data.</div>
+
+    <h3>2.3 Structural implications</h3>
+
+    <p>Unequal spoke tension generates non-uniform load distribution across the rim. Under static conditions, this manifests as lateral or radial runout. Under dynamic conditions, the spokes under greater relative tension operate with lower fatigue reserve, accelerating the probability of failure under cyclic loading. The highest-tension spoke fails first.</p>
+
+    <!-- INTERLINK: centrado-ruedas-en.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>RELATED SERVICE — WHEEL TRUING</strong>
+            Lateral and radial correction with tension balancing using a calibrated tension meter. MTB and road.
+        </div>
+        <a href="../centrado-ruedas-en.html">VIEW PROTOCOL →</a>
+    </div>
+
+    <!-- V3 BRAKES -->
+    <h2>MODULE_03 // V₃ — HYDRAULIC_COMPLIANCE</h2>
+
+    <h3>3.1 Physical basis: volumetric compliance and lever response</h3>
+
+    <p>A bicycle hydraulic brake circuit operates under the principle of hydrostatic pressure transmission. The relationship between the force applied at the lever (F<sub>lever</sub>), the master cylinder piston area (A<sub>master</sub>) and the resulting hydraulic pressure (P) is expressed as:</p>
+
+    <div class="formula">
+        $$P = \frac{F_{lever}}{A_{master}} \quad \Rightarrow \quad F_{caliper} = P \times A_{caliper}$$
+        <div class="formula-source">Pascal's Principle — pressure transmission in an incompressible fluid</div>
+    </div>
+
+    <p>This model assumes an essentially incompressible fluid. The presence of gas (air) in the circuit introduces volumetric compliance: a fraction of the lever displacement is consumed compressing the air bubble rather than driving the pads toward the rotor.</p>
+
+    <h3>3.2 Quantification of bubble effect</h3>
+
+    <p>An air bubble of <span class="data-highlight">0.1 – 0.5 cm³</span> in the hydraulic circuit — a volume difficult to detect visually but sufficient to alter response — produces the following measurable effects:</p>
+
+    <ul>
+        <li>Increased lever displacement to bite point (greater free travel)</li>
+        <li>Reduced maximum braking force achievable before grip-to-bar contact</li>
+        <li>Degraded modulation: response is not linear but progressively spongy</li>
+        <li>Stopping distance increase of up to <span class="data-red">25%</span> vs. a perfectly bled circuit</li>
+    </ul>
+
+    <div class="warning-box">
+        <p>SAFETY VECTOR — QUANTIFICATION</p>
+        <p>At 30 km/h, a reference stopping distance of <strong>7.0 meters</strong> becomes <strong>8.75 meters</strong> with a hydraulic system with air compliance. On a descent at 40 km/h, the difference exceeds <strong>3 meters</strong>. This margin is not negligible in urban traffic or technical singletrack.</p>
+    </div>
+
+    <h3>3.3 Caliper: alignment and bed-in</h3>
+
+    <p>Caliper alignment relative to the rotor plane determines the uniformity of pad-to-rotor contact. A caliper misaligned by <span class="data-red">0.3 – 0.5 mm</span> generates asymmetric contact, with one pad dragging before the other. The effect is uneven pad wear, localized heat buildup and rubbing noise from the first kilometers.</p>
+
+    <p>The bed-in process — controlled cycling of progressive braking to transfer pad material to the rotor and create a uniform transfer layer — is rarely performed correctly at the point of sale. Without it, initial braking efficiency is below the manufacturer's specification.</p>
+
+    <!-- INTERLINK: purgado-frenos-en.html -->
+    <!-- INTERLINK: hydraulic-brakes-altitude-thermodynamics.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>RELATED SERVICE — HYDRAULIC BRAKE BLEED</strong>
+            Hydraulic pressure restoration, caliper alignment and bite point verification. Shimano, SRAM, Magura, Tektro.
+        </div>
+        <a href="../purgado-frenos-en.html">VIEW PROTOCOL →</a>
+    </div>
+
+    <!-- V4 TORQUE -->
+    <h2>MODULE_04 // V₄ — ASSEMBLY_TORQUE</h2>
+
+    <h3>4.1 Specifications and tolerances on carbon components</h3>
+
+    <p>Carbon components present a significantly narrower torque range than aluminum or steel components. The reason is material anisotropy: radial compression resistance is high, but tolerance to stress concentration from over-torque is low. Crush deformation in carbon is not reversible.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>COMPONENT</th>
+                <th>SPECIFIED TORQUE (Nm)</th>
+                <th>CONSEQUENCE OF EXCESS</th>
+                <th>CONSEQUENCE OF DEFICIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stem — handlebar clamp bolts</td>
+                <td class="data-highlight">4 – 6</td>
+                <td>Micro-crack in carbon handlebar</td>
+                <td>Slip under load</td>
+            </tr>
+            <tr>
+                <td>Stem — steerer tube clamp bolts</td>
+                <td class="data-highlight">5 – 8</td>
+                <td>Crack in compression zone</td>
+                <td>Uncontrolled rotation</td>
+            </tr>
+            <tr>
+                <td>Seatpost — clamp bolt</td>
+                <td class="data-highlight">4 – 6</td>
+                <td>Seatpost crush</td>
+                <td>Axial slip (creaking)</td>
+            </tr>
+            <tr>
+                <td>Crankset — crank arm bolts</td>
+                <td class="data-highlight">12 – 15</td>
+                <td>Thread failure in aluminum</td>
+                <td>Progressive axial play</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Source: Shimano Dealer's Manual; SRAM Technical Service Guide; FSA, Ritchey, Zipp component specifications.</div>
+
+    <h3>4.2 Field inspection incidence of deviations</h3>
+
+    <p>Workshop evidence indicates that up to <span class="data-red">40%</span> of critical bolts on stems and handlebars of new bicycles present torque outside the specified range at the time of first inspection. Deviations occur in both directions: under-torque from omission of a torque wrench in shop assembly, and over-torque from excessive manual force.</p>
+
+    <p>Between <span class="data-red">15 and 20%</span> of warranty claims for cracks in carbon handlebars and seatposts on new bicycles are attributed to over-torque during initial assembly or by the user. The crack does not always appear immediately — it may manifest at 200 – 500 km under cyclic loading on the pre-existing micro-crack.</p>
+
+    <div class="field-note">
+        <p>WORKSHOP PROTOCOL — TORQUE</p>
+        <p>Every critical fastener at BikeLab Studio is verified with a calibrated torque wrench. Carbon components receive carbon anti-slip compound (Carbon Grip / Fiber Grip) before assembly to achieve the specified torque without needing to exceed the maximum value.</p>
+    </div>
+
+    <!-- V5 TOTAL LOSS -->
+    <h2>MODULE_05 // V₅ — TOTAL_DRIVETRAIN_LOSS</h2>
+
+    <h3>5.1 Cumulative loss model</h3>
+
+    <p>Vectors V₁ through V₄ are not mutually exclusive. In a new bicycle without PDI, all operate simultaneously. Total drivetrain efficiency loss can be estimated as the sum of independent contributions:</p>
+
+    <div class="formula">
+        $$P_{total\_loss} = P_{V1\_chain} + P_{V1\_bearings} + P_{V5\_misalignment}$$
+        $$P_{total\_loss} \approx (6\text{–}10\,W) + (0.5\text{–}1.5\,W) + (1\text{–}2\,W) = \mathbf{7.5\text{–}13.5\,W}$$
+        <div class="formula-source">Conservative estimate at 250 W input power. Data: Friction Facts, SKF Technical Data.</div>
+    </div>
+
+    <p>This range of <span class="data-red">7.5 – 13.5 W</span> represents a global efficiency loss of <span class="data-red">3 – 5.4%</span> at 250 W. For a cyclist maintaining 200 W for 3 hours, the energy dissipated through avoidable friction exceeds <span class="data-red">16,200 joules</span> in a single ride.</p>
+
+    <h3>5.2 Drivetrain misalignment: additional contribution</h3>
+
+    <p>Derailleur hanger deviation — frequent in new bikes due to compression during box shipping — introduces rear derailleur misalignment relative to the sprocket plane. A <span class="data-red">1 – 3 mm</span> hanger deviation generates:</p>
+
+    <ul>
+        <li>Incorrect indexing: the chain does not engage cleanly on the target sprocket</li>
+        <li>Amplified chain cross: greater lateral friction on extreme gear combinations</li>
+        <li>Accelerated sprocket and chain wear from unintended angular contact</li>
+        <li>Chain skip risk under load, particularly in 12-speed systems with tighter sprocket profile tolerances</li>
+    </ul>
+
+    <!-- INTERLINK: white-paper-11v-12v-en.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>RELATED READING — WHITE PAPER 11V / 12V</strong>
+            Analysis of kinematic tolerances in high-speed drivetrains and the impact of hanger misalignment.
+        </div>
+        <!-- INTERLINK: white-paper-11v-12v-en.html -->
+        <a href="#">VIEW ANALYSIS →</a>
+    </div>
+
+    <!-- SUMMARY TABLE -->
+    <h2>MODULE_06 // QUANTITATIVE_SYNTHESIS</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>VECTOR</th>
+                <th>MEASURED PARAMETER</th>
+                <th>FACTORY CONDITION</th>
+                <th>OPTIMAL CONDITION</th>
+                <th>QUANTIFIED IMPACT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>V₁</strong> Chain lubrication</td>
+                <td>P<sub>loss</sub> at 250 W</td>
+                <td class="data-red">6 – 10 W</td>
+                <td class="data-green">3.4 – 4.0 W</td>
+                <td>−2.6 to −6.6 W recoverable</td>
+            </tr>
+            <tr>
+                <td><strong>V₁</strong> Bearing lubrication</td>
+                <td>Kinetic μ</td>
+                <td class="data-red">0.05 – 0.10</td>
+                <td class="data-green">0.01 – 0.03</td>
+                <td>3–5× friction reduction</td>
+            </tr>
+            <tr>
+                <td><strong>V₂</strong> Spoke tension</td>
+                <td>Adjacent spoke variation</td>
+                <td class="data-red">±20 – 30%</td>
+                <td class="data-green">&lt; ±10%</td>
+                <td>Asymmetric wear, accelerated fatigue</td>
+            </tr>
+            <tr>
+                <td><strong>V₃</strong> Hydraulic compliance</td>
+                <td>Stopping distance</td>
+                <td class="data-red">+25% vs. optimal</td>
+                <td class="data-green">Reference</td>
+                <td>+1.75 m at 30 km/h</td>
+            </tr>
+            <tr>
+                <td><strong>V₄</strong> Assembly torque</td>
+                <td>% components out of range</td>
+                <td class="data-red">~40%</td>
+                <td class="data-green">0%</td>
+                <td>Carbon micro-crack risk</td>
+            </tr>
+            <tr>
+                <td><strong>V₅</strong> Total drivetrain loss</td>
+                <td>Cumulative P<sub>loss</sub></td>
+                <td class="data-red">7.5 – 13.5 W</td>
+                <td class="data-green">3.9 – 5.5 W</td>
+                <td>Δ = 3.6 – 8.0 W recoverable</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- CONCLUSION -->
+    <div class="conclusion-box">
+        <h2 style="margin-top:0;">MODULE_07 // CONCLUSIONS</h2>
+
+        <p>The analysis of the five vectors demonstrates that the mechanical state of a new box bicycle is systematically outside optimal performance parameters at every evaluated point. The deviations are not random or exceptional: they are structural to the mass production and shipping process.</p>
+
+        <p>The recoverable power loss ranges from <span class="data-yellow">3.6 to 8.0 W</span> in chain and bearings alone. The hydraulic risk introduces a compromised safety margin of <span class="data-red">+1.75 m stopping distance</span> at moderate speeds. Torque deviations expose the rider to deferred carbon failures.</p>
+
+        <p>A complete PDI — with instrumental spoke tension verification, chain lubricant replacement, hydraulic circuit bleeding, hanger alignment and torque verification with a calibrated torque wrench — corrects all identified vectors in a single intervention of <span class="data-highlight">90 – 150 minutes</span>.</p>
+
+        <p>The question is not whether the PDI is worth it. The question is why it is not standard at every bike shop.</p>
+
+        <!-- INTERLINK: white-paper-fit-analyzer-en.html — post-setup diagnostics -->
+        <!-- INTERLINK: grease-tribology-en.html — full V1 development -->
+        <!-- INTERLINK: hydraulic-brakes-altitude-thermodynamics.html — full V3 development -->
+    </div>
+
+    <div class="service-cta" style="border-left-color: #888;">
+        <div class="service-cta-text">
+            <strong>PROFESSIONAL PDI — BIKELAB STUDIO, TRUJILLO</strong>
+            Instrumental verification of all five vectors. Calibrated tension meter, torque wrench, certified technical lubricants.
+        </div>
+        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20New%20Bike%20PDI.%0AI%20want%20to%20book%20a%20complete%20pre-delivery%20inspection.">BOOK VIA WHATSAPP →</a>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references">
+        <h2 style="margin-top:0;">REFERENCES</h2>
+        <div class="ref-item">[1] Zero Friction Cycling. <em>Chain Lubricant Independent Test Results — Watt Loss Benchmarks at 250W</em>. Independent evaluation of chain lubricants under controlled load protocol.</div>
+        <div class="ref-item">[2] CeramicSpeed / Friction Facts. <em>Chain Lubrication Efficiency Benchmarks</em>. Friction coefficient and power loss comparison in bicycle drivetrain.</div>
+        <div class="ref-item">[3] SKF Group. <em>LGHP 2 High Temperature Bearing Grease — Technical Data Sheet</em>. Viscosity, friction coefficient and service life in precision bearings.</div>
+        <div class="ref-item">[4] Klüber Lubrication. <em>NLGI Consistency Classification and Base Oil Viscosity Reference</em>. Industrial grease classification by NLGI grade and viscosity range.</div>
+        <div class="ref-item">[5] Shimano Inc. <em>Dealer's Manual — Road and MTB Component Assembly</em>. Torque specifications and installation procedures for Shimano components.</div>
+        <div class="ref-item">[6] SRAM LLC. <em>Technical Service Guide — Red / Force / Rival / Eagle Assembly Torque Specifications</em>.</div>
+        <div class="ref-item">[7] Park Tool Company. <em>Wheel Truing and Spoke Tension Reference Guide</em>. Truing methodology, spoke tension and uniformity criteria.</div>
+        <div class="ref-item">[8] PBMA (Professional Bicycle Mechanics Association). <em>Pre-Delivery Inspection Standards</em>. Pre-delivery inspection standard for new bicycles — procedures and acceptance criteria.</div>
+        <div class="ref-item">[9] Pascal, B. (1663). <em>Traité de l'équilibre des liqueurs</em>. Foundation of the hydrostatic pressure transmission principle applied to the hydraulic brake circuit.</div>
+    </div>
+
+    <div class="footer">
+        <p>BikeLab Studio — Calle Paraguay 300, Urb. El Recreo, Trujillo, Peru. Monday to Saturday.</p>
+        <p style="margin-top:8px;">Design and ownership: Carlos Ravello Joo · Dynamic Coherence Model · MCD</p>
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.nav-overlay a').forEach(a => {
+        if (a.getAttribute('href')?.startsWith('#') || a.getAttribute('href')?.includes('#')) {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        }
+    });
+</script>
+
+</body>
+</html>
