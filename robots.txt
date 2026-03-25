@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Bloquear carpetas de desarrollo/duplicados (no indexar)
+Disallow: /tandem/
+Disallow: /garmin-fit-temporal/
+Disallow: /calculadora suspensiones/
+Disallow: /whitepaper_simulation/
+Disallow: /articles/sag_calculator_v2.html
+
 Sitemap: https://www.bikelabstudio.com/sitemap.xml

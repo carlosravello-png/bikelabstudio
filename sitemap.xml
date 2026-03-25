@@ -1382,4 +1382,120 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
+    <!-- Artículos SAG / Suspensión -->
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/how-to-set-mtb-suspension-sag-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html"/>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+            <image:caption>Cómo ajustar el SAG de suspensión MTB — BikeLab Studio</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/how-to-set-mtb-suspension-sag-en.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/how-to-set-mtb-suspension-sag-en.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html"/>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+            <image:caption>How to set MTB suspension SAG — BikeLab Studio</image:caption>
+        </image:image>
+    </url>
+
+    <!-- White Papers SAG Model -->
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-sag-model.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"/>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+            <image:caption>White Paper Modelo SAG de suspensión MTB — BikeLab Studio</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/white-paper-sag-model.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-sag-model.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"/>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
+            <image:caption>White Paper SAG Model MTB Suspension — BikeLab Studio</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Artículos FIT / Datos ciclismo -->
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/how-to-read-fit-cycling-data-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/how-to-read-fit-cycling-data-en.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/how-to-read-fit-cycling-data-en.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- FIT Analyzer Tool -->
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/fit-analyzer-es.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/fit-analyzer-es.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/fit-analyzer-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/fit-analyzer-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/fit-analyzer-en.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/fit-analyzer-en.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/fit-analyzer-es.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/fit-analyzer-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- White Papers FIT Analyzer -->
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.bikelabstudio.com/articles/white-paper-fit-analyzer.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"/>
+        <lastmod>2026-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
