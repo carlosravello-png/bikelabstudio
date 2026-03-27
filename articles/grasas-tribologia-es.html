@@ -66,7 +66,8 @@
       "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
       "https://www.wikidata.org/wiki/Q138791197",
       "https://zenodo.org/search?q=ravello+joo"
-    ]
+    ],
+    "@id": "https://www.bikelabstudio.com/#carlos-ravello"
   },
   "publisher": {
     "@type": "Organization",
@@ -357,6 +358,33 @@
         .wa-float:hover { background: var(--text); color: var(--bg); }
         @media (max-width: 768px) { .nav-overlay { z-index: 1004; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; gap: 12px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Artículos",
+      "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tribología Aplicada: La Grasa Correcta en el Punto Correcto",
+      "item": "https://www.bikelabstudio.com/articles/articles/grasas-tribologia-es.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
