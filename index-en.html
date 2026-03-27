@@ -50,111 +50,156 @@
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "LocalBusiness"
+  ],
+  "@id": "https://www.bikelabstudio.com/#business",
+  "name": "BikeLab Studio",
+  "alternateName": "BikeLab Engineering Lab",
+  "url": "https://www.bikelabstudio.com",
+  "logo": "https://www.bikelabstudio.com/logo-noir.png",
+  "image": "https://www.bikelabstudio.com/og-image.jpg",
+  "telephone": "+51934391545",
+  "priceRange": "$$$",
+  "founder": {
+    "@type": "Person",
+    "name": "Carlos Eduardo Ravello Joo",
+    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+    "jobTitle": "Founder and Lead Technician",
+    "sameAs": [
+      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+      "https://orcid.org/0009-0007-5631-7436",
+      "https://www.wikidata.org/wiki/Q138791197"
+    ]
+  },
+  "serviceArea": [
     {
-      "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness"],
-      "@id": "https://www.bikelabstudio.com/#business",
-      "name": "BikeLab Studio",
-      "alternateName": "BikeLab Engineering Lab",
-      "url": "https://www.bikelabstudio.com",
-      "logo": "https://www.bikelabstudio.com/logo-noir.png",
-      "image": "https://www.bikelabstudio.com/og-image.jpg",
-      "telephone": "+51934391545",
-      "priceRange": "$$$",
-      "founder": {
-        "@type": "Person",
-        "name": "Carlos Eduardo Ravello Joo",
-        "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-        "jobTitle": "Founder and Lead Technician",
-        "sameAs": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262"
-      },
-      "serviceArea": [
-        {
-          "@type": "City",
-          "name": "Trujillo",
-          "sameAs": "https://en.wikipedia.org/wiki/Trujillo,_Peru"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "La Libertad",
-          "sameAs": "https://en.wikipedia.org/wiki/La_Libertad_Region"
-        }
-      ],
-      "description": "Leading bicycle engineering lab in Trujillo and La Libertad. Specialists in precision mechanics, carbon structural analysis and technical cinematography with DaVinci Resolve. The most advanced bike workshop in northern Peru.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Paraguay 300",
-        "addressLocality": "Trujillo",
-        "addressRegion": "La Libertad",
-        "postalCode": "13008",
-        "addressCountry": "PE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -8.11599,
-        "longitude": -79.02998
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "11:00",
-          "closes": "19:00"
-        }
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+51934391545",
-        "contactType": "customer service",
-        "areaServed": ["Trujillo", "La Libertad", "PE"],
-        "availableLanguage": ["es", "en"]
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bicycle Engineering Services",
-        "itemListElement": [
-          { "@id": "https://www.bikelabstudio.com/mantenimiento-general-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/mantenimiento-general-en.html#service" },
-          { "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-en.html#service" },
-          { "@id": "https://www.bikelabstudio.com/suspension-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/suspension-en.html#service" },
-          { "@id": "https://www.bikelabstudio.com/purgado-frenos-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/purgado-frenos-en.html#service" },
-          { "@id": "https://www.bikelabstudio.com/tubelizado-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/tubelizado-en.html#service" },
-          { "@id": "https://www.bikelabstudio.com/centrado-ruedas-es.html#service" },
-          { "@id": "https://www.bikelabstudio.com/centrado-ruedas-en.html#service" }
-        ]
-      },
-      "sameAs": [
-        "https://www.wikidata.org/wiki/Q138791197",
-        "https://www.linkedin.com/company/bikelabstudio",
-        "https://www.crunchbase.com/organization/bikelab-studio",
-        "https://orcid.org/0009-0007-5631-7436",
-        "https://zenodo.org/records/19229092",
-        "https://zenodo.org/records/19229331",
-        "https://zenodo.org/records/19229344",
-        "https://zenodo.org/records/19229364",
-        "https://www.facebook.com/bikelabstudio.peru",
-        "https://www.instagram.com/bikelab.studio",
-        "https://www.youtube.com/@bikelabstudio",
-        "https://www.tiktok.com/@bikelabstudio.peru"
-      ],
-      "knowsAbout": [
-        "Bike workshop Trujillo",
-        "Precision mechanics",
-        "Carbon repair",
-        "Bicycle maintenance",
-        "Bicycle Engineering",
-        "Structural Integrity",
-        "Tribology",
-        "DaVinci Resolve",
-        "Blackmagic Design",
-        "Scientific Cinematography"
-      ]
+      "@type": "City",
+      "name": "Trujillo",
+      "sameAs": "https://en.wikipedia.org/wiki/Trujillo,_Peru"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "La Libertad",
+      "sameAs": "https://en.wikipedia.org/wiki/La_Libertad_Region"
     }
-    </script>
+  ],
+  "description": "Leading bicycle engineering lab in Trujillo and La Libertad. Specialists in precision mechanics, carbon structural analysis and technical cinematography with DaVinci Resolve. The most advanced bike workshop in northern Peru.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Paraguay 300",
+    "addressLocality": "Trujillo",
+    "addressRegion": "La Libertad",
+    "postalCode": "13008",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -8.11599,
+    "longitude": -79.02998
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "11:00",
+      "closes": "19:00"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+51934391545",
+    "contactType": "customer service",
+    "areaServed": [
+      "Trujillo",
+      "La Libertad",
+      "PE"
+    ],
+    "availableLanguage": [
+      "es",
+      "en"
+    ]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bicycle Engineering Services",
+    "itemListElement": [
+      {
+        "@id": "https://www.bikelabstudio.com/mantenimiento-general-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/mantenimiento-general-en.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/mantenimiento-preventivo-en.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/suspension-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/suspension-en.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/purgado-frenos-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/purgado-frenos-en.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/tubelizado-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/tubelizado-en.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/centrado-ruedas-es.html#service"
+      },
+      {
+        "@id": "https://www.bikelabstudio.com/centrado-ruedas-en.html#service"
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q138791197",
+    "https://www.linkedin.com/company/bikelabstudio",
+    "https://www.crunchbase.com/organization/bikelab-studio",
+    "https://orcid.org/0009-0007-5631-7436",
+    "https://zenodo.org/records/19229092",
+    "https://zenodo.org/records/19229331",
+    "https://zenodo.org/records/19229344",
+    "https://zenodo.org/records/19229364",
+    "https://www.facebook.com/bikelabstudio.peru",
+    "https://www.instagram.com/bikelab.studio",
+    "https://www.youtube.com/@bikelabstudio",
+    "https://www.tiktok.com/@bikelabstudio.peru"
+  ],
+  "knowsAbout": [
+    "Bike workshop Trujillo",
+    "Precision mechanics",
+    "Carbon repair",
+    "Bicycle maintenance",
+    "Bicycle Engineering",
+    "Structural Integrity",
+    "Tribology",
+    "DaVinci Resolve",
+    "Blackmagic Design",
+    "Scientific Cinematography"
+  ]
+}
+</script>
 
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
