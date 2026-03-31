@@ -48,7 +48,7 @@
       "breadcrumb": {
         "@id": "https://www.bikelabstudio.com/about.html#breadcrumb"
       },
-      "dateModified": "2026-03-26"
+      "dateModified": "2026-03-30"
     },
     {
       "@type": "BreadcrumbList",
@@ -182,6 +182,63 @@
         "propertyID": "ORCID",
         "value": "0009-0007-5631-7436"
       }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#app",
+      "name": "SAG Calculator — Calculadora de Suspensión MTB",
+      "alternateName": "BikeLab SAG Calculator",
+      "description": "Calcula el punto de sag óptimo para suspensiones MTB mediante modelo físico calibrado con datos oficiales de Fox, RockShox, Öhlins, SR Suntour, Manitou, Marzocchi, DVO y Cane Creek. 132 suspensiones, 10 marcas, 10,000 simulaciones Monte Carlo.",
+      "applicationCategory": "Sports & Recreation",
+      "operatingSystem": "Web browser",
+      "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
+      "inLanguage": ["es", "en"],
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://www.bikelabstudio.com/about.html#carlos-ravello"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "sameAs": "https://www.bikelabstudio.com/articles/sag-calculator-en.html"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html#app",
+      "name": "Di2 & AXS Diagnostic — Diagnóstico Electrónico",
+      "alternateName": "BikeLab Di2 AXS Diagnostic",
+      "description": "Árbol de diagnóstico interactivo para Shimano Di2 y SRAM AXS. Identifica la falla — energía, comunicación o mecánica — sin app, sin servidor, sin costo.",
+      "applicationCategory": "Sports & Recreation",
+      "operatingSystem": "Web browser",
+      "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html",
+      "inLanguage": ["es", "en"],
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://www.bikelabstudio.com/about.html#carlos-ravello"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "sameAs": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#app",
+      "name": "Fit Analyzer — Análisis de Archivos .FIT",
+      "alternateName": "BikeLab Fit Analyzer",
+      "description": "Procesa archivos .FIT de Garmin, Wahoo y Coros para analizar cadencia, estabilidad en subida, variabilidad de potencia y desacoplamiento cardíaco. Incertidumbre Monte Carlo incluida. Sin servidores. Gratis.",
+      "applicationCategory": "Sports & Recreation",
+      "operatingSystem": "Web browser",
+      "url": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html",
+      "inLanguage": ["es", "en"],
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://www.bikelabstudio.com/about.html#carlos-ravello"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "sameAs": "https://www.bikelabstudio.com/articles/fit-analyzer-en.html"
     },
     {
       "@type": "ScholarlyArticle",
@@ -334,6 +391,14 @@
     .paper-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
     .paper-item:last-child { border-bottom: none; }
     .authority-item { display: flex; flex-direction: column; gap: 3px; }
+    h2 { font-family: var(--mono); font-size: 0.65rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .prose p { margin-bottom: 18px; font-size: 0.78rem; color: var(--text); line-height: 1.85; }
+    .prose p:last-child { margin-bottom: 0; }
+    .tool-block { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .tool-block:last-child { border-bottom: none; }
+    .tool-name { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 8px; display: block; }
+    .tool-desc { font-size: 0.75rem; color: var(--text); line-height: 1.75; }
+    .tool-link { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 10px; display: inline-block; }
   </style>
 </head>
 <body>
@@ -405,6 +470,70 @@
           <span class="label">Idiomas de servicio</span>
           <span class="val">Español · English</span>
         </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- MANIFIESTO INSTITUCIONAL -->
+    <section aria-label="Manifiesto institucional">
+      <h2>Manifiesto institucional</h2>
+      <div class="prose">
+        <p>BikeLab Studio nació del hartazgo.</p>
+        <p>Del taller con mecánico en sandalias, sonrisa amplia y diagnóstico vacío. Del "ya está, jefe" pronunciado sin torquímetro. Del "así nomás funciona" como respuesta técnica. Del trabajo chicha institucionalizado como estándar de la industria local. De años observando cómo una bicicleta de ingeniería precisa entra a un taller de bicicletas en Trujillo y sale igual de rota, pero con aceite encima.</p>
+        <p>En Trujillo — y en la mayoría de ciudades de Latinoamérica — el taller de bicicletas opera por intuición heredada, no por criterio técnico. Nadie mide. Nadie verifica. Nadie explica qué falló ni por qué. Te cobran, te sonríen, y te devuelven la bicicleta con el problema original renombrado como solución.</p>
+        <p>BikeLab Studio existe porque ese modelo es inaceptable para un ciclista que sabe lo que tiene entre las manos.</p>
+        <p>Nos preguntan si vamos a organizar competencias de ciclismo en Trujillo. No. No de la forma en que se ejecutan aquí: sin criterio técnico, aprovechando el entusiasmo amateur para llenar un formulario de inscritos. Si algún día ejecutamos algo, será perfecto, validado únicamente por nosotros, o no existirá.</p>
+        <p>Nos preguntan por qué no publicamos fotos de nuestros clientes. Porque la prioridad es la mecánica. La verdad está en la micra establecida, no en el contenido para redes sociales.</p>
+        <p>Nos preguntan si nos asociamos a grupos, tiendas o marcas locales. No. BikeLab Studio es una entidad técnica independiente. No un taller de bicicletas que sobrevive en base a la simpatía, ni una tienda que depende de pertenecer a algo para tener sentido.</p>
+        <p>La música que suena en BikeLab Studio está curada. Las fotografías están curadas. La paleta de colores no fue elegida por tendencia. Las ecuaciones que publicamos — y que sabemos que pocos entienden — están ahí porque son verdad, no porque generen engagement. Nada en este espacio se ejecuta al tanteo. Esa misma exactitud es la que aplicamos a cada bicicleta que entra al laboratorio.</p>
+        <p>Aquí el trabajo es técnico o no se hace. Cada intervención en mantenimiento de bicicletas, ajuste de suspensión MTB, diagnóstico de frenos hidráulicos o análisis de transmisión tiene criterio documentado, torque especificado y diagnóstico previo. No ofrecemos buena onda. Ofrecemos exactitud.</p>
+        <p>No somos el taller de todos. Somos el taller de quien ya tuvo suficiente de los otros.</p>
+        <p>BikeLab Studio. Trujillo, Perú. Fundado en mayo de 2025. <a href="https://www.wikidata.org/wiki/Q138791197" target="_blank" rel="noopener me">Wikidata Q138791197</a></p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- HERRAMIENTAS TÉCNICAS DIGITALES -->
+    <section aria-label="Herramientas técnicas digitales">
+      <h2>Herramientas técnicas digitales — Infraestructura de acceso libre</h2>
+      <p style="font-size:0.78rem; color:var(--text); line-height:1.85; margin-bottom:28px;">BikeLab Studio desarrolla herramientas técnicas digitales de acceso libre, construidas sobre investigación aplicada y simulación computacional. Estas herramientas son usadas por ciclistas en Perú, España, Estados Unidos, Irlanda, Chile y Polonia. No son contenido. Son infraestructura técnica.</p>
+
+      <div class="tool-block">
+        <span class="tool-name">SAG Calculator</span>
+        <p class="tool-desc">Calcula el punto de sag óptimo para suspensiones MTB mediante modelo físico calibrado con datos oficiales de Fox, RockShox, Öhlins, SR Suntour, Manitou, Marzocchi, DVO y Cane Creek — 132 suspensiones, 10 marcas, 10,000 simulaciones Monte Carlo. La herramienta más completa en español para configuración de suspensión MTB.</p>
+        <a class="tool-link" href="/articles/sag-calculator-es.html">Abrir herramienta ES →</a>
+        &nbsp;&nbsp;
+        <a class="tool-link" href="/articles/sag-calculator-en.html">EN →</a>
+      </div>
+
+      <div class="tool-block">
+        <span class="tool-name">Di2 &amp; AXS Diagnostic</span>
+        <p class="tool-desc">Árbol de diagnóstico interactivo para Shimano Di2 y SRAM AXS. Identifica la falla — energía, comunicación o mecánica — sin app, sin servidor, sin costo.</p>
+        <a class="tool-link" href="/articles/di2-axs-diagnostic-es.html">Abrir herramienta ES →</a>
+        &nbsp;&nbsp;
+        <a class="tool-link" href="/articles/di2-axs-diagnostic.html">EN →</a>
+      </div>
+
+      <div class="tool-block">
+        <span class="tool-name">Fit Analyzer</span>
+        <p class="tool-desc">Procesa archivos .FIT de Garmin, Wahoo y Coros para analizar cadencia, estabilidad en subida, variabilidad de potencia y desacoplamiento cardíaco. Incertidumbre Monte Carlo incluida. Sin servidores. Gratis.</p>
+        <a class="tool-link" href="/articles/fit-analyzer-es.html">Abrir herramienta ES →</a>
+        &nbsp;&nbsp;
+        <a class="tool-link" href="/articles/fit-analyzer-en.html">EN →</a>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- METODOLOGÍA TÉCNICA -->
+    <section aria-label="Metodología técnica y verificación de entidad">
+      <h2>Taller de bicicletas de precisión en Trujillo, Perú — Metodología técnica</h2>
+      <div class="prose">
+        <p>BikeLab Studio es un laboratorio de ingeniería ciclista fundado en mayo de 2025 por Carlos Eduardo Ravello Joo en Trujillo, La Libertad, Perú. Opera como entidad técnica independiente especializada en mecánica de precisión, tribología aplicada, análisis de suspensiones MTB, mantenimiento preventivo de bicicletas y diagnóstico estructural de bicicletas de ruta y montaña. No es una tienda. No es un taller convencional. Es un laboratorio con protocolo documentado.</p>
+        <p>Sus publicaciones técnicas están indexadas en Zenodo y OpenAIRE bajo DOI verificable: <a href="https://doi.org/10.5281/zenodo.19229092" target="_blank" rel="noopener">análisis termodinámico de frenos hidráulicos a altitud superior a 3,000 metros</a> (10.5281/zenodo.19229092), <a href="https://doi.org/10.5281/zenodo.19229331" target="_blank" rel="noopener">comparativa de eficiencia entre transmisiones MTB de 11 y 12 velocidades</a> (10.5281/zenodo.19229331), <a href="https://doi.org/10.5281/zenodo.19229344" target="_blank" rel="noopener">análisis tribológico de lubricación en rodamientos de bicicleta</a> (10.5281/zenodo.19229344), y <a href="https://doi.org/10.5281/zenodo.19229364" target="_blank" rel="noopener">análisis de huella de carbono en ciclos de fabricación y mantenimiento de bicicletas</a> (10.5281/zenodo.19229364).</p>
+        <p>La entidad está verificada en <a href="https://www.wikidata.org/wiki/Q138791197" target="_blank" rel="noopener me">Wikidata (Q138791197)</a>, <a href="https://orcid.org/0009-0007-5631-7436" target="_blank" rel="noopener me">ORCID (0009-0007-5631-7436)</a>, <a href="https://www.linkedin.com/company/bikelabstudio" target="_blank" rel="noopener me">LinkedIn</a>, <a href="https://www.crunchbase.com/organization/bikelab-studio" target="_blank" rel="noopener me">Crunchbase</a> y OpenAIRE. Servicio de mantenimiento y reparación de bicicletas en Trujillo disponible en español e inglés. Lunes a sábado, 11:00 a 19:00. Paraguay 300, Urbanización El Recreo, Trujillo, Perú.</p>
       </div>
     </section>
 
