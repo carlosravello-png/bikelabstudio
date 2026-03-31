@@ -185,7 +185,29 @@
         .lang-switch a { color: #555; text-decoration: none; letter-spacing: 2px; border: 1px solid #333; padding: 4px 10px; }
         .lang-switch a:hover { color: #aaa; border-color: #555; }
         @media (max-width: 600px) { .container { padding: 20px; } h1 { font-size: 20px; } .formula-block .formula-text { font-size: 16px; } }
-
+        /* NAV HAMBURGUESA — SCIENTIFIC NOIR */
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #0a0a0a; border-bottom: 1px solid #1e1e1e; }
+        .nav-bar-left { display: flex; align-items: center; gap: 10px; }
+        .nav-menu-label { font-family: 'Courier New', monospace; font-size: 0.62rem; letter-spacing: 0.22em; color: #555; text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 18px; height: 1px; background: #e0e0e0; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: #080808; z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; width: 100%; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 0.78rem; letter-spacing: 3px; color: #e0e0e0; text-decoration: none; padding: 14px 24px; min-height: 44px; border-bottom: 1px solid #1a1a1a; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #1a1a1a; }
+        .nav-overlay a:hover { color: #fff; border-color: #333; }
+        .nav-bar .lang-sw a { font-family: 'Courier New', monospace; font-size: 0.62rem; color: #555; text-decoration: none; letter-spacing: 2px; border: 1px solid #333; padding: 5px 11px; transition: all 0.3s; }
+        .nav-bar .lang-sw a:hover { color: #e0e0e0; border-color: #666; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; border: 1px solid #333; padding: 11px 16px; min-height: 44px; min-width: 44px; color: #e0e0e0; text-decoration: none; font-family: 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 2px; z-index: 1001; background: #0a0a0a; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .wa-float:hover { background: #e0e0e0; color: #0a0a0a; border-color: #e0e0e0; }
+        .container { margin-top: 55px; }
+        @media (max-width: 600px) { .nav-bar { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); left: auto; width: auto; padding: 8px 12px; border: 1px solid #222; border-radius: 2px; } .nav-menu-label { display: none; } }
     </style>
 
 <script type="application/ld+json">
@@ -216,11 +238,41 @@
 </script>
 </head>
 <body>
-<div class="container">
-
-    <div class="lang-switch">
-        <a href="metal-fatigue-bicycle-en.html">EN</a>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENÚ</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú de navegación">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </label>
     </div>
+    <div class="lang-sw"><a href="metal-fatigue-bicycle-en.html">EN</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index.html">INICIO</a>
+        <a href="../servicios.html">SERVICIOS</a>
+        <a href="../tubelizado-es.html">TUBELIZADO</a>
+        <a href="../suspension-es.html">SUSPENSIÓN</a>
+        <a href="../centrado-ruedas-es.html">CENTRADO</a>
+        <a href="../purgado-frenos-es.html">PURGADO</a>
+        <a href="../mantenimiento-general-es.html">MANT. GENERAL</a>
+        <a href="../mantenimiento-preventivo-es.html">MANT. PREVENTIVO</a>
+        <a href="../index.html#science">DATOS TÉCNICOS</a>
+        <a href="../index.html#tips">TIPS</a>
+        <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">UBICACIÓN</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20consultar%20sobre%20servicios" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
+
+<div class="container">
 
     <header class="header">
         <div class="series-tag"><a href="scientific-noir-es.html">SCIENTIFIC NOIR</a></div>

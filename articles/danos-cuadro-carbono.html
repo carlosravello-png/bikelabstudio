@@ -19,8 +19,14 @@
     <meta property="og:description"
         content="Technical carbon frame damage assessment: visual inspection, coin tap test, critical zones, hidden internal damage, and repair vs discard criteria.">
     <meta property="og:url" content="https://www.bikelabstudio.com/articles/danos-cuadro-carbono.html">
-    <meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
+    <meta property="og:image" content="https://www.bikelabstudio.com/og-image.jpg">
     <meta property="og:type" content="article">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Detect Carbon Frame Damage | BikeLab Studio">
+    <meta name="twitter:description" content="Technical diagnosis of carbon frames: visual inspection, coin tap test, critical zones, internal damage and repair criteria.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/og-image.jpg">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -189,27 +195,30 @@
             line-height: 1.8;
         }
 
-        .lang-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-        }
 
-        .lang-switch a {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text);
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 1px solid var(--accent);
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .lang-switch a:hover {
-            background: var(--text);
-            color: var(--bg);
-        }
+        /* NAV HAMBURGUESA */
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: var(--bg); border-bottom: 1px solid #1a1a1a; }
+        .nav-bar-left { display: flex; align-items: center; gap: 10px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.22em; color: #555; text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+        .nav-trigger .line { display: block; width: 18px; height: 1px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: #080808; z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; width: 100%; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 14px 24px; min-height: 44px; border-bottom: 1px solid #1a1a1a; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #1a1a1a; }
+        .nav-overlay a:hover { color: #fff; border-color: #333; }
+        .nav-lang a { font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; letter-spacing: 2px; border: 1px solid var(--accent); padding: 6px 12px; background: rgba(0,0,0,0.8); transition: all 0.3s; }
+        .nav-lang a:hover { background: var(--text); color: var(--bg); }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; border: 1px solid #333; padding: 11px 16px; min-height: 44px; min-width: 44px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 2px; z-index: 1001; background: var(--bg); transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .container { padding-top: 80px; }
+        @media (max-width: 600px) { .nav-bar { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); left: auto; width: auto; padding: 8px 12px; border: 1px solid #222; border-radius: 2px; } .nav-menu-label { display: none; } }
     </style>
 
 <script type="application/ld+json">
@@ -233,7 +242,47 @@
       "@type": "ListItem",
       "position": 3,
       "name": "How to Detect Damage in a Carbon Frame",
-      "item": "https://www.bikelabstudio.com/articles/articles/danos-cuadro-carbono.html"
+      "item": "https://www.bikelabstudio.com/articles/danos-cuadro-carbono.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if my carbon frame has internal damage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Internal damage is not always visible. Indirect signs: a dull sound when gently tapping the area with a coin (vs a sharp sound on healthy laminate), new flex in previously stiff zones, sudden creaking, or loss of alignment. If there is reasonable doubt, the frame must be inspected before riding again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to keep riding a bicycle with a possible carbon frame crack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In carbon, a crack can propagate rapidly under cyclic load with no prior warning. Unlike aluminum, carbon can fail suddenly. At any reasonable doubt about structural integrity, stop riding and perform a technical inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the coin tap test and how reliable is it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The coin tap test involves gently striking the frame surface with a coin and comparing the sound between zones. Healthy laminate produces a sharp, consistent tone; an internally delaminated area sounds duller or more muffled. It is a diagnostic indicator — it detects signals but does not certify structural integrity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all carbon frame damages discardable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Many damages are repairable if correctly localized and rebuilt with proper fiber orientations. What tends to be discardable: extensive damage at the bottom bracket, cracks propagated around the head tube, wide delamination, or areas with critical laminate thickness loss."
+      }
     }
   ]
 }
@@ -241,7 +290,39 @@
 </head>
 
 <body>
-    <div class="lang-switch"><a href="danos-cuadro-carbono-es.html">ES</a></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENU</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="nav-lang"><a href="danos-cuadro-carbono-es.html">ES</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index-en.html">HOME</a>
+        <a href="../servicios-en.html">SERVICES</a>
+        <a href="../tubelizado-en.html">TUBELESS</a>
+        <a href="../suspension-en.html">SUSPENSION</a>
+        <a href="../centrado-ruedas-en.html">WHEEL TRUING</a>
+        <a href="../purgado-frenos-en.html">BRAKE BLEED</a>
+        <a href="../mantenimiento-general-en.html">GENERAL MAINT.</a>
+        <a href="../mantenimiento-preventivo-en.html">PREVENTIVE MAINT.</a>
+        <a href="../index-en.html#science">TECHNICAL DATA</a>
+        <a href="../index-en.html#tips">TIPS</a>
+        <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20consult%20about%20services">CONTACT</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCATION</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20consult%20about%20services" class="wa-float" aria-label="Contact via WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
 
     <div class="container">
         <a href="../index-en.html#tips" class="back-link">← BACK TO INDEX</a>
@@ -318,6 +399,25 @@
                     Footprint Analysis</a>.
             </p>
 
+            
+        <div style="margin: 40px 0; padding: 22px 24px; border: 1px solid #333; border-left: 3px solid #666; background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+            <div>
+                <div style="font-family: var(--mono); font-size: 0.62rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">FRAME DIAGNOSIS</div>
+                <div style="font-size: 0.9rem; color: #aaa; line-height: 1.5;">Technical inspection of carbon and aluminum frames.<br>BikeLab Studio, Trujillo, La Libertad.</div>
+            </div>
+            <a href="../mantenimiento-general-en.html" style="font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 18px; letter-spacing: 1.5px; white-space: nowrap; transition: border-color 0.3s;" onmouseover="this.style.borderColor='#888'" onmouseout="this.style.borderColor='#444'">VIEW SERVICE →</a>
+        </div>
+        <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+            <h2>Frequently Asked Questions</h2>
+            <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">How do I know if my carbon frame has internal damage?</h3>
+            <p>Internal damage is not always visible. Indirect signs: a dull sound when tapping the area with a coin, new flex in previously stiff zones, sudden creaking, or loss of alignment. If there is reasonable doubt, the frame must be inspected before riding again.</p>
+            <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Is it safe to keep riding with a possible carbon frame crack?</h3>
+            <p>No. In carbon, a crack can propagate rapidly under cyclic load with no prior warning. Unlike aluminum, carbon can fail suddenly. At any reasonable doubt about structural integrity, stop riding and perform a technical inspection.</p>
+            <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">What is the coin tap test and how reliable is it?</h3>
+            <p>It involves gently striking the frame surface with a coin and comparing the sound between zones. Healthy laminate produces a sharp, consistent tone; a delaminated area sounds duller. It is a diagnostic indicator — it detects signals but does not certify structural integrity.</p>
+            <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Are all carbon frame damages discardable?</h3>
+            <p>No. Many damages are repairable if correctly localized and rebuilt with proper fiber orientations. What tends to be discardable: extensive bottom bracket damage, cracks around the head tube, wide delamination, or critical laminate thickness loss.</p>
+        </div>
             <p style="margin-top: 30px;"><a href="../index-en.html#tips" class="back-link">← BACK TO INDEX</a></p>
         </div>
 
