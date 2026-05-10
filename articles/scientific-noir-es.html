@@ -47,34 +47,10 @@
       "inLanguage": "es-PE",
       "numberOfItems": 10,
       "author": {
-        "@type": "Person",
-        "name": "Carlos Ravello",
-        "url": "https://www.bikelabstudio.com",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "BikeLab Studio",
-          "sameAs": [
-            "https://www.linkedin.com/company/bikelabstudio"
-          ]
-        },
-        "sameAs": [
-          "https://orcid.org/0009-0007-5631-7436",
-          "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-          "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-        ],
-        "@id": "https://www.bikelabstudio.com/#carlos-ravello"
+        "@id": "https://carlosravello.com/#person"
       },
       "publisher": {
-        "@type": "Organization",
-        "name": "BikeLab Studio",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.bikelabstudio.com/logo-noir.png"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/bikelabstudio"
-        ]
+        "@id": "https://www.bikelabstudio.com/#business"
       },
       "hasPart": [
         {
@@ -146,105 +122,101 @@
         "@id": "https://www.bikelabstudio.com/#website",
         "name": "BikeLab Studio",
         "url": "https://www.bikelabstudio.com"
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
       }
     },
     {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Ingeniero Ciclista · Arquitecto Semántico",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "description": "Framework metodológico de tres ejes que estructura la serie Scientific Noir: (E) fenómenos termodinámicos y mecánicos que afectan la integridad de la bicicleta, (C) análisis físico cuantitativo de mecanismos de degradación, (P) protocolo de diagnóstico para mantenimiento preventivo."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/bikelabstudio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://www.bikelabstudio.com/index.html"
+          "item": "https://www.bikelabstudio.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Artículos",
+          "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "name": "Scientific Noir",
           "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
         }
       ]
-    }
-  ]
-}
-</script>
-
-    <style>
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Courier New', monospace; background-color: #0a0a0a; color: #e0e0e0; line-height: 1.7; padding: 20px; }
-        .container { max-width: 960px; margin: 0 auto; }
-        .hero { background: #050505; border: 1px solid #222; padding: 60px 40px; margin-bottom: 40px; text-align: center; }
-        .hero .series-label { font-size: 11px; color: #555; letter-spacing: 5px; margin-bottom: 20px; text-transform: uppercase; }
-        .hero h1 { font-size: 40px; color: #fff; font-weight: 400; letter-spacing: 4px; margin-bottom: 15px; }
-        .hero .tagline { font-size: 15px; color: #888; margin-bottom: 30px; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .hero .meta { font-size: 11px; color: #444; letter-spacing: 1px; }
-        .episodes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px; margin-bottom: 60px; }
-        .ep-card { background: #0e0e0e; border: 1px solid #1a1a1a; padding: 28px 24px; text-decoration: none; display: block; transition: border-color 0.2s, background 0.2s; }
-        .ep-card:hover { border-color: #444; background: #121212; }
-        .ep-num { font-size: 10px; color: #444; letter-spacing: 3px; margin-bottom: 8px; }
-        .ep-concept { font-size: 18px; color: #ddd; letter-spacing: 2px; margin-bottom: 10px; font-weight: 400; }
-        .ep-formula { font-size: 11px; color: #666; letter-spacing: 1px; margin-bottom: 14px; font-family: 'Courier New', monospace; padding: 8px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
-        .ep-desc { font-size: 12px; color: #777; line-height: 1.7; }
-        .series-intro { background: #0a0a0a; border: 1px solid #222; border-left: 3px solid #444; padding: 35px 40px; margin-bottom: 40px; }
-        .series-intro h2 { font-size: 12px; color: #aaa; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; }
-        .series-intro p { font-size: 14px; color: #888; margin-bottom: 16px; line-height: 1.8; }
-        .lang-switch { text-align: right; margin-bottom: 20px; font-size: 11px; }
-        .lang-switch a { color: #555; text-decoration: none; letter-spacing: 2px; border: 1px solid #333; padding: 4px 10px; }
-        .lang-switch a:hover { color: #aaa; border-color: #555; }
-        .footer-cta { background: #0a0a0a; border: 1px solid #333; padding: 40px; text-align: center; margin-top: 20px; }
-        .footer-cta h3 { font-size: 14px; color: #aaa; letter-spacing: 2px; margin-bottom: 15px; }
-        .footer-cta p { font-size: 13px; color: #666; margin-bottom: 25px; }
-        .footer-cta a { font-size: 11px; color: #e0e0e0; text-decoration: none; border: 1px solid #444; padding: 12px 24px; letter-spacing: 2px; display: inline-block; margin: 5px; }
-        .footer-cta a:hover { border-color: #888; color: #fff; }
-        @media (max-width: 600px) { .hero { padding: 40px 20px; } .hero h1 { font-size: 28px; } .series-intro { padding: 25px 20px; } }
-        /* NAV HAMBURGUESA — SCIENTIFIC NOIR */
-        .nav-toggle { display: none; }
-        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #0a0a0a; border-bottom: 1px solid #1e1e1e; }
-        .nav-bar-left { display: flex; align-items: center; gap: 10px; }
-        .nav-menu-label { font-family: "Courier New", monospace; font-size: 0.62rem; letter-spacing: 0.22em; color: #555; text-transform: uppercase; }
-        .nav-trigger { width: 44px; height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
-        .nav-trigger .line { display: block; width: 18px; height: 1px; background: #e0e0e0; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6px) rotate(45deg); }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
-        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6px) rotate(-45deg); }
-        .nav-overlay { position: fixed; inset: 0; background: #080808; z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s; }
-        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
-        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
-        .nav-overlay nav { text-align: center; position: relative; z-index: 1; width: 100%; }
-        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: "Courier New", monospace; font-size: 0.78rem; letter-spacing: 3px; color: #e0e0e0; text-decoration: none; padding: 14px 24px; min-height: 44px; border-bottom: 1px solid #1a1a1a; transition: color 0.3s, border-color 0.3s; }
-        .nav-overlay a:first-of-type { border-top: 1px solid #1a1a1a; }
-        .nav-overlay a:hover { color: #fff; border-color: #333; }
-        .nav-bar .lang-sw a { font-family: "Courier New", monospace; font-size: 0.62rem; color: #555; text-decoration: none; letter-spacing: 2px; border: 1px solid #333; padding: 5px 11px; transition: all 0.3s; }
-        .nav-bar .lang-sw a:hover { color: #e0e0e0; border-color: #666; }
-        .wa-float { position: fixed; bottom: 30px; right: 30px; border: 1px solid #333; padding: 11px 16px; min-height: 44px; min-width: 44px; color: #e0e0e0; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.6rem; letter-spacing: 2px; z-index: 1001; background: #0a0a0a; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
-        .wa-float:hover { background: #e0e0e0; color: #0a0a0a; border-color: #e0e0e0; }
-        .container { margin-top: 55px; }
-        @media (max-width: 600px) { .nav-bar { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); left: auto; width: auto; padding: 8px 12px; border: 1px solid #222; border-radius: 2px; } .nav-menu-label { display: none; } }
-    </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://www.bikelabstudio.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Artículos",
-      "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Scientific Noir",
-      "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
     }
   ]
 }

@@ -34,228 +34,253 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "The Thin Tire Myth: Real Physics vs. Popular Belief",
-  "alternativeHeadline": "Why 23mm isn't faster than 28mm — with lab-measured watts to prove it",
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Ravello",
-    "jobTitle": "Founder of BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Thin Tire Myth: Real Physics vs. Popular Belief",
+      "alternativeHeadline": "Why 23mm isn't faster than 28mm — with lab-measured watts to prove it",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "datePublished": "2026-02-17",
+      "dateModified": "2026-02-17",
+      "image": "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp",
+      "articleSection": "Applied Cycling Physics",
+      "keywords": "wide tire, rolling resistance, CRR, impedance loss, tire pressure, Jan Heine, Silca, GP5000",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#technical-articles",
+        "name": "BikeLab Studio Technical Articles",
+        "description": "Engineering series on bicycle mechanics: tribology, thermodynamics, biomechanics and data analysis. BikeLab Studio, Trujillo, Peru.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#techarticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
+      },
+      "headline": "The Thin Tire Myth: Real Physics vs. Popular Belief",
+      "alternativeHeadline": "Why 23mm isn’t faster than 28mm — with lab-measured watts to prove it",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "description": "Are thinner road tires actually faster? Tribology and aerodynamics analysis with real lab data: measured Crr, impedance loss, 105% rule, and Peruvian market context. Specialist service in bicycle frame diagnosis and full suspension and drivetrain maintenance for multiple brands.",
+      "image": [
+        "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp"
+      ],
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "datePublished": "2026-02-17",
+      "dateModified": "2026-02-17",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Rolling resistance (Crr)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Impedance loss"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicycle tires"
+        },
+        {
+          "@type": "Thing",
+          "name": "Aerodynamics (105% rule)"
+        }
+      ],
+      "keywords": [
+        "wide tire",
+        "rolling resistance",
+        "CRR",
+        "impedance loss",
+        "tire pressure",
+        "105% rule",
+        "GP5000",
+        "Silca",
+        "Bicycle Rolling Resistance"
+      ],
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#technical-articles",
+        "name": "BikeLab Studio Technical Articles",
+        "description": "Engineering series on bicycle mechanics: tribology, thermodynamics, biomechanics and data analysis. BikeLab Studio, Trujillo, Peru.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Ingeniero Ciclista · Arquitecto Semántico",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "description": "Three-axis methodological framework applied to bicycle maintenance: (E) energy state of drivetrain and contact components, (C) wear diagnosis and system configuration, (P) intervention criteria and equipment longevity."
+    },
+    {
       "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
       "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/bikelabstudio"
       ]
     },
-    "sameAs": [
-      "https://orcid.org/0009-0007-5631-7436",
-      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-      "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-    ],
-    "@id": "https://www.bikelabstudio.com/#carlos-ravello"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/bikelabstudio"
-    ]
-  },
-  "datePublished": "2026-02-17",
-  "dateModified": "2026-02-17",
-  "image": "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp",
-  "articleSection": "Applied Cycling Physics",
-  "keywords": "wide tire, rolling resistance, CRR, impedance loss, tire pressure, Jan Heine, Silca, GP5000",
-  "inLanguage": "en-US",
-  "isAccessibleForFree": true,
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "@id": "https://www.bikelabstudio.com/#technical-articles",
-    "name": "BikeLab Studio Technical Articles",
-    "description": "Engineering series on bicycle mechanics: tribology, thermodynamics, biomechanics and data analysis. BikeLab Studio, Trujillo, Peru.",
-    "url": "https://www.bikelabstudio.com/",
-    "publisher": {
-      "@type": "Organization",
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
       "name": "BikeLab Studio",
-      "url": "https://www.bikelabstudio.com"
-    }
-  }
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "proficiencyLevel": "Expert",
-  "locationCreated": "Trujillo, Peru",
-  "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#techarticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
-  },
-  "headline": "The Thin Tire Myth: Real Physics vs. Popular Belief",
-  "alternativeHeadline": "Why 23mm isn’t faster than 28mm — with lab-measured watts to prove it",
-  "inLanguage": "en-US",
-  "isAccessibleForFree": true,
-  "description": "Are thinner road tires actually faster? Tribology and aerodynamics analysis with real lab data: measured Crr, impedance loss, 105% rule, and Peruvian market context. Specialist service in bicycle frame diagnosis and full suspension and drivetrain maintenance for multiple brands.",
-  "image": [
-    "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Ravello",
-    "jobTitle": "Founder of BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "BikeLab Studio",
-      "sameAs": [
-        "https://www.linkedin.com/company/bikelabstudio"
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
       ]
     },
-    "sameAs": [
-      "https://orcid.org/0009-0007-5631-7436",
-      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-      "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-    ],
-    "@id": "https://www.bikelabstudio.com/#carlos-ravello"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/bikelabstudio"
-    ]
-  },
-  "datePublished": "2026-02-17",
-  "dateModified": "2026-02-17",
-  "about": [
     {
-      "@type": "Thing",
-      "name": "Rolling resistance (Crr)"
-    },
-    {
-      "@type": "Thing",
-      "name": "Impedance loss"
-    },
-    {
-      "@type": "Thing",
-      "name": "Bicycle tires"
-    },
-    {
-      "@type": "Thing",
-      "name": "Aerodynamics (105% rule)"
-    }
-  ],
-  "keywords": [
-    "wide tire",
-    "rolling resistance",
-    "CRR",
-    "impedance loss",
-    "tire pressure",
-    "105% rule",
-    "GP5000",
-    "Silca",
-    "Bicycle Rolling Resistance"
-  ],
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "@id": "https://www.bikelabstudio.com/#technical-articles",
-    "name": "BikeLab Studio Technical Articles",
-    "description": "Engineering series on bicycle mechanics: tribology, thermodynamics, biomechanics and data analysis. BikeLab Studio, Trujillo, Peru.",
-    "url": "https://www.bikelabstudio.com/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BikeLab Studio",
-      "url": "https://www.bikelabstudio.com"
-    }
-  }
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#breadcrumb",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.bikelabstudio.com/index-en.html"
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are thinner tires faster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The article shows it depends on surface, pressure, and the rim+tire aerodynamic system; on typical Peruvian roads, a correctly-pressurized 28mm often wins due to lower impedance losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Crr and how do you convert it to watts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the coefficient of rolling resistance and it converts to power via Prr = Crr·m·g·v, exactly as the formulas in the article show."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are impedance (suspension) losses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are watts lost to vibration and vertical energy when the tire cannot absorb surface irregularities and instead lifts/transmits impulses through the rider+bike system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 105% rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rule linking a wheel’s external rim width to the tire’s measured mounted width to avoid flow separation and aero drag penalties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does a thin tire actually win?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On truly smooth surfaces (velodrome or extremely smooth asphalt) and in high-speed aero-dominant scenarios—provided rim+tire compatibility meets the 105% rule."
+          }
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Articles",
-      "item": "https://www.bikelabstudio.com/articles/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "The Thin Tire Myth: Real Physics vs. Popular Belief",
-      "item": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
-    }
-  ]
-}
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Are thinner tires faster?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The article shows it depends on surface, pressure, and the rim+tire aerodynamic system; on typical Peruvian roads, a correctly-pressurized 28mm often wins due to lower impedance losses."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Crr and how do you convert it to watts?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It is the coefficient of rolling resistance and it converts to power via Prr = Crr·m·g·v, exactly as the formulas in the article show."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are impedance (suspension) losses?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "They are watts lost to vibration and vertical energy when the tire cannot absorb surface irregularities and instead lifts/transmits impulses through the rider+bike system."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the 105% rule?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A rule linking a wheel’s external rim width to the tire’s measured mounted width to avoid flow separation and aero drag penalties."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When does a thin tire actually win?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "On truly smooth surfaces (velodrome or extremely smooth asphalt) and in high-speed aero-dominant scenarios—provided rim+tire compatibility meets the 105% rule."
-      }
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bikelabstudio.com/index-en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.bikelabstudio.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Thin Tire Myth: Real Physics vs. Popular Belief",
+          "item": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html"
+        }
+      ]
     }
   ]
 }

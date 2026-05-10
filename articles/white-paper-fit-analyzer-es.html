@@ -26,562 +26,103 @@
   "@graph": [
     {
       "@type": "ScholarlyArticle",
-      "headline": "Análisis Cinemático de Archivos FIT para Diagnóstico Mecánico de la Interfaz Bicicleta-Ciclista",
-      "alternativeHeadline": "Marco Metodológico, Validación Estadística mediante Simulación Monte Carlo y Umbrales Dinámicos por Configuración",
-      "description": "Desarrollo y validación de un marco de análisis cinemático para la extracción de métricas de comportamiento mecánico a partir de archivos FIT de dispositivos de ciclismo. Se presentan cinco métricas primarias con su justificación física, modelo de incertidumbre instrumental y sistema de umbrales dinámicos calibrados por disciplina, tipo de suspensión, transmisión y diámetro de rueda.",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html#article",
+      "headline": "Análisis Cinemático de Archivos FIT para Diagnóstico Mecánico de la Interfaz Bicicleta-Rider",
+      "alternativeHeadline": "Marco Metodológico, Modelo de Incertidumbre Instrumental y Validación Estadística Monte Carlo",
+      "description": "Desarrollo y validación de un marco de análisis cinemático para extraer métricas de comportamiento mecánico de archivos FIT generados por dispositivos GPS de ciclismo. Cinco métricas con justificación física, modelo de incertidumbre instrumental y sistema de umbrales dinámicos calibrados por disciplina, tipo de suspensión, transmisión y diámetro de rueda.",
+      "url": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html",
       "inLanguage": "es",
+      "datePublished": "2026-03-10",
+      "dateModified": "2026-03-10",
+      "articleSection": "Ingeniería Ciclista",
+      "keywords": "análisis FIT, diagnóstico mecánico, varianza cadencia, Variability Index, Monte Carlo ciclismo, umbrales dinámicos, BikeLab Studio",
       "author": {
-        "@type": "Person",
-        "name": "Carlos Ravello",
-        "jobTitle": "Fundador de BikeLab Studio",
-        "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "BikeLab Studio",
-          "sameAs": [
-            "https://www.linkedin.com/company/bikelabstudio"
-          ]
-        },
-        "sameAs": [
-          "https://orcid.org/0009-0007-5631-7436",
-          "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-          "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-        ],
-        "@id": "https://www.bikelabstudio.com/#carlos-ravello"
+        "@id": "https://carlosravello.com/#person"
       },
-      "datePublished": "2026-03-10T08:00:00+00:00",
-      "dateModified": "2026-03-10T08:00:00+00:00",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#technical-publications"
+      },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "BikeLab Studio",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.bikelabstudio.com/logo-noir.png"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/bikelabstudio"
-        ]
-      },
-      "articleSection": "Ingeniería Ciclista",
-      "keywords": "análisis FIT, diagnóstico mecánico, varianza cadencia, Variability Index, Monte Carlo ciclismo, umbrales dinámicos, BikeLab Studio",
-      "image": "https://www.bikelabstudio.com/og-image.jpg",
-      "isPartOf": {
-        "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/#publicaciones-tecnicas",
-        "name": "Publicaciones Técnicas BikeLab Studio",
-        "description": "White papers e investigaciones técnicas sobre mecánica ciclista, modelos físicos y análisis de datos. BikeLab Studio, Trujillo, Perú.",
-        "url": "https://www.bikelabstudio.com/",
-        "publisher": {
-          "@type": "Organization",
-          "name": "BikeLab Studio",
-          "url": "https://www.bikelabstudio.com"
-        }
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
       }
     },
     {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Fundador de BikeLab Studio",
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "worksFor": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "founder": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      }
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://www.bikelabstudio.com/#technical-publications",
+      "name": "Publicaciones Técnicas BikeLab Studio",
+      "description": "White papers e investigación técnica sobre mecánica de bicicletas, modelos físicos y análisis de datos aplicados.",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
+    },
+    {
       "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Inicio",
+          "name": "BikeLab Studio",
           "item": "https://www.bikelabstudio.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Artículos",
+          "name": "Artículos Técnicos",
           "item": "https://www.bikelabstudio.com/index.html#science"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "White Paper FIT Analyzer",
+          "name": "White Paper FIT Analyzer ES",
           "item": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"
         }
       ]
-    }
-  ]
-}
-</script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap">
-
-  <style>
-    :root {
-      --bg: #050505;
-      --surface: #0c0c0c;
-      --accent: #444;
-      --text: #e0e0e0;
-      --mono: 'IBM Plex Mono', monospace;
-      --amber: #c8922a;
-      --green: #4ade80;
-      --yellow: #fbbf24;
-      --red: #f87171;
-      --blue: #60a5fa;
-      --dim: #888
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.8;
-      color: var(--text);
-      background: var(--bg);
-      padding: 20px;
-      overflow-x: hidden
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #121212;
-      padding: 40px;
-      border: 1px solid #333;
-      min-width: 0
-    }
-
-    .header {
-      border-bottom: 2px solid #444;
-      padding-bottom: 20px;
-      margin-bottom: 40px
-    }
-
-    .coordinates {
-      font-size: 11px;
-      color: #888;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      font-family: var(--mono)
-    }
-
-    .category {
-      font-size: 12px;
-      color: #666;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-      font-family: var(--mono)
-    }
-
-    .breadcrumb {
-      font-size: 11px;
-      color: #666;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-      font-family: var(--mono)
-    }
-
-    .breadcrumb a { color: #888; text-decoration: none }
-    .breadcrumb a:hover { color: #fff }
-
-    .nav-back {
-      display: inline-block;
-      font-size: 11px;
-      color: #666;
-      text-decoration: none;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 4px;
-      font-family: var(--mono)
-    }
-
-    .nav-back:hover { color: #aaa }
-
-    .subtitle { font-size: 16px; color: #999; margin-bottom: 20px }
-
-    .meta {
-      font-size: 11px;
-      color: #666;
-      border-top: 1px solid #333;
-      padding-top: 15px;
-      font-family: var(--mono)
-    }
-
-    h1 {
-      font-size: 28px;
-      color: #fff;
-      margin-bottom: 10px;
-      font-weight: 400;
-      line-height: 1.3;
-      letter-spacing: 1px
-    }
-
-    h2 {
-      font-size: 14px;
-      color: #aaa;
-      letter-spacing: 3px;
-      margin-top: 50px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 10px;
-      font-family: var(--mono)
-    }
-
-    h3 {
-      font-size: 1.4em;
-      color: #bbb;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 400
-    }
-
-    h4 { font-size: 1.2em; color: #999; margin-top: 25px; margin-bottom: 12px }
-
-    p {
-      margin-bottom: 18px;
-      text-align: justify;
-      font-size: 1.05em;
-      color: #ccc
-    }
-
-    ul, ol { margin-left: 30px; margin-bottom: 15px; color: #ccc }
-    li { margin-bottom: 8px }
-
-    .methodology-box {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      padding: 25px;
-      margin: 30px 0
-    }
-
-    .limitation-box {
-      background: #0f0a0a;
-      border: 1px solid #443;
-      padding: 25px;
-      margin: 30px 0
-    }
-
-    .proprietary-box {
-      background: #0a0c0a;
-      border: 1px solid #2a3a2a;
-      border-left: 4px solid var(--amber);
-      padding: 25px;
-      margin: 30px 0
-    }
-
-    .proprietary-box p { color: #aaa; font-style: italic }
-
-    .note {
-      background: #0a0f12;
-      border-left: 4px solid var(--accent);
-      padding: 20px;
-      margin: 25px 0;
-      font-style: italic;
-      color: #aaa
-    }
-
-    .equation {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      border-left: 4px solid var(--accent);
-      padding: 25px;
-      margin: 30px 0;
-      font-family: var(--mono);
-      color: #e0e0e0;
-      overflow-x: auto;
-      max-width: 100%;
-      font-size: 0.95em;
-      line-height: 2
-    }
-
-    .equation sub, .equation sup { font-size: 0.75em }
-
-    .equation-redacted {
-      background: #0a0a0a;
-      border: 1px solid #2a2a1a;
-      border-left: 4px solid var(--amber);
-      padding: 25px;
-      margin: 30px 0;
-      font-family: var(--mono);
-      color: #666;
-      font-size: 0.9em;
-      line-height: 1.8
-    }
-
-    .redacted-label {
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: var(--amber);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      display: block
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin: 30px 0
-    }
-
-    table {
-      width: 100%;
-      min-width: 480px;
-      border-collapse: collapse;
-      background: #0a0a0a
-    }
-
-    thead { background: #1a1a1a; color: #aaa }
-
-    th, td {
-      padding: 12px;
-      text-align: center;
-      border: 1px solid #333;
-      color: #ccc;
-      font-size: 0.95em
-    }
-
-    td:first-child {
-      text-align: left;
-      font-family: var(--mono);
-      font-size: 0.85em
-    }
-
-    tbody tr:nth-child(even) { background: #0c0c0c }
-    tbody tr:hover { background: #151515 }
-
-    .highlight-row { background: #151a1f !important }
-    .highlight-row td { color: #6bffb8 !important }
-
-    .status-stable { color: var(--green) }
-    .status-warning { color: var(--yellow) }
-    .status-fail { color: var(--red) }
-
-    .metric-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px
-    }
-
-    .metric-tag {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 2px;
-      padding: 3px 10px;
-      border: 1px solid;
-      text-transform: uppercase
-    }
-
-    .tag-mechanical { border-color: var(--green); color: var(--green) }
-    .tag-physiological { border-color: var(--yellow); color: var(--yellow) }
-    .tag-power { border-color: var(--amber); color: var(--amber) }
-
-    .references ol { list-style-position: inside; color: #ccc }
-
-    .conclusion-box {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      padding: 30px;
-      margin: 40px 0
-    }
-
-    .data-card {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      padding: 25px;
-      margin: 30px 0
-    }
-
-    .cluster-links {
-      margin: 60px 0;
-      padding: 30px;
-      background: #080808;
-      border-left: 3px solid #666;
-      border-right: 1px solid #222;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222
-    }
-
-    .cluster-links ul { list-style: none; margin-left: 0; padding-left: 0 }
-    .cluster-links li { margin-bottom: 15px }
-    .cluster-links a { color: #e0e0e0; text-decoration: none; font-size: 1rem; transition: color 0.3s }
-    .cluster-links a:hover { color: #6bffb8 }
-
-    .footer {
-      margin-top: 60px;
-      padding-top: 30px;
-      border-top: 2px solid #333;
-      font-size: 11px;
-      color: #666
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 20px
-    }
-
-    .nav-toggle { display: none }
-
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(5,5,5,0.95);
-      border-bottom: 1px solid #222;
-      padding: 12px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(8px)
-    }
-
-    .nav-bar-left { display: flex; align-items: center; gap: 14px }
-
-    .nav-menu-label {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 3px;
-      color: #555
-    }
-
-    .nav-trigger {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding: 4px
-    }
-
-    .nav-trigger .line {
-      display: block;
-      width: 22px;
-      height: 1px;
-      background: #888;
-      transition: all 0.3s
-    }
-
-    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg) }
-    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0 }
-    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg) }
-
-    .nav-overlay {
-      position: fixed;
-      inset: 0;
-      background: var(--bg);
-      z-index: 1002;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.4s, visibility 0.4s
-    }
-
-    .nav-toggle:checked ~ .nav-overlay {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto
-    }
-
-    .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer }
-
-    .nav-overlay nav { text-align: center; position: relative; z-index: 1 }
-
-    .nav-overlay a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      letter-spacing: 3px;
-      color: var(--text);
-      text-decoration: none;
-      padding: 16px 24px;
-      min-height: 44px;
-      border-bottom: 1px solid #151515
-    }
-
-    .nav-overlay a:hover { color: var(--amber); border-color: #333 }
-    .nav-overlay a:first-of-type { border-top: 1px solid #151515 }
-
-    .nav-bar .lang-switch a {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--text);
-      padding: 12px 20px;
-      border: 1px solid var(--accent);
-      background: rgba(0,0,0,0.5);
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none
-    }
-
-    .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text) }
-
-    .wa-float {
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      border: 1px solid var(--text);
-      padding: 14px 22px;
-      color: var(--text);
-      text-decoration: none;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      z-index: 1001;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      gap: 10px
-    }
-
-    .wa-float:hover { background: var(--text); color: var(--bg) }
-
-    @media (max-width: 768px) {
-      html, body { overflow-x: hidden }
-      .nav-bar {
-        top: max(12px, env(safe-area-inset-top));
-        right: max(12px, env(safe-area-inset-right));
-        left: auto;
-        width: auto;
-        padding: 10px 14px;
-        background: rgba(10,10,10,.92);
-        border: 1px solid #222;
-        border-radius: 4px
-      }
-      .container { padding: 20px 16px; padding-top: 100px !important }
-      h1 { font-size: 22px }
-      .footer-grid { grid-template-columns: 1fr }
-    }
-  </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://www.bikelabstudio.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Artículos",
-      "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Análisis Cinemático de Archivos FIT: Marco Metodológico y Va",
-      "item": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"
     }
   ]
 }

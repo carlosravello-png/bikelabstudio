@@ -42,79 +42,116 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html#article",
-  "headline": "Comparative Analysis of MTB 11-Speed vs 12-Speed Drivetrain Systems",
-  "alternativeHeadline": "Thermodynamic, Biomechanical and Economic Evaluation",
-  "description": "Technical white paper: thermodynamic, biomechanical and economic evaluation of MTB 11-speed vs 12-speed systems. Spicer model, Lodge & Al-Sahlani data, Monte Carlo 10,000 iterations simulation.",
-  "inLanguage": "en",
-  "url": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html"
-  },
-  "image": "https://www.bikelabstudio.com/logo-noir.png",
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Ravello",
-    "jobTitle": "Founder of BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "BikeLab Studio",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html#article",
+      "headline": "Comparative Analysis of MTB 11-Speed vs 12-Speed Drivetrain Systems",
+      "alternativeHeadline": "Efficiency, Friction Loss, and Cost Analysis via Monte Carlo Simulation",
+      "description": "Comparative technical analysis of 11-speed and 12-speed MTB drivetrain systems. Friction efficiency modeled using Spicer and Lodge & Al-Sahlani equations. Monte Carlo simulation with 10,000 iterations per configuration. Cost-performance analysis validated with Zero Friction Cycling and Shimano data.",
+      "url": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html",
+      "inLanguage": "en",
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01",
+      "articleSection": "Drivetrain Engineering",
+      "keywords": "11-speed 12-speed MTB, Spicer model, Lodge Al-Sahlani, Monte Carlo drivetrain, friction efficiency, chain wear, BikeLab Studio",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#technical-publications"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html"
+      },
+      "sameAs": "https://doi.org/10.5281/zenodo.19229331",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.19229331"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Founder, BikeLab Studio",
       "sameAs": [
-        "https://www.linkedin.com/company/bikelabstudio"
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "worksFor": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "founder": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      }
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://www.bikelabstudio.com/#technical-publications",
+      "name": "BikeLab Studio Technical Publications",
+      "description": "White papers and technical research on bicycle mechanics, physical models and applied data analysis.",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "BikeLab Studio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Articles",
+          "item": "https://www.bikelabstudio.com/index-en.html#science"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "White Paper 11v vs 12v",
+          "item": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html"
+        }
       ]
-    },
-    "sameAs": [
-      "https://orcid.org/0009-0007-5631-7436",
-      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-      "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-    ],
-    "@id": "https://www.bikelabstudio.com/#carlos-ravello"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/bikelabstudio"
-    ]
-  },
-  "articleSection": "Drivetrain Engineering",
-  "keywords": "11-speed 12-speed, Spicer, Lodge, Monte Carlo, drivetrain efficiency",
-  "isAccessibleForFree": true,
-  "isPartOf": {
-    "@type": "CollectionPage",
-    "name": "Technical Data",
-    "url": "https://www.bikelabstudio.com/index-en.html#science"
-  },
-  "citation": [
-    "https://doi.org/10.1115/1.1352754",
-    "https://doi.org/10.1115/1.4042834",
-    "https://doi.org/10.1123/jab.21.3.225",
-    "https://doi.org/10.2165/00007256-200535100-00004",
-    "https://doi.org/10.1097/00005768-200108000-00015",
-    "https://doi.org/10.1016/j.proeng.2010.04.131"
+    }
   ]
 }
 </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html#breadcrumb",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
-    { "@type": "ListItem", "position": 2, "name": "Technical Data", "item": "https://www.bikelabstudio.com/index-en.html#science" },
-    { "@type": "ListItem", "position": 3, "name": "White Paper 11v vs 12v", "item": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html" }
-  ]
-}
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
