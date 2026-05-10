@@ -19,109 +19,207 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#app",
-  "name": "BikeLab FIT Analyzer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "Web Browser",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
-  "description": "Analiza tu archivo FIT de Garmin gratis. Cadencia, estabilidad en subida, Variability Index y decoupling cardíaco con simulación Monte Carlo. Sin subir archivos. BikeLab Studio — Trujillo, Perú.",
-  "inLanguage": "es",
-  "url": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html",
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Eduardo Ravello Joo",
-    "jobTitle": "Fundador de BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "BikeLab Studio",
-      "url": "https://www.bikelabstudio.com",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#app",
+      "name": "BikeLab FIT Analyzer",
+      "alternateName": [
+        "Analizador FIT Ciclismo",
+        "Analizador de Archivos FIT Garmin",
+        "Cycling FIT File Analyzer",
+        "BikeLab Analizador de Rendimiento"
+      ],
+      "description": "Analiza tu archivo FIT de Garmin gratis. Cadencia, Índice de Estabilidad en Subida (IES), Variability Index y decoupling cardíaco con simulación Monte Carlo. Sin subir archivos — procesamiento local en el navegador. BikeLab Studio — Trujillo, Perú.",
+      "applicationCategory": "SportsApplication",
+      "applicationSubCategory": "Cycling Performance Analysis Tool",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "url": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Análisis de varianza de cadencia con modelo de incertidumbre instrumental",
+        "Variability Index (VI) — ratio entre potencia normalizada y potencia media",
+        "Índice de Estabilidad en Subida (IES) en segmentos con pendiente mayor al 3%",
+        "Decoupling cardíaco y detección de deriva metabólica",
+        "Simulación Monte Carlo para cuantificación de incertidumbre en las métricas",
+        "Procesamiento 100% local — el archivo FIT nunca abandona el navegador",
+        "Compatibilidad: Garmin, Wahoo, Coros, Polar, Suunto, Bryton, Strava",
+        "Umbrales dinámicos calibrados por disciplina, tipo de suspensión y transmisión",
+        "Exportación PDF del informe de análisis"
+      ],
+      "softwareVersion": "1.0",
+      "dateCreated": "2026-03-10",
+      "dateModified": "2026-03-10",
+      "datePublished": "2026-03-10",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#dataset" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html"
+      },
+      "mentions": [
+        { "@type": "Organization", "name": "Garmin", "url": "https://www.garmin.com", "sameAs": "https://www.wikidata.org/wiki/Q1473158" },
+        { "@type": "Organization", "name": "Wahoo Fitness", "url": "https://www.wahoofitness.com" },
+        { "@type": "Organization", "name": "COROS", "url": "https://www.coros.com" },
+        { "@type": "Organization", "name": "Polar", "url": "https://www.polar.com" },
+        { "@type": "Organization", "name": "Suunto", "url": "https://www.suunto.com" },
+        { "@type": "Organization", "name": "Bryton", "url": "https://www.brytonsport.com" },
+        { "@type": "Organization", "name": "Strava", "url": "https://www.strava.com", "sameAs": "https://www.wikidata.org/wiki/Q1114928" },
+        { "@type": "Thing", "name": "Garmin FIT file format", "url": "https://developer.garmin.com/fit/protocol/" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Fundador de BikeLab Studio",
+      "knowsAbout": [
+        "Análisis de archivos FIT de dispositivos GPS de ciclismo",
+        "Modelo de Coherencia Dinámica (MCD)",
+        "Simulación Monte Carlo aplicada a rendimiento deportivo",
+        "Variability Index y métricas de potencia en ciclismo",
+        "Decoupling cardíaco y fisiología del esfuerzo ciclista",
+        "Schema.org engineering",
+        "Arquitectura semántica y Knowledge Graph",
+        "Ingeniería de bicicletas de precisión"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
       "sameAs": [
-        "https://www.linkedin.com/company/bikelabstudio"
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "worksFor": { "@id": "https://www.bikelabstudio.com/#business" },
+      "founder": { "@id": "https://www.bikelabstudio.com/#business" }
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "alternateName": "MCD",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "es",
+      "description": "Marco metodológico que evalúa la coherencia entre tres dominios del rendimiento ciclista: carga fisiológica registrada (frecuencia cardíaca, decoupling, drift cardíaco), métricas de esfuerzo (Variability Index, cadencia, potencia normalizada) y objetivo de la sesión declarada. La coherencia entre los tres determina si el perfil de esfuerzo es sostenible. La incertidumbre de cada métrica se cuantifica mediante simulación Monte Carlo.",
+      "about": [
+        "Coherencia entre carga fisiológica y métricas de potencia en ciclismo",
+        "Decoupling cardíaco como indicador de deriva metabólica",
+        "Variability Index y estabilidad de esfuerzo en ciclismo",
+        "Simulación Monte Carlo aplicada a análisis de rendimiento deportivo"
+      ],
+      "citation": [
+        "White Paper BikeLab Studio — Kinematic Analysis of FIT Files for Mechanical Diagnostics of the Bicycle-Rider Interface"
       ]
     },
-    "sameAs": [
-      "https://orcid.org/0009-0007-5631-7436",
-      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-      "https://zenodo.org/search?q=ravello+joo",
-      "https://www.bikelabstudio.com/#carlos-ravello"
-    ],
-    "@id": "https://carlosravello.com/#person"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "url": "https://www.bikelabstudio.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/bikelabstudio"
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "ratingCount": "1"
-  },
-  "isPartOf": {
-    "@type": "WebSite",
-    "@id": "https://www.bikelabstudio.com/#website",
-    "name": "BikeLab Studio",
-    "url": "https://www.bikelabstudio.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
     {
-      "@type": "Question",
-      "name": "¿Qué dispositivos son compatibles con el analizador FIT de BikeLab?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Garmin, Wahoo, Coros, Polar, Suunto y Bryton. También funciona con archivos FIT exportados desde Strava."
-      }
+      "@type": "Dataset",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#dataset",
+      "name": "Métricas de rendimiento ciclista computadas desde archivo FIT",
+      "description": "Conjunto de métricas extraídas y calculadas desde archivos FIT generados por dispositivos GPS de ciclismo: varianza de cadencia, Variability Index, Índice de Estabilidad en Subida (IES), decoupling cardíaco y sus intervalos de confianza Monte Carlo. Umbrales dinámicos calibrados por disciplina, tipo de suspensión, transmisión y diámetro de rueda.",
+      "url": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html",
+      "inLanguage": "es",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#app" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "maintainer": { "@id": "https://carlosravello.com/#person" }
     },
     {
-      "@type": "Question",
-      "name": "¿Mi archivo FIT se sube a algún servidor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Todo el procesamiento ocurre localmente en tu navegador. El archivo FIT nunca abandona tu dispositivo."
-      }
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
     },
     {
-      "@type": "Question",
-      "name": "¿Qué es el Variability Index en ciclismo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El Variability Index (VI) es el cociente entre Potencia Normalizada (NP) y Potencia Media (AP). Un VI menor a 1.05 indica ritmo muy estable."
-      }
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#webpage",
+      "url": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html",
+      "name": "BikeLab FIT Analyzer — Analiza tu archivo FIT gratis",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "inLanguage": "es",
+      "datePublished": "2026-03-10",
+      "dateModified": "2026-03-10",
+      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#app" },
+      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#breadcrumb" },
+      "reviewedBy": { "@id": "https://carlosravello.com/#person" }
     },
     {
-      "@type": "Question",
-      "name": "¿Qué es el índice de estabilidad en subida (IES)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El IES combina el coeficiente de variación de velocidad y de cadencia en segmentos de subida con pendiente mayor al 3%."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "BikeLab Studio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.bikelabstudio.com/index.html#science" },
+        { "@type": "ListItem", "position": 3, "name": "Analizador FIT", "item": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué dispositivos son compatibles con el analizador FIT de BikeLab?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Garmin, Wahoo, Coros, Polar, Suunto y Bryton. También funciona con archivos FIT exportados desde Strava." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mi archivo FIT se sube a algún servidor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el procesamiento ocurre localmente en tu navegador. El archivo FIT nunca abandona tu dispositivo." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Variability Index en ciclismo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El Variability Index (VI) es el cociente entre Potencia Normalizada (NP) y Potencia Media (AP). Un VI menor a 1.05 indica ritmo muy estable." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el índice de estabilidad en subida (IES)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El IES combina el coeficiente de variación de velocidad y de cadencia en segmentos de subida con pendiente mayor al 3%." }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.bikelabstudio.com/articles/fit-analyzer-es.html#howto",
+      "name": "Cómo analizar tu archivo FIT con BikeLab FIT Analyzer",
+      "description": "Pasos para cargar tu archivo FIT y obtener el análisis de rendimiento ciclista con métricas de cadencia, Variability Index, IES y decoupling cardíaco.",
+      "totalTime": "PT2M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "step": [
+        { "@type": "HowToStep", "position": "1", "name": "Exporta tu archivo FIT", "text": "Desde tu dispositivo Garmin, Wahoo, Coros, Polar, Suunto o Bryton — o desde Strava — exporta el archivo .fit de la sesión que quieres analizar." },
+        { "@type": "HowToStep", "position": "2", "name": "Carga el archivo en el analizador", "text": "Arrastra tu archivo .fit al área de carga del analizador. El procesamiento es 100% local — el archivo nunca sale de tu navegador." },
+        { "@type": "HowToStep", "position": "3", "name": "Lee tus métricas de rendimiento", "text": "El analizador calcula Variability Index, Índice de Estabilidad en Subida (IES), varianza de cadencia y decoupling cardíaco con intervalos de confianza Monte Carlo." },
+        { "@type": "HowToStep", "position": "4", "name": "Descarga el informe PDF", "text": "Exporta el informe completo en PDF con todas las métricas y su interpretación técnica." }
+      ]
     }
   ]
 }
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BikeLab Studio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Herramientas","item":"https://www.bikelabstudio.com/index.html#science"},{"@type":"ListItem","position":3,"name":"Analizador FIT","item":"https://www.bikelabstudio.com/articles/fit-analyzer-es.html"}]}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -50,222 +50,220 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#app",
-  "name": "BikeLab Studio SAG Calculator",
-  "alternateName": ["Calculadora SAG MTB", "MTB Suspension SAG Calculator", "Calculadora de Presión Suspensión MTB"],
-  "description": "Calculadora profesional de SAG para suspensiones MTB de resorte neumático. Motor de doble cámara politrópica (γ propietario) calibrado con tablas oficiales de Fox, RockShox, SR Suntour y Öhlins. 132 modelos. Validación Monte Carlo a escala.",
-  "applicationCategory": "SportsApplication",
-  "applicationSubCategory": "Bicycle Suspension Calculator",
-  "operatingSystem": "Web Browser",
-  "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
-  "inLanguage": ["es", "en"],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
-  "featureList": [
-    "132 modelos de suspensión MTB catalogados",
-    "Fox Racing Shox — 29 modelos (32, 34, 36, 38, 40, Float X, DHX2)",
-    "RockShox — 45 modelos (SID, Pike, Lyrik, ZEB, BoXXer, Deluxe, Super Deluxe)",
-    "SR Suntour — 12 modelos (Epixon, Raidon, Auron, Durolux, Zeron e-MTB)",
-    "Öhlins — 6 modelos (RXF32, RXF36, RXF38 m.2, TTX Air, TTX22, TTX2L)",
-    "Manitou, Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula",
-    "Modelo físico de doble cámara politrópica (γ propietario)",
-    "Calibración inversa con tablas oficiales de fabricante",
-    "Validación Monte Carlo 10,000 iteraciones por modelo",
-    "Cálculo de SAG de rueda real con leverage ratio",
-    "33 cuadros con curvas de leverage catalogados",
-    "Soporte legacy: Monarch RT3, Revelation, Yari, Pike 2016-18",
-    "Cobertura XC, Trail, Enduro, DH, E-MTB, Trekking"
-  ],
-  "softwareVersion": "5.0",
-  "dateCreated": "2026-02-01",
-  "dateModified": "2026-02-26",
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Ravello",
-    "jobTitle": "Fundador de BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
-      "@type": "Organization",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#app",
+      "name": "BikeLab Studio SAG Calculator",
+      "alternateName": [
+        "Calculadora SAG MTB",
+        "MTB Suspension SAG Calculator",
+        "Calculadora de Presión Suspensión MTB",
+        "Calculadora SAG Horquilla MTB"
+      ],
+      "description": "Calculadora profesional de SAG para suspensiones MTB de resorte neumático. Motor de doble cámara politrópica (γ propietario) calibrado con tablas oficiales de Fox, RockShox, SR Suntour y Öhlins. 132 modelos. Validación Monte Carlo a escala. BikeLab Studio — Trujillo, Perú.",
+      "applicationCategory": "SportsApplication",
+      "applicationSubCategory": "Bicycle Suspension Calculator",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "132 modelos de suspensión MTB catalogados",
+        "Fox Racing Shox — 29 modelos (32, 34, 36, 38, 40, Float X, DHX2)",
+        "RockShox — 45 modelos (SID, Pike, Lyrik, ZEB, BoXXer, Deluxe, Super Deluxe)",
+        "SR Suntour — 12 modelos (Epixon, Raidon, Auron, Durolux, Zeron e-MTB)",
+        "Öhlins — 6 modelos (RXF32, RXF36, RXF38 m.2, TTX Air, TTX22, TTX2L)",
+        "Manitou, Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula",
+        "Modelo físico de doble cámara politrópica (γ propietario)",
+        "Calibración inversa con tablas oficiales de fabricante",
+        "Validación Monte Carlo 10.000 iteraciones por modelo",
+        "Cálculo de SAG de rueda real con leverage ratio",
+        "33 cuadros con curvas de leverage catalogados",
+        "Soporte legacy: Monarch RT3, Revelation, Yari, Pike 2016-18",
+        "Cobertura XC, Trail, Enduro, DH, E-MTB, Trekking"
+      ],
+      "softwareVersion": "5.0",
+      "dateCreated": "2026-02-01",
+      "dateModified": "2026-02-26",
+      "datePublished": "2026-02-26",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#dataset" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://www.bikelabstudio.com/articles/sag-calculator-es.html"
+      },
+      "mentions": [
+        { "@type": "Organization", "name": "Fox Racing Shox", "url": "https://www.ridefox.com" },
+        { "@type": "Organization", "name": "RockShox", "url": "https://www.sram.com/en/rockshox", "sameAs": "https://www.wikidata.org/wiki/Q2151440" },
+        { "@type": "Organization", "name": "Öhlins", "url": "https://www.ohlins.com" },
+        { "@type": "Organization", "name": "SR Suntour", "url": "https://www.srsuntour-cycling.com" },
+        { "@type": "Organization", "name": "Manitou", "url": "https://www.manitoubicycle.com" },
+        { "@type": "Organization", "name": "Marzocchi", "url": "https://www.marzocchi.com" },
+        { "@type": "Organization", "name": "Cane Creek", "url": "https://www.canecreek.com" },
+        { "@type": "Organization", "name": "DVO Suspension", "url": "https://www.dvosuspension.com" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Fundador de BikeLab Studio",
+      "knowsAbout": [
+        "Modelo físico de doble cámara politrópica para suspensiones MTB",
+        "Modelo de Coherencia Dinámica (MCD)",
+        "Calibración de suspensión MTB con datos oficiales de fabricante",
+        "Simulación Monte Carlo aplicada a ingeniería de suspensiones",
+        "Setup de suspensión por disciplina: XC, Trail, Enduro, DH",
+        "Leverage ratio y cinemática de cuadros full suspension",
+        "Schema.org engineering",
+        "Arquitectura semántica y Knowledge Graph",
+        "Ingeniería de bicicletas de precisión"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "worksFor": { "@id": "https://www.bikelabstudio.com/#business" },
+      "founder": { "@id": "https://www.bikelabstudio.com/#business" }
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "alternateName": "MCD",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "es",
+      "description": "Marco metodológico que evalúa la coherencia entre tres dominios del sistema de suspensión MTB: propiedades mecánicas del resorte neumático (presión, volumen de cámara, exponente politrópico γ), configuración del sistema (tokens, leverage ratio del cuadro, stroke total), y objetivo de calibración según disciplina (SAG% objetivo). La presión correcta es aquella en la que los tres dominios convergen. La coherencia del resultado se valida con 10.000 iteraciones Monte Carlo por modelo.",
+      "about": [
+        "Modelo politrópico de doble cámara en suspensiones MTB de resorte neumático",
+        "Calibración inversa con tablas oficiales de fabricante",
+        "Coherencia entre setup de suspensión y disciplina ciclista",
+        "Validación Monte Carlo aplicada a ingeniería de suspensiones"
+      ],
+      "citation": [
+        "White Paper BikeLab Studio — Dual Chamber Physical Model for SAG Calibration in Pneumatic Spring MTB Suspensions"
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#dataset",
+      "name": "Base de datos de suspensiones MTB calibradas — 132 modelos",
+      "description": "Base de datos de 132 modelos de suspensiones MTB con parámetros físicos calibrados con tablas oficiales de Fox Racing Shox, RockShox, Öhlins y SR Suntour. Incluye exponente politrópico γ propietario por modelo, volúmenes de cámara, stroke, y curvas de leverage para 33 cuadros full suspension.",
+      "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
+      "inLanguage": "es",
+      "temporalCoverage": "2026",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#app" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "maintainer": { "@id": "https://carlosravello.com/#person" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
       "name": "BikeLab Studio",
       "url": "https://www.bikelabstudio.com"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "url": "https://www.bikelabstudio.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "ratingCount": "1"
-  }
-}
-</script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué es el SAG en suspensión MTB?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El SAG es la compresión estática de la suspensión bajo el peso del rider en posición neutral sobre la bicicleta. Se expresa como porcentaje del stroke total del componente. SAG% = (compresión en mm / stroke total en mm) × 100. Para trail el rango ideal es 20-23% en horquilla y 28-30% en amortiguador."
-      }
     },
     {
-      "@type": "Question",
-      "name": "¿Cuántos psi necesito para mi horquilla Fox o RockShox?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La presión depende de tu peso, el stroke específico de tu componente, el volumen de cámara y los tokens instalados. No es una relación lineal — usa la calculadora de BikeLab Studio que tiene 132 modelos calibrados con datos oficiales de Fox, RockShox, Öhlins y SR Suntour para obtener la presión correcta en segundos."
-      }
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#webpage",
+      "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
+      "name": "Calculadora SAG MTB — BikeLab Studio",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "inLanguage": "es",
+      "datePublished": "2026-02-26",
+      "dateModified": "2026-02-26",
+      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#app" },
+      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#breadcrumb" },
+      "reviewedBy": { "@id": "https://carlosravello.com/#person" }
     },
     {
-      "@type": "Question",
-      "name": "¿La calculadora funciona para mi cuadro full suspension?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Para horquillas delanteras el cuadro no interviene. Para amortiguadores traseros, el modelo trabaja con el leverage ratio de tu cuadro: 33 cuadros específicos están catalogados. Si el tuyo no está, selecciona tu tipo de linkage (Horst Link, VPP, DW-Link, Single Pivot, Switch Infinity, High Pivot) — esto cubre el 99% de los full suspension del mercado."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "BikeLab Studio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.bikelabstudio.com/index.html#science" },
+        { "@type": "ListItem", "position": 3, "name": "Calculadora SAG MTB", "item": "https://www.bikelabstudio.com/articles/sag-calculator-es.html" }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "¿Qué marcas de suspensión cubre la calculadora?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fox Racing Shox (29 modelos), RockShox (45 modelos), SR Suntour (12 modelos), Öhlins (6 modelos), Manitou (8 modelos), Marzocchi (4 modelos), DVO (4 modelos), Cane Creek (5 modelos), X-Fusion (4 modelos), MRP (3 modelos), Formula (6 modelos), RST, Wintek, Zoom, Sturdy y Push Industries. Total: 132 suspensiones."
-      }
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el SAG en suspensión MTB?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El SAG es la compresión estática de la suspensión bajo el peso del rider en posición neutral sobre la bicicleta. Se expresa como porcentaje del stroke total del componente. SAG% = (compresión en mm / stroke total en mm) × 100. Para trail el rango ideal es 20-23% en horquilla y 28-30% en amortiguador." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos psi necesito para mi horquilla Fox o RockShox?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La presión depende de tu peso, el stroke específico de tu componente, el volumen de cámara y los tokens instalados. No es una relación lineal — usa la calculadora de BikeLab Studio que tiene 132 modelos calibrados con datos oficiales de Fox, RockShox, Öhlins y SR Suntour para obtener la presión correcta en segundos." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La calculadora funciona para mi cuadro full suspension?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Para horquillas delanteras el cuadro no interviene. Para amortiguadores traseros, el modelo trabaja con el leverage ratio de tu cuadro: 33 cuadros específicos están catalogados. Si el tuyo no está, selecciona tu tipo de linkage (Horst Link, VPP, DW-Link, Single Pivot, Switch Infinity, High Pivot) — esto cubre el 99% de los full suspension del mercado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué marcas de suspensión cubre la calculadora?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Fox Racing Shox (29 modelos), RockShox (45 modelos), SR Suntour (12 modelos), Öhlins (6 modelos), Manitou (8 modelos), Marzocchi (4 modelos), DVO (4 modelos), Cane Creek (5 modelos), X-Fusion (4 modelos), MRP (3 modelos), Formula (6 modelos), RST, Wintek, Zoom, Sturdy y Push Industries. Total: 132 suspensiones." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué son los tokens en suspensión MTB?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Los tokens (volume spacers) son insertos que reducen el volumen de la cámara positiva del resorte neumático, aumentando la progresividad sin cambiar la presión inicial. Más tokens = la suspensión es más firme al final del recorrido. La calculadora recomienda el número óptimo por disciplina." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo mido el SAG de mi suspensión?",
+          "acceptedAnswer": { "@type": "Answer", "text": "1) Desliza el O-ring hacia el sello con la suspensión extendida. 2) Móntate con tu equipo completo en posición neutral de conducción. 3) Baja con cuidado — el O-ring marca la posición de SAG. 4) Mide la distancia del O-ring al sello en mm. SAG% = mm medidos / stroke total × 100. Repite 3 veces y promedia." }
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "¿Qué son los tokens en suspensión MTB?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Los tokens (volume spacers) son insertos que reducen el volumen de la cámara positiva del resorte neumático, aumentando la progresividad sin cambiar la presión inicial. Más tokens = la suspensión es más firme al final del recorrido. La calculadora recomienda el número óptimo por disciplina."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo mido el SAG de mi suspensión?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "1) Desliza el O-ring hacia el sello con la suspensión extendida. 2) Móntate con tu equipo completo en posición neutral de conducción. 3) Baja con cuidado — el O-ring marca la posición de SAG. 4) Mide la distancia del O-ring al sello en mm. SAG% = mm medidos / stroke total × 100. Repite 3 veces y promedia."
-      }
-    }
-  ]
-}
-</script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "BikeLab Studio", "item": "https://www.bikelabstudio.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.bikelabstudio.com/index.html#science" },
-    { "@type": "ListItem", "position": 3, "name": "Calculadora SAG MTB", "item": "https://www.bikelabstudio.com/articles/sag-calculator-es.html" }
-  ]
-}
-</script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
-  "name": "Calculadora SAG MTB — BikeLab Studio",
-  "description": "Calculadora profesional de SAG para suspensión MTB. 132 modelos Fox, RockShox, Öhlins, SR Suntour. Modelo físico calibrado.",
-  "url": "https://www.bikelabstudio.com/articles/sag-calculator-es.html",
-  "inLanguage": "es",
-  "isPartOf": { "@type": "WebSite", "url": "https://www.bikelabstudio.com/" },
-  "about": {
-    "@type": "Thing",
-    "name": "Configuración de suspensión MTB",
-    "description": "SAG, presión de aire, setup de suspensión mountain bike"
-  },
-  "author": { "@type": "Person", "name": "Carlos Ravello" },
-  "datePublished": "2026-02-26",
-  "dateModified": "2026-02-26"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Cómo calcular la presión SAG de tu suspensión MTB",
-  "description": "Guía paso a paso para medir el SAG de horquilla y amortiguador MTB y calcular la presión de aire correcta según tu peso y modelo de suspensión.",
-  "totalTime": "PT15M",
-  "estimatedCost": {
-    "@type": "MonetaryAmount",
-    "currency": "USD",
-    "value": "0"
-  },
-  "tool": [
-    {
-      "@type": "HowToTool",
-      "name": "Cinta métrica o regla"
-    },
-    {
-      "@type": "HowToTool",
-      "name": "Bomba de suspensión con manómetro"
-    },
-    {
-      "@type": "HowToTool",
-      "name": "O-ring de SAG (generalmente incluido con la suspensión)"
-    }
-  ],
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Selecciona tu suspensión en la calculadora",
-      "text": "En la Calculadora SAG de BikeLab Studio, selecciona la marca, modelo y año de tu horquilla o amortiguador. La calculadora tiene 132 modelos catalogados — si el tuyo no aparece, selecciona el tipo de cámara (Dual Air, Solo Air) para usar el modelo genérico calibrado."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "Ingresa tu peso del rider con equipo",
-      "text": "Ingresa tu peso en kg incluyendo el equipo que usas normalmente: casco, mochila, kit completo. El peso del rider con equipo es la variable más importante en el cálculo de SAG. Una diferencia de 5 kg puede implicar 10–15 PSI de diferencia en la presión recomendada."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Ajusta tokens y parámetros avanzados",
-      "text": "Selecciona el número de tokens instalados en tu suspensión (si aplica) y el porcentaje de SAG objetivo según tu disciplina: XC 15–18%, Trail 20–23% horquilla / 28–30% amortiguador, Enduro 25–28% / 30–33%. La calculadora te dará la presión exacta en PSI."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Ajusta la presión física en la suspensión",
-      "text": "Con la bomba de suspensión, infla o desinfla al valor indicado por la calculadora. Asegúrate de usar una bomba de suspensión de baja presión y alto volumen — no uses bomba de rueda. Coloca el O-ring en el extremo del sello con la suspensión extendida."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 5,
-      "name": "Mide el SAG real con tu peso",
-      "text": "Vístete con tu equipo completo y monta la bicicleta en posición neutral de conducción: sentado con las manos en el manubrio, espalda recta. Baja de la bicicleta con cuidado sin rebotar. El O-ring marcará la posición de SAG. Mide la distancia del O-ring al sello en mm."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 6,
-      "name": "Calcula el porcentaje de SAG y ajusta",
-      "text": "Calcula: SAG% = (mm medidos / stroke total en mm) × 100. Compara con tu objetivo. Si el SAG es mayor al objetivo, agrega presión en incrementos de 5 PSI. Si es menor, reduce. Repite la medición 3 veces y promedia para eliminar errores. El SAG correcto mejora la tracción, el confort y la geometría dinámica de la bicicleta."
+      "@type": "HowTo",
+      "@id": "https://www.bikelabstudio.com/articles/sag-calculator-es.html#howto",
+      "name": "Cómo calcular la presión SAG de tu suspensión MTB",
+      "description": "Guía paso a paso para medir el SAG de horquilla y amortiguador MTB y calcular la presión de aire correcta según tu peso y modelo de suspensión.",
+      "totalTime": "PT15M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "step": [
+        { "@type": "HowToStep", "position": "1", "name": "Selecciona tu suspensión en la calculadora", "text": "Selecciona la marca, modelo y año de tu horquilla o amortiguador. La calculadora tiene 132 modelos catalogados." },
+        { "@type": "HowToStep", "position": "2", "name": "Ingresa tu peso del rider con equipo", "text": "Ingresa tu peso en kg incluyendo el equipo que usas normalmente: casco, mochila, kit completo. El peso del rider con equipo es la variable más importante en el cálculo de SAG." },
+        { "@type": "HowToStep", "position": "3", "name": "Ajusta tokens y parámetros avanzados", "text": "Selecciona el número de tokens instalados y el porcentaje de SAG objetivo según tu disciplina: XC 15-18%, Trail 20-23% horquilla / 28-30% amortiguador, Enduro 25-28% / 30-33%." },
+        { "@type": "HowToStep", "position": "4", "name": "Aplica la presión y mide el SAG físico", "text": "Infla a la presión recomendada. Mide el SAG físico con el método del O-ring. Si difiere más de 2%, ajusta la presión en incrementos de 5 PSI." }
+      ]
     }
   ]
 }

@@ -31,244 +31,207 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#app",
-  "name": "Di2 & AXS Electronic Shifting Diagnostic Tool",
-  "alternateName": [
-    "Herramienta de Diagnóstico Di2 y AXS",
-    "Shimano Di2 Diagnostic Tool",
-    "SRAM AXS Diagnostic Tool",
-    "Di2 Troubleshooter",
-    "AXS Troubleshooter",
-    "Diagnóstico Cambio Electrónico Bicicleta"
-  ],
-  "description": "Interactive step-by-step diagnostic tool for Shimano Di2 and SRAM AXS electronic shifting problems. Identifies failures across power, communication and mechanical layers. Free, no app required.",
-  "applicationCategory": "SportsApplication",
-  "applicationSubCategory": "Bicycle Electronics Diagnostic Tool",
-  "operatingSystem": "Web Browser",
-  "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html",
-  "inLanguage": [
-    "en",
-    "es"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
-  "featureList": [
-    "Shimano Di2 11-speed diagnosis",
-    "Shimano Di2 12-speed diagnosis",
-    "SRAM AXS Road diagnosis (Red, Force, Rival)",
-    "SRAM AXS MTB diagnosis (XX, X01, GX Eagle)",
-    "Battery and power layer diagnostics",
-    "Wireless pairing troubleshooting",
-    "Di2 crash mode detection and reset guide",
-    "Indexing and mechanical layer checks",
-    "Firmware update warnings and safe procedure",
-    "E-Tube protocol diagnostics",
-    "Pogo pin and junction box inspection guide",
-    "AXS controller factory reset procedure",
-    "Intermittent shifting pattern diagnosis",
-    "Free — no app or registration required"
-  ],
-  "softwareVersion": "1.0",
-  "datePublished": "2026-03-05",
-  "dateModified": "2026-03-05",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
-  },
-  "screenshot": "https://www.bikelabstudio.com/og-image.jpg",
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Ravello",
-    "jobTitle": "Fundador de BikeLab Studio",
-    "url": "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "BikeLab Studio",
-      "url": "https://www.bikelabstudio.com",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#app",
+      "name": "Di2 and AXS Electronic Shifting Diagnostic Tool",
+      "alternateName": [
+        "Shimano Di2 Diagnostic Tool",
+        "SRAM AXS Diagnostic Tool",
+        "Di2 Troubleshooter",
+        "AXS Troubleshooter",
+        "Electronic Groupset Diagnostic Tool",
+        "Di2 AXS Decision Tree"
+      ],
+      "description": "Interactive diagnostic tool for Shimano Di2 and SRAM AXS electronic shifting failures. Identifies faults in the power, communication, and mechanical layers through a guided decision tree. Free, no app, no registration required. BikeLab Studio — Trujillo, Peru.",
+      "applicationCategory": "SportsApplication",
+      "applicationSubCategory": "Bicycle Electronics Diagnostic Tool",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Shimano Di2 11-speed diagnosis",
+        "Shimano Di2 12-speed diagnosis",
+        "SRAM AXS Road diagnosis (Red, Force, Rival)",
+        "SRAM AXS MTB diagnosis (XX, X01, GX Eagle)",
+        "Power layer diagnostics: battery, connectors, voltage",
+        "Communication layer diagnostics: wireless protocols, firmware",
+        "Mechanical layer diagnostics: indexing, alignment, cable tension",
+        "Di2 crash mode detection and reset guide",
+        "Pogo pin and junction box inspection guide",
+        "AXS controller factory reset procedure",
+        "Intermittent shifting pattern diagnosis",
+        "Free — no app or registration required"
+      ],
+      "softwareVersion": "1.0",
+      "dateCreated": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "datePublished": "2026-03-05",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#dataset" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
+      },
+      "mentions": [
+        { "@type": "Organization", "name": "Shimano", "url": "https://www.shimano.com", "sameAs": "https://www.wikidata.org/wiki/Q692378" },
+        { "@type": "Organization", "name": "SRAM", "url": "https://www.sram.com", "sameAs": "https://www.wikidata.org/wiki/Q1783108" },
+        { "@type": "Product", "name": "Shimano Di2", "brand": { "@type": "Brand", "name": "Shimano" } },
+        { "@type": "Product", "name": "SRAM AXS", "brand": { "@type": "Brand", "name": "SRAM" } },
+        { "@type": "Thing", "name": "Shimano E-TUBE PROJECT" },
+        { "@type": "Thing", "name": "E-TUBE Di2 protocol" },
+        { "@type": "Thing", "name": "SRAM AXS wireless shifting protocol" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Founder, BikeLab Studio",
+      "knowsAbout": [
+        "Layered diagnostics for electronic shifting systems",
+        "Shimano Di2 — E-TUBE protocols, firmware, crash mode",
+        "SRAM AXS — wireless protocols, factory reset, synchronization",
+        "Dynamic Coherence Model (MCD)",
+        "Decision trees applied to electronic component diagnostics",
+        "Electronic bicycle drivetrain: power, communication, mechanical",
+        "Schema.org engineering",
+        "Semantic architecture and Knowledge Graph",
+        "Precision bicycle engineering"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
       "sameAs": [
-        "https://www.linkedin.com/company/bikelabstudio"
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
+      "worksFor": { "@id": "https://www.bikelabstudio.com/#business" },
+      "founder": { "@id": "https://www.bikelabstudio.com/#business" }
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Dynamic Coherence Model (MCD)",
+      "alternateName": "Modelo de Coherencia Dinámica",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "en",
+      "description": "Methodological framework that evaluates coherence across three layers of an electronic shifting system: power layer (battery, connectors, supply voltage), communication layer (wireless protocols, firmware, component synchronization), and mechanical layer (indexing, derailleur alignment, cable tension). A fault occurs when one layer introduces incoherence that the other two cannot compensate for. The diagnostic tree isolates the incoherent layer and determines the required intervention.",
+      "about": [
+        "Layered diagnostics for Shimano Di2 and SRAM AXS electronic shifting",
+        "Fault isolation across power, communication, and mechanical layers",
+        "Decision tree for electronic bicycle drivetrain diagnostics",
+        "Systemic coherence in electronic transmission components"
       ]
     },
-    "sameAs": [
-      "https://orcid.org/0009-0007-5631-7436",
-      "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
-      "https://zenodo.org/search?q=ravello+joo",
-      "https://carlosravello.com/#person"
-    ],
-    "@id": "https://www.bikelabstudio.com/#carlos-ravello"
-  },
-  "creator": {
-    "@type": "Person",
-    "@id": "https://www.bikelabstudio.com/#carlos-ravello",
-    "name": "Carlos Ravello",
-    "url": "https://carlosravello.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "BikeLab Studio",
-    "url": "https://www.bikelabstudio.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.bikelabstudio.com/logo-noir.png"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/bikelabstudio"
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "ratingCount": "1"
-  },
-  "isPartOf": {
-    "@type": "WebSite",
-    "@id": "https://www.bikelabstudio.com/#website",
-    "name": "BikeLab Studio",
-    "url": "https://www.bikelabstudio.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Diagnose Shimano Di2 or SRAM AXS Electronic Shifting Problems",
-  "description": "A step-by-step user journey to identify and resolve Shimano Di2 and SRAM AXS electronic shifting failures at home — from system identification to certified service escalation.",
-  "totalTime": "PT10M",
-  "estimatedCost": {
-    "@type": "MonetaryAmount",
-    "currency": "USD",
-    "value": "0"
-  },
-  "tool": [
     {
-      "@type": "HowToTool",
-      "name": "Shimano E-TUBE PROJECT (free app)"
+      "@type": "Dataset",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#dataset",
+      "name": "Diagnostic rule tree — Shimano Di2 and SRAM AXS",
+      "description": "Diagnostic rule base for Shimano Di2 (11 and 12-speed) and SRAM AXS (Road and MTB) electronic shifting failures. Organized across three layers: power, communication, and mechanical. Covers Di2 crash mode, AXS factory reset, pogo pins, junction box, firmware, and intermittent shifting patterns.",
+      "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html",
+      "inLanguage": "en",
+      "temporalCoverage": "2026",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#app" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "maintainer": { "@id": "https://carlosravello.com/#person" }
     },
     {
-      "@type": "HowToTool",
-      "name": "SRAM AXS app (optional — pairing can be done without it)"
-    }
-  ],
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Select Your System — Di2 or AXS",
-      "text": "Identify whether you have Shimano Di2 (wired electronic system with E-Tube cables and a junction box) or SRAM AXS (fully wireless system with coin-cell shifters and a rechargeable RD battery). This determines the entire diagnostic path — failure modes, reset procedures, and firmware tools are completely different between the two systems. Di2 uses a wired bus protocol; AXS uses ANT+ wireless at 2.4 GHz."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "Check for Any Sign of Life — LED or Partial Response",
-      "text": "Look for any LED activity: on Di2, press the junction box button and observe the blink pattern. On AXS, press the button on the rear derailleur and watch for a colored blink (green = OK, red = low battery, no light = dead). A partial response — only rear shifting works, or intermittent response — indicates a communication or firmware issue. Absolutely no response points to the power layer: charge or replace the battery before continuing."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Identify the Exact Symptom from the Diagnostic Tree",
-      "text": "Use the BikeLab Di2 & AXS Diagnostic Tool to select your exact symptom from the interactive tree: system completely dead, won't shift after a crash, battery drains in hours, pairing lost after transport, shifts only in one direction, or intermittent failures on climbs. Matching your symptom to the correct failure layer — power (~35%), communication (~25%), or mechanical (~20%) — is the decisive step that determines whether you can fix it at home."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Follow the Step-by-Step Fix Procedure",
-      "text": "Execute the indicated procedure for your symptom. Common home fixes: Di2 hard reset — remove battery for 30 seconds, press RD button 5–10 seconds after reinstall. Di2 crash mode exit — press and hold junction box button 3 seconds until LED pattern changes. AXS factory reset — hold AXS button on RD during battery reinstall. AXS re-pairing — slow green blink on RD opens pairing session, then press each component button until fast green confirms pairing. Most power and communication layer fixes take under 10 minutes with no tools required."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 5,
-      "name": "If Home Fix Fails — Contact Certified Service",
-      "text": "If the failure reappears within 48 hours of a home fix, or the system does not respond after a full hard reset, the issue is in the mechanical layer or involves internal component damage (collapsed pogo pin, damaged PCB, bent hanger). Never attempt Di2 firmware updates via Bluetooth — a corrupted update bricks the system and requires the SM-PCE02 dealer tool to recover. Contact BikeLab Studio or a certified Shimano / SRAM service center. Continuing to use a damaged system causes secondary damage to adjacent components."
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why is my Shimano Di2 not shifting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most common causes are: (1) Dead or low battery — check the indicator LED. (2) Di2 crash mode triggered after an impact — press and hold the junction box button 3 seconds to exit. (3) Loose E-Tube connector — reseat all junction box connections. (4) Outdated firmware causing communication errors between components. Use the BikeLab Di2 diagnostic tool to identify which layer the failure is on."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I reset SRAM AXS pairing without the app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Remove the battery from the rear derailleur. Press and hold the AXS button on the RD, then reinstall the battery while still holding the button — this initiates a factory reset. To re-pair: press the RD button until the LED blinks slow green (pairing mode), then press the button on each component (shifters, dropper) until you see a fast green blink confirming pairing. No app required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does my Di2 battery drain so fast?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Abnormal Di2 battery drain is almost always caused by: active Bluetooth module (Wireless Unit EW-WU111 or EW-WU101) connected to E-Tube app in background, a firmware bug on older Di2 versions, or a faulty internal cable with partial short. Check if Bluetooth is active in E-Tube — turn it off when not calibrating. If drain persists after disabling Bluetooth and updating firmware, the internal cable should be inspected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Di2 crash mode and how do I fix it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Di2 crash mode is a protective state the junction box enters automatically when it detects a sudden impact (crash). In crash mode, the front derailleur movement is locked to prevent damage from a bent hanger or misaligned drivetrain. The junction box LED blinks in a specific pattern. To exit: straighten the hanger first, then press and hold the junction box button for 3 seconds until the LED changes. The system will resume normal operation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I update Di2 firmware via Bluetooth?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No — never update Shimano Di2 firmware via Bluetooth. An interrupted update can corrupt the EPROM memory and brick the system permanently. Recovery from a Di2 firmware brick requires the SM-PCE02 dealer diagnostic tool, which is only available at certified Shimano service centers. Always update Di2 via USB cable using E-TUBE PROJECT on a computer. Check the connection before starting and ensure the battery is above 50%."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is my AXS shifter completely dead?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "AXS shifters use CR2032 coin batteries. A completely dead shifter is almost always a depleted battery — replace the CR2032 first. If the new battery doesn't fix it: check the battery contact for corrosion, press and hold the AXS button for 10 seconds to force a power cycle, then re-pair with the RD. If the shifter still doesn't respond after battery replacement and re-pairing, the PCB may be damaged."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
       "name": "BikeLab Studio",
-      "item": "https://www.bikelabstudio.com/"
+      "url": "https://www.bikelabstudio.com"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Tools",
-      "item": "https://www.bikelabstudio.com/index-en.html#science"
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#webpage",
+      "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html",
+      "name": "Di2 and AXS Diagnostic Tool — Electronic Shifting Troubleshooter",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "inLanguage": "en",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#app" },
+      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#breadcrumb" },
+      "reviewedBy": { "@id": "https://carlosravello.com/#person" }
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Di2 & AXS Diagnostic Tool",
-      "item": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "BikeLab Studio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.bikelabstudio.com/index-en.html#science" },
+        { "@type": "ListItem", "position": 3, "name": "Di2 and AXS Diagnostic", "item": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What electronic systems does this diagnostic tool cover?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Shimano Di2 in 11 and 12-speed versions, and SRAM AXS in Road (Red, Force, Rival) and MTB (XX, X01, GX Eagle) configurations." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is crash mode on Shimano Di2?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crash mode is a protection state that Di2 activates automatically after detecting a strong impact. The derailleur stops responding even if the battery is charged. It is resolved by holding the adjustment button for 3 seconds. The tool guides you through the full procedure." }
+        },
+        {
+          "@type": "Question",
+          "name": "My electronic shifting only fails sometimes — what causes intermittent faults?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Intermittent failures in Di2 and AXS are almost always in the communication layer: battery at voltage threshold, oxidized pogo pins, outdated firmware, or lost wireless pairing. The tool has a specific module for intermittent pattern diagnosis." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need the E-TUBE or AXS app to use this tool?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. This tool runs in the browser without any app or registration. It tells you when you need to open E-TUBE or the AXS app, but the full diagnostic tree works without them." }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html#howto",
+      "name": "How to diagnose Shimano Di2 or SRAM AXS electronic shifting failures",
+      "description": "Step-by-step guide to identify and resolve failures in Shimano Di2 and SRAM AXS electronic shifting systems — from system identification to referral to certified service.",
+      "totalTime": "PT10M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "step": [
+        { "@type": "HowToStep", "position": "1", "name": "Identify your system", "text": "Select whether you have Shimano Di2 or SRAM AXS, and the specific version (11-speed, 12-speed, Road, MTB). This determines the correct diagnostic tree." },
+        { "@type": "HowToStep", "position": "2", "name": "Describe the symptom", "text": "The tree asks for the exact symptom: does not shift, shifts on its own, shifts intermittently, shifter does not respond, battery does not charge. Each symptom opens a specific branch." },
+        { "@type": "HowToStep", "position": "3", "name": "Follow the layer-by-layer diagnosis", "text": "The tool evaluates first the power layer (battery, connectors), then communication (firmware, pairing), then mechanical (indexing, alignment). Each layer has guided checks." },
+        { "@type": "HowToStep", "position": "4", "name": "Apply the solution or refer to service", "text": "If the fault can be resolved at home, the tool gives you the exact procedure. If certified service is required, it tells you before you take any action that could make the problem worse." }
+      ]
     }
   ]
 }
