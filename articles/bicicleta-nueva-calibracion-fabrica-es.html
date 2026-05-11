@@ -113,7 +113,7 @@
       "creator": {
         "@id": "https://carlosravello.com/#person"
       },
-      "description": "Framework metodológico de tres ejes aplicado al diagnóstico físico de sistemas ciclistas: (E) mecanismos de degradación energética en componentes (entropía, fatiga, corrosión, fricción), (C) análisis y cuantificación de señales físicas de deterioro, (P) criterios de mantenimiento y longevidad del sistema."
+      "description": "Framework metodológico de tres ejes aplicado al mantenimiento de la bicicleta: (E) estado energético de los componentes de transmisión y contacto, (C) diagnóstico de desgaste y configuración del sistema, (P) criterios de intervención y longevidad del equipamiento."
     },
     {
       "@type": "Organization",
@@ -171,6 +171,203 @@
   ]
 }
 </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header {
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle { font-size: 15px; color: #999; margin-bottom: 20px; line-height: 1.6; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 {
+            font-size: 13px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p { margin-bottom: 18px; color: #ccc; font-size: 14px; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #555; font-style: italic; margin-top: -10px; margin-bottom: 20px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .warning-box p { color: #cc9999; margin-bottom: 8px; }
+        .warning-box p:first-child { color: #ff6b6b; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+
+        .field-note {
+            background-color: #0a0f0a;
+            border-left: 3px solid #4a9e6b;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .field-note p { color: #aac8b4; margin-bottom: 0; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin: 30px 0;
+        }
+        .stat-box {
+            background: #0e0e0e;
+            border: 1px solid #2a2a2a;
+            padding: 22px 18px;
+            text-align: center;
+        }
+        .stat-num { font-size: 28px; color: #ff6b6b; letter-spacing: -1px; display: block; margin-bottom: 6px; }
+        .stat-num.green { color: #6bffb8; }
+        .stat-num.yellow { color: #ffd86b; }
+        .stat-label { font-size: 10px; color: #666; letter-spacing: 1.5px; line-height: 1.5; }
+
+        .service-cta {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-left: 3px solid #666;
+            padding: 22px 25px;
+            margin: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-cta-text { font-size: 12px; color: #999; letter-spacing: 0.5px; line-height: 1.8; }
+        .service-cta-text strong { color: #ddd; display: block; font-size: 13px; letter-spacing: 1px; margin-bottom: 4px; }
+        .service-cta a {
+            font-size: 11px;
+            color: #e0e0e0;
+            text-decoration: none;
+            border: 1px solid #444;
+            padding: 10px 18px;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .service-cta a:hover { background: #e0e0e0; color: #000; border-color: #e0e0e0; }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #333;
+            padding: 25px 30px;
+            margin: 40px 0;
+        }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 10px; padding-left: 16px; text-indent: -16px; font-size: 11px; line-height: 1.6; color: #666; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #aaa; }
+
+        /* Nav */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'Courier New', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; transition: color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-overlay a:hover { color: #888; }
+        .nav-bar .lang-switch { position: static; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 16px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            .stat-row { grid-template-columns: 1fr; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .service-cta { flex-direction: column; }
+            .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; }
+            .nav-overlay { z-index: 1004; overflow-y: auto; }
+            .wa-float { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 0.65rem; }
+        }
+    </style>
+
+
 </head>
 <body>
 

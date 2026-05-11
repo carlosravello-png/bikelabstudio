@@ -42,29 +42,60 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ScholarlyArticle",
-      "@id": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html#article",
-      "headline": "Estado Mecánico de Fábrica en Bicicletas Nuevas: Análisis Tribológico y Cinemático de 5 Vectores de Degradación",
-      "alternativeHeadline": "Inspección Pre-Entrega, Estándares de Lubricación y Protocolo de Calibración",
-      "description": "Análisis técnico del estado mecánico de bicicletas nuevas tal como llegan de fábrica. Cinco vectores de degradación: deficiencia de lubricación, tensión de radios, compliancia hidráulica, gestión de torque en carbono y pérdida por fricción en cadena. Validado con datos de Zero Friction Cycling, SKF y CeramicSpeed Friction Facts.",
-      "url": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html",
-      "inLanguage": "es",
-      "datePublished": "2026-03-15",
-      "dateModified": "2026-03-15",
-      "articleSection": "Ingeniería de Bicicletas",
-      "keywords": "PDI bicicleta, lubricación NLGI, tensión radios, compliancia hidráulica, torque carbono, fricción cadena, calibración fábrica, BikeLab Studio",
+      "@type": "TechArticle",
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Perú",
+      "headline": "Estado Mecánico de Fábrica en Bicicletas Nuevas: Análisis Tribológico y Cinemático de los Vectores de Degradación de Rendimiento",
+      "alternativeHeadline": "Cuantificación de pérdidas energéticas, desviaciones estructurales y riesgos de integridad en bicicletas nuevas de caja",
+      "description": "Análisis técnico de los cinco vectores de degradación mecánica presentes en bicicletas nuevas sin inspección pre-entrega: coeficiente de fricción en lubricación de fábrica, uniformidad de tensión de radios, compliancia volumétrica del circuito hidráulico, torques de ensamble en componentes de carbono, y pérdidas totales en transmisión. Datos cuantificados a partir de benchmarks independientes de Zero Friction Cycling, CeramicSpeed Friction Facts, especificaciones SKF Group, estándares PBMA y manuales técnicos Shimano / SRAM.",
+      "inLanguage": "es-PE",
       "author": {
         "@id": "https://carlosravello.com/#person"
       },
       "publisher": {
         "@id": "https://www.bikelabstudio.com/#business"
       },
-      "isPartOf": {
-        "@id": "https://www.bikelabstudio.com/#technical-publications"
-      },
+      "datePublished": "2026-03-15T08:00:00-05:00",
+      "dateModified": "2026-03-15T08:00:00-05:00",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Tribología",
+          "sameAs": "https://es.wikipedia.org/wiki/Tribolog%C3%ADa"
+        },
+        {
+          "@type": "Thing",
+          "name": "Transmisión de bicicleta",
+          "sameAs": "https://es.wikipedia.org/wiki/Transmisi%C3%B3n_de_bicicleta"
+        },
+        {
+          "@type": "Thing",
+          "name": "Freno hidráulico",
+          "sameAs": "https://es.wikipedia.org/wiki/Freno_hidr%C3%A1ulico"
+        }
+      ],
+      "articleSection": "Ingeniería de Componentes",
+      "keywords": "PDI bicicleta, lubricación NLGI, tensión de radios, compliancia hidráulica, torque carbono, watts fricción cadena, BikeLab Studio",
+      "isAccessibleForFree": true,
+      "image": "https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#publicaciones-tecnicas",
+        "name": "Publicaciones Técnicas BikeLab Studio",
+        "description": "White papers e investigaciones técnicas sobre mecánica ciclista, modelos físicos y análisis de datos. BikeLab Studio, Trujillo, Perú.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
       },
       "isBasedOn": {
         "@id": "https://carlosravello.com/#mcd-framework"
@@ -75,7 +106,12 @@
       "@id": "https://carlosravello.com/#person",
       "name": "Carlos Eduardo Ravello Joo",
       "url": "https://carlosravello.com",
-      "jobTitle": "Fundador de BikeLab Studio",
+      "jobTitle": "Ingeniero Ciclista · Arquitecto Semántico",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
       "sameAs": [
         "https://carlosravello.com/#person",
         "https://orcid.org/0009-0007-5631-7436",
@@ -83,60 +119,72 @@
         "https://zenodo.org/search?q=ravello+joo",
         "https://github.com/carlosravello-png"
       ],
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "ORCID",
-        "value": "0009-0007-5631-7436"
-      },
-      "worksFor": {
-        "@id": "https://www.bikelabstudio.com/#business"
-      },
-      "founder": {
-        "@id": "https://www.bikelabstudio.com/#business"
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
       }
     },
     {
-      "@type": "CreativeWorkSeries",
-      "@id": "https://www.bikelabstudio.com/#technical-publications",
-      "name": "Publicaciones Técnicas BikeLab Studio",
-      "description": "White papers e investigación técnica sobre mecánica de bicicletas, modelos físicos y análisis de datos aplicados.",
-      "url": "https://www.bikelabstudio.com",
-      "publisher": {
-        "@id": "https://www.bikelabstudio.com/#business"
-      },
-      "author": {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
         "@id": "https://carlosravello.com/#person"
       },
-      "isBasedOn": {
-        "@id": "https://carlosravello.com/#mcd-framework"
-      }
+      "description": "Framework metodológico de tres ejes que fundamenta la investigación técnica ciclista: (E) estado físico y carga del sistema analizado, (C) modelado, validación estadística y análisis de datos, (P) criterios de rendimiento y aplicación práctica de los resultados."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/bikelabstudio"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://www.bikelabstudio.com/#website",
       "name": "BikeLab Studio",
-      "url": "https://www.bikelabstudio.com"
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "@id": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "BikeLab Studio",
+          "name": "Inicio",
           "item": "https://www.bikelabstudio.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Artículos Técnicos",
-          "item": "https://www.bikelabstudio.com/index.html#science"
+          "name": "Artículos",
+          "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "White Paper Bicicleta Nueva Estado Mecánico",
+          "name": "Estado Mecánico de Fábrica en Bicicletas Nuevas: Análisis Tr",
           "item": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html"
         }
       ]
@@ -144,6 +192,150 @@
   ]
 }
 </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 { font-size: 26px; color: #ffffff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 14px; color: #999; margin-bottom: 20px; line-height: 1.7; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 { font-size: 13px; color: #aaa; letter-spacing: 3px; margin-top: 55px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; text-transform: uppercase; }
+        h3 { font-size: 12px; color: #888; letter-spacing: 2px; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+        ul, ol { color: #ccc; margin-left: 22px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; line-height: 1.7; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #555; font-style: italic; margin-top: -12px; margin-bottom: 22px; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 24px 30px;
+            margin: 28px 0 8px;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow-x: auto;
+        }
+        .formula .formula-source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; font-weight: 400; }
+
+        table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .warning-box { background-color: #1a0a0a; border-left: 3px solid #ff4444; padding: 20px; margin: 30px 0; }
+        .warning-box p { color: #cc9999; margin-bottom: 8px; }
+        .warning-box p:first-child { color: #ff6b6b; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+
+        .field-note { background-color: #0a0f0a; border-left: 3px solid #4a9e6b; padding: 20px; margin: 30px 0; }
+        .field-note p { color: #aac8b4; margin-bottom: 8px; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+
+        .abstract-box {
+            background: #0d0d0d;
+            border: 1px solid #2a2a2a;
+            border-top: 3px solid #555;
+            padding: 28px 30px;
+            margin: 30px 0 50px;
+        }
+        .abstract-box h3 { margin-top: 0; color: #777; font-size: 10px; letter-spacing: 3px; }
+        .abstract-box p { font-size: 13px; color: #aaa; line-height: 1.9; margin-bottom: 0; }
+
+        .service-cta {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-left: 3px solid #555;
+            padding: 20px 24px;
+            margin: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-cta-text { font-size: 11px; color: #888; letter-spacing: 0.5px; line-height: 1.9; }
+        .service-cta-text strong { color: #bbb; display: block; font-size: 12px; letter-spacing: 2px; margin-bottom: 4px; }
+        .service-cta a { font-size: 10px; color: #e0e0e0; text-decoration: none; border: 1px solid #444; padding: 10px 16px; letter-spacing: 2px; white-space: nowrap; transition: all 0.3s; display: inline-block; }
+        .service-cta a:hover { background: #e0e0e0; color: #000; border-color: #e0e0e0; }
+
+        .conclusion-box { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 50px 0; }
+        .references { background-color: #0a0a0a; border: 1px solid #333; padding: 25px 30px; margin: 40px 0; }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 12px; padding-left: 18px; text-indent: -18px; font-size: 11px; line-height: 1.7; color: #666; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #555; }
+
+        .nav-back { display: inline-block; font-size: 11px; color: #666; text-decoration: none; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 4px; transition: color 0.2s; }
+        .nav-back:hover { color: #aaa; }
+
+        /* Nav */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'Courier New', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; transition: color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-overlay a:hover { color: #888; }
+        .nav-bar .lang-switch { position: static; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 16px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .service-cta { flex-direction: column; }
+            .formula { padding: 16px; font-size: 0.95rem; }
+            .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; }
+            .nav-overlay { z-index: 1004; overflow-y: auto; }
+            .wa-float { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 0.65rem; }
+        }
+    </style>
+
+
 </head>
 <body>
 

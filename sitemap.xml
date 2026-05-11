@@ -1498,28 +1498,4 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-  <url>
-    <loc>https://www.bikelabstudio.com/tandem/bicicleta-nueva-calibracion-fabrica-es.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-</url>
-  <url>
-    <loc>https://www.bikelabstudio.com/tandem/new-bike-factory-calibration-en.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-</url>
-  <url>
-    <loc>https://www.bikelabstudio.com/tandem/white-paper-bicicleta-nueva-estado-mecanico-es.html</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-</url>
-  <url>
-    <loc>https://www.bikelabstudio.com/tandem/white-paper-new-bike-mechanical-state-en.html</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-</url>
 </urlset>
