@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:dcterms="http://purl.org/dc/terms/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <rdf:Description rdf:about="https://www.bikelabstudio.com/articles/images/dot-boiling-point-chart.svg">
+        <dc:title>DOT 4 vs DOT 5.1 Boiling Point Degradation Over Time — MTB Field Data</dc:title>
+        <dc:title xml:lang="es">Degradación del Punto de Ebullición DOT 4 vs DOT 5.1 — Datos de Campo MTB</dc:title>
+        <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+        <dc:publisher>BikeLab Studio</dc:publisher>
+        <dc:description>Line chart showing boiling point degradation of DOT 4 and DOT 5.1 brake fluid over 18 months in MTB conditions. Includes danger zone and bleed intervals. BikeLab Studio.</dc:description>
+        <dc:date>2026-05-30</dc:date>
+        <dc:rights>© 2026 Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights>
+        <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <cc:attributionName>Carlos Eduardo Ravello Joo — BikeLab Studio</cc:attributionName>
+        <cc:attributionURL rdf:resource="https://carlosravello.com"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+      <defs>
+        
+      </defs>
+
+      <rect x="0" y="0" width="900" height="550" fill="#0a0a0a"></rect>
+      <rect x="0.5" y="0.5" width="899" height="549" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
+      <g stroke="#555" stroke-width="1" fill="none">
+        <path d="M14 14 H30 M14 14 V30"></path>
+        <path d="M886 14 H870 M886 14 V30"></path>
+        <path d="M14 536 H30 M14 536 V520"></path>
+        <path d="M886 536 H870 M886 536 V520"></path>
+      </g>
+
+      
+      <text x="30" y="38" fill="#f2f2f2" font-size="13.5" letter-spacing="1.5" font-weight="bold">BOILING POINT DEGRADATION // DOT 4 vs DOT 5.1 // MTB FIELD CONDITIONS</text>
+      <g font-size="11" font-weight="bold">
+        <rect x="30" y="56" width="14" height="3" fill="#4FC3F7"></rect>
+        <text x="50" y="63" fill="#4FC3F7">DOT 5.1 — DRY: 260°C</text>
+        <rect x="240" y="56" width="14" height="3" fill="#FFB74D"></rect>
+        <text x="260" y="63" fill="#FFB74D">DOT 4 — DRY: 230°C</text>
+      </g>
+
+      
+      
+      <g stroke="#1c1c1c" stroke-width="1">
+        <line x1="85" y1="470" x2="635" y2="470"></line>
+        <line x1="85" y1="412.3" x2="635" y2="412.3"></line>
+        <line x1="85" y1="354.6" x2="635" y2="354.6"></line>
+        <line x1="85" y1="296.9" x2="635" y2="296.9"></line>
+        <line x1="85" y1="239.2" x2="635" y2="239.2"></line>
+        <line x1="85" y1="181.5" x2="635" y2="181.5"></line>
+        <line x1="85" y1="123.8" x2="635" y2="123.8"></line>
+        <line x1="176.7" y1="95" x2="176.7" y2="470"></line>
+        <line x1="268.3" y1="95" x2="268.3" y2="470"></line>
+        <line x1="360" y1="95" x2="360" y2="470"></line>
+        <line x1="451.7" y1="95" x2="451.7" y2="470"></line>
+        <line x1="543.3" y1="95" x2="543.3" y2="470"></line>
+      </g>
+
+      
+      <rect x="85" y="340.2" width="550" height="101" fill="rgba(255,50,50,0.15)"></rect>
+      <line x1="85" y1="340.2" x2="635" y2="340.2" stroke="#FF4444" stroke-width="1.4" stroke-dasharray="6 4"></line>
+      <line x1="85" y1="441.2" x2="635" y2="441.2" stroke="#FF4444" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"></line>
+      <text x="95" y="357" fill="#FF4444" font-size="10" font-weight="bold" letter-spacing="0.5">⚠ FADE RISK ZONE // MTB CALIPER OPERATING RANGE</text>
+
+      
+      <line x1="268.3" y1="95" x2="268.3" y2="470" stroke="#888" stroke-width="1.2" stroke-dasharray="5 4"></line>
+      <text transform="rotate(-90 263 206)" x="263" y="206" fill="#888" font-size="9.5" font-weight="bold" letter-spacing="1">ANNUAL BLEED</text>
+      <line x1="451.7" y1="95" x2="451.7" y2="470" stroke="#FF9800" stroke-width="1.2" stroke-dasharray="5 4"></line>
+      <text transform="rotate(-90 446 215)" x="446" y="215" fill="#FF9800" font-size="9.5" font-weight="bold" letter-spacing="1">⚠ NEGLECTED SYSTEM</text>
+
+      
+      <line x1="85" y1="95" x2="85" y2="470" stroke="#666" stroke-width="1.3"></line>
+      <line x1="85" y1="470" x2="635" y2="470" stroke="#666" stroke-width="1.3"></line>
+
+      
+      <g fill="#8a8a8a" font-size="10" text-anchor="end">
+        <text x="77" y="473">140</text>
+        <text x="77" y="415.3">160</text>
+        <text x="77" y="357.6">180</text>
+        <text x="77" y="299.9">200</text>
+        <text x="77" y="242.2">220</text>
+        <text x="77" y="184.5">240</text>
+        <text x="77" y="126.8">260</text>
+      </g>
+      <text transform="rotate(-90 30 282)" x="30" y="282" fill="#aaa" font-size="11" letter-spacing="2" text-anchor="middle">BOILING POINT (°C)</text>
+
+      
+      <g fill="#8a8a8a" font-size="10" text-anchor="middle">
+        <text x="85" y="488">0</text>
+        <text x="176.7" y="488">3</text>
+        <text x="268.3" y="488">6</text>
+        <text x="360" y="488">9</text>
+        <text x="451.7" y="488">12</text>
+        <text x="543.3" y="488">15</text>
+        <text x="635" y="488">18</text>
+      </g>
+      <text x="360" y="510" fill="#aaa" font-size="11" letter-spacing="2" text-anchor="middle">MONTHS OF USE</text>
+
+      
+      <polyline points="85,210.4 176.7,253.7 268.3,308.5 360,354.6 451.7,389.2 543.3,412.3 635,432.5" fill="none" stroke="#FFB74D" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></polyline>
+      
+      <polyline points="85,123.8 176.7,158.5 268.3,204.6 360,245 451.7,276.7 543.3,302.7 635,325.8" fill="none" stroke="#4FC3F7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></polyline>
+
+      
+      <g fill="#0a0a0a" stroke="#FFB74D" stroke-width="2">
+        <circle cx="85" cy="210.4" r="3.2"></circle><circle cx="176.7" cy="253.7" r="3.2"></circle>
+        <circle cx="268.3" cy="308.5" r="3.2"></circle><circle cx="360" cy="354.6" r="3.2"></circle>
+        <circle cx="451.7" cy="389.2" r="3.2"></circle><circle cx="543.3" cy="412.3" r="3.2"></circle>
+        <circle cx="635" cy="432.5" r="3.2"></circle>
+      </g>
+      <g fill="#0a0a0a" stroke="#4FC3F7" stroke-width="2">
+        <circle cx="85" cy="123.8" r="3.2"></circle><circle cx="176.7" cy="158.5" r="3.2"></circle>
+        <circle cx="268.3" cy="204.6" r="3.2"></circle><circle cx="360" cy="245" r="3.2"></circle>
+        <circle cx="451.7" cy="276.7" r="3.2"></circle><circle cx="543.3" cy="302.7" r="3.2"></circle>
+        <circle cx="635" cy="325.8" r="3.2"></circle>
+      </g>
+
+      
+      <circle cx="331.3" cy="340.2" r="5" fill="#FFB74D" stroke="#0a0a0a" stroke-width="1.5"></circle>
+      <line x1="331.3" y1="340.2" x2="331.3" y2="318" stroke="#FF4444" stroke-width="1"></line>
+      <text x="331.3" y="313" fill="#FF4444" font-size="9.5" font-weight="bold" text-anchor="middle">FADE RISK</text>
+
+      
+      <text x="644" y="329" fill="#4FC3F7" font-size="10" font-weight="bold">190°C</text>
+      <text x="644" y="436" fill="#FFB74D" font-size="10" font-weight="bold">153°C</text>
+
+      
+      <g>
+        <rect x="662" y="108" width="218" height="120" fill="#0e0e0e" stroke="#333" stroke-width="1.2"></rect>
+        <text x="675" y="128" fill="#777" font-size="8.5" letter-spacing="1.5">[ WHY MTB FLUID DIES FASTER ]</text>
+        <line x1="675" y1="134" x2="867" y2="134" stroke="#262626" stroke-width="1"></line>
+        <text x="675" y="152" fill="#aaa" font-size="10.5">MTB brake circuit: ~12ml</text>
+        <text x="675" y="170" fill="#aaa" font-size="10.5">Car brake circuit: ~500ml</text>
+        <text x="675" y="194" fill="#aaa" font-size="10.5">Same moisture input =</text>
+        <text x="675" y="212" fill="#d8d8d8" font-size="10.5" font-weight="bold">HIGHER % contamination</text>
+        <text x="675" y="226" fill="#d8d8d8" font-size="10.5" font-weight="bold">in MTB</text>
+      </g>
+
+      
+      <text x="30" y="537" fill="#444" font-size="8.5">© 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com</text>
+    </svg>

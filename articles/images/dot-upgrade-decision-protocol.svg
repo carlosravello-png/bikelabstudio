@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 750 1000" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:dcterms="http://purl.org/dc/terms/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <rdf:Description rdf:about="https://www.bikelabstudio.com/articles/images/dot-upgrade-decision-protocol.svg">
+        <dc:title>DOT 4 to DOT 5.1 Upgrade Decision Protocol — MTB Brake Fluid</dc:title>
+        <dc:title xml:lang="es">Protocolo de Decisión de Mejora DOT 4 a DOT 5.1 — Fluido de Freno MTB</dc:title>
+        <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+        <dc:publisher>BikeLab Studio</dc:publisher>
+        <dc:description>Decision tree flowchart to determine if upgrading from DOT 4 to DOT 5.1 is justified based on descent length, altitude, maintenance history, and caliper type. BikeLab Studio.</dc:description>
+        <dc:date>2026-05-30</dc:date>
+        <dc:rights>© 2026 Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights>
+        <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <cc:attributionName>Carlos Eduardo Ravello Joo — BikeLab Studio</cc:attributionName>
+        <cc:attributionURL rdf:resource="https://carlosravello.com"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+      <defs>
+        
+        <marker id="abBlue" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
+          <path d="M0 0 L6.5 3 L0 6" fill="none" stroke="#4FC3F7" stroke-width="1.3"></path>
+        </marker>
+        <marker id="abGrey" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
+          <path d="M0 0 L6.5 3 L0 6" fill="none" stroke="#888" stroke-width="1.3"></path>
+        </marker>
+      </defs>
+
+      <rect x="0" y="0" width="750" height="1000" fill="#0a0a0a"></rect>
+      <rect x="0.5" y="0.5" width="749" height="999" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
+      <g stroke="#555" stroke-width="1" fill="none">
+        <path d="M14 14 H30 M14 14 V30"></path>
+        <path d="M736 14 H720 M736 14 V30"></path>
+        <path d="M14 986 H30 M14 986 V970"></path>
+        <path d="M736 986 H720 M736 986 V970"></path>
+      </g>
+
+      
+      <text x="30" y="42" fill="#f2f2f2" font-size="14" letter-spacing="2" font-weight="bold">DOT 4 vs DOT 5.1 // UPGRADE DECISION PROTOCOL</text>
+      <line x1="30" y1="54" x2="720" y2="54" stroke="#3a3a3a" stroke-width="1"></line>
+      <text x="720" y="42" fill="#7a7a7a" font-size="9.5" letter-spacing="2" text-anchor="end">FIG.04</text>
+
+      
+      
+      <g stroke="#4FC3F7" stroke-width="1.4" fill="none">
+        <line x1="210" y1="139" x2="210" y2="195" marker-end="url(#abBlue)"></line>
+        <line x1="210" y1="251" x2="210" y2="307" marker-end="url(#abBlue)"></line>
+        <line x1="210" y1="363" x2="210" y2="419" marker-end="url(#abBlue)"></line>
+        <line x1="210" y1="475" x2="210" y2="531" marker-end="url(#abBlue)"></line>
+        <line x1="210" y1="587" x2="210" y2="648" marker-end="url(#abBlue)"></line>
+      </g>
+      
+      <g stroke="#888" stroke-width="1.4" fill="none">
+        <line x1="360" y1="112" x2="418" y2="112" marker-end="url(#abGrey)"></line>
+        <line x1="360" y1="224" x2="418" y2="224" marker-end="url(#abGrey)"></line>
+        <line x1="360" y1="336" x2="418" y2="336" marker-end="url(#abGrey)"></line>
+        <line x1="360" y1="448" x2="418" y2="448" marker-end="url(#abGrey)"></line>
+        <line x1="360" y1="560" x2="418" y2="560" marker-end="url(#abGrey)"></line>
+      </g>
+      
+      <g font-size="9.5" font-weight="bold" letter-spacing="1">
+        <text x="218" y="172" fill="#4FC3F7">YES</text>
+        <text x="218" y="284" fill="#4FC3F7">YES</text>
+        <text x="218" y="396" fill="#4FC3F7">YES</text>
+        <text x="218" y="508" fill="#4FC3F7">YES</text>
+        <text x="218" y="620" fill="#4FC3F7">YES</text>
+        <text x="389" y="106" fill="#888" text-anchor="middle">NO</text>
+        <text x="389" y="218" fill="#888" text-anchor="middle">NO</text>
+        <text x="389" y="330" fill="#888" text-anchor="middle">NO</text>
+        <text x="389" y="442" fill="#888" text-anchor="middle">NO</text>
+        <text x="389" y="554" fill="#888" text-anchor="middle">NO</text>
+      </g>
+
+      
+      
+      <g>
+        <rect x="60" y="85" width="300" height="54" fill="#111" stroke="#888" stroke-width="1.4"></rect>
+        <text x="72" y="80" fill="#9a9a9a" font-size="8.5" letter-spacing="2">[ START ]</text>
+        <text x="210" y="108" fill="#f2f2f2" font-size="11" text-anchor="middle">SRAM / Tektro /</text>
+        <text x="210" y="125" fill="#f2f2f2" font-size="11" text-anchor="middle">DOT-compatible system?</text>
+      </g>
+      
+      <g>
+        <rect x="60" y="197" width="300" height="54" fill="#111" stroke="#555" stroke-width="1.3"></rect>
+        <text x="210" y="220" fill="#f2f2f2" font-size="11" text-anchor="middle">Descents &gt; 20 min</text>
+        <text x="210" y="237" fill="#f2f2f2" font-size="11" text-anchor="middle">sustained braking?</text>
+      </g>
+      
+      <g>
+        <rect x="60" y="309" width="300" height="54" fill="#111" stroke="#555" stroke-width="1.3"></rect>
+        <text x="210" y="332" fill="#f2f2f2" font-size="11" text-anchor="middle">Last bleed</text>
+        <text x="210" y="349" fill="#f2f2f2" font-size="11" text-anchor="middle">&gt; 6 months ago?</text>
+      </g>
+      
+      <g>
+        <rect x="60" y="421" width="300" height="54" fill="#111" stroke="#555" stroke-width="1.3"></rect>
+        <text x="210" y="444" fill="#f2f2f2" font-size="11" text-anchor="middle">Riding above</text>
+        <text x="210" y="461" fill="#f2f2f2" font-size="11" text-anchor="middle">2,500m altitude?</text>
+      </g>
+      
+      <g>
+        <rect x="60" y="533" width="300" height="54" fill="#111" stroke="#555" stroke-width="1.3"></rect>
+        <text x="210" y="556" fill="#f2f2f2" font-size="11" text-anchor="middle">4-piston calipers OR</text>
+        <text x="210" y="573" fill="#f2f2f2" font-size="11" text-anchor="middle">rotors ≥ 180mm?</text>
+      </g>
+
+      
+      
+      <g>
+        <rect x="418" y="78" width="300" height="68" fill="rgba(255,68,68,0.1)" stroke="#FF4444" stroke-width="1.3"></rect>
+        <text x="430" y="96" fill="#FF4444" font-size="8" letter-spacing="1.5" font-weight="bold">&gt;&gt; STOP — INCOMPATIBLE</text>
+        <text x="430" y="113" fill="#FF4444" font-size="10.5" font-weight="bold">SHIMANO / MAGURA → MINERAL OIL ONLY</text>
+        <text x="430" y="130" fill="#ff7a7a" font-size="10">DOT will damage seals. Stop.</text>
+      </g>
+      
+      <g>
+        <rect x="418" y="195" width="300" height="58" fill="rgba(76,175,80,0.1)" stroke="#4CAF50" stroke-width="1.3"></rect>
+        <text x="430" y="213" fill="#4CAF50" font-size="8" letter-spacing="1.5" font-weight="bold">&gt;&gt; SAFE</text>
+        <text x="430" y="230" fill="#4CAF50" font-size="10.5" font-weight="bold">DOT 4 + annual bleed</text>
+        <text x="430" y="246" fill="#7fc983" font-size="10">sufficient for your use case.</text>
+      </g>
+      
+      <g>
+        <rect x="418" y="307" width="300" height="58" fill="rgba(255,183,77,0.1)" stroke="#FFB74D" stroke-width="1.3"></rect>
+        <text x="430" y="325" fill="#FFB74D" font-size="8" letter-spacing="1.5" font-weight="bold">&gt;&gt; MONITOR</text>
+        <text x="430" y="342" fill="#FFB74D" font-size="10.5" font-weight="bold">Fluid may be OK.</text>
+        <text x="430" y="358" fill="#e0b878" font-size="10">Check lever feel on next descent.</text>
+      </g>
+      
+      <g>
+        <rect x="418" y="419" width="300" height="58" fill="rgba(255,183,77,0.1)" stroke="#FFB74D" stroke-width="1.3"></rect>
+        <text x="430" y="437" fill="#FFB74D" font-size="8" letter-spacing="1.5" font-weight="bold">&gt;&gt; MONITOR</text>
+        <text x="430" y="454" fill="#FFB74D" font-size="10.5" font-weight="bold">Bleed DOT 4 now.</text>
+        <text x="430" y="470" fill="#e0b878" font-size="10">5.1 gives marginal benefit here.</text>
+      </g>
+      
+      <g>
+        <rect x="418" y="531" width="300" height="58" fill="rgba(255,183,77,0.1)" stroke="#FFB74D" stroke-width="1.3"></rect>
+        <text x="430" y="549" fill="#FFB74D" font-size="8" letter-spacing="1.5" font-weight="bold">&gt;&gt; MONITOR</text>
+        <text x="430" y="566" fill="#FFB74D" font-size="10.5" font-weight="bold">Bleed DOT 4 now.</text>
+        <text x="430" y="582" fill="#e0b878" font-size="10">Monitor on aggressive descents.</text>
+      </g>
+
+      
+      <g>
+        <rect x="60" y="648" width="500" height="104" fill="rgba(79,195,247,0.1)" stroke="#4FC3F7" stroke-width="1.6"></rect>
+        <line x1="78" y1="648" x2="78" y2="752" stroke="#4FC3F7" stroke-width="1.6"></line>
+        <text x="92" y="676" fill="#4FC3F7" font-size="13" font-weight="bold" letter-spacing="0.5">&gt;&gt; UPGRADE TO DOT 5.1 JUSTIFIED</text>
+        <line x1="92" y1="686" x2="540" y2="686" stroke="rgba(79,195,247,0.3)" stroke-width="1"></line>
+        <text x="92" y="706" fill="#b8e6fb" font-size="11">Wet BP: 180°C vs 155°C (+25°C margin)</text>
+        <text x="92" y="724" fill="#b8e6fb" font-size="11">Viscosity at -40°C: 900 vs 1800 cSt</text>
+        <text x="92" y="742" fill="#b8e6fb" font-size="11">Same bleed interval — different headroom</text>
+      </g>
+
+      
+      <g>
+        <rect x="40" y="788" width="670" height="92" fill="#1a1a1a" stroke="#555" stroke-width="1.2"></rect>
+        <text x="56" y="808" fill="#777" font-size="8.5" letter-spacing="1.5">[ REALITY CHECK ]</text>
+        <line x1="56" y1="814" x2="694" y2="814" stroke="#2e2e2e" stroke-width="1"></line>
+        <text x="56" y="832" fill="#888" font-size="10.5">DOT 5.1 ≠ skip maintenance</text>
+        <text x="56" y="850" fill="#bdbdbd" font-size="10.5">DOT 5.1 = larger thermal margin when it matters</text>
+        <text x="56" y="868" fill="#888" font-size="10.5">Both absorb moisture. Both need annual bleed.</text>
+      </g>
+
+      
+      <text x="710" y="908" fill="#555" font-size="9" text-anchor="end">→ See: Hydraulic Brakes at Altitude — bikelabstudio.com</text>
+      <text x="40" y="908" fill="#444" font-size="8.5">© 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com</text>
+    </svg>
