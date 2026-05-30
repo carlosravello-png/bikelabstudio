@@ -1,4 +1,27 @@
 <?xml version="1.0"?>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:dcterms="http://purl.org/dc/terms/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <rdf:Description rdf:about="https://www.bikelabstudio.com/articles/images/di2-power-architecture.svg">
+        <dc:title>Shimano Di2 E-Tube Power Distribution Architecture</dc:title>
+        <dc:title xml:lang="es">Arquitectura de Distribución de Potencia E-Tube Shimano Di2</dc:title>
+        <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+        <dc:publisher>BikeLab Studio</dc:publisher>
+        <dc:description>Original technical diagram showing the 7.4V E-Tube power bus, component sleep/active current values, and EW-WU111 firmware drain risk. Field diagnostics by BikeLab Studio.</dc:description>
+        <dc:subject>shimano di2, e-tube, power architecture, battery drain, EW-WU111, BikeLab Studio</dc:subject>
+        <dc:date>2026-05-30</dc:date>
+        <dc:rights>© 2026 Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights>
+        <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <dcterms:source>https://www.bikelabstudio.com</dcterms:source>
+        <cc:attributionName>Carlos Eduardo Ravello Joo — BikeLab Studio</cc:attributionName>
+        <cc:attributionURL rdf:resource="https://carlosravello.com"/>
+        <cc:morePermissions rdf:resource="https://www.bikelabstudio.com"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
 <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
       <defs>
       
