@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>BikeLab Studio — Technical Engineering Feed</title>
+    <link>https://www.bikelabstudio.com</link>
+    <description>Applied bicycle mechanics: thermodynamics, tribology, suspension physics, drivetrain systems. Open access technical articles and proprietary tools. ES / EN. Trujillo, Peru.</description>
+    <language>es-PE</language>
+    <copyright>© 2026 BikeLab Studio. Open access content CC BY 4.0 where noted.</copyright>
+    <managingEditor>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</managingEditor>
+    <webMaster>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</webMaster>
+    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+    <ttl>10080</ttl>
+    <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- ── SCIENTIFIC PAPERS WITH DOI ─────────────────────────────── -->
+
+    <item>
+      <title>Hydraulic Braking Systems at Altitude: Thermodynamic Analysis</title>
+      <link>https://www.bikelabstudio.com/articles/hydraulic-brakes-altitude-thermodynamics.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/hydraulic-brakes-altitude-thermodynamics.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Thermodynamic analysis of hydraulic brake degradation at altitudes above 3,000 m a.s.l. Field observation at Marcahuamachuco (~3,287 m). 14 academic references with DOI. Open access PDF available.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.19229091</dc:rights>
+      <dc:subject>hydraulic brakes</dc:subject>
+      <dc:subject>altitude thermodynamics</dc:subject>
+      <dc:subject>MTB braking systems</dc:subject>
+      <dc:subject>DOT 4 boiling point</dc:subject>
+      <dc:subject>volumetric compliance</dc:subject>
+      <category>Scientific Research</category>
+    </item>
+
+    <item>
+      <title>Sistemas de Frenado Hidráulico en Altitud: Análisis Termodinámico</title>
+      <link>https://www.bikelabstudio.com/articles/frenos-hidraulicos-altitud-termodinamica-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/frenos-hidraulicos-altitud-termodinamica-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Análisis termodinámico de la degradación de frenos hidráulicos a más de 3.000 m s.n.m. Observación de campo en Marcahuamachuco (~3.287 m). 14 referencias académicas con DOI. PDF open access disponible.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.19229091</dc:rights>
+      <dc:subject>frenos hidráulicos</dc:subject>
+      <dc:subject>altitud termodinámica</dc:subject>
+      <dc:subject>frenos MTB</dc:subject>
+      <dc:subject>punto de ebullición DOT 4</dc:subject>
+      <dc:subject>compliancia volumétrica</dc:subject>
+      <category>Investigación Científica</category>
+    </item>
+
+    <item>
+      <title>Wide Tires in Mountain Cycling: Engineering Analysis of the Friction-Volume Relationship</title>
+      <link>https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Engineering analysis of tire width vs. contact patch geometry, rolling resistance, and grip in mountain cycling. Friction coefficients and pressure distribution models. Open access PDF available.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.20249146</dc:rights>
+      <dc:subject>MTB tire width</dc:subject>
+      <dc:subject>rolling resistance</dc:subject>
+      <dc:subject>contact patch geometry</dc:subject>
+      <dc:subject>mountain bike grip</dc:subject>
+      <dc:subject>tire friction</dc:subject>
+      <category>Scientific Research</category>
+    </item>
+
+    <item>
+      <title>El Mito del Neumático Delgado: Física Real vs. Creencia Popular</title>
+      <link>https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Análisis de ingeniería de la relación ancho de neumático vs. geometría de huella de contacto, resistencia al rodamiento y agarre en ciclismo de montaña. PDF open access disponible.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.20249146</dc:rights>
+      <dc:subject>neumáticos MTB</dc:subject>
+      <dc:subject>resistencia al rodamiento</dc:subject>
+      <dc:subject>huella de contacto</dc:subject>
+      <dc:subject>agarre ciclismo montaña</dc:subject>
+      <dc:subject>fricción neumático</dc:subject>
+      <category>Investigación Científica</category>
+    </item>
+
+    <item>
+      <title>New Bicycle Mechanical State: Pre-Use Diagnostic Framework</title>
+      <link>https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>White paper establishing a systematic pre-use diagnostic protocol for new bicycles. Documents factory-delivered mechanical deviations: brake bleed, drivetrain tension, suspension, wheel trueness, bearing preload. Open access PDF.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.20249194</dc:rights>
+      <dc:subject>new bicycle diagnostic</dc:subject>
+      <dc:subject>pre-use inspection</dc:subject>
+      <dc:subject>factory mechanical state</dc:subject>
+      <dc:subject>tribological analysis</dc:subject>
+      <dc:subject>bicycle PDI</dc:subject>
+      <category>Scientific Research</category>
+    </item>
+
+    <item>
+      <title>Estado Mecánico de Bicicleta Nueva: Marco de Diagnóstico Pre-Uso</title>
+      <link>https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>White paper que establece un protocolo sistemático de diagnóstico pre-uso para bicicletas nuevas. Documenta desviaciones mecánicas de fábrica: frenos, transmisión, suspensión, ruedas, rodamientos. PDF open access.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>CC BY 4.0 · DOI: 10.5281/zenodo.20249194</dc:rights>
+      <dc:subject>diagnóstico bicicleta nueva</dc:subject>
+      <dc:subject>inspección pre-uso</dc:subject>
+      <dc:subject>estado mecánico de fábrica</dc:subject>
+      <dc:subject>análisis tribológico</dc:subject>
+      <dc:subject>PDI bicicleta</dc:subject>
+      <category>Investigación Científica</category>
+    </item>
+
+    <!-- ── PROPRIETARY TOOLS ───────────────────────────────────────── -->
+
+    <item>
+      <title>MTB SAG Calculator — BikeLab Studio | 132 Models</title>
+      <link>https://www.bikelabstudio.com/articles/sag-calculator-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/sag-calculator-en.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Proprietary MTB suspension SAG calculator built on MCD methodology. 132 suspension models: Fox, RockShox, Öhlins, SR Suntour. Inputs: rider weight, fork/shock travel. Output: calibrated SAG% and target measurements.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. All rights reserved. Proprietary methodology.</dc:rights>
+      <dc:subject>MTB SAG calculator</dc:subject>
+      <dc:subject>suspension calibration</dc:subject>
+      <dc:subject>Fox RockShox setup</dc:subject>
+      <dc:subject>MCD methodology</dc:subject>
+      <dc:subject>mountain bike suspension</dc:subject>
+      <category>Proprietary Tool</category>
+    </item>
+
+    <item>
+      <title>Calculadora SAG MTB — BikeLab Studio | 132 Modelos</title>
+      <link>https://www.bikelabstudio.com/articles/sag-calculator-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/sag-calculator-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Calculadora SAG de suspensión MTB propietaria basada en metodología MCD. 132 modelos de suspensión: Fox, RockShox, Öhlins, SR Suntour. Resultado: SAG% calibrado y medidas objetivo por horquilla y amortiguador.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. Todos los derechos reservados. Metodología propietaria.</dc:rights>
+      <dc:subject>calculadora SAG MTB</dc:subject>
+      <dc:subject>calibración suspensión</dc:subject>
+      <dc:subject>configuración Fox RockShox</dc:subject>
+      <dc:subject>metodología MCD</dc:subject>
+      <dc:subject>suspensión bicicleta montaña</dc:subject>
+      <category>Herramienta Propietaria</category>
+    </item>
+
+    <item>
+      <title>BikeLab FIT Analyzer — Cycling Kinematic Diagnostic</title>
+      <link>https://www.bikelabstudio.com/articles/fit-analyzer-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/fit-analyzer-en.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Biomechanical and power analysis tool for .FIT files from Garmin, Wahoo and compatible cycling computers. Metrics: power, cadence, heart rate zones, efficiency indicators, biomechanical flags.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. All rights reserved. Proprietary methodology.</dc:rights>
+      <dc:subject>FIT file analyzer</dc:subject>
+      <dc:subject>cycling biomechanics</dc:subject>
+      <dc:subject>Garmin data analysis</dc:subject>
+      <dc:subject>power metrics cycling</dc:subject>
+      <dc:subject>kinematic diagnostic</dc:subject>
+      <category>Proprietary Tool</category>
+    </item>
+
+    <item>
+      <title>BikeLab FIT Analyzer — Diagnóstico Cinemático de Ciclismo</title>
+      <link>https://www.bikelabstudio.com/articles/fit-analyzer-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/fit-analyzer-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Herramienta de análisis biomecánico y de potencia para archivos .FIT de Garmin, Wahoo y ciclocomputadores compatibles. Métricas: potencia, cadencia, zonas de frecuencia cardíaca, eficiencia, señales cinemáticas.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. Todos los derechos reservados. Metodología propietaria.</dc:rights>
+      <dc:subject>analizador FIT ciclismo</dc:subject>
+      <dc:subject>biomecánica ciclismo</dc:subject>
+      <dc:subject>análisis datos Garmin</dc:subject>
+      <dc:subject>métricas de potencia</dc:subject>
+      <dc:subject>diagnóstico cinemático</dc:subject>
+      <category>Herramienta Propietaria</category>
+    </item>
+
+    <item>
+      <title>Di2 &amp; AXS Diagnostic Tool — Fix Electronic Shifting</title>
+      <link>https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Proprietary decision tree for diagnosing Shimano Di2 and SRAM AXS electronic shifting systems. Covers connection failures, sync errors, battery behavior, junction box faults, derailleur calibration.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. All rights reserved. Proprietary methodology.</dc:rights>
+      <dc:subject>Shimano Di2 diagnostic</dc:subject>
+      <dc:subject>SRAM AXS troubleshooting</dc:subject>
+      <dc:subject>electronic shifting repair</dc:subject>
+      <dc:subject>derailleur calibration</dc:subject>
+      <dc:subject>electronic groupset</dc:subject>
+      <category>Proprietary Tool</category>
+    </item>
+
+    <item>
+      <title>Diagnóstico Di2 &amp; AXS — Soluciona Cambios Electrónicos</title>
+      <link>https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Árbol de decisión propietario para diagnosticar sistemas de cambio electrónico Shimano Di2 y SRAM AXS. Cubre fallos de conexión, errores de sincronización, comportamiento de batería y calibración de desviador.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:rights>© 2026 BikeLab Studio. Todos los derechos reservados. Metodología propietaria.</dc:rights>
+      <dc:subject>diagnóstico Shimano Di2</dc:subject>
+      <dc:subject>solución SRAM AXS</dc:subject>
+      <dc:subject>reparación cambio electrónico</dc:subject>
+      <dc:subject>calibración desviador</dc:subject>
+      <dc:subject>grupset electrónico</dc:subject>
+      <category>Herramienta Propietaria</category>
+    </item>
+
+  </channel>
+</rss>
