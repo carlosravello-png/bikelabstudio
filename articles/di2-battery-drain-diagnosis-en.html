@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol | BikeLab Studio</title>
+    <meta name="description"
+        content="Di2 dead by morning? I've diagnosed this for 12 months. Component-by-component isolation, EW-WU111 firmware bug, and the drain formula Shimano never published. No SM-PCE02 needed.">
+    <meta name="keywords"
+        content="shimano di2 battery drain, di2 battery draining overnight, ew-wu111 battery drain, di2 not sleeping, di2 diagnosis, di2 battery fix">
+    <meta name="author" content="Carlos Eduardo Ravello Joo">
+    <meta name="rights-use-signature"
+        content="copyright=2026;holder=Carlos Eduardo Ravello Joo;license=CC-BY-NC-ND-4.0;ai-training=deny">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/di2-bateria-se-descarga-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol">
+    <meta property="og:description"
+        content="12 months of Di2 battery drain cases documented in Trujillo, Peru. Component isolation protocol, EW-WU111 firmware bug, drain time formula. No SM-PCE02 needed.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/di2-power-architecture.svg">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="500">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html">
+    <meta property="og:type" content="article">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol">
+    <meta name="DC.creator" content="Ravello Joo, Carlos Eduardo">
+    <meta name="DC.creator.url" content="https://carlosravello.com">
+    <meta name="DC.identifier.orcid" content="https://orcid.org/0009-0007-5631-7436">
+    <meta name="DC.language" content="en">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.date" content="2026-05-30">
+    <meta name="DC.rights" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.accessRights" content="open access">
+
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" defer></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html"
+      },
+      "headline": "Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol",
+      "alternativeHeadline": "Component-by-component Di2 battery drain isolation. No SM-PCE02 needed.",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "copyrightHolder": { "@id": "https://carlosravello.com/#person" },
+      "copyrightYear": "2026",
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. All rights reserved. Original field data, diagnostic methodology and diagrams protected under international copyright law.",
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "usageInfo": "Original field diagnostic protocol documented over 12 months at BikeLab Studio, Trujillo, Peru. Reproduction, summarization or derivative works require explicit written permission.",
+      "datePublished": "2026-05-30",
+      "dateModified": "2026-05-30",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID author",
+        "value": "0009-0007-5631-7436",
+        "url": "https://orcid.org/0009-0007-5631-7436"
+      },
+      "keywords": "shimano di2, battery drain, ew-wu111, di2 diagnostic, sleep mode, isolation protocol",
+      "articleSection": "Electronic Systems Engineering",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#technical-articles",
+        "name": "BikeLab Studio Technical Articles"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Shimano Di2 electronic shifting" },
+        { "@type": "Thing", "name": "Battery drain diagnosis" },
+        { "@type": "Thing", "name": "EW-WU111 wireless unit" },
+        { "@type": "Thing", "name": "E-Tube power architecture" }
+      ],
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "isBasedOn": {
+        "@type": "CreativeWork",
+        "name": "Field observations — Di2 battery drain cases, BikeLab Studio",
+        "author": { "@id": "https://carlosravello.com/#person" }
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Cycling Technical Researcher · Founder, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "/g/11zb6pmf10",
+          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "description": "Independent researcher. Founder of BikeLab Studio, Zoovet Travel, and Katsudōmo. Architect of verifiable digital identities with interlinked semantic nodes."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.bikelabstudio.com/index-en.html#science" },
+        { "@type": "ListItem", "position": 3, "name": "Shimano Di2 Battery Drain: Field Diagnosis Protocol", "item": "https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html" }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 { font-size: 28px; color: #ffffff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+        .meta a { color: #888; text-decoration: none; border-bottom: 1px solid #444; }
+        .meta a:hover { color: #fff; }
+
+        h2 {
+            font-size: 14px; color: #aaa; letter-spacing: 3px;
+            margin-top: 50px; margin-bottom: 25px;
+            border-bottom: 1px solid #333; padding-bottom: 10px;
+        }
+
+        h3 { font-size: 13px; color: #888; letter-spacing: 2px; margin-top: 30px; margin-bottom: 15px; }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2; font-size: 1.2rem; font-weight: 600;
+            padding: 26px 32px; margin: 28px 0;
+            border: 2px solid #444; border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            overflow-x: auto;
+        }
+
+        .formula mjx-container { color: #f2f2f2 !important; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px; margin: 30px 0;
+        }
+
+        .insight-box {
+            background-color: #0a0a0a;
+            border-left: 3px solid #888;
+            padding: 20px; margin: 30px 0;
+        }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px; margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px; margin: 50px 0;
+        }
+
+        .references h2 { margin-top: 0; }
+
+        .ref-item {
+            margin-bottom: 15px; padding-left: 20px;
+            text-indent: -20px; font-size: 12px; line-height: 1.6;
+        }
+
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+
+        table {
+            width: 100%; border-collapse: collapse;
+            margin: 30px 0; font-size: 13px;
+            background-color: #0a0a0a;
+        }
+
+        th {
+            background-color: #1a1a1a; color: #aaa;
+            padding: 12px; text-align: left;
+            border: 1px solid #333; font-weight: 400; letter-spacing: 1px;
+        }
+
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .diagram-container {
+            margin: 40px 0; border: 1px solid #333;
+            background: #0a0a0a; padding: 0;
+            overflow: hidden;
+        }
+
+        .diagram-container img,
+        .diagram-container svg {
+            width: 100%; height: auto; display: block;
+        }
+
+        .diagram-caption {
+            padding: 15px; font-size: 11px; color: #666;
+            letter-spacing: 1px; border-top: 1px solid #333;
+        }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+
+        .step-badge {
+            display: inline-block; font-size: 10px; letter-spacing: 2px;
+            color: #555; border: 1px solid #333; padding: 2px 8px; margin-right: 10px;
+        }
+
+        .cc-notice {
+            font-size: 10px; color: #555; letter-spacing: 1px;
+            margin-top: 20px; padding-top: 15px; border-top: 1px solid #222;
+        }
+
+        /* Nav */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'Courier New', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1003;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 24px; background: var(--bg); border-bottom: 1px solid #151515;
+        }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay {
+            position: fixed; inset: 0; background: var(--bg); z-index: 1002;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s;
+        }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a {
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px;
+            color: var(--text); text-decoration: none;
+            padding: 16px 24px; min-height: 44px;
+            border-bottom: 1px solid #151515; transition: color 0.3s;
+        }
+        .nav-overlay a:hover { color: var(--accent); }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-bar .lang-switch a {
+            font-family: var(--mono); font-size: 0.7rem; color: var(--text);
+            padding: 12px 20px; min-height: 44px; border: 1px solid var(--accent);
+            background: rgba(0,0,0,0.5); display: inline-flex; align-items: center;
+            text-decoration: none;
+        }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        .wa-float {
+            position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text);
+            padding: 14px 22px; color: var(--text); text-decoration: none;
+            font-family: var(--mono); font-size: 0.7rem; z-index: 1001;
+            background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px;
+        }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 22px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-bar { top: max(12px, env(safe-area-inset-top)); right: 12px; left: auto; width: auto; padding: 10px 14px; border-radius: 4px; }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch">
+            <a href="../index-en.html">HOME</a> ·
+            <a href="di2-bateria-se-descarga-es.html">ES</a>
+        </div>
+    </div>
+
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../index-en.html">HOME</a>
+            <a href="../servicios-en.html">SERVICES</a>
+            <a href="../suspension-en.html">SUSPENSION</a>
+            <a href="../purgado-frenos-en.html">BRAKE BLEED</a>
+            <a href="../mantenimiento-general-en.html">GENERAL MAINT.</a>
+            <a href="../index-en.html#science">TECHNICAL DATA</a>
+            <a href="di2-axs-diagnostic.html">DI2/AXS TOOL</a>
+            <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20schedule%20an%20appointment">CONTACT</a>
+        </nav>
+    </div>
+
+    <a href="https://wa.me/51934391545?text=Hello%20Bikelab%2C%20I%20would%20like%20to%20consult%20about%20services"
+        class="wa-float" aria-label="Contact via WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WHATSAPP_
+    </a>
+
+    <div class="container" style="padding-top: 100px;">
+        <a href="../index-en.html#science" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;margin-bottom:30px;border-bottom:1px solid #333;padding-bottom:4px;">← BACK TO HOME</a>
+
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <div class="category">ELECTRONIC_SYSTEMS // FIELD_DIAGNOSTICS</div>
+            <nav class="breadcrumb" style="font-size:11px;color:#666;margin-bottom:20px;letter-spacing:1px;">
+                <a href="../index-en.html" style="color:#888;text-decoration:none;">HOME</a> /
+                <a href="../index-en.html#science" style="color:#888;text-decoration:none;">ARTICLES</a> /
+                <span style="color:#fff;">Di2 Battery Drain</span>
+            </nav>
+            <h1>Shimano Di2 Battery Draining Overnight</h1>
+            <div class="subtitle">Field diagnosis protocol — no SM-PCE02 needed</div>
+            <div class="meta">
+                Author: <a href="https://carlosravello.com" rel="author">Carlos Eduardo Ravello Joo</a> // Founder, BikeLab Studio<br>
+                Field observations: June 2025 – May 2026 · Trujillo, La Libertad, Peru<br>
+                Published: May 2026
+            </div>
+        </div>
+
+        <!-- OPEN ACCESS DOWNLOAD PLACEHOLDER — no PDF yet -->
+
+        <!-- INTRODUCTION -->
+        <p>Your battery was full last night. This morning: 40%. No ride. No crash. No firmware error on the app. The manual says it should last 2,000 km. It barely lasted 12 hours.</p>
+
+        <p>Since June 2025, I've been documenting cases like this in the workshop. Bikes from riders in Trujillo, the Andes, and abroad. Shimano Di2 across multiple generations — 9150, R9250, MT8100. Every case had the same pattern: a sudden unexplained drain, no obvious culprit, and a manual that says nothing useful.</p>
+
+        <p>This is the protocol I built from those cases. It doesn't require the SM-PCE02 diagnostic tool. It doesn't require taking the bike to a shop. It requires a multimeter, patience, and knowing which component to disconnect first.</p>
+
+        <!-- MODULE 01 -->
+        <h2>MODULE_01 // HOW DI2 POWER ACTUALLY WORKS</h2>
+
+        <p>Before diagnosing anything, you need to understand the system you're working with. Di2 is a single-bus distributed power architecture — one 7.4V lithium battery feeds everything through E-Tube wiring. Each component has its own microcontroller and voltage regulator. They talk on the same bus.</p>
+
+        <div class="diagram-container">
+            <img src="images/di2-power-architecture.svg"
+                 alt="Shimano Di2 E-Tube Power Distribution Architecture — BikeLab Studio"
+                 title="Di2 Power Architecture — Carlos Eduardo Ravello Joo"
+                 width="900" height="500" loading="lazy">
+            <div class="diagram-caption">
+                FIG.01 // SHIMANO DI2 E-TUBE POWER DISTRIBUTION ARCHITECTURE<br>
+                © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
+            </div>
+        </div>
+
+        <p>The key point: when the system sleeps, every microcontroller drops to a few microamps. When any single component fails to sleep, it keeps pulling milliamps around the clock. The difference between a healthy idle and a faulty one is three orders of magnitude.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Normal sleep (µA)</th>
+                    <th>Active / shift (mA)</th>
+                    <th>Faulty / stuck awake (mA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rear Derailleur (RD)</td>
+                    <td class="data-highlight">~15 µA</td>
+                    <td>500–1,000 mA peak</td>
+                    <td class="data-highlight">5–30 mA</td>
+                </tr>
+                <tr>
+                    <td>Front Derailleur (FD)</td>
+                    <td class="data-highlight">~12 µA</td>
+                    <td>800–1,200 mA peak</td>
+                    <td class="data-highlight">3–15 mA</td>
+                </tr>
+                <tr>
+                    <td>Junction A (EW-RS910)</td>
+                    <td class="data-highlight">~8 µA</td>
+                    <td>2 mA</td>
+                    <td class="data-highlight">1–5 mA</td>
+                </tr>
+                <tr>
+                    <td>BT Unit (EW-WU111)</td>
+                    <td class="data-highlight">~80 µA</td>
+                    <td>8 mA</td>
+                    <td class="data-highlight">1–5 mA continuous ⚠</td>
+                </tr>
+                <tr>
+                    <td>Junction B / Y-splitter</td>
+                    <td colspan="3" style="color:#555;">No firmware — passive component. Cannot get stuck awake.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="source">Source: E-Tube system architecture analysis / field measurements, BikeLab Studio 2025–2026</div>
+
+        <!-- MODULE 02 -->
+        <h2>MODULE_02 // THE NUMBERS — NORMAL VS. ABNORMAL</h2>
+
+        <p>A healthy Di2 system idles at 20–80 µA total. That's not a typo. Microamps. On a 500 mAh battery, that's theoretically months of standby.</p>
+
+        <p>If your battery is dropping more than 2% per day with no rides, something is wrong. If it's dropping 20–30% overnight, something is very wrong.</p>
+
+        <div data-nosnippet>
+        <div class="formula">
+            $$T_{drain} = \frac{Q_{battery}}{I_{leak}}$$
+            <div class="source">Drain time formula — where Q = battery capacity (mAh), I = leak current (mA)</div>
+        </div>
+
+        <p>Example: your battery is 500 mAh. A faulty rear derailleur stuck awake pulls 20 mA continuously.</p>
+
+        <div class="formula">
+            $$T = \frac{500\text{ mAh}}{20\text{ mA}} = 25\text{ hours}$$
+        </div>
+
+        <p>That's why your battery dies the next morning. <span class="data-highlight">25 hours from full charge to dead — with zero shifting.</span> The math is that simple. The fix is knowing which component is pulling those 20 mA.</p>
+        </div>
+
+        <!-- MODULE 03 -->
+        <h2>MODULE_03 // THE 6 SUSPECTS — RANKED BY FREQUENCY</h2>
+
+        <p>Based on what I've seen in 12 months of cases, here's the actual ranking — not Shimano's theoretical one.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Culprit</th>
+                    <th>Typical drain</th>
+                    <th>How to confirm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="data-highlight">01</td>
+                    <td>EW-WU111 / EW-WU101 BT unit — firmware stuck in advertising mode</td>
+                    <td class="data-highlight">1–5 mA continuous</td>
+                    <td>Disconnect it. Problem disappears overnight.</td>
+                </tr>
+                <tr>
+                    <td class="data-highlight">02</td>
+                    <td>Rear derailleur MCU not entering sleep</td>
+                    <td class="data-highlight">5–30 mA</td>
+                    <td>Disconnect RD. Drain stops.</td>
+                </tr>
+                <tr>
+                    <td class="data-highlight">03</td>
+                    <td>Shifter lever physically engaged overnight</td>
+                    <td class="data-highlight">Full active current</td>
+                    <td>Check if bike is leaning on lever. Flip it upside down.</td>
+                </tr>
+                <tr>
+                    <td class="data-highlight">04</td>
+                    <td>Moisture / corrosion in junction box or wiring</td>
+                    <td class="data-highlight">1–10 mA intermittent</td>
+                    <td>Visual inspection. Drain is irregular — sometimes worse after rain.</td>
+                </tr>
+                <tr>
+                    <td class="data-highlight">05</td>
+                    <td>Battery internal cell degradation</td>
+                    <td class="data-highlight">Self-discharge &gt;3%/day</td>
+                    <td>Isolate battery alone for 24h. Still drops? Replace it.</td>
+                </tr>
+                <tr>
+                    <td class="data-highlight">06</td>
+                    <td>Front derailleur alignment loop — micro-adjustment cycle</td>
+                    <td class="data-highlight">50–200 mA spikes</td>
+                    <td>Battery drops irregularly. FD limit screws out of spec.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- MODULE 04 -->
+        <h2>MODULE_04 // THE 5-MINUTE TEST — START HERE</h2>
+
+        <p>Before touching a single wire, do this. It takes 5 minutes and tells you if the system is even sleeping correctly.</p>
+
+        <p><span class="step-badge">STEP_01</span> Charge the battery to 100%.</p>
+        <p><span class="step-badge">STEP_02</span> Leave the bike completely still for 10 minutes. Don't touch anything.</p>
+        <p><span class="step-badge">STEP_03</span> Press the shifter lever once — a single, light press.</p>
+
+        <div class="insight-box">
+            <p style="color:#aaa;margin-bottom:10px;"><strong>WHAT THE SINGLE CLICK TELLS YOU:</strong></p>
+            <p>If nothing happens on the first click → the system was sleeping correctly. Second click shifts. This is normal behavior on wireless Di2.</p>
+            <p style="margin-top:10px;">If the first click immediately shifts → the system never slept. Something kept it awake. This is your drain.</p>
+            <p style="margin-top:10px;">If nothing happens on any click → battery may already be dead, or there's a communication fault. Different problem entirely.</p>
+        </div>
+
+        <!-- MODULE 05 — PROTECTED SECTION -->
+        <h2>MODULE_05 // THE ISOLATION PROTOCOL</h2>
+
+        <p>If the system isn't sleeping, the next step is finding which component is keeping it awake. This takes days, not hours. There's no shortcut. The SM-PCE02 shortens the process — but if you don't have one, this works.</p>
+
+        <div data-nosnippet>
+
+        <div class="diagram-container">
+            <img src="images/di2-component-isolation-sequence.svg"
+                 alt="Di2 Component Isolation Sequence for Battery Drain — BikeLab Studio"
+                 title="Component Isolation Protocol — © 2026 Carlos Eduardo Ravello Joo"
+                 width="800" height="750" loading="lazy">
+            <div class="diagram-caption">
+                FIG.02 // COMPONENT ISOLATION SEQUENCE // DI2 DRAIN DIAGNOSIS<br>
+                © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
+            </div>
+        </div>
+
+        <p><span class="step-badge">01</span> <strong>Disconnect the EW-WU111/EW-WU101 wireless unit first.</strong> Charge to 100%. Wait 12 hours. Check charge level. Expected idle drain with unit removed: &lt;65 µA total system. If drain disappears — you found it. Go to Module 06.</p>
+
+        <p><span class="step-badge">02</span> <strong>If drain continues — disconnect the rear derailleur.</strong> Charge again. Wait 12 hours. Expected idle: &lt;50 µA. If drain stops — the RD microcontroller is the fault. Replace it. If drain continues, reconnect RD and move on.</p>
+
+        <p><span class="step-badge">03</span> <strong>Disconnect the front derailleur.</strong> Same 12-hour cycle. Expected idle: &lt;40 µA. FD faults are less common but real — usually from misalignment causing a micro-adjustment loop that never settles.</p>
+
+        <p><span class="step-badge">04</span> <strong>Disconnect Junction A (EW-RS910).</strong> Rare firmware loop cases have been documented. If drain stops here, the junction needs firmware update or replacement.</p>
+
+        <p><span class="step-badge">05</span> <strong>Isolate the battery itself.</strong> Disconnect all wires. Leave just the battery alone for 24 hours. Check level. A healthy battery self-discharges less than 0.5%/day at room temperature. If it drops 3%+ on its own — replace the battery, not the components.</p>
+
+        <p><span class="step-badge">06</span> <strong>Dumb components: wires, SM-JC41, EW-JC130 Y-splitter.</strong> These have no firmware — they can't get "stuck awake." But corrosion creates partial conductive paths. Inspect visually for oxidation, especially near junctions in the seatpost channel. Test by substituting with known-good parts overnight.</p>
+
+        <p>Total test time: 6–8 days. No SM-PCE02. No shop visit. Just systematic elimination.</p>
+
+        </div>
+
+        <!-- MODULE 06 — PROTECTED -->
+        <h2>MODULE_06 // WHAT SHIMANO WON'T TELL YOU</h2>
+
+        <div data-nosnippet>
+
+        <p>The EW-WU111 wireless unit is the most common culprit. Not because it's a bad product — it's because there was a firmware bug that kept it in Bluetooth advertising mode instead of entering sleep. Battery drain of 1–5 mA continuously, every hour, every day.</p>
+
+        <div class="warning-box">
+            <p style="color:#ff4444;margin-bottom:10px;"><strong>FIRMWARE ALERT:</strong></p>
+            <p>This was fixed in subsequent firmware releases via E-TUBE PROJECT updates. But Shimano never documented it in any user manual. The fix appeared only in app update release notes — which most riders never read.</p>
+            <p style="margin-top:10px;">If you have an EW-WU111 and haven't updated firmware via E-TUBE PROJECT Cyclist (Windows), do it now. It's the first thing to eliminate.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Known firmware issue</th>
+                    <th>Fix</th>
+                    <th>Where documented</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EW-WU111</td>
+                    <td>BT advertising mode stuck — continuous drain 1–5 mA</td>
+                    <td class="data-highlight">Update via E-TUBE PROJECT</td>
+                    <td>App release notes only. Not in manual.</td>
+                </tr>
+                <tr>
+                    <td>EW-WU101</td>
+                    <td>ANT+ wake cycle not terminating properly in some builds</td>
+                    <td class="data-highlight">Update via E-TUBE PROJECT</td>
+                    <td>App release notes only. Not in manual.</td>
+                </tr>
+                <tr>
+                    <td>RD-R9250 (12s semi-wireless)</td>
+                    <td>Wireless receiver partial wake state — drain 2–8 mA</td>
+                    <td class="data-highlight">Firmware update + verify 12V port seated</td>
+                    <td>Shimano support cases. Not in documentation.</td>
+                </tr>
+                <tr>
+                    <td>Battery middle port (12s Di2)</td>
+                    <td>Missing dummy plug causes constant bus query loop</td>
+                    <td class="data-highlight">Insert dummy plug in middle port</td>
+                    <td>This one IS in the manual. Most riders miss it.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The 12-speed battery (BT-DN300) has three ports. All three must be occupied — with components or dummy plugs. Leave one empty and the system continuously queries it. Every few seconds. All night.</p>
+
+        </div>
+
+        <!-- MODULE 07 -->
+        <h2>MODULE_07 // DIAGNOSTIC PROTOCOL — FULL DECISION TREE</h2>
+
+        <div class="diagram-container">
+            <img src="images/di2-drain-diagnostic-protocol.svg"
+                 alt="Di2 Battery Drain Diagnostic Decision Tree — BikeLab Studio"
+                 title="Di2 Drain Diagnostic Protocol — © 2026 Carlos Eduardo Ravello Joo"
+                 width="700" height="900" loading="lazy">
+            <div class="diagram-caption">
+                FIG.03 // DI2 BATTERY DRAIN // DIAGNOSTIC PROTOCOL<br>
+                © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
+            </div>
+        </div>
+
+        <!-- MODULE 08 -->
+        <h2>MODULE_08 // WHEN TO STOP AND GO TO A SHOP</h2>
+
+        <p>You've done the isolation. You found the faulty component — it's the RD. You replaced it. Drain continues. Now what?</p>
+
+        <p>Three scenarios require SM-PCE02 or a qualified shop:</p>
+
+        <ul>
+            <li>Multiple components showing abnormal draw simultaneously — possible E-Tube bus fault, not individual component failure.</li>
+            <li>Drain is intermittent — dies completely every 3–4 days but not every night. Intermittent junction leaks are nearly impossible to catch without continuous current monitoring.</li>
+            <li>After replacing RD, FD, and BT unit, drain persists. At this point the Junction A or the E-Tube wiring itself is suspect. SM-PCE02 single-unit connection mode is the right tool.</li>
+        </ul>
+
+        <p>Don't spend $400 on a new battery if you haven't completed the isolation first. The battery is almost never the cause of overnight drain — it's usually the EW-WU111 or the RD. Start there.</p>
+
+        <!-- CONCLUSION -->
+        <div class="conclusion-box">
+            <p>Di2 is a distributed embedded system running on 7.4V. When it works, it's invisible. When it fails, the failure mode is almost always the same: one component stuck awake, pulling milliamps around the clock, while the rest of the system sleeps normally.</p>
+
+            <p style="margin-top:20px;">The isolation protocol takes a week. But it's systematic, free, and it works. You don't need the SM-PCE02 for 90% of cases.</p>
+
+            <p style="margin-top:20px;">The 10% that do need it — you'll know. Because you'll have eliminated everything else first.</p>
+
+            <p style="margin-top:30px;padding-top:20px;border-top:1px solid #333;">
+                → For step-by-step interactive diagnosis of Di2 and SRAM AXS shifting faults:<br>
+                <a href="di2-axs-diagnostic.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">
+                    BikeLab Di2 &amp; AXS Diagnostic Tool — free, no app, no account
+                </a>
+            </p>
+        </div>
+
+        <!-- CLUSTER LINKS -->
+        <div style="margin:40px 0;padding:25px;background:#0a0a0a;border:1px solid #333;border-left:3px solid var(--accent);">
+            <span style="font-family:var(--mono);font-size:0.7rem;color:#888;letter-spacing:2px;display:block;margin-bottom:15px;">[ CLUSTER_DATA_LINKS ] // ELECTRONIC SYSTEMS</span>
+            <ul style="list-style-type:none;margin:0;padding:0;">
+                <li style="margin-bottom:12px;">
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="di2-axs-diagnostic.html" style="color:#ccc;text-decoration:none;" title="Di2 & AXS Interactive Diagnostic Tool">Di2 &amp; AXS Diagnostic Tool — Interactive Step-by-Step Fault Tree</a>
+                </li>
+                <li style="margin-bottom:12px;">
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="electronic-shifting-di2-axs-en.html" style="color:#ccc;text-decoration:none;" title="Di2 vs AXS comparison">Di2 vs SRAM AXS: Engineering Comparison</a>
+                </li>
+                <li>
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="hydraulic-brakes-altitude-thermodynamics.html" style="color:#ccc;text-decoration:none;" title="Hydraulic brakes thermodynamics">Hydraulic Braking Systems at Altitude: Thermodynamic Analysis</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="references">
+            <h2>TECHNICAL_REFERENCES</h2>
+
+            <div class="ref-item">[1] Shimano (2024). "E-TUBE PROJECT Cyclist — Firmware Update History". E-TUBE PROJECT App, Windows. <a href="https://bike.shimano.com/en-EU/information/e-tube-project.html" target="_blank" rel="noopener">bike.shimano.com</a></div>
+
+            <div class="ref-item">[2] Shimano (2023). "Dealer's Manual — Di2 Wireless Unit EW-WU111". DM-RBWU001-05-ENG. <a href="https://si.shimano.com" target="_blank" rel="noopener">si.shimano.com</a></div>
+
+            <div class="ref-item">[3] Shimano (2023). "User Manual — Di2 12-Speed Road Components". UM-3K40A. Battery behavior and low-charge protocol, pp. 6–17.</div>
+
+            <div class="ref-item">[4] BetterShifting (2024). "How to troubleshoot Di2 battery drain issues". Updated Dec 27, 2024. <a href="https://bettershifting.com/how-to-troubleshoot-di2-battery-drain-issues/" target="_blank" rel="noopener">bettershifting.com</a></div>
+
+            <div class="ref-item">[5] TrainerRoad Forum (2024). "Di2 battery question — sleep mode diagnosis thread". Community technical discussion. <a href="https://www.trainerroad.com/forum/t/di2-battery-question/104962" target="_blank" rel="noopener">trainerroad.com</a></div>
+
+            <div class="ref-item">[6] Reddit r/bikewrench (2022). "Di2 battery draining 20% per day — EW-WU111 identified". <a href="https://www.reddit.com/r/bikewrench/comments/vt5g0w/di2_battery_draining_20_per_day/" target="_blank" rel="noopener">reddit.com/r/bikewrench</a></div>
+
+            <div class="ref-item">[7] Ravello Joo, C.E. (2025–2026). "Field observations — Di2 battery drain cases, BikeLab Studio". Internal diagnostic log, Trujillo, La Libertad, Peru.</div>
+        </div>
+
+        <p style="margin-top:30px;">
+            <a href="../index-en.html#science" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;">← BACK TO HOME</a>
+        </p>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div style="margin-bottom:20px;">
+                <strong>BikeLab Studio</strong><br>
+                Industrial &amp; Scientific Noir<br>
+                Paraguay 300, Trujillo, La Libertad, Peru
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <strong>Photography and editing:</strong><br>
+                    Carlos Ravello // BikeLab Studio<br>
+                    Post-production: DaVinci Resolve
+                </div>
+                <div>
+                    <strong>Author:</strong><br>
+                    <a href="https://carlosravello.com" rel="author" style="color:#888;text-decoration:none;">Carlos Eduardo Ravello Joo</a><br>
+                    Founder of BikeLab Studio
+                </div>
+            </div>
+
+            <div class="cc-notice">
+                © 2026 Carlos Eduardo Ravello Joo. This work is licensed under
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license" target="_blank" style="color:#555;">CC BY-NC-ND 4.0</a>.
+                Original field data, diagnostic methodology and diagrams may not be reproduced, summarized or adapted without explicit written permission.
+                Contact: contacto@bikelabstudio.com
+            </div>
+
+            <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center;">
+                © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+            </div>
+        </div>
+    </div>
+
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        document.querySelectorAll('.nav-overlay a[href*="#"]').forEach(a => {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        });
+    </script>
+</body>
+
+</html>

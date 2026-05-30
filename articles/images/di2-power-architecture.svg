@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <defs>
+      
+        
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0 H0 V30" fill="none" stroke="#161616" stroke-width="1"></path>
+        </pattern>
+      </defs>
+
+      
+      <rect x="0" y="0" width="900" height="500" fill="#0a0a0a"></rect>
+      <rect x="0" y="0" width="900" height="500" fill="url(#grid)"></rect>
+      <rect x="0.5" y="0.5" width="899" height="499" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
+
+      
+      <g stroke="#555" stroke-width="1">
+        <path d="M14 14 H30 M14 14 V30" fill="none"></path>
+        <path d="M886 14 H870 M886 14 V30" fill="none"></path>
+        <path d="M14 486 H30 M14 486 V470" fill="none"></path>
+        <path d="M886 486 H870 M886 486 V470" fill="none"></path>
+      </g>
+
+      
+      <text x="30" y="44" fill="#f2f2f2" font-size="15" letter-spacing="3" font-weight="bold">SHIMANO DI2 // POWER DISTRIBUTION ARCHITECTURE</text>
+      <line x1="30" y1="56" x2="870" y2="56" stroke="#3a3a3a" stroke-width="1"></line>
+      <text x="870" y="44" fill="#7a7a7a" font-size="10" letter-spacing="2" text-anchor="end">FIG.01 / E-TUBE</text>
+
+      
+      <g>
+        <rect x="34" y="150" width="150" height="92" fill="#111" stroke="#cfcfcf" stroke-width="1.4"></rect>
+        
+        <rect x="184" y="182" width="6" height="28" fill="#cfcfcf"></rect>
+        <line x1="34" y1="172" x2="184" y2="172" stroke="#3a3a3a" stroke-width="1"></line>
+        <text x="109" y="167" fill="#9a9a9a" font-size="9" letter-spacing="2" text-anchor="middle">[ SOURCE ]</text>
+        <text x="109" y="191" fill="#f2f2f2" font-size="15" font-weight="bold" text-anchor="middle">7.4V</text>
+        <text x="109" y="209" fill="#dcdcdc" font-size="10.5" text-anchor="middle">Li-ion Battery</text>
+        <text x="109" y="226" fill="#9a9a9a" font-size="10.5" text-anchor="middle">500 mAh</text>
+        
+        <g fill="#6a6a6a">
+          <rect x="60" y="135" width="10" height="8"></rect>
+          <rect x="75" y="135" width="10" height="8"></rect>
+          <rect x="90" y="135" width="10" height="8"></rect>
+          <rect x="105" y="131" width="10" height="12"></rect>
+          <rect x="120" y="131" width="10" height="12"></rect>
+          <rect x="135" y="131" width="10" height="12"></rect>
+        </g>
+      </g>
+
+      
+      <line x1="190" y1="196" x2="232" y2="196" stroke="#cfcfcf" stroke-width="1.4"></line>
+      <circle cx="232" cy="196" r="3.2" fill="#cfcfcf"></circle>
+
+      
+      
+      <line x1="232" y1="192" x2="858" y2="192" stroke="#cfcfcf" stroke-width="1.4"></line>
+      <line x1="232" y1="200" x2="858" y2="200" stroke="#cfcfcf" stroke-width="1.4"></line>
+      <text x="858" y="184" fill="#9a9a9a" font-size="10" letter-spacing="3" text-anchor="end">E-TUBE BUS</text>
+      
+      <line x1="858" y1="186" x2="858" y2="206" stroke="#cfcfcf" stroke-width="1.4"></line>
+
+      
+      
+      
+      <g stroke="#cfcfcf" stroke-width="1.4" fill="none">
+        <path d="M300 200 V300"></path>
+        <path d="M412 200 V300"></path>
+        <path d="M524 200 V300"></path>
+        <path d="M636 200 V300"></path>
+        <path d="M760 200 V300"></path>
+      </g>
+      <g fill="#cfcfcf">
+        <circle cx="300" cy="196" r="3.2"></circle>
+        <circle cx="412" cy="196" r="3.2"></circle>
+        <circle cx="524" cy="196" r="3.2"></circle>
+        <circle cx="636" cy="196" r="3.2"></circle>
+        <circle cx="760" cy="196" r="3.2"></circle>
+      </g>
+
+      
+      <g>
+        <rect x="244" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
+        <line x1="244" y1="322" x2="356" y2="322" stroke="#333" stroke-width="1"></line>
+        <text x="251" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 01</text>
+        <text x="300" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">RD</text>
+        <text x="300" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">Rear Derailleur</text>
+        <line x1="262" y1="372" x2="338" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
+        <text x="251" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
+        <text x="349" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">15 µA</text>
+        <text x="251" y="406" fill="#9a9a9a" font-size="8.6">SHIFT</text>
+        <text x="349" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">800 mA pk</text>
+      </g>
+
+      
+      <g>
+        <rect x="356" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
+        <line x1="356" y1="322" x2="468" y2="322" stroke="#333" stroke-width="1"></line>
+        <text x="363" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 02</text>
+        <text x="412" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">FD</text>
+        <text x="412" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">Front Derailleur</text>
+        <line x1="374" y1="372" x2="450" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
+        <text x="363" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
+        <text x="461" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">12 µA</text>
+        <text x="363" y="406" fill="#9a9a9a" font-size="8.6">SHIFT</text>
+        <text x="461" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">1.2 A pk</text>
+      </g>
+
+      
+      <g>
+        <rect x="468" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
+        <line x1="468" y1="322" x2="580" y2="322" stroke="#333" stroke-width="1"></line>
+        <text x="475" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 03</text>
+        <text x="524" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">Junction A</text>
+        <text x="524" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">EW-RS910</text>
+        <line x1="486" y1="372" x2="562" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
+        <text x="475" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
+        <text x="573" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">8 µA</text>
+        <text x="475" y="406" fill="#9a9a9a" font-size="8.6">ACTIVE</text>
+        <text x="573" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">2 mA</text>
+      </g>
+
+      
+      <g>
+        <rect x="580" y="300" width="112" height="120" fill="#141414" stroke="#f2f2f2" stroke-width="1.5" stroke-dasharray="4 3"></rect>
+        <line x1="580" y1="322" x2="692" y2="322" stroke="#444" stroke-width="1"></line>
+        <text x="587" y="316" fill="#9a9a9a" font-size="8.5" letter-spacing="1">NODE 04</text>
+        
+        <g transform="translate(666,308)">
+          <path d="M9 1 L17 16 L1 16 Z" fill="none" stroke="#f2f2f2" stroke-width="1.3" stroke-linejoin="round"></path>
+          <line x1="9" y1="6" x2="9" y2="11.5" stroke="#f2f2f2" stroke-width="1.3"></line>
+          <circle cx="9" cy="13.6" r="0.9" fill="#f2f2f2"></circle>
+        </g>
+        <text x="636" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">BT Unit</text>
+        <text x="636" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">EW-WU111</text>
+        <line x1="598" y1="372" x2="674" y2="372" stroke="#333" stroke-width="1"></line>
+        <text x="587" y="390" fill="#bdbdbd" font-size="8.6">SLEEP</text>
+        <text x="685" y="390" fill="#ffffff" font-size="8.6" text-anchor="end">1–5 mA</text>
+        <text x="587" y="406" fill="#bdbdbd" font-size="8.6">ACTIVE</text>
+        <text x="685" y="406" fill="#ffffff" font-size="8.6" text-anchor="end">8 mA</text>
+      </g>
+
+      
+      <g>
+        <rect x="704" y="300" width="112" height="120" fill="#0e0e0e" stroke="#7a7a7a" stroke-width="1.2"></rect>
+        <line x1="704" y1="322" x2="816" y2="322" stroke="#2a2a2a" stroke-width="1"></line>
+        <text x="711" y="316" fill="#6a6a6a" font-size="8.5" letter-spacing="1">NODE 05</text>
+        <text x="760" y="342" fill="#dcdcdc" font-size="13" font-weight="bold" text-anchor="middle">Junction B</text>
+        <text x="760" y="358" fill="#a8a8a8" font-size="8.6" text-anchor="middle">SM-JC41</text>
+        <line x1="722" y1="372" x2="798" y2="372" stroke="#222" stroke-width="1"></line>
+        <text x="760" y="390" fill="#7a7a7a" font-size="8.6" text-anchor="middle">No firmware</text>
+        <text x="760" y="406" fill="#7a7a7a" font-size="8.6" text-anchor="middle">Passive component</text>
+      </g>
+      
+      <line x1="760" y1="200" x2="760" y2="300" stroke="#6a6a6a" stroke-width="1.2" stroke-dasharray="3 3"></line>
+
+      
+      <g>
+        <path d="M636 420 V442 H612" fill="none" stroke="#888" stroke-width="1"></path>
+        <rect x="392" y="436" width="222" height="30" fill="#141414" stroke="#888" stroke-width="1"></rect>
+        
+        <g transform="translate(401,442)">
+          <path d="M8 1 L15 14 L1 14 Z" fill="none" stroke="#f2f2f2" stroke-width="1.1" stroke-linejoin="round"></path>
+          <line x1="8" y1="5" x2="8" y2="9.5" stroke="#f2f2f2" stroke-width="1.1"></line>
+          <circle cx="8" cy="11.3" r="0.8" fill="#f2f2f2"></circle>
+        </g>
+        <text x="424" y="450" fill="#f2f2f2" font-size="8.8" font-weight="bold">EW-WU111 — Known drain risk</text>
+        <text x="424" y="461" fill="#a8a8a8" font-size="8.4">check firmware version</text>
+      </g>
+
+      
+      <text x="30" y="470" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
+      <text x="30" y="482" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
+
+    </svg>
