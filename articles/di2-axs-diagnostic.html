@@ -165,7 +165,6 @@
         "https://carlosravello.com",
         "https://orcid.org/0009-0007-5631-7436",
         "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
-        "https://www.wikidata.org/wiki/Q139714842",
         "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
         "https://zenodo.org/search?q=ravello+joo",
         "https://github.com/carlosravello-png",
@@ -183,8 +182,7 @@
         {
           "@type": "PropertyValue",
           "propertyID": "Google Knowledge Graph ID",
-          "value": "/g/11zb6pmf10",
-          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+          "value": "/g/11zb6pmf10"
         }
       ],
       "worksFor": {
@@ -1294,7 +1292,7 @@ const TREE = {
     desc: { en: 'Select your groupset brand to get accurate procedures.', es: 'Selecciona la marca de tu grupo para obtener procedimientos exactos.' },
     opts: [
       { key:'A', text:{ en:'Shimano Di2', es:'Shimano Di2' }, sub:{ en:'Dura-Ace, Ultegra, 105, GRX, XTR, XT, SLX — 11v or 12v', es:'Dura-Ace, Ultegra, 105, GRX, XTR, XT, SLX — 11v o 12v' }, cls:'di2-opt', next:'q1' },
-      { key:'B', text:{ en:'SRAM AXS', es:'SRAM AXS' }, sub:{ en:'Red, Force, Rival eTap AXS — Road or MTB Eagle', es:'Red, Force, Rival eTap AXS — Ruta o MTB Eagle' }, cls:'axs-opt', next:'q1_axs' },
+      { key:'B', text:{ en:'SRAM AXS', es:'SRAM AXS' }, sub:{ en:'Red, Force, Rival eTap AXS — Road or MTB Eagle', es:'Red, Force, Rival eTap AXS — Ruta o MTB Eagle' }, cls:'axs-opt', next:'q1_axs' }
     ],
     progress: 5
   },
@@ -1306,7 +1304,7 @@ const TREE = {
     desc: { en: 'Press any shifter button or the button on the rear derailleur. Any LED, sound, or partial response?', es: 'Presiona cualquier pulsador o el botón del desviador trasero. ¿Hay algún LED, sonido o respuesta parcial?' },
     opts: [
       { key:'A', text:{ en:'Yes — LED on, some shifts work, or partial response', es:'Sí — LED encendido, algunos cambios funcionan, o respuesta parcial' }, next:'q2_di2' },
-      { key:'B', text:{ en:'No — Completely dead, zero response', es:'No — Todo muerto, cero respuesta' }, next:'q_di2_dead' },
+      { key:'B', text:{ en:'No — Completely dead, zero response', es:'No — Todo muerto, cero respuesta' }, next:'q_di2_dead' }
     ],
     progress: 20
   },
@@ -1318,7 +1316,7 @@ const TREE = {
     opts: [
       { key:'A', text:{ en:'12v — Battery in seatpost (slide-out)', es:'12v — Batería en tija (deslizable)' }, next:'q_di2_charge' },
       { key:'B', text:{ en:'11v — Battery in seatpost or frame (push-button)', es:'11v — Batería en tija o cuadro (botón)' }, next:'q_di2_charge' },
-      { key:'C', text:{ en:'Not sure', es:'No estoy seguro' }, next:'q_di2_charge' },
+      { key:'C', text:{ en:'Not sure', es:'No estoy seguro' }, next:'q_di2_charge' }
     ],
     progress: 35
   },
@@ -1330,7 +1328,7 @@ const TREE = {
     opts: [
       { key:'A', text:{ en:'Yes — LED appeared after reconnecting', es:'Sí — Apareció LED al reconectar' }, next:'q2_di2' },
       { key:'B', text:{ en:'No LED at all — tried charging for 1+ hour', es:'Ningún LED — intenté cargar 1+ hora' }, next:'r_di2_battery_dead' },
-      { key:'C', text:{ en:'Red LED solid or rapid red blink', es:'LED rojo fijo o parpadeo rojo rápido' }, next:'r_di2_charge_now' },
+      { key:'C', text:{ en:'Red LED solid or rapid red blink', es:'LED rojo fijo o parpadeo rojo rápido' }, next:'r_di2_charge_now' }
     ],
     progress: 50
   },
@@ -1345,7 +1343,7 @@ const TREE = {
       { key:'C', text:{ en:'System crashed after impact', es:'Sistema bloqueado tras un golpe' }, sub:{ en:'Fell or hit something, now won\'t shift', es:'Caída o golpe, ahora no cambia' }, next:'r_di2_crash' },
       { key:'D', text:{ en:'Shifter not responding or needs hard press', es:'Pulsador no responde o requiere presión fuerte' }, sub:{ en:'One or both sides intermittent or sticky', es:'Uno o ambos lados intermitente o pegajoso' }, next:'r_di2_shifter' },
       { key:'E', text:{ en:'Indexing off — noisy, imprecise, chain rubs', es:'Indexing desajustado — ruidoso, impreciso, roce de cadena' }, next:'r_di2_index' },
-      { key:'F', text:{ en:'Firmware update failed / system unresponsive after update', es:'Actualización de firmware fallida / sistema muerto tras update' }, next:'r_di2_brick' },
+      { key:'F', text:{ en:'Firmware update failed / system unresponsive after update', es:'Actualización de firmware fallida / sistema muerto tras update' }, next:'r_di2_brick' }
     ],
     progress: 40
   },
@@ -1357,7 +1355,7 @@ const TREE = {
     desc: { en: 'Press the AXS button on the rear derailleur for 1 second. Any LED response?', es: 'Presiona el botón AXS del desviador trasero 1 segundo. ¿Hay respuesta LED?' },
     opts: [
       { key:'A', text:{ en:'Yes — LED lights up or partial function', es:'Sí — LED enciende o función parcial' }, next:'q2_axs' },
-      { key:'B', text:{ en:'No — Completely dead', es:'No — Todo muerto' }, next:'q_axs_dead' },
+      { key:'B', text:{ en:'No — Completely dead', es:'No — Todo muerto' }, next:'q_axs_dead' }
     ],
     progress: 20
   },
@@ -1368,7 +1366,7 @@ const TREE = {
     desc: { en: 'Official SRAM procedure: Remove battery → wait 15 seconds → press AXS button without battery to drain residual energy → reinstall charged battery.', es: 'Procedimiento oficial SRAM: Retira la batería → espera 15 segundos → presiona el botón AXS sin batería para drenar energía residual → reinstala batería cargada.' },
     opts: [
       { key:'A', text:{ en:'Done — LED appeared after reinstalling', es:'Hecho — Apareció LED al reinstalar' }, next:'q2_axs' },
-      { key:'B', text:{ en:'Still nothing after hard reset', es:'Sigue sin respuesta tras el hard reset' }, next:'r_axs_battery_check' },
+      { key:'B', text:{ en:'Still nothing after hard reset', es:'Sigue sin respuesta tras el hard reset' }, next:'r_axs_battery_check' }
     ],
     progress: 40
   },
@@ -1383,7 +1381,7 @@ const TREE = {
       { key:'C', text:{ en:'Battery drains too fast or false low reading', es:'Batería drena rápido o lectura falsa de baja' }, next:'r_axs_drain' },
       { key:'D', text:{ en:'Chain drops when shifting to large chainring', es:'Cadena cae al cambiar al plato grande' }, sub:{ en:'Common on Force/Rival 1st gen', es:'Común en Force/Rival 1ª gen' }, next:'r_axs_chain_drop' },
       { key:'E', text:{ en:'Shifting imprecise, skipping, or noisy', es:'Cambios imprecisos, salta o ruidoso' }, next:'r_axs_index' },
-      { key:'F', text:{ en:'Oil leak from rear derailleur pivot', es:'Fuga de aceite en el pivote del desviador trasero' }, sub:{ en:'Oily residue, chain noise, Red/Force only', es:'Residuo aceitoso, ruido cadena, solo Red/Force' }, next:'r_axs_orbit' },
+      { key:'F', text:{ en:'Oil leak from rear derailleur pivot', es:'Fuga de aceite en el pivote del desviador trasero' }, sub:{ en:'Oily residue, chain noise, Red/Force only', es:'Residuo aceitoso, ruido cadena, solo Red/Force' }, next:'r_axs_orbit' }
     ],
     progress: 40
   },
@@ -1398,7 +1396,7 @@ const TREE = {
       { en: 'Connect battery charger (SM-BCR2 for 11v, or USB-C seatpost cable for 12v)', es: 'Conecta el cargador de batería (SM-BCR2 para 11v, o cable USB-C de tija para 12v)' },
       { en: 'Charge until LED solid green (1–3 hours depending on depletion)', es: 'Carga hasta LED verde sólido (1–3 horas según nivel de agotamiento)' },
       { en: 'Reconnect battery and press shifter 3–5 times quickly to wake up the system', es: 'Reconecta la batería y presiona el pulsador 3–5 veces rápido para despertar el sistema' },
-      { en: 'If system doesn\'t wake up after full charge — proceed to next issue', es: 'Si el sistema no despierta tras carga completa — continúa al siguiente problema' },
+      { en: 'If system doesn\'t wake up after full charge — proceed to next issue', es: 'Si el sistema no despierta tras carga completa — continúa al siguiente problema' }
     ],
     official: true,
     progress: 100
@@ -1423,7 +1421,7 @@ const TREE = {
       { en: 'Option A (with app): Open E-Tube Cyclist → My Bike → Shift Mode → select Manual or Semi-Synchro', es: 'Opción A (con app): Abre E-Tube Cyclist → Mi Bici → Modo de cambio → selecciona Manual o Semi-Synchro' },
       { en: 'Option B (without app): Hold the RD button for 0.5–2 seconds until LED blinks blue — this temporarily enters manual mode', es: 'Opción B (sin app): Mantén el botón RD 0.5–2 segundos hasta que LED parpadee azul — entra temporalmente en modo manual' },
       { en: 'Test: shift through all gears under moderate load on a climb', es: 'Prueba: cambia por todos los piñones bajo carga moderada en una cuesta' },
-      { en: 'Also check: L/H limit screws — if too tight, loosen 1/4 turn each', es: 'Verifica también: tornillos límite L/H — si están muy apretados, afloja 1/4 vuelta' },
+      { en: 'Also check: L/H limit screws — if too tight, loosen 1/4 turn each', es: 'Verifica también: tornillos límite L/H — si están muy apretados, afloja 1/4 vuelta' }
     ],
     official: true,
     progress: 100
@@ -1439,7 +1437,7 @@ const TREE = {
       { en: 'Disconnect one component from the E-Tube network each day (start with EW-WU111 if present)', es: 'Desconecta un componente de la red E-Tube cada día (empieza por el EW-WU111 si lo tienes)' },
       { en: 'Check charge each morning — the disconnected component that stops the drain is the cause', es: 'Revisa la carga cada mañana — el componente desconectado que detiene el drenaje es el causante' },
       { en: 'Also: Disable Bluetooth in E-Tube app when not in use. Loosen L/H limits 1/4 turn (tight limits = motor overworks)', es: 'También: Desactiva Bluetooth en app E-Tube cuando no uses. Afloja límites L/H 1/4 vuelta (límites apretados = motor trabaja de más)' },
-      { en: 'If drain continues after isolation test — faulty cable or component requires professional diagnosis with SM-PCE02', es: 'Si el drenaje continúa tras el test de aislamiento — cable o componente defectuoso requiere diagnóstico con SM-PCE02' },
+      { en: 'If drain continues after isolation test — faulty cable or component requires professional diagnosis with SM-PCE02', es: 'Si el drenaje continúa tras el test de aislamiento — cable o componente defectuoso requiere diagnóstico con SM-PCE02' }
     ],
     official: false,
     progress: 100
@@ -1454,7 +1452,7 @@ const TREE = {
       { en: 'Place bike in a stand. Keep the cranks turning slowly throughout the process', es: 'Pon la bici en el soporte. Mantén las bielas girando lentamente durante todo el proceso' },
       { en: 'Hold the RD button (or Junction A on 11v) until the RED LED blinks (approx. 5 seconds)', es: 'Mantén presionado el botón del RD (o Junction A en 11v) hasta que el LED ROJO parpadee (aprox. 5 segundos)' },
       { en: 'Release the button. The derailleur will sweep through all gears automatically', es: 'Suelta el botón. El desviador hará un barrido por todos los piñones automáticamente' },
-      { en: 'When sweep completes, LED turns off. Test shifting normally', es: 'Cuando el barrido termine, el LED se apaga. Prueba los cambios normalmente' },
+      { en: 'When sweep completes, LED turns off. Test shifting normally', es: 'Cuando el barrido termine, el LED se apaga. Prueba los cambios normalmente' }
     ],
     official: false,
     community: true,
@@ -1470,7 +1468,7 @@ const TREE = {
       { en: 'Clean buttons with dry cloth. Use compressed air if available. Do NOT use liquid cleaners', es: 'Limpia los botones con trapo seco. Usa aire comprimido si tienes. NO uses limpiadores líquidos' },
       { en: 'Press the sticky button 20–30 times firmly to "unstick" it', es: 'Presiona el botón pegajoso 20–30 veces con firmeza para "despegarlo"' },
       { en: 'Check E-Tube connector: press firmly with TL-EW02 tool (or gentle thumb pressure) — vibration can partially disconnect it', es: 'Verifica el conector E-Tube: presiona firmemente con herramienta TL-EW02 (o presión suave del pulgar) — la vibración puede desconectarlo parcialmente' },
-      { en: 'If problem persists after cleaning — internal PCB failure. Requires replacement', es: 'Si el problema persiste tras limpiar — fallo interno de PCB. Requiere reemplazo' },
+      { en: 'If problem persists after cleaning — internal PCB failure. Requires replacement', es: 'Si el problema persiste tras limpiar — fallo interno de PCB. Requiere reemplazo' }
     ],
     official: true,
     progress: 100
@@ -1487,7 +1485,7 @@ const TREE = {
       { en: 'Use right shifter: one button moves derailleur 0.2mm inward, other moves 0.2mm outward', es: 'Usa el pulsador derecho: un botón mueve el desviador 0.2mm hacia adentro, el otro 0.2mm hacia afuera' },
       { en: 'Adjust inward until you hear chain rub on 4th sprocket, then back out 4 clicks to center', es: 'Ajusta hacia adentro hasta escuchar roce en el 4º piñón, luego 4 clics hacia afuera para centrar' },
       { en: 'Press RD button again until YELLOW LED turns off — adjustment saved', es: 'Presiona el botón RD nuevamente hasta que LED AMARILLO se apague — ajuste guardado' },
-      { en: 'Test all gears. Repeat if needed', es: 'Prueba todos los piñones. Repite si es necesario' },
+      { en: 'Test all gears. Repeat if needed', es: 'Prueba todos los piñones. Repite si es necesario' }
     ],
     official: true,
     progress: 100
@@ -1513,7 +1511,7 @@ const TREE = {
     steps: [
       { en: 'Try a different known-good AXS battery if available', es: 'Prueba con otra batería AXS que funcione, si tienes' },
       { en: 'Inspect the pogo pin (small spring-loaded pin on the derailleur): if collapsed or broken, it cannot be repaired at home', es: 'Inspecciona el pogo pin (pequeño pin con resorte en el desviador): si está hundido o roto, no se puede reparar en casa' },
-      { en: 'If battery swap doesn\'t help — warranty claim or professional service required', es: 'Si cambiar la batería no ayuda — reclamación de garantía o servicio profesional requerido' },
+      { en: 'If battery swap doesn\'t help — warranty claim or professional service required', es: 'Si cambiar la batería no ayuda — reclamación de garantía o servicio profesional requerido' }
     ],
     official: true,
     progress: 100
@@ -1530,7 +1528,7 @@ const TREE = {
       { en: 'Pair right shifter: Hold AXS button inside right lever until GREEN LED blinks fast. Release', es: 'Empareja pulsador derecho: Mantén botón AXS dentro de la palanca derecha hasta LED VERDE parpadee rápido. Suelta' },
       { en: 'Pair left shifter: Repeat step 3 with left lever', es: 'Empareja pulsador izquierdo: Repite paso 3 con palanca izquierda' },
       { en: 'Close session: Press and release AXS button on rear derailleur once. LED stops blinking', es: 'Cierra sesión: Presiona y suelta botón AXS del desviador trasero una vez. LED deja de parpadear' },
-      { en: 'Test: press a shifter — RD LED should blink when receiving command', es: 'Prueba: presiona un pulsador — LED del RD debe parpadear al recibir comando' },
+      { en: 'Test: press a shifter — RD LED should blink when receiving command', es: 'Prueba: presiona un pulsador — LED del RD debe parpadear al recibir comando' }
     ],
     official: true,
     progress: 100
@@ -1546,7 +1544,7 @@ const TREE = {
       { en: 'Replace CR2032 (available at pharmacies and electronics stores, ~$1–2)', es: 'Reemplaza la CR2032 (disponible en farmacias y tiendas de electrónica, ~S/5)' },
       { en: 'If new battery also fails: use a small precision flathead screwdriver to VERY gently lift the contact tabs ~1mm upward to restore spring tension', es: 'Si la pila nueva también falla: usa un destornillador de precisión plano para levantar MUY suavemente las pestañas de contacto ~1mm para restaurar la tensión' },
       { en: 'Re-pair the shifter following the pairing procedure', es: 'Vuelve a emparejar el pulsador siguiendo el procedimiento de pairing' },
-      { en: 'WARNING: If you over-bend and break the contact tabs — the shifter needs replacement', es: 'ADVERTENCIA: Si doblas demasiado y rompes las pestañas de contacto — el pulsador necesita reemplazo' },
+      { en: 'WARNING: If you over-bend and break the contact tabs — the shifter needs replacement', es: 'ADVERTENCIA: Si doblas demasiado y rompes las pestañas de contacto — el pulsador necesita reemplazo' }
     ],
     official: true,
     progress: 100
@@ -1560,7 +1558,7 @@ const TREE = {
     steps: [
       { en: 'Transport fix: ALWAYS remove AXS batteries before loading the bike on a car rack or vehicle. Replace the red protective caps on terminals', es: 'Fix para transporte: SIEMPRE retira las baterías AXS antes de cargar la bici en portabicicletas o vehículo. Pon las tapas rojas protectoras en los terminales' },
       { en: 'False low reading fix: Charge for 1 hour → remove battery 30 sec → reinstall → update firmware in AXS app', es: 'Fix para lectura falsa: Carga 1 hora → retira batería 30 seg → reinstala → actualiza firmware en app AXS' },
-      { en: 'If battery won\'t hold charge even in static storage — battery is degraded, needs replacement', es: 'Si la batería no retiene carga incluso guardada estática — batería degradada, necesita reemplazo' },
+      { en: 'If battery won\'t hold charge even in static storage — battery is degraded, needs replacement', es: 'Si la batería no retiene carga incluso guardada estática — batería degradada, necesita reemplazo' }
     ],
     official: false,
     community: true,
@@ -1577,7 +1575,7 @@ const TREE = {
       { en: 'Adjust High-Limit (H) screw: maximum 0.5mm chain clearance from the chainring', es: 'Ajusta el tornillo High-Limit (H): máximo 0.5mm de holgura entre cadena y plato' },
       { en: 'Check chainring inner bolt rotation: align the position mark with the crank spider — incorrect rotation from factory causes this', es: 'Verifica la rotación del perno interno del plato: alinea la marca de posición con la araña de la biela — la rotación incorrecta de fábrica causa esto' },
       { en: 'If using original SRAM chain: replace with KMC chain — many users report this resolves the issue completely', es: 'Si usas cadena original SRAM: reemplaza con cadena KMC — muchos usuarios reportan que esto lo resuelve completamente' },
-      { en: 'If chain drop continues after all adjustments — derailleur cage may be twisted from a previous chain jam. Needs inspection', es: 'Si la cadena sigue cayendo tras todos los ajustes — la jaula del desviador puede estar torcida por un atasco previo. Necesita inspección' },
+      { en: 'If chain drop continues after all adjustments — derailleur cage may be twisted from a previous chain jam. Needs inspection', es: 'Si la cadena sigue cayendo tras todos los ajustes — la jaula del desviador puede estar torcida por un atasco previo. Necesita inspección' }
     ],
     official: false,
     community: true,
@@ -1593,7 +1591,7 @@ const TREE = {
       { en: 'Clean chain and cassette with dry cloth (remove gross dirt first)', es: 'Limpia la cadena y cassette con trapo seco (elimina la suciedad gruesa primero)' },
       { en: 'On-bike micro-adjust: Press AXS button on RD until LED blinks → use shifter buttons to move derailleur +/- in small increments', es: 'Micro-ajuste en bici: Presiona botón AXS en RD hasta LED parpadee → usa botones del pulsador para mover desviador +/- en pequeños incrementos' },
       { en: 'Adjust B-screw for 5–7mm gap between guide pulley and largest sprocket (use a finger as gauge)', es: 'Ajusta el tornillo B para 5–7mm de holgura entre la polea guía y el piñón más grande (usa un dedo como medida)' },
-      { en: 'If skipping persists after adjustment: check derailleur hanger — if bent, indexing cannot be corrected without replacing it', es: 'Si el salto persiste tras el ajuste: verifica el adaptador del desviador — si está doblado, el indexing no se puede corregir sin reemplazarlo' },
+      { en: 'If skipping persists after adjustment: check derailleur hanger — if bent, indexing cannot be corrected without replacing it', es: 'Si el salto persiste tras el ajuste: verifica el adaptador del desviador — si está doblado, el indexing no se puede corregir sin reemplazarlo' }
     ],
     official: true,
     progress: 100
