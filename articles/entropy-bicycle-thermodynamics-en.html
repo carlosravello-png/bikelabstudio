@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Entropy in mechanical systems",
+        "description": "Second Law of Thermodynamics applied to bicycle component degradation over time"
+      },
       "headline": "Entropy: The Invisible Force Destroying Your Bicycle",
       "description": "Entropy and bicycles in Trujillo: why every kilometer brings your bike closer to disorder. Physics applied to bicycle maintenance. BikeLab Studio, Peru.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/entropy.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-en.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "10-episode series applying physics and thermodynamics to bicycle mechanics. BikeLab Studio, Trujillo, Peru.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-en.html",

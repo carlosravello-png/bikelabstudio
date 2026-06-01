@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Mechanical stress in bicycle structures",
+        "description": "Load distribution, fatigue stress and structural failure in bicycle frames and components"
+      },
       "headline": "Mechanical Stress: What Every Load Does to Metal",
       "description": "Mechanical stress σ=F/A in MTB bicycles in Trujillo: loads on frame, spokes and components. Real science applied to maintenance. BikeLab Studio, Peru.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/stress.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-en.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "10-episode series applying physics and thermodynamics to bicycle mechanics. BikeLab Studio, Trujillo, Peru.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-en.html",

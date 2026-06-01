@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Fatiga del metal en componentes ciclistas",
+        "description": "Ley de Basquin y regla de Miner aplicadas a la carga cíclica en componentes metálicos de bicicleta"
+      },
       "headline": "Fatiga del Metal: La Fractura que Nadie Vio Venir",
       "description": "Fatiga del metal en bicicletas Trujillo: Ley de Basquin aplicada a rodamientos, cuadro y transmisión. Por qué los componentes fallan sin aviso. BikeLab Studio, La Libertad.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/fatigue.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-es.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "Serie de 10 episodios que aplica física y termodinámica a la mecánica de bicicletas. BikeLab Studio, Trujillo, Perú.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-es.html",

@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Negentropy and bicycle maintenance",
+        "description": "Maintenance as a thermodynamic counter-force to entropy: preserving mechanical order in cycling systems"
+      },
       "headline": "Negentropy: The Workshop as a Source of Order",
       "description": "Negentropy and bicycle maintenance in Trujillo: dS/dt=deS/dt+diS/dt, the workshop as entropy-reducing system. BikeLab Studio La Libertad applies real physics.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/negentropy.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-en.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "10-episode series applying physics and thermodynamics to bicycle mechanics. BikeLab Studio, Trujillo, Peru.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-en.html",

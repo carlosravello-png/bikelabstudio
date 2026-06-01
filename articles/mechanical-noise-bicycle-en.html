@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Mechanical noise diagnosis in bicycles",
+        "description": "Vibration frequency, acoustic signature and mechanical noise sources in bicycle systems"
+      },
       "headline": "Noise: The Physical Language of the Failing Bicycle",
       "description": "Mechanical noise in bicycles Trujillo: SNR=P_signal/(P_noise+4kTR), acoustic diagnosis of bearings and transmission. How to read your bike's sounds. BikeLab Studio Peru.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/noise.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-en.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "10-episode series applying physics and thermodynamics to bicycle mechanics. BikeLab Studio, Trujillo, Peru.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-en.html",

@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Negentropía y mantenimiento de bicicleta",
+        "description": "El mantenimiento como fuerza termodinámica contraria a la entropía: preservar el orden mecánico en sistemas ciclistas"
+      },
       "headline": "Negentropía: El Taller como Fuente de Orden",
       "description": "Negentropía y mantenimiento de bicicletas en Trujillo: dS/dt=deS/dt+diS/dt, el taller como sistema que reduce entropía. BikeLab Studio La Libertad aplica física real.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/negentropy.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-es.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "Serie de 10 episodios que aplica física y termodinámica a la mecánica de bicicletas. BikeLab Studio, Trujillo, Perú.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-es.html",

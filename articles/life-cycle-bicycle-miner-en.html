@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Bicycle component life cycle and Miner's rule",
+        "description": "Cumulative fatigue damage and service life prediction using Miner's damage accumulation model"
+      },
       "headline": "Cycle: The Physics of What Never Truly Ends",
       "description": "Bicycle life cycle Trujillo: T=1/f and Miner rule D=Σ(n/N), maintenance intervals calculated with real physics. BikeLab Studio La Libertad Peru.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/cycle.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-en.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "10-episode series applying physics and thermodynamics to bicycle mechanics. BikeLab Studio, Trujillo, Peru.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-en.html",

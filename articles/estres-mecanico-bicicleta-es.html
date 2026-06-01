@@ -39,7 +39,12 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      "@type": ["TechArticle", "CreativeWork"],
+            "about": {
+        "@type": "Thing",
+        "name": "Estrés mecánico en estructuras ciclistas",
+        "description": "Distribución de carga, fatiga y fallo estructural en cuadros y componentes de bicicleta"
+      },
       "headline": "Estrés Mecánico: Lo que Cada Carga le Hace al Metal",
       "description": "Estrés mecánico σ=F/A en bicicletas MTB en Trujillo: cargas en cuadro, radios y componentes. Ciencia real aplicada a mantenimiento. BikeLab Studio, La Libertad.",
       "image": "https://www.bikelabstudio.com/articles/images/scientific-noir/stress.webp",
@@ -58,7 +63,7 @@
       },
       "isPartOf": {
         "@type": "CreativeWorkSeries",
-        "@id": "https://www.bikelabstudio.com/articles/scientific-noir-es.html#series",
+        "@id": "https://www.bikelabstudio.com/#scientific-noir-series",
         "name": "Scientific Noir",
         "description": "Serie de 10 episodios que aplica física y termodinámica a la mecánica de bicicletas. BikeLab Studio, Trujillo, Perú.",
         "url": "https://www.bikelabstudio.com/articles/scientific-noir-es.html",
