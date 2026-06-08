@@ -173,6 +173,44 @@
           "item": "https://www.bikelabstudio.com/articles/como-ajustar-sag-suspension-mtb-es.html"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué porcentaje de SAG debo usar según mi disciplina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Como punto de partida en la horquilla: 15–20% en XC, 20–23% en trail, 23–26% en enduro y 25–28% en DH. El amortiguador trasero va más alto: 25–28% en XC, 28–30% en trail, 30–33% en enduro y 33–38% en DH. Dentro del rango, sube el SAG si pilotas agresivo o en terreno técnico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué no se puede calcular la presión de aire de la suspensión a ojo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque la presión depende de cuatro variables no lineales entre sí: tu peso total, el stroke del componente, el volumen de la cámara de aire y los tokens instalados. El aire se comprime según la ley politrópica, así que la presión no escala linealmente con el peso ni con el recorrido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El SAG del amortiguador trasero es el mismo que el SAG de la rueda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El amortiguador está conectado al cuadro por un sistema de palancas con un leverage ratio. Un shock con 25% de SAG en un cuadro con leverage ratio 3.0 produce un SAG de rueda distinto. La calculadora computa el SAG de rueda real según el tipo de linkage (Horst Link, VPP, DW-Link, Single Pivot, High Pivot)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo mido el SAG de mi suspensión en casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Desliza el O-ring hasta el sello, súbete a la bici con tu equipo en posición neutral sin saltar, baja con cuidado y mide la distancia que recorrió el O-ring. Divide esos milímetros entre el stroke total y multiplica por 100. Repite la medición 3 veces y promedia."
+          }
+        }
+      ]
     }
   ]
 }
@@ -838,6 +876,11 @@
       <div class="meta">Artículo técnico // Autor: Carlos Ravello // Febrero 2026 // BikeLab Studio</div>
     </div>
 
+    <div class="tip-box">
+      <div class="tip-label">// RESPUESTA DIRECTA</div>
+      <p style="margin:0;color:#ccc">El <strong>SAG</strong> es la compresión estática de la suspensión bajo tu peso, expresada como porcentaje del recorrido total. Como punto de partida en la horquilla: <strong>15–20% en XC, 20–23% en trail, 23–26% en enduro y 25–28% en DH</strong>; el amortiguador trasero va más alto. La presión exacta no se calcula a ojo: depende de tu peso, el stroke, el volumen de la cámara y los tokens, y el aire se comprime de forma no lineal. La <a href="sag-calculator-es.html" style="color:var(--yellow);text-decoration:underline">Calculadora SAG de BikeLab</a> la resuelve para 132 modelos (Fox, RockShox, Öhlins, SR Suntour y más) con un modelo físico de doble cámara y error medio de 1.66 psi.</p>
+    </div>
+
     <p><a href="white-paper-sag-model-es.html" style="color:#888;text-decoration:underline;font-size:0.9em">→ Versión
         técnica completa: Modelo Físico de Cámara Dual — White Paper v3.0</a></p>
 
@@ -1182,6 +1225,18 @@
           <a href="../suspension-es.html">Servicio de puesta a punto de suspensión en BikeLab Studio →</a>
         </li>
       </ul>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Preguntas Frecuentes</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué porcentaje de SAG debo usar según mi disciplina?</h3>
+      <p>Como punto de partida en la horquilla: 15–20% en XC, 20–23% en trail, 23–26% en enduro y 25–28% en DH. El amortiguador trasero va más alto: 25–28% en XC, 28–30% en trail, 30–33% en enduro y 33–38% en DH. Dentro del rango, sube el SAG si pilotas agresivo o en terreno técnico.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Por qué no se puede calcular la presión de aire de la suspensión a ojo?</h3>
+      <p>Porque la presión depende de cuatro variables no lineales entre sí: tu peso total, el stroke del componente, el volumen de la cámara de aire y los tokens instalados. El aire se comprime según la ley politrópica, así que la presión no escala linealmente con el peso ni con el recorrido.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿El SAG del amortiguador trasero es el mismo que el SAG de la rueda?</h3>
+      <p>No. El amortiguador está conectado al cuadro por un sistema de palancas con un leverage ratio. Un shock con 25% de SAG en un cuadro con leverage ratio 3.0 produce un SAG de rueda distinto. La calculadora computa el SAG de rueda real según el tipo de linkage (Horst Link, VPP, DW-Link, Single Pivot, High Pivot).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Cómo mido el SAG de mi suspensión en casa?</h3>
+      <p>Desliza el O-ring hasta el sello, súbete a la bici con tu equipo en posición neutral sin saltar, baja con cuidado y mide la distancia que recorrió el O-ring. Divide esos milímetros entre el stroke total y multiplica por 100. Repite la medición 3 veces y promedia.</p>
     </div>
 
     <div class="footer">
