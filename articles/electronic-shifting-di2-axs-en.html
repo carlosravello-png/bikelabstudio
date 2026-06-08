@@ -448,6 +448,11 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; font-famil
 
     <p>This scenario — documented in thousands of threads across Reddit, BikeRadar, and Weight Weenies — has one distinctive characteristic: <strong>the problem is almost never where it appears to be</strong>. Diagnosing it correctly starts by understanding a distinction that most manuals ignore entirely.</p>
 
+    <div class="data-box">
+      <div class="data-box-label">// DIRECT ANSWER</div>
+      <p>When a Shimano Di2 or SRAM AXS electronic drivetrain fails, the problem is almost never mechanical: around <strong>60% of failures are power or communication issues</strong>, not broken parts. Diagnose it by layers, always starting with power: <strong>Layer 1 — power</strong> (dead battery, drain from the EW-WU111 module on Di2 or from the AXS accelerometer during transport) ~35%; <strong>Layer 2 — communication</strong> (2.4 GHz interference, firmware, loose E-Tube connections) ~25%; <strong>Layer 3 — mechanical</strong> (cable, pogo pin, hanger) ~20%. Layers 1 and 2 are fixable at home: a hard reset —remove the battery, wait 30 s and reinstall— resolves a large share of "dead system" cases. The <a href="di2-axs-diagnostic.html">Di2/AXS diagnostic tree</a> walks you through it layer by layer.</p>
+    </div>
+
     <div class="section-break">
       <div class="section-break-line"></div>
       <span class="section-break-label">// The question nobody asks</span>
