@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#000000">
   <title>Análisis Cinemático de Archivos FIT: Marco Metodológico y Validación Monte Carlo | BikeLab Studio</title>
-  <meta name="description" content="White Paper técnico: marco de análisis cinemático para diagnóstico mecánico de la interfaz bicicleta-ciclista mediante datos FIT. Métricas validadas con simulación Monte Carlo, umbrales dinámicos por configuración de bicicleta.">
+  <meta name="description" content="Tu Garmin guarda más de lo que ves. Cómo convertir tus archivos .FIT en 4 métricas de diagnóstico mecánico —CV de cadencia, estabilidad en subida, Variability Index y decoupling cardíaco— con umbrales por tipo de bici y bandas de incertidumbre validadas con Monte Carlo.">
   <meta name="keywords" content="análisis FIT ciclismo, diagnóstico mecánico bicicleta, varianza cadencia, Variability Index ciclismo, índice estabilidad subida, Monte Carlo ciclismo, BikeLab Studio, Garmin FIT analyzer">
   <meta name="author" content="Carlos Ravello">
   <link rel="canonical" href="white-paper-fit-analyzer-es.html">
@@ -69,14 +69,23 @@
       "@id": "https://carlosravello.com/#person",
       "name": "Carlos Eduardo Ravello Joo",
       "url": "https://carlosravello.com",
-      "jobTitle": "Ingeniero Ciclista · Arquitecto Semántico",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "ORCID",
-        "value": "0009-0007-5631-7436"
-      },
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "/g/11zb6pmf10",
+          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+        }
+      ],
       "sameAs": [
         "https://carlosravello.com/#person",
+        "https://carlosravello.com",
         "https://orcid.org/0009-0007-5631-7436",
         "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
         "https://www.wikidata.org/wiki/Q139714842",
@@ -84,11 +93,14 @@
         "https://zenodo.org/search?q=ravello+joo",
         "https://github.com/carlosravello-png",
         "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
-        "https://independent.academia.edu/CarlosRJ4"
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
       ],
       "subjectOf": {
         "@id": "https://carlosravello.com/#mcd-framework"
-      }
+      },
+      "description": "Investigador independiente. Fundador de BikeLab Studio, Zoovet Travel y Katsudōmo. Arquitecto de identidades digitales verificables con nodos semánticos entrelazados."
     },
     {
       "@type": [
@@ -664,6 +676,13 @@
       <div class="meta">White Paper v1.0 // Autor: Carlos Ravello // Marzo 2026 // BikeLab Studio — División de Investigación Técnica</div>
     </div>
 
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// En corto — antes de las ecuaciones</div>
+      <p style="margin-bottom:14px;"><strong>La pregunta:</strong> tu Garmin graba miles de datos en cada salida — ¿se puede leer en ellos si tu bici está bien ajustada o si tu pedaleo flaquea?</p>
+      <p style="margin-bottom:14px;"><strong>La respuesta corta:</strong> sí, pero no leyendo los números crudos. El archivo .FIT viene lleno de ruido —error de GPS, dropout de sensores, cuantización de cadencia— y leerlo directo da diagnósticos de apariencia técnica pero frágiles. Este marco extrae <strong>cuatro métricas fiables</strong> (variabilidad de cadencia, relación velocidad/cadencia, índice de estabilidad en subida y Variability Index), cada una con su banda de incertidumbre, y ajusta los umbrales a tu bici (disciplina, suspensión, transmisión, rueda) en vez de usar valores universales. Todo corre en tu navegador: el archivo nunca sale de tu dispositivo.</p>
+      <p style="margin-bottom:0;"><strong>Lo que sigue, y por qué creerle:</strong> abajo está el marco completo —cada métrica con su justificación física, su modelo de ruido y su validación Monte Carlo, más las dos métricas que descarté por no ser fiables (porque decir qué <em>no</em> sirve también es rigor)—. Si solo quieres analizar tu salida, usa el <a href="fit-analyzer-es.html" style="color:#a0a0a0;">FIT Analyzer</a> o la <a href="como-leer-datos-fit-ciclismo-es.html" style="color:#a0a0a0;">guía de lectura</a>.</p>
+    </div>
+
     <!-- RESUMEN -->
     <h2>RESUMEN</h2>
 
@@ -766,6 +785,8 @@
     <!-- SECCIÓN 4 -->
     <h2>4. MÉTRICAS PRIMARIAS: JUSTIFICACIÓN FÍSICA Y OBSERVABILIDAD</h2>
 
+    <p style="color:#bbb;font-style:italic;">Aquí está el núcleo: las cuatro señales que de verdad dicen algo sobre tu bici y tu pedaleo, y por qué cada una es físicamente observable. Cada métrica viene con qué mide, cuándo es válida y —algo que casi ningún software admite— cuándo <em>no</em> se debe confiar en ella.</p>
+
     <div class="note">
       <strong>Nota sobre transparencia metodológica:</strong> Las fórmulas exactas implementadas en el motor de cálculo, los parámetros específicos de segmentación y los coeficientes del modelo de incertidumbre son propietarios de BikeLab Studio. Este documento describe la justificación física, el principio de cálculo y los supuestos de cada métrica con suficiente rigor para evaluación científica independiente, sin constituir una especificación de implementación completa.
     </div>
@@ -787,6 +808,8 @@
         MAD<sub>c,k</sub> = función de robustez escalada sobre W<sub>k</sub><br>
         Métrica reportada: mediana(CV<sub>c,k</sub>) sobre todas las ventanas válidas
       </div>
+
+      <p><strong>En palabras:</strong> si pedaleas a ritmo constante en llano y aun así tu cadencia sube y baja sola, algo está perturbando la entrega de fuerza —terreno que la suspensión no absorbe, pérdida de tracción, postura inestable o cambios de marcha de más—. Esta métrica mide ese "temblor" de la cadencia: cuanto más bajo, más limpio y eficiente es tu pedaleo.</p>
 
       <p><strong>Condiciones de validez:</strong> Régimen cuasiestacionario, cadencia ∈ [30, 160] rpm, velocidad > 1 m/s, gap entre muestras ≤ 3 s. No aplicable en aceleraciones, curvas abiertas, cambios de marcha evidentes ni cruces de semáforo.</p>
 

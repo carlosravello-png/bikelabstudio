@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#000000">
   <title>Kinematic Analysis of FIT Files for Mechanical Diagnostics of the Bicycle-Rider Interface | BikeLab Studio</title>
-  <meta name="description" content="Technical White Paper: kinematic analysis framework for mechanical diagnostics of the bicycle-rider system using FIT file data. Validated metrics with Monte Carlo simulation, dynamic thresholds by bicycle configuration.">
+  <meta name="description" content="Your Garmin records more than you see. How to turn your .FIT files into 4 mechanical-diagnostic metrics —cadence CV, climbing stability, Variability Index and cardiac decoupling— with thresholds by bike type and uncertainty bands validated with Monte Carlo.">
   <meta name="keywords" content="FIT file analysis cycling, bicycle mechanical diagnostic, cadence variance, Variability Index cycling, climbing stability index, Monte Carlo cycling, BikeLab Studio, Garmin FIT analyzer, NP AP ratio">
   <meta name="author" content="Carlos Ravello">
   <link rel="canonical" href="white-paper-fit-analyzer.html">
@@ -69,14 +69,23 @@
       "@id": "https://carlosravello.com/#person",
       "name": "Carlos Eduardo Ravello Joo",
       "url": "https://carlosravello.com",
-      "jobTitle": "Ingeniero Ciclista · Arquitecto Semántico",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "ORCID",
-        "value": "0009-0007-5631-7436"
-      },
+      "jobTitle": "Cycling Technical Researcher · Founder, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "/g/11zb6pmf10",
+          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+        }
+      ],
       "sameAs": [
         "https://carlosravello.com/#person",
+        "https://carlosravello.com",
         "https://orcid.org/0009-0007-5631-7436",
         "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
         "https://www.wikidata.org/wiki/Q139714842",
@@ -84,11 +93,14 @@
         "https://zenodo.org/search?q=ravello+joo",
         "https://github.com/carlosravello-png",
         "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
-        "https://independent.academia.edu/CarlosRJ4"
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
       ],
       "subjectOf": {
         "@id": "https://carlosravello.com/#mcd-framework"
-      }
+      },
+      "description": "Independent researcher. Founder of BikeLab Studio, Zoovet Travel, and Katsudōmo. Architect of verifiable digital identities with interlinked semantic nodes."
     },
     {
       "@type": [
@@ -483,6 +495,13 @@
       <div class="meta">White Paper v1.0 // Author: Carlos Ravello // March 2026 // BikeLab Studio — Technical Research Division</div>
     </div>
 
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// In short — before the equations</div>
+      <p style="margin-bottom:14px;"><strong>The question:</strong> your Garmin logs thousands of data points every ride — can they tell you whether your bike is well set up or your pedaling is faltering?</p>
+      <p style="margin-bottom:14px;"><strong>The short answer:</strong> yes, but not by reading the raw numbers. The .FIT file is full of noise —GPS error, sensor dropout, cadence quantization— and reading it directly yields diagnoses that look technical but are fragile. This framework extracts <strong>four reliable metrics</strong> (cadence variability, speed/cadence ratio, climbing stability index and Variability Index), each with its uncertainty band, and tunes the thresholds to your bike (discipline, suspension, drivetrain, wheel) instead of using universal values. It all runs in your browser: the file never leaves your device.</p>
+      <p style="margin-bottom:0;"><strong>What follows, and why trust it:</strong> below is the full framework —each metric with its physical justification, its noise model and its Monte Carlo validation, plus the two metrics I discarded as unreliable (because saying what <em>doesn't</em> work is also rigor)—. If you just want to analyze your ride, use the <a href="fit-analyzer-en.html" style="color:#a0a0a0;">FIT Analyzer</a> or the <a href="how-to-read-fit-cycling-data-en.html" style="color:#a0a0a0;">reading guide</a>.</p>
+    </div>
+
     <!-- ABSTRACT -->
     <h2>ABSTRACT</h2>
 
@@ -585,6 +604,8 @@
     <!-- SECTION 4 -->
     <h2>4. PRIMARY METRICS: PHYSICAL JUSTIFICATION AND OBSERVABILITY</h2>
 
+    <p style="color:#bbb;font-style:italic;">Here's the core: the four signals that actually say something about your bike and your pedaling, and why each is physically observable. Every metric comes with what it measures, when it's valid, and —something almost no software admits— when <em>not</em> to trust it.</p>
+
     <div class="note">
       <strong>Note on methodological transparency:</strong> The exact formulas implemented in the calculation engine, specific segmentation parameters, and uncertainty model coefficients are proprietary to BikeLab Studio. This document describes the physical justification, calculation principle, and assumptions of each metric with sufficient rigor for independent scientific evaluation, without constituting a complete implementation specification.
     </div>
@@ -606,6 +627,8 @@
         MAD<sub>c,k</sub> = scaled robust function over W<sub>k</sub><br>
         Reported metric: median(CV<sub>c,k</sub>) over all valid windows
       </div>
+
+      <p><strong>In plain terms:</strong> if you pedal at a steady rhythm on flat ground and your cadence still drifts up and down on its own, something is disturbing how your force reaches the wheel —terrain the suspension doesn't absorb, traction loss, an unstable position, or too many gear changes—. This metric measures that cadence "wobble": the lower it is, the cleaner and more efficient your pedal stroke.</p>
 
       <p><strong>Validity conditions:</strong> Quasi-stationary regime, cadence ∈ [30, 160] rpm, speed > 1 m/s, gap between samples ≤ 3 s. Not applicable during accelerations, open corners, evident gear changes, or traffic stops.</p>
 
