@@ -9,11 +9,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Análisis Comparativo MTB 11v vs 12v | BikeLab Studio">
     <meta name="twitter:description"
-        content="White Paper técnico: evaluación termodinámica, biomecánica y económica. Modelo Spicer, Lodge &amp; Al-Sahlani, simulación Monte Carlo 10.000 iteraciones.">
+        content="¿Vale la pena pasar de 11 a 12 velocidades en MTB? La diferencia real de fricción es solo 1–1,5 W y el 12v cuesta ~46% más a 5 años. Modelo físico + Monte Carlo.">
     <meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
     <title>Análisis Comparativo MTB 11v vs 12v | BikeLab Studio</title>
     <meta name="description"
-        content="White Paper técnico: evaluación termodinámica, biomecánica y económica de sistemas MTB 11v vs 12v. Modelo Spicer, datos Lodge &amp; Al-Sahlani, simulación Monte Carlo 10.000 iteraciones.">
+        content="¿Vale la pena el upgrade de 11 a 12 velocidades en MTB? La diferencia real de fricción es de solo 1–1,5 W y mantener el 12v cuesta ~46% más a 5 años. Modelo físico de fricción y simulación Monte Carlo.">
     <meta name="keywords"
         content="transmisión 11v 12v, MTB drivetrain, Spicer Lodge, eficiencia cadena, piñón 10T 11T, simulación Monte Carlo">
     <meta name="author" content="Carlos Ravello">
@@ -733,6 +733,13 @@
             <div class="meta">White Paper v2.0 — Revisión Metodológica // Autor: Carlos Ravello // Febrero 2026</div>
         </div>
 
+        <div class="methodology-box" style="border-left:4px solid var(--accent);">
+            <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// En corto — antes de las ecuaciones</div>
+            <p style="margin-bottom:14px;"><strong>La pregunta:</strong> ¿de verdad un grupo de 12 velocidades te hace más rápido que uno de 11, o solo más caro?</p>
+            <p style="margin-bottom:14px;"><strong>La respuesta corta:</strong> en rendimiento puro, la diferencia es casi nula. El piñón pequeño de 10T del 12v pierde solo <strong>1–1,5 W</strong> extra frente al 11T del 11v (a 200 W y 90 rpm), y en los piñones grandes —donde gastas el 80% del esfuerzo subiendo— ambos sistemas son <strong>idénticos</strong>. El rango total sube apenas un 10%, y ese extra vive en el piñón de bajada que casi no usas. Lo que sí cambia de verdad es el bolsillo: mantener un 12v cuesta alrededor de <strong>46% más a 5 años</strong>. Para la mayoría, un 11v bien mantenido sigue alcanzando; el 12v se justifica en competición o casos puntuales.</p>
+            <p style="margin-bottom:0;"><strong>Lo que sigue, y por qué creerle:</strong> abajo está el modelo físico completo —pérdidas por fricción, geometría de chainline, termodinámica y costo marginal— calibrado contra estudios revisados (Spicer; Lodge &amp; Al-Sahlani) y sometido a 10.000 simulaciones Monte Carlo. No es opinión de tienda: es la ecuación, con todos sus supuestos declarados, para que verifiques cada número por tu cuenta. Si solo quieres la conclusión sin matemáticas, está la <a href="11v-12v-mtb-worth-it-es.html" style="color:#a0a0a0;">versión divulgativa</a>.</p>
+        </div>
+
         <h2>RESUMEN</h2>
         <p><a href="11v-12v-mtb-worth-it-es.html" style="color:#888;text-decoration:underline;font-size:0.9em;">→
                 Versión divulgativa: 11v vs 12v — ¿Vale la pena el upgrade?</a> · <a href="11v-12v-mtb-worth-it.html"
@@ -876,6 +883,8 @@
             <li>R<sub>sprocket</sub>: Radio del piñón (función de número de dientes)</li>
             <li>ω: Velocidad angular (rad/s)</li>
         </ul>
+
+        <p><strong>En palabras:</strong> la cadena pierde energía cada vez que un eslabón se dobla para entrar y salir de un piñón, porque el pasador roza dentro del buje mientras la cadena está en tensión. Cuanto más pequeño es el piñón (menor R<sub>sprocket</sub>), más cerrado es ese doblez y mayor la pérdida — por eso el 10T, el más chico, es el que más fricciona. La fórmula solo le pone número a esa intuición: la pérdida crece con la tensión, con la fricción del pasador, con lo cerrado que dobla la cadena y con la velocidad.</p>
 
         <h3>3.2 Datos Experimentales de Lodge & Al-Sahlani (2019)</h3>
 
