@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Hub Bearing Maintenance: Step-by-Step Guide | BikeLab Studio</title>
+    <meta name="description"
+        content="Technical hub service guide: cartridge vs. cup-and-cone, the preload physics almost nobody explains, diagnosing play and roughness, freehub greasing and real intervals. With a teardown gallery.">
+    <meta name="keywords"
+        content="hub bearing maintenance, hub service, cartridge vs cup and cone, wheel hub play, freehub grease, when to replace hub bearings, star ratchet maintenance">
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html">
+    <link rel="alternate" hreflang="es" href="mantenimiento-masas-bujes-bicicleta-es.html">
+    <link rel="alternate" hreflang="en" href="bicycle-hub-bearing-maintenance-en.html">
+    <link rel="alternate" hreflang="x-default" href="mantenimiento-masas-bujes-bicicleta-es.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Bicycle Hub Bearing Maintenance: Step-by-Step Guide | BikeLab Studio">
+    <meta property="og:description"
+        content="Cartridge vs. cup-and-cone, the physics of preload, real diagnosis and freehub greasing. With a teardown gallery.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <meta property="og:type" content="article">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bicycle Hub Bearing Maintenance: Step-by-Step Guide">
+    <meta name="twitter:description" content="Cartridge vs. cup-and-cone, preload physics, diagnosis and freehub greasing. Teardown gallery.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TechArticle", "HowTo"],
+      "proficiencyLevel": "Advanced",
+      "locationCreated": "Trujillo, Perú",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html" },
+      "headline": "Bicycle Hub Bearing Maintenance: Step-by-Step Guide",
+      "name": "Bicycle hub bearing maintenance",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "en",
+      "description": "Hub service: cartridge vs. cup-and-cone, the physics of preload, diagnosing play and roughness, freehub greasing and real intervals.",
+      "image": "https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp",
+      "totalTime": "PT1H",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#guias-mantenimiento",
+        "name": "BikeLab Studio Maintenance Guides",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "datePublished": "2026-06-08",
+      "dateModified": "2026-06-08"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. All rights reserved.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Freehub/core and rear hub body with disc rotor. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/maza-despiece-rodamientos.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. All rights reserved.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Hub teardown: shell, bearings and freehub core. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Technical Researcher · Founder, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "description": "Independent researcher. Founder of BikeLab Studio, Zoovet Travel and Katsudōmo. Architect of verifiable digital identities with interlinked semantic nodes."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Dynamic Coherence Model (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "description": "Three-axis methodological framework applied to the physical diagnosis of cycling systems: (E) energy degradation mechanisms, (C) quantification of physical wear signals, (P) maintenance and longevity criteria."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" },
+      "sameAs": ["https://www.linkedin.com/company/bikelabstudio"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.bikelabstudio.com/#carlos-ravello",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is a little lateral play in the wheel normal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On cup-and-cone hubs (Shimano), a minimal amount of play on the bench can be correct: it disappears when you close the quick release or thru-axle, because the clamping force compresses the axle. On sealed cartridge hubs, perceptible play almost always means a worn bearing or a compressed internal spacer, and it is fixed by replacing the bearing, not by tightening." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can sealed cartridge bearings be serviced?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You carefully lift the rubber seal, degrease and refill with fresh grease to about 70%; this extends their life as long as the races have no pitting. If the race is marked, no amount of grease will save it: replace the cartridge." }
+        },
+        {
+          "@type": "Question",
+          "name": "What grease goes in the freehub core or ratchet system?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A specific low-viscosity (fluid) grease, not the thick bearing grease. Bearing grease is too tacky and slows the return of the ratchet springs or toothed rings, causing skipping under load. In the core: a thin layer of light grease; in the bearings: NLGI 2 grease." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the bearing ABEC grade matter on a bicycle?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Almost not at all. ABEC measures geometric tolerances for 20,000–30,000 rpm regimes; a bicycle wheel spins at 200–400 rpm. Steel quality, ball roundness, seals and lubrication matter far more than the ABEC number. A well-sealed ABEC 3 outlasts a poorly protected ABEC 9." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should hubs be serviced?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Occasional use: inspect every 150–200 h or yearly. Frequent use: every 75–100 h or twice a year. After rain, mud or submersion washing: inspect immediately. Grease loses its properties over time even if you don't ride: don't leave it more than a year." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html" },
+        { "@type": "ListItem", "position": 3, "name": "Bicycle Hub Bearing Maintenance", "item": "https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html" }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --surface:#0c0c0c; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.7; }
+        body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity:0.025; pointer-events:none; z-index:1000; }
+        .container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .back-link { display:inline-flex; align-items:center; color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:0.7rem; margin-bottom:40px; letter-spacing:1px; padding:12px 0; min-height:44px; }
+        .back-link:hover { color:var(--text); }
+        .data-label { font-family:var(--mono); font-size:0.65rem; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; display:block; }
+        h1 { font-size:2.5rem; line-height:1.2; margin-bottom:20px; letter-spacing:-1px; }
+        .meta { font-family:var(--mono); font-size:0.75rem; color:#666; margin-bottom:40px; }
+        .featured-image { width:100%; height:420px; object-fit:cover; margin:40px 0; border:1px solid #222; }
+        figure { margin:34px 0; }
+        figure img { width:100%; height:auto; border:1px solid #222; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.65rem; color:#666; text-align:center; margin-top:10px; letter-spacing:0.5px; }
+        .content { font-size:1rem; color:#ccc; }
+        .content p { margin-bottom:20px; }
+        .content h2 { font-size:1.5rem; margin:46px 0 18px 0; color:var(--text); }
+        .content h3 { font-size:1.1rem; margin:26px 0 10px; color:var(--text); }
+        .content strong { color:var(--text); }
+        .content a { color:#a0a0a0; }
+        .content a:hover { color:#fff; }
+        .answer-box { margin:25px 0; padding:18px 22px; border-left:3px solid #888; background:#0a0a0a; }
+        .answer-box .lbl { font-family:var(--mono); font-size:0.65rem; color:#888; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .data-box { background:#0d0d14; border-left:3px solid #4444aa; padding:20px; margin:30px 0; }
+        .data-box .lbl { color:#7777cc; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .data-box .hi { color:#fff; font-weight:bold; }
+        .warn-box { background:#1a0a0a; border-left:3px solid #ff4444; padding:20px; margin:30px 0; }
+        .warn-box .lbl { color:#ff6b6b; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .warn-box p { color:#cc9999; margin-bottom:8px; }
+        .step { border-left:2px solid #2a2a2a; padding:4px 0 4px 18px; margin:34px 0; }
+        .step .num { font-family:var(--mono); font-size:0.62rem; color:#777; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:6px; }
+        .step h3 { margin-top:0; }
+        table.cmp { width:100%; border-collapse:collapse; margin:30px 0; font-size:0.85rem; }
+        table.cmp th, table.cmp td { border:1px solid #242424; padding:10px 12px; text-align:left; vertical-align:top; }
+        table.cmp th { background:#0d0d0d; color:#aaa; font-family:var(--mono); font-size:0.62rem; letter-spacing:1px; text-transform:uppercase; }
+        table.cmp td { color:#bbb; }
+        .ok { color:#6bffb8; font-weight:bold; } .no { color:#ff6b6b; font-weight:bold; }
+        .refs { margin-top:40px; padding-top:20px; border-top:1px solid #222; font-size:0.8rem; color:#888; }
+        .refs h2 { font-size:0.7rem; font-family:var(--mono); letter-spacing:2px; color:#666; text-transform:uppercase; margin-bottom:12px; }
+        .refs ol { margin-left:18px; } .refs li { margin-bottom:8px; } .refs a { color:#888; }
+        .signature { margin-top:60px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.8rem; color:#666; line-height:1.8; }
+        .nav-toggle { display:none; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar-left { display:flex; align-items:center; gap:10px; }
+        .nav-menu-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.22em; color:#555; text-transform:uppercase; }
+        .nav-trigger { width:44px; height:44px; min-width:44px; min-height:44px; cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; }
+        .nav-trigger .line { display:block; width:18px; height:1px; background:var(--text); transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform:translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity:0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform:translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position:fixed; inset:0; background:#080808; z-index:1002; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity:1; visibility:visible; pointer-events:auto; }
+        .nav-overlay-backdrop { position:absolute; inset:0; cursor:pointer; }
+        .nav-overlay nav { text-align:center; position:relative; z-index:1; width:100%; }
+        .nav-overlay a { display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:3px; color:var(--text); text-decoration:none; padding:14px 24px; min-height:44px; border-bottom:1px solid #1a1a1a; }
+        .nav-overlay a:first-of-type { border-top:1px solid #1a1a1a; }
+        .nav-overlay a:hover { color:#fff; border-color:#333; }
+        .nav-lang a { font-family:var(--mono); font-size:0.62rem; color:var(--text); text-decoration:none; letter-spacing:2px; border:1px solid var(--accent); padding:6px 12px; background:rgba(0,0,0,0.8); }
+        .nav-lang a:hover { background:var(--text); color:var(--bg); }
+        .wa-float { position:fixed; bottom:30px; right:30px; border:1px solid #333; padding:11px 16px; min-height:44px; min-width:44px; color:var(--text); text-decoration:none; font-family:var(--mono); font-size:0.6rem; letter-spacing:2px; z-index:1001; background:var(--bg); display:flex; align-items:center; gap:8px; }
+        .wa-float:hover { background:var(--text); color:var(--bg); border-color:var(--text); }
+        .container { padding-top:80px; }
+        @media (max-width:600px) { .nav-bar { top:max(8px,env(safe-area-inset-top)); right:max(8px,env(safe-area-inset-right)); left:auto; width:auto; padding:8px 12px; border:1px solid #222; border-radius:2px; } .nav-menu-label { display:none; } h1 { font-size:1.9rem; } .featured-image { height:240px; } table.cmp { font-size:0.78rem; } }
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENU</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation menu">
+            <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="nav-lang"><a href="mantenimiento-masas-bujes-bicicleta-es.html">ES</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index-en.html">HOME</a>
+        <a href="../servicios-en.html">SERVICES</a>
+        <a href="../tubelizado-en.html">TUBELESS</a>
+        <a href="../suspension-en.html">SUSPENSION</a>
+        <a href="../centrado-ruedas-en.html">WHEEL TRUING</a>
+        <a href="../purgado-frenos-en.html">BRAKE BLEED</a>
+        <a href="../mantenimiento-general-en.html">GENERAL SERVICE</a>
+        <a href="../mantenimiento-preventivo-en.html">PREVENTIVE</a>
+        <a href="../index-en.html#science">TECHNICAL DATA</a>
+        <a href="../index-en.html#tips">TIPS</a>
+        <a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20I%20would%20like%20to%20book%20a%20technical%20appointment">CONTACT</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCATION</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20I%20would%20like%20to%20ask%20about%20hub%20service" class="wa-float" aria-label="Contact on WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
+
+    <div class="container">
+        <a href="../index-en.html#tips" class="back-link">← BACK TO HOME</a>
+        <span class="data-label">ADVANCED MECHANICS // STEP-BY-STEP GUIDE</span>
+        <h1>Bicycle Hub Bearing Maintenance: Step-by-Step Guide</h1>
+        <div class="meta">Updated: June 2026 // Reading: 10 min</div>
+
+        <img src="images/masa-nucleo-freehub-detalle.webp"
+            alt="Freehub/core and rear hub body with disc rotor — BikeLab Studio · Carlos Eduardo Ravello Joo"
+            class="featured-image" width="960" height="1280" loading="eager" fetchpriority="high">
+
+        <div class="content">
+
+            <div class="answer-box">
+                <span class="lbl">// DIRECT ANSWER</span>
+                <p style="margin:0;">Hub maintenance depends on the bearing type. <strong>Sealed cartridges</strong> (6802/6902) are greased by lifting the seal and <strong>replaced</strong> if they have play or roughness; <strong>cup-and-cone</strong> hubs (Shimano) are adjusted to a fraction of a turn. The key in both is <strong>preload</strong>: no play, no friction. Light grease for the freehub core, NLGI 2 grease for the bearings. Interval: 75–100 h with frequent use, 150–200 h occasional.</p>
+            </div>
+
+            <p>The hub is the part that spins the most and gets looked at the least. It carries your weight, the lateral loads of every corner and the water that enters with every wash, and it's usually ignored until it "sounds wrong" or the wheel wobbles. This guide isn't a generic "clean and grease": it's the physical reason failures happen and the real step-by-step of the service, with the teardown documented on the bench.</p>
+
+            <h2>1. How a hub works: radial and axial loads</h2>
+            <p>A bicycle bearing carries two kinds of load at once. The <strong>radial load</strong> is your weight coming down the spokes toward the axle. The <strong>axial load</strong> is the lateral force in every corner, every foot plant, every push out of the wheel's plane. And here is the first nuance almost nobody explains: a radial cartridge bearing is designed for pure radial load; misaligned axial loads wear it out early. That's why the hub design —how many bearings, how far apart, with what preload— matters as much as its quality.</p>
+
+            <h2>2. Bearing types: cartridge vs. cup-and-cone</h2>
+            <p>There are two families and they're serviced in opposite ways. Confusing them is the most common mistake of generic guides.</p>
+            <table class="cmp">
+                <thead><tr><th>Feature</th><th>Sealed cartridge</th><th>Cup-and-cone</th></tr></thead>
+                <tbody>
+                    <tr><td>Typical model</td><td>6802, 6902 (sealed 2RS)</td><td>Loose balls + adjustable cones</td></tr>
+                    <tr><td>Adjustable</td><td class="no">No</td><td class="ok">Yes (fraction of a turn)</td></tr>
+                    <tr><td>Maintenance</td><td>Grease under the seal; replace if there's play</td><td>Teardown, ball count, re-adjust</td></tr>
+                    <tr><td>Axial load</td><td>Lower tolerance</td><td class="ok">Excellent (angular contact)</td></tr>
+                    <tr><td>Dirt resistance</td><td class="ok">Better (seals)</td><td>Lower</td></tr>
+                    <tr><td>Repairable if the race fails</td><td class="ok">Yes: replace the cartridge</td><td class="no">No: condemns the hub shell</td></tr>
+                </tbody>
+            </table>
+            <p>Shimano still uses cup-and-cone in its high end for an engineering reason: angular contact spreads oblique loads better. The rest of the industry moved to cartridge for service simplicity. Neither is "better" in the abstract; they are different philosophies.</p>
+
+            <figure>
+                <img src="images/rodamientos-sellos-nucleo-explosion.webp" alt="Hub bearings, seals and core in an exploded view — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                <figcaption>Exploded view: shell, cartridge bearings, seals and core. Every seal is a barrier against water.</figcaption>
+            </figure>
+
+            <h2>3. Diagnosis: the three signs</h2>
+            <p>Before opening anything, diagnose. There are three symptoms and each points to a different cause.</p>
+            <h3>Lateral play</h3>
+            <p>Hold the wheel by the rim and rock it side to side against the frame. A perceptible looseness is <strong>play</strong>. On cup-and-cone it's corrected with preload; on cartridge it almost always means a worn bearing.</p>
+            <h3>Roughness</h3>
+            <p>Remove the wheel, hold the axle with your fingers and turn it slowly. If it doesn't feel perfectly smooth —if it "grinds" or has hard spots— there is <strong>brinelling</strong> (ball imprints in the race) or sand contamination. That isn't greased away: it's replaced.</p>
+            <h3>Freehub click</h3>
+            <p>An intermittent "clack" under pedaling usually isn't the bearing but the freehub: dry pawls/teeth, a tired spring or the wrong grease. We cover it below.</p>
+
+            <figure>
+                <img src="images/masa-rueda-trasera-montada.webp" alt="Rear hub mounted on the bike with disc rotor — BikeLab Studio · Carlos Eduardo Ravello Joo" width="700" height="1244" loading="lazy">
+                <figcaption>Diagnosis starts with the wheel mounted: play, roughness and noise are felt before teardown.</figcaption>
+            </figure>
+
+            <h2>4. The critical mistake: the physics of preload</h2>
+            <p>Here is what almost no guide says and where most hubs get ruined. <strong>Preload</strong> is the tension with which the bearing races meet. Neither too much nor too little:</p>
+            <div class="warn-box">
+                <span class="lbl">THE MYTH THAT MELTS HUBS</span>
+                <p><strong>"If there's play, tighten harder."</strong> False. Excess preload increases friction and axial load on the balls: the bearing feels "rough" not because it's worn, but because it's strangled. Many "dead" bearings are over-preloaded bearings.</p>
+            </div>
+            <p>And the detail that separates a mechanic from an amateur: on a cup-and-cone hub, adjusting "zero play" on the bench is <strong>wrong</strong>. When you close the quick release or tighten the thru-axle to the frame's torque (typically 10–12 N·m), the clamping force microscopically compresses the axle and pushes the cones against the balls. The correct adjustment leaves an <strong>imperceptible residual play</strong> on the bench that disappears only when the wheel is mounted on the bike. Adjusting to zero on the bench = over-preload when riding.</p>
+
+            <h2>5. The service, step by step</h2>
+
+            <div class="step">
+                <span class="num">Step 1 — To the bench</span>
+                <h3>Remove the wheel and free the cassette</h3>
+                <p>Wheel off the bike, cassette removed if you're touching the freehub. Work on a clean mat: the hub doesn't forgive sand.</p>
+                <figure>
+                    <img src="images/rueda-maza-servicio.webp" alt="Wheel and hub during full service on the bench — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                    <figcaption>Step 1: wheel on the bench, clean surface, everything in view.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 2 — Open</span>
+                <h3>Remove end caps and core</h3>
+                <p>Most modern high-end hubs (DT Swiss, Hope, and high-engagement designs) open <strong>by hand</strong>: the end caps and core pull off without tools. If you need brute force, stop: you're doing something wrong.</p>
+                <figure>
+                    <img src="images/maza-buje-interior-nucleo.webp" alt="Hub interior and high-engagement core — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                    <figcaption>Step 2: the hub interior and high-engagement core, exposed without violence.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 3 — Teardown</span>
+                <h3>Lay out every part</h3>
+                <p>Remove bearings, seals and spacers and place them in order of extraction. On cup-and-cone, <strong>count the balls first</strong> and never mix old balls with new: the old ones have lost microns of diameter and transfer all the load to the new ones.</p>
+                <figure>
+                    <img src="images/maza-despiece-rodamientos.webp" alt="Hub teardown: shell, bearings and core — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                    <figcaption>Step 3: orderly teardown. The order is diagnostic, not decoration.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 4 — Cleaning</span>
+                <h3>Degrease the bearings</h3>
+                <p>For cartridges you'll reuse: carefully lift the rubber seal with a blade, degrease (ultrasonic if you have it) and let dry. For cup-and-cone: clean races, cones and balls to a mirror finish. Without the old grease there's no reliable read of the race.</p>
+                <figure>
+                    <img src="images/rodamientos-cartucho-nucleo-maza.webp" alt="Cartridge bearings and hub core ready for cleaning — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                    <figcaption>Step 4: bearing degreasing on the mat. Old grease hides the damage.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 5 — Inspection</span>
+                <h3>Grease or replace?</h3>
+                <p>Look at the running race. If it's polished and uniform, grease and reuse. If you see <strong>pitting</strong> or <strong>brinelling</strong> (regular ball indentations), the race lost its geometry: no grease fixes it, replace the cartridge. A marked race means unpredictable remaining life.</p>
+                <figure>
+                    <img src="images/maza-buje-alojamiento-rodamiento.webp" alt="Bearing seat of the hub shell during inspection — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1918" loading="lazy">
+                    <figcaption>Step 5: inspecting the seat and race. This is where you decide to grease or replace.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 6 — Extraction / pressing</span>
+                <h3>Replace the cartridge without damaging the hub</h3>
+                <p>To pull a cartridge you use a blind-hole puller; to install one, a press with a drift that bears on the <strong>outer race</strong>. The fatal error here is pressing on the inner race of a new cartridge: it brinells the balls before the first turn and ruins it. Support on the correct race, straight pressure, no hammering.</p>
+                <figure>
+                    <img src="images/desarme-masa-extraccion-herramienta.webp" alt="Extracting the hub bearing with a tool — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1080" height="1440" loading="lazy">
+                    <figcaption>Step 6: extraction/pressing with a tool. Force goes to the correct race, never to a hammer.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 7 — Greasing</span>
+                <h3>Two greases, not one</h3>
+                <p>Fill the bearings to about 70% with <strong>NLGI 2</strong> grease (peanut-butter consistency; water-resistant). The freehub core is another story: it takes a <strong>fluid, thin</strong> grease (NLGI 0–1) or specific oil, in a thin layer. If you drown the ratchet in thick grease, the springs don't push the teeth in time and the core <em>slips</em> under torque. More grease isn't more protection: it's a failure waiting for a climb.</p>
+            </div>
+
+            <div class="step">
+                <span class="num">Step 8 — Preload and closing</span>
+                <h3>Mount, adjust and verify on the bike</h3>
+                <p>Reassemble, leave the imperceptible residual play (see step 4), mount the wheel and close the axle to the frame's torque. Only then verify: the wheel should spin free and without play. If it's stiff, you under-loosened; if it wobbles, you over-tightened.</p>
+            </div>
+
+            <h2>6. The right workshop: tools make the difference</h2>
+            <p>A hub isn't serviced with improvisation. It's serviced with blind pullers of the correct diameter, presses with guide drifts, flat cone wrenches for cup-and-cone, a torque wrench for the closure and a mat that doesn't shed fibers. The difference between "I put grease in it" and "it's like factory" isn't in the hands: it's in applying force where the design asks for it. A serious workshop invests in tooling because it knows the client's frame and hub are worth far more than the puller.</p>
+            <figure>
+                <img src="images/herramientas-taller-servicio-masas.webp" alt="Workshop tools for hub service: torque wrench, pullers and bearing press — BikeLab Studio · Carlos Eduardo Ravello Joo" width="608" height="760" loading="lazy">
+                <figcaption>The right instrument set for hub service: torque wrench, pullers, press and precision tools.</figcaption>
+            </figure>
+
+            <h2>7. The right grease (and the ABEC grade that doesn't matter)</h2>
+            <p>Two clarifications that save money. First: the <strong>ABEC grade</strong> (1, 3, 5, 7, 9) measures tolerances for industrial regimes of tens of thousands of rpm; your wheel spins at 200–400 rpm. On a bike, the steel of the races, the seals and the lubrication weigh far more than the ABEC number. Paying for ABEC 9 "to go faster" is throwing money away. Second: don't use bearing grease in the core or chain oil in the bearings. Each mechanism needs its own <a href="grease-tribology-en.html">rheology</a>; mixing them is the silent cause of half of all "noisy freehubs."</p>
+
+            <h2>8. Real maintenance intervals</h2>
+            <div class="data-box">
+                <span class="lbl">WHEN TO SERVICE THE HUB</span>
+                <p style="margin:0;color:#bbb;">Occasional use (dry road): inspect every <span class="hi">150–200 h</span> or yearly. Frequent use (MTB, gravel): every <span class="hi">75–100 h</span> or twice a year. After rain, mud or submersion washing: <span class="hi">immediate</span> inspection. Grease ages even if the bike doesn't roll: don't leave it more than <span class="hi">a year</span>.</p>
+            </div>
+            <p>The number-one enemy isn't mileage: it's <strong>water</strong>. A river crossing or a misdirected pressure wash drives more contamination in five minutes than a thousand dry kilometers. If you ride near the sea or in a humid climate, shorten the intervals; the same electrochemical principle that attacks the rest of the bike attacks here, as we saw in <a href="corrosion-bicycle-trujillo-en.html">corrosion and thermodynamics</a>.</p>
+
+            <div style="margin: 40px 0; padding: 22px 24px; border: 1px solid #333; border-left: 3px solid #666; background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <div style="font-family: var(--mono); font-size: 0.62rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">HUB &amp; BEARING SERVICE</div>
+                    <div style="font-size: 0.9rem; color: #aaa; line-height: 1.5;">Diagnosis, bearing replacement and preload adjustment with precision tooling.<br>BikeLab Studio.</div>
+                </div>
+                <a href="../mantenimiento-general-en.html" style="font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 18px; letter-spacing: 1.5px; white-space: nowrap;">VIEW SERVICE →</a>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+                <h2>Frequently Asked Questions</h2>
+                <h3>Is a little lateral play in the wheel normal?</h3>
+                <p>On cup-and-cone hubs (Shimano), a minimal amount on the bench can be correct: it disappears when you close the quick release or thru-axle, because the clamping force compresses the axle. On sealed cartridge hubs, perceptible play almost always means a worn bearing or a compressed spacer, and it's fixed by replacing the bearing, not by tightening.</p>
+                <h3>Can sealed cartridge bearings be serviced?</h3>
+                <p>Yes. You carefully lift the seal, degrease and refill with fresh grease to about 70%; this extends their life as long as the races have no pitting. If the race is marked, no grease will save it: replace the cartridge.</p>
+                <h3>What grease goes in the freehub core or ratchet system?</h3>
+                <p>A specific low-viscosity (fluid) grease, not the thick bearing grease. Bearing grease is too tacky and slows the return of the ratchet springs, causing skipping under load. In the core: a thin layer of light grease; in the bearings: NLGI 2.</p>
+                <h3>Does the bearing ABEC grade matter on a bicycle?</h3>
+                <p>Almost not at all. ABEC measures tolerances for 20,000–30,000 rpm; a wheel spins at 200–400 rpm. Steel, ball roundness, seals and lubrication matter more. A well-sealed ABEC 3 outlasts a poorly protected ABEC 9.</p>
+                <h3>How often should hubs be serviced?</h3>
+                <p>Occasional: every 150–200 h or yearly. Frequent: every 75–100 h or twice a year. After rain, mud or submersion washing, inspect immediately. Grease loses its properties over time: don't leave it more than a year.</p>
+            </div>
+
+            <div class="refs">
+                <h2>References</h2>
+                <ol>
+                    <li>Park Tool — <a href="https://www.parktool.com/en-us/blog/repair-help/hub-overhaul-and-adjustment" target="_blank" rel="noopener nofollow">Hub Overhaul and Adjustment</a>.</li>
+                    <li>DT Swiss — Hub and Ratchet technical manuals (engagement 18T=20°, 36T=10°, 54T=6.67°).</li>
+                    <li>Shimano Dealer's Manual — Hub Set (cup-and-cone adjustment, tolerances).</li>
+                    <li>Enduro Bearings / SKF — Bearing basics: the real relevance of ABEC and bearing selection.</li>
+                    <li>Cartridge bearing designations: 6802 (15×24×5), 6902 (15×28×7).</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 30px;"><a href="../index-en.html#tips" class="back-link">← BACK TO HOME</a></p>
+        </div>
+
+        <div class="signature">
+            BikeLab Studio Industrial Noir / Precision-mechanics research and service / Carlos Eduardo Ravello Joo
+        </div>
+    </div>
+</body>
+
+</html>
