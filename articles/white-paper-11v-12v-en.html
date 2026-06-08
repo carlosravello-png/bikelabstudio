@@ -9,11 +9,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MTB 11-Speed vs 12-Speed Comparative Analysis | BikeLab Studio">
     <meta name="twitter:description"
-        content="Technical white paper: thermodynamic, biomechanical and economic evaluation. Spicer model, Lodge &amp; Al-Sahlani, Monte Carlo 10,000 iterations.">
+        content="Is the 11-to-12-speed MTB upgrade worth it? The real friction difference is just 1–1.5 W and the 12-speed costs ~46% more over 5 years. Physical model + Monte Carlo.">
     <meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
     <title>MTB 11-Speed vs 12-Speed Comparative Analysis | BikeLab Studio</title>
     <meta name="description"
-        content="Technical white paper: thermodynamic, biomechanical and economic evaluation of MTB 11-speed vs 12-speed systems. Spicer model, Lodge &amp; Al-Sahlani data, Monte Carlo 10,000 iterations simulation.">
+        content="Is upgrading from 11 to 12 speeds on an MTB worth it? The real friction difference is just 1–1.5 W and the 12-speed costs ~46% more to maintain over 5 years. Physical friction model and Monte Carlo simulation.">
     <meta name="keywords"
         content="11-speed 12-speed drivetrain, MTB transmission, Spicer Lodge, chain efficiency, 10T 11T sprocket, Monte Carlo simulation">
     <meta name="author" content="Carlos Ravello">
@@ -735,6 +735,13 @@
             </div>
         </div>
 
+        <div class="methodology-box" style="border-left:4px solid var(--accent);">
+            <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// In short — before the equations</div>
+            <p style="margin-bottom:14px;"><strong>The question:</strong> does a 12-speed drivetrain actually make you faster than an 11-speed, or just poorer?</p>
+            <p style="margin-bottom:14px;"><strong>The short answer:</strong> in pure performance, the difference is almost nothing. The 12-speed's small 10T cog loses only <strong>1–1.5 W</strong> versus the 11T (at 200 W, 90 rpm), and on the large cogs —where you spend 80% of the effort climbing— both systems are <strong>identical</strong>. Total range rises just 10%, and that extra lives in the descending cog you rarely use. What really changes is your wallet: keeping a 12-speed alive costs about <strong>46% more over 5 years</strong>. For most riders a well-maintained 11-speed is still enough; the 12-speed earns its place in racing or specific cases.</p>
+            <p style="margin-bottom:0;"><strong>What follows, and why trust it:</strong> below is the full physical model —friction losses, chainline geometry, thermodynamics and marginal cost— calibrated against peer-reviewed studies (Spicer; Lodge &amp; Al-Sahlani) and run through 10,000 Monte Carlo simulations. This isn't shop opinion: it's the equation, with every assumption declared, so you can check each number yourself. If you just want the conclusion without the math, here's the <a href="11v-12v-mtb-worth-it.html" style="color:#a0a0a0;">reader-friendly version</a>.</p>
+        </div>
+
         <h2>EXECUTIVE SUMMARY</h2>
         <p><a href="11v-12v-mtb-worth-it.html" style="color:#888;text-decoration:underline;font-size:0.9em;">→
                 Reader-friendly summary: 11v vs 12v — Is the $245 extra worth it?</a> · <a
@@ -759,6 +766,8 @@
         </ul>
 
         <h2>1. Model Assumptions</h2>
+
+        <p style="color:#bbb;font-style:italic;">Before a single number, we have to be honest about what the model captures and what it leaves out: a result is worth exactly what its assumptions are worth. Here are mine, on the table, so you know how far to trust the figures that follow.</p>
 
         <div class="methodology-box">
             <h3>1.1 Mechanical Assumptions</h3>
@@ -862,6 +871,8 @@
 
         <h2>3. Thermodynamic Loss Modelling</h2>
 
+        <p style="color:#bbb;font-style:italic;">Here's the heart of the matter. The entire difference between 11- and 12-speed is born from one physical gesture: how sharply the chain must bend to wrap around a sprocket. Let's see exactly where those watts come from — first the equation, then the intuition.</p>
+
         <h3>3.1 Friction Loss Model (Spicer et al. 2001)</h3>
 
         <div class="equation">
@@ -876,6 +887,8 @@
             <li>R<sub>sprocket</sub>: Sprocket radius (function of tooth count)</li>
             <li>ω: Angular velocity (rad/s)</li>
         </ul>
+
+        <p><strong>In plain terms:</strong> the chain loses energy every time a link bends to enter and leave a sprocket, because the pin rubs inside the bushing while the chain is under tension. The smaller the sprocket (smaller R<sub>sprocket</sub>), the sharper that bend and the greater the loss — which is why the 10T, the smallest, generates the most friction. The formula just puts a number on that intuition: the loss grows with tension, with pin friction, with how sharply the chain bends, and with speed.</p>
 
         <h3>3.2 Lodge & Al-Sahlani (2019) Experimental Data</h3>
 
@@ -1054,6 +1067,8 @@
         </div>
 
         <h2>6. Marginal Cost–Efficiency Analysis</h2>
+
+        <p style="color:#bbb;font-style:italic;">So far, in pure physics, the 12-speed lost by very little. It's in the workshop —chain after chain, cassette after cassette, year after year— that this tiny difference stops being tiny. This section puts a price on it.</p>
 
         <h3>6.1 Five-Year Total Cost of Ownership (TCO)</h3>
 
@@ -1257,6 +1272,8 @@
         </ul>
 
         <h2>7. Conclusions</h2>
+
+        <p style="color:#bbb;font-style:italic;">What follows is the verdict in cold numbers. But if I had to tell a friend hesitating at the counter: the 12-speed isn't bad — it's oversold. If you already have a well-maintained 11-speed, keep it and spend the difference where you'll actually feel it: tires, a proper tune-up, or simply more miles.</p>
 
         <div class="conclusion-box">
             <h3>7.1 Main Findings</h3>

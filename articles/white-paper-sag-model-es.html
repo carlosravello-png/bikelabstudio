@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#000000">
   <title>Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB | BikeLab Studio</title>
   <meta name="description"
-    content="White Paper técnico: modelo de doble cámara politrópica para cálculo de presión de SAG en horquillas y amortiguadores MTB. Calibración inversa, validación Monte Carlo, amplia base de datos.">
+    content="¿Cuánta presión necesita tu suspensión MTB para el SAG correcto? Modelo físico de doble cámara para 132 horquillas y amortiguadores (Fox, RockShox, Öhlins…) con error medio de 1.66 psi y cálculo del SAG real de rueda. Validado con Monte Carlo.">
   <meta name="keywords"
     content="SAG MTB, suspensión mountain bike, modelo politrópico, calibración inversa, Monte Carlo, Fox, RockShox, SR Suntour, presión suspensión">
   <meta name="author" content="Carlos Ravello">
@@ -762,6 +762,13 @@
         Investigación Técnica</div>
     </div>
 
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// En corto — antes de las ecuaciones</div>
+      <p style="margin-bottom:14px;"><strong>La pregunta:</strong> ¿cuántos psi de aire necesita tu horquilla o amortiguador para quedar en el SAG correcto?</p>
+      <p style="margin-bottom:14px;"><strong>La respuesta corta:</strong> no se puede adivinar, porque el aire no se comprime de forma lineal — depende de tu peso, del recorrido del componente, del volumen de su cámara y de los tokens. Este modelo lo resuelve para <strong>132 suspensiones</strong> (Fox, RockShox, SR Suntour, Öhlins y más) con un <strong>error medio de 1.66 psi</strong> frente a las tablas oficiales de fábrica. Y hace algo que ninguna calculadora comercial hace: calcular el <strong>SAG real de la rueda</strong> en doble suspensión, no solo el del amortiguador.</p>
+      <p style="margin-bottom:0;"><strong>Lo que sigue, y por qué creerle:</strong> abajo está el modelo físico completo —doble cámara politrópica, calibración inversa contra datos de fabricante y validación Monte Carlo—, con todos sus supuestos declarados para que verifiques cada número. Si solo quieres la presión para tu bici, usa la <a href="sag-calculator-es.html" style="color:#a0a0a0;">Calculadora SAG</a> o la <a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#a0a0a0;">guía práctica</a>.</p>
+    </div>
+
     <h2>RESUMEN</h2>
     <p><a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#888;text-decoration:underline;font-size:0.9em">→
         Versión
@@ -795,6 +802,8 @@
     </ul>
 
     <h2>1. SUPUESTOS DEL MODELO</h2>
+
+    <p style="color:#bbb;font-style:italic;">Antes de un solo número: un modelo vale exactamente lo que valen sus supuestos. Aquí están los míos, declarados, para que sepas dónde confiar en el resultado y dónde es solo una aproximación razonable.</p>
 
     <div class="methodology-box">
       <h3>1.1 Supuestos Termodinámicos</h3>
@@ -854,6 +863,8 @@
 
     <h2>2. MODELO FÍSICO — FORMULACIÓN MATEMÁTICA</h2>
 
+    <p style="color:#bbb;font-style:italic;">Aquí empieza la física de verdad. Todo el modelo se sostiene en una sola idea: el aire de la cámara no obedece una regla lineal, sino una ley de compresión. Lo que viene traduce esa ley en la presión exacta que tu suspensión necesita.</p>
+
     <h3>2.1 Ley Politrópica de Compresión</h3>
     <p>El modelo fundamental para una cámara de aire bajo compresión politrópica es:</p>
 
@@ -870,6 +881,8 @@
       <br> x : Desplazamiento del pistón desde posición inicial [m]
       <br> γ : Exponente politrópico = propietario (valor no publicado)
     </div>
+
+    <p><strong>En palabras:</strong> a diferencia de un resorte de metal, el aire se pone más duro cuanto más lo comprimes — y no en proporción simple. La ley P·Vᵞ = constante dice justo eso: si reduces el volumen de la cámara a la mitad, la presión sube más del doble. Por eso dos horquillas de la misma marca pero distinto recorrido necesitan presiones distintas para el mismo SAG: cambia el volumen, cambia toda la curva. El modelo no inventa nada nuevo de física; solo resuelve esta ecuación con precisión para cada componente.</p>
 
     <h3>2.2 Fuerza Neta del Resorte Neumático</h3>
     <p>La fuerza neta ejercida por el sistema de cámara dual (positiva − negativa) en la posición x es:</p>
@@ -1031,6 +1044,8 @@
       Solo Air.</p>
 
     <h2>4. SAG DE RUEDA EN FULL-SUSPENSION</h2>
+
+    <p style="color:#bbb;font-style:italic;">Este es el punto donde el modelo se separa de todas las calculadoras comerciales. El SAG que mides en el amortiguador no es el SAG de tu rueda: entre uno y otro está la palanca del cuadro (el leverage ratio). Aquí se traduce de uno a otro — que es lo que de verdad sientes al rodar.</p>
 
     <h3>4.1 Distinción SAG de Shock vs SAG de Rueda</h3>
     <p>Un diferenciador técnico fundamental del presente modelo es la distinción entre el SAG del shock (medida directa

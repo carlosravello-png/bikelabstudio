@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#000000">
   <title>Dual Chamber Physical Model for SAG Calibration in MTB Suspensions | BikeLab Studio</title>
   <meta name="description"
-    content="Technical White Paper: polytropic dual-chamber model for calculating SAG pressure in MTB forks and shocks. Inverse calibration, Monte Carlo validation, large suspension capacity.">
+    content="How much air pressure does your MTB suspension need for the right SAG? Physical dual-chamber model for 132 forks and shocks (Fox, RockShox, Öhlins…) with a 1.66 psi mean error and real wheel-SAG calculation. Validated with Monte Carlo.">
   <meta name="keywords"
     content="MTB SAG, mountain bike suspension, polytropic model, inverse calibration, Monte Carlo, Fox, RockShox, SR Suntour, suspension pressure">
   <meta name="author" content="Carlos Ravello">
@@ -761,6 +761,13 @@
         Research Division</div>
     </div>
 
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// In short — before the equations</div>
+      <p style="margin-bottom:14px;"><strong>The question:</strong> how many psi of air does your fork or shock need to sit at the correct SAG?</p>
+      <p style="margin-bottom:14px;"><strong>The short answer:</strong> you can't guess it, because air doesn't compress linearly — it depends on your weight, the component's travel, its air-chamber volume and the tokens. This model solves it for <strong>132 suspensions</strong> (Fox, RockShox, SR Suntour, Öhlins and more) with a <strong>1.66 psi mean error</strong> against the factory pressure tables. And it does something no commercial calculator does: compute the <strong>real wheel SAG</strong> on full-suspension bikes, not just the shock's.</p>
+      <p style="margin-bottom:0;"><strong>What follows, and why trust it:</strong> below is the full physical model —polytropic dual chamber, inverse calibration against manufacturer data and Monte Carlo validation— with every assumption declared so you can verify each number. If you just want the pressure for your bike, use the <a href="sag-calculator-en.html" style="color:#a0a0a0;">SAG Calculator</a> or the <a href="how-to-set-mtb-suspension-sag-en.html" style="color:#a0a0a0;">practical guide</a>.</p>
+    </div>
+
     <h2>ABSTRACT</h2>
     <p><a href="how-to-set-mtb-suspension-sag-en.html" style="color:#888;text-decoration:underline;font-size:0.9em">→
         Outreach
@@ -795,6 +802,8 @@
     </ul>
 
     <h2>1. MODEL ASSUMPTIONS</h2>
+
+    <p style="color:#bbb;font-style:italic;">Before a single number: a model is worth exactly what its assumptions are worth. Here are mine, declared, so you know where to trust the result and where it's only a reasonable approximation.</p>
 
     <div class="methodology-box">
       <h3>1.1 Thermodynamic Assumptions</h3>
@@ -855,6 +864,8 @@
 
     <h2>2. PHYSICAL MODEL — MATHEMATICAL FORMULATION</h2>
 
+    <p style="color:#bbb;font-style:italic;">Here the real physics begins. The whole model rests on one idea: the air in the chamber doesn't follow a linear rule, but a compression law. What follows turns that law into the exact pressure your suspension needs.</p>
+
     <h3>2.1 Polytropic Compression Law</h3>
     <p>The fundamental model for an air chamber under polytropic compression is:</p>
 
@@ -871,6 +882,8 @@
       <br> x : Piston displacement from initial position [m]
       <br> γ : Polytropic exponent = proprietary (undisclosed)
     </div>
+
+    <p><strong>In plain terms:</strong> unlike a metal spring, air gets stiffer the more you compress it — and not in simple proportion. The law P·Vᵞ = constant says exactly that: halve the chamber volume and the pressure more than doubles. That's why two forks from the same brand but different travel need different pressures for the same SAG: change the volume and the whole curve changes. The model invents no new physics; it just solves this equation precisely for each component.</p>
 
     <h3>2.2 Net Pneumatic Spring Force</h3>
     <p>The net force exerted by the dual-chamber system (positive − negative) at position x is:</p>
@@ -1031,6 +1044,8 @@
     </p>
 
     <h2>4. WHEEL SAG IN FULL-SUSPENSION</h2>
+
+    <p style="color:#bbb;font-style:italic;">This is where the model parts ways with every commercial calculator. The SAG you measure at the shock is not your wheel's SAG: between them sits the frame's linkage (the leverage ratio). Here we translate one into the other — which is what you actually feel on the trail.</p>
 
     <h3>4.1 Distinction: Shock SAG vs Wheel SAG</h3>
     <p>A fundamental technical differentiator of the present model is the distinction between the shock SAG (direct
