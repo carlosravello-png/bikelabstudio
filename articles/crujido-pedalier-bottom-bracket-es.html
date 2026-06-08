@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Crujido del Pedalier (Bottom Bracket): Diagnóstico y Solución Real | BikeLab Studio</title>
+    <meta name="description"
+        content="El crujido del pedalier casi nunca es el pedalier. Diagnóstico por descarte, press-fit vs. roscado, por qué la grasa empeora el press-fit, compuestos correctos (Loctite 609/641/480) y pares reales (35 N·m).">
+    <meta name="keywords"
+        content="crujido pedalier, bottom bracket creaking, press-fit vs roscado, cruje al pedalear de pie, loctite press-fit, BB30 BSA T47, eliminar ruido pedalier">
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html">
+    <link rel="alternate" hreflang="es" href="crujido-pedalier-bottom-bracket-es.html">
+    <link rel="alternate" hreflang="en" href="bottom-bracket-creak-fix-en.html">
+    <link rel="alternate" hreflang="x-default" href="crujido-pedalier-bottom-bracket-es.html">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="El Crujido del Pedalier (Bottom Bracket): Diagnóstico y Solución Real | BikeLab Studio">
+    <meta property="og:description"
+        content="Casi nunca es el pedalier. Diagnóstico por descarte, press-fit vs. roscado, compuestos correctos y pares reales.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/pedalier-copas-roscadas.webp">
+    <meta property="og:type" content="article">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="El Crujido del Pedalier (Bottom Bracket): Diagnóstico y Solución Real">
+    <meta name="twitter:description" content="Casi nunca es el pedalier. Diagnóstico, press-fit vs. roscado, compuestos y pares reales.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/pedalier-copas-roscadas.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TechArticle", "HowTo"],
+      "proficiencyLevel": "Advanced",
+      "locationCreated": "Trujillo, Perú",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html" },
+      "headline": "El Crujido del Pedalier (Bottom Bracket): Diagnóstico y Solución Real",
+      "name": "Diagnóstico y solución del crujido del pedalier",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "es-PE",
+      "description": "Por qué el crujido del pedalier casi nunca es el pedalier, diagnóstico por descarte, press-fit vs. roscado, compuestos correctos y pares de apriete reales.",
+      "image": "https://www.bikelabstudio.com/articles/images/pedalier-copas-roscadas.webp",
+      "totalTime": "PT45M",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#guias-mantenimiento",
+        "name": "Guías de Mantenimiento BikeLab Studio",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "datePublished": "2026-06-08",
+      "dateModified": "2026-06-08"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/pedalier-copas-roscadas.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Cazoletas roscadas de pedalier desmontadas durante servicio. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/pedalier-sucio-diagnostico.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Eje de pedalier contaminado: el origen frecuente del crujido. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "description": "Investigador independiente. Fundador de BikeLab Studio, Zoovet Travel y Katsudōmo. Arquitecto de identidades digitales verificables con nodos semánticos entrelazados."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "description": "Framework metodológico de tres ejes aplicado al diagnóstico físico de sistemas ciclistas: (E) mecanismos de degradación energética, (C) cuantificación de señales físicas de deterioro, (P) criterios de mantenimiento y longevidad."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" },
+      "sameAs": ["https://www.linkedin.com/company/bikelabstudio"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.bikelabstudio.com/#carlos-ravello",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿El crujido al pedalear siempre es el pedalier?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Si cruje sobre todo sentado, lo más probable es la tija de sillín. Al pedalear de pie, el cuadro se tuerce y propaga el sonido por los tubos; en muchos casos el culpable real son las roscas secas de los pedales, las calas, los tornillos de los platos o el núcleo de la rueda trasera. El pedalier se revisa al final, por descarte." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Le pongo grasa al pedalier press-fit para que no cruje?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No en press-fit. La grasa lubrica el micro-movimiento de la cazoleta dentro del cuadro y a medio plazo acelera el desgaste por fretting y vuelve el crujido. En press-fit se usa compuesto de retención anaeróbico (Loctite 609 metal-metal, 641 desmontable, 480 con copas de composite); en cuadro de carbono se requiere activador. La grasa o el antiagarre son para roscas (BSA/T47)." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Apretar más fuerte elimina el crujido?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, y suele dañar. Las cazoletas roscadas van a su par (~35–50 N·m), no más. La precarga de la biela (dial o arandela ondulada) solo quita el juego lateral con muy poco par (1–2 N·m); sobreapretarla mete carga axial sobre los rodamientos y los destruye por fricción. Apretar de más no calla: rompe." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Press-fit es un mal diseño que siempre cruje?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No necesariamente. El crujido no nace del sistema sino de la tolerancia del cuadro: una caja ovalada, no perpendicular o sobredimensionada provoca micro-movimiento. Con tolerancias correctas, instalación con compuesto adecuado y, si hace falta, cazoletas que se enroscan entre sí (thread-together) o shims, un press-fit puede ser tan silencioso como un roscado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo distingo si cruje la cazoleta o el rodamiento?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Quita las bielas y gira el rodamiento con el dedo: si se siente áspero o con saltos, el cartucho está dañado (pitting) y se cambia. Si gira suave pero la bici cruje al aplicar fuerza real (subiendo o de pie), la cazoleta se mueve dentro del cuadro: ahí la solución es compuesto de retención o ajustar la tolerancia, no cambiar el rodamiento." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html" },
+        { "@type": "ListItem", "position": 3, "name": "El Crujido del Pedalier (Bottom Bracket)", "item": "https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html" }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --surface:#0c0c0c; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.7; }
+        body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity:0.025; pointer-events:none; z-index:1000; }
+        .container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .back-link { display:inline-flex; align-items:center; color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:0.7rem; margin-bottom:40px; letter-spacing:1px; padding:12px 0; min-height:44px; }
+        .back-link:hover { color:var(--text); }
+        .data-label { font-family:var(--mono); font-size:0.65rem; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; display:block; }
+        h1 { font-size:2.5rem; line-height:1.2; margin-bottom:20px; letter-spacing:-1px; }
+        .meta { font-family:var(--mono); font-size:0.75rem; color:#666; margin-bottom:40px; }
+        .featured-image { width:100%; height:420px; object-fit:cover; margin:40px 0; border:1px solid #222; }
+        figure { margin:34px 0; }
+        figure img { width:100%; height:auto; border:1px solid #222; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.65rem; color:#666; text-align:center; margin-top:10px; letter-spacing:0.5px; }
+        .content { font-size:1rem; color:#ccc; }
+        .content p { margin-bottom:20px; }
+        .content h2 { font-size:1.5rem; margin:46px 0 18px 0; color:var(--text); }
+        .content h3 { font-size:1.1rem; margin:26px 0 10px; color:var(--text); }
+        .content strong { color:var(--text); }
+        .content a { color:#a0a0a0; }
+        .content a:hover { color:#fff; }
+        .answer-box { margin:25px 0; padding:18px 22px; border-left:3px solid #888; background:#0a0a0a; }
+        .answer-box .lbl { font-family:var(--mono); font-size:0.65rem; color:#888; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .data-box { background:#0d0d14; border-left:3px solid #4444aa; padding:20px; margin:30px 0; }
+        .data-box .lbl { color:#7777cc; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .data-box .hi { color:#fff; font-weight:bold; }
+        .warn-box { background:#1a0a0a; border-left:3px solid #ff4444; padding:20px; margin:30px 0; }
+        .warn-box .lbl { color:#ff6b6b; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .warn-box p { color:#cc9999; margin-bottom:8px; }
+        .step { border-left:2px solid #2a2a2a; padding:4px 0 4px 18px; margin:34px 0; }
+        .step .num { font-family:var(--mono); font-size:0.62rem; color:#777; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:6px; }
+        .step h3 { margin-top:0; }
+        table.cmp { width:100%; border-collapse:collapse; margin:30px 0; font-size:0.85rem; }
+        table.cmp th, table.cmp td { border:1px solid #242424; padding:10px 12px; text-align:left; vertical-align:top; }
+        table.cmp th { background:#0d0d0d; color:#aaa; font-family:var(--mono); font-size:0.62rem; letter-spacing:1px; text-transform:uppercase; }
+        table.cmp td { color:#bbb; }
+        .ok { color:#6bffb8; font-weight:bold; } .no { color:#ff6b6b; font-weight:bold; }
+        .refs { margin-top:40px; padding-top:20px; border-top:1px solid #222; font-size:0.8rem; color:#888; }
+        .refs h2 { font-size:0.7rem; font-family:var(--mono); letter-spacing:2px; color:#666; text-transform:uppercase; margin-bottom:12px; }
+        .refs ol { margin-left:18px; } .refs li { margin-bottom:8px; } .refs a { color:#888; }
+        .signature { margin-top:60px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.8rem; color:#666; line-height:1.8; }
+        .nav-toggle { display:none; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar-left { display:flex; align-items:center; gap:10px; }
+        .nav-menu-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.22em; color:#555; text-transform:uppercase; }
+        .nav-trigger { width:44px; height:44px; min-width:44px; min-height:44px; cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; }
+        .nav-trigger .line { display:block; width:18px; height:1px; background:var(--text); transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform:translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity:0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform:translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position:fixed; inset:0; background:#080808; z-index:1002; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity:1; visibility:visible; pointer-events:auto; }
+        .nav-overlay-backdrop { position:absolute; inset:0; cursor:pointer; }
+        .nav-overlay nav { text-align:center; position:relative; z-index:1; width:100%; }
+        .nav-overlay a { display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:3px; color:var(--text); text-decoration:none; padding:14px 24px; min-height:44px; border-bottom:1px solid #1a1a1a; }
+        .nav-overlay a:first-of-type { border-top:1px solid #1a1a1a; }
+        .nav-overlay a:hover { color:#fff; border-color:#333; }
+        .nav-lang a { font-family:var(--mono); font-size:0.62rem; color:var(--text); text-decoration:none; letter-spacing:2px; border:1px solid var(--accent); padding:6px 12px; background:rgba(0,0,0,0.8); }
+        .nav-lang a:hover { background:var(--text); color:var(--bg); }
+        .wa-float { position:fixed; bottom:30px; right:30px; border:1px solid #333; padding:11px 16px; min-height:44px; min-width:44px; color:var(--text); text-decoration:none; font-family:var(--mono); font-size:0.6rem; letter-spacing:2px; z-index:1001; background:var(--bg); display:flex; align-items:center; gap:8px; }
+        .wa-float:hover { background:var(--text); color:var(--bg); border-color:var(--text); }
+        .container { padding-top:80px; }
+        @media (max-width:600px) { .nav-bar { top:max(8px,env(safe-area-inset-top)); right:max(8px,env(safe-area-inset-right)); left:auto; width:auto; padding:8px 12px; border:1px solid #222; border-radius:2px; } .nav-menu-label { display:none; } h1 { font-size:1.9rem; } .featured-image { height:240px; } table.cmp { font-size:0.78rem; } }
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENÚ</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú de navegación">
+            <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="nav-lang"><a href="bottom-bracket-creak-fix-en.html">EN</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index.html">INICIO</a>
+        <a href="../servicios.html">SERVICIOS</a>
+        <a href="../tubelizado-es.html">TUBELIZADO</a>
+        <a href="../suspension-es.html">SUSPENSIÓN</a>
+        <a href="../centrado-ruedas-es.html">CENTRADO</a>
+        <a href="../purgado-frenos-es.html">PURGADO</a>
+        <a href="../mantenimiento-general-es.html">MANT. GENERAL</a>
+        <a href="../mantenimiento-preventivo-es.html">MANT. PREVENTIVO</a>
+        <a href="../index.html#science">DATOS TÉCNICOS</a>
+        <a href="../index.html#tips">TIPS</a>
+        <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">UBICACIÓN</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20mi%20bicicleta%20cruje%20del%20pedalier" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
+
+    <div class="container">
+        <a href="../index.html#tips" class="back-link">← VOLVER AL INICIO</a>
+        <span class="data-label">MECÁNICA AVANZADA // GUÍA TÉCNICA</span>
+        <h1>El Crujido del Pedalier (Bottom Bracket): Diagnóstico y Solución Real</h1>
+        <div class="meta">Actualizado: Junio 2026 // Lectura: 9 min</div>
+
+        <img src="images/pedalier-copas-roscadas.webp"
+            alt="Cazoletas roscadas de pedalier desmontadas durante servicio — BikeLab Studio · Carlos Eduardo Ravello Joo"
+            class="featured-image" width="1000" height="1250" loading="eager" fetchpriority="high">
+
+        <div class="content">
+
+            <div class="answer-box">
+                <span class="lbl">// RESPUESTA DIRECTA</span>
+                <p style="margin:0;">El crujido del pedalier <strong>casi nunca es el pedalier</strong>: si suena sentado suele ser la tija; de pie, el cuadro propaga el ruido y el origen real suele estar en pedales, calas, platos o el núcleo trasero. Diagnostica por descarte. En el BB: <strong>roscado</strong> = limpiar y grasa/antiagarre a <strong>~35 N·m</strong>; <strong>press-fit</strong> = nada de grasa, usar compuesto de retención (Loctite 609/641/480) y, en carbono, activador. Apretar de más no calla: rompe.</p>
+            </div>
+
+            <p>Pocos ruidos desesperan tanto como el crujido que aparece al pedalear con fuerza. Y pocos se diagnostican tan mal: la mayoría desmonta el pedalier tres veces, sigue sonando, y nadie le explicó que el cuadro entero funciona como caja de resonancia. Esta guía separa la física real del crujido del mito de taller, con el procedimiento por descarte y la química correcta para cada tipo de pedalier.</p>
+
+            <h2>1. El verdadero responsable: ¿es realmente el pedalier?</h2>
+            <p>Antes de tocar nada, ubica <strong>cuándo</strong> cruje. Es la pista más valiosa.</p>
+            <p><strong>Si cruje sentado</strong>, pedaleando suave, la probabilidad de que sea la <a href="tija-atascada-corrosion-galvanica-es.html">tija de sillín</a> es altísima: la interfaz tija–cuadro micro-desliza con tu peso. <strong>Si cruje de pie</strong>, bajo torque, el bastidor se tuerce lateralmente y el sonido viaja por los tubos huecos; ahí entran los falsos culpables.</p>
+            <div class="answer-box" style="border-left-color:#4a9e6b">
+                <span class="lbl" style="color:#6bffb8">// LOS FALSOS CULPABLES (REVÍSALOS PRIMERO)</span>
+                <p style="margin:0;">Antes del pedalier: <strong>roscas de los pedales</strong> secas (engrásalas), <strong>calas</strong> y la interfaz zapatilla–pedal, <strong>tornillos de los platos</strong> (chainring bolts), <strong>tija</strong>, dirección/potencia, y el <a href="mantenimiento-masas-bujes-bicicleta-es.html">núcleo de la rueda trasera</a> (cambia la rueda de prueba y si el ruido se va, era la rueda). El pedalier se revisa al final.</p>
+            </div>
+
+            <figure>
+                <img src="images/pedalier-banco-transmision.webp" alt="Zona del pedalier y transmisión en el banco de trabajo — BikeLab Studio · Carlos Eduardo Ravello Joo" width="700" height="1243" loading="lazy">
+                <figcaption>El crujido "de abajo" rara vez nace donde suena: el cuadro propaga el ruido por toda la transmisión.</figcaption>
+            </figure>
+
+            <h2>2. Press-fit vs. roscado: por qué importa para el ruido</h2>
+            <p>Hay dos familias de pedalier y crujen por causas distintas. El <strong>roscado</strong> (BSA, ITA, T47) atornilla las cazoletas al cuadro: si cruje, casi siempre es rosca seca o par insuficiente. El <strong>press-fit</strong> (BB30, PF30, BB86/BB92) introduce las cazoletas a presión: si cruje, es por tolerancia del cuadro —una caja ovalada, no perpendicular o sobredimensionada— que deja micro-mover la cazoleta.</p>
+            <table class="cmp">
+                <thead><tr><th>Estándar</th><th>Tipo</th><th>Diámetro caja</th><th>Notas</th></tr></thead>
+                <tbody>
+                    <tr><td>BSA (inglés)</td><td class="ok">Roscado 1.37"×24T</td><td>34,8 mm</td><td>El más fácil de mantener silencioso</td></tr>
+                    <tr><td>T47</td><td class="ok">Roscado</td><td>47 mm</td><td>Roscado moderno para ejes de 30 mm</td></tr>
+                    <tr><td>BB30 / PF30</td><td>Press-fit</td><td>42 mm</td><td>Tolerancia muy estricta; sensible al crujido</td></tr>
+                    <tr><td>BB86 / BB92</td><td>Press-fit</td><td>41 mm</td><td>Cazoletas de resina/aluminio a presión</td></tr>
+                </tbody>
+            </table>
+            <p>Conviene desmontar el mito: <strong>press-fit no es "basura"</strong>. El crujido no nace del concepto sino de la precisión de fabricación del cuadro. Con tolerancias correctas, un press-fit es tan silencioso como un roscado; con una caja mal mecanizada, ningún sistema se salva.</p>
+
+            <figure>
+                <img src="images/pedalier-despiece-cenital.webp" alt="Despiece del pedalier y bielas en vista cenital — BikeLab Studio · Carlos Eduardo Ravello Joo" width="512" height="640" loading="lazy">
+                <figcaption>Despiece completo: cada interfaz —cazoleta, eje, plato, rodamiento— es un emisor potencial de ruido.</figcaption>
+            </figure>
+
+            <h2>3. La física del crujido: micro-movimiento vs. rodamiento</h2>
+            <p>Aquí está la distinción que casi ninguna guía hace y que decide la solución. Hay <strong>dos crujidos distintos</strong>:</p>
+            <p><strong>Micro-movimiento (fretting).</strong> Dos superficies en contacto que se deslizan unas micras bajo carga y vuelven: la cazoleta contra el cuadro, la rosca floja, el plato contra la araña. Genera un chasquido seco bajo torque y desaparece al quitar la carga. La cura no es lubricar el movimiento —eso lo perpetúa— sino <strong>bloquearlo</strong>.</p>
+            <p><strong>Fallo del rodamiento.</strong> El cartucho tiene picaduras (pitting) o contaminación: gira áspero, con saltos, y suele venir con juego. Aquí no hay compuesto que valga: se reemplaza.</p>
+            <div class="warn-box">
+                <span class="lbl">EL ERROR QUE PERPETÚA EL CRUJIDO</span>
+                <p><strong>Engrasar un press-fit que se mueve.</strong> La grasa reduce la fricción del micro-deslizamiento, facilita el fretting y desgasta el alojamiento de carbono o aluminio. A las pocas salidas la grasa migra, entra aire y el crujido vuelve peor. Press-fit que cruje = compuesto de retención, no grasa.</p>
+            </div>
+
+            <figure>
+                <img src="images/pedalier-sucio-diagnostico.webp" alt="Eje de pedalier contaminado, origen frecuente del crujido — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="2486" loading="lazy">
+                <figcaption>Contaminación en la interfaz del eje: suciedad y grasa vieja son origen frecuente de ruido bajo carga.</figcaption>
+            </figure>
+
+            <h2>4. Diagnóstico paso a paso (por descarte)</h2>
+            <div class="step"><span class="num">Paso 1</span><h3>¿Sentado o de pie?</h3><p>Sentado → sospecha tija primero. De pie → BB o falsos culpables. Esta sola observación ahorra horas.</p></div>
+            <div class="step"><span class="num">Paso 2</span><h3>Pedales y calas</h3><p>Desmonta los pedales, limpia y engrasa las roscas, revisa calas y tacos. Es la causa más común y más barata.</p></div>
+            <div class="step"><span class="num">Paso 3</span><h3>Platos y dirección</h3><p>Revisa el par de los tornillos de los platos y la interfaz de la araña; comprueba dirección y potencia.</p></div>
+            <div class="step"><span class="num">Paso 4</span><h3>Rueda trasera (núcleo)</h3><p>Monta otra rueda y rueda de pie. Si el crujido desaparece, era el <a href="mantenimiento-masas-bujes-bicicleta-es.html">núcleo/masa</a>, no el pedalier.</p></div>
+            <div class="step"><span class="num">Paso 5</span><h3>El pedalier, al final</h3><p>Recién ahora desmonta bielas y cazoletas. Gira el rodamiento con el dedo: áspero = cambiar; suave = es micro-movimiento de la interfaz.</p>
+                <figure>
+                    <img src="images/caja-pedalier-bb-cuadro.webp" alt="Caja de pedalier (BB) del cuadro en diagnóstico — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="1050" loading="lazy">
+                    <figcaption>Paso 5: la caja del cuadro a la vista. Aquí se mide ovalización y se decide química.</figcaption>
+                </figure>
+            </div>
+
+            <h2>5. La solución correcta según el sistema</h2>
+            <p>Limpieza absoluta primero: desengrasa roscas o alojamiento con alcohol isopropílico hasta dejarlo seco. Luego, el compuesto correcto.</p>
+            <div class="data-box">
+                <span class="lbl">QUÉ APLICAR — CADA SISTEMA EL SUYO</span>
+                <p style="margin:0;color:#bbb;"><strong class="hi">Roscado (BSA/ITA/T47):</strong> grasa o antiagarre en la rosca; en titanio, antiagarre obligatorio. <strong class="hi">Press-fit BB30 (metal-metal):</strong> Loctite 609 (retención, rellena hasta ~0,13 mm). <strong class="hi">Press-fit desmontable / copas de composite (PF30/BB86):</strong> Loctite 641 o 480. <strong class="hi">Cuadro de carbono:</strong> el carbono es inerte; el anaeróbico necesita <span class="hi">activador/imprimación</span> (p. ej. 7649) para curar. Alternativa robusta: cazoletas que se enroscan entre sí (thread-together) o shims si la caja está sobredimensionada.</p>
+            </div>
+            <figure>
+                <img src="images/eje-biela-pedalier-engrase.webp" alt="Eje de biela y pedalier preparado durante el montaje — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="1050" loading="lazy">
+                <figcaption>Montaje del eje: superficie limpia y el producto correcto según el sistema, no "grasa para todo".</figcaption>
+            </figure>
+
+            <h2>6. Pares de apriete reales</h2>
+            <table class="cmp">
+                <thead><tr><th>Componente</th><th>Par</th><th>Nota</th></tr></thead>
+                <tbody>
+                    <tr><td>Cazoletas roscadas (BSA/T47)</td><td class="ok">35–50 N·m</td><td>A su par, no más</td></tr>
+                    <tr><td>Precarga de biela (dial/arandela)</td><td>1–2 N·m</td><td>Solo quitar juego lateral</td></tr>
+                    <tr><td>Tornillos de pinza de biela</td><td>12–14 N·m</td><td>Shimano Hollowtech</td></tr>
+                    <tr><td>Tornillos de plato</td><td>Según fabricante</td><td>Limpiar y aplicar fijador medio</td></tr>
+                </tbody>
+            </table>
+            <div class="warn-box">
+                <span class="lbl">NO APRIETES PARA CALLAR</span>
+                <p>Sobreapretar la precarga mete carga axial sobre rodamientos rígidos de bolas y los destruye por fricción. El dial de precarga solo quita el juego; el par real lo llevan las cazoletas. Apretar de más no silencia: arruina.</p>
+            </div>
+
+            <div style="margin: 40px 0; padding: 22px 24px; border: 1px solid #333; border-left: 3px solid #666; background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <div style="font-family: var(--mono); font-size: 0.62rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">DIAGNÓSTICO DE RUIDOS Y SERVICIO DE PEDALIER</div>
+                    <div style="font-size: 0.9rem; color: #aaa; line-height: 1.5;">Localización del crujido por descarte, servicio de BB roscado y press-fit con compuesto correcto.<br>BikeLab Studio.</div>
+                </div>
+                <a href="../mantenimiento-general-es.html" style="font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 18px; letter-spacing: 1.5px; white-space: nowrap;">VER SERVICIO →</a>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+                <h2>Preguntas Frecuentes</h2>
+                <h3>¿El crujido al pedalear siempre es el pedalier?</h3>
+                <p>No. Si cruje sobre todo sentado, lo más probable es la tija de sillín. Al pedalear de pie, el cuadro se tuerce y propaga el sonido; en muchos casos el culpable real son las roscas secas de los pedales, las calas, los tornillos de los platos o el núcleo de la rueda trasera. El pedalier se revisa al final, por descarte.</p>
+                <h3>¿Le pongo grasa al pedalier press-fit para que no cruja?</h3>
+                <p>No en press-fit. La grasa lubrica el micro-movimiento de la cazoleta y a medio plazo acelera el fretting y devuelve el crujido. En press-fit se usa compuesto de retención (Loctite 609 metal-metal, 641 desmontable, 480 con copas de composite); en carbono se requiere activador. La grasa o el antiagarre son para roscas (BSA/T47).</p>
+                <h3>¿Apretar más fuerte elimina el crujido?</h3>
+                <p>No, y suele dañar. Las cazoletas roscadas van a su par (~35–50 N·m), no más. La precarga de la biela solo quita el juego lateral con muy poco par (1–2 N·m); sobreapretarla mete carga axial sobre los rodamientos y los destruye. Apretar de más no calla: rompe.</p>
+                <h3>¿Press-fit es un mal diseño que siempre cruje?</h3>
+                <p>No necesariamente. El crujido no nace del sistema sino de la tolerancia del cuadro: una caja ovalada, no perpendicular o sobredimensionada provoca micro-movimiento. Con tolerancias correctas, compuesto adecuado y, si hace falta, cazoletas thread-together o shims, un press-fit puede ser tan silencioso como un roscado.</p>
+                <h3>¿Cómo distingo si cruje la cazoleta o el rodamiento?</h3>
+                <p>Quita las bielas y gira el rodamiento con el dedo: si se siente áspero o con saltos, el cartucho está dañado y se cambia. Si gira suave pero la bici cruje al aplicar fuerza real, la cazoleta se mueve dentro del cuadro: la solución es compuesto de retención o ajustar la tolerancia, no cambiar el rodamiento.</p>
+            </div>
+
+            <div class="refs">
+                <h2>Referencias</h2>
+                <ol>
+                    <li>Park Tool — <a href="https://www.parktool.com/en-us/blog/repair-help/troubleshooting-a-noisy-drivetrain" target="_blank" rel="noopener nofollow">Troubleshooting a Noisy Drivetrain</a>.</li>
+                    <li>Hambini Engineering — Bottom bracket press-fit and creaking: análisis de tolerancias; grasa vs. compuesto de retención.</li>
+                    <li>Fit Werx / BBInfinite — Causas de caja no perpendicular/ovalada; Loctite 609 y compresión radial.</li>
+                    <li>Henkel Loctite — Fichas técnicas 609 / 641 / 480 y activador 7649 (retención y curado en sustratos inertes).</li>
+                    <li>Estándares de caja de pedalier (BSA 1.37"×24T, T47, BB30 42 mm, BB86/BB92 41 mm) y pares de apriete de fabricantes (Shimano, SRAM).</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 30px;"><a href="../index.html#tips" class="back-link">← VOLVER AL INICIO</a></p>
+        </div>
+
+        <div class="signature">
+            BikeLab Studio Industrial Noir / Investigación y servicio de mecánica de precisión / Carlos Eduardo Ravello Joo
+        </div>
+    </div>
+</body>
+
+</html>
