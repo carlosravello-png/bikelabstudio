@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento de Masas (Bujes) de Bicicleta: Guía Paso a Paso | BikeLab Studio</title>
+    <meta name="description"
+        content="Guía técnica de mantenimiento de bujes: cartucho vs. cono-y-bola, la física de la precarga que casi nadie explica, diagnóstico de juego y rugosidad, engrase del núcleo e intervalos reales. Con galería del desarme.">
+    <meta name="keywords"
+        content="mantenimiento bujes bicicleta, mantenimiento masas, rodamientos cartucho vs cono y bola, juego lateral rueda, grasa núcleo ratchet, cuándo cambiar rodamientos buje">
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html">
+    <link rel="alternate" hreflang="es" href="mantenimiento-masas-bujes-bicicleta-es.html">
+    <link rel="alternate" hreflang="en" href="bicycle-hub-bearing-maintenance-en.html">
+    <link rel="alternate" hreflang="x-default" href="mantenimiento-masas-bujes-bicicleta-es.html">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Mantenimiento de Masas (Bujes) de Bicicleta: Guía Paso a Paso | BikeLab Studio">
+    <meta property="og:description"
+        content="Cartucho vs. cono-y-bola, la física de la precarga, diagnóstico real y engrase del núcleo. Con galería del desarme.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <meta property="og:type" content="article">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mantenimiento de Masas (Bujes) de Bicicleta: Guía Paso a Paso">
+    <meta name="twitter:description" content="Cartucho vs. cono-y-bola, física de la precarga, diagnóstico y engrase del núcleo. Galería del desarme.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TechArticle", "HowTo"],
+      "proficiencyLevel": "Advanced",
+      "locationCreated": "Trujillo, Perú",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html" },
+      "headline": "Mantenimiento de Masas (Bujes) de Bicicleta: Guía Paso a Paso",
+      "name": "Mantenimiento de masas (bujes) de bicicleta",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "es-PE",
+      "description": "Mantenimiento de bujes: cartucho vs. cono-y-bola, física de la precarga, diagnóstico de juego y rugosidad, engrase del núcleo e intervalos reales.",
+      "image": "https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp",
+      "totalTime": "PT1H",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#guias-mantenimiento",
+        "name": "Guías de Mantenimiento BikeLab Studio",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "datePublished": "2026-06-08",
+      "dateModified": "2026-06-08"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Núcleo/freehub y cuerpo de la masa trasera con rotor de freno de disco. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/maza-despiece-rodamientos.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Despiece de la maza: cuerpo, rodamientos y núcleo. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "description": "Investigador independiente. Fundador de BikeLab Studio, Zoovet Travel y Katsudōmo. Arquitecto de identidades digitales verificables con nodos semánticos entrelazados."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "description": "Framework metodológico de tres ejes aplicado al diagnóstico físico de sistemas ciclistas: (E) mecanismos de degradación energética, (C) cuantificación de señales físicas de deterioro, (P) criterios de mantenimiento y longevidad."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" },
+      "sameAs": ["https://www.linkedin.com/company/bikelabstudio"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.bikelabstudio.com/#carlos-ravello",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es normal un pequeño juego lateral en la rueda?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En bujes de cono-y-bola (Shimano), un juego lateral mínimo en el banco puede ser correcto: desaparece al cerrar el cierre rápido o el eje pasante, porque la fuerza de sujeción comprime el eje. En bujes de cartucho sellado, el juego perceptible casi siempre indica un rodamiento desgastado o un separador interno comprimido, y se corrige cambiando el rodamiento, no apretando." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los rodamientos sellados de cartucho se pueden mantener?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Se levanta con cuidado el retén de caucho, se desengrasa y se rellena con grasa nueva al ~70%; esto alarga su vida útil siempre que las pistas no tengan picaduras (pitting). Si la pista está marcada, no hay engrase que lo salve: se reemplaza el cartucho." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué grasa se usa en el núcleo o sistema de trinquetes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Una grasa específica de baja viscosidad (fluida), no la grasa espesa de rodamientos. La grasa de rodamiento, demasiado pegajosa, frena el retorno de los muelles del trinquete o los discos dentados y provoca saltos bajo carga. En el núcleo: capa fina de grasa ligera; en los rodamientos: grasa NLGI 2." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Importa el grado ABEC de los rodamientos en una bicicleta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Casi nada. El grado ABEC mide tolerancias geométricas para regímenes de 20.000–30.000 rpm; una rueda de bicicleta gira a 200–400 rpm. Pesan mucho más la calidad del acero, la redondez de las bolas, los sellos y la lubricación que el número ABEC. Un ABEC 3 bien sellado dura más que un ABEC 9 mal protegido." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cada cuánto se da servicio a las masas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Uso ocasional: inspección cada 150–200 h o anual. Uso frecuente: cada 75–100 h o semestral. En lluvia, barro o lavados por inmersión, revisión inmediata. La grasa pierde propiedades con el tiempo aunque no ruedes: no la dejes más de un año." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html" },
+        { "@type": "ListItem", "position": 3, "name": "Mantenimiento de Masas (Bujes)", "item": "https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html" }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --surface:#0c0c0c; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.7; }
+        body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity:0.025; pointer-events:none; z-index:1000; }
+        .container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .back-link { display:inline-flex; align-items:center; color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:0.7rem; margin-bottom:40px; letter-spacing:1px; padding:12px 0; min-height:44px; }
+        .back-link:hover { color:var(--text); }
+        .data-label { font-family:var(--mono); font-size:0.65rem; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; display:block; }
+        h1 { font-size:2.5rem; line-height:1.2; margin-bottom:20px; letter-spacing:-1px; }
+        .meta { font-family:var(--mono); font-size:0.75rem; color:#666; margin-bottom:40px; }
+        .featured-image { width:100%; height:420px; object-fit:cover; margin:40px 0; border:1px solid #222; }
+        figure { margin:34px 0; }
+        figure img { width:100%; height:auto; border:1px solid #222; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.65rem; color:#666; text-align:center; margin-top:10px; letter-spacing:0.5px; }
+        .content { font-size:1rem; color:#ccc; }
+        .content p { margin-bottom:20px; }
+        .content h2 { font-size:1.5rem; margin:46px 0 18px 0; color:var(--text); }
+        .content h3 { font-size:1.1rem; margin:26px 0 10px; color:var(--text); }
+        .content strong { color:var(--text); }
+        .content a { color:#a0a0a0; }
+        .content a:hover { color:#fff; }
+        .answer-box { margin:25px 0; padding:18px 22px; border-left:3px solid #888; background:#0a0a0a; }
+        .answer-box .lbl { font-family:var(--mono); font-size:0.65rem; color:#888; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .data-box { background:#0d0d14; border-left:3px solid #4444aa; padding:20px; margin:30px 0; }
+        .data-box .lbl { color:#7777cc; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .data-box .hi { color:#fff; font-weight:bold; }
+        .warn-box { background:#1a0a0a; border-left:3px solid #ff4444; padding:20px; margin:30px 0; }
+        .warn-box .lbl { color:#ff6b6b; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .warn-box p { color:#cc9999; margin-bottom:8px; }
+        .step { border-left:2px solid #2a2a2a; padding:4px 0 4px 18px; margin:34px 0; }
+        .step .num { font-family:var(--mono); font-size:0.62rem; color:#777; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:6px; }
+        .step h3 { margin-top:0; }
+        table.cmp { width:100%; border-collapse:collapse; margin:30px 0; font-size:0.85rem; }
+        table.cmp th, table.cmp td { border:1px solid #242424; padding:10px 12px; text-align:left; vertical-align:top; }
+        table.cmp th { background:#0d0d0d; color:#aaa; font-family:var(--mono); font-size:0.62rem; letter-spacing:1px; text-transform:uppercase; }
+        table.cmp td { color:#bbb; }
+        .ok { color:#6bffb8; font-weight:bold; } .no { color:#ff6b6b; font-weight:bold; }
+        .refs { margin-top:40px; padding-top:20px; border-top:1px solid #222; font-size:0.8rem; color:#888; }
+        .refs h2 { font-size:0.7rem; font-family:var(--mono); letter-spacing:2px; color:#666; text-transform:uppercase; margin-bottom:12px; }
+        .refs ol { margin-left:18px; } .refs li { margin-bottom:8px; } .refs a { color:#888; }
+        .signature { margin-top:60px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.8rem; color:#666; line-height:1.8; }
+        .nav-toggle { display:none; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar-left { display:flex; align-items:center; gap:10px; }
+        .nav-menu-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.22em; color:#555; text-transform:uppercase; }
+        .nav-trigger { width:44px; height:44px; min-width:44px; min-height:44px; cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; }
+        .nav-trigger .line { display:block; width:18px; height:1px; background:var(--text); transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform:translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity:0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform:translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position:fixed; inset:0; background:#080808; z-index:1002; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity:1; visibility:visible; pointer-events:auto; }
+        .nav-overlay-backdrop { position:absolute; inset:0; cursor:pointer; }
+        .nav-overlay nav { text-align:center; position:relative; z-index:1; width:100%; }
+        .nav-overlay a { display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:3px; color:var(--text); text-decoration:none; padding:14px 24px; min-height:44px; border-bottom:1px solid #1a1a1a; }
+        .nav-overlay a:first-of-type { border-top:1px solid #1a1a1a; }
+        .nav-overlay a:hover { color:#fff; border-color:#333; }
+        .nav-lang a { font-family:var(--mono); font-size:0.62rem; color:var(--text); text-decoration:none; letter-spacing:2px; border:1px solid var(--accent); padding:6px 12px; background:rgba(0,0,0,0.8); }
+        .nav-lang a:hover { background:var(--text); color:var(--bg); }
+        .wa-float { position:fixed; bottom:30px; right:30px; border:1px solid #333; padding:11px 16px; min-height:44px; min-width:44px; color:var(--text); text-decoration:none; font-family:var(--mono); font-size:0.6rem; letter-spacing:2px; z-index:1001; background:var(--bg); display:flex; align-items:center; gap:8px; }
+        .wa-float:hover { background:var(--text); color:var(--bg); border-color:var(--text); }
+        .container { padding-top:80px; }
+        @media (max-width:600px) { .nav-bar { top:max(8px,env(safe-area-inset-top)); right:max(8px,env(safe-area-inset-right)); left:auto; width:auto; padding:8px 12px; border:1px solid #222; border-radius:2px; } .nav-menu-label { display:none; } h1 { font-size:1.9rem; } .featured-image { height:240px; } table.cmp { font-size:0.78rem; } }
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENÚ</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú de navegación">
+            <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="nav-lang"><a href="bicycle-hub-bearing-maintenance-en.html">EN</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index.html">INICIO</a>
+        <a href="../servicios.html">SERVICIOS</a>
+        <a href="../tubelizado-es.html">TUBELIZADO</a>
+        <a href="../suspension-es.html">SUSPENSIÓN</a>
+        <a href="../centrado-ruedas-es.html">CENTRADO</a>
+        <a href="../purgado-frenos-es.html">PURGADO</a>
+        <a href="../mantenimiento-general-es.html">MANT. GENERAL</a>
+        <a href="../mantenimiento-preventivo-es.html">MANT. PREVENTIVO</a>
+        <a href="../index.html#science">DATOS TÉCNICOS</a>
+        <a href="../index.html#tips">TIPS</a>
+        <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTACTO</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">UBICACIÓN</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20consultar%20sobre%20servicio%20de%20masas" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
+
+    <div class="container">
+        <a href="../index.html#tips" class="back-link">← VOLVER AL INICIO</a>
+        <span class="data-label">MECÁNICA AVANZADA // GUÍA PASO A PASO</span>
+        <h1>Mantenimiento de Masas (Bujes) de Bicicleta: Guía Paso a Paso</h1>
+        <div class="meta">Actualizado: Junio 2026 // Lectura: 10 min</div>
+
+        <img src="images/masa-nucleo-freehub-detalle.webp"
+            alt="Núcleo/freehub y cuerpo de la masa trasera con rotor de freno — BikeLab Studio · Carlos Eduardo Ravello Joo"
+            class="featured-image" width="960" height="1280" loading="eager" fetchpriority="high">
+
+        <div class="content">
+
+            <div class="answer-box">
+                <span class="lbl">// RESPUESTA DIRECTA</span>
+                <p style="margin:0;">El mantenimiento de la masa depende de su tipo de rodamiento. Los <strong>cartuchos sellados</strong> (6802/6902) se engrasan levantando el retén y se <strong>reemplazan</strong> si tienen holgura o rugosidad; los de <strong>cono-y-bola</strong> (Shimano) se ajustan con precisión de fracción de vuelta. La clave en ambos es la <strong>precarga</strong>: ni juego, ni fricción. Grasa fina para el núcleo, grasa NLGI 2 para los rodamientos. Intervalo: 75–100 h en uso frecuente, 150–200 h ocasional.</p>
+            </div>
+
+            <p>La masa —el buje— es el componente que más rueda y menos se mira. Aguanta tu peso, las cargas laterales de cada curva y el agua que entra por cada lavado, y casi siempre se ignora hasta que “suena raro” o la rueda baila. Esta guía no es un “limpia y engrasa” genérico: es el porqué físico del fallo y el paso a paso real del servicio, con el desarme documentado en el banco.</p>
+
+            <h2>1. Cómo funciona una masa: cargas radiales y axiales</h2>
+            <p>Un rodamiento de bicicleta soporta dos tipos de carga a la vez. La <strong>carga radial</strong> es tu peso bajando por los radios hacia el eje. La <strong>carga axial</strong> es la fuerza lateral que aparece en cada curva, cada apoyo de pie, cada empuje fuera del plano de la rueda. Y aquí está el primer matiz que casi nadie explica: un rodamiento de cartucho radial está diseñado para carga radial pura; las cargas axiales desalineadas lo desgastan antes de tiempo. Por eso el diseño del buje —cuántos rodamientos, a qué distancia, con qué precarga— importa tanto como su calidad.</p>
+
+            <h2>2. Tipos de rodamiento: cartucho vs. cono-y-bola</h2>
+            <p>Existen dos familias y se mantienen de forma opuesta. Confundirlas es el error más común de las guías genéricas.</p>
+            <table class="cmp">
+                <thead><tr><th>Característica</th><th>Cartucho sellado</th><th>Cono-y-bola</th></tr></thead>
+                <tbody>
+                    <tr><td>Modelo típico</td><td>6802, 6902 (sellados 2RS)</td><td>Bolas sueltas + conos ajustables</td></tr>
+                    <tr><td>Ajustable</td><td class="no">No</td><td class="ok">Sí (fracción de vuelta)</td></tr>
+                    <tr><td>Mantenimiento</td><td>Engrasar bajo el retén; cambiar si hay holgura</td><td>Despiece, conteo de bolas, reajuste</td></tr>
+                    <tr><td>Carga axial</td><td>Menor tolerancia</td><td class="ok">Excelente (contacto angular)</td></tr>
+                    <tr><td>Resistencia a suciedad</td><td class="ok">Mejor (retenes)</td><td>Menor</td></tr>
+                    <tr><td>Reparable si la pista falla</td><td class="ok">Sí: se cambia el cartucho</td><td class="no">No: condena el cuerpo del buje</td></tr>
+                </tbody>
+            </table>
+            <p>Shimano sigue usando cono-y-bola en gama alta por una razón de ingeniería: el contacto angular reparte mejor las cargas oblicuas. El resto de la industria migró a cartucho por simplicidad de servicio. Ninguno es “mejor” en abstracto; son filosofías distintas.</p>
+
+            <figure>
+                <img src="images/rodamientos-sellos-nucleo-explosion.webp" alt="Rodamientos, sellos y núcleo de la maza en vista explotada — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                <figcaption>Vista explotada: cuerpo, rodamientos de cartucho, sellos y núcleo. Cada sello es una barrera contra el agua.</figcaption>
+            </figure>
+
+            <h2>3. Diagnóstico: las tres señales</h2>
+            <p>Antes de abrir nada, diagnostica. Hay tres síntomas y cada uno apunta a una causa distinta.</p>
+            <h3>Juego lateral</h3>
+            <p>Sujeta la rueda por la llanta y muévela de lado a lado contra el cuadro. Una holgura perceptible es <strong>juego</strong>. En cono-y-bola se corrige con precarga; en cartucho casi siempre significa rodamiento gastado.</p>
+            <h3>Rugosidad</h3>
+            <p>Quita la rueda, sujeta el eje con los dedos y gíralo despacio. Si no se siente perfectamente suave —si “raspa” o tiene puntos duros— hay <strong>brinelling</strong> (huellas de las bolas en la pista) o contaminación por arena. Eso no se engrasa: se cambia.</p>
+            <h3>Clic del núcleo</h3>
+            <p>Un “clac” intermitente bajo pedaleo no suele ser el rodamiento, sino el núcleo de rueda libre: trinquetes secos, muelle cansado o grasa equivocada. Lo tratamos abajo.</p>
+
+            <figure>
+                <img src="images/masa-rueda-trasera-montada.webp" alt="Masa trasera montada en la bicicleta con rotor de freno — BikeLab Studio · Carlos Eduardo Ravello Joo" width="640" height="1138" loading="lazy">
+                <figcaption>El diagnóstico empieza con la rueda montada: juego, rugosidad y ruido se sienten antes de desarmar.</figcaption>
+            </figure>
+
+            <h2>4. El error crítico: la física de la precarga</h2>
+            <p>Aquí está lo que casi ninguna guía dice y donde se arruinan más bujes. La <strong>precarga</strong> es la tensión con la que se enfrentan las pistas del rodamiento. Ni demasiada ni poca:</p>
+            <div class="warn-box">
+                <span class="lbl">EL MITO QUE FUNDE BUJES</span>
+                <p><strong>“Si hay juego, aprieta más fuerte.”</strong> Falso. Una precarga excesiva aumenta la fricción y la carga axial sobre las bolas: el rodamiento se siente “rugoso” no porque esté gastado, sino porque está estrangulado. Muchos rodamientos “muertos” son rodamientos sobre-precargados.</p>
+            </div>
+            <p>Y el detalle que separa a un mecánico de un aficionado: en un buje de cono-y-bola, ajustar “cero juego” en el banco está <strong>mal</strong>. Al cerrar el cierre rápido o apretar el eje pasante al par del cuadro (típicamente 10–12 N·m), la fuerza de sujeción comprime microscópicamente el eje y empuja los conos contra las bolas. El ajuste correcto deja un <strong>juego residual imperceptible</strong> en el banco que desaparece solo al montar la rueda en la bici. Ajustar a cero en el banco = sobre-precarga al rodar.</p>
+
+            <h2>5. El servicio, paso a paso</h2>
+
+            <div class="step">
+                <span class="num">Paso 1 — Al banco</span>
+                <h3>Desmonta la rueda y libera el cassette</h3>
+                <p>Rueda fuera de la bici, cassette retirado si vas a tocar el núcleo. Trabaja sobre un tapete limpio: la masa no perdona la arena.</p>
+                <figure>
+                    <img src="images/rueda-maza-servicio.webp" alt="Rueda y maza durante servicio completo en el banco — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                    <figcaption>Paso 1: la rueda al banco, superficie limpia, todo a la vista.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 2 — Abrir</span>
+                <h3>Retira tapas y núcleo</h3>
+                <p>La mayoría de los bujes modernos de gama alta (DT Swiss, Hope, y diseños de alto enganche) abren <strong>a mano</strong>: las tapas y el núcleo salen por tracción, sin llaves. Si necesitas fuerza bruta, párate: estás haciendo algo mal.</p>
+                <figure>
+                    <img src="images/maza-buje-interior-nucleo.webp" alt="Interior del buje y núcleo de alto enganche — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                    <figcaption>Paso 2: el interior del buje y el núcleo de alto enganche, expuestos sin violencia.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 3 — Despiece</span>
+                <h3>Ordena cada pieza</h3>
+                <p>Saca rodamientos, sellos y separadores y colócalos en orden de extracción. Si es cono-y-bola, <strong>cuenta las bolas antes</strong> de quitarlas y nunca mezcles bolas viejas con nuevas: las viejas han perdido micrómetros de diámetro y transfieren toda la carga a las nuevas.</p>
+                <figure>
+                    <img src="images/maza-despiece-rodamientos.webp" alt="Despiece de la maza: cuerpo, rodamientos y núcleo — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                    <figcaption>Paso 3: despiece ordenado. El orden es diagnóstico, no estética.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 4 — Limpieza</span>
+                <h3>Desengrasa los rodamientos</h3>
+                <p>Para cartuchos que vas a reutilizar: levanta con cuidado el retén de caucho con un bisturí, desengrasa (ultrasonido si lo tienes) y deja secar. Para cono-y-bola: limpia pistas, conos y bolas hasta el brillo espejo. Sin restos de grasa vieja no hay diagnóstico fiable de la pista.</p>
+                <figure>
+                    <img src="images/rodamientos-cartucho-nucleo-maza.webp" alt="Rodamientos de cartucho y núcleo de la maza listos para limpieza — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                    <figcaption>Paso 4: desengrase de rodamientos sobre el tapete. La grasa vieja esconde el daño.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 5 — Inspección</span>
+                <h3>¿Engrasar o reemplazar?</h3>
+                <p>Mira la pista de rodadura. Si está pulida y uniforme, engrasa y reutiliza. Si ves <strong>pitting</strong> (picaduras) o <strong>brinelling</strong> (hendiduras regulares de las bolas), la pista perdió su geometría: no hay grasa que lo arregle, se reemplaza el cartucho. Una pista marcada es vida útil impredecible.</p>
+                <figure>
+                    <img src="images/maza-buje-alojamiento-rodamiento.webp" alt="Alojamiento de rodamiento del cuerpo de la maza en inspección — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="788" loading="lazy">
+                    <figcaption>Paso 5: inspección del alojamiento y la pista. Aquí se decide engrasar o cambiar.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 6 — Extracción / prensado</span>
+                <h3>Cambia el cartucho sin dañar la masa</h3>
+                <p>Para sacar un cartucho se usa un extractor de impacto ciego; para instalarlo, una prensa con casquillo que apoye sobre la <strong>pista exterior</strong>. El error fatal aquí es presionar sobre la pista interna de un cartucho nuevo: marca las bolas antes del primer giro y lo arruina. Apoyo en la pista correcta, presión recta, sin martillazos.</p>
+                <figure>
+                    <img src="images/desarme-masa-extraccion-herramienta.webp" alt="Extracción del rodamiento de la masa con herramienta — BikeLab Studio · Carlos Eduardo Ravello Joo" width="1400" height="1050" loading="lazy">
+                    <figcaption>Paso 6: extracción/prensado con herramienta. La fuerza va a la pista correcta, nunca al martillo.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 7 — Engrase</span>
+                <h3>Dos grasas, no una</h3>
+                <p>Rellena los rodamientos al ~70% con grasa <strong>NLGI 2</strong> (consistencia de mantequilla de maní; resistente al agua). El núcleo de rueda libre es otra historia: lleva una grasa <strong>fluida y fina</strong> (NLGI 0–1) o aceite específico, en capa delgada. Si ahogas el trinquete en grasa espesa, los muelles no empujan a tiempo los dientes y el núcleo <em>patina</em> bajo torque. Más grasa no es más protección: es un fallo esperando una subida.</p>
+            </div>
+
+            <div class="step">
+                <span class="num">Paso 8 — Precarga y cierre</span>
+                <h3>Monta, ajusta y verifica en la bici</h3>
+                <p>Reensambla, deja el juego residual imperceptible (ver paso 4), monta la rueda y cierra el eje al par del cuadro. Recién ahí verifica: la rueda debe girar libre y sin juego. Si quedó dura, aflojaste de menos; si baila, de más.</p>
+            </div>
+
+            <h2>6. El taller correcto: la herramienta hace la diferencia</h2>
+            <p>Una masa no se sirve con improvisación. Se sirve con extractores ciegos del diámetro correcto, prensas con casquillos guía, llaves de cono planas para cono-y-bola, torquímetro para el cierre y un tapete que no suelte fibras. La diferencia entre “le metí grasa” y “quedó como de fábrica” no está en la mano: está en que la fuerza se aplica donde el diseño la pide. Un taller serio invierte en la herramienta porque sabe que el cuadro y el buje del cliente valen mucho más que el extractor.</p>
+            <figure>
+                <img src="images/herramientas-taller-servicio-masas.webp" alt="Herramientas de taller para servicio de masas: torquímetro, extractores y prensa de rodamientos — BikeLab Studio · Carlos Eduardo Ravello Joo" width="640" height="800" loading="lazy">
+                <figcaption>El instrumental correcto para servir masas: torquímetro, extractores, prensa y útiles de precisión.</figcaption>
+            </figure>
+
+            <h2>7. La grasa correcta (y el grado ABEC que no importa)</h2>
+            <p>Dos aclaraciones que ahorran dinero. Primera: el <strong>grado ABEC</strong> (1, 3, 5, 7, 9) mide tolerancias para regímenes industriales de decenas de miles de rpm; tu rueda gira a 200–400 rpm. En bici pesan mucho más el acero de las pistas, los sellos y la lubricación que el número ABEC. Pagar por ABEC 9 “para ir más rápido” es tirar el dinero. Segunda: no uses grasa de rodamiento en el núcleo ni aceite de cadena en los rodamientos. Cada mecanismo pide su <a href="grasas-tribologia-es.html">reología</a>; mezclarlas es la causa silenciosa de la mitad de los “núcleos ruidosos”.</p>
+
+            <h2>8. Intervalos reales de mantenimiento</h2>
+            <div class="data-box">
+                <span class="lbl">CUÁNDO SERVIR LA MASA</span>
+                <p style="margin:0;color:#bbb;">Uso ocasional (carretera seca): inspección cada <span class="hi">150–200 h</span> o anual. Uso frecuente (MTB, gravel): cada <span class="hi">75–100 h</span> o semestral. Tras lluvia, barro o lavado por inmersión: revisión <span class="hi">inmediata</span>. La grasa envejece aunque la bici no ruede: no la dejes más de <span class="hi">un año</span>.</p>
+            </div>
+            <p>El enemigo número uno no es el kilometraje: es el <strong>agua</strong>. Un vadeo de río o un lavado a presión mal dirigido mete más contaminación en cinco minutos que mil kilómetros secos. Si ruedas cerca del mar o en clima húmedo, acorta los intervalos; el mismo principio electroquímico que ataca el resto de la bici ataca aquí, como vimos en <a href="corrosion-bicicleta-trujillo-es.html">corrosión y termodinámica</a>.</p>
+
+            <div style="margin: 40px 0; padding: 22px 24px; border: 1px solid #333; border-left: 3px solid #666; background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <div style="font-family: var(--mono); font-size: 0.62rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">SERVICIO DE MASAS Y RODAMIENTOS</div>
+                    <div style="font-size: 0.9rem; color: #aaa; line-height: 1.5;">Diagnóstico, cambio de rodamientos y ajuste de precarga con herramienta de precisión.<br>BikeLab Studio.</div>
+                </div>
+                <a href="../mantenimiento-general-es.html" style="font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 18px; letter-spacing: 1.5px; white-space: nowrap;">VER SERVICIO →</a>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+                <h2>Preguntas Frecuentes</h2>
+                <h3>¿Es normal un pequeño juego lateral en la rueda?</h3>
+                <p>En bujes de cono-y-bola (Shimano), un juego mínimo en el banco puede ser correcto: desaparece al cerrar el cierre rápido o el eje pasante, porque la fuerza de sujeción comprime el eje. En cartucho sellado, el juego perceptible casi siempre indica un rodamiento desgastado o un separador comprimido, y se corrige cambiando el rodamiento, no apretando.</p>
+                <h3>¿Los rodamientos sellados de cartucho se pueden mantener?</h3>
+                <p>Sí. Se levanta con cuidado el retén, se desengrasa y se rellena con grasa nueva al ~70%; alarga su vida siempre que las pistas no tengan picaduras. Si la pista está marcada, no hay engrase que lo salve: se reemplaza el cartucho.</p>
+                <h3>¿Qué grasa se usa en el núcleo o sistema de trinquetes?</h3>
+                <p>Una grasa específica de baja viscosidad (fluida), no la grasa espesa de rodamientos. La de rodamiento, demasiado pegajosa, frena el retorno de los muelles del trinquete y provoca saltos bajo carga. En el núcleo: capa fina de grasa ligera; en los rodamientos: grasa NLGI 2.</p>
+                <h3>¿Importa el grado ABEC de los rodamientos en una bicicleta?</h3>
+                <p>Casi nada. El ABEC mide tolerancias para 20.000–30.000 rpm; una rueda gira a 200–400 rpm. Pesan más el acero, la redondez de las bolas, los sellos y la lubricación. Un ABEC 3 bien sellado dura más que un ABEC 9 mal protegido.</p>
+                <h3>¿Cada cuánto se da servicio a las masas?</h3>
+                <p>Ocasional: cada 150–200 h o anual. Frecuente: cada 75–100 h o semestral. En lluvia, barro o lavado por inmersión, revisión inmediata. La grasa pierde propiedades con el tiempo: no la dejes más de un año.</p>
+            </div>
+
+            <div class="refs">
+                <h2>Referencias</h2>
+                <ol>
+                    <li>Park Tool — <a href="https://www.parktool.com/en-us/blog/repair-help/hub-overhaul-and-adjustment" target="_blank" rel="noopener nofollow">Hub Overhaul and Adjustment</a>.</li>
+                    <li>DT Swiss — Manuales técnicos de bujes y sistema Ratchet (engagement 18T=20°, 36T=10°, 54T=6,67°).</li>
+                    <li>Shimano Dealer's Manual — Hub Set (ajuste de cono y bola, tolerancias).</li>
+                    <li>Enduro Bearings / SKF — Bearing basics: relevancia real del grado ABEC y selección de rodamiento.</li>
+                    <li>Designaciones de rodamiento de cartucho: 6802 (15×24×5), 6902 (15×28×7).</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 30px;"><a href="../index.html#tips" class="back-link">← VOLVER AL INICIO</a></p>
+        </div>
+
+        <div class="signature">
+            BikeLab Studio Industrial Noir / Investigación y servicio de mecánica de precisión / Carlos Eduardo Ravello Joo
+        </div>
+    </div>
+</body>
+
+</html>
