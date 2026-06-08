@@ -173,6 +173,44 @@
           "item": "https://www.bikelabstudio.com/articles/how-to-read-fit-cycling-data-en.html"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the BikeLab FIT Analyzer upload my file to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Processing happens entirely in your browser and the .FIT file never leaves your device. No sign-up or account is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which devices and files are compatible with the FIT Analyzer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FIT files from Garmin, Wahoo, Coros, Polar, Suunto and Bryton. It also works with files exported from Strava (Settings → Download your data → activity.fit)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a power meter to analyze my FIT data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for every metric. Cadence CV, the Climbing Stability Index and cardiac decoupling are calculated without power. The Variability Index (VI) does require power data; without a meter the analyzer reports N/A for that metric."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a high Climbing Stability Index (CSI) indicate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That the speed-to-cadence ratio varies under load while climbing. Common causes are a worn chain, incorrect indexing, bottom bracket play or suboptimal climbing posture. A CSI close to 0 indicates mechanically efficient pedaling."
+          }
+        }
+      ]
     }
   ]
 }
@@ -357,6 +395,11 @@
       <div class="meta">Technical Article // Author: Carlos Ravello // March 2026 // BikeLab Studio</div>
     </div>
 
+    <div class="tip-box">
+      <div class="tip-label">// DIRECT ANSWER</div>
+      <p style="margin:0;color:#ccc"><strong>Reading your FIT data</strong> means turning the 7,000–14,000 records your Garmin, Wahoo, Coros or Polar logs per ride —cadence, GPS speed, altitude and power— into four diagnostic metrics: <strong>Cadence Coefficient of Variation (CV_c)</strong>, <strong>Climbing Stability Index (CSI)</strong>, <strong>Variability Index (VI)</strong> and <strong>cardiac decoupling</strong>. The <a href="fit-analyzer-en.html" style="color:var(--yellow);text-decoration:underline">BikeLab FIT Analyzer</a> computes all four directly in your browser —with uncertainty bands validated by Monte Carlo simulation— without the file ever leaving your device.</p>
+    </div>
+
     <p><a href="white-paper-fit-analyzer.html" style="color:#888;text-decoration:underline;font-size:0.9em">→ Full
         technical version: Methodological Framework and Monte Carlo Validation — White Paper</a></p>
 
@@ -498,6 +541,18 @@
       <p style="font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-bottom:8px">// Free tool — no account — no server</p>
       <p>Upload your FIT file and get your report in under 30 seconds.</p>
       <a href="fit-analyzer-en.html" class="cta-btn">OPEN FIT ANALYZER →</a>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Frequently Asked Questions</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Does the BikeLab FIT Analyzer upload my file to a server?</h3>
+      <p>No. Processing happens entirely in your browser and the .FIT file never leaves your device. No sign-up or account is required.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Which devices and files are compatible with the FIT Analyzer?</h3>
+      <p>FIT files from Garmin, Wahoo, Coros, Polar, Suunto and Bryton. It also works with files exported from Strava (Settings → Download your data → activity.fit).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Do I need a power meter to analyze my FIT data?</h3>
+      <p>Not for every metric. Cadence CV, the Climbing Stability Index and cardiac decoupling are calculated without power. The Variability Index (VI) does require power data; without a meter the analyzer reports N/A for that metric.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">What does a high Climbing Stability Index (CSI) indicate?</h3>
+      <p>That the speed-to-cadence ratio varies under load while climbing. Common causes are a worn chain, incorrect indexing, bottom bracket play or suboptimal climbing posture. A CSI close to 0 indicates mechanically efficient pedaling.</p>
     </div>
 
     <div class="footer">

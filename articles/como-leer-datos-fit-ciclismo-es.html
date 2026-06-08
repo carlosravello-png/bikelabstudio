@@ -173,6 +173,44 @@
           "item": "https://www.bikelabstudio.com/articles/como-leer-datos-fit-ciclismo-es.html"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿El BikeLab FIT Analyzer sube mi archivo a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El procesamiento ocurre completamente en tu navegador y el archivo .FIT nunca abandona tu dispositivo. No requiere registro ni cuenta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué dispositivos y archivos son compatibles con el FIT Analyzer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Archivos .FIT de Garmin, Wahoo, Coros, Polar, Suunto y Bryton. También funciona con archivos exportados desde Strava (Configuración → Descargar datos → actividad.fit)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito un medidor de potencia para analizar mis datos FIT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No para todas las métricas. El CV de cadencia, el Índice de Estabilidad en Subida y el decoupling cardíaco se calculan sin potencia. El Variability Index (VI) sí requiere datos de potencia; sin medidor el analizador reporta N/A para esa métrica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué indica un Índice de Estabilidad en Subida (IES) alto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Que la relación velocidad/cadencia varía bajo carga en subida. Las causas frecuentes son cadena desgastada, indexing incorrecto, juego en el pedalier o postura subóptima. Un IES cercano a 0 indica pedaleo mecánicamente eficiente."
+          }
+        }
+      ]
     }
   ]
 }
@@ -770,6 +808,11 @@
       <div class="meta">Artículo técnico // Autor: Carlos Ravello // Marzo 2026 // BikeLab Studio</div>
     </div>
 
+    <div class="tip-box">
+      <div class="tip-label">// RESPUESTA DIRECTA</div>
+      <p style="margin:0;color:#ccc"><strong>Leer tus datos FIT</strong> significa convertir los 7,000–14,000 registros que tu Garmin, Wahoo, Coros o Polar graba por salida —cadencia, velocidad GPS, altitud y potencia— en cuatro métricas diagnósticas: <strong>Coeficiente de Variación de Cadencia (CV_c)</strong>, <strong>Índice de Estabilidad en Subida (IES)</strong>, <strong>Variability Index (VI)</strong> y <strong>decoupling cardíaco</strong>. El <a href="fit-analyzer-es.html" style="color:var(--yellow);text-decoration:underline">BikeLab FIT Analyzer</a> calcula estas cuatro métricas directamente en tu navegador —con bandas de incertidumbre validadas por simulación Monte Carlo— sin que el archivo salga de tu dispositivo.</p>
+    </div>
+
     <p><a href="white-paper-fit-analyzer-es.html" style="color:#888;text-decoration:underline;font-size:0.9em">→ Versión
         técnica completa: Marco Metodológico y Validación Monte Carlo — White Paper</a></p>
 
@@ -911,6 +954,18 @@
       <p style="font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-bottom:8px">// Herramienta gratuita — sin registro — sin servidor</p>
       <p>Sube tu archivo FIT y obtén tu reporte en menos de 30 segundos.</p>
       <a href="fit-analyzer-es.html" class="cta-btn">ABRIR FIT ANALYZER →</a>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Preguntas Frecuentes</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿El BikeLab FIT Analyzer sube mi archivo a algún servidor?</h3>
+      <p>No. El procesamiento ocurre completamente en tu navegador y el archivo .FIT nunca abandona tu dispositivo. No requiere registro ni cuenta.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué dispositivos y archivos son compatibles con el FIT Analyzer?</h3>
+      <p>Archivos .FIT de Garmin, Wahoo, Coros, Polar, Suunto y Bryton. También funciona con archivos exportados desde Strava (Configuración → Descargar datos → actividad.fit).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Necesito un medidor de potencia para analizar mis datos FIT?</h3>
+      <p>No para todas las métricas. El CV de cadencia, el Índice de Estabilidad en Subida y el decoupling cardíaco se calculan sin potencia. El Variability Index (VI) sí requiere datos de potencia; sin medidor el analizador reporta N/A para esa métrica.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué indica un Índice de Estabilidad en Subida (IES) alto?</h3>
+      <p>Que la relación velocidad/cadencia varía bajo carga en subida. Las causas frecuentes son cadena desgastada, indexing incorrecto, juego en el pedalier o postura subóptima. Un IES cercano a 0 indica pedaleo mecánicamente eficiente.</p>
     </div>
 
     <div class="footer">
