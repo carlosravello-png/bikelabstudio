@@ -162,6 +162,44 @@
         { "@type": "ListItem", "position": 2, "name": "Technical Data", "item": "https://www.bikelabstudio.com/index-en.html#science" },
         { "@type": "ListItem", "position": 3, "name": "DOT 4 vs DOT 5.1 MTB Brake Fluid", "item": "https://www.bikelabstudio.com/articles/dot4-vs-dot51-mtb-en.html" }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between DOT 4 and DOT 5.1 for MTB brakes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FMVSS 116 sets the dry boiling point at ≥230°C for DOT 4 and ≥260°C for DOT 5.1; both are glycol ether and are compatible with each other. In MTB the label difference matters little compared to moisture: the circuit holds only ~15 ml of fluid and contaminates quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it worth switching to DOT 5.1 on a mountain bike?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For long, sustained descents, especially at altitude, yes: DOT 5.1 offers about 30°C more thermal margin. But the real safety factor is bleeding with fresh fluid periodically. A moisture-contaminated DOT 5.1 performs worse than a freshly bled DOT 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the boiling point drop as the fluid absorbs water?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every 1% of water lowers the boiling point of glycol-ether fluid by about 20–30°C, accelerating at higher contamination. Because an MTB circuit is so small (~15 ml), the same amount of water represents a much higher percentage than in a 500–1,000 ml automotive system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does altitude make brake fluid boil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On its own, barely: altitude lowers the boiling point by only 6–12°C. The real danger is the combination of moisture-contaminated fluid (−50°C), altitude (−9°C) and sustained braking heat on long descents, which together cause vapor lock or loss of braking."
+          }
+        }
+      ]
     }
   ]
 }
@@ -296,6 +334,11 @@
         <p>Since June 2025, I have been tracking brake fluid condition in MTB systems across Andean MTB routes in Peru — from coastal systems to high-altitude descents above 3,000 m. The pattern is consistent: riders believe DOT 5.1 is the upgrade answer. Sometimes it is. Most of the time, the fluid is not the limiting variable. Maintenance neglect is.</p>
 
         <p>This article puts the real numbers on the table. FMVSS 116 specifications, moisture absorption math, Clausius-Clapeyron at altitude, and a field-tested decision protocol. No forum opinion. No marketing copy.</p>
+
+        <div class="insight-box">
+            <p style="color:#aaa;margin-bottom:10px;"><strong>DIRECT ANSWER</strong></p>
+            <p>Between <strong>DOT 4 and DOT 5.1</strong> the label difference is the dry boiling point (DOT 4 ≥230°C, DOT 5.1 ≥260°C), but in MTB that figure matters less than it seems: the circuit holds only ~15 ml of fluid, so it absorbs moisture fast and <strong>every 1% of water lowers the boiling point by 20–30°C</strong>. The dominant failure variable is moisture, not altitude (which alone subtracts only 6–12°C). For long descents — and even more at <a href="hydraulic-brakes-altitude-thermodynamics.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">Andean altitude</a> — DOT 5.1 gives extra margin and is worth it, but the real safety factor is <strong>bleeding with fresh fluid regularly</strong>: a contaminated DOT 5.1 performs worse than a fresh DOT 4.</p>
+        </div>
 
         <!-- MODULE 01 -->
         <h2>MODULE_01 // THE STANDARD — WHAT FMVSS 116 ACTUALLY SAYS</h2>
@@ -995,6 +1038,20 @@
                 <li><span style="color:var(--accent);margin-right:10px;">→</span><a href="di2-battery-drain-diagnosis-en.html" style="color:#ccc;text-decoration:none;">Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol</a></li>
             </ul>
         </div>
+
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+
+        <h3>What is the difference between DOT 4 and DOT 5.1 for MTB brakes?</h3>
+        <p>FMVSS 116 sets the dry boiling point at ≥230°C for DOT 4 and ≥260°C for DOT 5.1; both are glycol ether and are compatible with each other. In MTB the label difference matters little compared to moisture: the circuit holds only ~15 ml of fluid and contaminates quickly.</p>
+
+        <h3>Is it worth switching to DOT 5.1 on a mountain bike?</h3>
+        <p>For long, sustained descents, especially at altitude, yes: DOT 5.1 offers about 30°C more thermal margin. But the real safety factor is bleeding with fresh fluid periodically. A moisture-contaminated DOT 5.1 performs worse than a freshly bled DOT 4.</p>
+
+        <h3>How much does the boiling point drop as the fluid absorbs water?</h3>
+        <p>Every 1% of water lowers the boiling point of glycol-ether fluid by about 20–30°C, accelerating at higher contamination. Because an MTB circuit is so small (~15 ml), the same amount of water represents a much higher percentage than in a 500–1,000 ml automotive system.</p>
+
+        <h3>Does altitude make brake fluid boil?</h3>
+        <p>On its own, barely: altitude lowers the boiling point by only 6–12°C. The real danger is the combination of moisture-contaminated fluid (−50°C), altitude (−9°C) and sustained braking heat on long descents, which together cause vapor lock or loss of braking.</p>
 
         <!-- REFERENCES — APA VII -->
         <div class="references">

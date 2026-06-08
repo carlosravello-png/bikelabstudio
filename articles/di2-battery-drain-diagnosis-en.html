@@ -154,6 +154,44 @@
         { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.bikelabstudio.com/index-en.html#science" },
         { "@type": "ListItem", "position": 3, "name": "Shimano Di2 Battery Drain: Field Diagnosis Protocol", "item": "https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html" }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my Di2 battery drain on its own overnight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because a component failed to enter sleep mode and keeps drawing milliamps continuously. A healthy Di2 idles at 20–80 µA, which means months of standby; a component stuck awake draws between 1 and 30 mA, enough to empty a 500 mAh battery in about 25 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common cause of Di2 battery drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The EW-WU111 wireless unit (and the EW-WU101) with a firmware bug that leaves it in Bluetooth advertising mode instead of sleeping, drawing 1–5 mA continuously. Shimano fixed it in E-TUBE PROJECT updates but never documented it in the user manual. Updating the firmware is the first thing to rule out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need the SM-PCE02 to diagnose Di2 battery drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not in 90% of cases. With a component-by-component isolation protocol, disconnecting and waiting 12 hours at each step, you can find the culprit without that tool. The SM-PCE02 or a qualified shop are only needed for intermittent leaks or faults in the E-Tube bus itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the battery the faulty part when my Di2 drains overnight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost never. Overnight self-discharge is usually the EW-WU111 or the rear derailleur, not the battery. A healthy battery self-discharges less than 0.5% per day when isolated; only if it drops more than 3% per day while disconnected from everything should you replace it."
+          }
+        }
+      ]
     }
   ]
 }
@@ -418,6 +456,11 @@
         <p>Since June 2025, I've been documenting cases like this in the workshop. Bikes from riders in Trujillo, the Andes, and abroad. Shimano Di2 across multiple generations — 9150, R9250, MT8100. Every case had the same pattern: a sudden unexplained drain, no obvious culprit, and a manual that says nothing useful.</p>
 
         <p>This is the protocol I built from those cases. It doesn't require the SM-PCE02 diagnostic tool. It doesn't require taking the bike to a shop. It requires a multimeter, patience, and knowing which component to disconnect first.</p>
+
+        <div class="insight-box">
+            <p style="color:#aaa;margin-bottom:10px;"><strong>DIRECT ANSWER</strong></p>
+            <p>If your Shimano Di2 battery drains on its own overnight, it's almost always because <strong>a component failed to enter sleep mode</strong> and keeps drawing milliamps around the clock, instead of the ~20–80 µA a healthy system draws at idle. The most frequent culprit is the <strong>EW-WU111 wireless unit</strong> with firmware stuck in Bluetooth advertising mode (1–5 mA continuous): update it via E-TUBE PROJECT before anything else. The definitive diagnosis is to isolate the system component by component; the <a href="di2-axs-diagnostic.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">BikeLab Di2 &amp; AXS Diagnostic Tool</a> walks you through that decision tree step by step.</p>
+        </div>
 
         <!-- MODULE 01 -->
         <h2>MODULE_01 // HOW DI2 POWER ACTUALLY WORKS</h2>
@@ -1141,6 +1184,21 @@
         </ul>
 
         <p>Don't spend $400 on a new battery if you haven't completed the isolation first. The battery is almost never the cause of overnight drain — it's usually the EW-WU111 or the RD. Start there.</p>
+
+        <!-- MODULE 09 — FAQ -->
+        <h2>MODULE_09 // FREQUENTLY ASKED QUESTIONS</h2>
+
+        <h3>Why does my Di2 battery drain on its own overnight?</h3>
+        <p>Because a component failed to enter sleep mode and keeps drawing milliamps continuously. A healthy Di2 idles at 20–80 µA, which means months of standby; a component stuck awake draws between 1 and 30 mA, enough to empty a 500 mAh battery in about 25 hours.</p>
+
+        <h3>What is the most common cause of Di2 battery drain?</h3>
+        <p>The EW-WU111 wireless unit (and the EW-WU101) with a firmware bug that leaves it in Bluetooth advertising mode instead of sleeping, drawing 1–5 mA continuously. Shimano fixed it in E-TUBE PROJECT updates but never documented it in the user manual. Updating the firmware is the first thing to rule out.</p>
+
+        <h3>Do I need the SM-PCE02 to diagnose Di2 battery drain?</h3>
+        <p>Not in 90% of cases. With a component-by-component isolation protocol, disconnecting and waiting 12 hours at each step, you can find the culprit without that tool. The SM-PCE02 or a qualified shop are only needed for intermittent leaks or faults in the E-Tube bus itself.</p>
+
+        <h3>Is the battery the faulty part when my Di2 drains overnight?</h3>
+        <p>Almost never. Overnight self-discharge is usually the EW-WU111 or the rear derailleur, not the battery. A healthy battery self-discharges less than 0.5% per day when isolated; only if it drops more than 3% per day while disconnected from everything should you replace it.</p>
 
         <!-- CONCLUSION -->
         <div class="conclusion-box">

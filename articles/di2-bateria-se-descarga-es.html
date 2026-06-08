@@ -143,6 +143,44 @@
         { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html" },
         { "@type": "ListItem", "position": 3, "name": "Batería Di2 se Descarga: Diagnóstico", "item": "https://www.bikelabstudio.com/articles/di2-bateria-se-descarga-es.html" }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué se descarga sola la batería de mi Di2 de un día para otro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque un componente del sistema no entró en modo sleep y sigue consumiendo miliamperios de forma continua. Un Di2 sano consume 20–80 µA en reposo, lo que equivale a meses de autonomía; un componente despierto consume entre 1 y 30 mA, suficiente para vaciar una batería de 500 mAh en unas 25 horas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la causa más frecuente de la descarga de batería Di2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La unidad inalámbrica EW-WU111 (y la EW-WU101) con un bug de firmware que la deja en modo advertising Bluetooth en vez de dormir, consumiendo 1–5 mA continuos. Shimano lo corrigió en actualizaciones de E-TUBE PROJECT pero no lo documentó en el manual de usuario. Actualizar el firmware es lo primero que hay que descartar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito el SM-PCE02 para diagnosticar la descarga de mi Di2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No en el 90% de los casos. Con un protocolo de aislamiento por componente, desconectando y esperando 12 horas en cada paso, puedes encontrar el culpable sin esa herramienta. El SM-PCE02 o un taller cualificado solo se necesitan ante fugas intermitentes o fallos del propio bus E-Tube."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es la batería la que está dañada cuando el Di2 se descarga de noche?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Casi nunca. La autodescarga nocturna suele deberse al EW-WU111 o al desviador trasero, no a la batería. Una batería sana se autodescarga menos del 0,5% al día estando aislada; solo si baja más del 3% diario desconectada de todo conviene reemplazarla."
+          }
+        }
+      ]
     }
   ]
 }
@@ -278,6 +316,11 @@
         <p>Desde junio de 2025 documento casos así en el taller. Bicicletas de ciclistas de Trujillo, los Andes y del extranjero. Shimano Di2 en múltiples generaciones — 9150, R9250, MT8100. Todos con el mismo patrón: una descarga repentina sin culpable obvio y un manual que no dice nada útil.</p>
 
         <p>Este es el protocolo que construí con esos casos. No necesita el SM-PCE02. No necesita llevar la bici al taller. Necesita un multímetro, paciencia y saber qué componente desconectar primero.</p>
+
+        <div class="insight-box">
+            <p style="color:#aaa;margin-bottom:10px;"><strong>RESPUESTA DIRECTA</strong></p>
+            <p>Si tu batería Shimano Di2 se descarga sola de un día para otro, casi siempre es porque <strong>un componente no entró en modo sleep</strong> y sigue consumiendo miliamperios las 24 horas, en lugar de los ~20–80 µA que consume todo el sistema sano en reposo. El culpable más frecuente es la <strong>unidad inalámbrica EW-WU111</strong> con firmware atascado en modo advertising Bluetooth (1–5 mA continuos): actualízala vía E-TUBE PROJECT antes que nada. El diagnóstico definitivo es aislar componente por componente; la <a href="di2-axs-diagnostic-es.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">Herramienta de Diagnóstico Di2 &amp; AXS de BikeLab</a> te guía ese árbol de decisión paso a paso.</p>
+        </div>
 
         <!-- MODULE 01 -->
         <h2>MÓDULO_01 // CÓMO FUNCIONA EL SISTEMA DI2</h2>
@@ -1001,6 +1044,21 @@
         </ul>
 
         <p>No gastes 400 soles en una batería nueva si no has completado el aislamiento primero. La batería casi nunca es la causa de la descarga nocturna — normalmente es el EW-WU111 o el RD. Empieza por ahí.</p>
+
+        <!-- MODULE 09 — FAQ -->
+        <h2>MÓDULO_09 // PREGUNTAS FRECUENTES</h2>
+
+        <h3>¿Por qué se descarga sola la batería de mi Di2 de un día para otro?</h3>
+        <p>Porque un componente del sistema no entró en modo sleep y sigue consumiendo miliamperios de forma continua. Un Di2 sano consume 20–80 µA en reposo, lo que equivale a meses de autonomía; un componente despierto consume entre 1 y 30 mA, suficiente para vaciar una batería de 500 mAh en unas 25 horas.</p>
+
+        <h3>¿Cuál es la causa más frecuente de la descarga de batería Di2?</h3>
+        <p>La unidad inalámbrica EW-WU111 (y la EW-WU101) con un bug de firmware que la deja en modo advertising Bluetooth en vez de dormir, consumiendo 1–5 mA continuos. Shimano lo corrigió en actualizaciones de E-TUBE PROJECT pero no lo documentó en el manual de usuario. Actualizar el firmware es lo primero que hay que descartar.</p>
+
+        <h3>¿Necesito el SM-PCE02 para diagnosticar la descarga de mi Di2?</h3>
+        <p>No en el 90% de los casos. Con un protocolo de aislamiento por componente, desconectando y esperando 12 horas en cada paso, puedes encontrar el culpable sin esa herramienta. El SM-PCE02 o un taller cualificado solo se necesitan ante fugas intermitentes o fallos del propio bus E-Tube.</p>
+
+        <h3>¿Es la batería la que está dañada cuando el Di2 se descarga de noche?</h3>
+        <p>Casi nunca. La autodescarga nocturna suele deberse al EW-WU111 o al desviador trasero, no a la batería. Una batería sana se autodescarga menos del 0,5% al día estando aislada; solo si baja más del 3% diario desconectada de todo conviene reemplazarla.</p>
 
         <!-- CONCLUSIÓN -->
         <div class="conclusion-box">
