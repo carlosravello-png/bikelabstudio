@@ -12,9 +12,252 @@
     <copyright>© 2026 BikeLab Studio. Open access content CC BY 4.0 where noted.</copyright>
     <managingEditor>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</managingEditor>
     <webMaster>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</webMaster>
-    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
     <ttl>10080</ttl>
     <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- ── NEW · JUNE 2026 · BRAKE REFERENCE + WORKSHOP GUIDES ── -->
+
+    <item>
+      <title>Physics of the Hydraulic Brake: The Complete Reference</title>
+      <link>https://www.bikelabstudio.com/articles/bicycle-hydraulic-brakes-encyclopedia-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/bicycle-hydraulic-brakes-encyclopedia-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>The definitive reference on bicycle hydraulic brakes: kinetic energy to heat, Pascal's hydraulic leverage, brake fade thresholds, DOT vs mineral fluid, bleeding, pads and rotors, plus the 2025-2026 high-end market.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>hydraulic brakes</dc:subject>
+      <dc:subject>brake physics</dc:subject>
+      <dc:subject>brake fade</dc:subject>
+      <dc:subject>Pascal principle</dc:subject>
+      <category>Brake Systems</category>
+    </item>
+
+    <item>
+      <title>Física del Freno Hidráulico: La Referencia Completa</title>
+      <link>https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Referencia definitiva del freno hidráulico de bicicleta: energía cinética a calor, palanca hidráulica de Pascal, umbrales de fade, DOT vs aceite mineral, purgado, pastillas y rotores, y el mercado de gama alta 2025-2026.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>frenos hidraulicos</dc:subject>
+      <dc:subject>fisica del freno</dc:subject>
+      <dc:subject>brake fade</dc:subject>
+      <dc:subject>principio de Pascal</dc:subject>
+      <category>Sistemas de Freno</category>
+    </item>
+
+    <item>
+      <title>Brake Fluid: DOT vs Mineral Oil</title>
+      <link>https://www.bikelabstudio.com/articles/brake-fluid-dot-vs-mineral-oil-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/brake-fluid-dot-vs-mineral-oil-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Dry and wet boiling points, hygroscopic vs hydrophobic behavior, seal compatibility, which brands use which fluid, and why DOT and mineral oil must never be mixed.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>brake fluid</dc:subject>
+      <dc:subject>DOT 5.1</dc:subject>
+      <dc:subject>mineral oil</dc:subject>
+      <dc:subject>boiling point</dc:subject>
+      <category>Brake Systems</category>
+    </item>
+
+    <item>
+      <title>Líquido de Frenos: DOT vs Aceite Mineral</title>
+      <link>https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Puntos de ebullición seco y húmedo, comportamiento higroscópico vs hidrofóbico, compatibilidad de sellos, qué marca usa cada fluido y por qué nunca deben mezclarse.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>liquido de frenos</dc:subject>
+      <dc:subject>DOT 5.1</dc:subject>
+      <dc:subject>aceite mineral</dc:subject>
+      <dc:subject>punto de ebullicion</dc:subject>
+      <category>Sistemas de Freno</category>
+    </item>
+
+    <item>
+      <title>Bleeding Isn't Cleaning: Bleed vs Full Service</title>
+      <link>https://www.bikelabstudio.com/articles/bleed-vs-full-brake-service-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/bleed-vs-full-brake-service-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Why bleeding a contaminated brake won't fix it. The difference between a fluid bleed and a full caliper, piston and seal service, with a decision tree and hardware-failure signs.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>brake bleed</dc:subject>
+      <dc:subject>caliper service</dc:subject>
+      <dc:subject>brake maintenance</dc:subject>
+      <dc:subject>piston seals</dc:subject>
+      <category>Brake Systems</category>
+    </item>
+
+    <item>
+      <title>Purgar No Es Limpiar: Purga vs Servicio Completo</title>
+      <link>https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Por qué purgar un freno contaminado no lo arregla. Diferencia entre una purga de fluido y un servicio completo de caliper, pistones y sellos, con árbol de decisión y señales de falla mecánica.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>purga de frenos</dc:subject>
+      <dc:subject>servicio caliper</dc:subject>
+      <dc:subject>mantenimiento freno</dc:subject>
+      <dc:subject>sellos piston</dc:subject>
+      <category>Sistemas de Freno</category>
+    </item>
+
+    <item>
+      <title>MTB Brake Market 2025-2026: Independent Analysis</title>
+      <link>https://www.bikelabstudio.com/articles/mtb-brake-market-2025-2026-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/mtb-brake-market-2025-2026-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Brembo GR-PRO, SRAM Maven, Shimano XTR M9220, Hope Tech 4, TRP DHR Evo and Magura MT7 compared on pistons, fluid, power and discipline fit.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>MTB brakes</dc:subject>
+      <dc:subject>SRAM Maven</dc:subject>
+      <dc:subject>Brembo GR-PRO</dc:subject>
+      <dc:subject>Shimano XTR M9220</dc:subject>
+      <category>Brake Systems</category>
+    </item>
+
+    <item>
+      <title>Mercado de Frenos MTB 2025-2026: Análisis Independiente</title>
+      <link>https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Brembo GR-PRO, SRAM Maven, Shimano XTR M9220, Hope Tech 4, TRP DHR Evo y Magura MT7 comparados por pistones, fluido, potencia y disciplina.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>frenos MTB</dc:subject>
+      <dc:subject>SRAM Maven</dc:subject>
+      <dc:subject>Brembo GR-PRO</dc:subject>
+      <dc:subject>Shimano XTR M9220</dc:subject>
+      <category>Sistemas de Freno</category>
+    </item>
+
+    <item>
+      <title>Brake Pads &amp; Rotors: Compounds, Temperature and Diameter</title>
+      <link>https://www.bikelabstudio.com/articles/brake-pads-rotors-bicycle-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/brake-pads-rotors-bicycle-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Organic vs sintered vs semi-metallic compounds, the temperature window, glazing, and how rotor diameter (160-220 mm) changes braking torque and heat dissipation.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>brake pads</dc:subject>
+      <dc:subject>brake rotors</dc:subject>
+      <dc:subject>sintered vs organic</dc:subject>
+      <dc:subject>rotor diameter</dc:subject>
+      <category>Brake Systems</category>
+    </item>
+
+    <item>
+      <title>Pastillas y Rotores de Freno: Compuestos, Temperatura y Diámetro</title>
+      <link>https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Compuestos orgánicos vs sinterizados vs semimetálicos, ventana de temperatura, glaseado y cómo el diámetro del rotor (160-220 mm) cambia el par de frenado y la disipación de calor.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>pastillas freno</dc:subject>
+      <dc:subject>rotores freno</dc:subject>
+      <dc:subject>sinterizado vs organico</dc:subject>
+      <dc:subject>diametro rotor</dc:subject>
+      <category>Sistemas de Freno</category>
+    </item>
+
+    <item>
+      <title>Stuck Seatpost: Galvanic Corrosion</title>
+      <link>https://www.bikelabstudio.com/articles/stuck-seatpost-galvanic-corrosion-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/stuck-seatpost-galvanic-corrosion-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Why carbon and aluminum seize through galvanic corrosion, how to free a seized post with chemistry and cold instead of heat, and the correct torque to prevent it.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>stuck seatpost</dc:subject>
+      <dc:subject>galvanic corrosion</dc:subject>
+      <dc:subject>carbon assembly</dc:subject>
+      <dc:subject>seatpost torque</dc:subject>
+      <category>Workshop Guide</category>
+    </item>
+
+    <item>
+      <title>Tija Atascada: Corrosión Galvánica</title>
+      <link>https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Por qué el carbono y el aluminio se sueldan por corrosión galvánica, cómo liberar una tija agarrotada con química y frío en lugar de calor, y el torque correcto para prevenirlo.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>tija atascada</dc:subject>
+      <dc:subject>corrosion galvanica</dc:subject>
+      <dc:subject>montaje carbono</dc:subject>
+      <dc:subject>torque tija</dc:subject>
+      <category>Guía de Taller</category>
+    </item>
+
+    <item>
+      <title>Bottom Bracket Creak: Diagnosis by Elimination</title>
+      <link>https://www.bikelabstudio.com/articles/bottom-bracket-creak-fix-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/bottom-bracket-creak-fix-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>It's rarely the bottom bracket. Press-fit vs threaded, why grease worsens press-fit, the correct retaining compounds and real torque specs to kill the creak.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>bottom bracket creak</dc:subject>
+      <dc:subject>press-fit</dc:subject>
+      <dc:subject>bike noise diagnosis</dc:subject>
+      <dc:subject>retaining compound</dc:subject>
+      <category>Workshop Guide</category>
+    </item>
+
+    <item>
+      <title>El Crujido del Pedalier: Diagnóstico por Eliminación</title>
+      <link>https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Rara vez es el pedalier. Press-fit vs roscado, por qué la grasa empeora el press-fit, los compuestos de retención correctos y el torque real para eliminar el crujido.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>crujido pedalier</dc:subject>
+      <dc:subject>press-fit</dc:subject>
+      <dc:subject>diagnostico ruidos</dc:subject>
+      <dc:subject>compuesto retencion</dc:subject>
+      <category>Guía de Taller</category>
+    </item>
+
+    <item>
+      <title>Hub Bearing Maintenance</title>
+      <link>https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cartridge vs cup-and-cone, the preload physics few explain, diagnosing play and roughness, freehub greasing and real service intervals, with a full teardown gallery.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>hub bearings</dc:subject>
+      <dc:subject>cup and cone</dc:subject>
+      <dc:subject>freehub</dc:subject>
+      <dc:subject>bearing preload</dc:subject>
+      <category>Workshop Guide</category>
+    </item>
+
+    <item>
+      <title>Mantenimiento de Masas (Bujes)</title>
+      <link>https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Rodamientos sellados vs bolas y conos, la física de precarga que pocos explican, diagnóstico de juego y aspereza, engrase del núcleo y los intervalos reales de servicio, con galería de despiece.</description>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <dc:publisher>BikeLab Studio</dc:publisher>
+      <dc:subject>bujes bicicleta</dc:subject>
+      <dc:subject>bolas y conos</dc:subject>
+      <dc:subject>nucleo</dc:subject>
+      <dc:subject>precarga rodamiento</dc:subject>
+      <category>Guía de Taller</category>
+    </item>
+
 
     <!-- ── SCIENTIFIC PAPERS WITH DOI ─────────────────────────────── -->
 

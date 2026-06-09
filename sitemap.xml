@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/index-en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/"/>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp</image:loc>
@@ -1569,5 +1569,185 @@
     <lastmod>2026-05-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/investigacion-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/investigacion-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/research-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/investigacion-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/research-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/investigacion-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/research-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/investigacion-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/soluciones-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/soluciones-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/solutions-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/soluciones-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/solutions-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/soluciones-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/solutions-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/soluciones-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bicycle-hydraulic-brakes-encyclopedia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/bicycle-hydraulic-brakes-encyclopedia-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bicycle-hydraulic-brakes-encyclopedia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/enciclopedia-frenos-hidraulicos-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/brake-fluid-dot-vs-mineral-oil-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/brake-fluid-dot-vs-mineral-oil-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/brake-fluid-dot-vs-mineral-oil-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/liquido-frenos-dot-vs-aceite-mineral-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bleed-vs-full-brake-service-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/bleed-vs-full-brake-service-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bleed-vs-full-brake-service-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/purgar-vs-servicio-completo-frenos-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/mtb-brake-market-2025-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/mtb-brake-market-2025-2026-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/mtb-brake-market-2025-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/mercado-frenos-mtb-2025-2026-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/brake-pads-rotors-bicycle-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/brake-pads-rotors-bicycle-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/brake-pads-rotors-bicycle-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/pastillas-rotores-freno-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/stuck-seatpost-galvanic-corrosion-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/stuck-seatpost-galvanic-corrosion-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/stuck-seatpost-galvanic-corrosion-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/tija-atascada-corrosion-galvanica-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bottom-bracket-creak-fix-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/bottom-bracket-creak-fix-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bottom-bracket-creak-fix-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/crujido-pedalier-bottom-bracket-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
