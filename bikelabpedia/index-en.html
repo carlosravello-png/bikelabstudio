@@ -121,6 +121,13 @@
         .status { font-family:var(--mono); font-size:0.6rem; letter-spacing:1.5px; text-transform:uppercase; padding:3px 9px; border:1px solid #2a2a2a; color:#777; }
         .status.live { color:var(--accent2); border-color:var(--accent2); }
         .card.soon { opacity:0.62; }
+        .hub { margin:54px 0 0; border-top:1px solid #1a1a1a; padding-top:42px; }
+        .hub-head h2 { font-size:1.5rem; color:#fff; margin:10px 0 8px; line-height:1.2; }
+        .hub-head p { color:#a0a0a0; font-size:0.9rem; max-width:640px; margin-bottom:30px; }
+        .hub-cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; }
+        .hub-col h4 { font-family:var(--mono); font-size:0.66rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent2); margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:8px; }
+        .hub-col a { display:block; color:#cfcfcf; text-decoration:none; font-size:0.92rem; padding:7px 0; border-bottom:1px solid #111; transition:.2s; }
+        .hub-col a:hover { color:var(--accent2); padding-left:6px; }
         .signature { margin-top:70px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.78rem; color:#666; line-height:1.8; }
         .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
         .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; }
@@ -165,7 +172,7 @@
 
     <div class="grid">
         <article class="card"><span class="kicker">Cluster 01 // Drivetrain</span><h3>Drivetrain &amp; speeds</h3><p>Speeds, cassettes, freehub bodies (HG, XD, Microspline), chains and UDH. What mixes with what, and what doesn't.</p><span class="status">Coming soon</span></article>
-        <a href="what-bottom-bracket-does-my-bike-use-en.html" style="text-decoration:none;color:inherit;display:block;"><article class="card"><span class="kicker">Cluster 02 // Bottom bracket</span><h3>Bottom bracket</h3><p>BSA, BB30, PF30, BB86/92, T47. Which spindle fits your frame and why it creaks.</p><span class="status live">Available · 26 entries →</span></article></a>
+        <a href="what-bottom-bracket-does-my-bike-use-en.html" style="text-decoration:none;color:inherit;display:block;"><article class="card"><span class="kicker">Cluster 02 // Bottom bracket</span><h3>Bottom bracket</h3><p>BSA, BB30, PF30, BB86/92, T47. Which spindle fits your frame and why it creaks.</p><span class="status live">Available · 13 entries →</span></article></a>
         <article class="card"><span class="kicker">Cluster 03 // Brakes</span><h3>Brakes</h3><p>Flat Mount vs Post Mount, Center Lock vs 6-bolt, DOT vs mineral, rotor size.</p><span class="status">Coming soon</span></article>
         <article class="card"><span class="kicker">Cluster 04 // Axles &amp; frame</span><h3>Axles &amp; frame</h3><p>Quick release vs thru-axle, Boost 148/110, thru-axle thread pitch, UDH hanger.</p><span class="status">Coming soon</span></article>
         <article class="card"><span class="kicker">Cluster 05 // Wheels</span><h3>Wheels &amp; rims</h3><p>ETRTO, 27.5/29, tubeless, hookless, internal width. The truth behind the numbers.</p><span class="status">Coming soon</span></article>
@@ -175,6 +182,28 @@
         <article class="card"><span class="kicker">Cluster 09 // Geometry</span><h3>Measurements &amp; geometry</h3><p>Reach, stack, head angle, offset, trail. Why two "size M" bikes aren't the same.</p><span class="status">Coming soon</span></article>
         <article class="card"><span class="kicker">Cross-cutting // Models</span><h3>By bike model</h3><p>Which standards does your bike use? Marlin, Epic, Scale, Chisel and the world's best-selling models.</p><span class="status">Coming soon</span></article>
     </div>
+
+    <section class="hub" id="cluster-bottom-bracket" aria-label="Bottom bracket cluster — 13 entries live">
+        <div class="hub-head"><span class="kicker">Cluster 02 live // Bottom bracket</span><h2>The 13 entries of the Bottom Bracket cluster</h2><p>The whole cluster, linked. Start with the pillar, then drop to your bike's exact standard.</p></div>
+        <div class="hub-cols">
+            <div class="hub-col"><h4>Start here</h4>
+                <a href="what-bottom-bracket-does-my-bike-use-en.html">What bottom bracket does my bike use?</a></div>
+            <div class="hub-col"><h4>Standards · glossary</h4>
+                <a href="bsa-bottom-bracket-en.html">BSA · threaded</a>
+                <a href="bb30-bottom-bracket-en.html">BB30</a>
+                <a href="pf30-bottom-bracket-en.html">PF30</a>
+                <a href="bb86-bb92-bottom-bracket-en.html">BB86 / BB92</a>
+                <a href="t47-bottom-bracket-en.html">T47</a>
+                <a href="press-fit-bottom-bracket-en.html">Press-fit</a>
+                <a href="hollowtech-ii-en.html">Hollowtech II · Shimano</a>
+                <a href="dub-sram-en.html">DUB · SRAM</a></div>
+            <div class="hub-col"><h4>Compatibility &amp; diagnosis</h4>
+                <a href="bb30-vs-pf30-en.html">BB30 vs PF30</a>
+                <a href="bsa-vs-t47-en.html">BSA vs T47</a>
+                <a href="which-crank-fits-bottom-bracket-en.html">Which crank fits?</a>
+                <a href="why-bottom-bracket-creaks-en.html">Why does my bottom bracket creak?</a></div>
+        </div>
+    </section>
 
     <div class="signature">BikeLab-pedia / Technical encyclopedia of bicycle compatibility and standards / Carlos Eduardo Ravello Joo · BikeLab Studio · Trujillo, Peru</div>
 </div>
