@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Rotor mount: 6-bolt vs Center Lock — BikeLab Studio</title>
+  <desc>Comparison of the rotor mount: 6-bolt (BCD 44 mm, M5/Torx T25, with star tightening sequence 1-4-2-5-3-6) versus Center Lock (splined with central lockring, 40 N·m, internal or external lockring). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">ROTOR MOUNT</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // brake-02 · rotor–hub interface</text>
+
+    <line x1="380" y1="80" x2="380" y2="300" stroke="#2c2c2c" stroke-width="1"></line>
+
+    <text x="200" y="100" fill="#8f8f8f" font-size="12" text-anchor="middle">6-BOLT</text>
+    <circle cx="200" cy="178" r="66" fill="none" stroke="#e6e6e6" stroke-width="2"></circle>
+    <circle cx="200" cy="178" r="30" fill="#151515" stroke="#5f5f5f" stroke-width="1.4"></circle>
+    <circle cx="200" cy="178" r="42" fill="none" stroke="#5a5a5a" stroke-width="1" stroke-dasharray="3 4"></circle>
+    <g font-size="11" font-weight="bold">
+      <circle cx="200" cy="136" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="200" y="140" fill="#e6e6e6" text-anchor="middle">1</text>
+      <circle cx="236" cy="157" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="236" y="161" fill="#e6e6e6" text-anchor="middle">4</text>
+      <circle cx="236" cy="199" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="236" y="203" fill="#e6e6e6" text-anchor="middle">2</text>
+      <circle cx="200" cy="220" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="200" y="224" fill="#e6e6e6" text-anchor="middle">5</text>
+      <circle cx="164" cy="199" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="164" y="203" fill="#e6e6e6" text-anchor="middle">3</text>
+      <circle cx="164" cy="157" r="9" fill="#101010" stroke="#9c9c9c" stroke-width="1.4"></circle><text x="164" y="161" fill="#e6e6e6" text-anchor="middle">6</text>
+    </g>
+    <text x="200" y="266" fill="#5a5a5a" font-size="10.5" text-anchor="middle">BCD 44 mm · M5 / Torx T25</text>
+    <text x="200" y="290" fill="#4fb8c8" font-size="13" text-anchor="middle">tighten 1-4-2-5-3-6</text>
+
+    <text x="560" y="100" fill="#8f8f8f" font-size="12" text-anchor="middle">CENTER LOCK</text>
+    <circle cx="560" cy="178" r="66" fill="none" stroke="#e6e6e6" stroke-width="2"></circle>
+    <circle cx="560" cy="178" r="34" fill="none" stroke="#7a7a7a" stroke-width="2"></circle>
+    <g stroke="#7a7a7a" stroke-width="1.6">
+      <line x1="560" y1="144" x2="560" y2="156"></line><line x1="584" y1="154" x2="576" y2="162"></line>
+      <line x1="594" y1="178" x2="582" y2="178"></line><line x1="584" y1="202" x2="576" y2="194"></line>
+      <line x1="560" y1="212" x2="560" y2="200"></line><line x1="536" y1="202" x2="544" y2="194"></line>
+      <line x1="526" y1="178" x2="538" y2="178"></line><line x1="536" y1="154" x2="544" y2="162"></line>
+    </g>
+    <circle cx="560" cy="178" r="18" fill="#16343a" stroke="#4fb8c8" stroke-width="1.8"></circle>
+    <text x="560" y="182" fill="#4fb8c8" font-size="10" text-anchor="middle">lockring</text>
+    <text x="560" y="266" fill="#5a5a5a" font-size="10.5" text-anchor="middle">internal or external lockring</text>
+    <text x="560" y="290" fill="#4fb8c8" font-size="13" text-anchor="middle">torque 40 N·m</text>
+
+    <text x="380" y="346" fill="#8f8f8f" font-size="11.5" text-anchor="middle">on 6-bolt, the star order keeps the rotor from warping</text>
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">6-bolt: universal · Center Lock: one nut, faster install</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

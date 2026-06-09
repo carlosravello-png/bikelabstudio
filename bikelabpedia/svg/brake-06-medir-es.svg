@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Cómo identificar tu freno — BikeLab Studio</title>
+  <desc>Las cuatro comprobaciones para identificar un freno de disco: anclaje (Post/Flat), montaje del rotor (6 tornillos/Center Lock), líquido (DOT/mineral) y grosor del rotor con su límite de 1,5 mm Shimano / 1,55 mm SRAM medido en la pista. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">CÓMO IDENTIFICAR TU FRENO</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // brake-06 · cuatro comprobaciones</text>
+
+    
+    <rect x="40" y="78" width="160" height="120" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="56" y="100" fill="#8f8f8f" font-size="11">① ANCLAJE</text>
+    <rect x="92" y="118" width="56" height="44" rx="5" fill="#151515" stroke="#9c9c9c" stroke-width="1.4"></rect>
+    <circle cx="106" cy="170" r="4" fill="#101010" stroke="#7a7a7a" stroke-width="1.2"></circle>
+    <circle cx="134" cy="170" r="4" fill="#101010" stroke="#7a7a7a" stroke-width="1.2"></circle>
+    <text x="120" y="190" fill="#5a5a5a" font-size="9.5" text-anchor="middle">Post / Flat</text>
+
+    
+    <rect x="216" y="78" width="160" height="120" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="232" y="100" fill="#8f8f8f" font-size="11">② MONTAJE ROTOR</text>
+    <circle cx="296" cy="146" r="30" fill="none" stroke="#9c9c9c" stroke-width="1.6"></circle>
+    <circle cx="296" cy="146" r="12" fill="#151515" stroke="#5f5f5f" stroke-width="1.2"></circle>
+    <g fill="#101010" stroke="#7a7a7a" stroke-width="1.1">
+      <circle cx="296" cy="124" r="3"></circle><circle cx="315" cy="157" r="3"></circle><circle cx="277" cy="157" r="3"></circle>
+    </g>
+    <text x="296" y="190" fill="#5a5a5a" font-size="9.5" text-anchor="middle">6-bolt / Center Lock</text>
+
+    
+    <rect x="392" y="78" width="160" height="120" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="408" y="100" fill="#8f8f8f" font-size="11">③ LÍQUIDO</text>
+    <rect x="452" y="118" width="40" height="40" rx="3" fill="#151515" stroke="#9c9c9c" stroke-width="1.4"></rect>
+    <text x="472" y="142" fill="#8f8f8f" font-size="9" text-anchor="middle">tapa</text>
+    <text x="472" y="176" fill="#5a5a5a" font-size="9.5" text-anchor="middle">lee la tapa: DOT o mineral</text>
+    <text x="472" y="190" fill="#5a5a5a" font-size="9.5" text-anchor="middle">NUNCA los mezcles</text>
+
+    
+    <rect x="568" y="78" width="152" height="120" rx="8" fill="#0c0c0c" stroke="#4fb8c8" stroke-width="1.6"></rect>
+    <text x="584" y="100" fill="#4fb8c8" font-size="11">④ GROSOR ROTOR</text>
+    <rect x="612" y="120" width="64" height="30" fill="#3a3a3a" stroke="#9c9c9c" stroke-width="1.2"></rect>
+    <line x1="612" y1="116" x2="676" y2="116" stroke="#4fb8c8" stroke-width="1.2"></line>
+    <line x1="612" y1="112" x2="612" y2="120" stroke="#4fb8c8"></line><line x1="676" y1="112" x2="676" y2="120" stroke="#4fb8c8"></line>
+    <text x="644" y="168" fill="#4fb8c8" font-size="11" text-anchor="middle">grosor del rotor</text>
+    <text x="644" y="190" fill="#5fbecb" font-size="9.5" text-anchor="middle">mide en la pista</text>
+
+    
+    <rect x="40" y="222" width="680" height="78" rx="8" fill="#0c0c0c" stroke="#4fb8c8" stroke-width="1.5"></rect>
+    <rect x="40" y="222" width="5" height="78" fill="#4fb8c8"></rect>
+    <text x="64" y="250" fill="#e6e6e6" font-size="12.5">Límite de desgaste grabado en el rotor — sustituye al llegar a:</text>
+    <text x="64" y="276" fill="#4fb8c8" font-size="15" font-weight="bold">1.5 mm (Shimano)  ·  1.55 mm (SRAM)</text>
+    <text x="64" y="294" fill="#5a5a5a" font-size="10.5">mide con calibre en la PISTA de frenado (no en el borde); por debajo, no se rectifica.</text>
+
+    <text x="380" y="346" fill="#8f8f8f" font-size="11.5" text-anchor="middle">anclaje · montaje · líquido · grosor — con estos cuatro pides el repuesto correcto</text>
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">identifica tu freno antes de comprar pastillas, rotor o adaptadores</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

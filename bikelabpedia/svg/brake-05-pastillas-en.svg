@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Pads: resin/organic vs sintered/metallic — BikeLab Studio</title>
+  <desc>Brake pad section: resin or organic compound (cold, quiet, less heat) versus sintered or metallic (holds heat, lasts in the wet, noisy); some rotors are Resin Pads Only. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">PADS · SECTION</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // brake-05 · friction compound</text>
+
+    <line x1="380" y1="80" x2="380" y2="300" stroke="#2c2c2c" stroke-width="1"></line>
+
+    <text x="190" y="100" fill="#4fb8c8" font-size="12" text-anchor="middle">RESIN / ORGANIC</text>
+    <rect x="110" y="150" width="32" height="80" fill="#3a3a3a" stroke="#7a7a7a" stroke-width="1.4"></rect>
+    <rect x="142" y="150" width="58" height="80" fill="#16343a" stroke="#4fb8c8" stroke-width="1.6"></rect>
+    <g fill="#4fb8c8">
+      <circle cx="158" cy="166" r="1.6"></circle><circle cx="176" cy="172" r="1.6"></circle><circle cx="190" cy="162" r="1.6"></circle>
+      <circle cx="164" cy="190" r="1.6"></circle><circle cx="184" cy="196" r="1.6"></circle><circle cx="156" cy="210" r="1.6"></circle>
+      <circle cx="178" cy="216" r="1.6"></circle><circle cx="192" cy="200" r="1.6"></circle>
+    </g>
+    <text x="126" y="246" fill="#5a5a5a" font-size="9.5" text-anchor="middle">steel</text>
+    <text x="171" y="246" fill="#5fbecb" font-size="9.5" text-anchor="middle">resin</text>
+    <text x="110" y="276" fill="#8f8f8f" font-size="11">+ cold and quiet</text>
+    <text x="110" y="294" fill="#8f8f8f" font-size="11">+ less heat to the rotor</text>
+    <text x="110" y="312" fill="#5a5a5a" font-size="10.5">road · XC · mild and dry use</text>
+
+    <text x="570" y="100" fill="#8f8f8f" font-size="12" text-anchor="middle">SINTERED / METALLIC</text>
+    <rect x="490" y="150" width="32" height="80" fill="#3a3a3a" stroke="#7a7a7a" stroke-width="1.4"></rect>
+    <rect x="522" y="150" width="58" height="80" fill="#1a1a1a" stroke="#9c9c9c" stroke-width="1.6"></rect>
+    <g stroke="#9c9c9c" stroke-width="1.2">
+      <line x1="534" y1="164" x2="542" y2="170"></line><line x1="556" y1="162" x2="564" y2="168"></line>
+      <line x1="540" y1="186" x2="548" y2="192"></line><line x1="562" y1="188" x2="570" y2="194"></line>
+      <line x1="532" y1="208" x2="540" y2="214"></line><line x1="556" y1="210" x2="564" y2="216"></line>
+    </g>
+    <text x="506" y="246" fill="#5a5a5a" font-size="9.5" text-anchor="middle">steel</text>
+    <text x="551" y="246" fill="#8f8f8f" font-size="9.5" text-anchor="middle">metal</text>
+    <text x="490" y="276" fill="#8f8f8f" font-size="11">+ holds heat, lasts in the wet</text>
+    <text x="490" y="294" fill="#8f8f8f" font-size="11">− noisy, wears the rotor more</text>
+    <text x="490" y="312" fill="#5a5a5a" font-size="10.5">enduro · DH · e-bike · wet</text>
+
+    <rect x="110" y="332" width="540" height="30" rx="6" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.2"></rect>
+    <text x="124" y="351" fill="#8f8f8f" font-size="10.5">⚠ &#34;Resin Pads Only&#34;: some lightweight rotors take ONLY resin — don&#39;t fit sintered.</text>
+
+    <text x="380" y="380" fill="#5fbecb" font-size="12" text-anchor="middle">the compound sets the brake&#39;s character · choose by terrain and weather</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>
