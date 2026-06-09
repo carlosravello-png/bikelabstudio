@@ -12,7 +12,7 @@
     content="The right SAG makes the difference between a bike that devours the terrain and one that drains you. Professional calculator with 132 models: Fox, RockShox, Öhlins, Manitou and more.">
   <title>How to Set Up Your MTB Suspension SAG — Calculator + Guide | BikeLab Studio</title>
   <meta name="description"
-    content="Set up your MTB suspension SAG. Professional calculator with a dual-chamber physical model: 132 Fox, RockShox, SR Suntour and Öhlins models. Free.">
+    content="Practical guide to set up the SAG of your MTB suspension. Professional calculator with dual chamber physical model, 132 Fox, RockShox, SR Suntour, Öhlins models and more. Free.">
   <meta name="keywords"
     content="MTB suspension SAG, setup MTB fork, mountain bike suspension pressure, Fox RockShox SAG, SAG calculator, suspension setup">
   <meta name="author" content="Carlos Ravello">
@@ -1200,4 +1200,76 @@
       pressure. More tokens = suspension is stiffer at the end of the stroke. The calculator recommends the
       number of tokens that keeps the progressivity ratio within the optimal range of your discipline. If you already
       have
-      tokens installed, enter that number so
+      tokens installed, enter that number so the pressure calculation incorporates them correctly.</p>
+
+    <div class="warning-box">
+      <div class="w-label">// REGARDING REAR SHOCKS</div>
+      <p style="margin-bottom:0;color:#ccc">The pressure calculation for rear shocks depends heavily on the frame's
+        leverage ratio. Without that data, uncertainty multiplies by 2–3×. Always specify your frame's linkage
+        type to get useful results. If you can identify the specific frame, even better.</p>
+    </div>
+
+    <div class="cluster-links">
+      <p
+        style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;letter-spacing:2px;margin-bottom:15px;text-transform:uppercase">
+        [ CLUSTER_DATA_LINKS ] // MTB SUSPENSION AND SETUP</p>
+      <h3 style="font-size:1.2rem;color:#fff;margin-bottom:20px;font-weight:400;letter-spacing:1px">Related
+        resources:</h3>
+      <p style="font-size:0.85rem;color:#aaa;margin-bottom:25px">For the complete technical methodology behind this
+        calculator:</p>
+      <ul>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[01]</span>
+          <a href="./white-paper-sag-model.html">White Paper: Dual Chamber Physical Model — equations, calibration, Monte Carlo →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[02]</span>
+          <a href="./sag-calculator-en.html">MTB SAG Calculator — 132 models (standalone tool) →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[03]</span>
+          <a href="./white-paper-11v-12v-en.html">White Paper: Comparative Analysis 11v vs 12v Drivetrains →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[04]</span>
+          <a href="../suspension-en.html">Suspension tuning service at BikeLab Studio →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Frequently Asked Questions</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">What SAG percentage should I use for my discipline?</h3>
+      <p>As a starting point on the fork: 15–20% for XC, 20–23% for trail, 23–26% for enduro and 25–28% for DH. The rear shock runs higher: 25–28% for XC, 28–30% for trail, 30–33% for enduro and 33–38% for DH. Within the range, increase SAG if you ride aggressively or on technical terrain.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Why can't suspension air pressure be set by eye?</h3>
+      <p>Because pressure depends on four variables that are non-linear with each other: your total weight, the component's stroke, the air-chamber volume and the installed tokens. Air compresses following the polytropic law, so pressure does not scale linearly with weight or with travel.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Is the rear shock SAG the same as the wheel SAG?</h3>
+      <p>No. The shock is connected to the frame through a linkage with a leverage ratio. A shock at 25% SAG on a frame with a leverage ratio of 3.0 produces a different wheel SAG. The calculator computes the real wheel SAG based on the linkage type (Horst Link, VPP, DW-Link, Single Pivot, High Pivot).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">How do I measure my suspension SAG at home?</h3>
+      <p>Slide the O-ring to the seal, get on the bike in a neutral riding position with your gear without bouncing, step off carefully and measure how far the O-ring moved. Divide those millimeters by the total stroke and multiply by 100. Repeat the measurement 3 times and average.</p>
+    </div>
+
+    <div class="footer">
+      <div style="margin-bottom:20px">
+        <strong>BikeLab Studio</strong><br>
+        Paraguay 300, Trujillo, La Libertad, Perú<br>
+        Technical Research Division
+      </div>
+      <div class="footer-grid">
+        <div><strong>SAG Calculator v5.0:</strong><br>132 cataloged models<br>Engine: polytropic dual chamber</div>
+        <div><strong>Author:</strong><br>Carlos Ravello<br>Founder of BikeLab Studio</div>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center">
+        © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+      </div>
+    </div>
+
+  </div>
+  <script>
+    document.querySelectorAll('.nav-overlay a[href*="#"], .nav-overlay a[href*="index"]').forEach(a => {
+      a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false });
+    });
+  </script>
+</body>
+
+</html>

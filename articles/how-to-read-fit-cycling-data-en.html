@@ -12,7 +12,7 @@
     content="Your cycling computer records more than you see. Cadence CV, climbing stability, Variability Index, and cardiac decoupling reveal real mechanical problems. BikeLab FIT Analyzer guide.">
   <title>How to Read Your Cycling FIT Data — BikeLab FIT Analyzer Guide | BikeLab Studio</title>
   <meta name="description"
-    content="Interpret your FIT files with the BikeLab FIT Analyzer: cadence CV, Variability Index, Climbing Stability and cardiac decoupling — what they mean and why.">
+    content="Practical guide to interpreting your FIT files with the BikeLab FIT Analyzer. Cadence CV, Variability Index, Climbing Stability Index, and cardiac decoupling: what they mean and how to improve your setup.">
   <meta name="keywords"
     content="FIT file analysis cycling, Garmin FIT data, variability index cycling, cadence MTB diagnosis, cardiac decoupling cycling, BikeLab FIT Analyzer, interpret cycling data">
   <meta name="author" content="Carlos Ravello">
@@ -530,4 +530,50 @@
     <div class="warning-box">
       <div class="w-label">// DECLARED LIMITATIONS</div>
       <ul style="color:#ccc;margin-left:20px">
-        <li><strong>Urban GPS:</strong> in cities with tall buildings, GPS speed error can e
+        <li><strong>Urban GPS:</strong> in cities with tall buildings, GPS speed error can exceed ±5 m/s for several seconds. The analyzer applies filters but segments with more than 15% invalid samples are excluded from calculation.</li>
+        <li><strong>Optical cadence sensors:</strong> camera-based models (some Favero, Look pedals) have higher latency than magnet/Reed sensors. This slightly inflates CV_c without representing a real mechanical problem.</li>
+        <li><strong>Extreme heat:</strong> cardiac decoupling in temperatures above 86°F (30°C) has a thermoregulatory component that is not aerobic in origin. Do not cross-compare with data taken in cool conditions.</li>
+        <li><strong>Minimum samples:</strong> the analyzer requires at least 300 valid samples per segment to calculate metrics with confidence. Very short rides (&lt; 5 minutes) do not produce reliable results.</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <p style="font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-bottom:8px">// Free tool — no account — no server</p>
+      <p>Upload your FIT file and get your report in under 30 seconds.</p>
+      <a href="fit-analyzer-en.html" class="cta-btn">OPEN FIT ANALYZER →</a>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Frequently Asked Questions</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Does the BikeLab FIT Analyzer upload my file to a server?</h3>
+      <p>No. Processing happens entirely in your browser and the .FIT file never leaves your device. No sign-up or account is required.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Which devices and files are compatible with the FIT Analyzer?</h3>
+      <p>FIT files from Garmin, Wahoo, Coros, Polar, Suunto and Bryton. It also works with files exported from Strava (Settings → Download your data → activity.fit).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">Do I need a power meter to analyze my FIT data?</h3>
+      <p>Not for every metric. Cadence CV, the Climbing Stability Index and cardiac decoupling are calculated without power. The Variability Index (VI) does require power data; without a meter the analyzer reports N/A for that metric.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">What does a high Climbing Stability Index (CSI) indicate?</h3>
+      <p>That the speed-to-cadence ratio varies under load while climbing. Common causes are a worn chain, incorrect indexing, bottom bracket play or suboptimal climbing posture. A CSI close to 0 indicates mechanically efficient pedaling.</p>
+    </div>
+
+    <div class="footer">
+      <div>BikeLab Studio // Paraguay 300, Trujillo, La Libertad, Peru // bikelabstudio.com</div>
+      <div class="footer-grid">
+        <div>
+          <div style="margin-bottom:8px;color:#888">RELATED ARTICLES</div>
+          <a href="white-paper-fit-analyzer.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ White Paper: FIT Analyzer Methodological Framework</a>
+          <a href="how-to-set-mtb-suspension-sag-en.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ How to Set Your MTB Suspension SAG</a>
+          <a href="electronic-shifting-di2-axs-en.html" style="color:#666;text-decoration:none;display:block">→ Electronic Shifting Di2 and AXS Diagnostics</a>
+        </div>
+        <div>
+          <div style="margin-bottom:8px;color:#888">TOOLS</div>
+          <a href="fit-analyzer-en.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ BikeLab FIT Analyzer</a>
+          <a href="sag-calculator-en.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ SAG Calculator</a>
+          <a href="di2-axs-diagnostic.html" style="color:#666;text-decoration:none;display:block">→ Di2 &amp; AXS Diagnostic</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

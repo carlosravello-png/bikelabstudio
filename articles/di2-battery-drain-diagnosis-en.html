@@ -8,7 +8,7 @@
     <!-- SEO Meta Tags -->
     <title>Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol | BikeLab Studio</title>
     <meta name="description"
-        content="Di2 dead by morning? Component-by-component isolation, the EW-WU111 firmware bug and the drain formula Shimano never published. No SM-PCE02 needed.">
+        content="Di2 dead by morning? I've diagnosed this for 12 months. Component-by-component isolation, EW-WU111 firmware bug, and the drain formula Shimano never published. No SM-PCE02 needed.">
     <meta name="keywords"
         content="shimano di2 battery drain, di2 battery draining overnight, ew-wu111 battery drain, di2 not sleeping, di2 diagnosis, di2 battery fix">
     <meta name="author" content="Carlos Eduardo Ravello Joo">
@@ -24,7 +24,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Shimano Di2 Battery Draining Overnight: Field Diagnosis Protocol">
     <meta property="og:description"
-        content="12 months of Di2 battery drain cases documented in the Andes, Peru. Component isolation protocol, EW-WU111 firmware bug, drain time formula. No SM-PCE02 needed.">
+        content="12 months of Di2 battery drain cases documented in Trujillo, Peru. Component isolation protocol, EW-WU111 firmware bug, drain time formula. No SM-PCE02 needed.">
     <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/di2-power-architecture.svg">
     <meta property="og:image:width" content="900">
     <meta property="og:image:height" content="500">
@@ -53,7 +53,6 @@
     <meta name="DC.type" content="Text">
     <meta name="DC.accessRights" content="open access">
 
-    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" defer></script>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -63,6 +62,7 @@
     {
       "@type": "TechArticle",
       "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html"
@@ -153,44 +153,6 @@
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
         { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.bikelabstudio.com/index-en.html#science" },
         { "@type": "ListItem", "position": 3, "name": "Shimano Di2 Battery Drain: Field Diagnosis Protocol", "item": "https://www.bikelabstudio.com/articles/di2-battery-drain-diagnosis-en.html" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Why does my Di2 battery drain on its own overnight?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Because a component failed to enter sleep mode and keeps drawing milliamps continuously. A healthy Di2 idles at 20–80 µA, which means months of standby; a component stuck awake draws between 1 and 30 mA, enough to empty a 500 mAh battery in about 25 hours."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the most common cause of Di2 battery drain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The EW-WU111 wireless unit (and the EW-WU101) with a firmware bug that leaves it in Bluetooth advertising mode instead of sleeping, drawing 1–5 mA continuously. Shimano fixed it in E-TUBE PROJECT updates but never documented it in the user manual. Updating the firmware is the first thing to rule out."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need the SM-PCE02 to diagnose Di2 battery drain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not in 90% of cases. With a component-by-component isolation protocol, disconnecting and waiting 12 hours at each step, you can find the culprit without that tool. The SM-PCE02 or a qualified shop are only needed for intermittent leaks or faults in the E-Tube bus itself."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the battery the faulty part when my Di2 drains overnight?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Almost never. Overnight self-discharge is usually the EW-WU111 or the rear derailleur, not the battery. A healthy battery self-discharges less than 0.5% per day when isolated; only if it drops more than 3% per day while disconnected from everything should you replace it."
-          }
-        }
       ]
     }
   ]
@@ -443,7 +405,7 @@
             <div class="subtitle">Field diagnosis protocol — no SM-PCE02 needed</div>
             <div class="meta">
                 Author: <a href="https://carlosravello.com" rel="author">Carlos Eduardo Ravello Joo</a> // Founder, BikeLab Studio<br>
-                Field observations: June 2025 – May 2026 · Andes, Peru<br>
+                Field observations: June 2025 – May 2026 · Trujillo, La Libertad, Peru<br>
                 Published: May 2026
             </div>
         </div>
@@ -457,190 +419,16 @@
 
         <p>This is the protocol I built from those cases. It doesn't require the SM-PCE02 diagnostic tool. It doesn't require taking the bike to a shop. It requires a multimeter, patience, and knowing which component to disconnect first.</p>
 
-        <div class="insight-box">
-            <p style="color:#aaa;margin-bottom:10px;"><strong>DIRECT ANSWER</strong></p>
-            <p>If your Shimano Di2 battery drains on its own overnight, it's almost always because <strong>a component failed to enter sleep mode</strong> and keeps drawing milliamps around the clock, instead of the ~20–80 µA a healthy system draws at idle. The most frequent culprit is the <strong>EW-WU111 wireless unit</strong> with firmware stuck in Bluetooth advertising mode (1–5 mA continuous): update it via E-TUBE PROJECT before anything else. The definitive diagnosis is to isolate the system component by component; the <a href="di2-axs-diagnostic.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">BikeLab Di2 &amp; AXS Diagnostic Tool</a> walks you through that decision tree step by step.</p>
-        </div>
-
         <!-- MODULE 01 -->
         <h2>MODULE_01 // HOW DI2 POWER ACTUALLY WORKS</h2>
 
         <p>Before diagnosing anything, you need to understand the system you're working with. Di2 is a single-bus distributed power architecture — one 7.4V lithium battery feeds everything through E-Tube wiring. Each component has its own microcontroller and voltage regulator. They talk on the same bus.</p>
 
         <div class="diagram-container">
-            <svg style="width:100%;height:auto;display:block;" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-<defs>
-      
-        
-        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-          <path d="M30 0 H0 V30" fill="none" stroke="#161616" stroke-width="1"></path>
-        </pattern>
-      </defs>
-
-      
-      <rect x="0" y="0" width="900" height="500" fill="#0a0a0a"></rect>
-      <rect x="0" y="0" width="900" height="500" fill="url(#grid)"></rect>
-      <rect x="0.5" y="0.5" width="899" height="499" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
-
-      
-      <g stroke="#555" stroke-width="1">
-        <path d="M14 14 H30 M14 14 V30" fill="none"></path>
-        <path d="M886 14 H870 M886 14 V30" fill="none"></path>
-        <path d="M14 486 H30 M14 486 V470" fill="none"></path>
-        <path d="M886 486 H870 M886 486 V470" fill="none"></path>
-      </g>
-
-      
-      <text x="30" y="44" fill="#f2f2f2" font-size="15" letter-spacing="3" font-weight="bold">SHIMANO DI2 // POWER DISTRIBUTION ARCHITECTURE</text>
-      <line x1="30" y1="56" x2="870" y2="56" stroke="#3a3a3a" stroke-width="1"></line>
-      <text x="870" y="44" fill="#7a7a7a" font-size="10" letter-spacing="2" text-anchor="end">FIG.01 / E-TUBE</text>
-
-      
-      <g>
-        <rect x="34" y="150" width="150" height="92" fill="#111" stroke="#cfcfcf" stroke-width="1.4"></rect>
-        
-        <rect x="184" y="182" width="6" height="28" fill="#cfcfcf"></rect>
-        <line x1="34" y1="172" x2="184" y2="172" stroke="#3a3a3a" stroke-width="1"></line>
-        <text x="109" y="167" fill="#9a9a9a" font-size="9" letter-spacing="2" text-anchor="middle">[ SOURCE ]</text>
-        <text x="109" y="191" fill="#f2f2f2" font-size="15" font-weight="bold" text-anchor="middle">7.4V</text>
-        <text x="109" y="209" fill="#dcdcdc" font-size="10.5" text-anchor="middle">Li-ion Battery</text>
-        <text x="109" y="226" fill="#9a9a9a" font-size="10.5" text-anchor="middle">500 mAh</text>
-        
-        <g fill="#6a6a6a">
-          <rect x="60" y="135" width="10" height="8"></rect>
-          <rect x="75" y="135" width="10" height="8"></rect>
-          <rect x="90" y="135" width="10" height="8"></rect>
-          <rect x="105" y="131" width="10" height="12"></rect>
-          <rect x="120" y="131" width="10" height="12"></rect>
-          <rect x="135" y="131" width="10" height="12"></rect>
-        </g>
-      </g>
-
-      
-      <line x1="190" y1="196" x2="232" y2="196" stroke="#cfcfcf" stroke-width="1.4"></line>
-      <circle cx="232" cy="196" r="3.2" fill="#cfcfcf"></circle>
-
-      
-      
-      <line x1="232" y1="192" x2="858" y2="192" stroke="#cfcfcf" stroke-width="1.4"></line>
-      <line x1="232" y1="200" x2="858" y2="200" stroke="#cfcfcf" stroke-width="1.4"></line>
-      <text x="858" y="184" fill="#9a9a9a" font-size="10" letter-spacing="3" text-anchor="end">E-TUBE BUS</text>
-      
-      <line x1="858" y1="186" x2="858" y2="206" stroke="#cfcfcf" stroke-width="1.4"></line>
-
-      
-      
-      
-      <g stroke="#cfcfcf" stroke-width="1.4" fill="none">
-        <path d="M300 200 V300"></path>
-        <path d="M412 200 V300"></path>
-        <path d="M524 200 V300"></path>
-        <path d="M636 200 V300"></path>
-        <path d="M760 200 V300"></path>
-      </g>
-      <g fill="#cfcfcf">
-        <circle cx="300" cy="196" r="3.2"></circle>
-        <circle cx="412" cy="196" r="3.2"></circle>
-        <circle cx="524" cy="196" r="3.2"></circle>
-        <circle cx="636" cy="196" r="3.2"></circle>
-        <circle cx="760" cy="196" r="3.2"></circle>
-      </g>
-
-      
-      <g>
-        <rect x="244" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
-        <line x1="244" y1="322" x2="356" y2="322" stroke="#333" stroke-width="1"></line>
-        <text x="251" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 01</text>
-        <text x="300" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">RD</text>
-        <text x="300" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">Rear Derailleur</text>
-        <line x1="262" y1="372" x2="338" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
-        <text x="251" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
-        <text x="349" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">15 µA</text>
-        <text x="251" y="406" fill="#9a9a9a" font-size="8.6">SHIFT</text>
-        <text x="349" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">800 mA pk</text>
-      </g>
-
-      
-      <g>
-        <rect x="356" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
-        <line x1="356" y1="322" x2="468" y2="322" stroke="#333" stroke-width="1"></line>
-        <text x="363" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 02</text>
-        <text x="412" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">FD</text>
-        <text x="412" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">Front Derailleur</text>
-        <line x1="374" y1="372" x2="450" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
-        <text x="363" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
-        <text x="461" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">12 µA</text>
-        <text x="363" y="406" fill="#9a9a9a" font-size="8.6">SHIFT</text>
-        <text x="461" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">1.2 A pk</text>
-      </g>
-
-      
-      <g>
-        <rect x="468" y="300" width="112" height="120" fill="#111" stroke="#bdbdbd" stroke-width="1.2"></rect>
-        <line x1="468" y1="322" x2="580" y2="322" stroke="#333" stroke-width="1"></line>
-        <text x="475" y="316" fill="#7a7a7a" font-size="8.5" letter-spacing="1">NODE 03</text>
-        <text x="524" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">Junction A</text>
-        <text x="524" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">EW-RS910</text>
-        <line x1="486" y1="372" x2="562" y2="372" stroke="#2c2c2c" stroke-width="1"></line>
-        <text x="475" y="390" fill="#9a9a9a" font-size="8.6">SLEEP</text>
-        <text x="573" y="390" fill="#e6e6e6" font-size="8.6" text-anchor="end">8 µA</text>
-        <text x="475" y="406" fill="#9a9a9a" font-size="8.6">ACTIVE</text>
-        <text x="573" y="406" fill="#e6e6e6" font-size="8.6" text-anchor="end">2 mA</text>
-      </g>
-
-      
-      <g>
-        <rect x="580" y="300" width="112" height="120" fill="#141414" stroke="#f2f2f2" stroke-width="1.5" stroke-dasharray="4 3"></rect>
-        <line x1="580" y1="322" x2="692" y2="322" stroke="#444" stroke-width="1"></line>
-        <text x="587" y="316" fill="#9a9a9a" font-size="8.5" letter-spacing="1">NODE 04</text>
-        
-        <g transform="translate(666,308)">
-          <path d="M9 1 L17 16 L1 16 Z" fill="none" stroke="#f2f2f2" stroke-width="1.3" stroke-linejoin="round"></path>
-          <line x1="9" y1="6" x2="9" y2="11.5" stroke="#f2f2f2" stroke-width="1.3"></line>
-          <circle cx="9" cy="13.6" r="0.9" fill="#f2f2f2"></circle>
-        </g>
-        <text x="636" y="342" fill="#f2f2f2" font-size="13" font-weight="bold" text-anchor="middle">BT Unit</text>
-        <text x="636" y="358" fill="#cfcfcf" font-size="8.6" text-anchor="middle">EW-WU111</text>
-        <line x1="598" y1="372" x2="674" y2="372" stroke="#333" stroke-width="1"></line>
-        <text x="587" y="390" fill="#bdbdbd" font-size="8.6">SLEEP</text>
-        <text x="685" y="390" fill="#ffffff" font-size="8.6" text-anchor="end">1–5 mA</text>
-        <text x="587" y="406" fill="#bdbdbd" font-size="8.6">ACTIVE</text>
-        <text x="685" y="406" fill="#ffffff" font-size="8.6" text-anchor="end">8 mA</text>
-      </g>
-
-      
-      <g>
-        <rect x="704" y="300" width="112" height="120" fill="#0e0e0e" stroke="#7a7a7a" stroke-width="1.2"></rect>
-        <line x1="704" y1="322" x2="816" y2="322" stroke="#2a2a2a" stroke-width="1"></line>
-        <text x="711" y="316" fill="#6a6a6a" font-size="8.5" letter-spacing="1">NODE 05</text>
-        <text x="760" y="342" fill="#dcdcdc" font-size="13" font-weight="bold" text-anchor="middle">Junction B</text>
-        <text x="760" y="358" fill="#a8a8a8" font-size="8.6" text-anchor="middle">SM-JC41</text>
-        <line x1="722" y1="372" x2="798" y2="372" stroke="#222" stroke-width="1"></line>
-        <text x="760" y="390" fill="#7a7a7a" font-size="8.6" text-anchor="middle">No firmware</text>
-        <text x="760" y="406" fill="#7a7a7a" font-size="8.6" text-anchor="middle">Passive component</text>
-      </g>
-      
-      <line x1="760" y1="200" x2="760" y2="300" stroke="#6a6a6a" stroke-width="1.2" stroke-dasharray="3 3"></line>
-
-      
-      <g>
-        <path d="M636 420 V442 H612" fill="none" stroke="#888" stroke-width="1"></path>
-        <rect x="392" y="436" width="222" height="30" fill="#141414" stroke="#888" stroke-width="1"></rect>
-        
-        <g transform="translate(401,442)">
-          <path d="M8 1 L15 14 L1 14 Z" fill="none" stroke="#f2f2f2" stroke-width="1.1" stroke-linejoin="round"></path>
-          <line x1="8" y1="5" x2="8" y2="9.5" stroke="#f2f2f2" stroke-width="1.1"></line>
-          <circle cx="8" cy="11.3" r="0.8" fill="#f2f2f2"></circle>
-        </g>
-        <text x="424" y="450" fill="#f2f2f2" font-size="8.8" font-weight="bold">EW-WU111 — Known drain risk</text>
-        <text x="424" y="461" fill="#a8a8a8" font-size="8.4">check firmware version</text>
-      </g>
-
-      
-      <text x="30" y="470" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
-      <text x="30" y="482" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
-
-    </svg>
+            <img src="images/di2-power-architecture.svg"
+                 alt="Shimano Di2 E-Tube Power Distribution Architecture — BikeLab Studio"
+                 title="Di2 Power Architecture — Carlos Eduardo Ravello Joo"
+                 width="900" height="500" loading="lazy">
             <div class="diagram-caption">
                 FIG.01 // SHIMANO DI2 E-TUBE POWER DISTRIBUTION ARCHITECTURE<br>
                 © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
@@ -791,126 +579,10 @@
         <div data-nosnippet>
 
         <div class="diagram-container">
-            <svg style="width:100%;height:auto;display:block;" viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-<defs>
-      
-        <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-          <path d="M28 0 H0 V28" fill="none" stroke="#151515" stroke-width="1"></path>
-        </pattern>
-        <marker id="arr" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
-          <path d="M0 0 L6.5 3 L0 6" fill="none" stroke="#8a8a8a" stroke-width="1.2"></path>
-        </marker>
-      </defs>
-
-      
-      <rect x="0" y="0" width="800" height="750" fill="#0a0a0a"></rect>
-      <rect x="0" y="0" width="800" height="750" fill="url(#grid)"></rect>
-      <rect x="0.5" y="0.5" width="799" height="749" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
-      <g stroke="#555" stroke-width="1" fill="none">
-        <path d="M14 14 H30 M14 14 V30"></path>
-        <path d="M786 14 H770 M786 14 V30"></path>
-        <path d="M14 736 H30 M14 736 V720"></path>
-        <path d="M786 736 H770 M786 736 V720"></path>
-      </g>
-
-      
-      <text x="30" y="42" fill="#f2f2f2" font-size="14" letter-spacing="2.5" font-weight="bold">COMPONENT ISOLATION SEQUENCE // DI2 DRAIN DIAGNOSIS</text>
-      <line x1="30" y1="54" x2="770" y2="54" stroke="#3a3a3a" stroke-width="1"></line>
-      <text x="770" y="42" fill="#7a7a7a" font-size="9.5" letter-spacing="2" text-anchor="end">FIG.03</text>
-
-      
-      <g>
-        <rect x="652" y="76" width="118" height="118" fill="#141414" stroke="#9a9a9a" stroke-width="1.2"></rect>
-        <text x="663" y="94" fill="#8a8a8a" font-size="8" letter-spacing="1.5">[ TEST WINDOW ]</text>
-        <line x1="663" y1="100" x2="759" y2="100" stroke="#333" stroke-width="1"></line>
-        <text x="663" y="118" fill="#bdbdbd" font-size="9.5">Total test time</text>
-        <text x="663" y="136" fill="#f2f2f2" font-size="15" font-weight="bold">6–8 days</text>
-        <line x1="663" y1="150" x2="759" y2="150" stroke="#2c2c2c" stroke-width="1"></line>
-        <text x="663" y="168" fill="#bdbdbd" font-size="9.5">No SM-PCE02</text>
-        <text x="663" y="183" fill="#bdbdbd" font-size="9.5">required</text>
-      </g>
-      
-      <g>
-        <line x1="711" y1="214" x2="711" y2="648" stroke="#6a6a6a" stroke-width="1.2" marker-end="url(#arr)"></line>
-        <text x="724" y="440" fill="#6a6a6a" font-size="9" letter-spacing="3" transform="rotate(90,724,440)" text-anchor="middle">ISOLATION ORDER</text>
-      </g>
-
-      
-      
-      <g stroke="#444" stroke-width="1.2">
-        <line x1="61" y1="162" x2="61" y2="176"></line>
-        <line x1="61" y1="262" x2="61" y2="276"></line>
-        <line x1="61" y1="362" x2="61" y2="376"></line>
-        <line x1="61" y1="462" x2="61" y2="476"></line>
-        <line x1="61" y1="562" x2="61" y2="576"></line>
-      </g>
-
-      
-      <g>
-        <rect x="30" y="76" width="608" height="86" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="92" y1="76" x2="92" y2="162" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="61" y="116" fill="#f2f2f2" font-size="26" font-weight="bold" text-anchor="middle">01</text>
-        <text x="61" y="136" fill="#7a7a7a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">STEP</text>
-        <text x="108" y="100" fill="#f2f2f2" font-size="12.5" font-weight="bold">DISCONNECT: EW-WU111 (BT Unit)</text>
-        <text x="108" y="122" fill="#9a9a9a" font-size="10">WAIT: 12 hours   |   EXPECTED SLEEP: &lt;80 µA</text>
-        <text x="108" y="142" fill="#dcdcdc" font-size="10">If drain stops → Replace or update firmware</text>
-      </g>
-      
-      <g>
-        <rect x="30" y="176" width="608" height="86" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="92" y1="176" x2="92" y2="262" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="61" y="216" fill="#f2f2f2" font-size="26" font-weight="bold" text-anchor="middle">02</text>
-        <text x="61" y="236" fill="#7a7a7a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">STEP</text>
-        <text x="108" y="200" fill="#f2f2f2" font-size="12.5" font-weight="bold">DISCONNECT: Rear Derailleur</text>
-        <text x="108" y="222" fill="#9a9a9a" font-size="10">WAIT: 12 hours   |   EXPECTED SLEEP: &lt;65 µA</text>
-        <text x="108" y="242" fill="#dcdcdc" font-size="10">If drain stops → RD microcontroller fault</text>
-      </g>
-      
-      <g>
-        <rect x="30" y="276" width="608" height="86" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="92" y1="276" x2="92" y2="362" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="61" y="316" fill="#f2f2f2" font-size="26" font-weight="bold" text-anchor="middle">03</text>
-        <text x="61" y="336" fill="#7a7a7a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">STEP</text>
-        <text x="108" y="300" fill="#f2f2f2" font-size="12.5" font-weight="bold">DISCONNECT: Front Derailleur</text>
-        <text x="108" y="322" fill="#9a9a9a" font-size="10">WAIT: 12 hours   |   EXPECTED SLEEP: &lt;50 µA</text>
-        <text x="108" y="342" fill="#dcdcdc" font-size="10">If drain stops → FD alignment or MCU fault</text>
-      </g>
-      
-      <g>
-        <rect x="30" y="376" width="608" height="86" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="92" y1="376" x2="92" y2="462" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="61" y="416" fill="#f2f2f2" font-size="26" font-weight="bold" text-anchor="middle">04</text>
-        <text x="61" y="436" fill="#7a7a7a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">STEP</text>
-        <text x="108" y="400" fill="#f2f2f2" font-size="12.5" font-weight="bold">DISCONNECT: Junction A (EW-RS910)</text>
-        <text x="108" y="422" fill="#9a9a9a" font-size="10">WAIT: 12 hours   |   EXPECTED SLEEP: &lt;40 µA</text>
-        <text x="108" y="442" fill="#dcdcdc" font-size="10">If drain stops → Junction A firmware loop</text>
-      </g>
-      
-      <g>
-        <rect x="30" y="476" width="608" height="86" fill="#141414" stroke="#f2f2f2" stroke-width="1.4"></rect>
-        <line x1="92" y1="476" x2="92" y2="562" stroke="#f2f2f2" stroke-width="1.4"></line>
-        <text x="61" y="516" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">05</text>
-        <text x="61" y="536" fill="#9a9a9a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">ISOLATE</text>
-        <text x="108" y="500" fill="#ffffff" font-size="12.5" font-weight="bold">ISOLATE: Battery (disconnect all wires)</text>
-        <text x="108" y="522" fill="#bdbdbd" font-size="10">WAIT: 24 hours   |   Battery should hold charge</text>
-        <text x="108" y="542" fill="#e6e6e6" font-size="10">If drain → Internal cell degradation</text>
-      </g>
-      
-      <g>
-        <rect x="30" y="576" width="608" height="86" fill="#0e0e0e" stroke="#7a7a7a" stroke-width="1.2"></rect>
-        <line x1="92" y1="576" x2="92" y2="662" stroke="#7a7a7a" stroke-width="1.2"></line>
-        <text x="61" y="616" fill="#cfcfcf" font-size="26" font-weight="bold" text-anchor="middle">06</text>
-        <text x="61" y="636" fill="#6a6a6a" font-size="7.5" letter-spacing="1.5" text-anchor="middle">REMAIN</text>
-        <text x="108" y="600" fill="#dcdcdc" font-size="12.5" font-weight="bold">REMAINING: Dumb components (wires, JC41, JC130)</text>
-        <text x="108" y="622" fill="#9a9a9a" font-size="10">Visual inspection for corrosion or kinks</text>
-        <text x="108" y="642" fill="#bdbdbd" font-size="10">If suspect → overnight test with known-good parts</text>
-      </g>
-
-      
-      <line x1="30" y1="700" x2="770" y2="700" stroke="#2a2a2a" stroke-width="1"></line>
-      <text x="30" y="720" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
-      <text x="30" y="732" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
-    </svg>
+            <img src="images/di2-component-isolation-sequence.svg"
+                 alt="Di2 Component Isolation Sequence for Battery Drain — BikeLab Studio"
+                 title="Component Isolation Protocol — © 2026 Carlos Eduardo Ravello Joo"
+                 width="800" height="750" loading="lazy">
             <div class="diagram-caption">
                 FIG.02 // COMPONENT ISOLATION SEQUENCE // DI2 DRAIN DIAGNOSIS<br>
                 © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
@@ -991,179 +663,10 @@
         <h2>MODULE_07 // DIAGNOSTIC PROTOCOL — FULL DECISION TREE</h2>
 
         <div class="diagram-container">
-            <svg style="width:100%;height:auto;display:block;" viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-<defs>
-      
-        <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-          <path d="M28 0 H0 V28" fill="none" stroke="#151515" stroke-width="1"></path>
-        </pattern>
-        <marker id="arr" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
-          <path d="M0 0 L6.5 3 L0 6" fill="none" stroke="#cfcfcf" stroke-width="1.2"></path>
-        </marker>
-        <marker id="arrd" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
-          <path d="M0 0 L6.5 3 L0 6" fill="none" stroke="#8a8a8a" stroke-width="1.2"></path>
-        </marker>
-      </defs>
-
-      
-      <rect x="0" y="0" width="700" height="900" fill="#0a0a0a"></rect>
-      <rect x="0" y="0" width="700" height="900" fill="url(#grid)"></rect>
-      <rect x="0.5" y="0.5" width="699" height="899" fill="none" stroke="#2a2a2a" stroke-width="1"></rect>
-      <g stroke="#555" stroke-width="1" fill="none">
-        <path d="M14 14 H30 M14 14 V30"></path>
-        <path d="M686 14 H670 M686 14 V30"></path>
-        <path d="M14 886 H30 M14 886 V870"></path>
-        <path d="M686 886 H670 M686 886 V870"></path>
-      </g>
-
-      
-      <text x="30" y="42" fill="#f2f2f2" font-size="14" letter-spacing="2.5" font-weight="bold">DI2 BATTERY DRAIN // DIAGNOSTIC PROTOCOL</text>
-      <line x1="30" y1="54" x2="670" y2="54" stroke="#3a3a3a" stroke-width="1"></line>
-      <text x="670" y="42" fill="#7a7a7a" font-size="9.5" letter-spacing="2" text-anchor="end">FIG.02</text>
-
-      
-      <g stroke="#cfcfcf" stroke-width="1.3" fill="none">
-        <line x1="230" y1="132" x2="230" y2="198" marker-end="url(#arr)"></line>
-        <line x1="230" y1="256" x2="230" y2="322" marker-end="url(#arr)"></line>
-        <line x1="230" y1="380" x2="230" y2="446" marker-end="url(#arr)"></line>
-        <line x1="230" y1="504" x2="230" y2="570" marker-end="url(#arr)"></line>
-        <line x1="230" y1="628" x2="230" y2="694" marker-end="url(#arr)"></line>
-        <line x1="230" y1="752" x2="230" y2="778" marker-end="url(#arr)"></line>
-        
-        <line x1="390" y1="104" x2="428" y2="104" marker-end="url(#arr)"></line>
-        <line x1="390" y1="228" x2="428" y2="228" marker-end="url(#arr)"></line>
-        <line x1="390" y1="352" x2="428" y2="352" marker-end="url(#arr)"></line>
-        <line x1="390" y1="476" x2="428" y2="476" marker-end="url(#arr)"></line>
-        <line x1="390" y1="600" x2="428" y2="600" marker-end="url(#arr)"></line>
-        <line x1="390" y1="724" x2="428" y2="724" marker-end="url(#arr)"></line>
-      </g>
-
-      
-      <g font-size="9" font-weight="bold" letter-spacing="1">
-        
-        <text x="238" y="170" fill="#cfcfcf">YES</text>
-        <text x="238" y="294" fill="#cfcfcf">YES</text>
-        <text x="238" y="418" fill="#9a9a9a">NO</text>
-        <text x="238" y="542" fill="#cfcfcf">YES</text>
-        <text x="238" y="666" fill="#cfcfcf">YES</text>
-        <text x="238" y="770" fill="#9a9a9a">NO</text>
-        
-        <text x="409" y="98" fill="#9a9a9a" text-anchor="middle">NO</text>
-        <text x="409" y="222" fill="#9a9a9a" text-anchor="middle">NO</text>
-        <text x="409" y="346" fill="#cfcfcf" text-anchor="middle">YES</text>
-        <text x="409" y="470" fill="#9a9a9a" text-anchor="middle">NO</text>
-        <text x="409" y="594" fill="#9a9a9a" text-anchor="middle">NO</text>
-        <text x="409" y="718" fill="#cfcfcf" text-anchor="middle">YES</text>
-      </g>
-
-      
-      
-      <g>
-        <rect x="70" y="76" width="320" height="56" fill="#111" stroke="#e6e6e6" stroke-width="1.4"></rect>
-        <line x1="80" y1="76" x2="80" y2="132" stroke="#e6e6e6" stroke-width="1.4"></line>
-        <text x="92" y="71" fill="#9a9a9a" font-size="8.5" letter-spacing="2">[ START ]</text>
-        <text x="235" y="99" fill="#f2f2f2" font-size="11" text-anchor="middle">Battery draining &gt;10%</text>
-        <text x="235" y="116" fill="#f2f2f2" font-size="11" text-anchor="middle">in 12 hours?</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="200" width="320" height="56" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="80" y1="200" x2="80" y2="256" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="92" y="195" fill="#7a7a7a" font-size="8.5" letter-spacing="1">Q2</text>
-        <text x="235" y="223" fill="#f2f2f2" font-size="11" text-anchor="middle">Single-click test:</text>
-        <text x="235" y="240" fill="#f2f2f2" font-size="11" text-anchor="middle">Does system wake normally?</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="324" width="320" height="56" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="80" y1="324" x2="80" y2="380" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="92" y="319" fill="#7a7a7a" font-size="8.5" letter-spacing="1">Q3</text>
-        <text x="235" y="347" fill="#f2f2f2" font-size="11" text-anchor="middle">Was EW-WU111 recently</text>
-        <text x="235" y="364" fill="#f2f2f2" font-size="11" text-anchor="middle">installed or updated?</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="448" width="320" height="56" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="80" y1="448" x2="80" y2="504" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="92" y="443" fill="#7a7a7a" font-size="8.5" letter-spacing="1">Q4</text>
-        <text x="235" y="471" fill="#f2f2f2" font-size="11" text-anchor="middle">Disconnect EW-WU111.</text>
-        <text x="235" y="488" fill="#f2f2f2" font-size="11" text-anchor="middle">Drain continues?</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="572" width="320" height="56" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="80" y1="572" x2="80" y2="628" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="92" y="567" fill="#7a7a7a" font-size="8.5" letter-spacing="1">Q5</text>
-        <text x="235" y="595" fill="#f2f2f2" font-size="11" text-anchor="middle">Disconnect Rear Derailleur.</text>
-        <text x="235" y="612" fill="#f2f2f2" font-size="11" text-anchor="middle">Drain continues?</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="696" width="320" height="56" fill="#111" stroke="#cfcfcf" stroke-width="1.3"></rect>
-        <line x1="80" y1="696" x2="80" y2="752" stroke="#cfcfcf" stroke-width="1.3"></line>
-        <text x="92" y="691" fill="#7a7a7a" font-size="8.5" letter-spacing="1">Q6</text>
-        <text x="235" y="719" fill="#f2f2f2" font-size="11" text-anchor="middle">Isolated battery test</text>
-        <text x="235" y="736" fill="#f2f2f2" font-size="11" text-anchor="middle">(24h disconnected). Drain?</text>
-      </g>
-
-      
-      
-      <g>
-        <rect x="430" y="74" width="250" height="60" fill="#141414" stroke="#777" stroke-width="1" stroke-dasharray="4 3"></rect>
-        <text x="442" y="92" fill="#8a8a8a" font-size="8" letter-spacing="1">&gt;&gt; OUTCOME</text>
-        <text x="442" y="109" fill="#dcdcdc" font-size="10">Normal behavior.</text>
-        <text x="442" y="124" fill="#9a9a9a" font-size="10">Check ride frequency.</text>
-      </g>
-      
-      <g>
-        <rect x="430" y="198" width="250" height="60" fill="#141414" stroke="#777" stroke-width="1" stroke-dasharray="4 3"></rect>
-        <text x="442" y="216" fill="#8a8a8a" font-size="8" letter-spacing="1">&gt;&gt; OUTCOME</text>
-        <text x="442" y="233" fill="#dcdcdc" font-size="10">System stuck awake →</text>
-        <text x="442" y="248" fill="#9a9a9a" font-size="10">Isolation protocol</text>
-      </g>
-      
-      <g>
-        <rect x="430" y="322" width="250" height="60" fill="#141414" stroke="#777" stroke-width="1" stroke-dasharray="4 3"></rect>
-        <text x="442" y="340" fill="#8a8a8a" font-size="8" letter-spacing="1">&gt;&gt; OUTCOME</text>
-        <text x="442" y="357" fill="#dcdcdc" font-size="10">Check firmware version.</text>
-        <text x="442" y="372" fill="#9a9a9a" font-size="10">Update via E-TUBE app.</text>
-      </g>
-      
-      <g>
-        <rect x="430" y="446" width="250" height="60" fill="#141414" stroke="#9a9a9a" stroke-width="1.2"></rect>
-        <text x="442" y="464" fill="#a8a8a8" font-size="8" letter-spacing="1">&gt;&gt; CULPRIT FOUND</text>
-        <text x="442" y="481" fill="#f2f2f2" font-size="10">EW-WU111 is culprit →</text>
-        <text x="442" y="496" fill="#cfcfcf" font-size="10">Replace or update firmware</text>
-      </g>
-      
-      <g>
-        <rect x="430" y="570" width="250" height="60" fill="#141414" stroke="#9a9a9a" stroke-width="1.2"></rect>
-        <text x="442" y="588" fill="#a8a8a8" font-size="8" letter-spacing="1">&gt;&gt; CULPRIT FOUND</text>
-        <text x="442" y="605" fill="#f2f2f2" font-size="10">RD MCU fault →</text>
-        <text x="442" y="620" fill="#cfcfcf" font-size="10">Replace RD</text>
-      </g>
-      
-      <g>
-        <rect x="430" y="694" width="250" height="60" fill="#141414" stroke="#9a9a9a" stroke-width="1.2"></rect>
-        <text x="442" y="712" fill="#a8a8a8" font-size="8" letter-spacing="1">&gt;&gt; CULPRIT FOUND</text>
-        <text x="442" y="729" fill="#f2f2f2" font-size="10">Battery cell failure →</text>
-        <text x="442" y="744" fill="#cfcfcf" font-size="10">Replace battery</text>
-      </g>
-      
-      <g>
-        <rect x="70" y="778" width="320" height="56" fill="#141414" stroke="#9a9a9a" stroke-width="1.2"></rect>
-        <line x1="80" y1="778" x2="80" y2="834" stroke="#9a9a9a" stroke-width="1.2"></line>
-        <text x="92" y="773" fill="#a8a8a8" font-size="8" letter-spacing="1">&gt;&gt; OUTCOME</text>
-        <text x="235" y="801" fill="#f2f2f2" font-size="10.5" text-anchor="middle">Junction or wire fault →</text>
-        <text x="235" y="818" fill="#cfcfcf" font-size="10.5" text-anchor="middle">SM-PCE02 or shop</text>
-      </g>
-
-      
-      <line x1="30" y1="852" x2="670" y2="852" stroke="#2a2a2a" stroke-width="1"></line>
-      <text x="670" y="872" fill="#cfcfcf" font-size="10" text-anchor="end">→ Use BikeLab Di2/AXS Diagnostic Tool</text>
-      <text x="30" y="872" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
-      <text x="30" y="884" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
-    </svg>
+            <img src="images/di2-drain-diagnostic-protocol.svg"
+                 alt="Di2 Battery Drain Diagnostic Decision Tree — BikeLab Studio"
+                 title="Di2 Drain Diagnostic Protocol — © 2026 Carlos Eduardo Ravello Joo"
+                 width="700" height="900" loading="lazy">
             <div class="diagram-caption">
                 FIG.03 // DI2 BATTERY DRAIN // DIAGNOSTIC PROTOCOL<br>
                 © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio · carlosravello.com
@@ -1185,21 +688,6 @@
 
         <p>Don't spend $400 on a new battery if you haven't completed the isolation first. The battery is almost never the cause of overnight drain — it's usually the EW-WU111 or the RD. Start there.</p>
 
-        <!-- MODULE 09 — FAQ -->
-        <h2>MODULE_09 // FREQUENTLY ASKED QUESTIONS</h2>
-
-        <h3>Why does my Di2 battery drain on its own overnight?</h3>
-        <p>Because a component failed to enter sleep mode and keeps drawing milliamps continuously. A healthy Di2 idles at 20–80 µA, which means months of standby; a component stuck awake draws between 1 and 30 mA, enough to empty a 500 mAh battery in about 25 hours.</p>
-
-        <h3>What is the most common cause of Di2 battery drain?</h3>
-        <p>The EW-WU111 wireless unit (and the EW-WU101) with a firmware bug that leaves it in Bluetooth advertising mode instead of sleeping, drawing 1–5 mA continuously. Shimano fixed it in E-TUBE PROJECT updates but never documented it in the user manual. Updating the firmware is the first thing to rule out.</p>
-
-        <h3>Do I need the SM-PCE02 to diagnose Di2 battery drain?</h3>
-        <p>Not in 90% of cases. With a component-by-component isolation protocol, disconnecting and waiting 12 hours at each step, you can find the culprit without that tool. The SM-PCE02 or a qualified shop are only needed for intermittent leaks or faults in the E-Tube bus itself.</p>
-
-        <h3>Is the battery the faulty part when my Di2 drains overnight?</h3>
-        <p>Almost never. Overnight self-discharge is usually the EW-WU111 or the rear derailleur, not the battery. A healthy battery self-discharges less than 0.5% per day when isolated; only if it drops more than 3% per day while disconnected from everything should you replace it.</p>
-
         <!-- CONCLUSION -->
         <div class="conclusion-box">
             <p>Di2 is a distributed embedded system running on 7.4V. When it works, it's invisible. When it fails, the failure mode is almost always the same: one component stuck awake, pulling milliamps around the clock, while the rest of the system sleeps normally.</p>
@@ -1211,4 +699,93 @@
             <p style="margin-top:30px;padding-top:20px;border-top:1px solid #333;">
                 → For step-by-step interactive diagnosis of Di2 and SRAM AXS shifting faults:<br>
                 <a href="di2-axs-diagnostic.html" style="color:#aaa;text-decoration:none;border-bottom:1px solid #444;">
-                  
+                    BikeLab Di2 &amp; AXS Diagnostic Tool — free, no app, no account
+                </a>
+            </p>
+        </div>
+
+        <!-- CLUSTER LINKS -->
+        <div style="margin:40px 0;padding:25px;background:#0a0a0a;border:1px solid #333;border-left:3px solid var(--accent);">
+            <span style="font-family:var(--mono);font-size:0.7rem;color:#888;letter-spacing:2px;display:block;margin-bottom:15px;">[ CLUSTER_DATA_LINKS ] // ELECTRONIC SYSTEMS</span>
+            <ul style="list-style-type:none;margin:0;padding:0;">
+                <li style="margin-bottom:12px;">
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="di2-axs-diagnostic.html" style="color:#ccc;text-decoration:none;" title="Di2 & AXS Interactive Diagnostic Tool">Di2 &amp; AXS Diagnostic Tool — Interactive Step-by-Step Fault Tree</a>
+                </li>
+                <li style="margin-bottom:12px;">
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="electronic-shifting-di2-axs-en.html" style="color:#ccc;text-decoration:none;" title="Di2 vs AXS comparison">Di2 vs SRAM AXS: Engineering Comparison</a>
+                </li>
+                <li>
+                    <span style="color:var(--accent);margin-right:10px;">→</span>
+                    <a href="hydraulic-brakes-altitude-thermodynamics.html" style="color:#ccc;text-decoration:none;" title="Hydraulic brakes thermodynamics">Hydraulic Braking Systems at Altitude: Thermodynamic Analysis</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="references">
+            <h2>TECHNICAL_REFERENCES</h2>
+
+            <div class="ref-item">[1] Shimano (2024). "E-TUBE PROJECT Cyclist — Firmware Update History". E-TUBE PROJECT App, Windows. <a href="https://bike.shimano.com/en-EU/information/e-tube-project.html" target="_blank" rel="noopener">bike.shimano.com</a></div>
+
+            <div class="ref-item">[2] Shimano (2023). "Dealer's Manual — Di2 Wireless Unit EW-WU111". DM-RBWU001-05-ENG. <a href="https://si.shimano.com" target="_blank" rel="noopener">si.shimano.com</a></div>
+
+            <div class="ref-item">[3] Shimano (2023). "User Manual — Di2 12-Speed Road Components". UM-3K40A. Battery behavior and low-charge protocol, pp. 6–17.</div>
+
+            <div class="ref-item">[4] BetterShifting (2024). "How to troubleshoot Di2 battery drain issues". Updated Dec 27, 2024. <a href="https://bettershifting.com/how-to-troubleshoot-di2-battery-drain-issues/" target="_blank" rel="noopener">bettershifting.com</a></div>
+
+            <div class="ref-item">[5] TrainerRoad Forum (2024). "Di2 battery question — sleep mode diagnosis thread". Community technical discussion. <a href="https://www.trainerroad.com/forum/t/di2-battery-question/104962" target="_blank" rel="noopener">trainerroad.com</a></div>
+
+            <div class="ref-item">[6] Reddit r/bikewrench (2022). "Di2 battery draining 20% per day — EW-WU111 identified". <a href="https://www.reddit.com/r/bikewrench/comments/vt5g0w/di2_battery_draining_20_per_day/" target="_blank" rel="noopener">reddit.com/r/bikewrench</a></div>
+
+            <div class="ref-item">[7] Ravello Joo, C.E. (2025–2026). "Field observations — Di2 battery drain cases, BikeLab Studio". Internal diagnostic log, Trujillo, La Libertad, Peru.</div>
+        </div>
+
+        <p style="margin-top:30px;">
+            <a href="../index-en.html#science" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;">← BACK TO HOME</a>
+        </p>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div style="margin-bottom:20px;">
+                <strong>BikeLab Studio</strong><br>
+                Industrial &amp; Scientific Noir<br>
+                Paraguay 300, Trujillo, La Libertad, Peru
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <strong>Photography and editing:</strong><br>
+                    Carlos Ravello // BikeLab Studio<br>
+                    Post-production: DaVinci Resolve
+                </div>
+                <div>
+                    <strong>Author:</strong><br>
+                    <a href="https://carlosravello.com" rel="author" style="color:#888;text-decoration:none;">Carlos Eduardo Ravello Joo</a><br>
+                    Founder of BikeLab Studio
+                </div>
+            </div>
+
+            <div class="cc-notice">
+                © 2026 Carlos Eduardo Ravello Joo. This work is licensed under
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license" target="_blank" style="color:#555;">CC BY-NC-ND 4.0</a>.
+                Original field data, diagnostic methodology and diagrams may not be reproduced, summarized or adapted without explicit written permission.
+                Contact: contacto@bikelabstudio.com
+            </div>
+
+            <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center;">
+                © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+            </div>
+        </div>
+    </div>
+
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        document.querySelectorAll('.nav-overlay a[href*="#"]').forEach(a => {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        });
+    </script>
+</body>
+
+</html>

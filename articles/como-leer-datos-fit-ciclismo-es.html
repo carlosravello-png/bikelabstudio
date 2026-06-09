@@ -12,7 +12,7 @@
     content="Tu Garmin guarda más de lo que ves. Cadencia, estabilidad en subida, Variability Index y decoupling cardíaco revelan problemas mecánicos reales. Guía del BikeLab FIT Analyzer.">
   <title>Cómo leer tus datos FIT de ciclismo — BikeLab FIT Analyzer | BikeLab Studio</title>
   <meta name="description"
-    content="Interpreta tus archivos FIT con el BikeLab FIT Analyzer: cadencia, Variability Index, estabilidad en subida y decoupling cardíaco. Qué significan y cómo mejorar.">
+    content="Guía práctica para interpretar tus archivos FIT con el BikeLab FIT Analyzer. Cadencia, Variability Index, estabilidad en subida y decoupling cardíaco: qué significan y cómo mejorar tu rendimiento.">
   <meta name="keywords"
     content="análisis FIT ciclismo, Garmin FIT datos, variability index ciclismo, cadencia MTB diagnóstico, decoupling cardíaco ciclismo, BikeLab FIT Analyzer, interpretar datos ciclismo">
   <meta name="author" content="Carlos Ravello">
@@ -943,4 +943,50 @@
     <div class="warning-box">
       <div class="w-label">// LIMITACIONES DECLARADAS</div>
       <ul style="color:#ccc;margin-left:20px">
-        <li><strong>GPS urbano:</strong> en ciudades con edificios altos, el
+        <li><strong>GPS urbano:</strong> en ciudades con edificios altos, el error de velocidad GPS puede exceder ±5 m/s durante varios segundos. El analizador aplica filtros pero los tramos con más del 15% de muestras inválidas se excluyen del cálculo.</li>
+        <li><strong>Sensores de cadencia ópticos:</strong> los modelos basados en cámara (algunos pedales Favero, Look) tienen mayor latencia que los imán/Reed. Esto infla ligeramente el CV_c sin representar un problema mecánico real.</li>
+        <li><strong>Calor extremo:</strong> el decoupling cardíaco en temperaturas superiores a 30°C tiene un componente termorregulatorio que no es de origen aeróbico. No interpolar directamente con datos tomados en condiciones frescas.</li>
+        <li><strong>Muestras mínimas:</strong> el analizador requiere al menos 300 muestras válidas por segmento para calcular métricas con confianza. Salidas muy cortas (&lt; 5 minutos) no generan resultados confiables.</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <p style="font-family:var(--mono);font-size:11px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-bottom:8px">// Herramienta gratuita — sin registro — sin servidor</p>
+      <p>Sube tu archivo FIT y obtén tu reporte en menos de 30 segundos.</p>
+      <a href="fit-analyzer-es.html" class="cta-btn">ABRIR FIT ANALYZER →</a>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Preguntas Frecuentes</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿El BikeLab FIT Analyzer sube mi archivo a algún servidor?</h3>
+      <p>No. El procesamiento ocurre completamente en tu navegador y el archivo .FIT nunca abandona tu dispositivo. No requiere registro ni cuenta.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué dispositivos y archivos son compatibles con el FIT Analyzer?</h3>
+      <p>Archivos .FIT de Garmin, Wahoo, Coros, Polar, Suunto y Bryton. También funciona con archivos exportados desde Strava (Configuración → Descargar datos → actividad.fit).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Necesito un medidor de potencia para analizar mis datos FIT?</h3>
+      <p>No para todas las métricas. El CV de cadencia, el Índice de Estabilidad en Subida y el decoupling cardíaco se calculan sin potencia. El Variability Index (VI) sí requiere datos de potencia; sin medidor el analizador reporta N/A para esa métrica.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué indica un Índice de Estabilidad en Subida (IES) alto?</h3>
+      <p>Que la relación velocidad/cadencia varía bajo carga en subida. Las causas frecuentes son cadena desgastada, indexing incorrecto, juego en el pedalier o postura subóptima. Un IES cercano a 0 indica pedaleo mecánicamente eficiente.</p>
+    </div>
+
+    <div class="footer">
+      <div>BikeLab Studio // Paraguay 300, Trujillo, La Libertad, Perú // bikelabstudio.com</div>
+      <div class="footer-grid">
+        <div>
+          <div style="margin-bottom:8px;color:#888">ARTÍCULOS RELACIONADOS</div>
+          <a href="white-paper-fit-analyzer-es.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ White Paper: Marco Metodológico FIT Analyzer</a>
+          <a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ Cómo configurar el SAG de tu suspensión MTB</a>
+          <a href="cambios-electronicos-di2-axs-es.html" style="color:#666;text-decoration:none;display:block">→ Diagnóstico de cambios electrónicos Di2 y AXS</a>
+        </div>
+        <div>
+          <div style="margin-bottom:8px;color:#888">HERRAMIENTAS</div>
+          <a href="fit-analyzer-es.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ BikeLab FIT Analyzer</a>
+          <a href="sag-calculator-es.html" style="color:#666;text-decoration:none;display:block;margin-bottom:6px">→ Calculadora SAG</a>
+          <a href="di2-axs-diagnostic-es.html" style="color:#666;text-decoration:none;display:block">→ Diagnóstico Di2 y AXS</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

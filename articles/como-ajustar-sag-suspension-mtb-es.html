@@ -12,7 +12,7 @@
     content="El SAG correcto marca la diferencia entre una bici que devora el terreno y una que te cansa. Calculadora profesional con 132 modelos: Fox, RockShox, Öhlins, Manitou y más.">
   <title>Cómo configurar el SAG de tu suspensión MTB — Calculadora + Guía | BikeLab Studio</title>
   <meta name="description"
-    content="Configura el SAG de tu suspensión MTB con calculadora de modelo físico de doble cámara: 132 modelos Fox, RockShox, SR Suntour, Öhlins y más. Gratis.">
+    content="Guía práctica para configurar el SAG de tu suspensión MTB. Calculadora profesional con modelo físico de doble cámara, 132 modelos Fox, RockShox, SR Suntour, Öhlins y más. Gratis.">
   <meta name="keywords"
     content="SAG suspensión MTB, configurar horquilla MTB, presión suspensión mountain bike, Fox RockShox SAG, calculadora SAG, setup suspensión">
   <meta name="author" content="Carlos Ravello">
@@ -1190,4 +1190,76 @@
     <p>Los tokens (volume spacers) reducen el volumen de la cámara positiva y aumentan la progresividad sin afectar la
       presión inicial. Más tokens = la suspensión es más rígida al final del recorrido. La calculadora recomienda el
       número de tokens que mantiene el ratio de progresividad dentro del rango óptimo de tu disciplina. Si ya tienes
-      tokens instalados, ingresa ese número para que el cálculo de pr
+      tokens instalados, ingresa ese número para que el cálculo de presión los incorpore correctamente.</p>
+
+    <div class="warning-box">
+      <div class="w-label">// SOBRE LOS SHOCKS TRASEROS</div>
+      <p style="margin-bottom:0;color:#ccc">El cálculo de presión para amortiguadores traseros depende fuertemente del
+        leverage ratio del cuadro. Sin ese dato, la incertidumbre se multiplica por 2–3×. Especifica siempre el tipo de
+        linkage de tu cuadro para obtener resultados útiles. Si puedes identificar el cuadro específico, mejor aún.</p>
+    </div>
+
+    <div class="cluster-links">
+      <p
+        style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;letter-spacing:2px;margin-bottom:15px;text-transform:uppercase">
+        [ CLUSTER_DATA_LINKS ] // SUSPENSIÓN Y CONFIGURACIÓN MTB</p>
+      <h3 style="font-size:1.2rem;color:#fff;margin-bottom:20px;font-weight:400;letter-spacing:1px">Recursos
+        relacionados:</h3>
+      <p style="font-size:0.85rem;color:#aaa;margin-bottom:25px">Para la metodología técnica completa detrás de esta
+        calculadora:</p>
+      <ul>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[01]</span>
+          <a href="./white-paper-sag-model-es.html">White Paper: Modelo Físico de Cámara Dual — ecuaciones, calibración, Monte Carlo →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[02]</span>
+          <a href="./sag-calculator-es.html">Calculadora SAG MTB — 132 modelos (herramienta independiente) →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[03]</span>
+          <a href="./white-paper-11v-12v-es.html">White Paper: Análisis Comparativo Transmisión 11v vs 12v →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[04]</span>
+          <a href="../suspension-es.html">Servicio de puesta a punto de suspensión en BikeLab Studio →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+      <h2>Preguntas Frecuentes</h2>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Qué porcentaje de SAG debo usar según mi disciplina?</h3>
+      <p>Como punto de partida en la horquilla: 15–20% en XC, 20–23% en trail, 23–26% en enduro y 25–28% en DH. El amortiguador trasero va más alto: 25–28% en XC, 28–30% en trail, 30–33% en enduro y 33–38% en DH. Dentro del rango, sube el SAG si pilotas agresivo o en terreno técnico.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Por qué no se puede calcular la presión de aire de la suspensión a ojo?</h3>
+      <p>Porque la presión depende de cuatro variables no lineales entre sí: tu peso total, el stroke del componente, el volumen de la cámara de aire y los tokens instalados. El aire se comprime según la ley politrópica, así que la presión no escala linealmente con el peso ni con el recorrido.</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿El SAG del amortiguador trasero es el mismo que el SAG de la rueda?</h3>
+      <p>No. El amortiguador está conectado al cuadro por un sistema de palancas con un leverage ratio. Un shock con 25% de SAG en un cuadro con leverage ratio 3.0 produce un SAG de rueda distinto. La calculadora computa el SAG de rueda real según el tipo de linkage (Horst Link, VPP, DW-Link, Single Pivot, High Pivot).</p>
+      <h3 style="font-size: 1rem; color: var(--text); margin: 28px 0 10px;">¿Cómo mido el SAG de mi suspensión en casa?</h3>
+      <p>Desliza el O-ring hasta el sello, súbete a la bici con tu equipo en posición neutral sin saltar, baja con cuidado y mide la distancia que recorrió el O-ring. Divide esos milímetros entre el stroke total y multiplica por 100. Repite la medición 3 veces y promedia.</p>
+    </div>
+
+    <div class="footer">
+      <div style="margin-bottom:20px">
+        <strong>BikeLab Studio</strong><br>
+        Paraguay 300, Trujillo, La Libertad, Perú<br>
+        División de Investigación Técnica
+      </div>
+      <div class="footer-grid">
+        <div><strong>Calculadora SAG v5.0:</strong><br>132 modelos catalogados<br>Motor: doble cámara politrópica</div>
+        <div><strong>Autor:</strong><br>Carlos Ravello<br>Fundador de BikeLab Studio</div>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center">
+        © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+      </div>
+    </div>
+
+  </div>
+  <script>
+    document.querySelectorAll('.nav-overlay a[href*="#"], .nav-overlay a[href*="index"]').forEach(a => {
+      a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false });
+    });
+  </script>
+</body>
+
+</html>
