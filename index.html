@@ -587,15 +587,7 @@
         section {
             padding: 140px 0;
             border-bottom: 1px solid #111;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: 1s ease-out;
             scroll-margin-top: 70px;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         #projects {
@@ -2297,16 +2289,6 @@
             <a href="/about.html" style="display:block; margin-top:20px; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; opacity:0.42; color:inherit; text-decoration:none;">Entidad · About</a>
         </div>
     </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('section').forEach(s => observer.observe(s));
-        document.querySelectorAll('.nav-overlay a[href^="#"]').forEach(a => {
-            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
-        });
-    </script>
 
 </body>
 
