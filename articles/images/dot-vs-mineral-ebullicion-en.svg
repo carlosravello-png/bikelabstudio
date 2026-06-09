@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
+  <title>Boiling point: DOT vs mineral oil — BikeLab Studio</title>
+  <desc>Comparison of dry and wet boiling point for DOT 4, DOT 5.1 and mineral oil. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs></defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="623" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 618 H42 M22 618 V598"></path><path d="M1178 618 H1158 M1178 618 V598"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="57" fill="#ECECEC" font-size="25" font-weight="bold">Boiling point: DOT vs mineral oil</text>
+  <text x="62" y="84" fill="#9AA0A6" font-size="15">Dry and wet boiling point · the wet figure is the one you actually run after months of service</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.05 / BOILING</text>
+  <line x1="40" y1="100" x2="1160" y2="100" stroke="#2A2A2A" stroke-width="1"></line>
+
+  <rect x="40" y="118" width="875" height="480" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+
+  <g stroke="#1E1E24" stroke-width="1">
+    <line x1="130" y1="530" x2="890" y2="530"></line><line x1="130" y1="467" x2="890" y2="467"></line>
+    <line x1="130" y1="403" x2="890" y2="403"></line><line x1="130" y1="340" x2="890" y2="340"></line>
+    <line x1="130" y1="277" x2="890" y2="277"></line><line x1="130" y1="213" x2="890" y2="213"></line>
+    <line x1="130" y1="150" x2="890" y2="150"></line>
+  </g>
+  <g fill="#9AA0A6" font-size="12.5" text-anchor="end">
+    <text x="118" y="534">0</text><text x="118" y="471">50</text><text x="118" y="407">100</text>
+    <text x="118" y="344">150</text><text x="118" y="281">200</text><text x="118" y="217">250</text><text x="118" y="154">300</text>
+  </g>
+  <line x1="130" y1="150" x2="130" y2="530" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <line x1="130" y1="530" x2="890" y2="530" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <text x="74" y="340" fill="#ECECEC" font-size="13.5" text-anchor="middle" transform="rotate(-90 74 340)">boiling point (°C)</text>
+
+  <line x1="130" y1="403" x2="890" y2="403" stroke="#FF5C5C" stroke-width="1.3" stroke-dasharray="6 5" opacity="0.8"></line>
+  <text x="138" y="397" fill="#FF5C5C" font-size="12">100°C · water boils</text>
+
+  <rect x="225" y="239" width="56" height="291" fill="#34D2FF" fill-opacity="0.85"></rect>
+  <text x="253" y="231" fill="#34D2FF" font-size="14" font-weight="bold" text-anchor="middle">230</text>
+  <rect x="291" y="334" width="56" height="196" fill="#FF5C5C" fill-opacity="0.85"></rect>
+  <text x="319" y="326" fill="#FF5C5C" font-size="14" font-weight="bold" text-anchor="middle">155</text>
+  <text x="286" y="552" fill="#ECECEC" font-size="15" text-anchor="middle">DOT 4</text>
+
+  <rect x="455" y="188" width="56" height="342" fill="#34D2FF" fill-opacity="0.85"></rect>
+  <text x="483" y="180" fill="#34D2FF" font-size="14" font-weight="bold" text-anchor="middle">270</text>
+  <rect x="521" y="302" width="56" height="228" fill="#FF5C5C" fill-opacity="0.85"></rect>
+  <text x="549" y="294" fill="#FF5C5C" font-size="14" font-weight="bold" text-anchor="middle">180</text>
+  <text x="516" y="552" fill="#ECECEC" font-size="15" text-anchor="middle">DOT 5.1</text>
+
+  <rect x="685" y="245" width="56" height="285" fill="#34D2FF" fill-opacity="0.85"></rect>
+  <text x="713" y="237" fill="#34D2FF" font-size="14" font-weight="bold" text-anchor="middle">225</text>
+  <rect x="751" y="403" width="56" height="127" fill="#FF5C5C" fill-opacity="0.6"></rect>
+  <rect x="751" y="403" width="56" height="127" fill="none" stroke="#FF5C5C" stroke-width="1.4" stroke-dasharray="4 3"></rect>
+  <text x="779" y="395" fill="#FF5C5C" font-size="14" font-weight="bold" text-anchor="middle">100</text>
+  <text x="746" y="552" fill="#ECECEC" font-size="15" text-anchor="middle">Mineral</text>
+  <text x="746" y="572" fill="#9AA0A6" font-size="11.5" text-anchor="middle">(trapped water)</text>
+
+  <rect x="455" y="586" width="16" height="12" fill="#34D2FF" fill-opacity="0.85"></rect>
+  <text x="478" y="596" fill="#9AA0A6" font-size="12.5">dry</text>
+  <rect x="535" y="586" width="16" height="12" fill="#FF5C5C" fill-opacity="0.85"></rect>
+  <text x="558" y="596" fill="#9AA0A6" font-size="12.5">wet / trapped water</text>
+
+  <g>
+    <rect x="935" y="118" width="225" height="480" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+    <text x="957" y="146" fill="#9AA0A6" font-size="13" letter-spacing="1.2">[ THE MINERAL NUANCE ]</text>
+    <line x1="957" y1="158" x2="1138" y2="158" stroke="#222" stroke-width="1"></line>
+    <text x="957" y="186" fill="#B68CFF" font-size="13.5" font-weight="bold">Not hygroscopic:</text>
+    <text x="957" y="206" fill="#C9CDD2" font-size="12.5">mineral oil doesn&#39;t absorb</text>
+    <text x="957" y="224" fill="#C9CDD2" font-size="12.5">moisture like DOT.</text>
+
+    <text x="957" y="258" fill="#FF5C5C" font-size="13.5" font-weight="bold">But water gets in anyway</text>
+    <text x="957" y="278" fill="#C9CDD2" font-size="12.5">through seals and condensation.</text>
+    <text x="957" y="296" fill="#C9CDD2" font-size="12.5">Not mixing, it sinks and</text>
+    <text x="957" y="314" fill="#C9CDD2" font-size="12.5">pools in the CALIPER —</text>
+    <text x="957" y="332" fill="#C9CDD2" font-size="12.5">the lowest, hottest point.</text>
+
+    <line x1="957" y1="356" x2="1138" y2="356" stroke="#222" stroke-width="1"></line>
+    <text x="957" y="384" fill="#FFB020" font-size="13.5" font-weight="bold">And there it boils at 100°C</text>
+    <text x="957" y="404" fill="#C9CDD2" font-size="12.5">far below the dry fluid</text>
+    <text x="957" y="422" fill="#C9CDD2" font-size="12.5">itself (225°C).</text>
+    <text x="957" y="448" fill="#C9CDD2" font-size="12.5">Result: a spongy lever right</text>
+    <text x="957" y="466" fill="#C9CDD2" font-size="12.5">when you brake hardest.</text>
+
+    <line x1="957" y1="494" x2="1138" y2="494" stroke="#222" stroke-width="1"></line>
+    <text x="957" y="522" fill="#46E08A" font-size="12.5">DOT or mineral: both need</text>
+    <text x="957" y="540" fill="#46E08A" font-size="12.5">an annual bleed.</text>
+    <text x="957" y="566" fill="#9AA0A6" font-size="12">The dry number misleads;</text>
+    <text x="957" y="584" fill="#9AA0A6" font-size="12">the real wet one rules.</text>
+  </g>
+
+  <text x="1160" y="620" fill="#6A6A6A" font-size="11" text-anchor="end">© Carlos Eduardo Ravello Joo · carlosravello.com</text>
+</svg>
