@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Chain width by speed — BikeLab Studio</title>
+  <desc>External chain width by number of speeds, from 8s ≈7.3 mm to 12s ≈5.25 mm; the internal pitch stays at 12.7 mm. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">CHAIN WIDTH</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // trans-03 · external width by speed</text>
+
+    <g>
+      <text x="120" y="98" fill="#8f8f8f" font-size="13" text-anchor="end">8s</text>
+      <rect x="150" y="84" width="219" height="20" fill="#2a2a2a" stroke="#7a7a7a" stroke-width="1.2"></rect>
+      <text x="381" y="98" fill="#8f8f8f" font-size="12.5">≈ 7.3 mm</text>
+      <text x="120" y="138" fill="#8f8f8f" font-size="13" text-anchor="end">9s</text>
+      <rect x="150" y="124" width="201" height="20" fill="#2a2a2a" stroke="#7a7a7a" stroke-width="1.2"></rect>
+      <text x="363" y="138" fill="#8f8f8f" font-size="12.5">≈ 6.7 mm</text>
+      <text x="120" y="178" fill="#8f8f8f" font-size="13" text-anchor="end">10s</text>
+      <rect x="150" y="164" width="177" height="20" fill="#2a2a2a" stroke="#7a7a7a" stroke-width="1.2"></rect>
+      <text x="339" y="178" fill="#8f8f8f" font-size="12.5">≈ 5.9 mm</text>
+      <text x="120" y="218" fill="#8f8f8f" font-size="13" text-anchor="end">11s</text>
+      <rect x="150" y="204" width="165" height="20" fill="#2a2a2a" stroke="#7a7a7a" stroke-width="1.2"></rect>
+      <text x="327" y="218" fill="#8f8f8f" font-size="12.5">≈ 5.5 mm</text>
+      <text x="120" y="258" fill="#4fb8c8" font-size="13" text-anchor="end">12s</text>
+      <rect x="150" y="244" width="158" height="20" fill="#16343a" stroke="#4fb8c8" stroke-width="1.6"></rect>
+      <text x="320" y="258" fill="#4fb8c8" font-size="12.5">≈ 5.25 mm</text>
+    </g>
+
+    <line x1="150" y1="74" x2="150" y2="276" stroke="#5a5a5a" stroke-width="1"></line>
+
+    <line x1="150" y1="306" x2="610" y2="306" stroke="#5f5f5f" stroke-width="1.4"></line>
+    <line x1="150" y1="300" x2="150" y2="312" stroke="#5f5f5f"></line><line x1="610" y1="300" x2="610" y2="312" stroke="#5f5f5f"></line>
+    <text x="380" y="298" fill="#8f8f8f" font-size="12" text-anchor="middle">internal pitch</text>
+    <text x="380" y="332" fill="#e6e6e6" font-size="13" text-anchor="middle">always 12.7 mm (½&#34;)</text>
+
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">more speeds = narrower chain · the pitch does not change</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>UDH — Universal Derailleur Hanger — BikeLab Studio</title>
+  <desc>Exploded view of the UDH interface: frame dropout, UDH hanger that rotates on impact, reverse-thread bolt and M12×1.0 thru-axle with a 12.7 mm thread. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">UDH · UNIVERSAL HANGER</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // trans-05 · exploded view</text>
+
+    <line x1="120" y1="170" x2="660" y2="170" stroke="#5f5f5f" stroke-width="1" stroke-dasharray="3 4"></line>
+
+    <path d="M120 96 h70 v60 q0 18 -18 18 h-52 q-14 0 -14 -14 v-50 q0 -14 14 -14 Z" fill="#101010" stroke="#7a7a7a" stroke-width="1.6"></path>
+    <circle cx="150" cy="170" r="13" fill="#080808" stroke="#7a7a7a" stroke-width="1.4"></circle>
+    <text x="150" y="232" fill="#8f8f8f" font-size="11.5" text-anchor="middle">dropout</text>
+    <text x="150" y="248" fill="#5a5a5a" font-size="10.5" text-anchor="middle">UDH frame</text>
+
+    <path d="M250 120 q26 0 26 26 v48 q0 26 -26 26 q-22 0 -22 -22 v-56 q0 -22 22 -22 Z" fill="#151515" stroke="#9c9c9c" stroke-width="1.8"></path>
+    <circle cx="248" cy="170" r="12" fill="#080808" stroke="#9c9c9c" stroke-width="1.4"></circle>
+    <path d="M276 132 a40 40 0 0 1 14 34" fill="none" stroke="#5fbecb" stroke-width="1.4" marker-end="url(#ac)"></path>
+    <text x="252" y="244" fill="#8f8f8f" font-size="11.5" text-anchor="middle">UDH hanger</text>
+    <text x="252" y="260" fill="#5fbecb" font-size="10.5" text-anchor="middle">rotates on impact</text>
+
+    <g stroke="#7a7a7a" stroke-width="1.6" fill="#101010">
+      <rect x="330" y="158" width="16" height="24" rx="2"></rect>
+    </g>
+    <g stroke="#7a7a7a" stroke-width="1.3">
+      <line x1="346" y1="162" x2="386" y2="162"></line><line x1="346" y1="170" x2="386" y2="170"></line><line x1="346" y1="178" x2="386" y2="178"></line>
+    </g>
+    <text x="360" y="232" fill="#8f8f8f" font-size="11.5" text-anchor="middle">bolt</text>
+    <text x="360" y="248" fill="#5a5a5a" font-size="10.5" text-anchor="middle">reverse thread</text>
+
+    <g>
+      <circle cx="470" cy="170" r="20" fill="#101010" stroke="#9c9c9c" stroke-width="1.8"></circle>
+      <circle cx="470" cy="170" r="8" fill="#080808" stroke="#7a7a7a" stroke-width="1.2"></circle>
+      <rect x="490" y="161" width="150" height="18" rx="2" fill="#151515" stroke="#9c9c9c" stroke-width="1.4"></rect>
+      <g stroke="#4fb8c8" stroke-width="1.2">
+        <line x1="600" y1="161" x2="600" y2="179"></line><line x1="610" y1="161" x2="610" y2="179"></line>
+        <line x1="620" y1="161" x2="620" y2="179"></line><line x1="630" y1="161" x2="630" y2="179"></line>
+      </g>
+      <line x1="490" y1="200" x2="640" y2="200" stroke="#5a5a5a" stroke-width="1"></line>
+      <line x1="490" y1="194" x2="490" y2="206" stroke="#5a5a5a"></line><line x1="640" y1="194" x2="640" y2="206" stroke="#5a5a5a"></line>
+      <text x="565" y="220" fill="#4fb8c8" font-size="14" text-anchor="middle">M12 × 1.0</text>
+      <text x="565" y="248" fill="#8f8f8f" font-size="11.5" text-anchor="middle">thru-axle · 12.7 mm thread</text>
+    </g>
+
+    <rect x="120" y="296" width="520" height="44" rx="6" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <rect x="120" y="296" width="5" height="44" fill="#4fb8c8"></rect>
+    <text x="142" y="316" fill="#e6e6e6" font-size="12.5">The frame must be UDH from the factory.</text>
+    <text x="142" y="333" fill="#8f8f8f" font-size="11">It&#39;s the base for Full Mount / T-Type setups (direct-mount derailleur, no separate hanger).</text>
+
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">a single standard hanger for almost any modern frame</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+
+    <defs><marker id="ac" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8" fill="none" stroke="#5fbecb" stroke-width="1.4"></path></marker></defs>
+  </g>
+</svg>
