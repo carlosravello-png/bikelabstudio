@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>BB86 / BB92 — BikeLab Studio</title>
+  <desc>Cut of a 41 mm BB86/BB92 shell with cups and a 24 mm spindle, in two widths. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">BB86 / BB92</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // pedalier-06</text>
+
+    <rect x="80" y="62" width="180" height="180" rx="8" fill="none" stroke="#3a3a3a" stroke-width="1.5"></rect>
+    <circle cx="170" cy="152" r="66" fill="none" stroke="#e6e6e6" stroke-width="2"></circle>
+    <circle cx="170" cy="152" r="56" fill="none" stroke="#7a7a7a" stroke-width="1.6"></circle>
+    <circle cx="170" cy="152" r="44" fill="none" stroke="#7a7a7a" stroke-width="1.4"></circle>
+    <circle cx="170" cy="152" r="28" fill="#151515" stroke="#5f5f5f" stroke-width="1.4"></circle>
+    <text x="170" y="156" fill="#6f6f6f" font-size="11" text-anchor="middle">24</text>
+    <line x1="104" y1="270" x2="236" y2="270" stroke="#5a5a5a" stroke-width="1"></line>
+    <line x1="104" y1="264" x2="104" y2="276" stroke="#5a5a5a"></line><line x1="236" y1="264" x2="236" y2="276" stroke="#5a5a5a"></line>
+    <text x="170" y="262" fill="#4fb8c8" font-size="14" text-anchor="middle">41 mm</text>
+    <text x="170" y="312" fill="#f0f0f0" font-size="17" text-anchor="middle">BB86 / BB92</text>
+    <text x="170" y="334" fill="#8f8f8f" font-size="11.5" text-anchor="middle">41 mm shell · cups · 24 mm spindle</text>
+
+    <rect x="360" y="62" width="320" height="180" rx="8" fill="none" stroke="#3a3a3a" stroke-width="1.5"></rect>
+    <rect x="420" y="92" width="120" height="46" fill="none" stroke="#e6e6e6" stroke-width="2"></rect>
+    <line x1="420" y1="150" x2="420" y2="138" stroke="#5a5a5a"></line><line x1="540" y1="150" x2="540" y2="138" stroke="#5a5a5a"></line>
+    <line x1="420" y1="150" x2="540" y2="150" stroke="#5a5a5a" stroke-width="1"></line>
+    <text x="556" y="120" fill="#4fb8c8" font-size="13">86.5 mm</text>
+    <text x="556" y="137" fill="#6a6a6a" font-size="11">BB86 · road</text>
+    <rect x="408" y="172" width="160" height="46" fill="none" stroke="#e6e6e6" stroke-width="2"></rect>
+    <line x1="408" y1="230" x2="408" y2="218" stroke="#5a5a5a"></line><line x1="568" y1="230" x2="568" y2="218" stroke="#5a5a5a"></line>
+    <line x1="408" y1="230" x2="568" y2="230" stroke="#5a5a5a" stroke-width="1"></line>
+    <text x="584" y="200" fill="#4fb8c8" font-size="13">92 mm</text>
+    <text x="584" y="217" fill="#6a6a6a" font-size="11">BB92 · MTB</text>
+
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">same 41 mm Ø and 24 mm spindle · only the width changes</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Las dos medidas que lo definen — BikeLab Studio</title>
+  <desc>Diámetro del hueco y ancho de la caja, las dos cotas que definen un pedalier. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">LAS DOS MEDIDAS</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // pedalier-02</text>
+
+    
+    <rect x="110" y="62" width="180" height="180" rx="8" fill="none" stroke="#3a3a3a" stroke-width="1.5"></rect>
+    <circle cx="200" cy="152" r="66" fill="none" stroke="#e6e6e6" stroke-width="2"></circle>
+    <circle cx="200" cy="152" r="44" fill="none" stroke="#7a7a7a" stroke-width="1.6"></circle>
+    <circle cx="200" cy="152" r="22" fill="#151515" stroke="#5f5f5f" stroke-width="1.4"></circle>
+    <line x1="156" y1="270" x2="244" y2="270" stroke="#5a5a5a" stroke-width="1"></line>
+    <line x1="156" y1="264" x2="156" y2="276" stroke="#5a5a5a"></line><line x1="244" y1="264" x2="244" y2="276" stroke="#5a5a5a"></line>
+    <text x="200" y="262" fill="#4fb8c8" font-size="14" text-anchor="middle">Ø hueco</text>
+    <text x="200" y="312" fill="#f0f0f0" font-size="17" text-anchor="middle">Diámetro del hueco</text>
+    <text x="200" y="334" fill="#8f8f8f" font-size="11.5" text-anchor="middle">define rosca o press-fit</text>
+
+    
+    <rect x="470" y="62" width="180" height="180" rx="8" fill="none" stroke="#3a3a3a" stroke-width="1.5"></rect>
+    <rect x="500" y="110" width="120" height="84" fill="none" stroke="#e6e6e6" stroke-width="2"></rect>
+    <line x1="500" y1="132" x2="620" y2="132" stroke="#7a7a7a" stroke-width="1.6"></line>
+    <line x1="500" y1="172" x2="620" y2="172" stroke="#7a7a7a" stroke-width="1.6"></line>
+    <line x1="500" y1="270" x2="620" y2="270" stroke="#5a5a5a" stroke-width="1"></line>
+    <line x1="500" y1="264" x2="500" y2="276" stroke="#5a5a5a"></line><line x1="620" y1="264" x2="620" y2="276" stroke="#5a5a5a"></line>
+    <text x="560" y="262" fill="#4fb8c8" font-size="14" text-anchor="middle">68 / 73 mm</text>
+    <text x="560" y="312" fill="#f0f0f0" font-size="17" text-anchor="middle">Ancho de la caja</text>
+    <text x="560" y="334" fill="#8f8f8f" font-size="11.5" text-anchor="middle">68 mm ruta · 73 mm MTB</text>
+
+    <text x="380" y="378" fill="#5fbecb" font-size="12" text-anchor="middle">ancho + diámetro definen la caja · ¿rosca o liso? la tercera pregunta</text>
+    <text x="724" y="393" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

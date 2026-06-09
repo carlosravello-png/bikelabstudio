@@ -107,6 +107,18 @@
         .data-label { font-family:var(--mono); font-size:0.68rem; color:#777; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; display:block; }
         h1 { font-size:clamp(2.6rem,8vw,4.8rem); font-weight:900; line-height:0.98; letter-spacing:-2px; margin-bottom:10px; background:linear-gradient(180deg,#ffffff 0%,#bdbdbd 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
         .subtitle { font-family:var(--mono); font-size:0.85rem; color:#9a9a9a; letter-spacing:3px; text-transform:uppercase; margin-bottom:34px; }
+        
+        header.hero { 
+          position: relative; width: 100%; min-height: 55vh; 
+          padding: 120px 24px 50px; display: flex; flex-direction: column; 
+          justify-content: flex-end; align-items: center; border-bottom: 1px solid #1a1a1a; margin-bottom: 20px; text-align: center;
+        }
+        .hero-bg { position: absolute; inset: 0; background: url('industrial_hero.webp') center 40%/cover no-repeat; z-index: -1; filter: grayscale(10%) contrast(1.15); }
+        .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,0.7) 40%, #050505 100%); }
+        .hero-content { position: relative; z-index: 1; max-width: 880px; width: 100%; }
+        .hero-content h1 { background: none; -webkit-text-fill-color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.8); margin-bottom: 15px; }
+        .hero-content .data-label { color: #888; margin-bottom: 15px; }
+        .hero-content .subtitle { color: #bbb; text-shadow: 0 2px 10px rgba(0,0,0,0.9); margin-bottom: 0; }
         .manifesto { max-width:780px; margin:0 0 30px; border-left:3px solid #fff; padding:6px 0 6px 26px; }
         .manifesto .lead { font-size:1.5rem; font-weight:900; line-height:1.25; color:#fff; letter-spacing:-0.5px; margin-bottom:18px; }
         .manifesto p { color:#c4c4c4; font-size:1.02rem; line-height:1.85; margin-bottom:14px; }
@@ -140,11 +152,17 @@
     <a href="soluciones-es.html" class="nav-lang">ES</a>
 </div>
 
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <span class="data-label">Module_02 // Field Intelligence</span>
+        <h1>Industrial Noir</h1>
+        <div class="subtitle">Solutions · Workshop Guides</div>
+    </div>
+</header>
+
 <div class="container">
     <a href="index-en.html" class="back-link">← HOME</a>
-    <span class="data-label">Module_02 // Field Intelligence</span>
-    <h1>Industrial Noir</h1>
-    <div class="subtitle">Solutions · Workshop Guides</div>
 
     <div class="manifesto">
         <p class="lead">A bicycle isn't tuned. It's interrogated.</p>

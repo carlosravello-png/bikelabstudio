@@ -122,15 +122,23 @@
     .topbar a { color: var(--dim); text-decoration: none; }
     .topbar a:hover { color: var(--accent); }
 
-    header.hero { padding: 90px 0 50px; border-bottom: 1px solid var(--line); }
-    .coords { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 3px; color: var(--dim2); margin-bottom: 22px; }
+    header.hero { 
+      position: relative; width: 100%; min-height: 65vh; 
+      padding: 140px 24px 60px; display: flex; flex-direction: column; 
+      justify-content: flex-end; align-items: flex-start; border-bottom: 1px solid var(--line); margin-bottom: 40px;
+    }
+    .hero-bg { position: absolute; inset: 0; background: url('hub_hero.webp') center 40%/cover no-repeat; z-index: -1; filter: grayscale(10%) contrast(1.15); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,0.7) 40%, #050505 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 880px; width: 100%; margin: 0 auto; }
+    
+    .coords { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 3px; color: #777; margin-bottom: 22px; }
     .kicker { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 4px; color: var(--accent); text-transform: uppercase; margin-bottom: 18px; }
     h1 {
       font-size: clamp(2.6rem, 9vw, 5.2rem); font-weight: 700; line-height: 0.95;
-      letter-spacing: -1px; margin-bottom: 22px;
+      letter-spacing: -1px; margin-bottom: 22px; text-shadow: 0 4px 20px rgba(0,0,0,0.8);
     }
-    h1 em { color: var(--dim2); font-style: normal; }
-    .lede { font-size: clamp(1.1rem, 2.4vw, 1.45rem); color: var(--text); font-weight: 300; max-width: 680px; }
+    h1 em { color: var(--dim); font-style: normal; }
+    .lede { font-size: clamp(1.1rem, 2.4vw, 1.45rem); color: var(--text); font-weight: 300; max-width: 680px; text-shadow: 0 2px 10px rgba(0,0,0,0.9); }
     .lede strong { color: var(--accent); font-weight: 600; }
 
     section.block { padding: 56px 0; border-bottom: 1px solid var(--line); }
@@ -165,14 +173,17 @@
     <a href="/industrial-noir-en.html">EN</a>
   </div>
 
-  <div class="wrap">
-
-    <header class="hero">
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
       <div class="coords">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // VISUAL_SYSTEM</div>
       <div class="kicker">Industrial &amp; Scientific Noir</div>
       <h1>Industrial<br><em>Noir.</em></h1>
       <p class="lede">La estética no es una capa de pintura para verse bien en redes. Es el <strong>residuo visual de un sistema técnico cerrado</strong>.</p>
-    </header>
+    </div>
+  </header>
+
+  <div class="wrap">
 
     <section class="block">
       <div class="num">// 01 — EL PRINCIPIO</div>
