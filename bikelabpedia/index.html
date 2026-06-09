@@ -121,22 +121,6 @@
         .status { font-family:var(--mono); font-size:0.6rem; letter-spacing:1.5px; text-transform:uppercase; padding:3px 9px; border:1px solid #2a2a2a; color:#777; }
         .status.live { color:var(--accent2); border-color:var(--accent2); }
         .card.soon { opacity:0.62; }
-        .acc { background:#0a0a0a; border:1px solid var(--accent2); margin-bottom:22px; }
-        .acc > summary { list-style:none; cursor:pointer; padding:25px; display:block; }
-        .acc > summary::-webkit-details-marker { display:none; }
-        .acc > summary .kicker { font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; color:#666; text-transform:uppercase; }
-        .acc > summary h3 { font-size:1.3rem; line-height:1.25; margin:12px 0 10px; color:#fff; }
-        .acc > summary .desc { font-size:0.92rem; color:#a0a0a0; line-height:1.5; margin-bottom:16px; max-width:660px; }
-        .acc[open] > summary { border-bottom:1px solid #1a1a1a; }
-        .acc[open] > summary .chev { transform:rotate(180deg); }
-        .acc .chev { display:inline-block; margin-left:8px; font-size:0.85rem; color:var(--accent2); transition:.2s; }
-        .bp-group { font-family:var(--mono); font-size:0.6rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent2); padding:20px 25px 4px; }
-        .bp-row { display:block; text-decoration:none; padding:15px 25px; border-bottom:1px solid #161616; transition:.18s; }
-        .bp-row:hover { background:#0e1416; padding-left:31px; }
-        .bp-row strong { display:block; color:#fff; font-size:1.02rem; margin-bottom:3px; font-weight:700; }
-        .bp-row span { display:block; color:#9a9a9a; font-size:0.85rem; line-height:1.45; }
-        .bp-row.pillar { background:#0a1315; border-left:3px solid var(--accent2); }
-        .bp-list .bp-row:last-child { border-bottom:none; }
         .signature { margin-top:70px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.78rem; color:#666; line-height:1.8; }
         .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
         .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; }
@@ -179,34 +163,9 @@
 
     <div class="count">9 CLÚSTERES · EN PRODUCCIÓN · PRIMER CLÚSTER: PEDALIER</div>
 
-    <details class="acc" id="cluster-pedalier" open>
-        <summary>
-            <span class="kicker">Clúster 02 en vivo // Pedalier (Bottom Bracket)</span>
-            <h3>Pedalier — las 13 fichas del clúster<span class="chev">&#9662;</span></h3>
-            <p class="desc">BSA, BB30, PF30, BB86/92, T47. Qué eje le entra a tu cuadro y por qué cruje. Empieza por el pilar y baja al estándar exacto de tu bici.</p>
-            <span class="status live">Disponible · 13 fichas</span>
-        </summary>
-        <div class="bp-list">
-            <a class="bp-row pillar" href="que-pedalier-usa-mi-bicicleta-es.html"><strong>¿Qué pedalier usa mi bicicleta?</strong><span>Empieza aquí. Las dos familias (roscado y a presión), el atajo por tipo y año, y cómo confirmarlo midiendo.</span></a>
-            <div class="bp-group">Estándares · glosario</div>
-            <a class="bp-row" href="bsa-pedalier-bicicleta-es.html"><strong>BSA · roscado</strong><span>El estándar roscado clásico (1.37&#8243; × 24t). Por qué casi nunca cruje y cómo reconocerlo.</span></a>
-            <a class="bp-row" href="bb30-pedalier-es.html"><strong>BB30</strong><span>A presión, eje de 30 mm, caja de 42 mm. El estándar que popularizó el press-fit y su fama de ruidoso.</span></a>
-            <a class="bp-row" href="pf30-pedalier-es.html"><strong>PF30</strong><span>El primo de copa plástica del BB30, caja de 46 mm. En qué se diferencia y cuándo cruje.</span></a>
-            <a class="bp-row" href="bb86-bb92-pedalier-es.html"><strong>BB86 / BB92</strong><span>Press-fit estrecho de Shimano (86.5 ruta / 91.5 MTB). El más común en bicis de marca modernas.</span></a>
-            <a class="bp-row" href="t47-pedalier-es.html"><strong>T47</strong><span>Roscado pero con caja ancha de 47 mm. El estándar que está reemplazando al press-fit en gama alta.</span></a>
-            <a class="bp-row" href="press-fit-pedalier-es.html"><strong>Press-fit · a presión</strong><span>Qué significa "a presión", por qué la industria lo adoptó y por qué es el que más cruje.</span></a>
-            <a class="bp-row" href="hollowtech-ii-es.html"><strong>Hollowtech II · Shimano</strong><span>El sistema de bielas de eje 24 mm de Shimano. Qué pedalier necesita y con qué cajas entra.</span></a>
-            <a class="bp-row" href="dub-sram-es.html"><strong>DUB · SRAM</strong><span>El eje de 28.99 mm de SRAM que entra en casi todas las cajas. Qué resuelve y qué confunde.</span></a>
-            <div class="bp-group">Compatibilidad y diagnóstico</div>
-            <a class="bp-row" href="bb30-vs-pf30-es.html"><strong>BB30 vs PF30</strong><span>Se parecen y se confunden. La diferencia de caja (42 vs 46 mm) y cuál tienes.</span></a>
-            <a class="bp-row" href="bsa-vs-t47-es.html"><strong>BSA vs T47</strong><span>Roscado clásico vs roscado moderno. Por qué existe el T47 y cuándo conviene.</span></a>
-            <a class="bp-row" href="que-biela-le-entra-pedalier-es.html"><strong>¿Qué biela le entra?</strong><span>Tu caja manda. Qué ejes de biela (24, 28.99, 30 mm) entran en cada estándar.</span></a>
-            <a class="bp-row" href="por-que-cruje-mi-pedalier-es.html"><strong>¿Por qué cruje mi pedalier?</strong><span>El ruido n.º 1 del taller. Causas reales y cómo callarlo sin cambiar la pieza.</span></a>
-        </div>
-    </details>
-
     <div class="grid">
         <article class="card"><span class="kicker">Clúster 01 // Transmisión</span><h3>Transmisión y velocidades</h3><p>Velocidades, cassettes, núcleos (HG, XD, Microspline), cadenas y UDH. Qué mezcla con qué y qué no.</p><span class="status">Próximamente</span></article>
+        <a href="pedalier-cluster-es.html" style="text-decoration:none;color:inherit;display:block;"><article class="card"><span class="kicker">Clúster 02 // Pedalier</span><h3>Pedalier (Bottom Bracket)</h3><p>BSA, BB30, PF30, BB86/92, T47. Qué eje le entra a tu cuadro y por qué cruje.</p><span class="status live">Disponible · 13 fichas →</span></article></a>
         <article class="card"><span class="kicker">Clúster 03 // Frenos</span><h3>Frenos</h3><p>Flat Mount vs Post Mount, Center Lock vs 6 tornillos, DOT vs mineral, tamaño de rotor.</p><span class="status">Próximamente</span></article>
         <article class="card"><span class="kicker">Clúster 04 // Ejes y cuadro</span><h3>Ejes y cuadro</h3><p>Cierre rápido vs eje pasante, Boost 148/110, paso de rosca del eje, patilla UDH.</p><span class="status">Próximamente</span></article>
         <article class="card"><span class="kicker">Clúster 05 // Ruedas</span><h3>Ruedas y llantas</h3><p>ETRTO, 27.5/29, tubeless, hookless, ancho interno. La verdad detrás de las medidas.</p><span class="status">Próximamente</span></article>
