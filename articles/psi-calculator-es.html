@@ -54,7 +54,12 @@
       "inLanguage": "es",
       "isAccessibleForFree": true,
       "url": "https://www.bikelabstudio.com/articles/psi-calculator-es.html",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
       "featureList": [
         "Modelo físico Frank Berto — criterio 15% tire drop (dominio empírico 20–220 lbs por rueda)",
         "Corrección de ancho real calibrada con censo de 321 llantas de BicycleRollingResistance",
@@ -72,32 +77,85 @@
       "dateCreated": "2026-06-12",
       "dateModified": "2026-06-12",
       "datePublished": "2026-06-12",
-      "creator": { "@id": "https://carlosravello.com/#person" },
-      "author": { "@id": "https://carlosravello.com/#person" },
-      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
-      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
-      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset" },
-      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
-      "potentialAction": { "@type": "UseAction", "target": "https://www.bikelabstudio.com/articles/psi-calculator-es.html" },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      },
+      "hasPart": {
+        "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#website"
+      },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://www.bikelabstudio.com/articles/psi-calculator-es.html"
+      },
       "mentions": [
-        { "@type": "Person", "name": "Frank Berto", "description": "Ingeniero y editor técnico de Bicycling Magazine, autor del criterio 15% tire drop" },
-        { "@type": "Organization", "name": "SILCA", "url": "https://silca.cc" },
-        { "@type": "Organization", "name": "Rene Herse Cycles", "url": "https://www.renehersecycles.com" },
-        { "@type": "Organization", "name": "Bicycle Rolling Resistance", "url": "https://www.bicyclerollingresistance.com" },
-        { "@type": "Organization", "name": "ETRTO", "description": "European Tyre and Rim Technical Organisation" }
-      ]
+        {
+          "@type": "Person",
+          "name": "Frank Berto",
+          "description": "Ingeniero y editor técnico de Bicycling Magazine, autor del criterio 15% tire drop"
+        },
+        {
+          "@type": "Organization",
+          "name": "SILCA",
+          "url": "https://silca.cc"
+        },
+        {
+          "@type": "Organization",
+          "name": "Rene Herse Cycles",
+          "url": "https://www.renehersecycles.com"
+        },
+        {
+          "@type": "Organization",
+          "name": "Bicycle Rolling Resistance",
+          "url": "https://www.bicyclerollingresistance.com"
+        },
+        {
+          "@type": "Organization",
+          "name": "ETRTO",
+          "description": "European Tyre and Rim Technical Organisation"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.20673124"
+      },
+      "citation": "Ravello Joo, C. E. (2026). BikeLab PSI Calculator (Version 1.0.0) [Software]. BikeLab Studio. https://doi.org/10.5281/zenodo.20673124",
+      "sameAs": "https://doi.org/10.5281/zenodo.20673124"
     },
     {
       "@type": "Dataset",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset",
       "name": "Censo BRR de anchos nominal vs medido + validación cruzada SILCA/Rene Herse",
       "description": "321 pares nominal/medido de BicycleRollingResistance (159 ruta en aro 18mm interno, 162 gravel en aro 17.8mm) usados para calibrar la corrección de ancho real; 6 casos de validación cruzada contra las calculadoras de SILCA y Rene Herse ejecutadas en vivo; análisis de incertidumbre LHS y sensibilidad Sobol con SALib.",
-      "creator": { "@id": "https://carlosravello.com/#person" },
-      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
       "dateCreated": "2026-06-12",
       "variableMeasured": [
-        { "@type": "PropertyValue", "name": "Ancho nominal vs medido", "unitText": "mm" },
-        { "@type": "PropertyValue", "name": "Presión recomendada frontal/trasera", "unitText": "PSI" }
+        {
+          "@type": "PropertyValue",
+          "name": "Ancho nominal vs medido",
+          "unitText": "mm"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Presión recomendada frontal/trasera",
+          "unitText": "PSI"
+        }
       ]
     },
     {
@@ -105,18 +163,38 @@
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#webpage",
       "url": "https://www.bikelabstudio.com/articles/psi-calculator-es.html",
       "name": "Calculadora de Presión de Llantas Ruta y Gravel | BikeLab Studio",
-      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#website"
+      },
       "inLanguage": "es",
-      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#breadcrumb" },
-      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app" }
+      "breadcrumb": {
+        "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.bikelabstudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.bikelabstudio.com/index.html#herramientas" },
-        { "@type": "ListItem", "position": 3, "name": "Calculadora de Presión de Llantas" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Herramientas",
+          "item": "https://www.bikelabstudio.com/index.html#herramientas"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Presión de Llantas"
+        }
       ]
     },
     {
@@ -124,15 +202,24 @@
       "@id": "https://www.bikelabstudio.com/#website",
       "url": "https://www.bikelabstudio.com",
       "name": "BikeLab Studio",
-      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
-      "inLanguage": ["es", "en"]
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://carlosravello.com/#person",
       "name": "Carlos Eduardo Ravello Joo",
       "url": "https://carlosravello.com",
-      "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-5631-7436"
+      },
       "sameAs": [
         "https://carlosravello.com/#person",
         "https://orcid.org/0009-0007-5631-7436",
@@ -140,7 +227,9 @@
         "https://zenodo.org/search?q=ravello+joo",
         "https://github.com/carlosravello-png"
       ],
-      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" }
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
     },
     {
       "@type": "HowTo",
@@ -148,12 +237,36 @@
       "name": "Cómo calcular la presión óptima de tus llantas",
       "description": "Calcula la presión frontal y trasera óptima para ruta o gravel con banda de incertidumbre y techos de seguridad.",
       "totalTime": "PT2M",
-      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
       "step": [
-        { "@type": "HowToStep", "position": "1", "name": "Elige disciplina y geometría", "text": "Selecciona ruta o gravel y el tipo de bici (racing, endurance o urbana/touring) — esto fija la distribución de carga entre ruedas." },
-        { "@type": "HowToStep", "position": "2", "name": "Ingresa peso y llanta", "text": "Peso total del sistema (rider + bici + equipo), ancho nominal de la llanta y ancho interno del aro. Si mides el ancho real con calibre, ingrésalo: la incertidumbre baja a un tercio." },
-        { "@type": "HowToStep", "position": "3", "name": "Configura montaje y superficie", "text": "Tubeless o cámara, tipo de carcasa (supple, estándar o rígida), tipo de aro (hooked o hookless) y superficie habitual." },
-        { "@type": "HowToStep", "position": "4", "name": "Lee presión y banda de incertidumbre", "text": "Obtienes presión frontal y trasera con banda de confianza 90%. Si un techo de seguridad ETRTO capea el resultado, se muestran ambos valores con explicación. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos." }
+        {
+          "@type": "HowToStep",
+          "position": "1",
+          "name": "Elige disciplina y geometría",
+          "text": "Selecciona ruta o gravel y el tipo de bici (racing, endurance o urbana/touring) — esto fija la distribución de carga entre ruedas."
+        },
+        {
+          "@type": "HowToStep",
+          "position": "2",
+          "name": "Ingresa peso y llanta",
+          "text": "Peso total del sistema (rider + bici + equipo), ancho nominal de la llanta y ancho interno del aro. Si mides el ancho real con calibre, ingrésalo: la incertidumbre baja a un tercio."
+        },
+        {
+          "@type": "HowToStep",
+          "position": "3",
+          "name": "Configura montaje y superficie",
+          "text": "Tubeless o cámara, tipo de carcasa (supple, estándar o rígida), tipo de aro (hooked o hookless) y superficie habitual."
+        },
+        {
+          "@type": "HowToStep",
+          "position": "4",
+          "name": "Lee presión y banda de incertidumbre",
+          "text": "Obtienes presión frontal y trasera con banda de confianza 90%. Si un techo de seguridad ETRTO capea el resultado, se muestran ambos valores con explicación. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos."
+        }
       ]
     },
     {
@@ -163,28 +276,40 @@
         {
           "@type": "Question",
           "name": "¿Por qué esta calculadora recomienda presiones distintas a SILCA o Rene Herse?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Porque optimizan funciones distintas. Esta calculadora aplica el criterio de deflección constante 15% de Frank Berto, que exige que la presión escale linealmente con la carga. SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En nuestra validación cruzada de 6 casos, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas referencias — y cada desviación restante tiene causa física documentada." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque optimizan funciones distintas. Esta calculadora aplica el criterio de deflección constante 15% de Frank Berto, que exige que la presión escale linealmente con la carga. SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En nuestra validación cruzada de 6 casos, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas referencias — y cada desviación restante tiene causa física documentada."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Qué significa la banda de incertidumbre (±PSI)?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Es el intervalo de confianza 90% calculado por muestreo Latin Hypercube sobre la incertidumbre real de los inputs: ±2 kg de peso, ±1.5 mm de ancho real y ±3 puntos de distribución de carga. No incluye el error de tu manómetro (típicamente ±5%), que es incertidumbre de tu instrumento, no del modelo. Ninguna otra calculadora del mercado publica este dato." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es el intervalo de confianza 90% calculado por muestreo Latin Hypercube sobre la incertidumbre real de los inputs: ±2 kg de peso, ±1.5 mm de ancho real y ±3 puntos de distribución de carga. No incluye el error de tu manómetro (típicamente ±5%), que es incertidumbre de tu instrumento, no del modelo. Ninguna otra calculadora del mercado publica este dato."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Por qué el techo de 72.5 PSI en aros hookless?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Es el límite ETRTO para aros sin gancho (hookless): 72.5 PSI / 5 bar sin excepciones, y 60 PSI si el aro tiene ancho interno de 30 mm o más. Superarlo arriesga desllante súbito. Si tu presión calculada excede el techo, la calculadora muestra ambos valores y aplica el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es el límite ETRTO para aros sin gancho (hookless): 72.5 PSI / 5 bar sin excepciones, y 60 PSI si el aro tiene ancho interno de 30 mm o más. Superarlo arriesga desllante súbito. Si tu presión calculada excede el techo, la calculadora muestra ambos valores y aplica el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Por qué no cubre MTB?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Decisión de diseño documentada: el propio Berto declara que el criterio 15% no es válido para MTB — los aros son proporcionalmente más angostos, los tacos distorsionan la medición de deflección y el objetivo off-road es tracción y absorción, no resistencia a la rodadura. Un módulo MTB separado, basado en heurísticas de fabricantes, está en desarrollo." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Decisión de diseño documentada: el propio Berto declara que el criterio 15% no es válido para MTB — los aros son proporcionalmente más angostos, los tacos distorsionan la medición de deflección y el objetivo off-road es tracción y absorción, no resistencia a la rodadura. Un módulo MTB separado, basado en heurísticas de fabricantes, está en desarrollo."
+          }
         }
       ]
     }
   ]
 }
-</script>
+  </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -498,6 +623,20 @@ footer a{color:var(--cyan);text-decoration:none}
     <p>El propio Berto declara que el 15% drop no vale para MTB (aros más angostos en proporción, tacos que distorsionan la medición, objetivo de tracción y no de rodadura). El módulo MTB llegará aparte con heurísticas de fabricante — antes que inventar números, lo decimos.</p></details>
 </section>
 
+
+  <!-- ============ CITA / DOI / LICENCIA — ciencia abierta (append-only, no toca la logica) ============ -->
+  <section aria-label="Cómo citar esta herramienta" style="max-width:760px;margin:48px auto;padding:28px 30px;background:#0c0c0c;border:1px solid #242424;border-left:2px solid #e8ff00;border-radius:4px;font-family:'IBM Plex Mono','JetBrains Mono',monospace;box-sizing:border-box;">
+    <div style="font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:#e8ff00;margin-bottom:12px;">CIENCIA ABIERTA // DOI PERMANENTE</div>
+    <h2 style="font-size:1rem;color:#fff;margin:0 0 14px;letter-spacing:0.5px;font-weight:800;">Cómo citar esta herramienta</h2>
+    <p style="font-size:0.85rem;line-height:1.7;color:#cfcfcf;margin:0 0 16px;">Ravello Joo, C. E. (2026). <em>BikeLab PSI Calculator</em> (Versión 1.0.0) [Software]. BikeLab Studio. <a href="https://doi.org/10.5281/zenodo.20673124" rel="noopener" style="color:#e8ff00;text-decoration:none;border-bottom:1px solid #3a3a00;word-break:break-all;">https://doi.org/10.5281/zenodo.20673124</a></p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 22px;font-size:0.72rem;color:#9a9a9a;border-top:1px solid #1c1c1c;padding-top:14px;">
+      <span>DOI: <a href="https://doi.org/10.5281/zenodo.20673124" rel="noopener" style="color:#cfcfcf;text-decoration:none;">10.5281/zenodo.20673124</a></span>
+      <span>Licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" style="color:#cfcfcf;text-decoration:none;">CC BY-NC-ND 4.0</a></span>
+      <span>Autor: Carlos Eduardo Ravello Joo &middot; <a href="https://orcid.org/0009-0007-5631-7436" rel="noopener" style="color:#cfcfcf;text-decoration:none;">ORCID 0009-0007-5631-7436</a></span>
+      <span>Depósito: Zenodo &middot; OpenAIRE</span>
+    </div>
+    <p style="font-size:0.7rem;line-height:1.6;color:#6f6f6f;margin:14px 0 0;">Software depositado con DOI permanente, indexado en OpenAIRE. El código puede copiarse; la autoría fechada, no.</p>
+  </section>
 <footer>
   <p>© 2026 <a href="../index.html">BikeLab Studio</a> — Carlos Ravello · Trujillo, Perú · Modelo y validación documentados — datos y scripts disponibles bajo solicitud</p>
 </footer>
