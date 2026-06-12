@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<title>Constant-Deflection Model for Road/Gravel Tire Pressure | White Paper | BikeLab Studio</title>
+<meta name="description" content="White paper of the BikeLab PSI Calculator: Berto 15% drop criterion, width correction calibrated with a 321-tire BRR census, front coupling k=0.93, LHS uncertainty (10,000 samples), Sobol sensitivity and cross-validation against SILCA and Rene Herse.">
+<meta name="keywords" content="tire pressure white paper, Frank Berto 15% tire drop, BikeLab PSI Calculator, Latin Hypercube Sampling, Sobol indices, BicycleRollingResistance, ETRTO hookless, SILCA Rene Herse validation">
+<meta name="author" content="Carlos Ravello">
+<link rel="canonical" href="white-paper-psi-model.html">
+<link rel="alternate" hreflang="es" href="white-paper-psi-model-es.html">
+<link rel="alternate" hreflang="en" href="white-paper-psi-model.html">
+<link rel="alternate" hreflang="x-default" href="white-paper-psi-model-es.html">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-psi-model.html">
+<meta property="og:title" content="Constant-Deflection Model for Tire Pressure | Technical White Paper | BikeLab Studio">
+<meta property="og:description" content="The complete model behind the BikeLab PSI Calculator: Berto 15% drop, 321-tire BRR census, LHS, Sobol, and documented cross-validation.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BikeLab Studio">
+<meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-psi-model.html#paper",
+      "headline": "A Constant-Deflection Model for Road and Gravel Tire Pressure: Empirical Calibration, Uncertainty Propagation and Cross-Validation",
+      "alternativeHeadline": "White Paper of the BikeLab PSI Calculator",
+      "description": "Formulation, calibration and validation of the BikeLab PSI Calculator model: Frank Berto's 15% deflection criterion, real-width correction calibrated with 321 BicycleRollingResistance measurements, front coupling k=0.93, Latin Hypercube uncertainty propagation and Sobol global sensitivity analysis.",
+      "inLanguage": "en",
+      "datePublished": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "about": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#app" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.20671797" },
+      "sameAs": "https://doi.org/10.5281/zenodo.20671797",
+      "encoding": { "@type": "MediaObject", "contentUrl": "https://www.bikelabstudio.com/papers/bikelabstudio-psi-calculator-constant-deflection-model-en-fixed_.pdf", "encodingFormat": "application/pdf" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-psi-model.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
+        { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://www.bikelabstudio.com/research-en.html" },
+        { "@type": "ListItem", "position": 3, "name": "White Paper — PSI Model" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@900&display=swap">
+<style>
+:root{--bg:#050505;--surface:#0c0c0c;--border:#1e1e1e;--text:#e0e0e0;--dim:#888;--blue:#4a9eff;--orange:#ff6b35;--yellow:#e8ff3a;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14.5px;line-height:1.75}
+.wrap{max-width:860px;margin:0 auto;padding:2rem 1.4rem}
+.kicker{font-size:.7rem;letter-spacing:.25em;color:var(--dim);text-transform:uppercase}
+h1{font-family:'Inter',sans-serif;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.2;color:#fff;margin:.7rem 0 1rem}
+.meta-line{font-size:.75rem;color:var(--dim);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.7rem 0;margin:1.2rem 0 2rem}
+.meta-line a{color:var(--blue);text-decoration:none}
+h2{font-size:1.05rem;color:var(--yellow);letter-spacing:.06em;margin:2.4rem 0 .9rem;border-bottom:1px solid var(--border);padding-bottom:.45rem}
+h3{font-size:.95rem;color:#fff;margin:1.5rem 0 .6rem}
+p{margin-bottom:1rem}
+.abstract{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--yellow);padding:1.2rem 1.4rem;margin-bottom:1rem;font-size:.9rem}
+.eq{background:var(--surface);border:1px solid var(--border);padding:.9rem 1.1rem;text-align:center;color:var(--blue);margin:1.1rem 0;overflow-x:auto;font-size:.95rem}
+.eq small{color:var(--dim);display:block;margin-top:.4rem;font-size:.72rem}
+table{width:100%;border-collapse:collapse;font-size:.78rem;margin:1.1rem 0}
+th,td{border:1px solid var(--border);padding:.45rem .55rem;text-align:center}
+th{background:var(--surface);color:#fff;font-weight:500}
+td.l,th.l{text-align:left}
+ul,ol{margin:0 0 1rem 1.4rem}
+li{margin-bottom:.5rem}
+.note{font-size:.8rem;color:var(--dim);border-left:2px solid var(--border);padding-left:.9rem;margin:1rem 0}
+.fig-slot{background:var(--surface);border:1px dashed #333;padding:1rem;text-align:center;color:var(--dim);font-size:.75rem;margin:1.2rem 0}
+.refs{font-size:.8rem}
+.refs li{margin-bottom:.7rem}
+.refs a{color:var(--blue);text-decoration:none;word-break:break-all}
+.cta-tool{display:block;background:var(--surface);border:1px solid var(--yellow);color:var(--yellow);text-align:center;padding:1rem;margin:2.2rem 0;text-decoration:none;letter-spacing:.15em;font-size:.85rem}
+footer{margin-top:3rem;border-top:1px solid var(--border);padding-top:1rem;font-size:.72rem;color:var(--dim);text-align:center}
+footer a{color:var(--blue);text-decoration:none}
+strong{color:#fff}
+.lang{float:right;font-size:.75rem}.lang a{color:var(--dim);text-decoration:none;border:1px solid var(--border);padding:.2rem .6rem}.lang a.on{color:var(--yellow);border-color:var(--yellow)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lang"><a href="white-paper-psi-model-es.html">ES</a> <a href="white-paper-psi-model.html" class="on">EN</a></div>
+<p class="kicker">BikeLab Studio — Technical Publications // White Paper</p>
+<h1>A Constant-Deflection Model for Road and Gravel Tire Pressure</h1>
+<p style="color:var(--dim);font-size:.9rem">Empirical calibration with a 321-tire census, Latin Hypercube uncertainty propagation, and cross-validation against SILCA and Rene Herse</p>
+<p class="meta-line">Carlos Eduardo Ravello Joo · <a href="https://orcid.org/0009-0007-5631-7436" rel="noopener">ORCID 0009-0007-5631-7436</a> · BikeLab Studio, Trujillo, Peru · June 2026 · v1.0 · DOI: <a href="https://doi.org/10.5281/zenodo.20671797" rel="noopener">10.5281/zenodo.20671797</a> (Zenodo · OpenAIRE) · Tool: <a href="psi-calculator-en.html">BikeLab PSI Calculator</a> · <a href="../papers/bikelabstudio-psi-calculator-constant-deflection-model-en-fixed_.pdf" download>Download PDF (EN) ↓</a></p>
+
+<h2>ABSTRACT</h2>
+<div class="abstract">
+<p>We present the physical-statistical model behind the <strong>BikeLab PSI Calculator</strong>. Its core is Frank Berto's constant-deflection criterion (15% tire drop), empirically fit as P = 600·L/W² + 0.75·W − 25 (±2 PSI within Berto's measured domain: 20–220 lbs per wheel). On that core we introduce four contributions: (1) a <strong>re-anchored real-width correction</strong> regressed over 321 nominal/measured pairs from BicycleRollingResistance, showing that the classic rule anchored at 13 mm rims double-corrects what modern labeling (ETRTO 2020) already incorporates; (2) a <strong>front coupling</strong> P_f = 0.93·P_r replacing static-load assignment, justified by braking load transfer and calibrated against SILCA and Rene Herse; (3) <strong>uncertainty propagation</strong> via Latin Hypercube Sampling (N=10,000) producing 90% confidence bands — a figure no calculator on the market publishes; and (4) a <strong>global sensitivity analysis</strong> (Sobol indices, 81,920 evaluations per case) refuting the intuitive hypothesis that load dominates the output: on the road, real width dominates (S₁ = 0.51–0.68); on gravel, gauge error does (S₁ = 0.61–0.73). Cross-validation over 6 configurations yields 9/12 wheels within ±10% of the average of both references; the 3 remaining deviations have identified physical causes and are documented rather than fitted away.</p>
+</div>
+
+<h2>1. THE PROBLEM</h2>
+<p>Ask three respectable sources what pressure a 28 mm tire should run under an 83 kg rider and you will receive three answers differing by up to 20 PSI. Not because any of them is "wrong," but because they optimize different objective functions and none declares its uncertainty. SILCA optimizes impedance over professional athlete data; Rene Herse optimizes comfort-speed over real-road measurements with supple casings; manufacturer tables optimize not getting sued. In every case the user receives a bare number carrying implicit authority and nonexistent precision.</p>
+<p>This work takes the opposite position: we choose a physically <em>measurable and reproducible</em> criterion (constant deflection), declare it, calibrate its corrections with verifiable public data, quantify the output's uncertainty, and publish the divergences against market references instead of hiding them. The reader does not have to trust us: every constant in this document can be audited.</p>
+
+<h2>2. MODEL ASSUMPTIONS</h2>
+<ol>
+<li><strong>Optimality criterion:</strong> the tire operates correctly when it deflects 15% of its section height under static load (Berto, 1990s). It is a deflection criterion — not impedance, not comfort: different objective, different result.</li>
+<li><strong>Domain:</strong> road and gravel, 700C wheels, widths 23–50 mm, per-wheel loads within Berto's empirical range (20–220 lbs). MTB is explicitly out of scope (§10).</li>
+<li><strong>Linearity in load:</strong> at constant deflection, required pressure scales linearly with per-wheel load — a property of Berto's data, not an added hypothesis.</li>
+<li><strong>Static load by geometry:</strong> racing 40/60 (front/rear), endurance 45/55, city/touring 35/65. Only the rear load enters the formula (§4).</li>
+<li><strong>Multiplicative corrections are separable</strong> (tube, casing, surface): a standard assumption verified a posteriori by the Sobol analysis, which found negligible interactions (S₁ ≈ S_T).</li>
+</ol>
+
+<h2>3. CORE FORMULATION</h2>
+<p>Berto's chart admits a remarkably compact empirical fit. For per-wheel load L (lbs) and real width W (mm):</p>
+<div class="eq">P = 600·L / W² + 0.75·W − 25<small>Fit accuracy: ±2 PSI within the 20–220 lbs/wheel, 23–50 mm domain. P in PSI.</small></div>
+<p>Three observations for the reader who wants to understand rather than merely apply. First: the dominant term is L/W² — required pressure grows linearly with load and falls with the <em>square</em> of width. That quadratic dependence is the physical reason width governs the sensitivity analysis (§8). Second: the +0.75·W term corrects for the casing's own structural stiffness at larger widths. Third: the −25 constant centers the fit; it has no physical interpretation and must not be extrapolated outside the domain.</p>
+<figure style="margin:1.2rem 0"><img src="images/psi-fig1-berto-en.svg" alt="FIG.1 — Family of pressure vs per-wheel load curves for six tire widths, Berto model, empirical domain shaded" style="width:100%;height:auto" loading="lazy"></figure>
+
+<h2>4. FRONT COUPLING: WHY THE FRONT WHEEL DOES NOT USE ITS STATIC LOAD</h2>
+<p>A naive application assigns each wheel its static load. For racing geometry (40/60) this yields a front ~34% softer than the rear. Our initial cross-validation showed that front diverging from SILCA and Rene Herse by −24% to −36% — a systematic failure, not a numerical one.</p>
+<p>The cause is that static load is the wrong variable for the front wheel. Under braking, mass transfer drives load peaks far above the nominal 40%; a front computed for the static 40% deflects excessively precisely in the maneuver where handling is critical. Market references solve this without declaring it: SILCA prescribes front/rear differences of ~2%, and Rene Herse publishes a single value for both wheels.</p>
+<p>Our solution declares it: the rear is computed with pure Berto on its static load; the front is coupled:</p>
+<div class="eq">P_front = k · P_rear, &nbsp; k = 0.93<small>k calibrated by sweep (0.86–1.00) against SILCA + Rene Herse over 6 cases; optimum in mean (3.8%) and maximum (8.0%) absolute deviation.</small></div>
+<figure style="margin:1.2rem 0"><img src="images/psi-fig2-acople-en.svg" alt="FIG.2 — Front coupling k calibration sweep: mean and max deviation vs SILCA and Rene Herse, minimum at k=0.93" style="width:100%;height:auto" loading="lazy"></figure>
+
+<h2>5. REAL WIDTH: THE BRR CENSUS AND THE DEATH OF THE 13 MM ANCHOR</h2>
+<p>The formula requires the <em>real</em> mounted width, not the one printed on the sidewall. The classic rule — width grows ~0.4 mm per mm of internal rim width above the Berto-era 13 mm baseline — contains two independent claims deserving separate scrutiny: the <em>slope</em> (0.4 mm/mm) and the <em>anchor</em> (nominal exact at a 13 mm rim).</p>
+<p>To audit them we captured BicycleRollingResistance's complete census: <strong>159 road tires measured on an 18.0 mm internal rim and 162 gravel tires on 17.8 mm</strong> (321 nominal/measured pairs, tests 2014–2026). Results:</p>
+<ul>
+<li><strong>The slope survives.</strong> The only tire BRR measured on two different rims (Vittoria Corsa Pro Speed TLR WR 29: 27 mm @ 18 mm; 29 mm @ 22.5 mm) yields 0.444 mm/mm — 11% above the classic value, within any reasonable criterion.</li>
+<li><strong>The anchor dies.</strong> The rule predicts ΔW = +2.0 mm on an 18 mm rim; the census gives +0.82 mm for road and <strong>−1.78 mm for gravel</strong>. Modern gravel tires measure <em>less</em> than nominal on a narrow rim, because ETRTO 2020 specs nominals on 19–25 mm rims. The classic rule corrects twice what the manufacturer already corrected.</li>
+</ul>
+<p>The re-anchored correction, by linear regression over the census:</p>
+<div class="eq">W = nominal + δ(cat, nominal) + 0.4·(rim − 18)<small>δ_road = 7.953 − 0.2727·nominal (23–30 mm) · δ_gravel = 1.504 − 0.0827·nominal (31–50 mm) · residuals σ = 0.94 mm (road), 1.34 mm (gravel)</small></div>
+<figure style="margin:1.2rem 0"><img src="images/psi-fig3-censo-brr-en.svg" alt="FIG.3 — BRR census of 321 tires: measured minus nominal by width class, road and gravel regressions, classic 13mm-anchor rule refuted" style="width:100%;height:auto" loading="lazy"></figure>
+<p>If the user measures the mounted tire with a caliper, that measurement replaces the entire chain above and the input's uncertainty falls from σ=1.5 mm to σ=0.5 mm. The correction exists for those who don't measure; the caliper is the bypass.</p>
+
+<h2>6. MOUNTING AND SURFACE CORRECTIONS</h2>
+<table>
+<tr><th class="l">Correction</th><th>Value</th><th class="l">Basis</th></tr>
+<tr><td class="l">Butyl tube</td><td>+5%</td><td class="l">Tube hysteresis reduces effective deflection. The classic +10% produced a +11.9% validation deviation; +5% is consistent with SILCA's butyl-vs-tubeless treatment (&lt;10%).</td></tr>
+<tr><td class="l">Supple casing</td><td>−5%</td><td class="l">Heine: supple casings deflect more at equal pressure (re-analysis of Berto's data).</td></tr>
+<tr><td class="l">Stiff/touring casing</td><td>+5%</td><td class="l">Symmetric to the above.</td></tr>
+<tr><td class="l">Rough asphalt</td><td>−5%</td><td class="l">Impedance losses grow with pressure on irregular surfaces.</td></tr>
+<tr><td class="l">Gravel</td><td>−12.5%</td><td class="l">Midpoint of the documented range (−10 to −15%).</td></tr>
+</table>
+
+<h2>7. SAFETY CAPS AND FLOOR</h2>
+<p>Applied <em>after</em> all corrections, no exceptions: hookless rim 72.5 PSI (5 bar, ETRTO); hookless with internal width ≥30 mm, 60 PSI; below 25 PSI the tool warns about pinch flats and burping. When the cap binds, the tool shows the calculated value next to the capped one — the user sees the physics and sees the limit, and understands the limit wins. The master rule accompanies every result: never exceed the tire or rim manufacturer maximum, whichever is lower.</p>
+
+<h2>8. UNCERTAINTY PROPAGATION (LHS) AND GLOBAL SENSITIVITY (SOBOL)</h2>
+<h3>8.1 Design</h3>
+<p>Four uncertain variables: system weight ~N(μ, 2 kg); real width ~N(W, 1.5 mm) — or 0.5 mm with caliper; rear load fraction ~U(±3 pp); gauge error ~N(1, 5%) multiplicative. Latin Hypercube sampling (N=10,000 per configuration; converges with ~10× fewer samples than crude Monte Carlo for percentiles). Sensitivity via Sobol indices (Saltelli scheme, base 2¹³ → 81,920 evaluations per case, no second order).</p>
+<h3>8.2 Uncertainty results</h3>
+<table>
+<tr><th>Case</th><th class="l">Configuration</th><th>Rear: mean [p5–p95]</th><th>Band ±PSI</th></tr>
+<tr><td>1</td><td class="l">83 kg · 28 mm · road · 21 rim</td><td>73 [63–86]</td><td>±11.7</td></tr>
+<tr><td>2</td><td class="l">95 kg · 28 mm · road · 21 rim</td><td>84 [72–100]</td><td>±13.8</td></tr>
+<tr><td>3</td><td class="l">75 kg · 32 mm · road · tube · 19 rim</td><td>63 [54–73]</td><td>±9.2</td></tr>
+<tr><td>4</td><td class="l">85 kg · 40 mm · gravel · 24 rim</td><td>38 [35–41]</td><td>±3.2</td></tr>
+<tr><td>5</td><td class="l">100 kg · 45 mm · gravel · 25 rim</td><td>39 [36–41]</td><td>±2.5</td></tr>
+<tr><td>6</td><td class="l">70 kg · 25 mm · road · 21 rim</td><td>71 [59–85]</td><td>±12.8</td></tr>
+</table>
+<p class="note">The bands published in the tool exclude gauge error: it is the user's instrument uncertainty, not the model's. Mixing them would make honest output look imprecise about something it does not control. The gauge warning is delivered separately, where it dominates (gravel).</p>
+<h3>8.3 Sensitivity results — the hypothesis refuted</h3>
+<p>The design hypothesis was that per-wheel load would dominate via L/W². With realistic uncertainties, it is false:</p>
+<table>
+<tr><th>Case</th><th>S₁ weight</th><th>S₁ real width</th><th>S₁ distribution</th><th>S₁ gauge</th></tr>
+<tr><td>1 (road 28)</td><td>0.056</td><td><strong>0.631</strong></td><td>0.080</td><td>0.230</td></tr>
+<tr><td>2 (road 28)</td><td>0.042</td><td><strong>0.650</strong></td><td>0.079</td><td>0.227</td></tr>
+<tr><td>3 (road 32)</td><td>0.084</td><td><strong>0.512</strong></td><td>0.098</td><td>0.304</td></tr>
+<tr><td>4 (gravel 40)</td><td>0.084</td><td>0.159</td><td>0.150</td><td><strong>0.605</strong></td></tr>
+<tr><td>5 (gravel 45)</td><td>0.058</td><td>0.073</td><td>0.143</td><td><strong>0.726</strong></td></tr>
+<tr><td>6 (road 25)</td><td>0.066</td><td><strong>0.684</strong></td><td>0.067</td><td>0.180</td></tr>
+</table>
+<figure style="margin:1.2rem 0"><img src="images/psi-fig4-sobol-en.svg" alt="FIG.4 — Sobol S1 indices per variable: real width dominates on road (0.62), the gauge on gravel (0.67)" style="width:100%;height:auto" loading="lazy"></figure>
+<p>The mechanism is arithmetic once seen: ±1.5 mm on a ~30 mm width is ±5% entering <em>squared</em>; ±2 kg on 83 kg is ±2.4% linear. S₁ ≈ S_T in all cases: the model is additive at these scales, with no relevant interactions. Design consequences: width is requested at 1 mm resolution with a caliper field offered; weight and geometry can be coarse inputs at no cost; on gravel the tool warns that the user's gauge matters more than the model.</p>
+
+<h2>9. CROSS-VALIDATION</h2>
+<p>Six configurations executed live (June 2026) on the SILCA and Rene Herse calculators, documenting every extra parameter and its mapping. Criterion: deviation ≤10% from the average of both references on road; widened tolerance on gravel, where the references themselves diverge by up to 30%. Result: <strong>9/12 wheels within criterion</strong>.</p>
+<table>
+<tr><th>Case</th><th>BLS F/R</th><th>SILCA F/R</th><th>RH soft–firm</th><th>R dev. vs average</th></tr>
+<tr><td>1</td><td>68 / 73</td><td>70 / 71.5</td><td>54–67</td><td>+10.2%*</td></tr>
+<tr><td>2</td><td>78 / 84</td><td>71.5 / 73.5</td><td>61–76</td><td>+17.9%†</td></tr>
+<tr><td>3</td><td>58 / 62</td><td>63.5 / 65</td><td>46–57</td><td>+7.0%</td></tr>
+<tr><td>4</td><td>35 / 38</td><td>34.5 / 36</td><td>34–42</td><td>+2.8%</td></tr>
+<tr><td>5</td><td>36 / 39</td><td>29.5 / 30.5</td><td>35–43</td><td>+16.7%‡</td></tr>
+<tr><td>6</td><td>65 / 70</td><td>80.5 / 83</td><td>55–72</td><td>−2.6%</td></tr>
+</table>
+<p class="note">* Rounding artifact: references only accept integer widths; the model works in tenths. † Weight scaling, §9.1. ‡ Gravel: SILCA and RH diverge 30% from each other here; we land between them.</p>
+<figure style="margin:1.2rem 0"><img src="images/psi-fig5-validacion-en.svg" alt="FIG.5 — Cross-validation per case: BikeLab PSI vs SILCA vs Rene Herse soft-firm range, 9 of 12 wheels within criterion" style="width:100%;height:auto" loading="lazy"></figure>
+<h3>9.1 Riders over 90 kg: a deliberate divergence</h3>
+<p>For riders over 90 kg this calculator recommends firmer pressures than SILCA. It is not a bug: the constant-deflection criterion (15% drop) requires pressure to scale linearly with load — a heavier rider deflects the tire more at the same pressure. Calculators that optimize impedance saturate with weight; those that optimize deflection do not. We chose deflection because it is the measurable, reproducible criterion. We are also inside Berto's empirical domain (he measured up to 220 lbs per wheel: case 2 loads 125 lbs on the rear). In practice, the 72.5 PSI hookless cap compresses this divergence on most modern wheels.</p>
+
+<h2>10. MTB EXCLUSION</h2>
+<p>Berto explicitly states the 15% criterion is not valid for MTB: rims are proportionally narrower, knobs distort the deflection measurement, and the off-road objective is traction and absorption, not rolling resistance. Rather than extrapolate a model outside its validity domain — the cardinal sin of applied engineering — we declare it: the MTB module will be developed separately on manufacturer heuristics, and the interface already reserves its place.</p>
+
+<h2>11. LIMITATIONS</h2>
+<ol>
+<li>Berto measured with 1990s technology on 700C; casings and compounds have evolved. The ±2 PSI fit is to the chart, not to every modern tire's reality.</li>
+<li>The casing correction is a 3-level discretization of a stiffness continuum.</li>
+<li>k = 0.93 is calibrated against two references that are themselves models — not against handling measurements.</li>
+<li>The BRR census measures at a standardized per-category pressure; real width varies ~±0.5 mm with operating pressure.</li>
+<li>There is no true "optimal pressure" to validate against: only reasonable empirical philosophies. This tool picks one, declares it, and publishes its uncertainty. The result is the rigorous starting point; the rider's ±2-3 PSI adjustments by feel are legitimate and expected.</li>
+</ol>
+
+<h2>12. SIMULATION SPECIFICATIONS AND REPRODUCIBILITY</h2>
+<ul>
+<li>Stack: Python 3.10 · NumPy 2.2.6 · SciPy 1.15.3 (qmc.LatinHypercube) · SALib (Saltelli/Sobol) · seed 42 + case id.</li>
+<li>LHS: N=10,000 per configuration, 4 dimensions, empirical 5th/95th percentiles.</li>
+<li>Sobol: base 2¹³, calc_second_order=False, 81,920 evaluations per case, output rear P (front is k·P_r: identical indices).</li>
+<li>BRR census: captured 2026-06-12 from the public overview tables (road-bike-reviews, cx-gravel-reviews); raw datasets available on request (brr_road_raw.csv, brr_gravel_raw.csv).</li>
+<li>The tool's JS engine verified against the Python model case by case (exact match pre-rounding).</li>
+</ul>
+
+<h2>12.5 METHODOLOGICAL FRAMEWORK — DYNAMIC COHERENCE MODEL</h2>
+<p>This work applies Carlos Eduardo Ravello Joo's Dynamic Coherence Model (MCD): explicitly separating what the system <em>reveals</em> (the model, its constants, its validation — all auditable) from what it <em>manages as unresolved</em> (quantified uncertainty, documented divergences, declared limits). The ±PSI band and section 9.1 are not concessions: they are the product. Coherence between what the tool says, what it does and how it shows it is the governing design criterion.</p>
+
+<h2>13. REFERENCES</h2>
+<ol class="refs">
+<li>Berto, F. J. (2004). <em>All about tire inflation</em>. Bicycling Magazine technical series. 15% deflection pressure chart, 50 tires, 700C.</li>
+<li>Heine, J. (2020). <em>The science behind the Rene Herse tire pressure calculator</em>. Rene Herse Cycles. <a href="https://www.renehersecycles.com/the-science-behind-the-tire-pressure-calculator/" rel="noopener">renehersecycles.com</a></li>
+<li>Bierman, J. (2014–2026). <em>Road bike and CX/gravel tire test database</em>. BicycleRollingResistance. <a href="https://www.bicyclerollingresistance.com" rel="noopener">bicyclerollingresistance.com</a> (321 nominal/measured pairs, 17.8/18 mm rims).</li>
+<li>ETRTO (2020+). <em>Standards Manual</em>. European Tyre and Rim Technical Organisation. Pressure limits for straight-side (hookless) rims.</li>
+<li>SILCA (2026). <em>Professional tire pressure calculator</em>. <a href="https://silca.cc/pages/pro-tire-pressure-calculator" rel="noopener">silca.cc</a> (validation reference, captures 2026-06-12).</li>
+<li>Rene Herse Cycles (2026). <em>Tire pressure calculator</em>. <a href="https://www.renehersecycles.com/tire-pressure-calculator/" rel="noopener">renehersecycles.com</a> (validation reference, captures 2026-06-12).</li>
+<li>McKay, M. D., Beckman, R. J., &amp; Conover, W. J. (1979). A comparison of three methods for selecting values of input variables in the analysis of output from a computer code. <em>Technometrics, 21</em>(2), 239–245.</li>
+<li>Sobol, I. M. (2001). Global sensitivity indices for nonlinear mathematical models and their Monte Carlo estimates. <em>Mathematics and Computers in Simulation, 55</em>(1–3), 271–280.</li>
+<li>Herman, J., &amp; Usher, W. (2017). SALib: An open-source Python library for sensitivity analysis. <em>Journal of Open Source Software, 2</em>(9), 97.</li>
+<li>Ravello Joo, C. E. (2026). <em>Dynamic Coherence Model</em>. <a href="https://carlosravello.com" rel="noopener">carlosravello.com</a></li>
+</ol>
+
+<a class="cta-tool" href="psi-calculator-en.html">USE THE BIKELAB PSI CALCULATOR →</a>
+<a class="cta-tool" style="border-color:var(--blue);color:var(--blue)" href="../papers/bikelabstudio-psi-calculator-constant-deflection-model-en-fixed_.pdf" download>DOWNLOAD THIS WHITE PAPER AS PDF · DOI 10.5281/zenodo.20671797 ↓</a>
+
+<footer>
+<p>© 2026 BikeLab Studio — Carlos Eduardo Ravello Joo · <a href="https://carlosravello.com">carlosravello.com</a> · <a href="https://orcid.org/0009-0007-5631-7436">ORCID 0009-0007-5631-7436</a><br>License CC BY-NC 4.0 · <a href="../research-en.html">← Back to Research</a> · <a href="tire-pressure-is-not-a-number-en.html">Field-guide version →</a></p>
+</footer>
+
+</div>
+</body>
+</html>

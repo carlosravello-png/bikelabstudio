@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Validación cruzada de la presión trasera — BikeLab Studio</title>
+  <desc>Presión trasera por caso comparando BikeLab PSI con SILCA y el rango Rene Herse soft–firm en junio de 2026. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs></defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="623" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 618 H42 M22 618 V598"></path><path d="M1178 618 H1158 M1178 618 V598"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="50" fill="#ECECEC" font-size="25" font-weight="bold">9 de 12 ruedas dentro de ±10% del promedio de las referencias</text>
+  <text x="62" y="78" fill="#9AA0A6" font-size="15">presión trasera por caso · BikeLab PSI vs SILCA vs Rene Herse (soft–firm) · junio 2026</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.5 / VALIDACIÓN CRUZADA</text>
+  <line x1="40" y1="94" x2="1160" y2="94" stroke="#2A2A2A" stroke-width="1"></line>
+
+  
+  <rect x="320" y="112" width="26" height="9" rx="2" fill="#6A6A6A"></rect><text x="354" y="120" fill="#9AA0A6" font-size="12">rango RH soft–firm</text>
+  <circle cx="540" cy="116" r="5" fill="#FFB020"></circle><text x="552" y="120" fill="#9AA0A6" font-size="12">SILCA</text>
+  <circle cx="650" cy="116" r="7" fill="#E8FF3A"></circle><text x="664" y="120" fill="#9AA0A6" font-size="12">BikeLab PSI</text>
+
+  
+  <g stroke="#1E1E24" stroke-width="1">
+    <line x1="320" y1="148" x2="320" y2="500"></line><line x1="428.6" y1="148" x2="428.6" y2="500"></line>
+    <line x1="537.1" y1="148" x2="537.1" y2="500"></line><line x1="645.7" y1="148" x2="645.7" y2="500"></line>
+    <line x1="754.3" y1="148" x2="754.3" y2="500"></line><line x1="862.9" y1="148" x2="862.9" y2="500"></line>
+    <line x1="971.4" y1="148" x2="971.4" y2="500"></line><line x1="1080" y1="148" x2="1080" y2="500"></line>
+  </g>
+  <line x1="320" y1="500" x2="1080" y2="500" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <g fill="#9AA0A6" font-size="12" text-anchor="middle">
+    <text x="320" y="520">20</text><text x="428.6" y="520">30</text><text x="537.1" y="520">40</text>
+    <text x="645.7" y="520">50</text><text x="754.3" y="520">60</text><text x="862.9" y="520">70</text>
+    <text x="971.4" y="520">80</text><text x="1080" y="520">90</text>
+  </g>
+  <text x="700" y="544" fill="#ECECEC" font-size="13" text-anchor="middle">presión trasera (PSI)</text>
+
+  
+  
+  <text x="84" y="180" fill="#9AA0A6" font-size="12.5">83kg·28mm ruta</text>
+  <rect x="689.1" y="171" width="141.2" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="879.1" cy="176" r="5" fill="#FFB020"></circle><circle cx="895.4" cy="176" r="7" fill="#E8FF3A"></circle>
+  
+  <text x="84" y="236" fill="#9AA0A6" font-size="12.5">95kg·28mm ruta *</text>
+  <rect x="765.1" y="227" width="162.9" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="900.8" cy="232" r="5" fill="#FFB020"></circle><circle cx="1014.8" cy="232" r="7" fill="#E8FF3A"></circle>
+  
+  <text x="84" y="292" fill="#9AA0A6" font-size="12.5">75kg·32mm cámara</text>
+  <rect x="602.3" y="283" width="119.4" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="808.6" cy="288" r="5" fill="#FFB020"></circle><circle cx="776" cy="288" r="7" fill="#E8FF3A"></circle>
+  
+  <text x="84" y="348" fill="#9AA0A6" font-size="12.5">85kg·40mm gravel</text>
+  <rect x="472" y="339" width="86.9" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="493.7" cy="344" r="5" fill="#FFB020"></circle><circle cx="515.4" cy="344" r="7" fill="#E8FF3A"></circle>
+  
+  <text x="84" y="404" fill="#9AA0A6" font-size="12.5">100kg·45mm gravel</text>
+  <rect x="482.9" y="395" width="86.8" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="434" cy="400" r="5" fill="#FFB020"></circle><circle cx="526.3" cy="400" r="7" fill="#E8FF3A"></circle>
+  
+  <text x="84" y="460" fill="#9AA0A6" font-size="12.5">70kg·25mm ruta</text>
+  <rect x="700" y="451" width="184.6" height="10" rx="3" fill="#6A6A6A"></rect>
+  <circle cx="1004" cy="456" r="5" fill="#FFB020"></circle><circle cx="862.9" cy="456" r="7" fill="#E8FF3A"></circle>
+
+  <text x="130" y="600" fill="#6A6A6A" font-size="11.5">* divergencia deliberada &gt;90kg: la deflección constante escala linealmente con la carga.</text>
+  <text x="1160" y="600" fill="#6A6A6A" font-size="11" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+</svg>

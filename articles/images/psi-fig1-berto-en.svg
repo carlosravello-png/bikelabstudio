@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>The core of the model: Berto — BikeLab Studio</title>
+  <desc>Required pressure versus wheel load under the Berto model for six tyre widths at a constant 15% deflection. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs></defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="623" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 618 H42 M22 618 V598"></path><path d="M1178 618 H1158 M1178 618 V598"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="50" fill="#ECECEC" font-size="25" font-weight="bold">The core model: P = 600·L/W² + 0.75·W − 25</text>
+  <text x="62" y="78" fill="#9AA0A6" font-size="15">required pressure vs wheel load, at constant 15% deflection</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.1 / BERTO MODEL</text>
+  <line x1="40" y1="94" x2="1160" y2="94" stroke="#2A2A2A" stroke-width="1"></line>
+
+  <g stroke="#1E1E24" stroke-width="1">
+    <line x1="130" y1="540" x2="1080" y2="540"></line><line x1="130" y1="471.7" x2="1080" y2="471.7"></line>
+    <line x1="130" y1="403.3" x2="1080" y2="403.3"></line><line x1="130" y1="335" x2="1080" y2="335"></line>
+    <line x1="130" y1="266.7" x2="1080" y2="266.7"></line><line x1="130" y1="198.3" x2="1080" y2="198.3"></line>
+    <line x1="130" y1="130" x2="1080" y2="130"></line>
+  </g>
+  <g fill="#9AA0A6" font-size="12" text-anchor="end">
+    <text x="118" y="544">0</text><text x="118" y="475.7">20</text><text x="118" y="407.3">40</text>
+    <text x="118" y="339">60</text><text x="118" y="270.7">80</text><text x="118" y="202.3">100</text><text x="118" y="134">120</text>
+  </g>
+  <line x1="130" y1="130" x2="130" y2="540" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <line x1="130" y1="540" x2="1080" y2="540" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <g fill="#9AA0A6" font-size="12" text-anchor="middle">
+    <text x="130" y="560">20</text><text x="320" y="560">60</text><text x="510" y="560">100</text>
+    <text x="700" y="560">140</text><text x="890" y="560">180</text><text x="1080" y="560">220</text>
+  </g>
+  <text x="605" y="584" fill="#ECECEC" font-size="13" text-anchor="middle">wheel load (lbs)</text>
+  <text x="74" y="335" fill="#ECECEC" font-size="13" text-anchor="middle" transform="rotate(-90 74 335)">required pressure (PSI)</text>
+
+  <line x1="130" y1="480.9" x2="1080" y2="316.9" stroke="#4A9EFF" stroke-width="2.4"></line>
+  <text x="1086" y="316.9" fill="#4A9EFF" font-size="12.5">50mm</text>
+  <line x1="130" y1="489.8" x2="1080" y2="287.4" stroke="#9AA0A6" stroke-width="2"></line>
+  <text x="1086" y="288.4" fill="#9AA0A6" font-size="12.5">45mm</text>
+  <line x1="130" y1="497.3" x2="1080" y2="241" stroke="#9AA0A6" stroke-width="2"></line>
+  <text x="1086" y="244" fill="#9AA0A6" font-size="12.5">40mm</text>
+  <line x1="130" y1="503.4" x2="1015.9" y2="130" stroke="#6A6A6A" stroke-width="2"></line>
+  <text x="1022" y="142" fill="#6A6A6A" font-size="12.5">32mm</text>
+  <line x1="130" y1="495.8" x2="659.6" y2="130" stroke="#6A6A6A" stroke-width="2"></line>
+  <text x="666" y="142" fill="#6A6A6A" font-size="12.5">25mm</text>
+  <line x1="130" y1="501.4" x2="804.5" y2="130" stroke="#E8FF3A" stroke-width="3.2"></line>
+  <text x="812" y="142" fill="#E8FF3A" font-size="13" font-weight="bold">28mm</text>
+
+  <text x="130" y="610" fill="#6A6A6A" font-size="11.5">Empirical fit ±2 PSI to Berto&#39;s chart (50 tyres, 700C) · domain 20–220 lbs per wheel.</text>
+  <text x="1160" y="610" fill="#6A6A6A" font-size="11" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+</svg>

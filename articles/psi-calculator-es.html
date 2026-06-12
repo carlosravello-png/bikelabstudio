@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#080808">
+<title>BikeLab PSI Calculator | Presión de Llantas Ruta y Gravel | Gratis</title>
+<meta name="description" content="BikeLab PSI Calculator: tu presión de ruta o gravel con su margen real (±PSI). Modelo Berto validado, 321 llantas medidas, techos hookless ETRTO. Gratis.">
+<meta name="keywords" content="BikeLab PSI Calculator, psi calculator, calculadora presión llantas bicicleta, presión neumáticos ruta, presión llantas gravel, tire pressure calculator, presión tubeless, Frank Berto 15% drop, presión hookless ETRTO, BikeLab Studio">
+<meta name="author" content="Carlos Ravello — BikeLab Studio">
+<meta name="copyright" content="© 2026 BikeLab Studio — Carlos Ravello">
+<link rel="canonical" href="psi-calculator-es.html"/>
+<link rel="alternate" hreflang="es" href="psi-calculator-es.html"/>
+<link rel="alternate" hreflang="en" href="psi-calculator-en.html"/>
+<link rel="alternate" hreflang="x-default" href="psi-calculator-es.html"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<meta property="og:locale" content="es_PE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BikeLab PSI Calculator — Presión de Llantas Ruta y Gravel con Banda de Incertidumbre">
+<meta property="og:description" content="La única calculadora de presión que muestra su incertidumbre. Modelo Berto validado contra SILCA y Rene Herse, corrección de ancho calibrada con 321 mediciones reales. Gratis.">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/psi-calculator-es.html">
+<meta property="og:site_name" content="BikeLab Studio">
+<meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BikeLab PSI Calculator — Presión Ruta y Gravel | BikeLab Studio">
+<meta name="twitter:description" content="Presión óptima con banda de incertidumbre 90%. Modelo Berto 15% drop + censo BRR de 321 llantas + techos ETRTO. Sin registro.">
+<meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app",
+      "name": "BikeLab PSI Calculator",
+      "alternateName": [
+        "PSI Calculator",
+        "BikeLab PSI",
+        "Calculadora de Presión de Llantas",
+        "Calculadora Presión Neumáticos Bicicleta",
+        "Bicycle Tire Pressure Calculator",
+        "Calculadora de Presión Ruta y Gravel"
+      ],
+      "description": "Calculadora de presión de llantas para ruta y gravel basada en el criterio de deflección 15% de Frank Berto, con corrección de ancho real calibrada contra 321 mediciones independientes de BicycleRollingResistance, banda de incertidumbre por Latin Hypercube Sampling (10.000 muestras) y techos de seguridad ETRTO para aros hookless. Validada contra SILCA y Rene Herse. BikeLab Studio — Trujillo, Perú.",
+      "applicationCategory": "SportsApplication",
+      "applicationSubCategory": "Bicycle Tire Pressure Calculator",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "url": "https://www.bikelabstudio.com/articles/psi-calculator-es.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "featureList": [
+        "Modelo físico Frank Berto — criterio 15% tire drop (dominio empírico 20–220 lbs por rueda)",
+        "Corrección de ancho real calibrada con censo de 321 llantas de BicycleRollingResistance",
+        "Banda de incertidumbre 90% por Latin Hypercube Sampling (10.000 muestras por configuración)",
+        "Acople frontal k=0.93 calibrado contra SILCA y Rene Herse (transferencia de carga en frenada)",
+        "Techos de seguridad ETRTO: hookless 72.5 PSI, hookless con aro interno ≥30mm 60 PSI",
+        "Piso de seguridad 25 PSI con advertencia de pinch flat y desllante",
+        "Correcciones por cámara/tubeless, tipo de carcasa y superficie",
+        "Campo opcional de ancho medido con calibre — reduce la incertidumbre a un tercio",
+        "Análisis de sensibilidad global (índices de Sobol) publicado",
+        "Validación cruzada documentada: 6 casos contra SILCA y Rene Herse",
+        "Arquitectura preparada para módulo MTB (heurísticas de fabricante, próximamente)"
+      ],
+      "softwareVersion": "1.0",
+      "dateCreated": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "datePublished": "2026-06-12",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "potentialAction": { "@type": "UseAction", "target": "https://www.bikelabstudio.com/articles/psi-calculator-es.html" },
+      "mentions": [
+        { "@type": "Person", "name": "Frank Berto", "description": "Ingeniero y editor técnico de Bicycling Magazine, autor del criterio 15% tire drop" },
+        { "@type": "Organization", "name": "SILCA", "url": "https://silca.cc" },
+        { "@type": "Organization", "name": "Rene Herse Cycles", "url": "https://www.renehersecycles.com" },
+        { "@type": "Organization", "name": "Bicycle Rolling Resistance", "url": "https://www.bicyclerollingresistance.com" },
+        { "@type": "Organization", "name": "ETRTO", "description": "European Tyre and Rim Technical Organisation" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset",
+      "name": "Censo BRR de anchos nominal vs medido + validación cruzada SILCA/Rene Herse",
+      "description": "321 pares nominal/medido de BicycleRollingResistance (159 ruta en aro 18mm interno, 162 gravel en aro 17.8mm) usados para calibrar la corrección de ancho real; 6 casos de validación cruzada contra las calculadoras de SILCA y Rene Herse ejecutadas en vivo; análisis de incertidumbre LHS y sensibilidad Sobol con SALib.",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "dateCreated": "2026-06-12",
+      "variableMeasured": [
+        { "@type": "PropertyValue", "name": "Ancho nominal vs medido", "unitText": "mm" },
+        { "@type": "PropertyValue", "name": "Presión recomendada frontal/trasera", "unitText": "PSI" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#webpage",
+      "url": "https://www.bikelabstudio.com/articles/psi-calculator-es.html",
+      "name": "Calculadora de Presión de Llantas Ruta y Gravel | BikeLab Studio",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "inLanguage": "es",
+      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#breadcrumb" },
+      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.bikelabstudio.com/index.html#herramientas" },
+        { "@type": "ListItem", "position": 3, "name": "Calculadora de Presión de Llantas" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "url": "https://www.bikelabstudio.com",
+      "name": "BikeLab Studio",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#howto",
+      "name": "Cómo calcular la presión óptima de tus llantas",
+      "description": "Calcula la presión frontal y trasera óptima para ruta o gravel con banda de incertidumbre y techos de seguridad.",
+      "totalTime": "PT2M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "step": [
+        { "@type": "HowToStep", "position": "1", "name": "Elige disciplina y geometría", "text": "Selecciona ruta o gravel y el tipo de bici (racing, endurance o urbana/touring) — esto fija la distribución de carga entre ruedas." },
+        { "@type": "HowToStep", "position": "2", "name": "Ingresa peso y llanta", "text": "Peso total del sistema (rider + bici + equipo), ancho nominal de la llanta y ancho interno del aro. Si mides el ancho real con calibre, ingrésalo: la incertidumbre baja a un tercio." },
+        { "@type": "HowToStep", "position": "3", "name": "Configura montaje y superficie", "text": "Tubeless o cámara, tipo de carcasa (supple, estándar o rígida), tipo de aro (hooked o hookless) y superficie habitual." },
+        { "@type": "HowToStep", "position": "4", "name": "Lee presión y banda de incertidumbre", "text": "Obtienes presión frontal y trasera con banda de confianza 90%. Si un techo de seguridad ETRTO capea el resultado, se muestran ambos valores con explicación. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué esta calculadora recomienda presiones distintas a SILCA o Rene Herse?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Porque optimizan funciones distintas. Esta calculadora aplica el criterio de deflección constante 15% de Frank Berto, que exige que la presión escale linealmente con la carga. SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En nuestra validación cruzada de 6 casos, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas referencias — y cada desviación restante tiene causa física documentada." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa la banda de incertidumbre (±PSI)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es el intervalo de confianza 90% calculado por muestreo Latin Hypercube sobre la incertidumbre real de los inputs: ±2 kg de peso, ±1.5 mm de ancho real y ±3 puntos de distribución de carga. No incluye el error de tu manómetro (típicamente ±5%), que es incertidumbre de tu instrumento, no del modelo. Ninguna otra calculadora del mercado publica este dato." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el techo de 72.5 PSI en aros hookless?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es el límite ETRTO para aros sin gancho (hookless): 72.5 PSI / 5 bar sin excepciones, y 60 PSI si el aro tiene ancho interno de 30 mm o más. Superarlo arriesga desllante súbito. Si tu presión calculada excede el techo, la calculadora muestra ambos valores y aplica el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué no cubre MTB?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Decisión de diseño documentada: el propio Berto declara que el criterio 15% no es válido para MTB — los aros son proporcionalmente más angostos, los tacos distorsionan la medición de deflección y el objetivo off-road es tracción y absorción, no resistencia a la rodadura. Un módulo MTB separado, basado en heurísticas de fabricantes, está en desarrollo." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap">
+
+<style>
+/* BLS-TIRE-2026 © BikeLab Studio | bikelabstudio.com — Trujillo, Perú */
+:root{
+  --bg:#080808; --surface:#0e0e0e; --surface2:#141414;
+  --border:#1c1c1c; --border2:#242424;
+  --text:#c8c8c8; --text-dim:#666; --text-bright:#e8e8e8;
+  --cyan:#2aa8c8; --cyan-bright:#30c8e0; --cyan-dim:#124c5c;
+  --green:#4ade80; --yellow:#fbbf24; --red:#f87171; --orange:#fb923c;
+  --mono:'Share Tech Mono',monospace; --head:'Rajdhani',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.6;
+  background-image:linear-gradient(rgba(42,168,200,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(42,168,200,.02) 1px,transparent 1px);
+  background-size:40px 40px;}
+.wrap{max-width:920px;margin:0 auto;padding:1rem 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:1rem 0;border-bottom:2px solid var(--cyan);margin-bottom:1.5rem}
+.logo{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--cyan);letter-spacing:2px}
+.logo a{color:inherit;text-decoration:none}
+.copy-hdr{font-size:.7rem;color:var(--text-dim);margin-top:.2rem}
+.lang-btn-group{display:flex}
+.lang-btn{padding:.35rem .75rem;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:.8rem;text-decoration:none;transition:all .2s}
+.lang-btn:first-child{border-radius:4px 0 0 4px}
+.lang-btn:last-child{border-radius:0 4px 4px 0;border-left:none}
+.lang-btn.active{background:var(--cyan-dim);border-color:var(--cyan);color:var(--cyan-bright)}
+h1{font-family:var(--head);font-size:1.7rem;color:var(--text-bright);letter-spacing:1px;margin-bottom:.3rem}
+.subtitle{color:var(--text-dim);font-size:.85rem;margin-bottom:1.25rem}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.badge{padding:.25rem .7rem;background:var(--surface2);border:1px solid var(--border2);border-radius:3px;font-size:.7rem;color:var(--text-dim);letter-spacing:.5px}
+.badge.hl{border-color:var(--cyan-dim);color:var(--cyan-bright)}
+.panel-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem}
+.panel-title{font-family:var(--head);font-size:1.3rem;color:var(--text-bright);margin-bottom:1.1rem;letter-spacing:1px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem .9rem;margin-bottom:.5rem}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}}
+.field-wrap{display:flex;flex-direction:column;gap:.25rem}
+.field-label{font-size:.78rem;color:var(--text-dim)}
+.field-label .opt{color:var(--cyan-dim)}
+.field-input,.field-select{padding:.55rem .7rem;background:var(--surface2);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:.9rem;width:100%;transition:border-color .2s}
+.field-input:focus,.field-select:focus{outline:none;border-color:var(--cyan)}
+.weight-row{display:flex;gap:.4rem}
+.weight-row .field-input{flex:1}
+.unit-toggle{display:flex;border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+.unit-toggle button{padding:.4rem .6rem;background:var(--surface2);border:none;color:var(--text-dim);font-family:var(--mono);font-size:.8rem;cursor:pointer}
+.unit-toggle button.on{background:var(--cyan-dim);color:var(--cyan-bright)}
+.disc-tabs{display:flex;gap:.5rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.disc-tab{padding:.5rem 1.1rem;background:var(--surface2);border:1px solid var(--border2);border-radius:4px;color:var(--text-dim);font-family:var(--head);font-size:1rem;letter-spacing:1px;cursor:pointer;transition:all .2s}
+.disc-tab.on{border-color:var(--cyan);color:var(--cyan-bright);background:rgba(42,168,200,.08)}
+.disc-tab.soon{opacity:.45;cursor:not-allowed;position:relative}
+.disc-tab.soon::after{content:'PRÓXIMAMENTE';font-size:.55rem;display:block;letter-spacing:.5px;color:var(--orange)}
+.calc-btn{width:100%;margin-top:1rem;padding:.85rem;background:var(--cyan-dim);border:1px solid var(--cyan);border-radius:4px;color:var(--cyan-bright);font-family:var(--head);font-size:1.15rem;letter-spacing:2px;cursor:pointer;transition:all .2s}
+.calc-btn:hover{background:rgba(42,168,200,.25)}
+.error-msg{color:var(--red);font-size:.8rem;min-height:1.2em;margin-top:.5rem}
+.results{display:none}
+.results.show{display:block}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+@media(max-width:560px){.res-grid{grid-template-columns:1fr}}
+.res-card{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--cyan);border-radius:6px;padding:1.1rem;text-align:center}
+.res-wheel{font-family:var(--head);font-size:1rem;color:var(--text-dim);letter-spacing:2px}
+.res-psi{font-family:var(--head);font-size:2.6rem;color:var(--cyan-bright);line-height:1.1;margin:.2rem 0}
+.res-psi small{font-size:1.1rem;color:var(--text-dim)}
+.res-band{font-size:.8rem;color:var(--text)}
+.res-bar{font-size:.78rem;color:var(--text-dim);margin-top:.2rem}
+.warn-box{border:1px solid var(--border2);border-left:4px solid var(--yellow);background:rgba(251,191,36,.06);border-radius:4px;padding:.8rem 1rem;font-size:.82rem;margin-top:.8rem}
+.warn-box.red{border-left-color:var(--red);background:rgba(248,113,113,.06)}
+.warn-box.cap{border-left-color:var(--orange);background:rgba(251,146,60,.06)}
+.warn-box b{color:var(--text-bright)}
+.note-method{font-size:.75rem;color:var(--text-dim);margin-top:1rem;border-top:1px dashed var(--border2);padding-top:.7rem}
+section.prose{margin-bottom:1.5rem}
+section.prose h2{font-family:var(--head);font-size:1.25rem;color:var(--cyan-bright);letter-spacing:1px;margin-bottom:.7rem}
+section.prose h3{font-family:var(--head);font-size:1.05rem;color:var(--text-bright);margin:1rem 0 .4rem}
+section.prose p{margin-bottom:.8rem;font-size:.86rem}
+section.prose li{margin:0 0 .5rem 1.2rem;font-size:.86rem}
+.formula{background:var(--surface2);border:1px solid var(--border2);border-radius:4px;padding:.7rem 1rem;font-size:.9rem;color:var(--cyan-bright);text-align:center;margin:.8rem 0;overflow-x:auto}
+table.val{width:100%;border-collapse:collapse;font-size:.78rem;margin:.8rem 0}
+table.val th,table.val td{border:1px solid var(--border2);padding:.4rem .5rem;text-align:center}
+table.val th{background:var(--surface2);color:var(--text-bright);font-weight:normal}
+table.val td.ok{color:var(--green)}
+.src-list{font-size:.78rem;color:var(--text-dim)}
+.src-list li{margin-bottom:.45rem}
+.src-list a{color:var(--cyan);text-decoration:none}
+details.faq{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.9rem 1.1rem;margin-bottom:.6rem}
+details.faq summary{font-family:var(--head);font-size:1rem;color:var(--text-bright);cursor:pointer;letter-spacing:.5px}
+details.faq p{margin-top:.6rem;font-size:.84rem;color:var(--text)}
+footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--cyan);text-align:center;font-size:.75rem;color:var(--text-dim)}
+footer a{color:var(--cyan);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="logo"><a href="../index.html">BIKELAB STUDIO</a></div>
+    <div class="copy-hdr">BIKELAB_PSI_CALC v1.0 — Trujillo, Perú</div>
+  </div>
+  <div class="lang-btn-group">
+    <a class="lang-btn active" href="psi-calculator-es.html">ES</a>
+    <a class="lang-btn" href="psi-calculator-en.html">EN</a>
+  </div>
+</header>
+
+<h1>BikeLab PSI Calculator — Presión de Llantas Ruta y Gravel</h1>
+<p class="subtitle">// TU PRESIÓN CON SU MARGEN REAL (±PSI) · MODELO BERTO 15% DROP · CENSO BRR 321 LLANTAS · TECHOS ETRTO</p>
+<div class="badges">
+  <span class="badge hl">VALIDADA VS SILCA + RENE HERSE</span>
+  <span class="badge">321 MEDICIONES BRR</span>
+  <span class="badge">SOBOL + LHS</span>
+  <span class="badge">© 2026 BLS</span>
+</div>
+
+<!-- ============ CALCULADORA ============ -->
+<div class="panel-box" id="calculator">
+  <div class="panel-title">// INPUTS</div>
+
+  <div class="disc-tabs" role="tablist" aria-label="Disciplina">
+    <button class="disc-tab on" id="tabRuta" type="button">RUTA</button>
+    <button class="disc-tab" id="tabGravel" type="button">GRAVEL</button>
+    <button class="disc-tab soon" type="button" disabled title="Módulo MTB en desarrollo — heurísticas de fabricante, no Berto">MTB</button>
+  </div>
+
+  <div class="form-grid">
+    <div class="field-wrap">
+      <label class="field-label" for="inWeight">Peso total: rider + bici + equipo</label>
+      <div class="weight-row">
+        <input class="field-input" id="inWeight" type="number" min="30" max="200" step="0.5" placeholder="83">
+        <div class="unit-toggle"><button type="button" id="uKg" class="on">kg</button><button type="button" id="uLb">lb</button></div>
+      </div>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inBike">Tipo de bici (distribución de carga)</label>
+      <select class="field-select" id="inBike">
+        <option value="racing">Racing / ruta agresiva (40/60)</option>
+        <option value="endurance">Endurance / randonneur (45/55)</option>
+        <option value="urbana">Urbana / touring cargada (35/65)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inNominal">Ancho nominal de la llanta (mm)</label>
+      <select class="field-select" id="inNominal"></select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inRim">Ancho interno del aro (mm)</label>
+      <select class="field-select" id="inRim"></select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inMeasured">Ancho medido con calibre <span class="opt">(opcional — triplica la precisión)</span></label>
+      <input class="field-input" id="inMeasured" type="number" min="20" max="60" step="0.1" placeholder="ej. 29.5">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inHook">Tipo de aro</label>
+      <select class="field-select" id="inHook">
+        <option value="hooked">Hooked (con gancho)</option>
+        <option value="hookless">Hookless (sin gancho)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inMount">Montaje</label>
+      <select class="field-select" id="inMount">
+        <option value="tubeless">Tubeless</option>
+        <option value="tube">Cámara (+5%)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inCasing">Carcasa</label>
+      <select class="field-select" id="inCasing">
+        <option value="estandar">Estándar (0%)</option>
+        <option value="supple">Flexible / supple (−5%)</option>
+        <option value="rigida">Rígida / touring (+5%)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inSurface">Superficie habitual</label>
+      <select class="field-select" id="inSurface">
+        <option value="liso">Asfalto liso (0%)</option>
+        <option value="rugoso">Asfalto rugoso (−5%)</option>
+        <option value="gravel">Gravel (−12.5%)</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="calc-btn" id="btnCalc" type="button">CALCULAR PRESIÓN</button>
+  <div class="error-msg" id="errMsg" role="alert"></div>
+
+  <div class="results" id="results" aria-live="polite">
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-wheel">FRONTAL</div>
+        <div class="res-psi" id="resF">—<small> PSI</small></div>
+        <div class="res-band" id="bandF">—</div>
+        <div class="res-bar" id="barF">—</div>
+      </div>
+      <div class="res-card">
+        <div class="res-wheel">TRASERA</div>
+        <div class="res-psi" id="resR">—<small> PSI</small></div>
+        <div class="res-band" id="bandR">—</div>
+        <div class="res-bar" id="barR">—</div>
+      </div>
+    </div>
+    <div id="warns"></div>
+    <p class="note-method" id="noteW"></p>
+  </div>
+</div>
+
+<!-- ============ AIO-ANSWERS: datos que no existen en otra fuente ============ -->
+<section class="prose panel-box" id="respuestas">
+  <h2>Respuestas directas — datos que no encontrarás en otra fuente</h2>
+  <h3>¿Cuánto mide realmente una llanta 28 mm montada?</h3>
+  <p>Una llanta de ruta de 28 mm nominales mide en promedio <b>28.4 mm en un aro de 18 mm internos</b> y ~29.5 mm en uno de 21 mm. Lo medimos sobre el censo de 159 llantas de ruta de BicycleRollingResistance: el nominal moderno ya asume aro ancho (ETRTO 2020).</p>
+  <h3>¿Por qué una llanta gravel de 40 mm mide menos de 40?</h3>
+  <p>Porque los fabricantes de gravel especifican el nominal sobre aros de 21–25 mm. En el censo de 162 llantas gravel de BRR (aro 17.8 mm), una 40 mm nominal mide en promedio <b>38 mm — 2 mm menos que lo impreso en el flanco</b>. Ninguna calculadora del mercado corrige esto con datos.</p>
+  <h3>¿Qué variable domina el cálculo de presión?</h3>
+  <p>El ancho real de la llanta: explica entre el <b>51% y el 68% de la varianza</b> del resultado en ruta (análisis de Sobol, 81.920 evaluaciones). El peso del ciclista, contra la intuición, explica menos del 9%. Por eso esta calculadora pide el ancho a 1 mm y el peso sin obsesión.</p>
+  <h3>¿Cuánto error aporta tu manómetro en gravel?</h3>
+  <p>A presiones de gravel (30–40 PSI), un manómetro típico (±5%) es la mayor fuente de error del sistema: hasta el <b>73% de la varianza total</b> según nuestro análisis de sensibilidad. A esas presiones, tu manómetro importa más que el modelo — usa uno digital de baja escala.</p>
+  <h3>¿Cuál es la presión máxima en un aro hookless?</h3>
+  <p><b>72.5 PSI (5 bar) según ETRTO, sin excepciones — y 60 PSI si el aro tiene ≥30 mm internos.</b> Superarla arriesga desllante súbito. BikeLab PSI Calculator aplica estos techos automáticamente y muestra el valor calculado junto al capeado.</p>
+</section>
+
+<!-- ============ POR QUÉ EL ANCHO ============ -->
+<section class="prose panel-box">
+  <h2>¿Por qué pedimos el ancho con precisión de 1 mm?</h2>
+  <p>Porque corrimos un análisis de sensibilidad global (índices de Sobol, 81.920 evaluaciones por configuración) sobre las variables del modelo, y el resultado fue contundente: <b>en ruta, el ancho real de la llanta explica entre el 51% y el 68% de la varianza del resultado</b> — más que el peso, la distribución de carga y todo lo demás combinado. La presión depende del ancho al cuadrado (término L/W²): un error de 1.5 mm en el ancho mueve el resultado más que un error de 2 kg en tu peso.</p>
+  <p>Por eso el peso te lo pedimos sin obsesión (±2 kg apenas importa: explica menos del 9% de la varianza) pero el ancho lo tratamos en serio. Y por eso existe el campo opcional de <b>ancho medido con calibre</b>: si mides tu llanta montada e inflada, la incertidumbre de ese input cae de ±1.5 mm a ±0.5 mm y la banda de tu resultado se reduce a un tercio. En gravel, en cambio, el factor dominante es otro: tu manómetro (hasta el 73% de la varianza a presiones bajas) — ver advertencia en los resultados.</p>
+  <p>Ninguna calculadora del mercado explica por qué pide lo que pide. Nosotros publicamos el análisis.</p>
+</section>
+
+<!-- ============ METODOLOGÍA ============ -->
+<section class="prose panel-box" id="metodologia">
+  <h2>Metodología — el modelo completo, sin caja negra</h2>
+
+  <h3>1. Núcleo: Frank Berto y el criterio 15% tire drop</h3>
+  <p>La llanta debe deflectar un 15% de su altura de sección bajo carga. Frank Berto (editor técnico de <i>Bicycling Magazine</i>) midió 50 llantas a 7 presiones (40–160 PSI) y 8 cargas (20–220 lbs por rueda) en ruedas 700C. Nuestra fórmula central es un ajuste empírico a su chart con precisión ±2 PSI dentro de su dominio:</p>
+  <div class="formula">P = 600·L / W² + 0.75·W − 25 &nbsp;&nbsp;[L: carga por rueda en lbs · W: ancho real en mm]</div>
+  <p>La carga por rueda sale del peso total y la geometría: racing 40/60 (frontal/trasera), endurance 45/55, urbana/touring 35/65.</p>
+
+  <h3>2. Acople frontal (k = 0.93)</h3>
+  <p>La trasera se calcula con Berto puro sobre su carga estática. La frontal <b>no</b>: bajo frenada la carga se transfiere masivamente a la rueda delantera, y un frontal blando degrada el manejo. Por eso la frontal se acopla a la trasera: P<sub>frontal</sub> = 0.93 · P<sub>trasera</sub>, con k calibrado por barrido contra SILCA y Rene Herse en 6 casos de validación. Es el mismo patrón que ambas referencias aplican sin declararlo.</p>
+
+  <h3>3. Ancho real: calibrado con 321 mediciones de BicycleRollingResistance</h3>
+  <p>El ancho impreso en el flanco no es el ancho real montado. Capturamos el censo completo de anchos nominal vs medido de BicycleRollingResistance — <b>159 llantas de ruta (aro 18 mm interno) y 162 de gravel (aro 17.8 mm)</b> — y ajustamos por regresión:</p>
+  <div class="formula">W = nominal + δ(categoría, nominal) + 0.4·(aro interno − 18)</div>
+  <p>La pendiente de 0.4 mm por mm de aro se verificó con la única llanta que BRR midió en dos aros distintos (+11% de desviación, dentro del criterio). Hallazgo del censo: las llantas de gravel modernas miden en promedio <b>2 mm menos</b> que su nominal en aro estrecho — los fabricantes hoy especifican sobre aros anchos (ETRTO 2020), no sobre los aros de 13 mm de la era Berto. La regla clásica corregía dos veces lo que el fabricante ya corrigió; la nuestra está anclada a datos de 2014–2026.</p>
+
+  <h3>4. Correcciones de montaje y superficie</h3>
+  <ul>
+    <li><b>Cámara:</b> +5% sobre el resultado tubeless (la histéresis de la cámara butyl reduce la deflección efectiva; valor ajustado en validación cruzada).</li>
+    <li><b>Carcasa</b> (hallazgo de Jan Heine con los datos originales de Berto): supple −5%, estándar 0, rígida/touring +5%.</li>
+    <li><b>Superficie:</b> asfalto liso 0, asfalto rugoso −5%, gravel −12.5%.</li>
+  </ul>
+
+  <h3>5. Techos de seguridad — se aplican al final, sin excepciones</h3>
+  <ul>
+    <li>Aro hookless: máximo <b>72.5 PSI (5 bar)</b> — estándar ETRTO.</li>
+    <li>Aro hookless con ancho interno ≥30 mm: máximo <b>60 PSI</b>.</li>
+    <li>Piso de seguridad: bajo 25 PSI advertimos riesgo de pinch flat y desllante.</li>
+    <li><b>Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos.</b></li>
+  </ul>
+  <p>Si el techo capea tu resultado, mostramos ambos valores: el calculado y el aplicado, con explicación.</p>
+
+  <h3>6. Banda de incertidumbre — qué es y qué no es</h3>
+  <p>La banda (±PSI) es el intervalo de confianza 90% propagado por Latin Hypercube Sampling (10.000 muestras por configuración) sobre la incertidumbre de los inputs: peso ±2 kg, ancho real ±1.5 mm (±0.5 mm si lo mides con calibre), distribución de carga ±3 puntos. <b>No incluye el error de tu manómetro</b> (típicamente ±5%): eso es incertidumbre de tu instrumento, no del modelo, y mezclarlas haría parecer impreciso lo que en realidad es honesto sobre algo que no controla. En gravel, a presiones bajas, el manómetro es la mayor fuente de error real — usa uno digital.</p>
+
+  <h3>7. Validación cruzada — los números, no la promesa</h3>
+  <p>Ejecutamos 6 casos (70–100 kg, 25–45 mm, ruta y gravel) en las calculadoras de SILCA y Rene Herse en vivo, y comparamos contra el promedio de ambas. Resultado: <b>9 de 12 ruedas dentro de ±10%</b> (criterio ruta) o de la tolerancia ampliada de gravel (las dos referencias divergen entre sí hasta 30% en gravel). Las 3 desviaciones restantes tienen causa identificada y documentada (redondeo de las referencias a anchos enteros, y el escalado con peso descrito abajo).</p>
+  <table class="val">
+    <tr><th>Caso</th><th>Config</th><th>BLS F/R</th><th>SILCA F/R</th><th>R.Herse soft–firm</th></tr>
+    <tr><td>1</td><td>83 kg · 28 mm · ruta · tubeless · aro 21</td><td>68 / 73</td><td>70 / 71.5</td><td>54–67</td></tr>
+    <tr><td>2</td><td>95 kg · 28 mm · ruta · tubeless · aro 21</td><td>78 / 84</td><td>71.5 / 73.5</td><td>61–76</td></tr>
+    <tr><td>3</td><td>75 kg · 32 mm · ruta · cámara · aro 19</td><td>58 / 62</td><td>63.5 / 65</td><td>46–57</td></tr>
+    <tr><td>4</td><td>85 kg · 40 mm · gravel · tubeless · aro 24</td><td>35 / 38</td><td>34.5 / 36</td><td>34–42</td></tr>
+    <tr><td>5</td><td>100 kg · 45 mm · gravel · tubeless · aro 25</td><td>36 / 39</td><td>29.5 / 30.5</td><td>35–43</td></tr>
+    <tr><td>6</td><td>70 kg · 25 mm · ruta · tubeless · aro 21</td><td>65 / 70</td><td>80.5 / 83</td><td>55–72</td></tr>
+  </table>
+
+  <h3>8. Riders de más de 90 kg: una divergencia deliberada</h3>
+  <p>Para riders >90 kg esta calculadora recomienda presiones más firmes que SILCA. No es un error: el criterio de deflección constante (15% drop) exige que la presión escale linealmente con la carga — un rider más pesado deflecta más la llanta a la misma presión. Las calculadoras que optimizan impedancia saturan con el peso; las que optimizan deflección, no. Elegimos deflección porque es el criterio medible y reproducible. Y estamos dentro del dominio empírico de Berto: él midió hasta 220 lbs por rueda. En la práctica, el techo hookless (72.5 PSI) comprime esta divergencia en la mayoría de ruedas modernas.</p>
+
+  <h3>9. Por qué no MTB (todavía)</h3>
+  <p>Berto declara explícitamente que el criterio 15% no es válido para MTB: aros proporcionalmente más angostos, tacos que distorsionan la medición y un objetivo off-road (tracción, absorción) distinto a la rodadura. Antes que inventar números, preferimos decirlo: el módulo MTB llegará aparte, basado en heurísticas de fabricantes (Maxxis, Schwalbe, Continental). El selector ya está en la interfaz, deshabilitado.</p>
+
+  <h3>10. Límites honestos del modelo</h3>
+  <p>Berto midió con tecnología de los 90 y ruedas 700C. La corrección de carcasa es una aproximación de 3 niveles sobre un continuo. Las dos referencias del mercado divergen entre sí hasta 30% en gravel — no existe una "presión óptima" verdadera contra la cual calibrar, solo filosofías empíricas razonables. Esta calculadora elige una (deflección constante), la declara, y publica su incertidumbre. Ajusta ±2-3 PSI según sensaciones: el modelo es el punto de partida riguroso, no el dogma.</p>
+
+  <h3>Fuentes</h3>
+  <ul class="src-list">
+    <li>Berto, F. — <a href="https://www.sheldonbrown.com/brandt/tire-pressure.html" rel="noopener">"All About Tire Inflation"</a> (chart original 15% drop, 50 llantas, 700C).</li>
+    <li>Heine, J. — Bicycle Quarterly / <a href="https://www.renehersecycles.com/the-science-behind-the-tire-pressure-calculator/" rel="noopener">Rene Herse: la ciencia de su calculadora</a> (carcasas supple, re-análisis de los datos de Berto).</li>
+    <li><a href="https://www.bicyclerollingresistance.com" rel="noopener">BicycleRollingResistance</a> — Jarno Bierman. Censo de anchos nominal vs medido (321 llantas, 2014–2026, aros 17.8/18 mm).</li>
+    <li>ETRTO — Standards Manual 2020+: límites de presión para aros hookless (straight side).</li>
+    <li><a href="https://silca.cc/pages/pro-tire-pressure-calculator" rel="noopener">SILCA Pro Tire Pressure Calculator</a> y <a href="https://www.renehersecycles.com/tire-pressure-calculator/" rel="noopener">Rene Herse Tire Pressure Calculator</a> — referencias de validación cruzada (2026-06-12).</li>
+    <li><a href="white-paper-psi-model-es.html"><b>White paper técnico completo del modelo</b></a> — formulación, regresiones del censo BRR, Sobol y validación. DOI <a href="https://doi.org/10.5281/zenodo.20671797" rel="noopener">10.5281/zenodo.20671797</a> (Zenodo · OpenAIRE).</li>
+    <li><a href="presion-llantas-no-es-un-numero-es.html">Versión divulgativa: "La presión no es un número — es un rango"</a> — la explicación sin ecuaciones.</li>
+  </ul>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="prose">
+  <h2 style="font-family:var(--head);color:var(--cyan-bright);letter-spacing:1px;margin-bottom:.8rem">Preguntas frecuentes</h2>
+  <details class="faq"><summary>¿Por qué recomienda presiones distintas a SILCA o Rene Herse?</summary>
+    <p>Porque optimizan funciones distintas. Nosotros aplicamos deflección constante (Berto 15%), que escala linealmente con la carga; SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En la validación cruzada, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas — y cada desviación tiene causa física documentada en la metodología.</p></details>
+  <details class="faq"><summary>¿Qué significa el ±PSI del resultado?</summary>
+    <p>Intervalo de confianza 90% por Latin Hypercube Sampling sobre la incertidumbre real de tus inputs (peso ±2 kg, ancho ±1.5 mm, distribución ±3 puntos). No incluye el error de tu manómetro — esa es incertidumbre de tu instrumento. Si mides el ancho con calibre, la banda se reduce a un tercio.</p></details>
+  <details class="faq"><summary>¿Por qué el techo de 72.5 PSI en hookless?</summary>
+    <p>Límite ETRTO sin excepciones (60 PSI si el aro interno es ≥30 mm). Superarlo arriesga desllante súbito. Si tu valor calculado lo excede, mostramos ambos y aplicamos el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos.</p></details>
+  <details class="faq"><summary>¿Por qué no cubre MTB?</summary>
+    <p>El propio Berto declara que el 15% drop no vale para MTB (aros más angostos en proporción, tacos que distorsionan la medición, objetivo de tracción y no de rodadura). El módulo MTB llegará aparte con heurísticas de fabricante — antes que inventar números, lo decimos.</p></details>
+</section>
+
+<footer>
+  <p>© 2026 <a href="../index.html">BikeLab Studio</a> — Carlos Ravello · Trujillo, Perú · Modelo y validación documentados — datos y scripts disponibles bajo solicitud</p>
+</footer>
+
+</div>
+
+<script>
+/* BLS-TIRE-2026 — Motor Berto + correcciones. Constantes validadas 2026-06-12.
+   Trazabilidad: berto_model.py / fase1_reporte.md / brr_validacion.md (repo de trabajo). */
+(function(){
+"use strict";
+var KG2LB=2.20462, K_FRONT=0.93, TUBE=1.05;
+var REAR_SHARE={racing:.60,endurance:.55,urbana:.65};
+var CASING={estandar:0,supple:-.05,rigida:.05};
+var SURFACE={liso:0,rugoso:-.05,gravel:-.125};
+var DELTA={ruta:[7.9530,-0.2727],gravel:[1.5043,-0.0827]}; // censo BRR n=321
+var RIM_REF=18.0, SLOPE=0.4;
+var SIG_KG=2.0, SIG_W_EST=1.5, SIG_W_MEAS=0.5, D_SHARE=0.03, N_MC=4000;
+
+var $=function(id){return document.getElementById(id)};
+var disc="ruta", unit="kg";
+
+var NOMS={ruta:[23,24,25,26,27,28,29,30,31,32],gravel:[32,33,34,35,36,37,38,40,42,44,45,47,48,50]};
+var RIMS=[15,16,17,18,19,20,21,22,23,24,25,26,28,30,32];
+
+function fillSelects(){
+  var n=$("inNominal"); n.innerHTML="";
+  NOMS[disc].forEach(function(w){var o=document.createElement("option");o.value=w;o.textContent=w+" mm";n.appendChild(o)});
+  n.value=disc==="ruta"?28:40;
+  var r=$("inRim");
+  if(!r.options.length){RIMS.forEach(function(w){var o=document.createElement("option");o.value=w;o.textContent=w+" mm";r.appendChild(o)})}
+  r.value=disc==="ruta"?21:24;
+  $("inSurface").value=disc==="ruta"?"liso":"gravel";
+}
+
+function deltaNom(nom){var c=nom<=30?DELTA.ruta:DELTA.gravel;return c[0]+c[1]*nom}
+function realWidth(nom,rim){return nom+deltaNom(nom)+SLOPE*(rim-RIM_REF)}
+function berto(loadLb,w){return 600*loadLb/(w*w)+0.75*w-25}
+
+function pRear(kg,w,share,tube,casing,surface){
+  var p=berto(kg*KG2LB*share,w);
+  if(tube)p*=TUBE;
+  p*=1+CASING[casing]; p*=1+SURFACE[surface];
+  return p;
+}
+/* Normal estándar — Box-Muller */
+function randn(){var u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+
+function calc(){
+  var err=$("errMsg"); err.textContent="";
+  var wRaw=parseFloat($("inWeight").value);
+  if(!wRaw||wRaw<=0){err.textContent="Ingresa el peso total del sistema (rider + bici + equipo).";$("results").classList.remove("show");return}
+  var kg=unit==="kg"?wRaw:wRaw/KG2LB;
+  if(kg<35||kg>180){err.textContent="Peso fuera de rango razonable (35–180 kg de sistema).";$("results").classList.remove("show");return}
+  var nom=parseFloat($("inNominal").value), rim=parseFloat($("inRim").value);
+  var meas=parseFloat($("inMeasured").value)||null;
+  if(meas&&(meas<nom-6||meas>nom+8)){err.textContent="El ancho medido ("+meas+" mm) es inconsistente con el nominal ("+nom+" mm). Verifica la medición.";$("results").classList.remove("show");return}
+  var bike=$("inBike").value, tube=$("inMount").value==="tube";
+  var casing=$("inCasing").value, surface=$("inSurface").value;
+  var hookless=$("inHook").value==="hookless";
+  var share=REAR_SHARE[bike];
+  var w0=meas||realWidth(nom,rim);
+  var sigW=meas?SIG_W_MEAS:SIG_W_EST;
+
+  /* punto central */
+  var r0=pRear(kg,w0,share,tube,casing,surface), f0=K_FRONT*r0;
+
+  /* Monte Carlo (propagación; banda 90% — sin error de manómetro, ver metodología) */
+  var rs=new Array(N_MC);
+  for(var i=0;i<N_MC;i++){
+    var kgi=kg+SIG_KG*randn();
+    var wi=Math.max(18,w0+sigW*randn());
+    var si=share+(Math.random()*2-1)*D_SHARE;
+    rs[i]=pRear(kgi,wi,si,tube,casing,surface);
+  }
+  rs.sort(function(a,b){return a-b});
+  var p5=rs[Math.floor(.05*N_MC)], p95=rs[Math.floor(.95*N_MC)];
+  var bandR=(p95-p5)/2, bandF=K_FRONT*bandR;
+
+  /* techos */
+  var cap=hookless?(rim>=30?60:72.5):null;
+  var fShow=f0,rShow=r0,fCapped=false,rCapped=false;
+  if(cap!==null){
+    if(f0>cap){fShow=cap;fCapped=true}
+    if(r0>cap){rShow=cap;rCapped=true}
+  }
+
+  function fmt(x){return (Math.round(x*2)/2).toFixed(1).replace(/\.0$/,"")}
+  function bar(x){return (x*0.0689476).toFixed(2)}
+  $("resF").innerHTML=fmt(fShow)+"<small> PSI</small>";
+  $("resR").innerHTML=fmt(rShow)+"<small> PSI</small>";
+  $("bandF").textContent="±"+fmt(bandF)+" PSI · 90%: ["+fmt(K_FRONT*p5)+" – "+fmt(Math.min(K_FRONT*p95,cap||1e9))+"]";
+  $("bandR").textContent="±"+fmt(bandR)+" PSI · 90%: ["+fmt(p5)+" – "+fmt(Math.min(p95,cap||1e9))+"]";
+  $("barF").textContent=bar(fShow)+" bar";
+  $("barR").textContent=bar(rShow)+" bar";
+
+  var warns=[];
+  if(fCapped||rCapped){
+    warns.push('<div class="warn-box cap"><b>Techo de seguridad ETRTO aplicado ('+cap+' PSI, aro hookless'+(rim>=30?' ≥30 mm interno':'')+').</b> Valor calculado por el modelo: frontal '+fmt(f0)+' / trasera '+fmt(r0)+' PSI. El techo existe porque superarlo en hookless arriesga desllante súbito — el valor capeado ES tu presión.</div>');
+  }
+  if(Math.min(fShow,rShow)<25){
+    warns.push('<div class="warn-box red"><b>Presión bajo 25 PSI:</b> en ruta/gravel hay riesgo de pinch flat y desllante en curvas. Considera una llanta más ancha para tu peso, o sube a la cota inferior de la banda.</div>');
+  }
+  warns.push('<div class="warn-box"><b>Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos.</b> Este resultado es un óptimo de modelo, no un sustituto de los límites impresos en tus componentes.</div>');
+  if(surface==="gravel"){
+    warns.push('<div class="warn-box"><b>Advertencia de manómetro:</b> a estas presiones bajas, tu manómetro es la mayor fuente de error (hasta el 73% de la varianza según nuestro análisis Sobol). Usa un manómetro digital de baja escala.</div>');
+  }
+  $("warns").innerHTML=warns.join("");
+  $("noteW").textContent="Ancho real usado: "+w0.toFixed(1)+" mm ("+(meas?"medido con calibre (σ ±0.5 mm)":"estimado del censo BRR: nominal "+nom+" + δ("+deltaNom(nom).toFixed(1)+") + 0.4×(aro "+rim+" − 18) (σ ±1.5 mm)")+") · Carga trasera: "+(share*100).toFixed(0)+"% · Banda: LHS/MC "+N_MC+" muestras, percentiles 5–95, sin error de instrumento.";
+  $("results").classList.add("show");
+}
+
+/* wiring */
+$("tabRuta").addEventListener("click",function(){disc="ruta";this.classList.add("on");$("tabGravel").classList.remove("on");fillSelects()});
+$("tabGravel").addEventListener("click",function(){disc="gravel";this.classList.add("on");$("tabRuta").classList.remove("on");fillSelects()});
+$("uKg").addEventListener("click",function(){unit="kg";this.classList.add("on");$("uLb").classList.remove("on")});
+$("uLb").addEventListener("click",function(){unit="lb";this.classList.add("on");$("uKg").classList.remove("on")});
+$("btnCalc").addEventListener("click",calc);
+document.querySelectorAll(".field-input,.field-select").forEach(function(el){
+  el.addEventListener("keydown",function(e){if(e.key==="Enter")calc()});
+});
+fillSelects();
+})();
+</script>
+</body>
+</html>

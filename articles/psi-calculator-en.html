@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#080808">
+<title>BikeLab PSI Calculator | Road &amp; Gravel Tire Pressure | Free</title>
+<meta name="description" content="BikeLab PSI Calculator: your road or gravel pressure with its real margin (±PSI). Validated Berto model, 321 measured tires, ETRTO hookless caps. Free.">
+<meta name="keywords" content="BikeLab PSI Calculator, psi calculator, bicycle tire pressure calculator, road tire pressure, gravel tire pressure, tubeless pressure, Frank Berto 15% drop, hookless pressure ETRTO, BikeLab Studio">
+<meta name="author" content="Carlos Ravello — BikeLab Studio">
+<meta name="copyright" content="© 2026 BikeLab Studio — Carlos Ravello">
+<link rel="canonical" href="psi-calculator-en.html"/>
+<link rel="alternate" hreflang="es" href="psi-calculator-es.html"/>
+<link rel="alternate" hreflang="en" href="psi-calculator-en.html"/>
+<link rel="alternate" hreflang="x-default" href="psi-calculator-es.html"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_PE">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BikeLab PSI Calculator — Road &amp; Gravel Tire Pressure with Uncertainty Band">
+<meta property="og:description" content="The only tire pressure calculator that shows its uncertainty. Berto model validated against SILCA and Rene Herse, width correction calibrated with 321 real measurements. Free.">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/psi-calculator-en.html">
+<meta property="og:site_name" content="BikeLab Studio">
+<meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BikeLab PSI Calculator — Road &amp; Gravel Pressure | BikeLab Studio">
+<meta name="twitter:description" content="Optimal pressure with a 90% uncertainty band. Berto 15% drop model + 321-tire BRR census + ETRTO caps. No signup.">
+<meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#app",
+      "name": "BikeLab PSI Calculator",
+      "alternateName": [
+        "PSI Calculator",
+        "BikeLab PSI",
+        "Bicycle Tire Pressure Calculator",
+        "Road and Gravel Tire Pressure Calculator",
+        "Calculadora de Presión de Llantas",
+        "Tubeless Tire Pressure Calculator"
+      ],
+      "description": "Road and gravel tire pressure calculator based on Frank Berto's 15% drop criterion, with real-width correction calibrated against 321 independent BicycleRollingResistance measurements, a Latin Hypercube Sampling uncertainty band (10,000 samples) and ETRTO safety caps for hookless rims. Validated against SILCA and Rene Herse. BikeLab Studio — Trujillo, Peru.",
+      "applicationCategory": "SportsApplication",
+      "applicationSubCategory": "Bicycle Tire Pressure Calculator",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "url": "https://www.bikelabstudio.com/articles/psi-calculator-en.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "featureList": [
+        "Frank Berto physical model — 15% tire drop criterion (empirical domain 20–220 lbs per wheel)",
+        "Real-width correction calibrated with a 321-tire BicycleRollingResistance census",
+        "90% uncertainty band via Latin Hypercube Sampling (10,000 samples per configuration)",
+        "Front coupling k=0.93 calibrated against SILCA and Rene Herse (braking load transfer)",
+        "ETRTO safety caps: hookless 72.5 PSI, hookless with ≥30mm internal width 60 PSI",
+        "25 PSI safety floor with pinch-flat and burping warning",
+        "Corrections for tube/tubeless, casing type and surface",
+        "Optional caliper-measured width field — cuts uncertainty to a third",
+        "Published global sensitivity analysis (Sobol indices)",
+        "Documented cross-validation: 6 cases against SILCA and Rene Herse",
+        "Architecture ready for an MTB module (manufacturer heuristics, coming soon)"
+      ],
+      "softwareVersion": "1.0",
+      "dateCreated": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "datePublished": "2026-06-12",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "hasPart": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#dataset" },
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "potentialAction": { "@type": "UseAction", "target": "https://www.bikelabstudio.com/articles/psi-calculator-en.html" },
+      "mentions": [
+        { "@type": "Person", "name": "Frank Berto", "description": "Engineer and Bicycling Magazine technical editor, author of the 15% tire drop criterion" },
+        { "@type": "Organization", "name": "SILCA", "url": "https://silca.cc" },
+        { "@type": "Organization", "name": "Rene Herse Cycles", "url": "https://www.renehersecycles.com" },
+        { "@type": "Organization", "name": "Bicycle Rolling Resistance", "url": "https://www.bicyclerollingresistance.com" },
+        { "@type": "Organization", "name": "ETRTO", "description": "European Tyre and Rim Technical Organisation" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#dataset",
+      "name": "BRR nominal-vs-measured width census + SILCA/Rene Herse cross-validation",
+      "description": "321 nominal/measured width pairs from BicycleRollingResistance (159 road tires on an 18mm internal rim, 162 gravel tires on 17.8mm) used to calibrate the real-width correction; 6 cross-validation cases run live against the SILCA and Rene Herse calculators; LHS uncertainty propagation and Sobol sensitivity analysis with SALib.",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "dateCreated": "2026-06-12",
+      "variableMeasured": [
+        { "@type": "PropertyValue", "name": "Nominal vs measured width", "unitText": "mm" },
+        { "@type": "PropertyValue", "name": "Recommended front/rear pressure", "unitText": "PSI" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#webpage",
+      "url": "https://www.bikelabstudio.com/articles/psi-calculator-en.html",
+      "name": "Road &amp; Gravel Tire Pressure Calculator | BikeLab Studio",
+      "isPartOf": { "@id": "https://www.bikelabstudio.com/#website" },
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#breadcrumb" },
+      "mainEntity": { "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#app" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/index-en.html" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.bikelabstudio.com/index-en.html#tools" },
+        { "@type": "ListItem", "position": 3, "name": "Tire Pressure Calculator" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "url": "https://www.bikelabstudio.com",
+      "name": "BikeLab Studio",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#howto",
+      "name": "How to calculate your optimal tire pressure",
+      "description": "Calculate optimal front and rear pressure for road or gravel with an uncertainty band and safety caps.",
+      "totalTime": "PT2M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "step": [
+        { "@type": "HowToStep", "position": "1", "name": "Pick discipline and geometry", "text": "Select road or gravel and your bike type (racing, endurance or city/touring) — this sets the load distribution between wheels." },
+        { "@type": "HowToStep", "position": "2", "name": "Enter weight and tire", "text": "Total system weight (rider + bike + gear), nominal tire width and internal rim width. If you measure the real width with a caliper, enter it: uncertainty drops to a third." },
+        { "@type": "HowToStep", "position": "3", "name": "Set mounting and surface", "text": "Tubeless or tube, casing type (supple, standard or stiff), rim type (hooked or hookless) and your usual surface." },
+        { "@type": "HowToStep", "position": "4", "name": "Read pressure and uncertainty band", "text": "You get front and rear pressure with a 90% confidence band. If an ETRTO safety cap limits the result, both values are shown with an explanation. Never exceed the tire or rim manufacturer maximum — whichever is lower." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does this calculator recommend different pressures than SILCA or Rene Herse?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Because they optimize different objective functions. This calculator applies Frank Berto's constant-deflection 15% drop criterion, which requires pressure to scale linearly with load. SILCA optimizes impedance and saturates with weight; Rene Herse gives a single value for both wheels. In our 6-case cross-validation, 9 of 12 wheels landed within ±10% of the average of both references — and every remaining deviation has a documented physical cause." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the uncertainty band (±PSI) mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is the 90% confidence interval propagated via Latin Hypercube sampling over the real uncertainty of your inputs: ±2 kg of weight, ±1.5 mm of real width and ±3 points of load distribution. It does not include your pressure gauge error (typically ±5%), which is instrument uncertainty, not model uncertainty. No other calculator on the market publishes this." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why the 72.5 PSI cap on hookless rims?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is the ETRTO limit for hookless (straight-side) rims: 72.5 PSI / 5 bar with no exceptions, and 60 PSI if the rim has an internal width of 30 mm or more. Exceeding it risks sudden tire blow-off. If your calculated pressure exceeds the cap, the calculator shows both values and applies the cap. Never exceed the tire or rim manufacturer maximum — whichever is lower." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why doesn't it cover MTB?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A documented design decision: Berto himself states the 15% criterion is not valid for MTB — rims are proportionally narrower, knobs distort the deflection measurement, and the off-road objective is traction and absorption, not rolling resistance. A separate MTB module based on manufacturer heuristics is in development." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap">
+
+<style>
+/* BLS-TIRE-2026 © BikeLab Studio | bikelabstudio.com — Trujillo, Perú */
+:root{
+  --bg:#080808; --surface:#0e0e0e; --surface2:#141414;
+  --border:#1c1c1c; --border2:#242424;
+  --text:#c8c8c8; --text-dim:#666; --text-bright:#e8e8e8;
+  --cyan:#2aa8c8; --cyan-bright:#30c8e0; --cyan-dim:#124c5c;
+  --green:#4ade80; --yellow:#fbbf24; --red:#f87171; --orange:#fb923c;
+  --mono:'Share Tech Mono',monospace; --head:'Rajdhani',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.6;
+  background-image:linear-gradient(rgba(42,168,200,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(42,168,200,.02) 1px,transparent 1px);
+  background-size:40px 40px;}
+.wrap{max-width:920px;margin:0 auto;padding:1rem 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:1rem 0;border-bottom:2px solid var(--cyan);margin-bottom:1.5rem}
+.logo{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--cyan);letter-spacing:2px}
+.logo a{color:inherit;text-decoration:none}
+.copy-hdr{font-size:.7rem;color:var(--text-dim);margin-top:.2rem}
+.lang-btn-group{display:flex}
+.lang-btn{padding:.35rem .75rem;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:.8rem;text-decoration:none;transition:all .2s}
+.lang-btn:first-child{border-radius:4px 0 0 4px}
+.lang-btn:last-child{border-radius:0 4px 4px 0;border-left:none}
+.lang-btn.active{background:var(--cyan-dim);border-color:var(--cyan);color:var(--cyan-bright)}
+h1{font-family:var(--head);font-size:1.7rem;color:var(--text-bright);letter-spacing:1px;margin-bottom:.3rem}
+.subtitle{color:var(--text-dim);font-size:.85rem;margin-bottom:1.25rem}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.badge{padding:.25rem .7rem;background:var(--surface2);border:1px solid var(--border2);border-radius:3px;font-size:.7rem;color:var(--text-dim);letter-spacing:.5px}
+.badge.hl{border-color:var(--cyan-dim);color:var(--cyan-bright)}
+.panel-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem}
+.panel-title{font-family:var(--head);font-size:1.3rem;color:var(--text-bright);margin-bottom:1.1rem;letter-spacing:1px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem .9rem;margin-bottom:.5rem}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}}
+.field-wrap{display:flex;flex-direction:column;gap:.25rem}
+.field-label{font-size:.78rem;color:var(--text-dim)}
+.field-label .opt{color:var(--cyan-dim)}
+.field-input,.field-select{padding:.55rem .7rem;background:var(--surface2);border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:.9rem;width:100%;transition:border-color .2s}
+.field-input:focus,.field-select:focus{outline:none;border-color:var(--cyan)}
+.weight-row{display:flex;gap:.4rem}
+.weight-row .field-input{flex:1}
+.unit-toggle{display:flex;border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+.unit-toggle button{padding:.4rem .6rem;background:var(--surface2);border:none;color:var(--text-dim);font-family:var(--mono);font-size:.8rem;cursor:pointer}
+.unit-toggle button.on{background:var(--cyan-dim);color:var(--cyan-bright)}
+.disc-tabs{display:flex;gap:.5rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.disc-tab{padding:.5rem 1.1rem;background:var(--surface2);border:1px solid var(--border2);border-radius:4px;color:var(--text-dim);font-family:var(--head);font-size:1rem;letter-spacing:1px;cursor:pointer;transition:all .2s}
+.disc-tab.on{border-color:var(--cyan);color:var(--cyan-bright);background:rgba(42,168,200,.08)}
+.disc-tab.soon{opacity:.45;cursor:not-allowed;position:relative}
+.disc-tab.soon::after{content:'COMING SOON';font-size:.55rem;display:block;letter-spacing:.5px;color:var(--orange)}
+.calc-btn{width:100%;margin-top:1rem;padding:.85rem;background:var(--cyan-dim);border:1px solid var(--cyan);border-radius:4px;color:var(--cyan-bright);font-family:var(--head);font-size:1.15rem;letter-spacing:2px;cursor:pointer;transition:all .2s}
+.calc-btn:hover{background:rgba(42,168,200,.25)}
+.error-msg{color:var(--red);font-size:.8rem;min-height:1.2em;margin-top:.5rem}
+.results{display:none}
+.results.show{display:block}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+@media(max-width:560px){.res-grid{grid-template-columns:1fr}}
+.res-card{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--cyan);border-radius:6px;padding:1.1rem;text-align:center}
+.res-wheel{font-family:var(--head);font-size:1rem;color:var(--text-dim);letter-spacing:2px}
+.res-psi{font-family:var(--head);font-size:2.6rem;color:var(--cyan-bright);line-height:1.1;margin:.2rem 0}
+.res-psi small{font-size:1.1rem;color:var(--text-dim)}
+.res-band{font-size:.8rem;color:var(--text)}
+.res-bar{font-size:.78rem;color:var(--text-dim);margin-top:.2rem}
+.warn-box{border:1px solid var(--border2);border-left:4px solid var(--yellow);background:rgba(251,191,36,.06);border-radius:4px;padding:.8rem 1rem;font-size:.82rem;margin-top:.8rem}
+.warn-box.red{border-left-color:var(--red);background:rgba(248,113,113,.06)}
+.warn-box.cap{border-left-color:var(--orange);background:rgba(251,146,60,.06)}
+.warn-box b{color:var(--text-bright)}
+.note-method{font-size:.75rem;color:var(--text-dim);margin-top:1rem;border-top:1px dashed var(--border2);padding-top:.7rem}
+section.prose{margin-bottom:1.5rem}
+section.prose h2{font-family:var(--head);font-size:1.25rem;color:var(--cyan-bright);letter-spacing:1px;margin-bottom:.7rem}
+section.prose h3{font-family:var(--head);font-size:1.05rem;color:var(--text-bright);margin:1rem 0 .4rem}
+section.prose p{margin-bottom:.8rem;font-size:.86rem}
+section.prose li{margin:0 0 .5rem 1.2rem;font-size:.86rem}
+.formula{background:var(--surface2);border:1px solid var(--border2);border-radius:4px;padding:.7rem 1rem;font-size:.9rem;color:var(--cyan-bright);text-align:center;margin:.8rem 0;overflow-x:auto}
+table.val{width:100%;border-collapse:collapse;font-size:.78rem;margin:.8rem 0}
+table.val th,table.val td{border:1px solid var(--border2);padding:.4rem .5rem;text-align:center}
+table.val th{background:var(--surface2);color:var(--text-bright);font-weight:normal}
+.src-list{font-size:.78rem;color:var(--text-dim)}
+.src-list li{margin-bottom:.45rem}
+.src-list a{color:var(--cyan);text-decoration:none}
+details.faq{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.9rem 1.1rem;margin-bottom:.6rem}
+details.faq summary{font-family:var(--head);font-size:1rem;color:var(--text-bright);cursor:pointer;letter-spacing:.5px}
+details.faq p{margin-top:.6rem;font-size:.84rem;color:var(--text)}
+footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--cyan);text-align:center;font-size:.75rem;color:var(--text-dim)}
+footer a{color:var(--cyan);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="logo"><a href="../index-en.html">BIKELAB STUDIO</a></div>
+    <div class="copy-hdr">BIKELAB_PSI_CALC v1.0 — Trujillo, Peru</div>
+  </div>
+  <div class="lang-btn-group">
+    <a class="lang-btn" href="psi-calculator-es.html">ES</a>
+    <a class="lang-btn active" href="psi-calculator-en.html">EN</a>
+  </div>
+</header>
+
+<h1>BikeLab PSI Calculator — Road &amp; Gravel Tire Pressure</h1>
+<p class="subtitle">// YOUR PRESSURE WITH ITS REAL MARGIN (±PSI) · BERTO 15% DROP MODEL · 321-TIRE BRR CENSUS · ETRTO CAPS</p>
+<div class="badges">
+  <span class="badge hl">VALIDATED VS SILCA + RENE HERSE</span>
+  <span class="badge">321 BRR MEASUREMENTS</span>
+  <span class="badge">SOBOL + LHS</span>
+  <span class="badge">© 2026 BLS</span>
+</div>
+
+<!-- ============ CALCULATOR ============ -->
+<div class="panel-box" id="calculator">
+  <div class="panel-title">// INPUTS</div>
+
+  <div class="disc-tabs" role="tablist" aria-label="Discipline">
+    <button class="disc-tab on" id="tabRuta" type="button">ROAD</button>
+    <button class="disc-tab" id="tabGravel" type="button">GRAVEL</button>
+    <button class="disc-tab soon" type="button" disabled title="MTB module in development — manufacturer heuristics, not Berto">MTB</button>
+  </div>
+
+  <div class="form-grid">
+    <div class="field-wrap">
+      <label class="field-label" for="inWeight">Total weight: rider + bike + gear</label>
+      <div class="weight-row">
+        <input class="field-input" id="inWeight" type="number" min="30" max="200" step="0.5" placeholder="83">
+        <div class="unit-toggle"><button type="button" id="uKg" class="on">kg</button><button type="button" id="uLb">lb</button></div>
+      </div>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inBike">Bike type (load distribution)</label>
+      <select class="field-select" id="inBike">
+        <option value="racing">Racing / aggressive road (40/60)</option>
+        <option value="endurance">Endurance / randonneur (45/55)</option>
+        <option value="urbana">City / loaded touring (35/65)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inNominal">Nominal tire width (mm)</label>
+      <select class="field-select" id="inNominal"></select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inRim">Internal rim width (mm)</label>
+      <select class="field-select" id="inRim"></select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inMeasured">Caliper-measured width <span class="opt">(optional — triples precision)</span></label>
+      <input class="field-input" id="inMeasured" type="number" min="20" max="60" step="0.1" placeholder="e.g. 29.5">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inHook">Rim type</label>
+      <select class="field-select" id="inHook">
+        <option value="hooked">Hooked</option>
+        <option value="hookless">Hookless</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inMount">Mounting</label>
+      <select class="field-select" id="inMount">
+        <option value="tubeless">Tubeless</option>
+        <option value="tube">Inner tube (+5%)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inCasing">Casing</label>
+      <select class="field-select" id="inCasing">
+        <option value="estandar">Standard (0%)</option>
+        <option value="supple">Supple (−5%)</option>
+        <option value="rigida">Stiff / touring (+5%)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="inSurface">Usual surface</label>
+      <select class="field-select" id="inSurface">
+        <option value="liso">Smooth asphalt (0%)</option>
+        <option value="rugoso">Rough asphalt (−5%)</option>
+        <option value="gravel">Gravel (−12.5%)</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="calc-btn" id="btnCalc" type="button">CALCULATE PRESSURE</button>
+  <div class="error-msg" id="errMsg" role="alert"></div>
+
+  <div class="results" id="results" aria-live="polite">
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-wheel">FRONT</div>
+        <div class="res-psi" id="resF">—<small> PSI</small></div>
+        <div class="res-band" id="bandF">—</div>
+        <div class="res-bar" id="barF">—</div>
+      </div>
+      <div class="res-card">
+        <div class="res-wheel">REAR</div>
+        <div class="res-psi" id="resR">—<small> PSI</small></div>
+        <div class="res-band" id="bandR">—</div>
+        <div class="res-bar" id="barR">—</div>
+      </div>
+    </div>
+    <div id="warns"></div>
+    <p class="note-method" id="noteW"></p>
+  </div>
+</div>
+
+<!-- ============ AIO-ANSWERS: data that exists in no other source ============ -->
+<section class="prose panel-box" id="answers">
+  <h2>Direct answers — data you won't find in any other source</h2>
+  <h3>How wide is a 28 mm tire really, once mounted?</h3>
+  <p>A nominal 28 mm road tire measures on average <b>28.4 mm on an 18 mm internal rim</b> and ~29.5 mm on a 21 mm rim. We measured it over BicycleRollingResistance's census of 159 road tires: modern nominals already assume a wide rim (ETRTO 2020).</p>
+  <h3>Why does a 40 mm gravel tire measure less than 40?</h3>
+  <p>Because gravel manufacturers spec the nominal on 21–25 mm rims. In BRR's census of 162 gravel tires (17.8 mm rim), a nominal 40 mm measures on average <b>38 mm — 2 mm less than what's printed on the sidewall</b>. No calculator on the market corrects this with data.</p>
+  <h3>Which variable dominates the pressure calculation?</h3>
+  <p>Real tire width: it explains between <b>51% and 68% of the output variance</b> on the road (Sobol analysis, 81,920 evaluations). Rider weight, against intuition, explains less than 9%. That's why this calculator asks for width to 1 mm and is relaxed about weight.</p>
+  <h3>How much error does your gauge add on gravel?</h3>
+  <p>At gravel pressures (30–40 PSI), a typical gauge (±5%) is the system's largest error source: up to <b>73% of total variance</b> per our sensitivity analysis. At those pressures your gauge matters more than the model — use a low-range digital one.</p>
+  <h3>What is the maximum pressure on a hookless rim?</h3>
+  <p><b>72.5 PSI (5 bar) per ETRTO, no exceptions — and 60 PSI if the rim is ≥30 mm internal.</b> Exceeding it risks sudden blow-off. BikeLab PSI Calculator applies these caps automatically and shows the calculated value next to the capped one.</p>
+</section>
+
+<!-- ============ WHY WIDTH ============ -->
+<section class="prose panel-box">
+  <h2>Why do we ask for width down to 1 mm?</h2>
+  <p>Because we ran a global sensitivity analysis (Sobol indices, 81,920 evaluations per configuration) on the model's variables, and the result was unambiguous: <b>on the road, real tire width explains between 51% and 68% of the output variance</b> — more than weight, load distribution and everything else combined. Pressure depends on width squared (the L/W² term): a 1.5 mm error in width moves the result more than a 2 kg error in your weight.</p>
+  <p>That's why we're relaxed about weight (±2 kg barely matters: under 9% of the variance) but serious about width. And that's why the optional <b>caliper-measured width</b> field exists: if you measure your mounted, inflated tire, that input's uncertainty drops from ±1.5 mm to ±0.5 mm and your result's band shrinks to a third. On gravel the dominant factor is something else entirely: your pressure gauge (up to 73% of the variance at low pressures) — see the warning in the results.</p>
+  <p>No calculator on the market explains why it asks what it asks. We publish the analysis.</p>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="prose panel-box" id="methodology">
+  <h2>Methodology — the full model, no black box</h2>
+
+  <h3>1. Core: Frank Berto and the 15% tire drop criterion</h3>
+  <p>The tire should deflect 15% of its section height under load. Frank Berto (technical editor of <i>Bicycling Magazine</i>) measured 50 tires at 7 pressures (40–160 PSI) and 8 loads (20–220 lbs per wheel) on 700C wheels. Our core formula is an empirical fit to his chart, accurate to ±2 PSI within its domain:</p>
+  <div class="formula">P = 600·L / W² + 0.75·W − 25 &nbsp;&nbsp;[L: per-wheel load in lbs · W: real width in mm]</div>
+  <p>Per-wheel load comes from total weight and geometry: racing 40/60 (front/rear), endurance 45/55, city/touring 35/65.</p>
+
+  <h3>2. Front coupling (k = 0.93)</h3>
+  <p>The rear is computed with pure Berto on its static load. The front is <b>not</b>: under braking, load transfers massively to the front wheel, and a soft front degrades handling. So the front is coupled to the rear: P<sub>front</sub> = 0.93 · P<sub>rear</sub>, with k calibrated by sweep against SILCA and Rene Herse across 6 validation cases. It is the same pattern both references apply without declaring it.</p>
+
+  <h3>3. Real width: calibrated with 321 BicycleRollingResistance measurements</h3>
+  <p>The width printed on the sidewall is not the real mounted width. We captured BicycleRollingResistance's complete nominal-vs-measured census — <b>159 road tires (18 mm internal rim) and 162 gravel tires (17.8 mm)</b> — and fit by regression:</p>
+  <div class="formula">W = nominal + δ(category, nominal) + 0.4·(internal rim − 18)</div>
+  <p>The 0.4 mm-per-rim-mm slope was verified with the only tire BRR measured on two different rims (+11% deviation, within criterion). Census finding: modern gravel tires measure on average <b>2 mm less</b> than nominal on a narrow rim — manufacturers today spec on wide rims (ETRTO 2020), not on the 13 mm rims of the Berto era. The classic rule corrected twice what the manufacturer had already corrected; ours is anchored to 2014–2026 data.</p>
+
+  <h3>4. Mounting and surface corrections</h3>
+  <ul>
+    <li><b>Inner tube:</b> +5% over the tubeless result (butyl tube hysteresis reduces effective deflection; value adjusted in cross-validation).</li>
+    <li><b>Casing</b> (Jan Heine's finding with Berto's original data): supple −5%, standard 0, stiff/touring +5%.</li>
+    <li><b>Surface:</b> smooth asphalt 0, rough asphalt −5%, gravel −12.5%.</li>
+  </ul>
+
+  <h3>5. Safety caps — applied last, no exceptions</h3>
+  <ul>
+    <li>Hookless rim: maximum <b>72.5 PSI (5 bar)</b> — ETRTO standard.</li>
+    <li>Hookless rim with internal width ≥30 mm: maximum <b>60 PSI</b>.</li>
+    <li>Safety floor: below 25 PSI we warn about pinch flats and burping.</li>
+    <li><b>Never exceed the tire or rim manufacturer maximum — whichever is lower.</b></li>
+  </ul>
+  <p>If a cap limits your result, we show both values: calculated and applied, with an explanation.</p>
+
+  <h3>6. The uncertainty band — what it is and what it is not</h3>
+  <p>The band (±PSI) is the 90% confidence interval propagated via Latin Hypercube Sampling (10,000 samples per configuration) over input uncertainty: weight ±2 kg, real width ±1.5 mm (±0.5 mm if caliper-measured), load distribution ±3 points. <b>It does not include your gauge error</b> (typically ±5%): that is your instrument's uncertainty, not the model's, and mixing them would make honest output look imprecise about something it doesn't control. On gravel, at low pressures, the gauge is the largest real error source — use a digital one.</p>
+
+  <h3>7. Cross-validation — the numbers, not the promise</h3>
+  <p>We ran 6 cases (70–100 kg, 25–45 mm, road and gravel) through the SILCA and Rene Herse calculators live, and compared against the average of both. Result: <b>9 of 12 wheels within ±10%</b> (road criterion) or gravel's widened tolerance (the two references diverge from each other by up to 30% on gravel). The 3 remaining deviations have identified, documented causes (references rounding to integer widths, and the weight scaling described below).</p>
+  <table class="val">
+    <tr><th>Case</th><th>Config</th><th>BLS F/R</th><th>SILCA F/R</th><th>R.Herse soft–firm</th></tr>
+    <tr><td>1</td><td>83 kg · 28 mm · road · tubeless · 21 rim</td><td>68 / 73</td><td>70 / 71.5</td><td>54–67</td></tr>
+    <tr><td>2</td><td>95 kg · 28 mm · road · tubeless · 21 rim</td><td>78 / 84</td><td>71.5 / 73.5</td><td>61–76</td></tr>
+    <tr><td>3</td><td>75 kg · 32 mm · road · tube · 19 rim</td><td>58 / 62</td><td>63.5 / 65</td><td>46–57</td></tr>
+    <tr><td>4</td><td>85 kg · 40 mm · gravel · tubeless · 24 rim</td><td>35 / 38</td><td>34.5 / 36</td><td>34–42</td></tr>
+    <tr><td>5</td><td>100 kg · 45 mm · gravel · tubeless · 25 rim</td><td>36 / 39</td><td>29.5 / 30.5</td><td>35–43</td></tr>
+    <tr><td>6</td><td>70 kg · 25 mm · road · tubeless · 21 rim</td><td>65 / 70</td><td>80.5 / 83</td><td>55–72</td></tr>
+  </table>
+
+  <h3>8. Riders over 90 kg: a deliberate divergence</h3>
+  <p>For riders over 90 kg this calculator recommends firmer pressures than SILCA. It is not a bug: the constant-deflection criterion (15% drop) requires pressure to scale linearly with load — a heavier rider deflects the tire more at the same pressure. Calculators that optimize impedance saturate with weight; those that optimize deflection do not. We chose deflection because it is the measurable, reproducible criterion. And we are inside Berto's empirical domain: he measured up to 220 lbs per wheel. In practice, the hookless cap (72.5 PSI) compresses this divergence on most modern wheels.</p>
+
+  <h3>9. Why not MTB (yet)</h3>
+  <p>Berto explicitly states the 15% criterion is not valid for MTB: proportionally narrower rims, knobs that distort the measurement, and an off-road objective (traction, absorption) different from rolling. Rather than invent numbers, we say so: the MTB module will ship separately, based on manufacturer heuristics (Maxxis, Schwalbe, Continental). The selector is already in the interface, disabled.</p>
+
+  <h3>10. Honest limits of the model</h3>
+  <p>Berto measured with 1990s technology on 700C wheels. The casing correction is a 3-level approximation of a continuum. The two market references diverge from each other by up to 30% on gravel — there is no true "optimal pressure" to calibrate against, only reasonable empirical philosophies. This calculator picks one (constant deflection), declares it, and publishes its uncertainty. Adjust ±2-3 PSI by feel: the model is the rigorous starting point, not dogma.</p>
+
+  <h3>Sources</h3>
+  <ul class="src-list">
+    <li>Berto, F. — <a href="https://www.sheldonbrown.com/brandt/tire-pressure.html" rel="noopener">"All About Tire Inflation"</a> (original 15% drop chart, 50 tires, 700C).</li>
+    <li>Heine, J. — Bicycle Quarterly / <a href="https://www.renehersecycles.com/the-science-behind-the-tire-pressure-calculator/" rel="noopener">Rene Herse: the science behind their calculator</a> (supple casings, re-analysis of Berto's data).</li>
+    <li><a href="https://www.bicyclerollingresistance.com" rel="noopener">BicycleRollingResistance</a> — Jarno Bierman. Nominal-vs-measured width census (321 tires, 2014–2026, 17.8/18 mm rims).</li>
+    <li>ETRTO — Standards Manual 2020+: pressure limits for hookless (straight-side) rims.</li>
+    <li><a href="https://silca.cc/pages/pro-tire-pressure-calculator" rel="noopener">SILCA Pro Tire Pressure Calculator</a> and <a href="https://www.renehersecycles.com/tire-pressure-calculator/" rel="noopener">Rene Herse Tire Pressure Calculator</a> — cross-validation references (2026-06-12).</li>
+    <li><a href="white-paper-psi-model.html"><b>Full technical white paper of the model</b></a> — formulation, BRR census regressions, Sobol and validation. DOI <a href="https://doi.org/10.5281/zenodo.20671797" rel="noopener">10.5281/zenodo.20671797</a> (Zenodo · OpenAIRE).</li>
+    <li><a href="tire-pressure-is-not-a-number-en.html">Field-guide version: "Pressure is not a number — it's a range"</a> — the explanation without equations.</li>
+  </ul>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="prose">
+  <h2 style="font-family:var(--head);color:var(--cyan-bright);letter-spacing:1px;margin-bottom:.8rem">Frequently asked questions</h2>
+  <details class="faq"><summary>Why does it recommend different pressures than SILCA or Rene Herse?</summary>
+    <p>Because they optimize different objectives. We apply constant deflection (Berto 15%), which scales linearly with load; SILCA optimizes impedance and saturates with weight; Rene Herse gives one value for both wheels. In cross-validation, 9 of 12 wheels landed within ±10% of the average of both — and every deviation has a documented physical cause in the methodology.</p></details>
+  <details class="faq"><summary>What does the ±PSI in the result mean?</summary>
+    <p>A 90% confidence interval via Latin Hypercube Sampling over your inputs' real uncertainty (weight ±2 kg, width ±1.5 mm, distribution ±3 points). It does not include your gauge error — that's your instrument's uncertainty. If you measure width with a caliper, the band shrinks to a third.</p></details>
+  <details class="faq"><summary>Why the 72.5 PSI cap on hookless?</summary>
+    <p>ETRTO limit, no exceptions (60 PSI if internal rim width is ≥30 mm). Exceeding it risks sudden blow-off. If your calculated value exceeds it, we show both and apply the cap. Never exceed the tire or rim manufacturer maximum — whichever is lower.</p></details>
+  <details class="faq"><summary>Why doesn't it cover MTB?</summary>
+    <p>Berto himself states the 15% drop doesn't hold for MTB (proportionally narrower rims, knobs distorting the measurement, traction rather than rolling as the objective). The MTB module will ship separately with manufacturer heuristics — rather than invent numbers, we say so.</p></details>
+</section>
+
+<footer>
+  <p>© 2026 <a href="../index-en.html">BikeLab Studio</a> — Carlos Ravello · Trujillo, Peru · Model and validation documented — data and scripts available on request</p>
+</footer>
+
+</div>
+
+<script>
+/* BLS-TIRE-2026 — Berto engine + corrections. Constants validated 2026-06-12.
+   Traceability: berto_model.py / fase1_reporte.md / brr_validacion.md (working repo). */
+(function(){
+"use strict";
+var KG2LB=2.20462, K_FRONT=0.93, TUBE=1.05;
+var REAR_SHARE={racing:.60,endurance:.55,urbana:.65};
+var CASING={estandar:0,supple:-.05,rigida:.05};
+var SURFACE={liso:0,rugoso:-.05,gravel:-.125};
+var DELTA={ruta:[7.9530,-0.2727],gravel:[1.5043,-0.0827]}; // BRR census n=321
+var RIM_REF=18.0, SLOPE=0.4;
+var SIG_KG=2.0, SIG_W_EST=1.5, SIG_W_MEAS=0.5, D_SHARE=0.03, N_MC=4000;
+
+var $=function(id){return document.getElementById(id)};
+var disc="ruta", unit="kg";
+
+var NOMS={ruta:[23,24,25,26,27,28,29,30,31,32],gravel:[32,33,34,35,36,37,38,40,42,44,45,47,48,50]};
+var RIMS=[15,16,17,18,19,20,21,22,23,24,25,26,28,30,32];
+
+function fillSelects(){
+  var n=$("inNominal"); n.innerHTML="";
+  NOMS[disc].forEach(function(w){var o=document.createElement("option");o.value=w;o.textContent=w+" mm";n.appendChild(o)});
+  n.value=disc==="ruta"?28:40;
+  var r=$("inRim");
+  if(!r.options.length){RIMS.forEach(function(w){var o=document.createElement("option");o.value=w;o.textContent=w+" mm";r.appendChild(o)})}
+  r.value=disc==="ruta"?21:24;
+  $("inSurface").value=disc==="ruta"?"liso":"gravel";
+}
+
+function deltaNom(nom){var c=nom<=30?DELTA.ruta:DELTA.gravel;return c[0]+c[1]*nom}
+function realWidth(nom,rim){return nom+deltaNom(nom)+SLOPE*(rim-RIM_REF)}
+function berto(loadLb,w){return 600*loadLb/(w*w)+0.75*w-25}
+
+function pRear(kg,w,share,tube,casing,surface){
+  var p=berto(kg*KG2LB*share,w);
+  if(tube)p*=TUBE;
+  p*=1+CASING[casing]; p*=1+SURFACE[surface];
+  return p;
+}
+/* Standard normal — Box-Muller */
+function randn(){var u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+
+function calc(){
+  var err=$("errMsg"); err.textContent="";
+  var wRaw=parseFloat($("inWeight").value);
+  if(!wRaw||wRaw<=0){err.textContent="Enter the total system weight (rider + bike + gear).";$("results").classList.remove("show");return}
+  var kg=unit==="kg"?wRaw:wRaw/KG2LB;
+  if(kg<35||kg>180){err.textContent="Weight outside reasonable range (35–180 kg system).";$("results").classList.remove("show");return}
+  var nom=parseFloat($("inNominal").value), rim=parseFloat($("inRim").value);
+  var meas=parseFloat($("inMeasured").value)||null;
+  if(meas&&(meas<nom-6||meas>nom+8)){err.textContent="Measured width ("+meas+" mm) is inconsistent with nominal ("+nom+" mm). Check the measurement.";$("results").classList.remove("show");return}
+  var bike=$("inBike").value, tube=$("inMount").value==="tube";
+  var casing=$("inCasing").value, surface=$("inSurface").value;
+  var hookless=$("inHook").value==="hookless";
+  var share=REAR_SHARE[bike];
+  var w0=meas||realWidth(nom,rim);
+  var sigW=meas?SIG_W_MEAS:SIG_W_EST;
+
+  /* central point */
+  var r0=pRear(kg,w0,share,tube,casing,surface), f0=K_FRONT*r0;
+
+  /* Monte Carlo (propagation; 90% band — no gauge error, see methodology) */
+  var rs=new Array(N_MC);
+  for(var i=0;i<N_MC;i++){
+    var kgi=kg+SIG_KG*randn();
+    var wi=Math.max(18,w0+sigW*randn());
+    var si=share+(Math.random()*2-1)*D_SHARE;
+    rs[i]=pRear(kgi,wi,si,tube,casing,surface);
+  }
+  rs.sort(function(a,b){return a-b});
+  var p5=rs[Math.floor(.05*N_MC)], p95=rs[Math.floor(.95*N_MC)];
+  var bandR=(p95-p5)/2, bandF=K_FRONT*bandR;
+
+  /* caps */
+  var cap=hookless?(rim>=30?60:72.5):null;
+  var fShow=f0,rShow=r0,fCapped=false,rCapped=false;
+  if(cap!==null){
+    if(f0>cap){fShow=cap;fCapped=true}
+    if(r0>cap){rShow=cap;rCapped=true}
+  }
+
+  function fmt(x){return (Math.round(x*2)/2).toFixed(1).replace(/\.0$/,"")}
+  function bar(x){return (x*0.0689476).toFixed(2)}
+  $("resF").innerHTML=fmt(fShow)+"<small> PSI</small>";
+  $("resR").innerHTML=fmt(rShow)+"<small> PSI</small>";
+  $("bandF").textContent="±"+fmt(bandF)+" PSI · 90%: ["+fmt(K_FRONT*p5)+" – "+fmt(Math.min(K_FRONT*p95,cap||1e9))+"]";
+  $("bandR").textContent="±"+fmt(bandR)+" PSI · 90%: ["+fmt(p5)+" – "+fmt(Math.min(p95,cap||1e9))+"]";
+  $("barF").textContent=bar(fShow)+" bar";
+  $("barR").textContent=bar(rShow)+" bar";
+
+  var warns=[];
+  if(fCapped||rCapped){
+    warns.push('<div class="warn-box cap"><b>ETRTO safety cap applied ('+cap+' PSI, hookless rim'+(rim>=30?' ≥30 mm internal':'')+').</b> Model-calculated value: front '+fmt(f0)+' / rear '+fmt(r0)+' PSI. The cap exists because exceeding it on hookless risks sudden blow-off — the capped value IS your pressure.</div>');
+  }
+  if(Math.min(fShow,rShow)<25){
+    warns.push('<div class="warn-box red"><b>Pressure below 25 PSI:</b> on road/gravel there is pinch-flat and burping risk in corners. Consider a wider tire for your weight, or move up to the band\'s lower bound.</div>');
+  }
+  warns.push('<div class="warn-box"><b>Never exceed the tire or rim manufacturer maximum — whichever is lower.</b> This result is a model optimum, not a substitute for the limits printed on your components.</div>');
+  if(surface==="gravel"){
+    warns.push('<div class="warn-box"><b>Gauge warning:</b> at these low pressures, your gauge is the largest error source (up to 73% of the variance per our Sobol analysis). Use a low-range digital gauge.</div>');
+  }
+  $("warns").innerHTML=warns.join("");
+  $("noteW").textContent="Real width used: "+w0.toFixed(1)+" mm ("+(meas?"caliper-measured (σ ±0.5 mm)":"estimated from BRR census: nominal "+nom+" + δ("+deltaNom(nom).toFixed(1)+") + 0.4×(rim "+rim+" − 18) (σ ±1.5 mm)")+") · Rear load: "+(share*100).toFixed(0)+"% · Band: LHS/MC "+N_MC+" samples, 5th–95th percentiles, no instrument error.";
+  $("results").classList.add("show");
+}
+
+/* wiring */
+$("tabRuta").addEventListener("click",function(){disc="ruta";this.classList.add("on");$("tabGravel").classList.remove("on");fillSelects()});
+$("tabGravel").addEventListener("click",function(){disc="gravel";this.classList.add("on");$("tabRuta").classList.remove("on");fillSelects()});
+$("uKg").addEventListener("click",function(){unit="kg";this.classList.add("on");$("uLb").classList.remove("on")});
+$("uLb").addEventListener("click",function(){unit="lb";this.classList.add("on");$("uKg").classList.remove("on")});
+$("btnCalc").addEventListener("click",calc);
+document.querySelectorAll(".field-input,.field-select").forEach(function(el){
+  el.addEventListener("keydown",function(e){if(e.key==="Enter")calc()});
+});
+fillSelects();
+})();
+</script>
+</body>
+</html>

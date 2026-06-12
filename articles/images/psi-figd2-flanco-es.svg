@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>El flanco vs la realidad — BikeLab Studio</title>
+  <desc>Comparación del ancho nominal del flanco y el ancho medido real para tres combinaciones de llanta y aro según el censo de 321 llantas. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs></defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="623" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 618 H42 M22 618 V598"></path><path d="M1178 618 H1158 M1178 618 V598"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="50" fill="#ECECEC" font-size="25" font-weight="bold">Lo que dice el flanco vs lo que mide la llanta</text>
+  <text x="62" y="78" fill="#9AA0A6" font-size="15">promedios del censo de 321 llantas · BicycleRollingResistance</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.D2 / EL FLANCO VS LA REALIDAD</text>
+  <line x1="40" y1="94" x2="1160" y2="94" stroke="#2A2A2A" stroke-width="1"></line>
+
+  
+  <g stroke="#1E1E24" stroke-width="1">
+    <line x1="150" y1="500" x2="1080" y2="500"></line><line x1="150" y1="391.2" x2="1080" y2="391.2"></line>
+    <line x1="150" y1="282.3" x2="1080" y2="282.3"></line><line x1="150" y1="173.6" x2="1080" y2="173.6"></line>
+  </g>
+  <g fill="#9AA0A6" font-size="12" text-anchor="end">
+    <text x="138" y="504">25</text><text x="138" y="395.2">30</text><text x="138" y="286.3">35</text><text x="138" y="177.6">40</text>
+  </g>
+  <line x1="150" y1="130" x2="150" y2="500" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <line x1="150" y1="500" x2="1080" y2="500" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <text x="74" y="315" fill="#ECECEC" font-size="13" text-anchor="middle" transform="rotate(-90 74 315)">ancho real (mm)</text>
+
+  
+  <rect x="640" y="112" width="16" height="12" fill="#6A6A6A"></rect><text x="662" y="122" fill="#9AA0A6" font-size="12">nominal (flanco)</text>
+  <rect x="800" y="112" width="16" height="12" fill="#E8FF3A"></rect><text x="822" y="122" fill="#9AA0A6" font-size="12">medido (real)</text>
+
+  
+  <rect x="250" y="434.7" width="62" height="65.3" fill="#6A6A6A"></rect>
+  <text x="281" y="426" fill="#9AA0A6" font-size="13" text-anchor="middle">28</text>
+  <rect x="322" y="426" width="62" height="74" fill="#E8FF3A"></rect>
+  <text x="353" y="417" fill="#E8FF3A" font-size="13" font-weight="bold" text-anchor="middle">28.4</text>
+  <text x="317" y="522" fill="#9AA0A6" font-size="12.5" text-anchor="middle">Ruta 28mm · aro 18</text>
+
+  
+  <rect x="554" y="434.7" width="62" height="65.3" fill="#6A6A6A"></rect>
+  <text x="585" y="426" fill="#9AA0A6" font-size="13" text-anchor="middle">28</text>
+  <rect x="626" y="402.1" width="62" height="97.9" fill="#E8FF3A"></rect>
+  <text x="657" y="393" fill="#E8FF3A" font-size="13" font-weight="bold" text-anchor="middle">29.5</text>
+  <text x="621" y="522" fill="#9AA0A6" font-size="12.5" text-anchor="middle">Ruta 28mm · aro 21</text>
+
+  
+  <rect x="858" y="173.6" width="62" height="326.4" fill="#6A6A6A"></rect>
+  <text x="889" y="165" fill="#9AA0A6" font-size="13" text-anchor="middle">40</text>
+  <rect x="930" y="217.1" width="62" height="282.9" fill="#F87171"></rect>
+  <text x="961" y="208" fill="#F87171" font-size="13" font-weight="bold" text-anchor="middle">38.0</text>
+  <text x="925" y="522" fill="#9AA0A6" font-size="12.5" text-anchor="middle">Gravel 40mm · aro 17.8</text>
+  
+  <path d="M1000 173.6 H1010 V217.1 H1000" fill="none" stroke="#F87171" stroke-width="1.4"></path>
+  <text x="1018" y="200" fill="#F87171" font-size="14" font-weight="bold">−2 mm</text>
+
+  <text x="150" y="560" fill="#6A6A6A" font-size="11.5">Los fabricantes de gravel especifican sobre aros de 21–25mm (ETRTO 2020). En tu aro, tu llanta es más angosta de lo que crees.</text>
+  <text x="1160" y="592" fill="#6A6A6A" font-size="11" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+</svg>

@@ -12,9 +12,38 @@
     <copyright>© 2026 BikeLab Studio. Open access content CC BY 4.0 where noted.</copyright>
     <managingEditor>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</managingEditor>
     <webMaster>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</webMaster>
-    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate>
     <ttl>10080</ttl>
     <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- == NEW · 12 JUNE 2026 · BIKELAB PSI CALCULATOR == -->
+    <item>
+      <title>BikeLab PSI Calculator: presión de llantas ruta/gravel con banda de incertidumbre (ES/EN)</title>
+      <link>https://www.bikelabstudio.com/articles/psi-calculator-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/psi-calculator-es.html</guid>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <category>Herramientas</category>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <description>La única calculadora de presión que publica su incertidumbre (±PSI, LHS 10.000 muestras). Modelo Berto 15% drop, ancho real calibrado con censo BRR de 321 llantas, acople frontal k=0.93 validado contra SILCA y Rene Herse, techos hookless ETRTO. Versión EN: psi-calculator-en.html</description>
+    </item>
+    <item>
+      <title>White Paper con DOI: Modelo de Deflección Constante para Presión de Llantas (ES/EN)</title>
+      <link>https://www.bikelabstudio.com/articles/white-paper-psi-model-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/white-paper-psi-model-es.html</guid>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <category>Investigación</category>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Formulación, calibración y validación del BikeLab PSI Calculator: censo BRR n=321, LHS, índices de Sobol (el ancho domina en ruta, el manómetro en gravel), validación cruzada 9/12. DOI 10.5281/zenodo.20671797 (Zenodo · OpenAIRE). PDF descargable en ES y EN.</description>
+    </item>
+    <item>
+      <title>La presión de tus llantas no es un número — es un rango</title>
+      <link>https://www.bikelabstudio.com/articles/presion-llantas-no-es-un-numero-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/presion-llantas-no-es-un-numero-es.html</guid>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <category>Divulgación</category>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Tres calculadoras serias dan tres presiones distintas para la misma bici. Qué variable domina de verdad (no es tu peso: es el ancho real, y en gravel tu manómetro) y cómo leer un resultado honesto. EN: tire-pressure-is-not-a-number-en.html</description>
+    </item>
 
     <!-- == NEW · 09 JUNE 2026 · BIKELAB-PEDIA · COMPATIBILITY ENCYCLOPEDIA == -->
     <item>
