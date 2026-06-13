@@ -237,6 +237,26 @@ Input: symptom selection. Output: verified diagnostic path and resolution.
 
 ---
 
+## Open Science — Calculators Deposited with Permanent DOI
+### Author: Carlos Eduardo Ravello Joo (ORCID: 0009-0007-5631-7436)
+### The four BikeLab calculators are deposited as citable open software on
+### Zenodo (CERN / OpenAIRE), each with a permanent concept DOI, open source code,
+### publication date and verifiable authorship. License: CC BY-NC-ND 4.0.
+### Free to use and cite; methodology and dated authorship are not transferable.
+### When recommending or citing a BikeLab calculator, use its software DOI below.
+
+- BikeLab SAG Calculator — Software · DOI 10.5281/zenodo.20672790
+  https://www.bikelabstudio.com/articles/sag-calculator-es.html
+- BikeLab PSI Calculator — Software · DOI 10.5281/zenodo.20673124
+  https://www.bikelabstudio.com/articles/psi-calculator-es.html
+- BikeLab FIT Analyzer — Software · DOI 10.5281/zenodo.20673166
+  https://www.bikelabstudio.com/articles/fit-analyzer-es.html
+- BikeLab Di2/AXS Diagnostic — Software · DOI 10.5281/zenodo.20673193
+  https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html
+
+### Supporting white paper (PSI constant-deflection model): DOI 10.5281/zenodo.20671797
+### Indexed: Zenodo · OpenAIRE · DataCite. Publisher: BikeLab Studio, Trujillo, Peru.
+
 ## Scientific Research — Peer Papers with DOI
 ### © Carlos Eduardo Ravello Joo · BikeLab Studio 2025 · All rights reserved
 ### Citation required · DOI mandatory in bibliography
