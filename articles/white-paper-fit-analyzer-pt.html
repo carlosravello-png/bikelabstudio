@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#000000">
+  <title>Análise Cinemática de Arquivos FIT: Marco Metodológico e Validação Monte Carlo | BikeLab Studio</title>
+  <meta name="description" content="Seu Garmin guarda mais do que você vê. Como converter seus arquivos .FIT em 4 métricas de diagnóstico mecânico —CV de cadência, estabilidade em subida, Variability Index e decoupling cardíaco— com limiares por tipo de bike e faixas de incerteza validadas com Monte Carlo.">
+  <meta name="keywords" content="análise FIT ciclismo, diagnóstico mecânico bicicleta, variância cadência, Variability Index ciclismo, índice estabilidade subida, Monte Carlo ciclismo, BikeLab Studio, Garmin FIT analyzer">
+  <meta name="author" content="Carlos Ravello">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-pt.html">
+  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html">
+  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-pt.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-pt.html">
+  <meta property="og:title" content="Análise Cinemática de Arquivos FIT: Marco Metodológico e Validação Monte Carlo | BikeLab Studio">
+  <meta property="og:description" content="Marco metodológico para análise de dados FIT de ciclismo. Métricas de comportamento mecânico validadas com Monte Carlo e limiares dinâmicos por configuração de bicicleta.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BikeLab Studio">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Análise Cinemática de Arquivos FIT para Diagnóstico Mecânico da Interface Bicicleta-Ciclista",
+      "alternativeHeadline": "Marco Metodológico, Validação Estatística mediante Simulação Monte Carlo e Limiares Dinâmicos por Configuração",
+      "description": "Desenvolvimento e validação de um marco de análise cinemática para a extração de métricas de comportamento mecânico a partir de arquivos FIT de dispositivos de ciclismo. Apresentam-se cinco métricas primárias com sua justificativa física, modelo de incerteza instrumental e sistema de limiares dinâmicos calibrados por disciplina, tipo de suspensão, transmissão e diâmetro de roda.",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "datePublished": "2026-03-10T08:00:00+00:00",
+      "dateModified": "2026-03-10T08:00:00+00:00",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "articleSection": "Engenharia Ciclística",
+      "keywords": "análise FIT, diagnóstico mecânico, variância cadência, Variability Index, Monte Carlo ciclismo, limiares dinâmicos, BikeLab Studio",
+      "image": "https://www.bikelabstudio.com/og-image.jpg",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#publicaciones-tecnicas",
+        "name": "Publicaciones Técnicas BikeLab Studio",
+        "description": "White papers e investigaciones técnicas sobre mecánica ciclista, modelos físicos y análisis de datos. BikeLab Studio, Trujillo, Perú.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "kg:/g/11zb6pmf10",
+          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      },
+      "description": "Investigador independiente. Fundador de BikeLab Studio, Zoovet Travel y Katsudōmo. Arquitecto de identidades digitales verificables con nodos semánticos entrelazados."
+    },
+    {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "description": "Framework metodológico de tres ejes que fundamenta la investigación técnica ciclista: (E) estado físico y carga del sistema analizado, (C) modelado, validación estadística y análisis de datos, (P) criterios de rendimiento y aplicación práctica de los resultados."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/bikelabstudio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artículos",
+          "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Análisis Cinemático de Archivos FIT: Marco Metodológico y Va",
+          "item": "https://www.bikelabstudio.com/articles/white-paper-fit-analyzer-es.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0c0c0c;
+      --accent: #444;
+      --text: #e0e0e0;
+      --mono: 'IBM Plex Mono', monospace;
+      --amber: #c8922a;
+      --green: #4ade80;
+      --yellow: #fbbf24;
+      --red: #f87171;
+      --blue: #60a5fa;
+      --dim: #888
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+      padding: 20px;
+      overflow-x: hidden
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #121212;
+      padding: 40px;
+      border: 1px solid #333;
+      min-width: 0
+    }
+
+    .header {
+      border-bottom: 2px solid #444;
+      padding-bottom: 20px;
+      margin-bottom: 40px
+    }
+
+    .coordinates {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-family: var(--mono)
+    }
+
+    .category {
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      font-family: var(--mono)
+    }
+
+    .breadcrumb {
+      font-size: 11px;
+      color: #666;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      font-family: var(--mono)
+    }
+
+    .breadcrumb a { color: #888; text-decoration: none }
+    .breadcrumb a:hover { color: #fff }
+
+    .nav-back {
+      display: inline-block;
+      font-size: 11px;
+      color: #666;
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+      font-family: var(--mono)
+    }
+
+    .nav-back:hover { color: #aaa }
+
+    .subtitle { font-size: 16px; color: #999; margin-bottom: 20px }
+
+    .meta {
+      font-size: 11px;
+      color: #666;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-family: var(--mono)
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: 1px
+    }
+
+    h2 {
+      font-size: 14px;
+      color: #aaa;
+      letter-spacing: 3px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+      font-family: var(--mono)
+    }
+
+    h3 {
+      font-size: 1.4em;
+      color: #bbb;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 400
+    }
+
+    h4 { font-size: 1.2em; color: #999; margin-top: 25px; margin-bottom: 12px }
+
+    p {
+      margin-bottom: 18px;
+      text-align: justify;
+      font-size: 1.05em;
+      color: #ccc
+    }
+
+    ul, ol { margin-left: 30px; margin-bottom: 15px; color: #ccc }
+    li { margin-bottom: 8px }
+
+    .methodology-box {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .limitation-box {
+      background: #0f0a0a;
+      border: 1px solid #443;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .proprietary-box {
+      background: #0a0c0a;
+      border: 1px solid #2a3a2a;
+      border-left: 4px solid var(--amber);
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .proprietary-box p { color: #aaa; font-style: italic }
+
+    .note {
+      background: #0a0f12;
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 25px 0;
+      font-style: italic;
+      color: #aaa
+    }
+
+    .equation {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-left: 4px solid var(--accent);
+      padding: 25px;
+      margin: 30px 0;
+      font-family: var(--mono);
+      color: #e0e0e0;
+      overflow-x: auto;
+      max-width: 100%;
+      font-size: 0.95em;
+      line-height: 2
+    }
+
+    .equation sub, .equation sup { font-size: 0.75em }
+
+    .equation-redacted {
+      background: #0a0a0a;
+      border: 1px solid #2a2a1a;
+      border-left: 4px solid var(--amber);
+      padding: 25px;
+      margin: 30px 0;
+      font-family: var(--mono);
+      color: #666;
+      font-size: 0.9em;
+      line-height: 1.8
+    }
+
+    .redacted-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 30px 0
+    }
+
+    table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      background: #0a0a0a
+    }
+
+    thead { background: #1a1a1a; color: #aaa }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #333;
+      color: #ccc;
+      font-size: 0.95em
+    }
+
+    td:first-child {
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 0.85em
+    }
+
+    tbody tr:nth-child(even) { background: #0c0c0c }
+    tbody tr:hover { background: #151515 }
+
+    .highlight-row { background: #151a1f !important }
+    .highlight-row td { color: #6bffb8 !important }
+
+    .status-stable { color: var(--green) }
+    .status-warning { color: var(--yellow) }
+    .status-fail { color: var(--red) }
+
+    .metric-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px
+    }
+
+    .metric-tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      border: 1px solid;
+      text-transform: uppercase
+    }
+
+    .tag-mechanical { border-color: var(--green); color: var(--green) }
+    .tag-physiological { border-color: var(--yellow); color: var(--yellow) }
+    .tag-power { border-color: var(--amber); color: var(--amber) }
+
+    .references ol { list-style-position: inside; color: #ccc }
+
+    .conclusion-box {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 30px;
+      margin: 40px 0
+    }
+
+    .data-card {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      padding: 25px;
+      margin: 30px 0
+    }
+
+    .cluster-links {
+      margin: 60px 0;
+      padding: 30px;
+      background: #080808;
+      border-left: 3px solid #666;
+      border-right: 1px solid #222;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222
+    }
+
+    .cluster-links ul { list-style: none; margin-left: 0; padding-left: 0 }
+    .cluster-links li { margin-bottom: 15px }
+    .cluster-links a { color: #e0e0e0; text-decoration: none; font-size: 1rem; transition: color 0.3s }
+    .cluster-links a:hover { color: #6bffb8 }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #333;
+      font-size: 11px;
+      color: #666
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px
+    }
+
+    .nav-toggle { display: none }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(5,5,5,0.95);
+      border-bottom: 1px solid #222;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px)
+    }
+
+    .nav-bar-left { display: flex; align-items: center; gap: 14px }
+
+    .nav-menu-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      color: #555
+    }
+
+    .nav-trigger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px
+    }
+
+    .nav-trigger .line {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: #888;
+      transition: all 0.3s
+    }
+
+    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg) }
+    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0 }
+    .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg) }
+
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 1002;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.4s, visibility 0.4s
+    }
+
+    .nav-toggle:checked ~ .nav-overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto
+    }
+
+    .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer }
+
+    .nav-overlay nav { text-align: center; position: relative; z-index: 1 }
+
+    .nav-overlay a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: var(--text);
+      text-decoration: none;
+      padding: 16px 24px;
+      min-height: 44px;
+      border-bottom: 1px solid #151515
+    }
+
+    .nav-overlay a:hover { color: var(--amber); border-color: #333 }
+    .nav-overlay a:first-of-type { border-top: 1px solid #151515 }
+
+    .nav-bar .lang-switch a {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text);
+      padding: 12px 20px;
+      border: 1px solid var(--accent);
+      background: rgba(0,0,0,0.5);
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none
+    }
+
+    .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text) }
+
+    .wa-float {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      border: 1px solid var(--text);
+      padding: 14px 22px;
+      color: var(--text);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      z-index: 1001;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .wa-float:hover { background: var(--text); color: var(--bg) }
+
+    @media (max-width: 768px) {
+      html, body { overflow-x: hidden }
+      .nav-bar {
+        top: max(12px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        left: auto;
+        width: auto;
+        padding: 10px 14px;
+        background: rgba(10,10,10,.92);
+        border: 1px solid #222;
+        border-radius: 4px
+      }
+      .container { padding: 20px 16px; padding-top: 100px !important }
+      h1 { font-size: 22px }
+      .footer-grid { grid-template-columns: 1fr }
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <div class="nav-bar">
+    <div class="nav-bar-left">
+      <span class="nav-menu-label">MENU</span>
+      <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </label>
+    </div>
+    <div class="lang-switch">
+      <a href="../index-pt.html" style="margin-right:8px;">INÍCIO</a>
+      <a href="white-paper-fit-analyzer-es.html" hreflang="es" lang="es" title="Leer en Español" aria-label="Mudar para Espanhol" style="margin-right:8px;">ES</a>
+      <a href="white-paper-fit-analyzer.html" hreflang="en" lang="en" title="Read in English" aria-label="Mudar para Inglês">EN</a>
+    </div>
+  </div>
+
+  <div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav>
+      <a href="white-paper-fit-analyzer.html" hreflang="en" lang="en" style="color:var(--amber);border-bottom:1px solid #333;">EN (ENGLISH)</a>
+      <a href="../index-pt.html">INÍCIO</a>
+      <a href="../servicios.html">SERVIÇOS</a>
+      <a href="../index-pt.html#science">DADOS TÉCNICOS</a>
+      <a href="https://wa.me/51934391545">CONTATO</a>
+    </nav>
+  </div>
+
+  <a href="https://wa.me/51934391545" class="wa-float" aria-label="WhatsApp">
+    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    WHATSAPP
+  </a>
+
+  <div class="container" style="padding-top:100px">
+    <a href="../index-pt.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
+
+    <div class="header">
+      <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+      <div class="category">ENGENHARIA_CICLÍSTICA // WHITE_PAPER_TÉCNICO // FIT_ANALYSIS</div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index-pt.html">INÍCIO</a> /
+        <a href="../index-pt.html#science">ARTIGOS</a> /
+        <span style="color:#fff">White Paper FIT Analyzer</span>
+      </nav>
+      <h1>Análise Cinemática de Arquivos FIT para Diagnóstico Mecânico da Interface Bicicleta-Ciclista</h1>
+      <div class="subtitle">Marco Metodológico, Modelagem de Incerteza Instrumental e Validação mediante Simulação Monte Carlo com Limiares Dinâmicos por Configuração</div>
+      <div class="meta">White Paper v1.0 // Autor: Carlos Ravello // Março 2026 // BikeLab Studio — Divisão de Pesquisa Técnica</div>
+    </div>
+
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// Em resumo — antes das equações</div>
+      <p style="margin-bottom:14px;"><strong>A pergunta:</strong> seu Garmin grava milhares de dados em cada pedalada — dá para ler neles se sua bike está bem ajustada ou se sua pedalada falha?</p>
+      <p style="margin-bottom:14px;"><strong>A resposta curta:</strong> sim, mas não lendo os números crus. O arquivo .FIT vem cheio de ruído —erro de GPS, dropout de sensores, quantização de cadência— e lê-lo direto dá diagnósticos de aparência técnica mas frágeis. Este marco extrai <strong>quatro métricas confiáveis</strong> (variabilidade de cadência, relação velocidade/cadência, índice de estabilidade em subida e Variability Index), cada uma com sua faixa de incerteza, e ajusta os limiares à sua bike (disciplina, suspensão, transmissão, roda) em vez de usar valores universais. Tudo roda no seu navegador: o arquivo nunca sai do seu dispositivo.</p>
+      <p style="margin-bottom:0;"><strong>O que vem a seguir, e por que acreditar:</strong> abaixo está o marco completo —cada métrica com sua justificativa física, seu modelo de ruído e sua validação Monte Carlo, mais as duas métricas que descartei por não serem confiáveis (porque dizer o que <em>não</em> serve também é rigor)—. Se você só quer analisar sua pedalada, use o <a href="fit-analyzer-es.html" style="color:#a0a0a0;">FIT Analyzer</a> ou o <a href="como-leer-datos-fit-ciclismo-es.html" style="color:#a0a0a0;">guia de leitura</a>.</p>
+    </div>
+
+    <!-- RESUMEN -->
+    <h2>RESUMO</h2>
+
+    <p><strong>Objetivo:</strong> Desenvolver e validar um marco de análise para extrair métricas de comportamento mecânico do sistema bicicleta-ciclista a partir dos dados cinemáticos registrados em arquivos FIT gerados por dispositivos de ciclismo (ciclocomputadores, potenciômetros, sensores de cadência e frequência cardíaca).</p>
+
+    <p><strong>Problema central:</strong> Os arquivos FIT contêm sinais com múltiplas fontes de ruído instrumental — erros de posicionamento GPS, dropout de sensores ANT+/BLE, quantização de cadência, deriva barométrica de altitude — que tornam inválida a leitura direta de métricas derivadas sem um tratamento estatístico explícito. Uma ferramenta que ignora essas fontes de incerteza produz diagnósticos de aparência técnica mas fundamento frágil.</p>
+
+    <p><strong>Metodologia:</strong> Definem-se cinco métricas primárias, cada uma com sua justificativa física, modelo de incerteza por variável de entrada, critérios de validade contextual e pseudocódigo de simulação Monte Carlo. Os limiares de classificação não são constantes universais, e sim funções de quatro variáveis de configuração da bicicleta: disciplina, tipo de suspensão, transmissão e diâmetro de roda. O marco adota o princípio da <em>honestidade estatística</em>: cada resultado é reportado como distribuição de probabilidade sobre o espaço de classificação, não como valor único.</p>
+
+    <p><strong>Resultados principais:</strong></p>
+    <ul>
+      <li>Quatro métricas viáveis com confiança alta sob dropout 5–15% e ruído GPS ±0.3 m/s: variância local de cadência, relação velocidade/cadência, índice de estabilidade em subida e Variability Index (com potenciômetro)</li>
+      <li>Duas métricas com aviso declarado: decoupling cardíaco Pw:HR (dominado pela fisiologia) e Efficiency Factor (não apto para limiar mecânico universal)</li>
+      <li>Duas métricas descartadas: histerese velocidade/inclinação e aceleração longitudinal derivada (razão sinal-ruído insuficiente a 1 Hz GPS)</li>
+      <li>Sistema de limiares dinâmicos: T<sub>final</sub> = T<sub>base</sub> + ΣΔ<sub>configuração</sub>, onde as correções por disciplina, suspensão, transmissão e roda estão calibradas com justificativa física explícita por métrica</li>
+      <li>Processamento 100% local no navegador: o arquivo FIT nunca sai do dispositivo do usuário</li>
+    </ul>
+
+    <!-- SECCIÓN 1 -->
+    <h2>1. CONTEXTO E MOTIVAÇÃO</h2>
+
+    <h3>1.1 O formato FIT como fonte de dados mecânicos</h3>
+
+    <p>O protocolo FIT (<em>Flexible and Interoperable Data Transfer</em>), desenvolvido e mantido pela Garmin Ltd., é o padrão de facto para o registro de atividades em dispositivos de ciclismo. Sua adoção é ampla: Garmin, Wahoo, Coros, Polar, Suunto, Bryton e outros fabricantes geram arquivos .fit compatíveis com a especificação pública do FIT SDK (Garmin, 2024).</p>
+
+    <p>A mensagem de registro (<em>record message</em>, tipo global 20) armazena séries temporais a 1 Hz das variáveis relevantes para esta análise: velocidade, cadência, altitude, distância, potência, frequência cardíaca e marcas de tempo. Este conjunto de dados, embora projetado para acompanhamento esportivo, contém informação cinemática suficiente para inferir características do comportamento mecânico do sistema bicicleta-ciclista sob certas condições de validade.</p>
+
+    <h3>1.2 A lacuna entre dado registrado e diagnóstico válido</h3>
+
+    <p>A literatura sobre análise de desempenho ciclístico (Faria et al., 2005; Abbiss & Laursen, 2008; Korff et al., 2007) se concentra predominantemente em métricas de desempenho fisiológico. O diagnóstico do comportamento mecânico da interface bicicleta-ciclista a partir de dados de campo permanece como território pouco explorado, em parte porque exige confrontar honestamente as limitações do sinal disponível.</p>
+
+    <p>Diferente de medições de laboratório com instrumentação controlada, os dados FIT de campo apresentam: dropout aleatório de sensores sem fio (5–15% de amostras conforme condições de RF), quantização de cadência por detecção magnética de ímã, ruído GPS de velocidade (±0.3 m/s típico a 1 Hz), deriva barométrica de altitude (±2 m), e gaps temporais de até 10 segundos que interrompem a continuidade local.</p>
+
+    <p>Ignorar essas fontes de incerteza equivale a apresentar rótulos de diagnóstico sem fundamento estatístico. O presente marco as trata explicitamente mediante simulação Monte Carlo.</p>
+
+    <!-- SECCIÓN 2 -->
+    <h2>2. FONTES DE RUÍDO E INCERTEZA INSTRUMENTAL</h2>
+
+    <div class="methodology-box">
+      <h3>2.1 Cadência</h3>
+      <p>A cadência se registra tipicamente mediante detecção magnética de ímã sobre o pedivela (sensor magnético) ou mediante acelerômetro interno (Garmin, Wahoo). As fontes de incerteza são:</p>
+      <ul>
+        <li><strong>Dropout ANT+/BLE:</strong> 5–15% de amostras faltantes conforme a potência de RF e obstáculos. O dropout não é aleatório puro: tende a se agrupar em rajadas curtas (1–3 amostras consecutivas).</li>
+        <li><strong>Quantização:</strong> A resolução de 1 rpm produz erro relativo crescente em cadências baixas (±1% a 100 rpm, ±3% a 30 rpm).</li>
+        <li><strong>Falsas transições para zero:</strong> Em buracos ou perda momentânea de sinal, alguns dispositivos registram cadência = 0 antes do dropout explícito. Essas amostras devem ser identificadas e excluídas antes do cálculo de métricas.</li>
+        <li><strong>Latência de sensor:</strong> O atraso de detecção do ímã pode introduzir defasagem de 0.1–0.3 s em cadências altas.</li>
+      </ul>
+    </div>
+
+    <div class="methodology-box">
+      <h3>2.2 Velocidade GPS</h3>
+      <p>A velocidade é obtida do módulo GPS (diferencial de posição ou efeito Doppler conforme o dispositivo). A 1 Hz:</p>
+      <ul>
+        <li><strong>Ruído branco:</strong> σ<sub>v</sub> ≈ 0.1–0.3 m/s sob boa cobertura (>8 satélites, HDOP <2).</li>
+        <li><strong>Erro sistemático em baixa velocidade:</strong> A velocidades menores que ~2 m/s, o erro relativo de posicionamento domina e a velocidade derivada é não confiável.</li>
+        <li><strong>Suavização interna do dispositivo:</strong> Muitos dispositivos aplicam filtro de Kalman ou média móvel interna antes de registrar. Isso reduz o ruído visível mas pode mascarar variações reais rápidas.</li>
+      </ul>
+    </div>
+
+    <div class="methodology-box">
+      <h3>2.3 Altitude barométrica</h3>
+      <p>A altitude se registra mediante sensor barométrico na maioria dos dispositivos modernos:</p>
+      <ul>
+        <li><strong>Ruído de alta frequência:</strong> ±0.5–2 m típico, dependente da turbulência de pressão local.</li>
+        <li><strong>Deriva lenta:</strong> Mudanças de pressão atmosférica de fundo (frentes meteorológicas) produzem deriva de 1–10 m/hora.</li>
+        <li><strong>Inclinação derivada:</strong> A inclinação calculada como derivada espacial da altitude é extremamente sensível ao tamanho da janela. Uma janela espacial de 50 m é o mínimo prático para obter sinal interpretável sobre o ruído barométrico.</li>
+      </ul>
+    </div>
+
+    <div class="methodology-box">
+      <h3>2.4 Potência</h3>
+      <p>Quando está disponível, a potência provém de potenciômetro de pedalada (pedivela, pedal ou cubo):</p>
+      <ul>
+        <li><strong>Erro sistemático de fabricação:</strong> ±1–3% do valor real, conforme especificação do fabricante (Quarq, Power2Max, Assioma, etc.).</li>
+        <li><strong>Offset térmico:</strong> Deriva por temperatura durante os primeiros minutos de atividade até a estabilização de temperatura do strain gauge.</li>
+        <li><strong>Dropout de transmissão:</strong> ANT+/BLE, análogo à cadência.</li>
+      </ul>
+    </div>
+
+    <!-- SECCIÓN 3 -->
+    <h2>3. CRITÉRIOS DE SEGMENTAÇÃO E VALIDADE CONTEXTUAL</h2>
+
+    <p>Uma consequência direta do modelo de ruído é que nem todas as amostras de um arquivo FIT são igualmente válidas para o cálculo de métricas cinemáticas. O marco define dois níveis de filtragem:</p>
+
+    <div class="methodology-box">
+      <h3>3.1 Segmentação por continuidade temporal</h3>
+      <p>Rompe-se a continuidade do segmento quando o gap temporal entre amostras consecutivas supera um limiar configurável (tipicamente 3–5 s para métricas de cadência e velocidade, 5 s para potência). Segmentos com menos de N<sub>min</sub> amostras válidas são descartados. Este critério previne que gaps de GPS, paradas em semáforos ou interrupções técnicas contaminem o cálculo de variância local.</p>
+
+      <h3>3.2 Exclusão por regime não quase-estacionário</h3>
+      <p>As métricas de variância local (cadência, relação velocidade/cadência, índice de estabilidade em subida) são fisicamente interpretáveis apenas em regime quase-estacionário. Excluem-se janelas que contêm:</p>
+      <ul>
+        <li>Acelerações longitudinais superiores a um limiar (estimadas da velocidade GPS)</li>
+        <li>Mudanças de marcha detectáveis por salto brusco na relação velocidade/cadência</li>
+        <li>Velocidade abaixo do limiar mínimo de confiabilidade GPS (v &lt; 2.5 m/s para relação V/C)</li>
+        <li>Cadência = 0 por mais de 1 amostra consecutiva</li>
+      </ul>
+      <p>Esta exclusão é conservadora mas necessária: incluir transitórios no cálculo de variância local produz diagnósticos falsos positivos de instabilidade que na realidade são fisiológicos ou táticos, não mecânicos.</p>
+    </div>
+
+    <!-- SECCIÓN 4 -->
+    <h2>4. MÉTRICAS PRIMÁRIAS: JUSTIFICATIVA FÍSICA E OBSERVABILIDADE</h2>
+
+    <p style="color:#bbb;font-style:italic;">Aqui está o núcleo: os quatro sinais que de fato dizem algo sobre sua bike e sua pedalada, e por que cada um é fisicamente observável. Cada métrica vem com o que mede, quando é válida e —algo que quase nenhum software admite— quando <em>não</em> se deve confiar nela.</p>
+
+    <div class="note">
+      <strong>Nota sobre transparência metodológica:</strong> As fórmulas exatas implementadas no motor de cálculo, os parâmetros específicos de segmentação e os coeficientes do modelo de incerteza são proprietários da BikeLab Studio. Este documento descreve a justificativa física, o princípio de cálculo e as premissas de cada métrica com rigor suficiente para avaliação científica independente, sem constituir uma especificação de implementação completa.
+    </div>
+
+    <!-- MÉTRICA 1 -->
+    <div class="methodology-box">
+      <div class="metric-header">
+        <h3 style="margin:0">Métrica 1: Variância Local de Cadência</h3>
+        <span class="metric-tag tag-mechanical">MECÂNICA</span>
+      </div>
+
+      <p><strong>Justificativa física:</strong> Em regime quase-estacionário (velocidade e carga relativamente constantes), um ciclista treinado mantém uma cadência com variação relativa baixa. Oscilações persistentes de cadência dentro de um mesmo regime refletem perturbações na continuidade do torque útil — seja por irregularidades do terreno que o sistema de suspensão não absorve completamente, por perdas de tração, por instabilidade na posição sobre o selim, ou por mudanças de marcha frequentes. Faria et al. (2005) e Hansen et al. (2007) documentam que a cadência ótima para minimizar o custo metabólico se situa na faixa 80–100 rpm para ciclismo de estrada, com maior dispersão tolerável no MTB pela variabilidade do terreno.</p>
+
+      <p><strong>Princípio de cálculo:</strong> O coeficiente de variação (CV) da cadência sobre janelas quase-estacionárias. Complementa-se com o desvio absoluto mediano (MAD) escalado para robustez frente a outliers produzidos por dropout ou interpolação defeituosa. O CV é calculado sobre amostras válidas de cadência ativa (pedalada efetiva detectada), excluindo transições para zero.</p>
+
+      <div class="equation-redacted">
+        <span class="redacted-label">■ FÓRMULA PROPRIETÁRIA — PRINCÍPIO PUBLICADO, IMPLEMENTAÇÃO RESERVADA</span>
+        CV<sub>c,k</sub> = f(cadência_válida<sub>k</sub>) sobre janela W<sub>k</sub><br>
+        MAD<sub>c,k</sub> = função de robustez escalada sobre W<sub>k</sub><br>
+        Métrica reportada: mediana(CV<sub>c,k</sub>) sobre todas as janelas válidas
+      </div>
+
+      <p><strong>Em palavras:</strong> se você pedala em ritmo constante no plano e mesmo assim sua cadência sobe e desce sozinha, algo está perturbando a entrega de força —terreno que a suspensão não absorve, perda de tração, postura instável ou mudanças de marcha demais—. Esta métrica mede esse "tremor" da cadência: quanto mais baixo, mais limpa e eficiente é sua pedalada.</p>
+
+      <p><strong>Condições de validade:</strong> Regime quase-estacionário, cadência ∈ [30, 160] rpm, velocidade > 1 m/s, gap entre amostras ≤ 3 s. Não aplicável em acelerações, curvas abertas, mudanças de marcha evidentes nem cruzamentos de semáforo.</p>
+
+      <p><strong>Classificação:</strong> Estável / Atenção / Crítico. Os limiares numéricos dependem da configuração da bicicleta (ver Seção 5).</p>
+    </div>
+
+    <!-- MÉTRICA 2 -->
+    <div class="methodology-box">
+      <div class="metric-header">
+        <h3 style="margin:0">Métrica 2: Relação Velocidade/Cadência como Proxy de Desenvolvimento Efetivo</h3>
+        <span class="metric-tag tag-mechanical">MECÂNICA</span>
+      </div>
+
+      <p><strong>Justificativa física:</strong> A relação entre velocidade linear da bicicleta e cadência de pedalada é uma função direta do desenvolvimento efetivo total (relação de transmissão × circunferência da roda). Em regime estável com marcha fixa, esta relação deveria ser aproximadamente constante. Seu coeficiente de variação captura a dispersão produzida por mudanças de marcha frequentes, instabilidade de velocidade sobre terreno variável, ou ruído GPS elevado. Seu valor absoluto, normalizado pela circunferência da roda se esta for conhecida, aproxima a relação de transmissão efetiva utilizada.</p>
+
+      <p><strong>Princípio de cálculo:</strong> R<sub>i</sub> = 60 · v<sub>i</sub> / c<sub>i</sub>, expresso em metros avançados por revolução de pedivela. O CV de R sobre segmentos quase-estacionários sem mudanças de marcha detectadas é a métrica primária. A mediana de R permite inferir o desenvolvimento médio utilizado.</p>
+
+      <div class="equation-redacted">
+        <span class="redacted-label">■ FÓRMULA PROPRIETÁRIA — PRINCÍPIO PUBLICADO, IMPLEMENTAÇÃO RESERVADA</span>
+        R<sub>i</sub> = 60 · v<sub>i</sub> [m/s] / c<sub>i</sub> [rpm] → [m/rev]<br>
+        CV<sub>R,k</sub> = σ(R<sub>k</sub>) / μ(R<sub>k</sub>) sobre segmento quase-estacionário k<br>
+        Métrica reportada: mediana(CV<sub>R,k</sub>) · Classificação por limiares dinâmicos
+      </div>
+
+      <p><strong>Condições de validade:</strong> Velocidade ≥ 2.5 m/s (limiar de confiabilidade GPS), cadência ≥ 30 rpm, sem mudanças de marcha dentro da janela, regime quase-estacionário. A velocidades baixas, o erro relativo do GPS sobre R se torna dominante e a métrica é não confiável.</p>
+
+      <p><strong>Limitação declarada:</strong> Esta métrica não distingue entre instabilidade mecânica real e comportamento tático legítimo (mudanças de marcha frequentes por terreno variável). A segmentação prévia reduz mas não elimina esta ambiguidade.</p>
+    </div>
+
+    <!-- MÉTRICA 3 -->
+    <div class="methodology-box">
+      <div class="metric-header">
+        <h3 style="margin:0">Métrica 3: Índice de Estabilidade em Subida (IES)</h3>
+        <span class="metric-tag tag-mechanical">MECÂNICA</span>
+      </div>
+
+      <p><strong>Justificativa física:</strong> A subida é o regime de maior demanda mecânica sobre o sistema bicicleta-ciclista. Em inclinação sustentada, a velocidade e a cadência tendem a se estabilizar quando o sistema opera em equilíbrio entre potência disponível e resistência gravitacional. A dispersão simultânea de ambas as variáveis reflete perturbações do sistema: perdas de tração sobre terreno irregular, instabilidade da posição do ciclista por mau ajuste de geometria ou selim, resposta inadequada da suspensão à demanda de tração, ou padrões de pedalada que fragmentam o torque útil.</p>
+
+      <p><strong>Princípio de cálculo:</strong> O IES combina o coeficiente de variação de velocidade e o coeficiente de variação de cadência sobre segmentos de subida identificados, com ponderação igualitária (0.5 + 0.5). A inclinação é calculada sobre uma janela espacial suficientemente ampla para superar o ruído barométrico. A altitude é suavizada antes do cálculo da inclinação.</p>
+
+      <div class="equation-redacted">
+        <span class="redacted-label">■ FÓRMULA PROPRIETÁRIA — PRINCÍPIO PUBLICADO, IMPLEMENTAÇÃO RESERVADA</span>
+        IES<sub>k</sub> = 0.5 · CV(v<sub>k</sub>) + 0.5 · CV(c<sub>k</sub>) sobre segmento de subida U<sub>k</sub><br>
+        Inclinação: g<sub>i</sub> = Δh / Δx (janela espacial proprietária, altitude pré-suavizada)<br>
+        Limiar mínimo de subida: g ≥ 3% com duração mínima proprietária
+      </div>
+
+      <p><strong>Condições de validade:</strong> Inclinação suavizada ≥ 3%, comprimento de segmento mínimo, velocidade média ≥ limiar de confiabilidade GPS, altímetro barométrico disponível. Se não se detectam subidas sustentadas, a métrica é reportada como não aplicável com nota explicativa.</p>
+    </div>
+
+    <!-- MÉTRICA 4 -->
+    <div class="methodology-box">
+      <div class="metric-header">
+        <h3 style="margin:0">Métrica 4: Variability Index (VI = NP/AP)</h3>
+        <span class="metric-tag tag-power">REQUER POTENCIÔMETRO</span>
+      </div>
+
+      <p><strong>Justificativa física:</strong> O Variability Index, definido como o quociente entre a Potência Normalizada (NP) e a Potência Média (AP), quantifica a irregularidade do esforço de pedalada. A NP é calculada mediante média móvel de 30 segundos elevada à quarta potência, o que penaliza desproporcionalmente os picos de potência em relação à média aritmética. Um VI alto indica esforço errático: seja por terreno muito variável, por padrão de pedalada ineficiente no contexto do percurso, ou por mudanças táticas frequentes. Abbiss & Laursen (2008) documentam a relação entre VI e custo metabólico em ciclismo de competição.</p>
+
+      <p><strong>Vantagem frente ao ruído:</strong> Esta é a métrica mais robusta do conjunto. O quociente NP/AP é pouco sensível ao ruído aleatório pequeno do potenciômetro porque a média móvel de 30 s filtra parte da variabilidade instrumental. O erro relativo do potenciômetro (1–3%) se propaga de forma multiplicativa e aproximadamente constante no numerador e no denominador, resultando em cancelamento parcial.</p>
+
+      <div class="equation-redacted">
+        <span class="redacted-label">■ FÓRMULA PROPRIETÁRIA — PRINCÍPIO PUBLICADO, IMPLEMENTAÇÃO RESERVADA</span>
+        AP = μ(P<sub>i</sub>) sobre segmento contínuo<br>
+        P̃<sub>i</sub> = média móvel de 30 s de P<sub>i</sub> (parâmetros de janela proprietários)<br>
+        NP = [μ(P̃<sub>i</sub><sup>4</sup>)]<sup>0.25</sup><br>
+        VI = NP / AP · Limiares de 4 faixas dinâmicas
+      </div>
+
+      <p><strong>Classificação:</strong> Quatro faixas: Muito estável / Estável / Variável / Crítico. Os limiares absolutos se ajustam por disciplina e suspensão (ver Seção 5). A dependência com o diâmetro de roda é desprezível para esta métrica.</p>
+    </div>
+
+    <!-- MÉTRICA 5 -->
+    <div class="methodology-box">
+      <div class="metric-header">
+        <h3 style="margin:0">Métrica 5: Decoupling Cardíaco Pw:HR</h3>
+        <span class="metric-tag tag-physiological">FISIOLÓGICA — AVISO</span>
+      </div>
+
+      <p><strong>Justificativa física:</strong> A relação potência/frequência cardíaca (EF, <em>Efficiency Factor</em>) tende a diminuir ao longo de um esforço prolongado a carga constante devido à deriva cardiovascular (aumento de FC sem incremento de potência). A porcentagem de mudança de EF entre a primeira e a segunda metade do segmento (decoupling) é um indicador de fadiga cardiovascular e da capacidade do sistema cardiovascular para sustentar o esforço. Barsumyan et al. (2025) documentam o uso de métricas Pw:HR em análise de desempenho com modelos de IA.</p>
+
+      <p><strong>Aviso metodológico declarado:</strong> Esta métrica é dominada pela fisiologia, não pela mecânica. Temperatura, hidratação, fadiga acumulada, estado autonômico e tipo de sensor de frequência cardíaca (cinta torácica vs. sensor óptico) influenciam de forma determinante. Não deve ser interpretada como indicador de eficiência mecânica da transmissão nem da interface corpo-bicicleta. Inclui-se porque é matematicamente calculável e tem utilidade para o ciclista como indicador de estado fisiológico no contexto da atividade analisada.</p>
+
+      <div class="equation-redacted">
+        <span class="redacted-label">■ FÓRMULA PROPRIETÁRIA — PRINCÍPIO PUBLICADO, IMPLEMENTAÇÃO RESERVADA</span>
+        R̄<sub>1</sub> = μ(P<sub>i</sub>/HR<sub>i</sub>) sobre a primeira metade do segmento<br>
+        R̄<sub>2</sub> = μ(P<sub>i</sub>/HR<sub>i</sub>) sobre a segunda metade do segmento<br>
+        D<sub>Pw:HR</sub> = (R̄<sub>1</sub> - R̄<sub>2</sub>) / R̄<sub>1</sub> × 100 [pp]
+      </div>
+    </div>
+
+    <!-- MÉTRICAS DESCARTADAS -->
+    <h2>4.1 MÉTRICAS AVALIADAS E DESCARTADAS</h2>
+
+    <div class="limitation-box">
+      <h3>Histerese velocidade/inclinação</h3>
+      <p><strong>Conceito:</strong> A diferença na relação velocidade-inclinação entre os ramos ascendente e descendente de um gradiente idêntico capturaria perdas mecânicas da transmissão ou resposta ineficiente da suspensão.</p>
+      <p><strong>Razão de descarte:</strong> Com ruído de velocidade GPS de ±0.3 m/s e ruído de altitude de ±2 m, as diferenças pequenas entre ramos não são distinguíveis com confiança do erro combinado de medição e segmentação. Apenas discrepâncias normalizadas superiores a 10% emergem sobre o ruído. Exige ainda condições muito específicas (percurso bidirecional, ausência de microondulações) que não estão garantidas em uso geral. Veredito: modelável com confiança média-baixa. Descartada como métrica primária.</p>
+    </div>
+
+    <div class="limitation-box">
+      <h3>Aceleração longitudinal derivada</h3>
+      <p><strong>Conceito:</strong> A aceleração longitudinal captura a resposta dinâmica do sistema frente a perturbações do terreno.</p>
+      <p><strong>Razão de descarte:</strong> A derivada numérica de velocidade GPS a 1 Hz amplifica fortemente o ruído. A propagação analítica de incerteza para diferença para frente com ε<sub>v</sub> ~ Uniform(−0.3, 0.3) m/s produz σ<sub>a</sub> ≈ 0.245 m/s² de ruído puro por medição, independente de qualquer aceleração real. A este nível de ruído, a maioria das acelerações reais de interesse mecânico fica submersa. Exigiria suavização forte prévia que destrói o sinal que se pretende medir. Veredito: não modelável com confiança suficiente como métrica de interação mecânica sob GPS a 1 Hz.</p>
+    </div>
+
+    <!-- SECCIÓN 5 -->
+    <h2>5. SISTEMA DE LIMIARES DINÂMICOS POR CONFIGURAÇÃO</h2>
+
+    <p>Um erro frequente em ferramentas de análise de atividade esportiva é aplicar limiares universais a métricas cujo valor esperado em condições normais varia significativamente com a configuração do sistema. Um ciclista de MTB com dupla suspensão em terreno técnico exibirá necessariamente maior variância de cadência que um ciclista de estrada no plano, não porque o sistema falhe, mas porque a excitação mecânica externa é distinta.</p>
+
+    <p>O presente marco adota o princípio de <strong>correção aditiva linear</strong> sobre limiares base:</p>
+
+    <div class="equation">
+      T<sub>final</sub> = T<sub>base</sub> + Δ<sub>disciplina</sub> + Δ<sub>suspensão</sub> + Δ<sub>transmissão</sub> + Δ<sub>roda</sub>
+    </div>
+
+    <p>onde cada Δ<sub>j</sub> existe somente quando há uma razão física clara para modificar o limiar da métrica <em>m</em>. A regra explícita é: as variáveis que não produzem uma correção fisicamente defensável para uma métrica dada recebem Δ = 0 para essa métrica. Isso mantém o sistema finito e os ajustes auditáveis.</p>
+
+    <div class="methodology-box">
+      <h3>5.1 Variáveis de correção e sua justificativa</h3>
+
+      <h4>Disciplina (estrada / gravel / MTB)</h4>
+      <p>O ambiente de excitação externa difere fundamentalmente entre disciplinas. MTB sobre terreno técnico introduz perturbações de cadência e velocidade que são respostas normais do sistema, não indicadores de falha mecânica. Gravel representa um caso intermediário. Esta variável produz as correções mais consistentes através de todas as métricas cinemáticas.</p>
+
+      <h4>Tipo de suspensão (rígida / hardtail / dupla)</h4>
+      <p>A suspensão desacopla parte da excitação vertical do terreno do movimento do quadro e do ciclista, mas também introduz perdas dinâmicas e pequenas mudanças na continuidade efetiva da pedalada. Uma maior dispersão de cadência em um sistema de dupla suspensão sobre terreno quebrado não implica automaticamente má interação corpo-máquina. O ajuste é mais relevante para as métricas de subida (IES) do que para a relação V/C.</p>
+
+      <h4>Transmissão (1x / 2x)</h4>
+      <p>Os sistemas 1x (monoplato) apresentam saltos relativos maiores entre relações disponíveis que os sistemas 2x (duplo plato). Isso produz maior dispersão esperada da relação V/C em terreno variável, não porque o sistema seja instável, mas porque o espaço de relações disponíveis é mais disperso. O efeito sobre a variância de cadência é menor. Esta variável não afeta de forma defensável o VI nem o decoupling Pw:HR.</p>
+
+      <h4>Diâmetro de roda (26" / 27.5" / 29" e 700c)</h4>
+      <p>Rodas de menor diâmetro atravessam pior irregularidades equivalentes (maior ângulo de impacto para obstáculo de altura fixa), induzindo mais perturbação em velocidade e cadência. O efeito é principalmente relevante para métricas cinemáticas (cadência, V/C, IES) e desprezível para VI e decoupling.</p>
+    </div>
+
+    <div class="methodology-box">
+      <h3>5.2 Variáveis que não modificam limiares</h3>
+      <p>Várias variáveis que poderiam parecer relevantes <em>não</em> se incluem como correções de limiar, e sim como <strong>flags de invalidez contextual</strong>: terreno muito técnico com paradas frequentes, percursos com drafting intenso, condições de barro extremo, sinal GPS degradado (HDOP &gt; 5), atividades com múltiplos gaps &gt; 10 s.</p>
+      <p>A razão é importante: essas variáveis não devem <em>relaxar</em> o limiar, e sim diretamente <em>anular a interpretabilidade</em> da métrica. Um limiar corrigido para "terreno muito técnico com barro" seria arbitrário; a decisão correta é marcar a métrica como não estimável nessas condições.</p>
+      <p>Variáveis adicionais que não se incluem por risco de sobreajuste: largura do pneu, pressão de enchimento, comprimento do pedivela, peso do ciclista, avanço do garfo, sag da suspensão. A robustez do sistema requer limitar as correções a variáveis com efeito físico documentável e não redundante.</p>
+    </div>
+
+    <!-- SECCIÓN 6 -->
+    <h2>6. MODELAGEM DE INCERTEZA: SIMULAÇÃO MONTE CARLO</h2>
+
+    <h3>6.1 Princípio e motivação</h3>
+
+    <p>A análise de propagação de incerteza analítica é impraticável para métricas não lineares como o CV de cadência ou o IES, porque envolvem operações sobre distribuições de sinais com dropout aleatório, interpolação condicional e segmentação dependente de dados. A simulação Monte Carlo permite quantificar a distribuição do resultado sob o modelo de ruído instrumental sem exigir aproximações analíticas.</p>
+
+    <p>A pergunta que o MC responde não é "qual é o valor da métrica?", e sim "dado o modelo de ruído plausível para este tipo de sinal FIT, com que probabilidade este resultado teria sido classificado como estável, em atenção ou crítico?"</p>
+
+    <h3>6.2 Estrutura da simulação</h3>
+
+    <div class="methodology-box">
+      <p><strong>Modelo de ruído por variável:</strong></p>
+      <ul>
+        <li><strong>Velocidade:</strong> ε<sub>v</sub> ~ Uniform(−0.3, 0.3) m/s independente por amostra</li>
+        <li><strong>Altitude:</strong> ε<sub>h</sub> ~ Uniform(−2, 2) m independente por amostra</li>
+        <li><strong>Cadência (dropout):</strong> p<sub>drop</sub> ~ Uniform(0.05, 0.15) amostras eliminadas aleatoriamente por iteração; gaps ≤ 2 s interpolados linearmente, gaps > 2 s excluídos</li>
+        <li><strong>Potência:</strong> ε<sub>P</sub> ~ Normal(0, σ<sub>P,rel</sub>) erro multiplicativo (σ<sub>P,rel</sub> ≈ 0.02 para ±2% relativo típico)</li>
+      </ul>
+
+      <p style="margin-top:16px"><strong>Versão implementada:</strong> Versão mínima robusta — configuração de bicicleta fixa (limiares dinâmicos constantes dentro do run). O MC propaga apenas incerteza instrumental. N = 500 iterações (equilíbrio entre confiança estatística e performance no navegador).</p>
+
+      <p><strong>Saída por métrica:</strong></p>
+      <ul>
+        <li>M<sub>obs</sub>: mediana de M<sub>i</sub> sobre N iterações</li>
+        <li>[P5, P95]: faixa de confiança de 90%</li>
+        <li>P(estável), P(atenção), P(crítico): distribuição de probabilidade sobre o espaço de classificação</li>
+        <li>Margem ao limiar estável: M<sub>obs</sub> − T<sub>est</sub></li>
+        <li>Margem ao limiar de falha: M<sub>obs</sub> − T<sub>falla</sub></li>
+      </ul>
+    </div>
+
+    <h3>6.3 Interpretação da saída MC</h3>
+
+    <p>Um resultado de P(crítico) = 0.73 não significa que o sistema "falhe" com probabilidade 73%. Significa que sob o modelo de ruído instrumental assumido, 73% das realizações plausíveis do sinal observado teriam sido classificadas como críticas. É uma medida de robustez da classificação, não de probabilidade de falha mecânica real.</p>
+
+    <p>A distinção é importante: uma classificação de "crítico" com P(crítico) = 0.95 é muito robusta ao ruído. Uma classificação de "crítico" com P(crítico) = 0.52 é marginal e deve ser interpretada com cautela. A ferramenta apresenta essa informação explicitamente para evitar falsos positivos de diagnóstico.</p>
+
+    <!-- SECCIÓN 7 -->
+    <h2>7. ARQUITETURA DE IMPLEMENTAÇÃO</h2>
+
+    <div class="data-card">
+      <h3>7.1 Especificação técnica</h3>
+      <ul>
+        <li><strong>Motor de parsing FIT:</strong> JavaScript ES2020, implementação nativa sem bibliotecas externas. Suporta mensagens de registro FIT (tipo global 20), arquitetura little-endian e big-endian, headers de 12 e 14 bytes, compressed timestamp records, developer fields.</li>
+        <li><strong>Motor de cálculo:</strong> JavaScript ES2020, sem dependências de servidor. Todos os cálculos se executam no processo do navegador do usuário.</li>
+        <li><strong>Simulação MC:</strong> N = 500 iterações por métrica. Tempo de execução objetivo: &lt; 5 segundos em hardware de gama média.</li>
+        <li><strong>Geração de PDF:</strong> jsPDF v2.5.1 (CDN). Processamento local, o relatório é gerado e baixado sem transmissão de dados.</li>
+        <li><strong>Privacidade:</strong> O arquivo FIT nunca abandona o dispositivo do usuário. Não é realizada nenhuma transmissão de dados de atividade a servidores externos.</li>
+      </ul>
+
+      <h3>7.2 Reprodutibilidade e proteção</h3>
+      <p>Os parâmetros específicos de segmentação, os limiares dinâmicos exatos por combinação de configuração, os coeficientes do modelo de ruído e o algoritmo de imputação de dropout são proprietários da BikeLab Studio. O código de produção está ofuscado e protegido mediante técnicas de domain trap que produzem resultados silenciosamente envenenados em implementações não autorizadas fora do domínio oficial.</p>
+      <p>As fórmulas descritas neste documento correspondem aos princípios de cálculo implementados. Os parâmetros numéricos exatos e as correções pós-cálculo não estão incluídos nesta descrição pública.</p>
+    </div>
+
+    <!-- SECCIÓN 8 -->
+    <h2>8. LIMITAÇÕES DECLARADAS DO MARCO</h2>
+
+    <div class="limitation-box">
+      <ul>
+        <li><strong>Resolução temporal de 1 Hz:</strong> O protocolo FIT padrão registra a 1 Hz. Fenômenos de interação mecânica em frequências superiores (vibrações de guidão, perdas de tração de curta duração) são inobserváveis com esta resolução.</li>
+        <li><strong>Ausência de dados de aceleração IMU:</strong> Os arquivos FIT de ciclocomputadores convencionais não incluem dados de acelerômetro ou giroscópio com resolução suficiente para análise de vibração. Dispositivos com IMU de alta frequência (alguns modelos recentes) ficam fora do alcance do marco atual.</li>
+        <li><strong>Não inferência de causa:</strong> O marco identifica anomalias cinemáticas mas não determina sua causa. Uma variância de cadência elevada pode dever-se a terreno irregular, fadiga muscular, calçado inadequado, comprimento de pedivela incorreto, ou posição no selim deficiente. O diagnóstico de causa requer inspeção técnica presencial.</li>
+        <li><strong>Limiares empíricos, não normativos:</strong> Os limiares de classificação, incluindo as correções por configuração, são parametrizações de engenharia baseadas em raciocínio físico e calibração empírica. Não existem estudos normativos publicados que estabeleçam valores de referência populacionais para CV de cadência ou IES em ciclismo de campo.</li>
+        <li><strong>Dependência da qualidade do arquivo FIT:</strong> Arquivos com >20% de amostras faltantes, gaps frequentes >10 s, ou sinal GPS sistematicamente degradado produzem métricas com faixas MC amplas que podem não ser interpretáveis.</li>
+        <li><strong>Ruído de altitude em inclinação:</strong> O cálculo de inclinação local é sensível ao tamanho da janela espacial e à qualidade do altímetro barométrico. Em dispositivos sem altímetro barométrico (altitude só GPS), a qualidade do IES se degrada significativamente.</li>
+      </ul>
+    </div>
+
+    <!-- SECCIÓN 9 -->
+    <h2>9. DADOS TÉCNICOS DE SIMULAÇÃO</h2>
+
+    <div class="data-card">
+      <h3>9.1 Especificação da simulação MC</h3>
+      <ul>
+        <li><strong>Motor:</strong> JavaScript ES2020 (produção web, processamento local)</li>
+        <li><strong>Iterações:</strong> N = 500 por métrica por atividade</li>
+        <li><strong>Distribuições de ruído:</strong> Uniform para GPS e altitude (pior caso conservador), Normal para potência (modelo de erro sistemático de potenciômetro)</li>
+        <li><strong>Dropout model:</strong> Bernoulli por amostra com p<sub>drop</sub> ~ Uniform(0.05, 0.15) por iteração</li>
+        <li><strong>Imputação:</strong> Interpolação linear para gaps ≤ 2 s, exclusão para gaps > 2 s</li>
+        <li><strong>Limiares:</strong> Calculados uma vez por run (configuração de bike fixa)</li>
+      </ul>
+
+      <h3>9.2 Framework metodológico — Modelo de Coerência Dinâmica</h3>
+      <div class="proprietary-box">
+        <p>As decisões de arquitetura do presente marco — em particular a escolha de reportar distribuições de probabilidade sobre o espaço de classificação em vez de valores únicos, a documentação explícita de métricas descartadas e suas razões, e o princípio de que uma variável que não produz correção fisicamente defensável recebe Δ = 0 — são consequências diretas de aplicar os princípios operativos do <strong>Modelo de Coerência Dinâmica (MCD)</strong>, framework proprietário desenvolvido por Carlos Ravello (2025).</p>
+        <p>O MCD postula que um sistema técnico atinge coerência funcional ótima não eliminando sua incerteza, mas integrando-a como variável explícita do processo. No presente contexto: a faixa de confiança Monte Carlo, a documentação de limitações e a arquitetura de limiares dinâmicos finitos são expressões diretas do princípio Ω de coerência dinâmica aplicado ao domínio da análise cinemática de ciclismo.</p>
+        <p><em>O framework MCD não está publicado em sua forma completa. — Ravello, C. (2025). Modelo de Coerência Dinâmica. Documento interno não publicado. BikeLab Studio.</em></p>
+      </div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <h2>10. CONCLUSÕES</h2>
+
+    <div class="conclusion-box">
+      <p>A análise de arquivos FIT para diagnóstico mecânico da interface bicicleta-ciclista é tecnicamente viável sob condições de validade explícitas e com um tratamento estatístico honesto das fontes de ruído instrumental. As métricas de variância de cadência, relação velocidade/cadência, índice de estabilidade em subida e Variability Index (com potenciômetro) constituem um conjunto coerente e complementar de indicadores do comportamento cinemático do sistema.</p>
+
+      <p>A contribuição central deste marco é dupla: por um lado, a documentação explícita das condições sob as quais cada métrica é válida (e daquelas sob as quais não é); por outro, o sistema de limiares dinâmicos que reconhece que o "valor esperado normal" dessas métricas não é universal, e sim função da configuração do sistema bicicleta.</p>
+
+      <p>A simulação Monte Carlo não melhora a precisão do cálculo; proporciona honestidade estatística sobre sua robustez. Um resultado classificado como "crítico" com P(crítico) = 0.90 sob o modelo de ruído instrumental é uma conclusão sólida. Um resultado marginal com P(crítico) = 0.55 deve ser apresentado como tal, não como diagnóstico definitivo.</p>
+
+      <p>As métricas descartadas — histerese velocidade/inclinação e aceleração longitudinal derivada — são exemplos de indicadores conceitualmente interessantes mas instrumentalmente não viáveis com a qualidade de sinal disponível em dados FIT de campo a 1 Hz. Documentar o descarte é parte do rigor metodológico.</p>
+    </div>
+
+    <!-- CLUSTER LINKS -->
+    <div class="cluster-links">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;letter-spacing:2px;margin-bottom:15px;text-transform:uppercase;">[ CLUSTER_DATA_LINKS ] // ANÁLISE E DIAGNÓSTICO CICLÍSTICO</p>
+      <h3 style="font-size:1.2rem;color:#fff;margin-bottom:20px;font-weight:400;letter-spacing:1px">Recursos relacionados:</h3>
+      <ul>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[01]</span>
+          <a href="./fit-analyzer-es.html">Analisador FIT BikeLab — Diagnóstico cinemático gratuito →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[02]</span>
+          <a href="./white-paper-sag-model-pt.html">White Paper: Modelo Físico de Câmara Dupla para Calibração de SAG →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[03]</span>
+          <a href="./white-paper-fit-analyzer.html">This article in English: FIT Kinematic Analysis Framework →</a>
+        </li>
+        <li style="margin-bottom:15px">
+          <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[04]</span>
+          <a href="../index-pt.html#science">Todos os artigos técnicos da BikeLab Studio →</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <h2>11. REFERÊNCIAS BIBLIOGRÁFICAS</h2>
+    <div class="references">
+      <ol>
+        <li>Abbiss, C. R., & Laursen, P. B. (2008). "Describing and understanding pacing strategies during athletic competition". <em>Sports Medicine</em>, 38(3), 239–252. DOI: 10.2165/00007256-200838030-00004</li>
+        <li>Barsumyan, A., Bärtsch, D., & Radtke, T. (2025). "Machine learning-based prediction of cycling performance and physiological metrics from power meter data". <em>Frontiers in Artificial Intelligence</em>, 8. DOI: 10.3389/frai.2025.1623384</li>
+        <li>Faria, E. W., Parker, D. L., & Faria, I. E. (2005). "The science of cycling: physiology and training — Part 1". <em>Sports Medicine</em>, 35(4), 285–312. DOI: 10.2165/00007256-200535040-00002</li>
+        <li>Garmin Ltd. (2024). <em>FIT Protocol Specification v2.1 — Global Message Numbers and Field Definitions</em>. Garmin International Inc. <a href="https://developer.garmin.com/fit" style="color:#888">developer.garmin.com/fit</a></li>
+        <li>Hansen, E. A., Jørgensen, L. V., Jensen, K., Fregly, B. J., & Sjøgaard, G. (2007). "Crank inertial load affects freely chosen pedal rate during cycling". <em>Journal of Biomechanics</em>, 39(9), 1730–1740. DOI: 10.1016/j.jbiomech.2006.01.015</li>
+        <li>Korff, T., Romer, L. M., Mayhew, I., & Martin, J. C. (2007). "Effect of pedaling technique on mechanical effectiveness and efficiency in cyclists". <em>Medicine & Science in Sports & Exercise</em>, 39(6), 991–995. DOI: 10.1249/mss.0b013e318043a235</li>
+        <li>Lee, H., Martin, D. T., Anson, J. M., Grundy, D., & Hahn, A. G. (2002). "Physiological characteristics of successful mountain bikers and professional road cyclists". <em>Journal of Sports Sciences</em>, 20(12), 1001–1008. DOI: 10.1080/026404102321011760</li>
+        <li>Ravello, C. (2025). <em>Modelo de Coherencia Dinámica — Principios operativos para sistemas de decisión bajo incertidumbre</em>. Documento interno no publicado. BikeLab Studio, Trujillo, Perú.</li>
+        <li>Robert, C. P., & Casella, G. (2004). <em>Monte Carlo Statistical Methods</em> (2nd ed.). Springer. DOI: 10.1007/978-1-4757-4145-2</li>
+        <li>Stapelfeldt, B., Schwirtz, A., Schumacher, Y. O., & Hillebrecht, M. (2004). "Workload demands in mountain bike racing". <em>International Journal of Sports Medicine</em>, 25(4), 294–300. DOI: 10.1055/s-2004-819937</li>
+      </ol>
+    </div>
+
+    <p style="margin-top:30px">
+      <a href="../index-pt.html#science" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px">← VOLVER AL INICIO</a>
+    </p>
+
+    <div class="footer">
+      <div style="margin-bottom:20px">
+        <strong>BikeLab Studio</strong><br>
+        Paraguay 300, Trujillo, La Libertad, Peru<br>
+        Divisão de Pesquisa Técnica
+      </div>
+      <div class="footer-grid">
+        <div><strong>White Paper v1.0:</strong><br>FIT Analyzer — Marco Metodológico</div>
+        <div><strong>Autor:</strong><br>Carlos Ravello<br>Fundador da BikeLab Studio</div>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;font-size:0.9em;color:#777">
+        Citação sugerida: <em>Ravello, C. — BikeLab Studio (2026). "Análise Cinemática de Arquivos FIT para Diagnóstico Mecânico da Interface Bicicleta-Ciclista: Marco Metodológico e Validação Monte Carlo". White Paper v1.0, Março 2026.</em>
+      </div>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center">
+        © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-overlay a').forEach(a => {
+      a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false });
+    });
+  </script>
+</body>
+</html>
