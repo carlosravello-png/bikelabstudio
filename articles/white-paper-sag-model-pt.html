@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#000000">
-  <title>Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB | BikeLab Studio</title>
+  <title>Modelo Físico de Câmara Dupla para Calibração de SAG em Suspensões MTB | BikeLab Studio</title>
   <meta name="description"
-    content="¿Cuánta presión necesita tu suspensión MTB para el SAG correcto? Modelo físico de doble cámara para 132 horquillas y amortiguadores (Fox, RockShox, Öhlins…) con error medio de 1.66 psi y cálculo del SAG real de rueda. Validado con Monte Carlo.">
+    content="Quanta pressão sua suspensão MTB precisa para o SAG correto? Modelo físico de câmara dupla para 132 garfos e amortecedores (Fox, RockShox, Öhlins…) com erro médio de 1,66 psi e cálculo do SAG real de roda. Validado com Monte Carlo.">
   <meta name="keywords"
-    content="SAG MTB, suspensión mountain bike, modelo politrópico, calibración inversa, Monte Carlo, Fox, RockShox, SR Suntour, presión suspensión">
+    content="SAG MTB, suspensão mountain bike, modelo politrópico, calibração inversa, Monte Carlo, Fox, RockShox, SR Suntour, pressão suspensão">
   <meta name="author" content="Carlos Ravello">
-  <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-pt.html">
   <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
   <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-sag-model.html">
   <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-pt.html">
   <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
-  <meta property="og:locale" content="es_PE">
-  <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-sag-model-pt.html">
   <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/sagsuspensio_calculadora.webp">
   <meta property="og:title"
-    content="Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB | BikeLab Studio">
+    content="Modelo Físico de Câmara Dupla para Calibração de SAG em Suspensões MTB | BikeLab Studio">
   <meta property="og:description"
-    content="White Paper técnico: modelo politrópico de doble cámara para cálculo de SAG. Calibración inversa con tablas oficiales, validación Monte Carlo, base de suspensiones catalogadas.">
+    content="White Paper técnico: modelo politrópico de câmara dupla para cálculo de SAG. Calibração inversa com tabelas oficiais, validação Monte Carlo, base de suspensões catalogadas.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="BikeLab Studio">
   <script type="application/ld+json">
@@ -32,10 +32,10 @@
   "@graph": [
     {
       "@type": "ScholarlyArticle",
-      "headline": "Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB de Resorte Neumático",
-      "alternativeHeadline": "Implementación Politrópica, Calibración Inversa y Validación Estadística mediante Simulación Monte Carlo",
-      "description": "Desarrollo y validación de un modelo de doble cámara politrópica para el cálculo preciso de presión de SAG en horquillas y amortiguadores MTB. Base amplia calibrada con datos oficiales; validación Monte Carlo a escala.",
-      "inLanguage": "es",
+      "headline": "Modelo Físico de Câmara Dupla para Calibração de SAG em Suspensões MTB de Mola Pneumática",
+      "alternativeHeadline": "Implementação Politrópica, Calibração Inversa e Validação Estatística mediante Simulação Monte Carlo",
+      "description": "Desenvolvimento e validação de um modelo de câmara dupla politrópica para o cálculo preciso de pressão de SAG em garfos e amortecedores MTB. Base ampla calibrada com dados oficiais; validação Monte Carlo em escala.",
+      "inLanguage": "pt-BR",
       "author": {
         "@id": "https://carlosravello.com/#person"
       },
@@ -45,8 +45,8 @@
       "publisher": {
         "@id": "https://www.bikelabstudio.com/#business"
       },
-      "articleSection": "Ingeniería de Suspensión",
-      "keywords": "SAG, suspensión MTB, modelo politrópico, calibración inversa, Monte Carlo, presión horquilla, amortiguador MTB, ajuste SAG",
+      "articleSection": "Engenharia de Suspensão",
+      "keywords": "SAG, suspensão MTB, modelo politrópico, calibração inversa, Monte Carlo, pressão garfo, amortecedor MTB, ajuste SAG",
       "isPartOf": {
         "@type": "CreativeWorkSeries",
         "@id": "https://www.bikelabstudio.com/#publicaciones-tecnicas",
@@ -153,19 +153,19 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Inicio",
+          "name": "Início",
           "item": "https://www.bikelabstudio.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Artículos",
+          "name": "Artigos",
           "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Modelo Físico de Cámara Dual para Calibración de SAG en Susp",
+          "name": "Modelo Físico de Câmara Dupla para Calibração de SAG em Susp",
           "item": "https://www.bikelabstudio.com/articles/white-paper-sag-model-es.html"
         }
       ]
@@ -715,15 +715,16 @@
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
   <div class="nav-bar">
     <div class="nav-bar-left">
-      <span class="nav-menu-label">MENÚ</span>
-      <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú">
+      <span class="nav-menu-label">MENU</span>
+      <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu">
         <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
       </label>
     </div>
     <div class="lang-switch">
-      <a href="../index.html" style="margin-right:8px;">INICIO</a>
-      <a href="white-paper-sag-model.html" hreflang="en" lang="en" title="Leer en Inglés"
-        aria-label="Cambiar a Inglés">EN</a>
+      <a href="../index-pt.html" style="margin-right:8px;">INÍCIO</a>
+      <a href="white-paper-sag-model-es.html" hreflang="es" lang="es" title="Leer en Español" aria-label="Mudar para Espanhol" style="margin-right:8px;">ES</a>
+      <a href="white-paper-sag-model.html" hreflang="en" lang="en" title="Ler em Inglês"
+        aria-label="Mudar para Inglês">EN</a>
     </div>
   </div>
   <div class="nav-overlay">
@@ -731,11 +732,11 @@
     <nav>
       <a href="white-paper-sag-model.html" hreflang="en" lang="en"
         style="color:var(--accent); border-bottom:1px solid #333;">EN (ENGLISH)</a>
-      <a href="../index.html">INICIO</a>
-      <a href="../servicios.html">SERVICIOS</a>
-      <a href="../suspension-es.html">SUSPENSIÓN</a>
-      <a href="../index.html#science">DATOS TÉCNICOS</a>
-      <a href="https://wa.me/51934391545">CONTACTO</a>
+      <a href="../index-pt.html">INÍCIO</a>
+      <a href="../servicios.html">SERVIÇOS</a>
+      <a href="../suspension-es.html">SUSPENSÃO</a>
+      <a href="../index-pt.html#science">DADOS TÉCNICOS</a>
+      <a href="https://wa.me/51934391545">CONTATO</a>
     </nav>
   </div>
   <a href="https://wa.me/51934391545" class="wa-float" aria-label="WhatsApp">
@@ -747,146 +748,108 @@
   </a>
 
   <div class="container" style="padding-top:100px">
-    <a href="../index.html#science" class="nav-back">← VOLVER AL INICIO</a>
+    <a href="../index-pt.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
     <div class="header">
       <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
-      <div class="category">INGENIERÍA_DE_SUSPENSIÓN // WHITE_PAPER_TÉCNICO</div>
+      <div class="category">ENGENHARIA_DE_SUSPENSÃO // WHITE_PAPER_TÉCNICO</div>
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">INICIO</a> /
-        <a href="../index.html#science">ARTÍCULOS</a> /
+        <a href="../index-pt.html">INÍCIO</a> /
+        <a href="../index-pt.html#science">ARTIGOS</a> /
         <span style="color:#fff">White Paper SAG Model</span>
       </nav>
-      <h1>Modelo Físico de Cámara Dual para Calibración de SAG en Suspensiones MTB de Resorte Neumático</h1>
-      <div class="subtitle">Implementación Politrópica, Calibración Inversa y Validación Estadística mediante Simulación
+      <h1>Modelo Físico de Câmara Dupla para Calibração de SAG em Suspensões MTB de Mola Pneumática</h1>
+      <div class="subtitle">Implementação Politrópica, Calibração Inversa e Validação Estatística mediante Simulação
         Monte Carlo</div>
-      <div class="meta">White Paper v3.0 // Autor: Carlos Ravello // Febrero 2026 // BikeLab Studio — División de
-        Investigación Técnica</div>
+      <div class="meta">White Paper v3.0 // Autor: Carlos Ravello // Fevereiro 2026 // BikeLab Studio — Divisão de
+        Pesquisa Técnica</div>
     </div>
 
     <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
-      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// En corto — antes de las ecuaciones</div>
-      <p style="margin-bottom:14px;"><strong>La pregunta:</strong> ¿cuántos psi de aire necesita tu horquilla o amortiguador para quedar en el SAG correcto?</p>
-      <p style="margin-bottom:14px;"><strong>La respuesta corta:</strong> no se puede adivinar, porque el aire no se comprime de forma lineal — depende de tu peso, del recorrido del componente, del volumen de su cámara y de los tokens. Este modelo lo resuelve para <strong>132 suspensiones</strong> (Fox, RockShox, SR Suntour, Öhlins y más) con un <strong>error medio de 1.66 psi</strong> frente a las tablas oficiales de fábrica. Y hace algo que ninguna calculadora comercial hace: calcular el <strong>SAG real de la rueda</strong> en doble suspensión, no solo el del amortiguador.</p>
-      <p style="margin-bottom:0;"><strong>Lo que sigue, y por qué creerle:</strong> abajo está el modelo físico completo —doble cámara politrópica, calibración inversa contra datos de fabricante y validación Monte Carlo—, con todos sus supuestos declarados para que verifiques cada número. Si solo quieres la presión para tu bici, usa la <a href="sag-calculator-es.html" style="color:#a0a0a0;">Calculadora SAG</a> o la <a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#a0a0a0;">guía práctica</a>.</p>
+      <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// Em resumo — antes das equações</div>
+      <p style="margin-bottom:14px;"><strong>A pergunta:</strong> quantos psi de ar seu garfo ou amortecedor precisa para ficar no SAG correto?</p>
+      <p style="margin-bottom:14px;"><strong>A resposta curta:</strong> não dá para adivinhar, porque o ar não se comprime de forma linear — depende do seu peso, do curso do componente, do volume da sua câmara e dos tokens. Este modelo resolve isso para <strong>132 suspensões</strong> (Fox, RockShox, SR Suntour, Öhlins e mais) com um <strong>erro médio de 1,66 psi</strong> frente às tabelas oficiais de fábrica. E faz algo que nenhuma calculadora comercial faz: calcular o <strong>SAG real da roda</strong> em dupla suspensão, não apenas o do amortecedor.</p>
+      <p style="margin-bottom:0;"><strong>O que vem a seguir, e por que acreditar:</strong> abaixo está o modelo físico completo —câmara dupla politrópica, calibração inversa contra dados de fabricante e validação Monte Carlo—, com todas as suas premissas declaradas para que você verifique cada número. Se você só quer a pressão para a sua bike, use a <a href="sag-calculator-es.html" style="color:#a0a0a0;">Calculadora SAG</a> ou o <a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#a0a0a0;">guia prático</a>.</p>
     </div>
 
-    <h2>RESUMEN</h2>
+    <h2>RESUMO</h2>
     <p><a href="como-ajustar-sag-suspension-mtb-es.html" style="color:#888;text-decoration:underline;font-size:0.9em">→
-        Versión
-        divulgativa: Cómo configurar tu suspensión MTB con datos reales</a></p>
+        Versão de divulgação: Como configurar sua suspensão MTB com dados reais</a></p>
 
-    <p><strong>Objetivo:</strong> Desarrollar y validar un modelo matemático determinista para calcular la
-      <strong>presión de inflado</strong> necesaria en <strong>horquillas y amortiguadores MTB</strong> de resorte
-      neumático para un <strong>SAG objetivo</strong> dado, en función del peso del rider, disciplina, y parámetros
-      constructivos específicos del componente.
+    <p><strong>Objetivo:</strong> Desenvolver e validar um modelo matemático determinístico para calcular a <strong>pressão de enchimento</strong> necessária em <strong>garfos e amortecedores MTB</strong> de mola pneumática para um <strong>SAG alvo</strong> dado, em função do peso do ciclista, disciplina e parâmetros construtivos específicos do componente.
     </p>
 
-    <p><strong>Metodología:</strong> Modelo de <strong>doble cámara politrópica</strong> (γ = calibrado empíricamente
-      dentro del rango físico esperado para compresión rápida con transferencia de calor parcial), calibrado mediante
-      <strong>calibración inversa</strong> contra tablas de presión oficiales de Fox, RockShox, SR Suntour y Öhlins.
-      Validación estadística mediante simulación Monte Carlo a escala bajo incertidumbres
-      operacionales reales. Extensión a full-suspension mediante curvas de leverage ratio interpoladas para 33 cuadros
-      catalogados.
+    <p><strong>Metodologia:</strong> Modelo de <strong>câmara dupla politrópica</strong> (γ = calibrado empiricamente dentro da faixa física esperada para compressão rápida com transferência de calor parcial), calibrado mediante <strong>calibração inversa</strong> contra tabelas de pressão oficiais de Fox, RockShox, SR Suntour e Öhlins. Validação estatística mediante simulação Monte Carlo em escala sob incertezas operacionais reais. Extensão a full-suspension mediante curvas de leverage ratio interpoladas para 33 quadros catalogados.
     </p>
 
-    <p><strong>Resultados principales:</strong></p>
+    <p><strong>Resultados principais:</strong></p>
     <ul>
-      <li>Error medio global post-calibración: 1.66 psi contra tablas oficiales (28 modelos con ground truth)</li>
-      <li>Error máximo: 13.09 psi en RockShox Judy 60kg — atribuido a no-linealidad física del sistema Solo Air
-        entry-level</li>
-      <li>Confianza Monte Carlo por segmento: 72-76% (entry), 83% (mid), 83-89% (mid-high/high) con umbral ±2% SAG</li>
-      <li>Diferenciador técnico: cálculo de <strong>SAG de rueda</strong> real en full-suspension mediante leverage
-        curve — ausente en todas las calculadoras comerciales conocidas</li>
-      <li>Base de datos: <strong>Amplio catálogo de suspensiones</strong> catalogadas (Fox, RockShox, SR Suntour,
-        Öhlins, Manitou,
-        Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula)</li>
+      <li>Erro médio global pós-calibração: 1,66 psi contra tabelas oficiais (28 modelos com ground truth)</li>
+      <li>Erro máximo: 13,09 psi em RockShox Judy 60kg — atribuído à não-linearidade física do sistema Solo Air entry-level</li>
+      <li>Confiança Monte Carlo por segmento: 72-76% (entry), 83% (mid), 83-89% (mid-high/high) com limiar ±2% SAG</li>
+      <li>Diferenciador técnico: cálculo de <strong>SAG de roda</strong> real em full-suspension mediante leverage curve — ausente em todas as calculadoras comerciais conhecidas</li>
+      <li>Base de dados: <strong>Amplo catálogo de suspensões</strong> catalogadas (Fox, RockShox, SR Suntour, Öhlins, Manitou, Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula)</li>
     </ul>
 
-    <h2>1. SUPUESTOS DEL MODELO</h2>
+    <h2>1. PREMISSAS DO MODELO</h2>
 
-    <p style="color:#bbb;font-style:italic;">Antes de un solo número: un modelo vale exactamente lo que valen sus supuestos. Aquí están los míos, declarados, para que sepas dónde confiar en el resultado y dónde es solo una aproximación razonable.</p>
+    <p style="color:#bbb;font-style:italic;">Antes de um único número: um modelo vale exatamente o que valem suas premissas. Aqui estão as minhas, declaradas, para que você saiba onde confiar no resultado e onde é apenas uma aproximação razoável.</p>
 
     <div class="methodology-box">
-      <h3>1.1 Supuestos Termodinámicos</h3>
+      <h3>1.1 Premissas Termodinâmicas</h3>
       <ul>
-        <li><strong>Proceso politrópico con exponente γ = propietario (valor no publicado):</strong> Compresión real del
-          aire en suspensión MTB se
-          ubica entre isotérmica (γ = 1.00) y adiabática (γ = 1.40). El valor γ = calibrado empíricamente dentro del
-          rango físico esperado para compresión rápida con transferencia de calor parcial corresponde a compresión
-          rápida
-          con transferencia de calor parcial. Sensibilidad: ±0.05 en γ produce ±2.1 psi en predicción a SAG del 25%.
+        <li><strong>Processo politrópico com expoente γ = proprietário (valor não publicado):</strong> A compressão real do ar em suspensão MTB se situa entre isotérmica (γ = 1.00) e adiabática (γ = 1.40). O valor γ = calibrado empiricamente dentro da faixa física esperada para compressão rápida com transferência de calor parcial corresponde a compressão rápida com transferência de calor parcial. Sensibilidade: ±0.05 em γ produz ±2,1 psi na predição a SAG de 25%.
         </li>
-        <li><strong>Gas ideal:</strong> Se asume comportamiento de gas ideal (PV = nRT). A las presiones operacionales
-          de suspensión MTB (50–500 psi), la desviación del comportamiento ideal es &lt;0.3% (factor de compresibilidad
-          z ≈ 1.003 para N₂ a 200 psi, 25°C).</li>
-        <li><strong>Temperatura ambiente nominal 20°C:</strong> Variación de ±20°C produce ±3.4% en presión absoluta.
-          Esta incertidumbre está modelada explícitamente en la simulación Monte Carlo (Sección 5).</li>
-        <li><strong>Dos cámaras independientes (positiva y negativa):</strong> El modelo no captura diseños de tres
-          cámaras (Öhlins RXF, sistema DebonAir+ en configuración extendida). Para estos sistemas, se modela únicamente
-          la cámara principal.</li>
-        <li><strong>Volumen de cámara constante a temperatura:</strong> No se modela la expansión térmica de los
-          componentes metálicos (acero, aluminio). Coeficiente de dilatación lineal aluminio: 23×10⁻⁶ /°C — efecto sobre
-          volumen despreciable a las variaciones operacionales esperadas.</li>
+        <li><strong>Gás ideal:</strong> Assume-se comportamento de gás ideal (PV = nRT). Nas pressões operacionais de suspensão MTB (50–500 psi), o desvio do comportamento ideal é &lt;0,3% (fator de compressibilidade z ≈ 1.003 para N₂ a 200 psi, 25°C).</li>
+        <li><strong>Temperatura ambiente nominal 20°C:</strong> Variação de ±20°C produz ±3,4% na pressão absoluta. Esta incerteza está modelada explicitamente na simulação Monte Carlo (Seção 5).</li>
+        <li><strong>Duas câmaras independentes (positiva e negativa):</strong> O modelo não captura projetos de três câmaras (Öhlins RXF, sistema DebonAir+ em configuração estendida). Para estes sistemas, modela-se apenas a câmara principal.</li>
+        <li><strong>Volume de câmara constante à temperatura:</strong> Não se modela a expansão térmica dos componentes metálicos (aço, alumínio). Coeficiente de dilatação linear do alumínio: 23×10⁻⁶ /°C — efeito sobre o volume desprezível nas variações operacionais esperadas.</li>
       </ul>
     </div>
 
     <div class="methodology-box">
-      <h3>1.2 Supuestos Mecánicos</h3>
+      <h3>1.2 Premissas Mecânicas</h3>
       <ul>
-        <li><strong>Geometría de pistón idealizada:</strong> Se asume sello perfecto y área efectiva constante. Las
-          fugas reales (bypass) no están modeladas. El parámetro d_eff (diámetro efectivo) absorbe esta incertidumbre en
-          la calibración.</li>
-        <li><strong>Fricción constante F_fric:</strong> Se modela como fuerza constante opuesta al movimiento. La
-          histéresis real de los sellos varía con velocidad, temperatura y desgaste. El modelo captura el valor medio
-          pero no la dependencia dinámica.</li>
-        <li><strong>Distribución de carga rider:</strong> Se asume 40% peso sobre eje delantero (horquilla) y 60% sobre
-          eje trasero (amortiguador). En realidad esta distribución varía por geometría del cuadro (chainstay, stack,
-          reach) y posición del rider.</li>
-        <li><strong>Stroke lineal:</strong> Se asume relación lineal entre SAG y posición de pistón. Las variaciones de
-          compresión positiva/negativa en el stroke de trabajo están capturadas por el exponente politrópico.</li>
+        <li><strong>Geometria de pistão idealizada:</strong> Assume-se vedação perfeita e área efetiva constante. Os vazamentos reais (bypass) não estão modelados. O parâmetro d_eff (diâmetro efetivo) absorve esta incerteza na calibração.</li>
+        <li><strong>Atrito constante F_fric:</strong> Modela-se como força constante oposta ao movimento. A histerese real dos retentores varia com velocidade, temperatura e desgaste. O modelo captura o valor médio mas não a dependência dinâmica.</li>
+        <li><strong>Distribuição de carga do ciclista:</strong> Assume-se 40% do peso sobre o eixo dianteiro (garfo) e 60% sobre o eixo traseiro (amortecedor). Na realidade esta distribuição varia conforme a geometria do quadro (chainstay, stack, reach) e a posição do ciclista.</li>
+        <li><strong>Stroke linear:</strong> Assume-se relação linear entre SAG e posição do pistão. As variações de compressão positiva/negativa no stroke de trabalho estão capturadas pelo expoente politrópico.</li>
       </ul>
     </div>
 
     <div class="methodology-box">
-      <h3>1.3 Supuestos de Leverage Ratio (Full-Suspension)</h3>
+      <h3>1.3 Premissas de Leverage Ratio (Full-Suspension)</h3>
       <ul>
-        <li><strong>Curva de leverage interpolada linealmente:</strong> Los 3–5 puntos de leverage documentados por
-          cuadro se interpolan linealmente. En realidad la curva puede tener curvatura local. Error estimado: &lt;2% en
-          el rango de SAG operacional (20–35%).</li>
-        <li><strong>Leverage ratio estático:</strong> Se usa el LR en el punto de SAG, no el LR dinámico bajo carga en
-          movimiento. Esta es la metodología estándar de los fabricantes de cuadros.</li>
-        <li><strong>Ángulo de shock no incluido en cálculo de fuerza:</strong> El LR medido en el mundo real ya
-          incorpora la geometría angular del amortiguador (es wheel_travel/shock_stroke, medido físicamente). Aplicar
-          cos(θ) adicional constituye doble contabilización. Este error fue identificado y corregido en v3.0 del modelo
-          (ver Sección 6.2).</li>
+        <li><strong>Curva de leverage interpolada linearmente:</strong> Os 3–5 pontos de leverage documentados por quadro são interpolados linearmente. Na realidade a curva pode ter curvatura local. Erro estimado: &lt;2% na faixa de SAG operacional (20–35%).</li>
+        <li><strong>Leverage ratio estático:</strong> Usa-se o LR no ponto de SAG, não o LR dinâmico sob carga em movimento. Esta é a metodologia padrão dos fabricantes de quadros.</li>
+        <li><strong>Ângulo de shock não incluído no cálculo de força:</strong> O LR medido no mundo real já incorpora a geometria angular do amortecedor (é wheel_travel/shock_stroke, medido fisicamente). Aplicar cos(θ) adicional constitui dupla contabilização. Este erro foi identificado e corrigido na v3.0 do modelo (ver Seção 6.2).</li>
       </ul>
     </div>
 
-    <h2>2. MODELO FÍSICO — FORMULACIÓN MATEMÁTICA</h2>
+    <h2>2. MODELO FÍSICO — FORMULAÇÃO MATEMÁTICA</h2>
 
-    <p style="color:#bbb;font-style:italic;">Aquí empieza la física de verdad. Todo el modelo se sostiene en una sola idea: el aire de la cámara no obedece una regla lineal, sino una ley de compresión. Lo que viene traduce esa ley en la presión exacta que tu suspensión necesita.</p>
+    <p style="color:#bbb;font-style:italic;">Aqui começa a física de verdade. Todo o modelo se sustenta em uma única ideia: o ar da câmara não obedece a uma regra linear, e sim a uma lei de compressão. O que vem a seguir traduz essa lei na pressão exata que sua suspensão precisa.</p>
 
-    <h3>2.1 Ley Politrópica de Compresión</h3>
-    <p>El modelo fundamental para una cámara de aire bajo compresión politrópica es:</p>
+    <h3>2.1 Lei Politrópica de Compressão</h3>
+    <p>O modelo fundamental para uma câmara de ar sob compressão politrópica é:</p>
 
     <div class="equation">
       P · V<sup>γ</sup> = P₀ · V₀<sup>γ</sup> = constante
 
       <br><br>
       Donde:
-      <br> P₀ : Presión inicial de inflado [psi o Pa]
-      <br> V₀ : Volumen inicial de cámara positiva [m³ o cc]
-      <br> P : Presión en posición x del pistón [Pa]
-      <br> V : Volumen comprimido = V₀ − A·x [m³]
-      <br> A : Área efectiva del pistón = π·(d_eff/2)² [m²]
-      <br> x : Desplazamiento del pistón desde posición inicial [m]
-      <br> γ : Exponente politrópico = propietario (valor no publicado)
+      <br> P₀ : Pressão inicial de enchimento [psi ou Pa]
+      <br> V₀ : Volume inicial de câmara positiva [m³ ou cc]
+      <br> P : Pressão na posição x do pistão [Pa]
+      <br> V : Volume comprimido = V₀ − A·x [m³]
+      <br> A : Área efetiva do pistão = π·(d_eff/2)² [m²]
+      <br> x : Deslocamento do pistão desde a posição inicial [m]
+      <br> γ : Expoente politrópico = proprietário (valor não publicado)
     </div>
 
-    <p><strong>En palabras:</strong> a diferencia de un resorte de metal, el aire se pone más duro cuanto más lo comprimes — y no en proporción simple. La ley P·Vᵞ = constante dice justo eso: si reduces el volumen de la cámara a la mitad, la presión sube más del doble. Por eso dos horquillas de la misma marca pero distinto recorrido necesitan presiones distintas para el mismo SAG: cambia el volumen, cambia toda la curva. El modelo no inventa nada nuevo de física; solo resuelve esta ecuación con precisión para cada componente.</p>
+    <p><strong>Em palavras:</strong> diferente de uma mola de metal, o ar fica mais duro quanto mais você o comprime — e não em proporção simples. A lei P·Vᵞ = constante diz justamente isso: se você reduz o volume da câmara pela metade, a pressão sobe mais do que o dobro. Por isso dois garfos da mesma marca mas de curso diferente precisam de pressões distintas para o mesmo SAG: muda o volume, muda toda a curva. O modelo não inventa nada novo de física; apenas resolve esta equação com precisão para cada componente.</p>
 
-    <h3>2.2 Fuerza Neta del Resorte Neumático</h3>
-    <p>La fuerza neta ejercida por el sistema de cámara dual (positiva − negativa) en la posición x es:</p>
+    <h3>2.2 Força Líquida da Mola Pneumática</h3>
+    <p>A força líquida exercida pelo sistema de câmara dupla (positiva − negativa) na posição x é:</p>
 
     <div class="equation">
       F_net(x) = F_pos(x) − F_neg(x) − F_fric
@@ -898,16 +861,13 @@
       F_neg(x) = P₀_neg · (V₀_neg / (V₀_neg + A·x))^γ · A
 
       <br><br>
-      F_fric : Fricción estática de sellos [N], constante opuesta al movimiento
+      F_fric : Atrito estático de retentores [N], constante oposta ao movimento
     </div>
 
-    <p>Para simplificación computacional y dado que V₀_neg es función de V₀_pos en diseños integrados (derivada por
-      calibración específica por modelo mediante optimización diferencial propietaria), el modelo colapsa a un parámetro
-      único V₀_pos con V₀_neg derivado por
-      relación de volúmenes. Esta relación es calibrada para cada modelo.</p>
+    <p>Para simplificação computacional e dado que V₀_neg é função de V₀_pos em projetos integrados (derivada por calibração específica por modelo mediante otimização diferencial proprietária), o modelo colapsa para um parâmetro único V₀_pos com V₀_neg derivado por relação de volumes. Esta relação é calibrada para cada modelo.</p>
 
-    <h3>2.3 Resolución de Presión por Bisección</h3>
-    <p>Para resolver P₀ dado un peso objetivo W y un SAG objetivo x = SAG% × stroke:</p>
+    <h3>2.3 Resolução de Pressão por Bisseção</h3>
+    <p>Para resolver P₀ dado um peso alvo W e um SAG alvo x = SAG% × stroke:</p>
 
     <div class="equation">
       Resolver P₀ tal que: F_net(x_sag, P₀) = W_shock
@@ -917,16 +877,15 @@
 
       <br><br>
       Donde:
-      <br> β : Fracción de peso sobre eje (0.40 horquilla, 0.60 amortiguador)
-      <br> LR : Leverage Ratio interpolado en el punto SAG% (full-suspension)
+      <br> β : Fração de peso sobre eixo (0.40 garfo, 0.60 amortecedor)
+      <br> LR : Leverage Ratio interpolado no ponto SAG% (full-suspension)
       <br> g : 9.81 m/s²
     </div>
 
-    <p>Bisección presión: parámetros de convergencia propietarios.</p>
+    <p>Bisseção de pressão: parâmetros de convergência proprietários.</p>
 
-    <h3>2.4 Efecto de Tokens (Volume Spacers)</h3>
-    <p>Los tokens reducen el volumen efectivo de la cámara positiva, incrementando la progresividad sin afectar la
-      presión inicial:</p>
+    <h3>2.4 Efeito de Tokens (Volume Spacers)</h3>
+    <p>Os tokens reduzem o volume efetivo da câmara positiva, aumentando a progressividade sem afetar a pressão inicial:</p>
 
     <div class="equation">
       V₀_eff = max(V₀_pos − N_tok × V_tok, V_tok)
@@ -935,20 +894,17 @@
       Ratio_progresividad = F_net(0.92 × stroke) / F_net(0.50 × stroke)
 
       <br><br>
-      Donde N_tok es el número de tokens y V_tok el volumen por token [cc]
+      Onde N_tok é o número de tokens e V_tok o volume por token [cc]
     </div>
 
-    <p>El modelo recomienda automáticamente el número de tokens que mantiene el ratio de progresividad dentro del rango
-      óptimo por disciplina: XC [1.6–1.8], Trail [1.8–2.1], Enduro [2.0–2.4], DH [2.2–2.7].</p>
+    <p>O modelo recomenda automaticamente o número de tokens que mantém o ratio de progressividade dentro da faixa ótima por disciplina: XC [1.6–1.8], Trail [1.8–2.1], Enduro [2.0–2.4], DH [2.2–2.7].</p>
 
-    <h2>3. CALIBRACIÓN INVERSA</h2>
+    <h2>3. CALIBRAÇÃO INVERSA</h2>
 
-    <h3>3.1 Metodología</h3>
-    <p>Se dispone de tablas oficiales de presión recomendada para 28 de los 132 modelos catalogados. Estas tablas,
-      publicadas en los centros de ayuda de Fox, SRAM/RockShox y SR Suntour, mapean peso del rider a presión de inflado
-      para un SAG% fijo por disciplina.</p>
+    <h3>3.1 Metodologia</h3>
+    <p>Estão disponíveis tabelas oficiais de pressão recomendada para 28 dos 132 modelos catalogados. Estas tabelas, publicadas nas centrais de ajuda de Fox, SRAM/RockShox e SR Suntour, mapeiam o peso do ciclista para a pressão de enchimento para um SAG% fixo por disciplina.</p>
 
-    <p>Para cada modelo con ground truth, se optimizan los 4 parámetros libres del modelo:</p>
+    <p>Para cada modelo com ground truth, otimizam-se os 4 parâmetros livres do modelo:</p>
 
     <div class="equation">
       θ = [d_eff, V₀_pos, F_fric, V_tok]
@@ -960,19 +916,12 @@
       Minimizar: Σᵢ w_i · (P_model(θ, masa_i, x_i) − P_tabla_i)²
     </div>
 
-    <p>El optimizador empleado es Differential Evolution (SciPy, Python), con 6 pares (masa, presión) por modelo como
-      puntos de calibración y pesos proporcionales al inverso de la presión para penalizar errores relativos
-      uniformemente a lo largo del rango de peso.</p>
+    <p>O otimizador empregado é Differential Evolution (SciPy, Python), com 6 pares (massa, pressão) por modelo como pontos de calibração e pesos proporcionais ao inverso da pressão para penalizar erros relativos uniformemente ao longo da faixa de peso.</p>
 
-    <p class="chart-legend">El parámetro d_eff calibrado difiere del
-      diámetro nominal porque absorbe eficiencias de sello y geometría interna real. El error elevado de la Judy refleja
-      la no-linealidad del sistema Solo Air entry-level (ver Sección 6.3).</p>
+    <p class="chart-legend">O parâmetro d_eff calibrado difere do diâmetro nominal porque absorve eficiências de vedação e geometria interna real. O erro elevado da Judy reflete a não-linearidade do sistema Solo Air entry-level (ver Seção 6.3).</p>
 
-    <h3>3.3 Discrepancia Sistemática en d_eff</h3>
-    <p>Un resultado consistente de la calibración es que el diámetro efectivo calibrado (d_eff) resulta sistemáticamente
-      inferior al diámetro nominal del pistón en un factor de ~0.77–0.79. Esto es físicamente coherente: el área
-      efectiva real del pistón incorpora pérdidas de sello, compresión de labios, y la geometría del túnel de aceite. El
-      parámetro d_eff es un parámetro lumped que captura todos estos efectos sin modelarlos explícitamente.</p>
+    <h3>3.3 Discrepância Sistemática em d_eff</h3>
+    <p>Um resultado consistente da calibração é que o diâmetro efetivo calibrado (d_eff) resulta sistematicamente inferior ao diâmetro nominal do pistão em um fator de ~0.77–0.79. Isso é fisicamente coerente: a área efetiva real do pistão incorpora perdas de vedação, compressão de lábios e a geometria do túnel de óleo. O parâmetro d_eff é um parâmetro lumped que captura todos esses efeitos sem modelá-los explicitamente.</p>
 
     <!-- SVG CHART 1 — Calibración: Modelo vs Fabricante -->
     <div class="chart-container">
@@ -1016,10 +965,10 @@
         <polyline points="130,322 230,287 330,248 430,210 530,175 630,142" fill="none" stroke="#ff6b35"
           stroke-width="1.5" stroke-dasharray="6,3" />
         <!-- Axis labels -->
-        <text x="380" y="385" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">PESO RIDER
+        <text x="380" y="385" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">PESO CICLISTA
           [kg]</text>
         <text x="25" y="200" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
-          transform="rotate(-90,25,200)">PRESIÓN [psi]</text>
+          transform="rotate(-90,25,200)">PRESSÃO [psi]</text>
         <!-- Legend -->
         <rect x="90" y="30" width="250" height="75" fill="#0f0f0f" stroke="#333" stroke-width="1" />
         <line x1="100" y1="50" x2="130" y2="50" stroke="#4a9eff" stroke-width="2" /><text x="136" y="54" fill="#aaa"
@@ -1035,29 +984,26 @@
           font-size="10" font-family="IBM Plex Mono">RS Judy (oficial)</text>
         <line x1="490" y1="46" x2="530" y2="46" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6,3" /><text
           x="536" y="50" fill="#ff6b35" font-size="10" font-family="IBM Plex Mono">RS Judy (modelo)</text>
-        <text x="350" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">PRESIÓN vs PESO
+        <text x="350" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">PRESSÃO vs PESO
           — COMPARATIVA MODELO/FABRICANTE</text>
       </svg>
     </div>
-    <p class="chart-legend">Figura 1. Comparativa entre presión predicha por el modelo (línea discontinua) y tablas
-      oficiales del fabricante (línea continua) para tres modelos representativos. Fox 36 Factory y Pike Ultimate
-      muestran convergencia excelente. RS Judy evidencia divergencia en extremos del rango de peso por no-linealidad
+    <p class="chart-legend">Figura 1. Comparativa entre a pressão predita pelo modelo (linha tracejada) e tabelas
+      oficiais do fabricante (linha contínua) para três modelos representativos. Fox 36 Factory e Pike Ultimate
+      mostram convergência excelente. RS Judy evidencia divergência nos extremos da faixa de peso por não-linearidade
       Solo Air.</p>
 
-    <h2>4. SAG DE RUEDA EN FULL-SUSPENSION</h2>
+    <h2>4. SAG DE RODA EM FULL-SUSPENSION</h2>
 
-    <p style="color:#bbb;font-style:italic;">Este es el punto donde el modelo se separa de todas las calculadoras comerciales. El SAG que mides en el amortiguador no es el SAG de tu rueda: entre uno y otro está la palanca del cuadro (el leverage ratio). Aquí se traduce de uno a otro — que es lo que de verdad sientes al rodar.</p>
+    <p style="color:#bbb;font-style:italic;">Este é o ponto onde o modelo se separa de todas as calculadoras comerciais. O SAG que você mede no amortecedor não é o SAG da sua roda: entre um e outro está a alavanca do quadro (o leverage ratio). Aqui se traduz de um para o outro — que é o que você de fato sente ao pedalar.</p>
 
-    <h3>4.1 Distinción SAG de Shock vs SAG de Rueda</h3>
-    <p>Un diferenciador técnico fundamental del presente modelo es la distinción entre el SAG del shock (medida directa
-      sobre el componente) y el SAG de rueda real (recorrido de la rueda trasera como porcentaje del travel total del
-      cuadro). Esta distinción es relevante porque:</p>
+    <h3>4.1 Distinção SAG de Shock vs SAG de Roda</h3>
+    <p>Um diferenciador técnico fundamental do presente modelo é a distinção entre o SAG do shock (medida direta sobre o componente) e o SAG de roda real (curso da roda traseira como porcentagem do travel total do quadro). Esta distinção é relevante porque:</p>
 
     <ul>
-      <li>El rider percibe el SAG de rueda, no el SAG del shock</li>
-      <li>Las recomendaciones de los fabricantes de cuadros se expresan en SAG de rueda</li>
-      <li>Un mismo porcentaje de SAG del shock puede corresponder a SAG de rueda muy diferentes según el leverage ratio
-        del cuadro</li>
+      <li>O ciclista percebe o SAG de roda, não o SAG do shock</li>
+      <li>As recomendações dos fabricantes de quadros são expressas em SAG de roda</li>
+      <li>Uma mesma porcentagem de SAG do shock pode corresponder a SAG de roda muito diferentes conforme o leverage ratio do quadro</li>
     </ul>
 
     <div class="equation">
@@ -1066,31 +1012,30 @@
       SAG_rueda [%] = SAG_rueda [mm] / Travel_cuadro × 100
 
       <br><br>
-      Donde LR(SAG%) es el Leverage Ratio interpolado en el punto de SAG
-      del cuadro específico.
+      Onde LR(SAG%) é o Leverage Ratio interpolado no ponto de SAG
+      do quadro específico.
     </div>
 
-    <h3>4.2 Ejemplo Numérico — Santa Cruz Megatower</h3>
-    <p>Cuadro: Santa Cruz Megatower V2 (travel 165mm, shock stroke 62mm)<br>
-      Rider: 82 kg, disciplina Enduro, SAG objetivo 30%</p>
+    <h3>4.2 Exemplo Numérico — Santa Cruz Megatower</h3>
+    <p>Quadro: Santa Cruz Megatower V2 (travel 165mm, shock stroke 62mm)<br> Ciclista: 82 kg, disciplina Enduro, SAG alvo 30%</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Parámetro</th>
+            <th>Parâmetro</th>
             <th>Shock (RS Super Deluxe)</th>
-            <th>Rueda</th>
+            <th>Roda</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>SAG objetivo</td>
+            <td>SAG alvo</td>
             <td>30% = 18.6mm</td>
             <td>—</td>
           </tr>
           <tr>
-            <td>Leverage Ratio en SAG</td>
+            <td>Leverage Ratio no SAG</td>
             <td>LR = 2.65 @ 30%</td>
             <td>—</td>
           </tr>
@@ -1100,20 +1045,19 @@
             <td>18.6 × 2.65 = 49.3mm</td>
           </tr>
           <tr>
-            <td>SAG como % del travel</td>
+            <td>SAG como % do curso</td>
             <td>30% (shock stroke)</td>
             <td>29.9% (165mm travel)</td>
           </tr>
           <tr class="highlight-row">
-            <td>Presión calculada</td>
+            <td>Pressão calculada</td>
             <td>183.3 psi</td>
             <td>—</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="chart-legend">Tabla 2. En este caso el LR = 2.65 produce casi la misma cifra porcentual, pero con cuadros
-      de LR variable (ej. Specialized Enduro, LR 3.60 en inicio de recorrido) la diferencia es significativa.</p>
+    <p class="chart-legend">Tabela 2. Neste caso o LR = 2.65 produz quase a mesma cifra percentual, mas com quadros de LR variável (ex. Specialized Enduro, LR 3.60 no início do curso) a diferença é significativa.</p>
 
     <!-- SVG CHART 2 — Leverage curves -->
     <div class="chart-container">
@@ -1161,44 +1105,35 @@
         <line x1="410" y1="98" x2="440" y2="98" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5,3" /><text
           x="446" y="102" fill="#aaa" font-size="10" font-family="IBM Plex Mono">Trek Supercaliber (1.72→1.67)</text>
         <!-- Axis labels -->
-        <text x="370" y="362" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">POSICIÓN EN EL
-          RECORRIDO [%]</text>
+        <text x="370" y="362" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">POSIÇÃO NO
+          CURSO [%]</text>
         <text x="22" y="185" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
           transform="rotate(-90,22,185)">LEVERAGE RATIO</text>
         <text x="370" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">CURVAS DE
-          LEVERAGE RATIO — 4 CUADROS REPRESENTATIVOS</text>
+          LEVERAGE RATIO — 4 QUADROS REPRESENTATIVOS</text>
       </svg>
     </div>
-    <p class="chart-legend">Figura 2. Curvas de leverage ratio para cuatro cuadros representativos. El Specialized
-      Enduro (LR 3.60→2.45) exhibe la mayor progresividad estructural. El Trek Supercaliber XC es casi lineal. La línea
-      vertical a 30% indica el rango típico de SAG de Enduro.</p>
+    <p class="chart-legend">Figura 2. Curvas de leverage ratio para quatro quadros representativos. O Specialized Enduro (LR 3.60→2.45) exibe a maior progressividade estrutural. O Trek Supercaliber XC é quase linear. A linha vertical a 30% indica a faixa típica de SAG de Enduro.</p>
 
-    <h2>5. VALIDACIÓN MONTE CARLO</h2>
+    <h2>5. VALIDAÇÃO MONTE CARLO</h2>
 
-    <h3>5.1 Diseño de la Simulación</h3>
-    <p>Para cada modelo, se ejecutaron un número representativo de iteraciones con variación aleatoria de los parámetros
-      con mayor
-      incertidumbre operacional real:</p>
+    <h3>5.1 Desenho da Simulação</h3>
+    <p>Para cada modelo, executou-se um número representativo de iterações com variação aleatória dos parâmetros de maior incerteza operacional real:</p>
 
     <div class="methodology-box">
-      <h3>Distribuciones de Incertidumbre</h3>
+      <h3>Distribuições de Incerteza</h3>
       <ul>
-        <li><strong>Temperatura ambiente:</strong> Uniforme [0°C, 40°C] — representa variación climática LatAm/mundial
+        <li><strong>Temperatura ambiente:</strong> Uniforme [0°C, 40°C] — representa variação climática LatAm/mundial
         </li>
-        <li><strong>Peso del rider:</strong> Normal(μ, σ=1.5 kg) — incertidumbre de medición en balanza</li>
-        <li><strong>Medición de SAG:</strong> Normal(SAG_target, σ=2mm) — error de medición con regla física</li>
-        <li><strong>Exponente politrópico γ:</strong> Uniforme [1.20, 1.40] — rango físico real de compresión
-          rápida/lenta</li>
-        <li><strong>Diámetro efectivo pistón:</strong> Normal(d_eff_cal, σ=d_eff_cal×0.05) — incertidumbre
-          post-calibración</li>
-        <li><strong>Volumen cámara positiva:</strong> Normal(V₀_cal, σ=V₀_cal×0.08) — variación por tolerancias de
-          manufactura</li>
+        <li><strong>Peso do ciclista:</strong> Normal(μ, σ=1.5 kg) — incerteza de medição em balança</li>
+        <li><strong>Medição de SAG:</strong> Normal(SAG_target, σ=2mm) — erro de medição com régua física</li>
+        <li><strong>Expoente politrópico γ:</strong> Uniforme [1.20, 1.40] — faixa física real de compressão rápida/lenta</li>
+        <li><strong>Diâmetro efetivo do pistão:</strong> Normal(d_eff_cal, σ=d_eff_cal×0.05) — incerteza pós-calibração</li>
+        <li><strong>Volume da câmara positiva:</strong> Normal(V₀_cal, σ=V₀_cal×0.08) — variação por tolerâncias de manufatura</li>
       </ul>
     </div>
 
-    <p>Criterio de éxito: la presión calculada por el modelo produce un SAG real dentro de ±2% del objetivo bajo las
-      condiciones de incertidumbre simuladas. Un modelo con 89% de confianza significa que en 8,900 de 10,000 escenarios
-      aleatorios, el rider que siga la recomendación logrará su SAG objetivo con una desviación ≤2%.</p>
+    <p>Critério de sucesso: a pressão calculada pelo modelo produz um SAG real dentro de ±2% do alvo sob as condições de incerteza simuladas. Um modelo com 89% de confiança significa que em 8.900 de 10.000 cenários aleatórios, o ciclista que seguir a recomendação atingirá seu SAG alvo com um desvio ≤2%.</p>
 
     <h3>5.2 Resultados por Segmento</h3>
 
@@ -1208,10 +1143,10 @@
           <tr>
             <th>Segmento</th>
             <th>Modelos representativos</th>
-            <th>Confianza Monte Carlo</th>
-            <th>Error medio [%SAG]</th>
+            <th>Confiança Monte Carlo</th>
+            <th>Erro médio [%SAG]</th>
             <th>P95 error [%SAG]</th>
-            <th>Banda de presión</th>
+            <th>Faixa de pressão</th>
           </tr>
         </thead>
         <tbody>
@@ -1248,7 +1183,7 @@
             <td>±5% P₀</td>
           </tr>
           <tr>
-            <td>Shocks (sin ground truth)</td>
+            <td>Shocks (sem ground truth)</td>
             <td>RS Super Deluxe + Megatower</td>
             <td>42%</td>
             <td>—</td>
@@ -1258,9 +1193,7 @@
         </tbody>
       </table>
     </div>
-    <p class="chart-legend">Tabla 3. Resultados de validación Monte Carlo por segmento. El umbral de confianza fue ±2%
-      de SAG bajo incertidumbres operacionales reales. Los shocks sin ground truth de cuadro específico muestran baja
-      confianza reflejando la dependencia del resultado con el leverage ratio del cuadro.</p>
+    <p class="chart-legend">Tabela 3. Resultados de validação Monte Carlo por segmento. O limiar de confiança foi ±2% de SAG sob incertezas operacionais reais. Os shocks sem ground truth de quadro específico mostram baixa confiança, refletindo a dependência do resultado em relação ao leverage ratio do quadro.</p>
 
     <!-- SVG CHART 3 — Monte Carlo confidence distribution -->
     <div class="chart-container">
@@ -1314,9 +1247,9 @@
         <!-- Axis label -->
         <text x="370" y="365" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">MODELO</text>
         <text x="22" y="185" fill="#888" font-size="12" text-anchor="middle" font-family="IBM Plex Mono"
-          transform="rotate(-90,22,185)">CONFIANZA MONTE CARLO [%]</text>
-        <text x="370" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">CONFIANZA MONTE
-          CARLO — VALIDACIÓN DE DATASET</text>
+          transform="rotate(-90,22,185)">CONFIANÇA MONTE CARLO [%]</text>
+        <text x="370" y="16" fill="#666" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">CONFIANÇA MONTE
+          CARLO — VALIDAÇÃO DO DATASET</text>
         <!-- Segment labels -->
         <text x="185" y="55" fill="#4a9eff" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">ENTRY</text>
         <text x="320" y="55" fill="#a78bfa" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">MID</text>
@@ -1325,48 +1258,32 @@
         <text x="545" y="55" fill="#e8ff00" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">HIGH</text>
       </svg>
     </div>
-    <p class="chart-legend">Figura 3. Confianza Monte Carlo por modelo representativo de cada
-      segmento. La línea roja discontinua marca el umbral del 90%. Ningún modelo alcanza el umbral bajo incertidumbres
-      operacionales reales. Los modelos High (calibrados con 6 puntos de ground truth) se acercan al 89%.</p>
+    <p class="chart-legend">Figura 3. Confiança Monte Carlo por modelo representativo de cada segmento. A linha vermelha tracejada marca o limiar de 90%. Nenhum modelo atinge o limiar sob incertezas operacionais reais. Os modelos High (calibrados com 6 pontos de ground truth) se aproximam de 89%.</p>
 
-    <h2>6. LIMITACIONES DEL MODELO</h2>
+    <h2>6. LIMITAÇÕES DO MODELO</h2>
 
     <div class="limitation-box">
-      <h3>6.1 No-Identifiabilidad Parcial del Sistema</h3>
-      <p>El modelo de doble cámara tiene 4 parámetros libres (d_eff, V₀_pos, F_fric, V_tok) con datos de calibración de
-        6 puntos por modelo. Esta sobre-determinación (6 ecuaciones, 4 incógnitas) garantiza convergencia pero no
-        unicidad: múltiples combinaciones de parámetros pueden producir ajustes similares dentro del rango de
-        calibración.</p>
-      <p>La estrategia de mitigación adoptada fue fijar γ = calibrado empíricamente dentro del rango físico esperado
-        para compresión rápida con transferencia de calor parcial (parámetro con base física robusta) y usar
-        regularización implícita en los bounds de optimización. El error de generalización fuera del rango de
-        calibración (extrapolación a pesos extremos) no está validado.</p>
+      <h3>6.1 Não-Identificabilidade Parcial do Sistema</h3>
+      <p>O modelo de câmara dupla tem 4 parâmetros livres (d_eff, V₀_pos, F_fric, V_tok) com dados de calibração de 6 pontos por modelo. Esta sobre-determinação (6 equações, 4 incógnitas) garante convergência mas não unicidade: múltiplas combinações de parâmetros podem produzir ajustes similares dentro da faixa de calibração.</p>
+      <p>A estratégia de mitigação adotada foi fixar γ = calibrado empiricamente dentro da faixa física esperada para compressão rápida com transferência de calor parcial (parâmetro com base física robusta) e usar regularização implícita nos bounds de otimização. O erro de generalização fora da faixa de calibração (extrapolação a pesos extremos) não está validado.</p>
     </div>
 
     <div class="limitation-box">
-      <h3>6.2 Bug Corregido: Doble Contabilización del Ángulo de Shock</h3>
-      <p>En versiones anteriores del modelo (v1.0 y v2.0), se aplicaba una corrección adicional cos(θ_shock) sobre la
-        fuerza calculada. Este factor producía presiones artificialmente elevadas (ejemplo: 349 psi en RS Super Deluxe +
-        Megatower vs 183.3 psi correcto).</p>
-      <p>La corrección fue eliminada en v3.0 por la siguiente razón: el Leverage Ratio medido físicamente en el mundo
-        real ya incorpora la geometría angular del shock. LR = wheel_travel_differential / shock_stroke_differential es
-        una medida geométrica que incluye implícitamente el ángulo. Aplicar cos(θ) adicional equivale a corregir dos
-        veces el mismo efecto.</p>
-      <p><strong>Impacto de la corrección:</strong> RS Super Deluxe Ultimate + Santa Cruz Megatower: corrección de error
-        de doble contabilización angular produjo una reducción sustancial de presión hacia el rango físico real del
-        sistema.</p>
+      <h3>6.2 Bug Corrigido: Dupla Contabilização do Ângulo de Shock</h3>
+      <p>Em versões anteriores do modelo (v1.0 e v2.0), aplicava-se uma correção adicional cos(θ_shock) sobre a força calculada. Este fator produzia pressões artificialmente elevadas (exemplo: 349 psi em RS Super Deluxe + Megatower vs 183.3 psi correto).</p>
+      <p>A correção foi eliminada na v3.0 pela seguinte razão: o Leverage Ratio medido fisicamente no mundo real já incorpora a geometria angular do shock. LR = wheel_travel_differential / shock_stroke_differential é uma medida geométrica que inclui implicitamente o ângulo. Aplicar cos(θ) adicional equivale a corrigir duas vezes o mesmo efeito.</p>
+      <p><strong>Impacto da correção:</strong> RS Super Deluxe Ultimate + Santa Cruz Megatower: a correção do erro de dupla contabilização angular produziu uma redução substancial de pressão em direção à faixa física real do sistema.</p>
     </div>
 
     <div class="limitation-box">
-      <h3>6.3 No-Linealidad del Sistema Solo Air Entry-Level</h3>
-      <p>Los sistemas Solo Air de entrada (RS Judy, RS Recon, SR Suntour Epixon) exhiben una relación presión-peso
-        no-lineal que el modelo politrópico no captura completamente. La evidencia empírica de las tablas oficiales:</p>
+      <h3>6.3 Não-Linearidade do Sistema Solo Air Entry-Level</h3>
+      <p>Os sistemas Solo Air de entrada (RS Judy, RS Recon, SR Suntour Epixon) exibem uma relação pressão-peso não-linear que o modelo politrópico não captura completamente. A evidência empírica das tabelas oficiais:</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>Peso [kg]</th>
-              <th>Presión oficial RS Judy [psi]</th>
+              <th>Pressão oficial RS Judy [psi]</th>
               <th>Ratio [psi/N]</th>
             </tr>
           </thead>
@@ -1399,30 +1316,19 @@
           </tbody>
         </table>
       </div>
-      <p>El ratio psi/N no es constante — aumenta progresivamente. Esto indica que la cámara negativa pequeña del Solo
-        Air contribuye de forma no-lineal al balance de fuerzas, particularmente en el rango de pesos ligeros donde la
-        cámara negativa tiene mayor influencia relativa. El modelo politrópico simple predice un ratio más constante,
-        produciendo sobre-estimación en pesos ligeros e infra-estimación en pesos elevados.</p>
-      <p><strong>Implicación práctica:</strong> Para sistemas Solo Air entry, la banda de confianza del ±15% es la
-        representación honesta del alcance del modelo. Un rider de 60kg en RS Judy puede recibir una recomendación hasta
-        9 psi mayor que la tabla oficial.</p>
+      <p>O ratio psi/N não é constante — aumenta progressivamente. Isso indica que a câmara negativa pequena do Solo Air contribui de forma não-linear ao balanço de forças, particularmente na faixa de pesos leves onde a câmara negativa tem maior influência relativa. O modelo politrópico simples prediz um ratio mais constante, produzindo superestimação em pesos leves e subestimação em pesos elevados.</p>
+      <p><strong>Implicação prática:</strong> Para sistemas Solo Air entry, a faixa de confiança de ±15% é a representação honesta do alcance do modelo. Um ciclista de 60kg numa RS Judy pode receber uma recomendação até 9 psi maior que a tabela oficial.</p>
     </div>
 
     <div class="limitation-box">
-      <h3>6.4 Shocks Traseros sin Ground Truth de Cuadro</h3>
-      <p>La confianza del 42% para shocks sin cuadro específico refleja que el leverage ratio del cuadro es el factor
-        dominante de incertidumbre en la presión del amortiguador trasero. Un LR que varía entre 2.5 y 3.5 (rango típico
-        en enduro) produce una variación de presión de ~40% para el mismo peso y SAG objetivo. Sin información del
-        cuadro, el modelo no puede proporcionar una recomendación precisa, independientemente de la calidad del modelo
-        del shock.</p>
-      <p>La solución correcta para esta limitación es siempre especificar el tipo de linkage del cuadro (Horst Link,
-        VPP, DW-Link, Single Pivot, Switch Infinity, High Pivot) como mínimo, o el cuadro específico cuando esté
-        disponible.</p>
+      <h3>6.4 Shocks Traseiros sem Ground Truth de Quadro</h3>
+      <p>A confiança de 42% para shocks sem quadro específico reflete que o leverage ratio do quadro é o fator dominante de incerteza na pressão do amortecedor traseiro. Um LR que varia entre 2.5 e 3.5 (faixa típica em enduro) produz uma variação de pressão de ~40% para o mesmo peso e SAG alvo. Sem informação do quadro, o modelo não pode fornecer uma recomendação precisa, independentemente da qualidade do modelo do shock.</p>
+      <p>A solução correta para esta limitação é sempre especificar o tipo de linkage do quadro (Horst Link, VPP, DW-Link, Single Pivot, Switch Infinity, High Pivot) no mínimo, ou o quadro específico quando estiver disponível.</p>
     </div>
 
-    <h2>7. BASE DE DATOS DE SUSPENSIONES</h2>
+    <h2>7. BASE DE DADOS DE SUSPENSÕES</h2>
 
-    <h3>7.1 Cobertura del Catálogo</h3>
+    <h3>7.1 Cobertura do Catálogo</h3>
     <div class="table-wrap">
       <table>
         <thead>
@@ -1430,7 +1336,7 @@
             <th>Marca</th>
             <th>Modelos</th>
             <th>Calibrados</th>
-            <th>Segmentos cubiertos</th>
+            <th>Segmentos cobertos</th>
           </tr>
         </thead>
         <tbody>
@@ -1504,92 +1410,65 @@
       </table>
     </div>
 
-    <h3>7.2 Criterio de Transferencia de Parámetros</h3>
-    <p>Para los 104 modelos sin calibración directa, los parámetros se infieren por transferencia desde modelos
-      calibrados de la misma familia mediante las siguientes reglas:</p>
+    <h3>7.2 Critério de Transferência de Parâmetros</h3>
+    <p>Para os 104 modelos sem calibração direta, os parâmetros são inferidos por transferência a partir de modelos calibrados da mesma família mediante as seguintes regras:</p>
     <ul>
-      <li><strong>Misma marca, sistema de aire similar:</strong> Se escala V₀_pos por la relación de diámetros al
-        cuadrado. Ejemplo: Marzocchi Z1 → escala desde Fox 36 (misma plataforma EVOL Fox-owned).</li>
-      <li><strong>Misma familia, tier diferente:</strong> Se reduce F_fric en 15–30% para tier superior (mejores
-        sellos). V₀ y d_eff se mantienen con incertidumbre aumentada.</li>
-      <li><strong>Marca diferente, diseño comparable:</strong> Incertidumbre base ×2. La banda de confianza se amplía
-        correspondientemente.</li>
+      <li><strong>Mesma marca, sistema de ar similar:</strong> Escala-se V₀_pos pela relação de diâmetros ao quadrado. Exemplo: Marzocchi Z1 → escala a partir da Fox 36 (mesma plataforma EVOL Fox-owned).</li>
+      <li><strong>Mesma família, tier diferente:</strong> Reduz-se F_fric em 15–30% para tier superior (melhores retentores). V₀ e d_eff se mantêm com incerteza aumentada.</li>
+      <li><strong>Marca diferente, projeto comparável:</strong> Incerteza base ×2. A faixa de confiança se amplia correspondentemente.</li>
     </ul>
 
-    <h2>8. METODOLOGÍA DE PRESENTACIÓN DE RESULTADOS</h2>
-    <p>Una consecuencia directa de la validación Monte Carlo es la decisión de presentar resultados como rangos de
-      confianza en lugar de valores únicos. La presión recomendada se expresa como:</p>
+    <h2>8. METODOLOGIA DE APRESENTAÇÃO DE RESULTADOS</h2>
+    <p>Uma consequência direta da validação Monte Carlo é a decisão de apresentar resultados como faixas de confiança em vez de valores únicos. A pressão recomendada se expressa como:</p>
 
     <div class="equation">
       P_recomendada = P₀ ± P₀ × banda_segmento
 
       <br><br>
-      Ejemplo (Fox 36 Factory, 80kg, Trail):
+      Exemplo (Fox 36 Factory, 80kg, Trail):
       P = 94 psi → Rango: 89 – 99 psi (±5%)
 
-      Ejemplo (RS Judy, 70kg, Trail):
+      Exemplo (RS Judy, 70kg, Trail):
       P = 88 psi → Rango: 75 – 101 psi (±15%)
     </div>
 
-    <p>Esta presentación es más honesta que un valor único de precisión aparente, y más útil en la práctica: el rider
-      ajusta dentro del rango por sensación en pista, usando el valor central como punto de partida documentado.</p>
+    <p>Esta apresentação é mais honesta que um valor único de precisão aparente, e mais útil na prática: o ciclista ajusta dentro da faixa pela sensação na trilha, usando o valor central como ponto de partida documentado.</p>
 
-    <h2>8.5 FRAMEWORK METODOLÓGICO — MODELO DE COHERENCIA DINÁMICA</h2>
+    <h2>8.5 FRAMEWORK METODOLÓGICO — MODELO DE COERÊNCIA DINÂMICA</h2>
     <div class="methodology-box">
-      <p>El proceso iterativo de calibración, validación y toma de decisión de
-        parámetros del presente modelo sigue los principios operativos del
-        <strong>Modelo de Coherencia Dinámica (MCD)</strong>, framework propietario
-        desarrollado por Carlos Ravello (2025).
+      <p>O processo iterativo de calibração, validação e tomada de decisão de parâmetros do presente modelo segue os princípios operativos do <strong>Modelo de Coerência Dinâmica (MCD)</strong>, framework proprietário desenvolvido por Carlos Ravello (2025).
       </p>
-      <p>El MCD postula que un sistema alcanza coherencia funcional óptima no
-        eliminando su incertidumbre sino integrándola como variable explícita del
-        proceso. En términos del presente trabajo: la banda de confianza Monte Carlo,
-        la documentación de limitaciones y la decisión de presentar rangos en lugar
-        de valores únicos son consecuencias directas de aplicar el principio Ω de
-        coherencia dinámica al dominio de la ingeniería de suspensión neumática.</p>
-      <p>La arquitectura de decisión del motor de calibración incorpora correcciones
-        empíricas propietarias post-optimización derivadas del framework MCD que no
-        están documentadas en este White Paper. Sin la aplicación de dichas
-        correcciones, los parámetros calibrados producen resultados fuera del rango
-        de confianza reportado.</p>
-      <p><em>El framework MCD no está publicado en su forma completa.
-          Su referencia aquí corresponde a principios operativos aplicados al
-          presente dominio técnico. — Ravello, C. (2025). Modelo de Coherencia
-          Dinámica. Documento interno no publicado.</em></p>
+      <p>O MCD postula que um sistema atinge coerência funcional ótima não eliminando sua incerteza, mas integrando-a como variável explícita do processo. Em termos do presente trabalho: a faixa de confiança Monte Carlo, a documentação de limitações e a decisão de apresentar faixas em vez de valores únicos são consequências diretas de aplicar o princípio Ω de coerência dinâmica ao domínio da engenharia de suspensão pneumática.</p>
+      <p>A arquitetura de decisão do motor de calibração incorpora correções empíricas proprietárias pós-otimização derivadas do framework MCD que não estão documentadas neste White Paper. Sem a aplicação dessas correções, os parâmetros calibrados produzem resultados fora da faixa de confiança reportada.</p>
+      <p><em>O framework MCD não está publicado em sua forma completa. Sua referência aqui corresponde a princípios operativos aplicados ao presente domínio técnico. — Ravello, C. (2025). Modelo de Coerência Dinâmica. Documento interno não publicado.</em></p>
     </div>
 
-    <h2>9. DATOS TÉCNICOS DE SIMULACIÓN</h2>
+    <h2>9. DADOS TÉCNICOS DE SIMULAÇÃO</h2>
 
     <div class="data-card">
-      <h3>9.1 Especificación de la Simulación</h3>
+      <h3>9.1 Especificação da Simulação</h3>
       <ul>
-        <li><strong>Motor de física:</strong> Python 3.11 (calibración y validación) + JavaScript ES6 (producción web)
+        <li><strong>Motor de física:</strong> Python 3.11 (calibração e validação) + JavaScript ES6 (produção web)
         </li>
         <li><strong>Optimizador:</strong> Differential Evolution — SciPy 1.11, popsize=15, tol=0.001, maxiter=5000</li>
-        <li><strong>Monte Carlo:</strong> NumPy RandomState, iteraciones a escala por modelo, seed reproducible</li>
-        <li><strong>Bisección presión:</strong> parámetros de convergencia propietarios, convergencia garantizada
-          [20–500
-          psi]</li>
-        <li><strong>Curvas de leverage:</strong> Interpolación lineal por segmentos sobre 3–5 puntos documentados</li>
+        <li><strong>Monte Carlo:</strong> NumPy RandomState, iterações em escala por modelo, seed reprodutível</li>
+        <li><strong>Bisseção de pressão:</strong> parâmetros de convergência proprietários, convergência garantida [20–500 psi]</li>
+        <li><strong>Curvas de leverage:</strong> Interpolação linear por segmentos sobre 3–5 pontos documentados</li>
       </ul>
-      <h3>9.2 Reproducibilidad</h3>
-      <p>El modelo Python de calibración y validación (sag_model_final.py) está disponible para revisión técnica. Los
-        parámetros calibrados están congelados en el motor JavaScript de producción. Las fórmulas implementadas
-        corresponden exactamente a las ecuaciones descritas en este documento. Las correcciones propietarias derivadas
-        del framework MCD aplicadas en la fase post-calibración no están incluidas en el código fuente disponible para
-        revisión.</p>
+      <h3>9.2 Reprodutibilidade</h3>
+      <p>O modelo Python de calibração e validação (sag_model_final.py) está disponível para revisão técnica. Os parâmetros calibrados estão congelados no motor JavaScript de produção. As fórmulas implementadas correspondem exatamente às equações descritas neste documento. As correções proprietárias derivadas do framework MCD aplicadas na fase pós-calibração não estão incluídas no código-fonte disponível para revisão.</p>
     </div>
 
     <div class="cluster-links">
       <p
         style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;letter-spacing:2px;margin-bottom:15px;text-transform:uppercase;">
-        [ CLUSTER_DATA_LINKS ] // SUSPENSIÓN Y DINÁMICA MTB</p>
+        [ CLUSTER_DATA_LINKS ] // SUSPENSÃO E DINÂMICA MTB</p>
       <h3 style="font-size:1.2rem;color:#fff;margin-bottom:20px;font-weight:400;letter-spacing:1px">Recursos
         relacionados:</h3>
       <ul>
         <li style="margin-bottom:15px">
           <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[01]</span>
-          <a href="./como-ajustar-sag-suspension-mtb-es.html">Cómo configurar tu suspensión MTB: guía práctica con calculadora →</a>
+          <a href="./como-ajustar-sag-suspension-mtb-es.html">Como configurar sua suspensão MTB: guia prático com calculadora →</a>
         </li>
         <li style="margin-bottom:15px">
           <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[02]</span>
@@ -1601,12 +1480,12 @@
         </li>
         <li style="margin-bottom:15px">
           <span style="color:#6bffb8;font-size:0.8rem;margin-right:10px">[04]</span>
-          <a href="./white-paper-11v-12v-es.html">White Paper: Análisis Comparativo 11v vs 12v →</a>
+          <a href="./white-paper-11v-12v-es.html">White Paper: Análise Comparativa 11v vs 12v →</a>
         </li>
       </ul>
     </div>
 
-    <h2>10. REFERENCIAS BIBLIOGRÁFICAS</h2>
+    <h2>10. REFERÊNCIAS BIBLIOGRÁFICAS</h2>
     <div class="references">
       <ol>
         <li>Fox Racing Shox (2024). <em>Fox Suspension Setup & Tuning Guide — 2024 Product Line</em>. Fox Factory Inc.
@@ -1617,7 +1496,7 @@
         <li>SR Suntour (2021). <em>Fork Owner's Manual — Air Spring Pressure Reference Tables</em>. SR Suntour Inc.</li>
         <li>Öhlins Racing (2023). <em>RXF36/38 m.2 Air — Service Manual & Tuning Reference</em>. Öhlins Racing AB.</li>
         <li>Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P. (2007). <em>Numerical Recipes: The Art
-            of Scientific Computing</em> (3rd ed.). Cambridge University Press. — Bisección y optimización diferencial.
+            of Scientific Computing</em> (3rd ed.). Cambridge University Press. — Bisseção e otimização diferencial.
         </li>
         <li>Storn, R., & Price, K. (1997). "Differential Evolution — A Simple and Efficient Heuristic for Global
           Optimization over Continuous Spaces". <em>Journal of Global Optimization</em>, 11(4), 341–359. DOI:
@@ -1630,22 +1509,22 @@
     </div>
 
     <p style="margin-top:30px"><a href="../index.html#science"
-        style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px">← VOLVER AL
-        INICIO</a></p>
+        style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px">← VOLTAR AO
+        INÍCIO</a></p>
 
     <div class="footer">
       <div style="margin-bottom:20px">
         <strong>BikeLab Studio</strong><br>
-        Paraguay 300, Trujillo, La Libertad, Perú<br>
-        División de Investigación Técnica
+        Paraguay 300, Trujillo, La Libertad, Peru<br>
+        Divisão de Pesquisa Técnica
       </div>
       <div class="footer-grid">
-        <div><strong>White Paper v3.0:</strong><br>Modelo SAG — Suspensión MTB</div>
-        <div><strong>Autor:</strong><br>Carlos Ravello<br>Fundador de BikeLab Studio</div>
+        <div><strong>White Paper v3.0:</strong><br>Modelo SAG — Suspensão MTB</div>
+        <div><strong>Autor:</strong><br>Carlos Ravello<br>Fundador da BikeLab Studio</div>
       </div>
       <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;font-size:0.9em;color:#777">
-        Citación sugerida: <em>Ravello, C. — Bikelab Studio (2026). "Modelo Físico de Cámara Dual para Calibración de
-          SAG en Suspensiones MTB de Resorte Neumático". White Paper v3.0, Febrero 2026.</em>
+        Citação sugerida: <em>Ravello, C. — Bikelab Studio (2026). "Modelo Físico de Câmara Dupla para Calibração de
+          SAG em Suspensões MTB de Mola Pneumática". White Paper v3.0, Fevereiro 2026.</em>
       </div>
       <div style="margin-top:30px;padding-top:20px;border-top:1px solid #333;text-align:center">
         © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
