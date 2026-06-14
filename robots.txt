@@ -7,5 +7,6 @@ Disallow: /garmin-fit-temporal/
 Disallow: /calculadora suspensiones/
 Disallow: /whitepaper_simulation/
 Disallow: /articles/sag_calculator_v2.html
+Disallow: /articles/sag_calculator_v2_pt.html
 
 Sitemap: https://www.bikelabstudio.com/sitemap.xml
