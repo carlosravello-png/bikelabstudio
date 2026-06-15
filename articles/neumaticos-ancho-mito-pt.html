@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Mito do Pneu Fino: Física Real vs. Crença Popular | BikeLab Studio</title>
+  <meta name="description" content="Os pneus finos são mais rápidos? Análise tribológica e aerodinâmica com dados reais de laboratório. CRR medido, impedance loss, regra dos 105% e mercado peruano. BikeLab Studio, Trujillo.">
+  <meta name="author" content="Carlos Ravello">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html">
+  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html">
+  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-en.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-es.html">
+  <meta property="og:title" content="O Mito do Pneu Fino: Física Real vs. Crença Popular | BikeLab Studio">
+  <meta property="og:description" content="Os pneus finos são mais rápidos? Análise tribológica e aerodinâmica com dados reais de laboratório. CRR medido, impedance loss, regra dos 105% e mercado peruano. BikeLab Studio, Trujillo.">
+  <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="BikeLab Studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O Mito do Pneu Fino: Física Real vs. Crença Popular | BikeLab Studio">
+  <meta name="twitter:description" content="Os pneus finos são mais rápidos? Análise tribológica e aerodinâmica com dados reais de laboratório. CRR medido, impedance loss, regra dos 105% e mercado peruano. BikeLab Studio, Trujillo.">
+  <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp">
+
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "O Mito do Pneu Fino: Física Real vs. Crença Popular",
+      "alternativeHeadline": "Por que o 23mm não é mais rápido que o 28mm — e os watts para comprová-lo",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "datePublished": "2026-02-17",
+      "dateModified": "2026-02-17",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp",
+        "contentUrl": "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp",
+        "encodingFormat": "image/webp",
+        "representativeOfPage": true,
+        "name": "Pneus molhados na pista — O mito do pneu fino, BikeLab Studio"
+      },
+      "articleSection": "Física Aplicada ao Ciclismo",
+      "keywords": "pneu largo, resistência ao rolamento, CRR, impedance loss, pressão de pneu, Jan Heine, Silca, GP5000",
+      "inLanguage": "pt-BR",
+      "isAccessibleForFree": true,
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.20249146",
+        "url": "https://doi.org/10.5281/zenodo.20249146"
+      },
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+        "name": "Artigos Técnicos BikeLab Studio",
+        "description": "Série de artigos de engenharia ciclista: tribologia, termodinâmica, biomecânica e análise de dados. BikeLab Studio, Trujillo, Peru.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html#techarticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html"
+      },
+      "headline": "O Mito do Pneu Fino: Física Real vs. Crença Popular",
+      "alternativeHeadline": "Por que o 23mm não é mais rápido que o 28mm — e os watts medidos em laboratório para comprová-lo",
+      "inLanguage": "pt-BR",
+      "isAccessibleForFree": true,
+      "description": "Os pneus finos são mais rápidos? Análise tribológica e aerodinâmica com dados reais de laboratório. CRR medido, impedance loss, regra dos 105% e mercado peruano. Serviço especializado em diagnóstico de quadros de bicicleta e manutenção integral de suspensões e transmissões multimarca.",
+      "image": [
+        "https://www.bikelabstudio.com/articles/images/neumaticos-hero-llantas-humedas-bikelab.webp"
+      ],
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "datePublished": "2026-02-17",
+      "dateModified": "2026-02-17",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Rolling resistance",
+          "sameAs": "https://en.wikipedia.org/wiki/Rolling_resistance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicycle tire",
+          "sameAs": "https://en.wikipedia.org/wiki/Bicycle_tire"
+        },
+        {
+          "@type": "Thing",
+          "name": "Aerodynamics",
+          "sameAs": "https://en.wikipedia.org/wiki/Aerodynamics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tribology",
+          "sameAs": "https://en.wikipedia.org/wiki/Tribology"
+        }
+      ],
+      "keywords": [
+        "pneu largo",
+        "resistência ao rolamento",
+        "CRR",
+        "impedance loss",
+        "tire pressure",
+        "105% rule",
+        "GP5000",
+        "Silca",
+        "Bicycle Rolling Resistance"
+      ],
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+        "name": "Artigos Técnicos BikeLab Studio",
+        "description": "Série de artigos de engenharia ciclista: tribologia, termodinâmica, biomecânica e análise de dados. BikeLab Studio, Trujillo, Peru.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "kg:/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      },
+      "description": "Investigador independente. Fundador da BikeLab Studio, Zoovet Travel e Katsudōmo. Arquiteto de identidades digitais verificáveis com nós semânticos entrelaçados."
+    },
+    {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coerência Dinâmica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "description": "Framework metodológico de três eixos aplicado ao diagnóstico físico de sistemas ciclistas: (E) mecanismos de degradação energética em componentes, (C) análise e quantificação de sinais físicos de deterioração, (P) critérios de manutenção e longevidade do sistema."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/bikelabstudio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Os pneus finos são mais rápidos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O texto demonstra que depende da superfície, da pressão e da aerodinâmica do sistema aro+pneu; no asfalto real peruano, o 28mm na pressão correta costuma ser mais eficiente por menores perdas por impedância."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é CRR e como se converte em watts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Define-se como o coeficiente de resistência ao rolamento e converte-se em potência com Prr = Crr·m·g·v, como se mostra nas fórmulas do artigo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que são as perdas por impedância (impedance loss)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São watts perdidos por vibração e energia vertical quando o pneu não absorve irregularidades e transmite impulsos ao sistema ciclista+bicicleta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a regra dos 105%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A regra relaciona a largura externa do aro com a largura real do pneu montado para evitar separação de fluxo e penalização aerodinâmica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando um pneu fino realmente ganha?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em superfícies perfeitas (velódromo ou asfalto extremamente liso) e cenários onde a aerodinâmica domina, desde que se cumpra a compatibilidade com o aro (105%)."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artigos",
+          "item": "https://www.bikelabstudio.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "O Mito do Pneu Fino: Física Real vs. Crença Popular",
+          "item": "https://www.bikelabstudio.com/articles/neumaticos-ancho-mito-pt.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .lang-switch { float: right; font-size: 12px; }
+        .lang-switch a { color: #888; text-decoration: none; padding: 5px 10px; border: 1px solid #444; transition: all 0.3s; }
+        .lang-switch a:hover { color: #fff; border-color: #666; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+
+        .image-container { margin: 50px 0; border: 1px solid #333; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow-x: auto;
+        }
+        .formula mjx-container { color: #f2f2f2 !important; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .field-note {
+            background-color: #0a0f0a;
+            border-left: 3px solid #4a9e6b;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .field-note p { color: #aac8b4; margin-bottom: 0; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; }
+
+        .myth-box {
+            background-color: #140a0a;
+            border: 1px solid #5a2a2a;
+            border-left: 3px solid #cc3333;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .myth-box .myth-label { font-size: 10px; color: #cc3333; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .myth-box p { color: #cc9999; margin-bottom: 0; }
+
+        .fact-box {
+            background-color: #0a140a;
+            border: 1px solid #2a5a2a;
+            border-left: 3px solid #33cc66;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .fact-box .fact-label { font-size: 10px; color: #33cc66; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .fact-box p { color: #99cc99; margin-bottom: 0; }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        .references h2 { margin-top: 0; }
+
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #888;
+        }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #aaa; }
+
+        .market-card {
+            background-color: #0e0e0e;
+            border: 1px solid #2a2a2a;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-left: 3px solid #555;
+        }
+        .market-card .country { font-size: 10px; color: #888; letter-spacing: 3px; margin-bottom: 6px; }
+        .market-card .leader { font-size: 13px; color: #fff; margin-bottom: 6px; }
+        .market-card p { font-size: 12px; color: #999; margin-bottom: 0; }
+
+        .big-number {
+            font-size: 36px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 2px;
+            display: block;
+            margin: 10px 0 4px 0;
+        }
+        .big-number-label {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+            background-color: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            padding: 25px;
+        }
+
+        .number-cell { text-align: center; }
+
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 22px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .footer-grid, .numbers-grid { grid-template-columns: 1fr; }
+        }
+        /* Nav bar */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono), monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s, pointer-events 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono), monospace; font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; box-sizing: border-box; border-bottom: 1px solid #151515; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:hover { color: var(--accent); border-color: #333; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-bar .lang-switch { position: static; float: none; }
+        .nav-bar .lang-switch a { font-family: var(--mono), monospace; font-size: 0.7rem; color: var(--text); padding: 12px 20px; min-height: 44px; min-width: 44px; box-sizing: border-box; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); display: inline-flex; align-items: center; justify-content: center; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; min-width: 44px; box-sizing: border-box; color: var(--text); text-decoration: none; font-family: var(--mono), monospace; font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .nav-overlay { z-index: 1004; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; gap: 12px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } }
+    </style>
+
+    <!-- Dublin Core + Open Access Metadata -->
+    <meta name="DC.title" content="Pneus Largos no Ciclismo de Montanha: O Mito da Aderência">
+    <meta name="DC.creator" content="Ravello Joo, Carlos Eduardo">
+    <meta name="DC.creator.url" content="https://carlosravello.com">
+    <meta name="DC.identifier.orcid" content="https://orcid.org/0009-0007-5631-7436">
+    <meta name="DC.identifier" content="https://doi.org/10.5281/zenodo.20249146">
+    <meta name="DC.language" content="pt-BR">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.date" content="2026-02-17">
+    <meta name="DC.rights" content="https://creativecommons.org/licenses/by/4.0/">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="application/pdf">
+    <meta name="DC.accessRights" content="open access">
+    <meta name="citation_title" content="Pneus Largos no Ciclismo de Montanha: O Mito da Aderência">
+    <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+    <meta name="citation_author_institution" content="BikeLab Studio">
+    <meta name="citation_publication_date" content="2026-02-17">
+    <meta name="citation_language" content="pt-BR">
+    <meta name="citation_pdf_url" content="https://www.bikelabstudio.com/papers/bikelabstudio-neumaticos-ancho-mito-pt.pdf">
+    <meta name="citation_doi" content="10.5281/zenodo.20249146">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu de navegação">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index.html">INÍCIO</a> · <a href="neumaticos-ancho-mito-es.html">ES</a> · <a href="neumaticos-ancho-mito-en.html">EN</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../index.html">INÍCIO</a>
+            <a href="../servicios.html">SERVIÇOS</a>
+            <a href="../tubelizado-es.html">TUBELESS</a>
+            <a href="../suspension-es.html">SUSPENSÃO</a>
+            <a href="../centrado-ruedas-es.html">CENTRAGEM</a>
+            <a href="../purgado-frenos-es.html">SANGRIA</a>
+            <a href="../mantenimiento-general-es.html">MANUT. GERAL</a>
+            <a href="../mantenimiento-preventivo-es.html">MANUT. PREVENTIVA</a>
+            <a href="../index.html#science">DADOS TÉCNICOS</a>
+            <a href="../index.html#tips">DICAS</a>
+            <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTATO</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCALIZAÇÃO</a>
+        </nav>
+    </div>
+
+    <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20consultar%20sobre%20servicios" class="wa-float" aria-label="Contactar por WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WHATSAPP_
+    </a>
+
+<div class="container" style="padding-top: 100px;">
+
+    <a href="../index.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // ANÁLISE_DE_ROLAMENTO</div>
+        <div class="category">FÍSICA_APLICADA // DINÂMICA_DE_PNEUS // DADOS_DE_LABORATÓRIO</div>
+        <h1>O Mito do Pneu Fino</h1>
+        <div class="subtitle">Por que o 23mm não é mais rápido que o 28mm — e os watts medidos em laboratório para comprová-lo</div>
+        <div class="meta">
+            Autor: Carlos Ravello // Fundador da BikeLab Studio<br>
+            Data: Fevereiro 2026 // Fontes: BicycleRollingResistance.com · Silca · Bicycle Quarterly
+        </div>
+    </div>
+
+
+        <!-- OPEN ACCESS DOWNLOAD -->
+        <div style="margin: 25px 0 35px 0; padding: 18px 24px; background: #0a0a0a; border: 1px solid #444; border-left: 4px solid #e0e0e0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+            <div>
+                <span style="font-family: 'Courier New', monospace; font-size: 10px; color: #666; letter-spacing: 3px; display: block; margin-bottom: 8px;">[ OPEN_ACCESS ] // CC_BY_4.0</span>
+                <a href="https://www.bikelabstudio.com/papers/bikelabstudio-neumaticos-ancho-mito-pt.pdf" download style="font-family: 'Courier New', monospace; font-size: 13px; color: #ffffff; text-decoration: none; letter-spacing: 2px; border-bottom: 1px solid #555; padding-bottom: 2px; transition: color 0.3s;" onmouseover="this.style.color='#aaa'" onmouseout="this.style.color='#fff'">↓ BAIXAR PDF</a>
+            </div>
+            <div style="text-align: right;">
+                <span style="font-family: 'Courier New', monospace; font-size: 9px; color: #555; letter-spacing: 2px; display: block; margin-bottom: 4px;">DOI</span>
+                <a href="https://doi.org/10.5281/zenodo.20249146" target="_blank" rel="noopener" style="font-family: 'Courier New', monospace; font-size: 11px; color: #888; text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">10.5281/zenodo.20249146</a>
+            </div>
+        </div>
+
+<!-- HERO IMAGE -->
+    <div class="image-container">
+        <img src="images/neumaticos-hero-llantas-humedas-bikelab.webp" width="800" height="533"
+             alt="Pneus MTB sobre superfície molhada — comparativo de largura e tubeless — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Comparativo de larguras de pneu — BikeLab Studio">
+    </div>
+
+    <!-- INTRODUÇÃO -->
+    <p>A pergunta chega quase toda semana ao ateliê. Às vezes a faz o ciclista de estrada que quer passar de 25mm para 28mm mas tem medo de "perder velocidade". Às vezes a faz quem comprou uma bicicleta nova com pneus de 28mm e está convencido de que deveria trocá-los por 25mm "para ir mais rápido". E às vezes — com toda honestidade — a faz alguém que acaba de gastar uma quantia importante em pneus ultrafinos porque "no ciclismo de estrada os pneus finos são mais rápidos".</p>
+
+    <p>A crença é quase universal. E está, no asfalto real peruano, praticamente sempre errada.</p>
+
+    <p>Não é uma opinião. Os dados de laboratório dos últimos oito anos comprovam isso com clareza suficiente para que não haja muita margem de debate. O que sim requer explicação é <em>por que</em> a física diz o contrário do que a intuição sugere — e quais são as condições exatas em que o pneu fino efetivamente ganha.</p>
+
+    <p>É isso o que analiso aqui.</p>
+
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:22px;margin:28px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// Resposta direta</div>
+      <p style="margin:0;">Os pneus finos são mais rápidos? No asfalto real, não. À mesma pressão, um pneu de <strong>28 mm rola igual ou melhor que um de 23 mm</strong>, porque se deforma menos por volta e perde menos energia por histerese — os dados de laboratório dos últimos anos confirmam isso. O fino só ganha em casos muito específicos (pista perfeita, prioridade aerodinâmica extrema). Para a maioria —e mais ainda no asfalto irregular peruano— um pneu um pouco mais largo, na pressão correta, é mais rápido, mais confortável e com mais aderência.</p>
+    </div>
+
+    <!-- MÓDULO 01 -->
+    <h2 id="modulo_01-el_mercado_peruano-lo_que_se_usa_realmente">MÓDULO_01 // O_MERCADO_PERUANO // O_QUE_REALMENTE_SE_USA</h2>
+
+    <p>Antes de falar de física, o contexto local importa. Porque o debate da largura de pneu no Peru não é o mesmo debate da Europa ou dos EUA — o mercado é diferente, as superfícies são diferentes, e as marcas disponíveis são diferentes.</p>
+
+    <p>O grupo Cheng Shin Rubber — que fabrica Maxxis e CST — controla estimados mais de <span class="data-highlight">40% do mercado total de reposição no Peru</span>. Não é um dado menor: significa que a maioria dos pneus que rodam em bicicletas peruanas, de Lima até as províncias, saem da mesma corporação taiwanesa.</p>
+
+    <div class="market-card">
+        <div class="country">PERU // MERCADO_2024-2025</div>
+        <div class="leader">Maxxis · CST · Kenda — Líderes de volume</div>
+        <p>A Maxxis domina o segmento esportivo e MTB, sendo o modelo mais procurado no MercadoLibre Peru. CST e Kenda lideram em volume massivo e nas províncias, equipando a maioria das bicicletas urbanas e de transporte. A Continental GP5000 é a referência em estrada de alto desempenho em Lima — nicho, mas presente. A Schwalbe existe no segmento gravel/MTB premium, mas seu preço a torna inacessível para a maior parte do mercado.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">CHILE // MERCADO_2024-2025</div>
+        <div class="leader">Specialized · Continental · Schwalbe — Canal e-commerce avançado</div>
+        <p>O e-commerce chileno é significativamente mais maduro. Schwalbe e Continental têm presença real no mercado massivo, não só no segmento premium. O MTB lidera o volume total.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">COLÔMBIA // MERCADO_2024-2025</div>
+        <div class="leader">Vittoria · Maxxis · Chaoyang — Tradição de estrada</div>
+        <p>A tradição nacional no ciclismo de estrada faz com que a Vittoria tenha uma presença real que em outros países latino-americanos não existe. Grande volume em lojas locais.</p>
+    </div>
+
+    <div class="market-card">
+        <div class="country">ARGENTINA // MERCADO_2024-2025</div>
+        <div class="leader">Imperial Cord (local) · Maxxis · Continental</div>
+        <p>As restrições de importação afetam o estoque de marcas internacionais. A Imperial Cord, fabricante local, tem participação significativa que em outros países não existe. O MercadoLibre é o canal dominante.</p>
+    </div>
+
+    <p>Por que isso importa? Porque a pergunta "qual pneu é melhor?" não pode ser respondida sem saber o que está disponível, a que preço, e para que tipo de rolamento. Um ciclista em Trujillo que pedala asfalto costeiro em uma rota plana tem um problema tribológico diferente do de alguém que sobe à serra em gravel.</p>
+
+    <!-- MÓDULO 02 -->
+    <h2 id="modulo_02-crr-la_metrica_que_importa">MÓDULO_02 // CRR // A_MÉTRICA_QUE_IMPORTA</h2>
+
+    <p>O Coeficiente de Resistência ao Rolamento (CRR) é a variável que define quanta energia consome um pneu por unidade de distância percorrida. Pode ser convertido diretamente em watts perdidos por meio da equação:</p>
+
+    <div class="formula">
+        $$F_{rr} = C_{rr} \times m \times g$$
+        $$P_{rr} = F_{rr} \times v = C_{rr} \times m \times g \times v$$
+        <div class="source">Onde: Crr = coeficiente de resistência ao rolamento (adimensional) / m = massa total do sistema (kg) / g = 9.81 m/s² / v = velocidade (m/s) / P = potência perdida em watts</div>
+    </div>
+
+    <p>O mecanismo físico por trás do CRR é a <strong>histerese do material</strong>: quando a carcaça do pneu se deforma ao entrar em contato com a superfície, absorve energia. Ao recuperar sua forma, não devolve toda essa energia — parte se dissipa como calor. Essa energia dissipada é a resistência ao rolamento.</p>
+
+    <p>Aqui entra a física que contradiz a intuição popular: um pneu mais largo, à mesma carga, se deforma de maneira diferente que um fino. A deformação é mais larga, porém mais curta. O pneu fino tem uma deformação longa e estreita que implica maior curvatura e maior ciclo de deformação por volta. Mais ciclos de deformação por quilômetro = mais perda por histerese.</p>
+
+    <div class="myth-box">
+        <div class="myth-label">MITO_POPULAR</div>
+        <p>"Os pneus finos têm menos contato com o solo, por isso rolam mais rápido e com menos resistência."</p>
+    </div>
+
+    <div class="fact-box">
+        <div class="fact-label">FÍSICA_REAL</div>
+        <p>A área de contato total entre pneu e solo depende quase exclusivamente da carga e da pressão — não da largura. Se a carga é de 50 kg e a pressão é de 80 psi, a área de contato é praticamente a mesma em um pneu de 25mm ou 32mm. O que muda é a <em>forma</em>: estreita e longa vs. curta e larga. A forma curta-larga implica menor deformação da carcaça por volta e, portanto, menor perda por histerese. [Jan Heine, Bicycle Quarterly / Josh Poertner, Silca]</p>
+    </div>
+
+    <!-- MÓDULO 03 -->
+    <h2 id="modulo_03-datos_de_laboratorio-los_vatios_reales">MÓDULO_03 // DADOS_DE_LABORATÓRIO // OS_WATTS_REAIS</h2>
+
+    <p>A Bicycle Rolling Resistance (BRR) é o laboratório de referência independente para pneus de bicicleta. Sua metodologia padronizada mede os watts perdidos por resistência ao rolamento a 29 km/h, com uma carga de 42.5 kg por pneu, ajustando a pressão de teste conforme a largura real medida de cada pneu — não uma pressão fixa arbitrária.</p>
+
+    <p>Os dados a seguir são medições reais, publicadas, citáveis. Não são estimativas nem projeções.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo (mesmo composto)</th>
+                <th>Largura medida</th>
+                <th>Pressão de teste</th>
+                <th>Watts (Crr)</th>
+                <th>Ranking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Continental GP5000 (clincher)</td>
+                <td>25mm (especificado)</td>
+                <td>80 psi / 5.5 bar</td>
+                <td class="data-highlight">12.1 W (CRR: 0.00363)</td>
+                <td>Referência</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>25mm</td>
+                <td>~80 psi ajustado</td>
+                <td class="data-highlight">10.1 W</td>
+                <td>Melhoria tubeless</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td class="data-green">28mm</td>
+                <td>~72 psi ajustado</td>
+                <td class="data-green">9.7 W</td>
+                <td class="data-green">MAIS RÁPIDO QUE 25mm</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>30mm</td>
+                <td>~67 psi ajustado</td>
+                <td class="data-highlight">10.0 W</td>
+                <td>Quase igual ao 28mm</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 S TR</td>
+                <td>32mm</td>
+                <td>~60 psi ajustado</td>
+                <td class="data-highlight">12.8 W</td>
+                <td>Aumento notável</td>
+            </tr>
+            <tr>
+                <td>Continental GP5000 TT TR</td>
+                <td>28mm</td>
+                <td>~72 psi ajustado</td>
+                <td class="data-green">8.3 W</td>
+                <td class="data-green">Top 5 estrada mundial</td>
+            </tr>
+            <tr>
+                <td>Vittoria Corsa Pro Speed TLR</td>
+                <td>28mm</td>
+                <td>~72 psi ajustado</td>
+                <td class="data-green">6.7 W</td>
+                <td class="data-green">Mais rápido do mundo (lab)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Bicycle Rolling Resistance (bicyclerollingresistance.com) — Jarno Bierman. Testes realizados em máquina de rolamento padronizada. Velocidade: 29 km/h. Carga: 42.5 kg/pneu. Pressão ajustada à largura real medida. 2018–2026.</div>
+
+    <p>O dado que destrói o mito está na terceira linha: o GP5000 S TR em 28mm mede <span class="data-green">9.7 W</span> — <span class="data-highlight">0.4 watts a menos que o mesmo modelo em 25mm</span>. Mesmo composto, mesmo fabricante, mesma tecnologia. A única mudança é a largura. E o mais largo é mais eficiente.</p>
+
+    <div class="numbers-grid">
+        <div class="number-cell">
+            <span class="big-number">−0.4W</span>
+            <div class="big-number-label">28mm vs 25mm<br>mesmo modelo GP5000</div>
+        </div>
+        <div class="number-cell">
+            <span class="big-number">6.7W</span>
+            <div class="big-number-label">Vittoria Corsa Pro Speed 28mm<br>mais eficiente do mundo (lab)</div>
+        </div>
+        <div class="number-cell">
+            <span class="big-number">+40%</span>
+            <div class="big-number-label">Grupo CST/Maxxis<br>participação mercado Peru</div>
+        </div>
+    </div>
+
+    <div class="field-note">
+        <p>CONTEXTO_IMPORTANTE:</p>
+        <p>A BRR ajusta a pressão de teste conforme a largura real de cada pneu — não testa todos os pneus à mesma pressão. Isso replica o que qualquer ciclista deveria fazer: ajustar a pressão conforme a largura. O resultado é uma comparação "em condições iguais de uso real", não uma comparação onde os 28mm seriam colocados à mesma pressão que os 23mm. Esse detalhe metodológico é fundamental para interpretar corretamente os dados.</p>
+    </div>
+
+    <!-- MÓDULO 04 -->
+    <h2 id="modulo_04-impedance_loss-el_factor_que_nadie_menciona">MÓDULO_04 // IMPEDANCE_LOSS // O_FATOR_QUE_NINGUÉM_MENCIONA</h2>
+
+    <p>Os dados de laboratório da BRR são sobre superfície lisa. O asfalto real — o da Panamericana Norte, o das estradas de acesso à serra, o de qualquer avenida de Trujillo — não é liso.</p>
+
+    <p>Em 2017, Josh Poertner (CEO da Silca, ex-Diretor Técnico da Zipp) apresentou um conceito que mudou fundamentalmente a forma como a indústria pensa sobre pressão de pneus: as <strong>perdas por impedância</strong> (<em>suspension losses</em> ou <em>impedance losses</em>).</p>
+
+    <p>A mecânica é esta: quando um pneu passa sobre uma irregularidade do asfalto — uma trinca, um agregado de brita, um micro-buraco — tem duas opções. Ou absorve a irregularidade deformando-se (se a pressão permitir), ou transmite o impulso verticalmente ao ciclista, elevando a massa combinada do sistema. Esse impulso vertical é energia que <strong>não retorna como propulsão</strong>. Se dissipa. São watts perdidos que não aparecem em nenhum medidor de potência porque ocorrem na interface pneu-solo, antes de chegar aos pedais.</p>
+
+    <div class="formula">
+        $$P_{total} = P_{rr} + P_{impedancia} + P_{aero} + P_{gravedad}$$
+        <div class="source">Potência total requerida = resistência ao rolamento + perdas por impedância (vibração) + resistência aerodinâmica + componente gravitacional. Em superfícies imperfeitas, P_impedancia pode superar P_rr para pneus à pressão excessiva. [Poertner, Silca 2017]</div>
+    </div>
+
+    <p>Poertner quantificou essas perdas em superfície de <em>chip-seal</em> (similar ao asfalto rugoso de estradas secundárias peruanas): com pressão excessiva, as perdas por impedância podem superar os <span class="data-highlight">20–30 watts</span>. Não é um número marginal — é mais do que a maioria dos ciclistas perde por resistência aerodinâmica a velocidades inferiores a 35 km/h.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cenário</th>
+                <th>Pneu</th>
+                <th>Pressão</th>
+                <th>P_rr (lab)</th>
+                <th>P_impedancia (asfalto real)</th>
+                <th>P_total estimada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pista de madeira perfeita</td>
+                <td>23mm clincher</td>
+                <td>110 psi</td>
+                <td class="data-green">~8 W</td>
+                <td class="data-green">~0 W</td>
+                <td class="data-green">~8 W</td>
+            </tr>
+            <tr>
+                <td>Asfalto rugoso (estrada real)</td>
+                <td>23mm clincher</td>
+                <td>110 psi</td>
+                <td>~8 W</td>
+                <td class="data-red">15–25 W</td>
+                <td class="data-red">23–33 W</td>
+            </tr>
+            <tr>
+                <td>Asfalto rugoso (estrada real)</td>
+                <td>28mm tubeless</td>
+                <td>72 psi</td>
+                <td class="data-highlight">~9.7 W</td>
+                <td class="data-green">3–8 W</td>
+                <td class="data-green">12–18 W</td>
+            </tr>
+            <tr>
+                <td>Asfalto rugoso (estrada real)</td>
+                <td>32mm tubeless</td>
+                <td>60 psi</td>
+                <td>~12.8 W</td>
+                <td class="data-green">1–4 W</td>
+                <td class="data-green">13–17 W</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Poertner, J. (2017). "The New Aero: Part 5 - Tire Pressure and Aerodynamics". Silca Blog. / Dados P_rr: Bicycle Rolling Resistance, Jarno Bierman, 2018–2026. / P_impedancia: estimativas baseadas na metodologia Silca aplicadas a condições de asfalto latino-americano.</div>
+
+    <p>O número que importa não está na coluna de P_rr. Está na coluna de P_total. Em estrada real, o 28mm tubeless na pressão correta é entre <span class="data-green">5 e 15 watts mais eficiente</span> que o 23mm inflado à pressão alta. Em um ciclista que produz 200W, essa diferença representa entre 2.5% e 7.5% da potência total. É a diferença entre rodas que se pagam sozinhas em desempenho e rodas que são puro marketing.</p>
+
+    <div class="field-note">
+        <p>DADO_DE_ATELIÊ:</p>
+        <p>O ciclista de estrada peruano médio que chega aqui sobe a pressão de seus pneus de 25mm até 110-120 psi porque "assim vão mais rápido". Na Panamericana Norte, que tem microfissuras, agregados de brita na camada asfáltica e juntas de dilatação a cada certa distância, esse pneu está perdendo entre 15 e 20 watts adicionais em impedância pura. Quando ajusto a pressão à faixa correta (85–90 psi para 25mm, ciclista de 70 kg) a bicicleta "se sente diferente". Alguns descrevem como que "vai mais suave". O que realmente acontece é que está gastando menos energia em quicar e mais em avançar.</p>
+    </div>
+
+    <!-- MÓDULO 05 -->
+    <!-- FOTO 2 -->
+    <div class="image-container">
+        <img src="images/neumaticos-mano-ikon-tanwall-bikelab.webp" width="800" height="533"
+             alt="Maxxis Ikon EXO TR tanwall 29 em serviço tubeless — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Maxxis Ikon EXO TR Tanwall — BikeLab Studio">
+    </div>
+
+    <h2 id="modulo_05-el_tire_drop-presion_optima_con_matematica">MÓDULO_05 // O_TIRE_DROP // PRESSÃO_ÓTIMA_COM_MATEMÁTICA</h2>
+
+    <p>Jan Heine, da Bicycle Quarterly, desenvolveu e popularizou o conceito do <strong>Tire Drop</strong>: a deformação vertical ótima de um pneu sob carga. Sua pesquisa estabelece que 15% do diâmetro externo do pneu como deformação vertical é o ponto ótimo de operação — a faixa onde a histerese da carcaça é mínima sem que a pressão seja tão baixa que cause perda de rigidez lateral e aumento de deformação ineficiente.</p>
+
+    <p>Frank Berto traduziu esse conceito em uma fórmula prática que a Silca e outros fabricantes refinaram computacionalmente:</p>
+
+    <div class="formula">
+        $$P_{optima} = \frac{L \times C_{drop}}{V_{neumatico}}$$
+        <div class="source">Onde: L = carga por roda em kg (distribuição típica: 45% à frente / 55% atrás) / C_drop = constante de deformação alvo (15% do diâmetro externo) / V_neumático = função do volume interno do pneu (largura² × π × constante de carcaça). [Berto / Heine, Bicycle Quarterly / Silca Tire Pressure Calculator]</div>
+    </div>
+
+    <p>O importante desta fórmula não é o resultado numérico exato — isso as ferramentas digitais da Silca calculam melhor. O importante é entender as variáveis: a pressão ótima <strong>sobe com a carga</strong> e <strong>baixa com a largura</strong>. Um ciclista mais pesado precisa de mais pressão. Um pneu mais largo precisa de menos pressão para atingir os mesmos 15% de Tire Drop.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Peso do sistema (ciclista + bike)</th>
+                <th>Largura do pneu</th>
+                <th>Pressão roda traseira (estimada)</th>
+                <th>Pressão roda dianteira (estimada)</th>
+                <th>Superfície recomendada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>65 kg</td>
+                <td>25mm</td>
+                <td>78–85 psi</td>
+                <td>68–75 psi</td>
+                <td>Asfalto fino a moderado</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>25mm</td>
+                <td class="data-highlight">88–95 psi</td>
+                <td>76–82 psi</td>
+                <td>Asfalto fino a moderado</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>28mm</td>
+                <td class="data-highlight">70–78 psi</td>
+                <td>60–68 psi</td>
+                <td>Asfalto moderado a rugoso</td>
+            </tr>
+            <tr>
+                <td>85 kg</td>
+                <td>28mm</td>
+                <td>80–88 psi</td>
+                <td>69–76 psi</td>
+                <td>Asfalto moderado a rugoso</td>
+            </tr>
+            <tr>
+                <td>75 kg</td>
+                <td>32mm</td>
+                <td class="data-highlight">55–62 psi</td>
+                <td>47–54 psi</td>
+                <td>Gravel fino / asfalto rugoso</td>
+            </tr>
+            <tr>
+                <td>80 kg</td>
+                <td>29×2.25" MTB</td>
+                <td class="data-highlight">22–26 psi (tubeless)</td>
+                <td>18–22 psi (tubeless)</td>
+                <td>Terra / cascalho / trail</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Estimativas próprias baseadas na metodologia Heine (15% Tire Drop) / Silca Tire Pressure Calculator / Berto, F. "The Dancing Chain". Validadas com medições de ateliê BikeLab Studio 2023–2026.</div>
+
+    <div class="warning-box">
+        <p style="color: #ff4444; margin-bottom: 10px;"><strong>O_ERRO_MAIS_COMUM_NO_PERU:</strong></p>
+        <p>90% dos ciclistas de estrada peruanos que chegam ao ateliê têm seus pneus inflados entre 15 e 30 psi acima da pressão ótima. A lógica é "mais pressão = mais duro = mais rápido". É exatamente o inverso no asfalto real com irregularidades. Mais pressão do que o ótimo = mais quique = mais perdas por impedância = mais lento, mais desconfortável, e maior risco de furos por impacto (snake bite em pneus com câmara). A pressão máxima impressa no flanco do pneu é um limite estrutural de segurança — não uma recomendação de uso.</p>
+    </div>
+
+    <!-- MÓDULO 06 -->
+    <h2 id="modulo_06-la_regla_del_105-aerodinamica_y_llanta">MÓDULO_06 // A_REGRA_DOS_105% // AERODINÂMICA_E_PNEU</h2>
+
+    <p>Há uma condição específica onde a largura do pneu sim afeta negativamente o desempenho, e não tem nada a ver com o rolamento: a aerodinâmica.</p>
+
+    <p>Josh Poertner formulou a regra dos 105% durante sua etapa como Diretor Técnico na Zipp Speed Weaponry, originada em testes de túnel de vento realizados entre 2001 e 2002, consolidada com o lançamento do modelo Zipp 808 em 2004. A regra estabelece:</p>
+
+    <div class="fact-box">
+        <div class="fact-label">REGRA_DOS_105%</div>
+        <p>A largura externa do aro da roda deve ser pelo menos 105% da largura real medida do pneu montado. Se o pneu for mais largo que o aro, o fluxo de ar se desprende ao sair do pneu, cria turbulência e aumenta o arrasto aerodinâmico (drag). Se o aro for pelo menos 5% mais largo que o pneu, o fluxo se readere ao pneu de forma laminar.</p>
+    </div>
+
+    <p>Isso tem uma consequência direta no mercado atual: a maioria dos aros modernos de estrada mede entre 25mm e 30mm de largura externa. Nesses aros, um pneu de 25mm real (que geralmente mede 26–27mm montado) está no limite ou abaixo do umbral. Um pneu de 28mm real (que geralmente mede 29–30mm montado) pode estar na zona de turbulência se o aro medir menos de 29mm de largura externa.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Largura externa do aro</th>
+                <th>Largura máxima do pneu montado (regra 105%)</th>
+                <th>Pneu ótimo (sem penalização aero)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>21mm (aro estreito clássico)</td>
+                <td>20mm real</td>
+                <td class="data-red">23mm já penaliza aerodinamicamente</td>
+            </tr>
+            <tr>
+                <td>25mm (aro moderno médio)</td>
+                <td>23.8mm real</td>
+                <td class="data-yellow">25mm no limite / 28mm penaliza</td>
+            </tr>
+            <tr>
+                <td>28mm (aro largo moderno)</td>
+                <td>26.7mm real</td>
+                <td class="data-green">28mm correto / 25mm pode gerar turbulência inversa</td>
+            </tr>
+            <tr>
+                <td>32mm (aro endurance / gravel road)</td>
+                <td>30.5mm real</td>
+                <td class="data-green">28–30mm corretos</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Poertner, J. (2001-2004). Zipp Speed Weaponry Wind Tunnel Tests. Consolidado com o lançamento do Zipp 808. / Princípio aerodinâmico: aderência de fluxo laminar em perfil de asa.</div>
+
+    <p>A conclusão aerodinamicamente correta é contraintuitiva: em aros modernos de 25–30mm, usar um pneu de 25mm pode ser <em>aerodinamicamente mais lento</em> que usar um de 28mm, porque o aro não é suficientemente largo para o pneu de 25mm montado mas é para o de 28mm. O sistema aro + pneu importa mais que cada componente em separado.</p>
+
+    <!-- MÓDULO 07 -->
+    <h2 id="modulo_07-cuando_el_delgado_si_gana-las_condiciones_exactas">MÓDULO_07 // QUANDO_O_FINO_REALMENTE_GANHA // AS_CONDIÇÕES_EXATAS</h2>
+
+    <p>Nem tudo é relativo. Há condições específicas onde o pneu mais fino efetivamente tem vantagem. Ser honesto sobre quando o mito se aplica e quando não, faz parte da análise.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Condição</th>
+                <th>O fino ganha?</th>
+                <th>Por quê</th>
+                <th>Relevância para o Peru</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pista de madeira (velódromo)</td>
+                <td class="data-green">SIM, claramente</td>
+                <td>Superfície perfeita elimina impedance loss. Só importa CRR puro e aerodinâmica.</td>
+                <td class="data-red">Nula (não há velódromo de competição ativo no país)</td>
+            </tr>
+            <tr>
+                <td>Asfalto novo perfeitamente liso</td>
+                <td class="data-yellow">SIM, ligeiramente</td>
+                <td>Impedance loss quase zero. CRR e aero dominam. A diferença é pequena.</td>
+                <td class="data-yellow">Limitada (poucos trechos de asfalto novo perfeitamente liso)</td>
+            </tr>
+            <tr>
+                <td>Contrarrelógio a &gt;40 km/h (CRI)</td>
+                <td class="data-yellow">DEPENDE do aro</td>
+                <td>Em alta velocidade, a aerodinâmica domina. Mas só se o sistema aro+pneu cumprir a regra dos 105%.</td>
+                <td class="data-yellow">Baixa (poucos eventos de CRI em nível de equipe)</td>
+            </tr>
+            <tr>
+                <td>Estrada real peruana típica</td>
+                <td class="data-red">NÃO</td>
+                <td>Impedance loss supera a vantagem de CRR. O 28mm na pressão correta ganha.</td>
+                <td class="data-green">Alta relevância — é a condição habitual</td>
+            </tr>
+            <tr>
+                <td>Asfalto rugoso / chip-seal</td>
+                <td class="data-red">NÃO, em nenhuma condição</td>
+                <td>Impedance loss massivo. O fino à alta pressão pode perder 15–25W extra.</td>
+                <td class="data-green">Muito alta (estradas interurbanas peruanas)</td>
+            </tr>
+            <tr>
+                <td>Gravel / terra / cascalho compactado</td>
+                <td class="data-red">NÃO</td>
+                <td>Nem questionável. O volume de ar absorve impactos e reduz a perda total.</td>
+                <td class="data-green">Muito alta (acesso a zonas andinas)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Análise própria baseada em dados da BRR, metodologia Silca de impedance losses, e condições de asfalto latino-americano verificadas em campo.</div>
+
+    <!-- MÓDULO 08 -->
+    <!-- FOTO 3 -->
+    <div class="image-container">
+        <img src="images/neumaticos-maxxis-ikon-giant-taller-bikelab.webp" width="800" height="533"
+             alt="Maxxis Ikon tanwall montado em roda Giant 29 — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Maxxis Ikon tanwall — Giant 29 — BikeLab Studio">
+    </div>
+
+    <h2 id="modulo_08-la_combinacion_optima-por_tipo_de_ciclista_peruano">MÓDULO_08 // A_COMBINAÇÃO_ÓTIMA // POR_TIPO_DE_CICLISTA_PERUANO</h2>
+
+    <p>Sem importar a marca — porque a marca disponível no Peru define em grande medida o que é acessível — a combinação ótima se define pelo tipo de uso. Aqui está o mapa do que funciona na realidade local:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Perfil de uso</th>
+                <th>Largura ótima</th>
+                <th>Pressão orientativa (75 kg)</th>
+                <th>Tipo de pneu</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Estrada costeira (Lima-Trujillo, asfalto misto)</td>
+                <td class="data-highlight">28mm</td>
+                <td>70–78 psi traseira / 62–70 psi dianteira</td>
+                <td>Tubeless ou clincher de qualidade</td>
+                <td>Equilíbrio ótimo CRR + impedance</td>
+            </tr>
+            <tr>
+                <td>Estrada de montanha / acesso à serra</td>
+                <td class="data-highlight">28–32mm</td>
+                <td>65–72 psi / 56–63 psi</td>
+                <td>Tubeless preferido</td>
+                <td>Asfalto irregular. Mais volume = menos perda</td>
+            </tr>
+            <tr>
+                <td>Urbano / commuting Trujillo</td>
+                <td class="data-highlight">32–38mm</td>
+                <td>50–60 psi / 45–55 psi</td>
+                <td>Clincher com câmara ou tubeless</td>
+                <td>Ruas com buracos. O volume protege o aro e os pneus.</td>
+            </tr>
+            <tr>
+                <td>Gravel / cascalho andino</td>
+                <td class="data-highlight">40–50mm</td>
+                <td>28–38 psi / 24–32 psi</td>
+                <td>Tubeless obrigatório</td>
+                <td>Sem tubeless, os furos são inevitáveis</td>
+            </tr>
+            <tr>
+                <td>MTB XC / trail</td>
+                <td class="data-highlight">2.2"–2.4"</td>
+                <td>22–26 psi / 18–22 psi</td>
+                <td>Tubeless obrigatório</td>
+                <td>Maxxis Ikon/Rekon disponível no Peru</td>
+            </tr>
+            <tr>
+                <td>Competição estrada (criterium / contrarrelógio)</td>
+                <td class="data-highlight">25–28mm (conforme aro)</td>
+                <td>Calcular com regra 105%</td>
+                <td>Tubeless TLR ou tubular</td>
+                <td>Aqui sim importa verificar compatibilidade aro-pneu</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Recomendações próprias baseadas na física do contato, dados da BRR, metodologia Silca, e condições verificadas em campo, Peru 2023–2026.</div>
+
+    <div class="field-note">
+        <p>NOTA_SOBRE_MARCAS_NO_PERU:</p>
+        <p>A Maxxis (disponível) tem pneus de estrada que rolam corretamente nessas larguras. A CST tem opções decentes para urbano e trekking. Para estrada de desempenho, a Continental GP5000 chega ao mercado peruano embora com preço significativo. A Schwalbe chega no segmento gravel/MTB premium. A recomendação de largura se aplica independentemente da marca — o que muda entre marcas é o CRR base e a durabilidade, não a física da largura. Um Maxxis de 28mm bem inflado vai superar no mundo real um Continental de 23mm sobre-inflado, sem importar quanto custe cada um.</p>
+    </div>
+
+    <!-- CONCLUSÕES -->
+    <h2 id="modulo_09-experiencia_de_taller-las_llantas_que_he_usado_en_trujillo">MÓDULO_09 // EXPERIÊNCIA_DE_ATELIÊ // OS_PNEUS_QUE_USEI_EM_TRUJILLO</h2>
+
+    <p>A física é uma coisa. O que rola nas pistas de terra compacta ao redor de Trujillo é outra. Testei combinações suficientes para ter uma opinião própria sobre o que funciona aqui — e os dados de laboratório a respaldam ou a contradizem. Aqui está o inventário honesto.</p>
+
+    <p>O XC em Trujillo não é tecnicamente exigente. Não há raízes, não há lama, não há seções de rocha que exijam tração extrema. O que há é terra compacta, um pouco de poeira solta por cima, e velocidade. Isso define qual pneu faz sentido aqui.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pneu</th>
+                <th>Medida</th>
+                <th>Peso especificado</th>
+                <th>Peso real medido</th>
+                <th>Watts BRR (25 psi)</th>
+                <th>Avaliação em Trujillo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Schwalbe Racing Ralph</strong><br>Super Ground Addix Speed</td>
+                <td>29×2.25</td>
+                <td>~560–590 g</td>
+                <td>~610–650 g (amostra real)</td>
+                <td class="data-green">19.0 W</td>
+                <td class="data-green">Referência traseira. Rápido, rolamento eficiente em terra compacta.</td>
+            </tr>
+            <tr>
+                <td><strong>Schwalbe Racing Ray</strong><br>Super Ground Addix SpeedGrip</td>
+                <td>29×2.25</td>
+                <td>~625 g</td>
+                <td>~660–680 g (amostra real)</td>
+                <td class="data-highlight">20.4 W</td>
+                <td class="data-green">Dianteiro natural do Racing Ralph. SpeedGrip dá mais mordida lateral sem sacrificar demais.</td>
+            </tr>
+            <tr>
+                <td><strong>Maxxis Ikon</strong><br>3C MaxxSpeed EXO TR</td>
+                <td>29×2.20</td>
+                <td>640 g</td>
+                <td>~659 g (medido)</td>
+                <td class="data-highlight">~22–24 W</td>
+                <td class="data-yellow">Correto. Mais consistente em peso que o Schwalbe. Rola um pouco mais lento mas muito confiável.</td>
+            </tr>
+            <tr>
+                <td><strong>Maxxis Ardent Race</strong><br>3C EXO TR</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>720 g / 745 g</td>
+                <td>~759 g / ~780 g (medido)</td>
+                <td class="data-red">~27–29 W</td>
+                <td class="data-yellow">Ponte entre XC e trail. Mais volume que o Ikon, mais tração lateral, mas paga ~40% mais resistência vs Racing Ralph.</td>
+            </tr>
+            <tr>
+                <td><strong>Continental Race King</strong><br>Protection</td>
+                <td>29×2.20</td>
+                <td>~575–600 g</td>
+                <td>~620 g</td>
+                <td class="data-green">18.2 W</td>
+                <td class="data-green">Rápido e leve. Bom para traseiro em XC seco. Escorregadio em curvas soltas — é preciso conhecê-lo.</td>
+            </tr>
+            <tr>
+                <td><strong>Continental Cross King</strong><br>Protection</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>~640–680 g</td>
+                <td>~680–720 g</td>
+                <td class="data-highlight">~22–24 W</td>
+                <td class="data-green">Mais mordida lateral que o Race King. Bom dianteiro para XC com mais variabilidade de superfície.</td>
+            </tr>
+            <tr>
+                <td><strong>Specialized S-Works Fast Trak</strong><br>T5/T7 2BR</td>
+                <td>29×2.20<br>29×2.35</td>
+                <td>570 g / ~610 g</td>
+                <td>588 g / ~640 g</td>
+                <td class="data-highlight">28.0 W (2.2) / 30.5 W (2.35)</td>
+                <td class="data-green">O melhor por peso no grupo. 588 g medidos é leve. Paga 4–5 W a mais vs Racing Ralph mas esse peso na roda se sente.</td>
+            </tr>
+            <tr>
+                <td><strong>Specialized S-Works Ground Control</strong><br>2BR</td>
+                <td>29×2.30</td>
+                <td>650 g</td>
+                <td>686 g (medido)</td>
+                <td class="data-red">31.3 W</td>
+                <td class="data-red">Penaliza. Em Trujillo não há terreno que justifique esses 31 W e esse peso. Para trail técnico, correto — para XC seco local, não.</td>
+            </tr>
+            <tr>
+                <td><strong>Pirelli Scorpion XC</strong><br>variants</td>
+                <td>29×2.20–2.40</td>
+                <td>~580–640 g</td>
+                <td>Variável</td>
+                <td class="data-green">~19–22 W (versões RC)</td>
+                <td class="data-green">Boa opção onde está disponível. Desempenho próximo ao Racing Ralph nas versões Race. Não há diferenças críticas vs Schwalbe em condições locais.</td>
+            </tr>
+            <tr>
+                <td><strong>Chaoyang MTB</strong><br>(várias linhas)</td>
+                <td>29×2.10–2.35</td>
+                <td>~650–800 g</td>
+                <td>Variável</td>
+                <td class="data-red">~28–35 W (estimado)</td>
+                <td class="data-yellow">Opção de mercado massivo. Acessíveis no Peru. Funcionam — mas os dados de rolamento não competem com Racing Ralph ou Race King.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Pesos medidos: dados reais da BRR e fóruns especializados (MTBR). Watts BRR: bicyclerollingresistance.com, Jarno Bierman. Avaliação em Trujillo: observação própria, BikeLab Studio 2023–2026.</div>
+
+    <h2 id="modulo_10-la_combinacion_optima-calculo_para_xc_trujillo">MÓDULO_10 // A_COMBINAÇÃO_ÓTIMA // CÁLCULO_PARA_XC_TRUJILLO</h2>
+
+    <p>Com todos os dados sobre a mesa, o exercício matemático que importa não é escolher o pneu mais rápido em laboratório — é escolher a combinação dianteira/traseira que otimiza o sistema completo para as condições reais de uso.</p>
+
+    <p>No XC Trujillo o terreno é terra compacta seca, sem técnica extrema, com a velocidade como variável principal. A função a otimizar é: <span class="data-highlight">mínimo CRR total + mínimo peso rotante + tração suficiente para não perder tempo em mudanças de direção</span>.</p>
+
+    <div class="formula">
+        $$P_{total\_sistema} = (P_{rr\_delantera} + P_{rr\_trasera}) + P_{impedancia} + \Delta P_{peso\_rotante}$$
+        <div class="source">O peso rotante na roda tem efeito amplificado vs peso estático. Cada grama no perímetro da roda equivale aproximadamente a 1.5–2× seu equivalente em peso central da bicicleta em termos de energia de aceleração. [Princípio de momento de inércia rotacional]</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Combinação</th>
+                <th>Dianteiro</th>
+                <th>Traseiro</th>
+                <th>Peso total do par</th>
+                <th>P_rr total estimada</th>
+                <th>Disponível no Peru</th>
+                <th>Veredito</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Setup A — Referência mundial XC</strong></td>
+                <td>Racing Ray 2.25<br>~660 g</td>
+                <td>Racing Ralph 2.25<br>~620 g</td>
+                <td class="data-highlight">~1,280 g</td>
+                <td class="data-green">~39 W</td>
+                <td class="data-yellow">Difícil nas províncias</td>
+                <td class="data-green">Ótimo técnico. O benchmark mundial XC.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup B — Minha preferência atual</strong></td>
+                <td>S-Works Fast Trak 2.35<br>~640 g</td>
+                <td>Continental Race King 2.20<br>~620 g</td>
+                <td class="data-highlight">~1,260 g</td>
+                <td class="data-highlight">~46 W</td>
+                <td class="data-yellow">Parcialmente disponível em Lima</td>
+                <td class="data-green">O Fast Trak dianteiro dá mordida e volume. O Race King traseiro é o mais rápido do grupo. Sistema leve e equilibrado para Trujillo.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup C — Continental puro</strong></td>
+                <td>Cross King 2.35<br>~700 g</td>
+                <td>Race King 2.20<br>~620 g</td>
+                <td>~1,320 g</td>
+                <td class="data-highlight">~40–42 W</td>
+                <td class="data-yellow">Parcialmente disponível</td>
+                <td class="data-green">Sólido. O Cross King dá tração dianteira real, o Race King atrás faz o trabalho. Peso gerenciável.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup D — Maxxis disponível no Peru</strong></td>
+                <td>Ikon 2.35<br>~743 g</td>
+                <td>Ikon 2.20<br>~659 g</td>
+                <td>~1,402 g</td>
+                <td class="data-red">~46–50 W</td>
+                <td class="data-green">Disponível em Lima e províncias</td>
+                <td class="data-yellow">Opção real de mercado local. Não é o mais rápido mas é o mais acessível. Funciona.</td>
+            </tr>
+            <tr>
+                <td><strong>Setup E — Evitar em XC Trujillo</strong></td>
+                <td>Ground Control 2.35<br>~686 g</td>
+                <td>Ardent Race 2.35<br>~780 g</td>
+                <td class="data-red">~1,466 g</td>
+                <td class="data-red">~58–62 W</td>
+                <td class="data-yellow">Parcialmente disponível</td>
+                <td class="data-red">Peso demais, resistência demais para XC seco. Para trail técnico úmido, correto. Para Trujillo, não.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">P_rr estimada = soma da resistência dianteira + traseira a 25 psi / 29 km/h. Pesos: especificações do fabricante corrigidas com dados de amostra real (MTBR / BRR). Disponibilidade no Peru: estimativa própria baseada em distribuidores conhecidos, Fev. 2026.</div>
+
+    <h2 id="modulo_11-tubeless_vs_camara-la_diferencia_en_pista_y_trocha">MÓDULO_11 // TUBELESS_VS_CÂMARA // A_DIFERENÇA_NA_PISTA_E_NA_TRILHA</h2>
+
+    <p>Em estrada de asfalto a diferença entre tubeless e câmara é real mas moderada — principalmente em CRR e risco de furo. Em MTB sobre terra e trilha a diferença é de outra magnitude. Não é uma questão de desempenho marginal. É a diferença entre poder baixar a pressão a faixas funcionais ou não poder fazê-lo.</p>
+
+    <p>Com câmara em MTB, baixar de 28–30 psi na traseira expõe a furos por pinçamento (snake bite) em qualquer impacto contra pedra ou raiz. Com tubeless, a faixa funcional baixa a 18–22 psi na traseira e 16–20 psi na dianteira. Essa diferença de pressão tem um efeito direto e mensurável em tração, conforto, e perdas por impedância.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Parâmetro</th>
+                <th>Com câmara</th>
+                <th>Tubeless</th>
+                <th>Diferença prática em XC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pressão mínima funcional (traseira)</td>
+                <td class="data-red">28–32 psi</td>
+                <td class="data-green">18–22 psi</td>
+                <td>10 psi a menos = maior pegada, melhor tração em curva</td>
+            </tr>
+            <tr>
+                <td>Peso adicional por câmara</td>
+                <td class="data-red">+100–130 g por roda</td>
+                <td class="data-green">+60–80 g de selante</td>
+                <td>~50–80 g a menos no perímetro da roda. Se sente em acelerações.</td>
+            </tr>
+            <tr>
+                <td>Furos lentos (gotas)</td>
+                <td class="data-red">Furo = parada</td>
+                <td class="data-green">Selante fecha sozinho em &lt;30 seg</td>
+                <td>Em prova ou saída longa, diferença crítica</td>
+            </tr>
+            <tr>
+                <td>Custo de instalação</td>
+                <td class="data-green">Baixo</td>
+                <td class="data-red">Mais alto (selante + válvulas)</td>
+                <td>Investimento inicial, mas amortiza em pneus salvos</td>
+            </tr>
+            <tr>
+                <td>Perdas por impedância à mesma pressão</td>
+                <td class="data-red">Câmara agrega histerese interna</td>
+                <td class="data-green">Sem câmara = sistema mais eficiente</td>
+                <td>~1–2 W por roda em laboratório. Na trilha, mais.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Dados de peso de câmara: medições padrão de câmaras 29" butil 100g. Diferença de CRR tubeless vs clincher: BRR special article "Tubeless vs Latex vs Butyl Tubes". Pressões funcionais: metodologia Heine Tire Drop aplicada ao MTB.</div>
+
+    <div class="field-note">
+        <p>DADO_DE_ATELIÊ:</p>
+        <p>Em Trujillo o tubeless não é comum fora do segmento mais ativo. A maioria das bicicletas MTB que entram no ateliê tem câmara de butil padrão inflada a 35–40 psi "por via das dúvidas". Essa pressão, sobre terra compacta local, gera perdas de impedância desnecessárias e reduz a pegada de tração justo onde mais se precisa — em curvas com poeira solta sobre terra dura. A conversão para tubeless em uma roda MTB custa no Peru entre S/. 40–80 adicionais por roda (selante + válvulas). Em termos de desempenho por sol investido, é provavelmente a modificação de melhor relação custo-benefício disponível no mercado local.</p>
+    </div>
+
+    <h2 id="modulo_12-peso_rotante-por_que_se_siente_mas_que_el_peso_total">MÓDULO_12 // PESO_ROTANTE // POR_QUE_SE_SENTE_MAIS_QUE_O_PESO_TOTAL</h2>
+
+    <p>A percepção de que "nas rodas se nota mais a leveza" não é psicológica. Tem base física concreta.</p>
+
+    <p>O momento de inércia rotacional de uma roda aumenta com o quadrado da distância ao eixo. A massa localizada no perímetro do pneu — os cravos, a carcaça, o selante — está à máxima distância do eixo e portanto tem o maior efeito de inércia rotacional possível. Para acelerar essa massa rotante requer-se energia adicional proporcional a I·α, onde I é o momento de inércia e α é a aceleração angular.</p>
+
+    <div class="formula">
+        $$I = m \cdot r^2$$
+        $$E_{rotante} = \frac{1}{2} I \omega^2 = \frac{1}{2} m r^2 \omega^2$$
+        <div class="source">Um grama no perímetro do pneu (r ≈ 0.35 m em 29") tem um momento de inércia ~10× maior que um grama localizado no centro da roda. Em acelerações repetidas (sprint, saída de curva, subidas rítmicas), a diferença energética acumulada entre um pneu de 570 g e um de 780 g é real e perceptível.</div>
+    </div>
+
+    <p>A diferença entre o S-Works Fast Trak (588 g medido) e o Ardent Race 2.35 (~780 g medido) é de <span class="data-highlight">192 gramas por pneu</span>. Em um par de rodas: 384 gramas extra de massa rotante. Em um criterium ou em um XC com múltiplas acelerações por volta, isso não é marginal. A física confirma e qualquer ciclista que tenha feito a troca o sentiu.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pneu</th>
+                <th>Peso medido</th>
+                <th>Energia cinética rotante adicional<br>vs Fast Trak (a 30 km/h)</th>
+                <th>Equivalente watts extra<br>em sprint de 10 seg</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>S-Works Fast Trak 2.20</td>
+                <td class="data-green">588 g</td>
+                <td>— (referência)</td>
+                <td>— (referência)</td>
+            </tr>
+            <tr>
+                <td>Continental Race King 2.20</td>
+                <td class="data-green">~620 g</td>
+                <td>+0.15 J</td>
+                <td>~+1.5 W equivalente</td>
+            </tr>
+            <tr>
+                <td>Maxxis Ikon 2.20</td>
+                <td class="data-highlight">~659 g</td>
+                <td>+0.33 J</td>
+                <td>~+3.3 W equivalente</td>
+            </tr>
+            <tr>
+                <td>Maxxis Ardent Race 2.35</td>
+                <td class="data-red">~780 g</td>
+                <td>+0.90 J</td>
+                <td>~+9 W equivalente</td>
+            </tr>
+            <tr>
+                <td>S-Works Ground Control 2.30</td>
+                <td class="data-red">686 g</td>
+                <td>+0.46 J</td>
+                <td>~+4.6 W equivalente</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Cálculo: E = ½·m·r²·ω² onde r = 0.345 m (raio efetivo 29"), ω = 24.1 rad/s (30 km/h). Energia extra = diferença de massa × r² × ω² / 2. Conversão para watts equivalentes: E dividida por 10 segundos de sprint. Aproximação — não inclui distribuição de massa não-uniforme do pneu.</div>
+
+    <h2 id="conclusiones-fisica_aplicada">CONCLUSÕES // FÍSICA_APLICADA</h2>
+
+    <div class="conclusion-box">
+        <p>O mito do pneu fino tem sua origem em uma condição de uso que praticamente não existe no ciclismo peruano real: a superfície perfeitamente lisa. No velódromo, o 23mm a 120 psi é efetivamente mais rápido. Na Panamericana Norte, em qualquer estrada de acesso à serra, em qualquer avenida de Trujillo, não é.</p>
+
+        <p style="margin-top: 20px;">Os dados de laboratório da BRR mostram que o GP5000 em 28mm é 0.4 watts mais eficiente que em 25mm sob as mesmas condições de uso normalizado. Os dados da Silca sobre impedance loss mostram que a diferença em estrada real pode ser de 5 a 15 watts adicionais a favor do 28mm. A regra dos 105% mostra que em aros modernos, o 28mm pode ser também aerodinamicamente superior ao 25mm.</p>
+
+        <p style="margin-top: 20px;">O número que me parece o mais revelador de todos: o pneu mais rápido do mundo em laboratório, o Vittoria Corsa Pro Speed TLR, mede <span class="data-highlight">28mm</span>. Não 23mm. Não 25mm. 28mm.</p>
+
+        <p style="margin-top: 20px;"><strong>O que funciona em condições reais peruanas:</strong></p>
+
+        <p style="margin-top: 20px;"><strong>Estrada costeira asfalto misto:</strong> 28mm tubeless ou clincher de qualidade, 70–78 psi traseira para ciclista de 75 kg. A melhoria em impedance loss sobre o 25mm a 100+ psi é real e mensurável.</p>
+
+        <p style="margin-top: 20px;"><strong>Pressão correta antes que largura correta:</strong> O erro mais frequente não é usar a largura errada — é usar a pressão errada. Um 28mm inflado a 100 psi perde as vantagens do volume. Um 25mm a 85 psi vai ser melhor que o mesmo a 115 psi em qualquer asfalto com irregularidades.</p>
+
+        <p style="margin-top: 20px;"><strong>A regra dos 105% como filtro de compra:</strong> Antes de decidir a largura do pneu, medir a largura externa do aro. A largura ótima do pneu montado não deve superar 95% da largura externa do aro. Em aros de 25mm externo, o pneu ideal é de 25mm especificado ou menos. Em aros de 28mm externo, o 28mm especificado é o ótimo.</p>
+
+        <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">O ciclista que infla seus pneus de 25mm a 120 psi porque "mais duro é mais rápido" está perdendo entre 10 e 20 watts em estradas peruanas típicas. Com esses watts poderia pedalar entre 1.5 e 3 km/h mais rápido à mesma potência. E não precisa comprar nada novo para recuperá-los — só precisa inflar diferente.</p>
+        <p style="margin-top: 20px;">A eficiência de rolamento é um ramo da tribologia aplicada que define o desempenho em competição.</p>
+    </div>
+
+    <!-- REFERÊNCIAS -->
+    <div class="references">
+        <h2 id="referencias_tecnicas">REFERÊNCIAS_TÉCNICAS</h2>
+
+        <div class="ref-item">[1] Bierman, J. (2018–2026). "Continental Grand Prix 5000 — Multiple Size Reviews and Comparisons". <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/grand-prix-5000-comparison" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[2] Bierman, J. (2024). "Continental Grand Prix 5000 S TR 25, 28, 30, 32 mm Comparison". <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/grand-prix-5000-s-tr-comparison" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[3] Bierman, J. (2026). "Vittoria Corsa Pro Speed TLR 28 Review — 6.7 Watts". <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/road-bike-reviews/vittoria-corsa-pro-speed-tlr" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[4] Poertner, J. (2017). "The New Aero: Part 5 — Tire Pressure and Aerodynamics". <em>Silca Blog</em>. Silca LLC. <a href="https://silca.cc/blogs/journal" target="_blank">silca.cc</a></div>
+
+        <div class="ref-item">[5] Poertner, J. (2017–2019). "Marginal Gains Podcast — Episodes on Hysteresis and Impedance Losses". <em>Silca / Marginal Gains</em>. Série de podcasts técnicos sobre mecânica de pneus.</div>
+
+        <div class="ref-item">[6] Heine, J. (2012–2020). "Optimizing Your Tire Pressure for Your Weight" [BQTireDrop.pdf]. <em>Bicycle Quarterly</em>. Estudo sobre o conceito de Tire Drop 15% como pressão ótima de rolamento.</div>
+
+        <div class="ref-item">[7] Poertner, J. (2001–2004). "Zipp 808 Wind Tunnel Tests — 105% Rule Development". <em>Zipp Speed Weaponry Technical Documentation</em>. Origem da regra dos 105% aro/pneu para aderência de fluxo laminar.</div>
+
+        <div class="ref-item">[8] Berto, F. (2005). <em>The Dancing Chain: History and Development of the Derailleur Bicycle</em>. Van der Plas Publications. Origem da fórmula de pressão ótima baseada em Tire Drop.</div>
+
+        <div class="ref-item">[9] Silca LLC (2024). "Tire Pressure Calculator". <em>Silca.cc</em>. Ferramenta digital baseada na metodologia Heine/Berto com variáveis de superfície. <a href="https://silca.cc/pages/tire-pressure-calculator" target="_blank">silca.cc</a></div>
+
+        <div class="ref-item">[10] Bierman, J. (2024). "CRR at Different Loads — Special Test". <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/crr-load-test" target="_blank">bicyclerollingresistance.com</a></div>
+
+        <div class="ref-item">[11] Bierman, J. (2024). "The Rim Width Test — Road, CX/Gravel, and MTB". <em>Bicycle Rolling Resistance</em>. <a href="https://www.bicyclerollingresistance.com/specials/rim-width-test" target="_blank">bicyclerollingresistance.com</a></div>
+    </div>
+
+    <p style="margin-top: 30px;"><a href="../index.html#science" class="nav-back">← VOLTAR AO INÍCIO</a></p>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div style="margin-bottom: 20px;">
+            <strong>BikeLab Studio</strong><br>
+            Industrial &amp; Scientific Noir<br>
+            Paraguay 300, Trujillo, La Libertad, Peru
+        </div>
+
+        <div class="footer-grid">
+            <div>
+                <strong>Fontes verificadas:</strong><br>
+                BicycleRollingResistance.com<br>
+                Silca LLC / Josh Poertner<br>
+                Bicycle Quarterly / Jan Heine
+            </div>
+            <div>
+                <strong>Autor:</strong><br>
+                Carlos Ravello<br>
+                Fundador da BikeLab Studio
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+            © 2026 BIKELAB_STUDIO // SISTEMA_ESTÁVEL
+        </div>
+    </div>
+
+</div>
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    document.querySelectorAll('.nav-overlay a[href*="#"]').forEach(a => {
+        a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#000000">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estado Mecânico de Fábrica em Bicicletas Novas: Análise Tribológica e Cinemática | BikeLab Studio">
+    <meta name="twitter:description" content="Análise técnica dos cinco vetores de degradação de desempenho em bicicletas novas de caixa: lubrificação, tensão de raios, calibração hidráulica, torques e transmissão. Dados de Friction Facts, SKF, PBMA e Shimano.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp">
+
+    <title>Estado Mecânico de Fábrica em Bicicletas Novas: Análise Tribológica e Cinemática | BikeLab Studio</title>
+    <meta name="description" content="Sua bicicleta nova está pronta para rodar? 95% não estão: saem de fábrica com lubrificação de transporte, raios desiguais, freios sem sangria e torques fora de faixa. Análise técnica dos 5 vetores de perda, com dados de Friction Facts, SKF, PBMA e Shimano.">
+    <meta name="keywords" content="white paper bicicleta nova, PDI bicicleta análise técnica, lubrificação fábrica NLGI tribologia, tensão raios kgf, torque carbono bicicleta, perda watts transmissão nova, BikeLab Studio Trujillo">
+    <meta name="author" content="Carlos Ravello">
+
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-pt.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-new-bike-mechanical-state-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-pt.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-es.html">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Estado Mecânico de Fábrica em Bicicletas Novas: Análise Tribológica e Cinemática | BikeLab Studio">
+    <meta property="og:description" content="Análise quantitativa de perdas de desempenho em bicicletas novas. Cinco vetores: lubrificação, raios, freios, torques e transmissão. Dados de Zero Friction Cycling, SKF e Shimano.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-pt.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="BikeLab Studio">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
+      "headline": "Estado Mecânico de Fábrica em Bicicletas Novas: Análise Tribológica e Cinemática dos Vetores de Degradação de Desempenho",
+      "alternativeHeadline": "Quantificação de perdas energéticas, desvios estruturais e riscos de integridade em bicicletas novas de caixa",
+      "description": "Análise técnica dos cinco vetores de degradação mecânica presentes em bicicletas novas sem inspeção pré-entrega: coeficiente de atrito na lubrificação de fábrica, uniformidade de tensão de raios, complacência volumétrica do circuito hidráulico, torques de montagem em componentes de carbono, e perdas totais na transmissão. Dados quantificados a partir de benchmarks independentes da Zero Friction Cycling, CeramicSpeed Friction Facts, especificações SKF Group, padrões PBMA e manuais técnicos Shimano / SRAM.",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "datePublished": "2026-03-15T08:00:00-05:00",
+      "dateModified": "2026-03-15T08:00:00-05:00",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-pt.html"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Tribologia",
+          "sameAs": "https://es.wikipedia.org/wiki/Tribolog%C3%ADa"
+        },
+        {
+          "@type": "Thing",
+          "name": "Transmissão de bicicleta",
+          "sameAs": "https://es.wikipedia.org/wiki/Transmisi%C3%B3n_de_bicicleta"
+        },
+        {
+          "@type": "Thing",
+          "name": "Freio hidráulico",
+          "sameAs": "https://es.wikipedia.org/wiki/Freno_hidr%C3%A1ulico"
+        }
+      ],
+      "articleSection": "Engenharia de Componentes",
+      "keywords": "PDI bicicleta, lubrificação NLGI, tensão de raios, complacência hidráulica, torque carbono, watts atrito corrente, BikeLab Studio",
+      "isAccessibleForFree": true,
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.20249194",
+        "url": "https://doi.org/10.5281/zenodo.20249194"
+      },
+      "image": "https://www.bikelabstudio.com/articles/images/bicicleta-nueva-calibracion-fabrica.webp",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#publicaciones-tecnicas",
+        "name": "Publicações Técnicas BikeLab Studio",
+        "description": "White papers e pesquisas técnicas sobre mecânica ciclista, modelos físicos e análise de dados. BikeLab Studio, Trujillo, Peru.",
+        "url": "https://www.bikelabstudio.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BikeLab Studio",
+          "url": "https://www.bikelabstudio.com"
+        }
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Pesquisador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "kg:/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      },
+      "description": "Pesquisador independente. Fundador da BikeLab Studio, Zoovet Travel e Katsudōmo. Arquiteto de identidades digitais verificáveis com nós semânticos entrelaçados."
+    },
+    {
+      "@type": [
+        "CreativeWork",
+        "ResearchProject"
+      ],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coerência Dinâmica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "description": "Framework metodológico de três eixos aplicado ao diagnóstico físico de sistemas ciclistas: (E) estado físico e carga do sistema analisado, (C) modelagem, validação estatística e análise de dados, (P) critérios de desempenho e aplicação prática dos resultados."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bikelabstudio.com/logo-noir.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/bikelabstudio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": [
+        "es",
+        "en"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artigos",
+          "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Estado Mecânico de Fábrica em Bicicletas Novas: Análise Tr",
+          "item": "https://www.bikelabstudio.com/articles/white-paper-bicicleta-nueva-estado-mecanico-pt.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 { font-size: 26px; color: #ffffff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 14px; color: #999; margin-bottom: 20px; line-height: 1.7; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 { font-size: 13px; color: #aaa; letter-spacing: 3px; margin-top: 55px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; text-transform: uppercase; }
+        h3 { font-size: 12px; color: #888; letter-spacing: 2px; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+        ul, ol { color: #ccc; margin-left: 22px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; line-height: 1.7; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #555; font-style: italic; margin-top: -12px; margin-bottom: 22px; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 24px 30px;
+            margin: 28px 0 8px;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow-x: auto;
+        }
+        .formula .formula-source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; font-weight: 400; }
+
+        table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .warning-box { background-color: #1a0a0a; border-left: 3px solid #ff4444; padding: 20px; margin: 30px 0; }
+        .warning-box p { color: #cc9999; margin-bottom: 8px; }
+        .warning-box p:first-child { color: #ff6b6b; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+
+        .field-note { background-color: #0a0f0a; border-left: 3px solid #4a9e6b; padding: 20px; margin: 30px 0; }
+        .field-note p { color: #aac8b4; margin-bottom: 8px; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; font-size: 12px; }
+
+        .abstract-box {
+            background: #0d0d0d;
+            border: 1px solid #2a2a2a;
+            border-top: 3px solid #555;
+            padding: 28px 30px;
+            margin: 30px 0 50px;
+        }
+        .abstract-box h3 { margin-top: 0; color: #777; font-size: 10px; letter-spacing: 3px; }
+        .abstract-box p { font-size: 13px; color: #aaa; line-height: 1.9; margin-bottom: 0; }
+
+        .service-cta {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-left: 3px solid #555;
+            padding: 20px 24px;
+            margin: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-cta-text { font-size: 11px; color: #888; letter-spacing: 0.5px; line-height: 1.9; }
+        .service-cta-text strong { color: #bbb; display: block; font-size: 12px; letter-spacing: 2px; margin-bottom: 4px; }
+        .service-cta a { font-size: 10px; color: #e0e0e0; text-decoration: none; border: 1px solid #444; padding: 10px 16px; letter-spacing: 2px; white-space: nowrap; transition: all 0.3s; display: inline-block; }
+        .service-cta a:hover { background: #e0e0e0; color: #000; border-color: #e0e0e0; }
+
+        .conclusion-box { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 50px 0; }
+        .references { background-color: #0a0a0a; border: 1px solid #333; padding: 25px 30px; margin: 40px 0; }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 12px; padding-left: 18px; text-indent: -18px; font-size: 11px; line-height: 1.7; color: #666; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #555; }
+
+        .nav-back { display: inline-block; font-size: 11px; color: #666; text-decoration: none; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 4px; transition: color 0.2s; }
+        .nav-back:hover { color: #aaa; }
+
+        /* Nav */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'Courier New', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; transition: color 0.3s; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-overlay a:hover { color: #888; }
+        .nav-bar .lang-switch { position: static; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 16px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .service-cta { flex-direction: column; }
+            .formula { padding: 16px; font-size: 0.95rem; }
+            .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; }
+            .nav-overlay { z-index: 1004; overflow-y: auto; }
+            .wa-float { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 0.65rem; }
+        }
+    </style>
+
+
+
+    <!-- Dublin Core + Open Access Metadata -->
+    <meta name="DC.title" content="Estado Mecânico de Bicicleta Nova: Marco de Diagnóstico Pré-Uso">
+    <meta name="DC.creator" content="Ravello Joo, Carlos Eduardo">
+    <meta name="DC.creator.url" content="https://carlosravello.com">
+    <meta name="DC.identifier.orcid" content="https://orcid.org/0009-0007-5631-7436">
+    <meta name="DC.identifier" content="https://doi.org/10.5281/zenodo.20249194">
+    <meta name="DC.language" content="pt-BR">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.date" content="2026-02-17">
+    <meta name="DC.rights" content="https://creativecommons.org/licenses/by/4.0/">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="application/pdf">
+    <meta name="DC.accessRights" content="open access">
+    <meta name="citation_title" content="Estado Mecânico de Bicicleta Nova: Marco de Diagnóstico Pré-Uso">
+    <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+    <meta name="citation_author_institution" content="BikeLab Studio">
+    <meta name="citation_publication_date" content="2026-02-17">
+    <meta name="citation_language" content="pt-BR">
+    <meta name="citation_pdf_url" content="https://www.bikelabstudio.com/papers/bikelabstudio-white-paper-bicicleta-nueva-estado-mecanico-pt.pdf">
+    <meta name="citation_doi" content="10.5281/zenodo.20249194">
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENU</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu de navegação">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="lang-switch">
+        <a href="../index.html">INÍCIO</a> ·
+        <a href="white-paper-bicicleta-nueva-estado-mecanico-es.html">ES</a> ·
+        <a href="white-paper-new-bike-mechanical-state-en.html">EN</a>
+    </div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index.html">INÍCIO</a>
+        <a href="../servicios.html">SERVIÇOS</a>
+        <a href="../mantenimiento-general-es.html">MANUT. GERAL</a>
+        <a href="../purgado-frenos-es.html">SANGRIA DE FREIOS</a>
+        <a href="../centrado-ruedas-es.html">CENTRAGEM DE RODAS</a>
+        <a href="../rodamientos-hardtail-es.html">ROLAMENTOS</a>
+        <a href="../suspension-es.html">SUSPENSÃO</a>
+        <a href="../index.html#science">ARTIGOS TÉCNICOS</a>
+        <a href="https://wa.me/51934391545?text=Hola%20BikeLab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTATO</a>
+    </nav>
+</div>
+
+<a href="https://wa.me/51934391545?text=Hola%20BikeLab%2C%20deseo%20consultar%20sobre%20servicios" class="wa-float" aria-label="Contatar pelo WhatsApp">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WHATSAPP_
+</a>
+
+<div class="container" style="padding-top: 100px;">
+
+    <a href="../index.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // BENCH_ANALYSIS</div>
+        <div class="category">ENGENHARIA_DE_COMPONENTES // TRIBOLOGIA_APLICADA // CINEMÁTICA_ESTRUTURAL</div>
+        <nav aria-label="Breadcrumb" style="font-size:11px;color:#666;margin-bottom:20px;letter-spacing:1px;">
+            <a href="../index.html" style="color:#888;text-decoration:none;">INÍCIO</a> /
+            <a href="../index.html#science" style="color:#888;text-decoration:none;">ARTIGOS TÉCNICOS</a> /
+            <span style="color:#ddd;">White Paper — Estado Mecânico de Fábrica</span>
+        </nav>
+        <h1>Estado Mecânico de Fábrica em Bicicletas Novas</h1>
+        <div class="subtitle">Análise tribológica e cinemática dos cinco vetores de degradação de desempenho em bicicletas novas de caixa: lubrificação, integridade estrutural de rodas, complacência hidráulica, torque de montagem e perdas totais na transmissão</div>
+        <div class="meta">
+            Autor: Carlos Ravello // Fundador da BikeLab Studio<br>
+            Data: Março de 2026 · Revisão: 1.0 ·
+            <!-- INTERLINK: versión divulgación → bicicleta-nueva-calibracion-fabrica-es.html -->
+            Versão técnica completa
+        </div>
+    </div>
+
+    <!-- Hero image -->
+    <div style="max-width: 820px; margin: 0 auto 2.5rem; padding: 0 1.5rem;">
+        <img src="images/white-paper-bicicleta-nueva-estado-mecanico.webp"
+             alt="Análise mecânica de bicicleta nova — estado de fábrica — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             width="600" height="750"
+             style="width: 100%; max-height: 420px; object-fit: cover; object-position: center; display: block;">
+    </div>
+
+    <div style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #555;padding:25px;margin:30px 0;">
+        <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// Em resumo — antes das equações</div>
+        <p style="margin-bottom:14px;"><strong>A pergunta:</strong> uma bicicleta nova, recém-tirada da caixa, já está pronta para render?</p>
+        <p style="margin-bottom:14px;"><strong>A resposta curta:</strong> não. Sai "montada para chegar inteira à loja", não "calibrada para rodar bem" — e a diferença é mensurável. Cinco frentes a separam de seu potencial: a corrente vem com graxa de transporte (não lubrificante) que custa <strong>6–10 W</strong>; os raios chegam com <strong>20–30%</strong> de diferença de tensão; os freios podem trazer microbolhas que somam <strong>25%</strong> à distância de frenagem; até <strong>40%</strong> dos parafusos críticos estão fora de torque; e a transmissão perde <strong>2,5–4%</strong> de eficiência de fábrica. Separadamente parecem detalhes; somados, não são.</p>
+        <p style="margin-bottom:0;"><strong>O que vem a seguir, e por que acreditar:</strong> abaixo se quantifica cada um desses cinco vetores com dados de Friction Facts, SKF, PBMA e Shimano. Se você quer a versão prática —o que revisar e por quê, sem a matemática—, está o <a href="bicicleta-nueva-calibracion-fabrica-es.html" style="color:#a0a0a0;">guia de bicicleta nova</a>.</p>
+    </div>
+
+    <!-- ABSTRACT -->
+    <div class="abstract-box">
+        <h3>ABSTRACT</h3>
+        <p>Este artigo quantifica os desvios mecânicos sistemáticos presentes em bicicletas novas sem inspeção pré-entrega (PDI). Analisam-se cinco vetores independentes: (1) coeficiente de atrito do lubrificante de fábrica frente a lubrificantes técnicos de referência, com perdas de potência na corrente de 6–10 W a 250 W de entrada; (2) uniformidade de tensão de raios, com variações de 20–30% entre raios adjacentes em relação ao valor objetivo de 100–120 kgf; (3) complacência volumétrica do circuito hidráulico por presença de microbolhas, com aumento da distância de parada de 25% a 30 km/h; (4) torque de montagem em interfaces de carbono, com 40% dos parafusos críticos fora de tolerância; (5) perda total de eficiência de transmissão de 2,5–4% na condição de fábrica. A evidência estabelece a necessidade do PDI profissional como protocolo padrão prévio à primeira pedalada.</p>
+    </div>
+
+
+        <!-- OPEN ACCESS DOWNLOAD -->
+        <div style="margin: 25px 0 35px 0; padding: 18px 24px; background: #0a0a0a; border: 1px solid #444; border-left: 4px solid #e0e0e0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+            <div>
+                <span style="font-family: 'Courier New', monospace; font-size: 10px; color: #666; letter-spacing: 3px; display: block; margin-bottom: 8px;">[ OPEN_ACCESS ] // CC_BY_4.0</span>
+                <a href="https://www.bikelabstudio.com/papers/bikelabstudio-white-paper-bicicleta-nueva-estado-mecanico-pt.pdf" download style="font-family: 'Courier New', monospace; font-size: 13px; color: #ffffff; text-decoration: none; letter-spacing: 2px; border-bottom: 1px solid #555; padding-bottom: 2px;" onmouseover="this.style.color='#aaa'" onmouseout="this.style.color='#fff'">↓ BAIXAR PDF</a>
+            </div>
+            <div style="text-align: right;">
+                <span style="font-family: 'Courier New', monospace; font-size: 9px; color: #555; letter-spacing: 2px; display: block; margin-bottom: 4px;">DOI</span>
+                <a href="https://doi.org/10.5281/zenodo.20249194" target="_blank" rel="noopener" style="font-family: 'Courier New', monospace; font-size: 11px; color: #888; text-decoration: none; letter-spacing: 1px;" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">10.5281/zenodo.20249194</a>
+            </div>
+        </div>
+
+    <!-- INTRODUCCIÓN -->
+    <h2>MÓDULO_00 // MARCO_CONCEITUAL</h2>
+
+    <p>Uma bicicleta nova não é uma bicicleta calibrada. É uma bicicleta montada sob os parâmetros de tolerância que a cadeia de produção industrial considera suficientes para que o produto chegue ao ponto de venda sem dano visível e com funcionamento básico verificável.</p>
+
+    <p>Esses parâmetros não são os parâmetros de desempenho ótimo. São os parâmetros de desempenho mínimo aceitável para o transporte e a exibição em loja. A diferença entre ambos é o objeto desta análise.</p>
+
+    <p>Definem-se cinco vetores de degradação mecânica quantificáveis: <strong>V₁</strong> — lubrificação de fábrica; <strong>V₂</strong> — integridade estrutural de rodas; <strong>V₃</strong> — complacência hidráulica; <strong>V₄</strong> — torque de montagem; <strong>V₅</strong> — perda total na transmissão. Cada vetor opera de forma independente e seus efeitos são aditivos sobre o desempenho global do sistema.</p>
+
+    <!-- V1 LUBRICACIÓN -->
+    <h2>MÓDULO_01 // V₁ — LUBRIFICAÇÃO_DE_FÁBRICA</h2>
+
+    <h3>1.1 Composição e classificação do lubrificante de origem</h3>
+
+    <p>Os fabricantes de bicicletas de primeiro nível —Trek, Specialized, Giant, Cannondale— não formulam seus próprios lubrificantes de montagem. Utilizam graxas industriais de fornecedores como Klüber ou Mobil, geralmente classificadas como <span class="data-highlight">NLGI Grau 2</span> com uma viscosidade de óleo base entre <span class="data-highlight">100 e 150 cSt</span> a 40°C.</p>
+
+    <p>Essa classificação situa os lubrificantes de fábrica na faixa de graxas de uso geral, otimizadas para vedação, proteção anticorrosiva e resistência mecânica durante o armazenamento, não para minimizar o atrito em operação dinâmica.</p>
+
+    <p>As correntes, por sua vez, saem de fábrica com um revestimento anticorrosivo de base petrolífera espessa —frequentemente denominado "factory grease" ou "shipping compound"— que não deve ser confundido com um lubrificante funcional. Sua viscosidade elevada atua como armadilha de partículas abrasivas desde os primeiros quilômetros.</p>
+
+    <h3>1.2 Modelo de atrito e perda de potência</h3>
+
+    <p>A relação entre o coeficiente de atrito cinético (μ) e a perda de potência na corrente pode ser aproximada por meio do modelo de eficiência de transmissão por elo:</p>
+
+    <div class="formula">
+        $$P_{loss} = P_{input} \times (1 - \eta_{chain})$$
+        <div class="formula-source">onde η<sub>chain</sub> = eficiência da corrente em função do lubrificante e da carga</div>
+    </div>
+
+    <p>Os benchmarks da Zero Friction Cycling e CeramicSpeed Friction Facts, sob protocolo de carga controlada a 250 W de potência de entrada e 100 rpm, estabelecem os seguintes valores comparativos:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>CONDIÇÃO DE CORRENTE</th>
+                <th>P<sub>loss</sub> (W)</th>
+                <th>η (%)</th>
+                <th>μ ESTIMADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nova, revestimento de fábrica sem tratar</td>
+                <td class="data-red">6 – 10</td>
+                <td class="data-red">96.0 – 97.6</td>
+                <td>0.07 – 0.10</td>
+            </tr>
+            <tr>
+                <td>Nova, limpa + lubrificante úmido premium</td>
+                <td class="data-yellow">4 – 6</td>
+                <td class="data-yellow">97.6 – 98.4</td>
+                <td>0.04 – 0.06</td>
+            </tr>
+            <tr>
+                <td>Tratada com cera de parafina hot-melt</td>
+                <td class="data-green">3.4 – 4.0</td>
+                <td class="data-green">98.4 – 98.9</td>
+                <td>0.02 – 0.03</td>
+            </tr>
+            <tr>
+                <td>CeramicSpeed UFO Drip (referência de laboratório)</td>
+                <td class="data-green">3.78</td>
+                <td class="data-green">98.5</td>
+                <td>~0.018</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Zero Friction Cycling Chain Lubricant Independent Test Results; CeramicSpeed / Friction Facts Chain Efficiency Benchmarks.</div>
+
+    <h3>1.3 Degradação de rolamentos</h3>
+
+    <p>Os rolamentos de movimento central, cubos e direção operam na faixa viscosa da graxa industrial NLGI 2. O coeficiente de atrito de partida em rolamentos vedados com essa graxa situa-se em <span class="data-red">μ = 0.05 – 0.10</span>. Uma graxa técnica de alta temperatura como SKF LGHP 2/1 opera em <span class="data-green">μ = 0.01 – 0.03</span>.</p>
+
+    <p>A vida útil da lubrificação de fábrica em rolamentos vedados é de <span class="data-yellow">3.000 – 5.000 km</span> em condições secas. Esse valor se reduz drasticamente ante exposição à água por lavagem sob pressão, dado que as graxas NLGI 2 genéricas apresentam resistência à lavagem inferior à de formulações técnicas específicas para rolamentos de bicicleta.</p>
+
+    <!-- INTERLINK: grasas-tribologia-es.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>SERVIÇO RELACIONADO — ROLAMENTOS HARDTAIL</strong>
+            Extração, limpeza ultrassônica e reembalagem com SKF LGHP 2/1. Movimento central, cubos e direção.
+        </div>
+        <a href="../rodamientos-hardtail-es.html">VER PROTOCOLO →</a>
+    </div>
+
+    <!-- V2 RADIOS -->
+    <h2>MÓDULO_02 // V₂ — INTEGRIDADE_ESTRUTURAL_DE_RODAS</h2>
+
+    <h3>2.1 Tensão de raios: valor objetivo e tolerância admissível</h3>
+
+    <p>A tensão de raios é a variável primária que determina a rigidez lateral, a resistência à deformação sob carga e a vida útil estrutural de uma roda construída. O valor objetivo para o lado da catraca (drive-side) em rodas de 29" e 27.5" situa-se na faixa de <span class="data-highlight">100 – 120 kgf</span> (980 – 1.177 N), com uma tolerância de uniformidade inferior a <span class="data-green">±10%</span> entre raios adjacentes.</p>
+
+    <p>Esse critério de uniformidade é o indicador estrutural crítico: não é suficiente que a tensão média esteja dentro da faixa; a distribuição de carga entre raios deve ser homogênea para que o aro trabalhe como um sistema contínuo e não como uma cadeia de pontos de tensão desigual.</p>
+
+    <h3>2.2 Desvios observados em rodas de fábrica</h3>
+
+    <p>O processo de centragem em linha de produção em massa —geralmente automatizado ou semiautomático com verificação manual básica— não garante a uniformidade de tensão entre raios individuais. As vibrações e compressões durante o transporte em caixa geram assentamentos adicionais que aumentam a variabilidade.</p>
+
+    <p>Os relatórios de oficinas especializadas e a evidência acumulada de mecânicos certificados PBMA situam a variação entre raios adjacentes em rodas novas não inspecionadas na faixa de <span class="data-red">20 – 30%</span> em relação ao valor médio.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>PARÂMETRO</th>
+                <th>VALOR FÁBRICA (TÍPICO)</th>
+                <th>VALOR OBJETIVO PDI</th>
+                <th>DESVIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tensão média drive-side</td>
+                <td>80 – 120 kgf</td>
+                <td class="data-green">100 – 120 kgf</td>
+                <td>Variável</td>
+            </tr>
+            <tr>
+                <td>Uniformidade entre raios adjacentes</td>
+                <td class="data-red">±20 – 30%</td>
+                <td class="data-green">&lt; ±10%</td>
+                <td class="data-red">2–3× fora de tolerância</td>
+            </tr>
+            <tr>
+                <td>Desvio lateral do aro</td>
+                <td>0.5 – 2.0 mm</td>
+                <td class="data-green">&lt; 0.5 mm</td>
+                <td>Até 4× fora de tolerância</td>
+            </tr>
+            <tr>
+                <td>Lojas que verificam tensão com tensiômetro</td>
+                <td class="data-red">&lt; 30%</td>
+                <td class="data-green">100%</td>
+                <td class="data-red">70% sem verificação instrumental</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Park Tool Wheel Truing Reference; PBMA Pre-Delivery Inspection Standards; dados consolidados de oficinas especializadas.</div>
+
+    <h3>2.3 Implicações estruturais</h3>
+
+    <p>A tensão desigual entre raios gera distribuição de carga não uniforme sobre o aro. Em condição estática, isso se manifesta como descentragem lateral ou radial. Em condição dinâmica, os raios sob maior tensão trabalham com menor reserva de fadiga, acelerando a probabilidade de ruptura sob carga cíclica. O raio com maior tensão relativa é o primeiro a falhar.</p>
+
+    <!-- INTERLINK: centrado-ruedas-es.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>SERVIÇO RELACIONADO — CENTRAGEM DE RODAS</strong>
+            Correção lateral e radial com nivelamento de tensão por meio de tensiômetro calibrado. MTB e estrada.
+        </div>
+        <a href="../centrado-ruedas-es.html">VER PROTOCOLO →</a>
+    </div>
+
+    <!-- V3 FRENOS -->
+    <h2>MÓDULO_03 // V₃ — COMPLACÊNCIA_HIDRÁULICA</h2>
+
+    <h3>3.1 Fundamento físico: complacência volumétrica e resposta de manete</h3>
+
+    <p>Um circuito hidráulico de freio de bicicleta opera sob o princípio de transmissão de pressão hidrostática. A relação entre a força aplicada na manete (F<sub>lever</sub>), a área do pistão do cilindro mestre (A<sub>master</sub>) e a pressão hidráulica resultante (P) expressa-se:</p>
+
+    <div class="formula">
+        $$P = \frac{F_{lever}}{A_{master}} \quad \Rightarrow \quad F_{caliper} = P \times A_{caliper}$$
+        <div class="formula-source">Princípio de Pascal — transmissão de pressão em fluido incompressível</div>
+    </div>
+
+    <p>Esse modelo pressupõe um fluido essencialmente incompressível. A presença de gás (ar) no circuito introduz complacência volumétrica: uma fração do deslocamento da manete é consumida em comprimir a bolha de ar em vez de deslocar as pastilhas em direção ao rotor.</p>
+
+    <h3>3.2 Quantificação do efeito de bolha</h3>
+
+    <p>Uma bolha de ar de <span class="data-highlight">0.1 – 0.5 cm³</span> no circuito hidráulico —volume difícil de detectar visualmente mas suficiente para alterar a resposta— gera os seguintes efeitos mensuráveis:</p>
+
+    <ul>
+        <li>Deslocamento de manete aumentado até o ponto de mordida (maior curso livre)</li>
+        <li>Redução da força de frenagem máxima alcançável antes do contato manete-guidão</li>
+        <li>Modulação degradada: a resposta não é linear, mas progressivamente esponjosa</li>
+        <li>Aumento da distância de parada de até <span class="data-red">25%</span> em relação ao circuito perfeitamente sangrado</li>
+    </ul>
+
+    <div class="warning-box">
+        <p>VETOR DE SEGURANÇA — QUANTIFICAÇÃO</p>
+        <p>A 30 km/h, uma distância de frenagem de referência de <strong>7.0 metros</strong> torna-se <strong>8.75 metros</strong> com um sistema hidráulico com complacência por ar. Em descida a 40 km/h, a diferença supera os <strong>3 metros</strong>. Essa margem não é desprezível em tráfego urbano nem em singletrack técnico.</p>
+    </div>
+
+    <h3>3.3 Caliper: alinhamento e bed-in</h3>
+
+    <p>O alinhamento do caliper em relação ao plano do rotor determina a uniformidade do contato pastilha-rotor. Um caliper descentrado em <span class="data-red">0.3 – 0.5 mm</span> gera contato assimétrico, com uma pastilha roçando antes da outra. O efeito é desgaste desigual de pastilhas, aquecimento localizado e ruído de atrito desde os primeiros quilômetros.</p>
+
+    <p>O processo de bed-in —rodagem controlada de ciclos de frenagem progressiva para transferir material de pastilha ao rotor e criar uma camada de transferência uniforme— raramente é realizado corretamente na loja. Sem ele, a eficiência de frenagem inicial é inferior à especificação do fabricante.</p>
+
+    <!-- INTERLINK: purgado-frenos-es.html -->
+    <!-- INTERLINK: frenos-hidraulicos-altitud-termodinamica-es.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>SERVIÇO RELACIONADO — SANGRIA DE FREIOS HIDRÁULICOS</strong>
+            Restauração de pressão hidráulica, centragem de caliper e verificação de ponto de mordida. Shimano, SRAM, Magura, Tektro.
+        </div>
+        <a href="../purgado-frenos-es.html">VER PROTOCOLO →</a>
+    </div>
+
+    <!-- V4 TORQUE -->
+    <h2>MÓDULO_04 // V₄ — TORQUE_DE_MONTAGEM</h2>
+
+    <h3>4.1 Especificações e tolerâncias em componentes de carbono</h3>
+
+    <p>Os componentes de carbono apresentam uma faixa de torque de aperto significativamente mais estreita que os componentes de alumínio ou aço. A razão é a anisotropia do material: a resistência à compressão radial é alta, mas a tolerância à concentração de tensões por sobretorque é baixa. A deformação por esmagamento em carbono não é reversível.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>COMPONENTE</th>
+                <th>TORQUE ESPECIFICADO (Nm)</th>
+                <th>CONSEQUÊNCIA POR EXCESSO</th>
+                <th>CONSEQUÊNCIA POR DEFICIÊNCIA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Avanço — parafusos de guidão</td>
+                <td class="data-highlight">4 – 6</td>
+                <td>Microfissura em guidão de carbono</td>
+                <td>Deslizamento sob carga</td>
+            </tr>
+            <tr>
+                <td>Avanço — parafusos de garfo</td>
+                <td class="data-highlight">5 – 8</td>
+                <td>Fissura em área de compressão</td>
+                <td>Giro não controlado</td>
+            </tr>
+            <tr>
+                <td>Canote do selim — abraçadeira</td>
+                <td class="data-highlight">4 – 6</td>
+                <td>Esmagamento do canote</td>
+                <td>Deslizamento axial (creaking)</td>
+            </tr>
+            <tr>
+                <td>Movimento central — parafusos de pedivela</td>
+                <td class="data-highlight">12 – 15</td>
+                <td>Ruptura de rosca em alumínio</td>
+                <td>Folga axial progressiva</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="source">Fonte: Shimano Dealer's Manual; SRAM Technical Service Guide; especificações de componente FSA, Ritchey, Zipp.</div>
+
+    <h3>4.2 Incidência de desvios em inspeção de campo</h3>
+
+    <p>A evidência acumulada em oficina indica que até <span class="data-red">40%</span> dos parafusos críticos em avanço e guidão de bicicletas novas apresentam torque fora da faixa especificada no momento da primeira inspeção. Os desvios são em ambas as direções: subtorque por omissão da chave dinamométrica na montagem de loja, e sobretorque por aplicação de força manual excessiva.</p>
+
+    <p>Entre <span class="data-red">15 e 20%</span> das garantias por fissuras em guidões e canotes de carbono em bicicletas novas atribuem-se a sobretorque na montagem inicial ou na primeira montagem pelo usuário. A fissura nem sempre aparece imediatamente: pode manifestar-se aos 200 – 500 km sob carga cíclica sobre a microfissura preexistente.</p>
+
+    <div class="field-note">
+        <p>PROTOCOLO DE OFICINA — TORQUE</p>
+        <p>Cada ponto de aperto crítico na BikeLab Studio é verificado com chave dinamométrica calibrada. Os componentes de carbono recebem pasta antideslizante de carbono (Carbon Grip / Fiber Grip) antes da montagem para alcançar o torque especificado sem necessidade de exceder o valor máximo.</p>
+    </div>
+
+    <!-- V5 PÉRDIDA TOTAL -->
+    <h2>MÓDULO_05 // V₅ — PERDA_TOTAL_NA_TRANSMISSÃO</h2>
+
+    <h3>5.1 Modelo de perda acumulada</h3>
+
+    <p>Os vetores V₁ a V₄ não são mutuamente excludentes. Em uma bicicleta nova sem PDI, todos operam simultaneamente. A perda total de eficiência na transmissão pode ser estimada como a soma de contribuições independentes:</p>
+
+    <div class="formula">
+        $$P_{total\_loss} = P_{V1\_chain} + P_{V1\_bearings} + P_{V5\_misalignment}$$
+        $$P_{total\_loss} \approx (6\text{–}10\,W) + (0.5\text{–}1.5\,W) + (1\text{–}2\,W) = \mathbf{7.5\text{–}13.5\,W}$$
+        <div class="formula-source">Estimativa conservadora a 250 W de potência de entrada. Dados: Friction Facts, SKF Technical Data.</div>
+    </div>
+
+    <p>Esta faixa de <span class="data-red">7.5 – 13.5 W</span> representa uma perda de eficiência global de <span class="data-red">3 – 5.4%</span> a 250 W. Para um ciclista que mantém 200 W durante 3 horas, a energia dissipada por atrito evitável supera os <span class="data-red">16.200 joules</span> em uma única saída.</p>
+
+    <h3>5.2 Desalinhamento de transmissão: contribuição adicional</h3>
+
+    <p>O desvio do hanger (orelha de câmbio) —frequente em bicicletas novas por compressão durante o transporte em caixa— introduz um desalinhamento do câmbio traseiro em relação ao plano dos pinhões. Um desvio de <span class="data-red">1 – 3 mm</span> no hanger gera:</p>
+
+    <ul>
+        <li>Indexação incorreta: a corrente não cai limpamente no pinhão objetivo</li>
+        <li>Cruzamento de corrente amplificado: maior atrito lateral em combinações extremas</li>
+        <li>Desgaste acelerado de pinhões e corrente por contato angular não projetado</li>
+        <li>Risco de salto de corrente sob carga, especialmente em sistemas de 12 velocidades com tolerâncias de perfil de pinhão mais ajustadas</li>
+    </ul>
+
+    <!-- INTERLINK: white-paper-11v-12v-es.html -->
+    <div class="service-cta">
+        <div class="service-cta-text">
+            <strong>LEITURA RELACIONADA — WHITE PAPER 11V / 12V</strong>
+            Análise de tolerâncias cinemáticas em transmissões de alta velocidade e o impacto do desalinhamento de hanger.
+        </div>
+        <!-- INTERLINK: white-paper-11v-12v-es.html -->
+        <a href="#">VER ANÁLISE →</a>
+    </div>
+
+    <!-- TABLA RESUMEN VECTORES -->
+    <h2>MÓDULO_06 // SÍNTESE_QUANTITATIVA</h2>
+
+    <p style="color:#bbb;font-style:italic;">Até aqui cada vetor foi medido separadamente. Mas você não roda uma bicicleta com um único defeito: os cinco atuam ao mesmo tempo e seus efeitos se somam. Aqui está a conta total — o que de verdade separa sua bicicleta nova da bicicleta que você pagou.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>VETOR</th>
+                <th>PARÂMETRO MEDIDO</th>
+                <th>CONDIÇÃO FÁBRICA</th>
+                <th>CONDIÇÃO ÓTIMA</th>
+                <th>IMPACTO QUANTIFICADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>V₁</strong> Lubrificação corrente</td>
+                <td>P<sub>loss</sub> a 250 W</td>
+                <td class="data-red">6 – 10 W</td>
+                <td class="data-green">3.4 – 4.0 W</td>
+                <td>−2.6 a −6.6 W recuperáveis</td>
+            </tr>
+            <tr>
+                <td><strong>V₁</strong> Lubrificação rolamentos</td>
+                <td>μ cinético</td>
+                <td class="data-red">0.05 – 0.10</td>
+                <td class="data-green">0.01 – 0.03</td>
+                <td>Redução de atrito 3–5×</td>
+            </tr>
+            <tr>
+                <td><strong>V₂</strong> Tensão de raios</td>
+                <td>Variação entre adjacentes</td>
+                <td class="data-red">±20 – 30%</td>
+                <td class="data-green">&lt; ±10%</td>
+                <td>Desgaste assimétrico, fadiga acelerada</td>
+            </tr>
+            <tr>
+                <td><strong>V₃</strong> Complacência hidráulica</td>
+                <td>Distância de parada</td>
+                <td class="data-red">+25% vs. ótimo</td>
+                <td class="data-green">Referência</td>
+                <td>+1.75 m a 30 km/h</td>
+            </tr>
+            <tr>
+                <td><strong>V₄</strong> Torque de montagem</td>
+                <td>% componentes fora de faixa</td>
+                <td class="data-red">~40%</td>
+                <td class="data-green">0%</td>
+                <td>Risco de microfissura em carbono</td>
+            </tr>
+            <tr>
+                <td><strong>V₅</strong> Perda total transmissão</td>
+                <td>P<sub>loss</sub> acumulada</td>
+                <td class="data-red">7.5 – 13.5 W</td>
+                <td class="data-green">3.9 – 5.5 W</td>
+                <td>Δ = 3.6 – 8.0 W recuperáveis</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- CONCLUSIÓN -->
+    <div class="conclusion-box">
+        <h2 style="margin-top:0;">MÓDULO_07 // CONCLUSÕES</h2>
+
+        <p>A análise dos cinco vetores demonstra que o estado mecânico de uma bicicleta nova de caixa situa-se sistematicamente fora dos parâmetros de desempenho ótimo em todos os pontos avaliados. Os desvios não são aleatórios nem excepcionais: são estruturais ao processo de produção e transporte em massa.</p>
+
+        <p>A perda de potência recuperável oscila entre <span class="data-yellow">3.6 e 8.0 W</span> apenas na corrente e rolamentos. O risco hidráulico introduz uma margem de segurança comprometida de <span class="data-red">+1.75 m de distância de parada</span> a velocidades moderadas. Os desvios de torque expõem o ciclista a falhas diferidas em carbono.</p>
+
+        <p>Um PDI completo —com verificação instrumental de tensão de raios, substituição do lubrificante de corrente, sangria do circuito hidráulico, alinhamento da orelha de câmbio e verificação de torques com chave dinamométrica— corrige todos os vetores identificados em uma única intervenção de <span class="data-highlight">90 – 150 minutos</span>.</p>
+
+        <p>A pergunta não é se o PDI vale a pena. A pergunta é por que ele não é padrão em todas as lojas.</p>
+
+        <!-- INTERLINK: white-paper-fit-analyzer-es.html — diagnóstico post-setup -->
+        <!-- INTERLINK: grasas-tribologia-es.html — desarrollo completo de V1 -->
+        <!-- INTERLINK: frenos-hidraulicos-altitud-termodinamica-es.html — desarrollo completo de V3 -->
+    </div>
+
+    <div class="service-cta" style="border-left-color: #888;">
+        <div class="service-cta-text">
+            <strong>PDI PROFISSIONAL — BIKELAB STUDIO, TRUJILLO</strong>
+            Verificação instrumental dos cinco vetores. Tensiômetro calibrado, chave dinamométrica, lubrificantes técnicos certificados.
+        </div>
+        <a href="https://wa.me/51934391545?text=BikeLab%20Studio%20%E2%80%94%20PDI%20Bicicleta%20Nueva.%0AQuiero%20agendar%20inspecci%C3%B3n%20pre-entrega%20completa.">AGENDAR VIA WHATSAPP →</a>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <div class="references">
+        <h2 style="margin-top:0;">REFERÊNCIAS</h2>
+        <div class="ref-item">[1] Zero Friction Cycling. <em>Chain Lubricant Independent Test Results — Watt Loss Benchmarks at 250W</em>. Avaliação independente de lubrificantes de corrente sob protocolo de carga controlada.</div>
+        <div class="ref-item">[2] CeramicSpeed / Friction Facts. <em>Chain Lubrication Efficiency Benchmarks</em>. Comparativo de coeficiente de atrito e perdas de potência em transmissão de bicicleta.</div>
+        <div class="ref-item">[3] SKF Group. <em>LGHP 2 High Temperature Bearing Grease — Technical Data Sheet</em>. Viscosidade, coeficiente de atrito e vida útil em rolamentos de precisão.</div>
+        <div class="ref-item">[4] Klüber Lubrication. <em>NLGI Consistency Classification and Base Oil Viscosity Reference</em>. Classificação de graxas industriais por grau NLGI e faixa de viscosidade.</div>
+        <div class="ref-item">[5] Shimano Inc. <em>Dealer's Manual — Road and MTB Component Assembly</em>. Especificações de torque e procedimentos de instalação para componentes Shimano.</div>
+        <div class="ref-item">[6] SRAM LLC. <em>Technical Service Guide — Red / Force / Rival / Eagle Assembly Torque Specifications</em>.</div>
+        <div class="ref-item">[7] Park Tool Company. <em>Wheel Truing and Spoke Tension Reference Guide</em>. Metodologia de centragem, tensão de raios e critérios de uniformidade.</div>
+        <div class="ref-item">[8] PBMA (Professional Bicycle Mechanics Association). <em>Pre-Delivery Inspection Standards</em>. Padrão de inspeção pré-entrega para bicicletas novas — procedimentos e critérios de aceitação.</div>
+        <div class="ref-item">[9] Pascal, B. (1663). <em>Traité de l'équilibre des liqueurs</em>. Fundamento do princípio de transmissão de pressão hidrostática aplicado ao circuito de freio hidráulico.</div>
+    </div>
+
+    <div class="footer">
+        <p>BikeLab Studio — Calle Paraguay 300, Urb. El Recreo, Trujillo, Peru. Segunda a sábado.</p>
+        <p style="margin-top:8px;">Design e propriedade: Carlos Ravello Joo · Modelo de coerência dinâmica · MCD</p>
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.nav-overlay a').forEach(a => {
+        if (a.getAttribute('href')?.startsWith('#') || a.getAttribute('href')?.includes('#')) {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        }
+    });
+</script>
+
+    <p style="font-size:0.78rem;color:#555;text-align:center;margin:0.5rem 0 1.5rem;">BikeLab Studio — Trujillo, La Libertad, Peru</p>
+</body>
+</html>
