@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <svg viewBox="0 0 1200 700" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
   <title>Higroscópico vs hidrofóbico: para onde vai a água — BikeLab Studio</title>
-  <desc>Comportamiento del agua en fluido DOT (disperso) frente a aceite mineral (acumulado en la pinza). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
-  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <desc>Comportamento da água em fluido DOT (disperso) frente a óleo mineral (acumulado na pinça). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
   <defs></defs>
 
   <rect x="0" y="0" width="1200" height="700" fill="#0E0E12"></rect>

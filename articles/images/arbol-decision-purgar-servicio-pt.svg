@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <svg viewBox="0 0 1200 760" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
-  <title>Sangrar ou serviço completo? Árbol de decisión — BikeLab Studio</title>
-  <desc>Árbol de decisión para distinguir cuándo basta una purga y cuándo hace falta servicio completo con kit de sellos. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
-  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <title>Sangrar ou serviço completo? Árvore de decisão — BikeLab Studio</title>
+  <desc>Árvore de decisão para distinguir quando basta uma sangria e quando é preciso serviço completo com kit de retentores. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
   <defs>
     <marker id="agn" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#46E08A" stroke-width="1.8"></path></marker>
     <marker id="arr" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#FF5C5C" stroke-width="1.8"></path></marker>

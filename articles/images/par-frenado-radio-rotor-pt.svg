@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
   <title>Mais raio, mais freio: o torque cresce com o rotor — BikeLab Studio</title>
-  <desc>Par de frenado en función del radio del rotor, τ = μ·F·r, con par relativo por diámetro. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
-  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <desc>Torque de frenagem em função do raio do rotor, τ = μ·F·r, com torque relativo por diâmetro. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
   <defs>
     <marker id="arrAm" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#FFB020" stroke-width="1.8"></path></marker>
   </defs>
