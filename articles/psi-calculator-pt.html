@@ -40,8 +40,8 @@
 <meta property="og:site_name" content="BikeLab Studio">
 <meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BikeLab PSI Calculator — Presión Ruta y Gravel | BikeLab Studio">
-<meta name="twitter:description" content="Presión óptima con banda de incertidumbre 90%. Modelo Berto 15% drop + censo BRR de 321 llantas + techos ETRTO. Sin registro.">
+<meta name="twitter:title" content="BikeLab PSI Calculator — Pressão Estrada e Gravel | BikeLab Studio">
+<meta name="twitter:description" content="Pressão ótima com faixa de incerteza 90%. Modelo Berto 15% drop + censo BRR de 321 pneus + limites ETRTO. Sem registro.">
 <meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
 
 <script type="application/ld+json">
@@ -55,12 +55,12 @@
       "alternateName": [
         "PSI Calculator",
         "BikeLab PSI",
-        "Calculadora de Presión de Llantas",
-        "Calculadora Presión Neumáticos Bicicleta",
+        "Calculadora de Pressão de Pneus",
+        "Calculadora Pressão Pneus Bicicleta",
         "Bicycle Tire Pressure Calculator",
-        "Calculadora de Presión Ruta y Gravel"
+        "Calculadora de Pressão Estrada e Gravel"
       ],
-      "description": "Calculadora de presión de llantas para ruta y gravel basada en el criterio de deflección 15% de Frank Berto, con corrección de ancho real calibrada contra 321 mediciones independientes de BicycleRollingResistance, banda de incertidumbre por Latin Hypercube Sampling (10.000 muestras) y techos de seguridad ETRTO para aros hookless. Validada contra SILCA y Rene Herse. BikeLab Studio — Trujillo, Perú.",
+      "description": "Calculadora de pressão de pneus para estrada e gravel baseada no critério de deflexão 15% de Frank Berto, com correção de largura real calibrada contra 321 medições independentes da BicycleRollingResistance, faixa de incerteza por Latin Hypercube Sampling (10.000 amostras) e limites de segurança ETRTO para aros hookless. Validada contra SILCA e Rene Herse. BikeLab Studio — Trujillo, Peru.",
       "applicationCategory": "SportsApplication",
       "applicationSubCategory": "Bicycle Tire Pressure Calculator",
       "operatingSystem": "Web Browser",
@@ -75,17 +75,17 @@
         "availability": "https://schema.org/InStock"
       },
       "featureList": [
-        "Modelo físico Frank Berto — criterio 15% tire drop (dominio empírico 20–220 lbs por rueda)",
-        "Corrección de ancho real calibrada con censo de 321 llantas de BicycleRollingResistance",
-        "Banda de incertidumbre 90% por Latin Hypercube Sampling (10.000 muestras por configuración)",
-        "Acople frontal k=0.93 calibrado contra SILCA y Rene Herse (transferencia de carga en frenada)",
-        "Techos de seguridad ETRTO: hookless 72.5 PSI, hookless con aro interno ≥30mm 60 PSI",
-        "Piso de seguridad 25 PSI con advertencia de pinch flat y desllante",
-        "Correcciones por cámara/tubeless, tipo de carcasa y superficie",
-        "Campo opcional de ancho medido con calibre — reduce la incertidumbre a un tercio",
-        "Análisis de sensibilidad global (índices de Sobol) publicado",
-        "Validación cruzada documentada: 6 casos contra SILCA y Rene Herse",
-        "Arquitectura preparada para módulo MTB (heurísticas de fabricante, próximamente)"
+        "Modelo físico Frank Berto — critério 15% tire drop (domínio empírico 20–220 lbs por roda)",
+        "Correção de largura real calibrada com censo de 321 pneus da BicycleRollingResistance",
+        "Faixa de incerteza 90% por Latin Hypercube Sampling (10.000 amostras por configuração)",
+        "Acoplamento dianteiro k=0.93 calibrado contra SILCA e Rene Herse (transferência de carga na frenagem)",
+        "Limites de segurança ETRTO: hookless 72.5 PSI, hookless com aro interno ≥30mm 60 PSI",
+        "Piso de segurança 25 PSI com aviso de pinch flat e estouro",
+        "Correções por câmara/tubeless, tipo de carcaça e superfície",
+        "Campo opcional de largura medida com paquímetro — reduz a incerteza a um terço",
+        "Análise de sensibilidade global (índices de Sobol) publicada",
+        "Validação cruzada documentada: 6 casos contra SILCA e Rene Herse",
+        "Arquitetura preparada para módulo MTB (heurísticas de fabricante, em breve)"
       ],
       "softwareVersion": "1.0",
       "dateCreated": "2026-06-12",
@@ -117,7 +117,7 @@
         {
           "@type": "Person",
           "name": "Frank Berto",
-          "description": "Ingeniero y editor técnico de Bicycling Magazine, autor del criterio 15% tire drop"
+          "description": "Engenheiro e editor técnico da Bicycling Magazine, autor do critério 15% tire drop"
         },
         {
           "@type": "Organization",
@@ -152,8 +152,8 @@
     {
       "@type": "Dataset",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#dataset",
-      "name": "Censo BRR de anchos nominal vs medido + validación cruzada SILCA/Rene Herse",
-      "description": "321 pares nominal/medido de BicycleRollingResistance (159 ruta en aro 18mm interno, 162 gravel en aro 17.8mm) usados para calibrar la corrección de ancho real; 6 casos de validación cruzada contra las calculadoras de SILCA y Rene Herse ejecutadas en vivo; análisis de incertidumbre LHS y sensibilidad Sobol con SALib.",
+      "name": "Censo BRR de larguras nominal vs medido + validação cruzada SILCA/Rene Herse",
+      "description": "321 pares nominal/medido da BicycleRollingResistance (159 estrada em aro 18mm interno, 162 gravel em aro 17.8mm) usados para calibrar a correção de largura real; 6 casos de validação cruzada contra as calculadoras de SILCA e Rene Herse executadas ao vivo; análise de incerteza LHS e sensibilidade Sobol com SALib.",
       "creator": {
         "@id": "https://carlosravello.com/#person"
       },
@@ -162,12 +162,12 @@
       "variableMeasured": [
         {
           "@type": "PropertyValue",
-          "name": "Ancho nominal vs medido",
+          "name": "Largura nominal vs medido",
           "unitText": "mm"
         },
         {
           "@type": "PropertyValue",
-          "name": "Presión recomendada frontal/trasera",
+          "name": "Pressão recomendada dianteira/traseira",
           "unitText": "PSI"
         }
       ]
@@ -176,7 +176,7 @@
       "@type": "WebPage",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#webpage",
       "url": "https://www.bikelabstudio.com/articles/psi-calculator-es.html",
-      "name": "Calculadora de Presión de Llantas Ruta y Gravel | BikeLab Studio",
+      "name": "Calculadora de Pressão de Pneus Estrada e Gravel | BikeLab Studio",
       "isPartOf": {
         "@id": "https://www.bikelabstudio.com/#website"
       },
@@ -248,8 +248,8 @@
     {
       "@type": "HowTo",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#howto",
-      "name": "Cómo calcular la presión óptima de tus llantas",
-      "description": "Calcula la presión frontal y trasera óptima para ruta o gravel con banda de incertidumbre y techos de seguridad.",
+      "name": "Como calcular a pressão ótima dos seus pneus",
+      "description": "Calcule a pressão dianteira e traseira ótima para estrada ou gravel com faixa de incerteza e limites de segurança.",
       "totalTime": "PT2M",
       "estimatedCost": {
         "@type": "MonetaryAmount",
@@ -260,26 +260,26 @@
         {
           "@type": "HowToStep",
           "position": "1",
-          "name": "Elige disciplina y geometría",
-          "text": "Selecciona ruta o gravel y el tipo de bici (racing, endurance o urbana/touring) — esto fija la distribución de carga entre ruedas."
+          "name": "Escolha disciplina e geometria",
+          "text": "Selecione estrada ou gravel e o tipo de bike (racing, endurance ou urbana/touring) — isso fixa a distribuição de carga entre as rodas."
         },
         {
           "@type": "HowToStep",
           "position": "2",
-          "name": "Ingresa peso y llanta",
-          "text": "Peso total del sistema (rider + bici + equipo), ancho nominal de la llanta y ancho interno del aro. Si mides el ancho real con calibre, ingrésalo: la incertidumbre baja a un tercio."
+          "name": "Insira peso e pneu",
+          "text": "Peso total do sistema (ciclista + bike + equipamento), largura nominal do pneu e largura interna do aro. Se você mede a largura real com paquímetro, insira-a: a incerteza cai a um terço."
         },
         {
           "@type": "HowToStep",
           "position": "3",
-          "name": "Configura montaje y superficie",
-          "text": "Tubeless o cámara, tipo de carcasa (supple, estándar o rígida), tipo de aro (hooked o hookless) y superficie habitual."
+          "name": "Configure montagem e superfície",
+          "text": "Tubeless ou câmara, tipo de carcaça (supple, padrão ou rígida), tipo de aro (hooked ou hookless) e superfície habitual."
         },
         {
           "@type": "HowToStep",
           "position": "4",
-          "name": "Lee presión y banda de incertidumbre",
-          "text": "Obtienes presión frontal y trasera con banda de confianza 90%. Si un techo de seguridad ETRTO capea el resultado, se muestran ambos valores con explicación. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos."
+          "name": "Leia a pressão e a faixa de incerteza",
+          "text": "Você obtém a pressão dianteira e traseira com faixa de confiança 90%. Se um limite de segurança ETRTO restringe o resultado, ambos os valores são mostrados com explicação. Nunca ultrapasse o máximo do fabricante do pneu ou aro — o menor dos dois."
         }
       ]
     },
@@ -289,26 +289,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Por qué esta calculadora recomienda presiones distintas a SILCA o Rene Herse?",
+          "name": "Por que esta calculadora recomenda pressões diferentes de SILCA ou Rene Herse?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Porque optimizan funciones distintas. Esta calculadora aplica el criterio de deflección constante 15% de Frank Berto, que exige que la presión escale linealmente con la carga. SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En nuestra validación cruzada de 6 casos, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas referencias — y cada desviación restante tiene causa física documentada."
+            "text": "Porque otimizam funções diferentes. Esta calculadora aplica o critério de deflexão constante 15% de Frank Berto, que exige que a pressão escale linearmente com a carga. SILCA otimiza impedância e satura com o peso; Rene Herse dá um único valor para ambas as rodas. Na nossa validação cruzada de 6 casos, 9 de 12 rodas ficaram dentro de ±10% da média de ambas as referências — e cada desvio restante tem causa física documentada."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué significa la banda de incertidumbre (±PSI)?",
+          "name": "O que significa a faixa de incerteza (±PSI)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es el intervalo de confianza 90% calculado por muestreo Latin Hypercube sobre la incertidumbre real de los inputs: ±2 kg de peso, ±1.5 mm de ancho real y ±3 puntos de distribución de carga. No incluye el error de tu manómetro (típicamente ±5%), que es incertidumbre de tu instrumento, no del modelo. Ninguna otra calculadora del mercado publica este dato."
+            "text": "É o intervalo de confiança 90% calculado por amostragem Latin Hypercube sobre a incerteza real dos inputs: ±2 kg de peso, ±1.5 mm de largura real e ±3 pontos de distribuição de carga. Não inclui o erro do seu manômetro (tipicamente ±5%), que é incerteza do seu instrumento, não do modelo. Nenhuma outra calculadora do mercado publica este dado."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Por qué el techo de 72.5 PSI en aros hookless?",
+          "name": "Por que o limite de 72.5 PSI em aros hookless?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es el límite ETRTO para aros sin gancho (hookless): 72.5 PSI / 5 bar sin excepciones, y 60 PSI si el aro tiene ancho interno de 30 mm o más. Superarlo arriesga desllante súbito. Si tu presión calculada excede el techo, la calculadora muestra ambos valores y aplica el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos."
+            "text": "É o limite ETRTO para aros sem gancho (hookless): 72.5 PSI / 5 bar sem exceções, e 60 PSI se o aro tiver largura interna de 30 mm ou mais. Ultrapassá-lo arrisca estouro súbito. Se sua pressão calculada exceder o limite, a calculadora mostra ambos os valores e aplica o limite. Nunca ultrapasse o máximo do fabricante do pneu ou aro — o menor dos dois."
           }
         },
         {
@@ -316,7 +316,7 @@
           "name": "Por que não cobre MTB?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Decisión de diseño documentada: el propio Berto declara que el criterio 15% no es válido para MTB — los aros son proporcionalmente más angostos, los tacos distorsionan la medición de deflección y el objetivo off-road es tracción y absorción, no resistencia a la rodadura. Un módulo MTB separado, basado en heurísticas de fabricantes, está en desarrollo."
+            "text": "Decisão de design documentada: o próprio Berto declara que o critério 15% não é válido para MTB — os aros são proporcionalmente mais estreitos, os cravos distorcem a medição de deflexão e o objetivo off-road é tração e absorção, não resistência à rolagem. Um módulo MTB separado, baseado em heurísticas de fabricantes, está em desenvolvimento."
           }
         }
       ]
