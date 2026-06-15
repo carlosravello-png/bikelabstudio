@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 660" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
+  <title>El fade es física: temperatura del rotor en una bajada larga — BikeLab Studio</title>
+  <desc>Curva de temperatura del rotor frente al tiempo de bajada para rotor estándar e Ice-Tech, con umbrales de ebullición. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs></defs>
+
+  <rect x="0" y="0" width="1200" height="660" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="643" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 638 H42 M22 638 V618"></path><path d="M1178 638 H1158 M1178 638 V618"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="57" fill="#ECECEC" font-size="25" font-weight="bold">O fade é física</text>
+  <text x="62" y="84" fill="#9AA0A6" font-size="15">Temperatura do rotor numa descida longa · mais massa e melhor condução = menos calor acumulado</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.04 / FADE</text>
+  <line x1="40" y1="100" x2="1160" y2="100" stroke="#2A2A2A" stroke-width="1"></line>
+
+  
+  <rect x="40" y="118" width="875" height="500" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+
+  
+  <g stroke="#1E1E24" stroke-width="1">
+    <line x1="130" y1="555" x2="890" y2="555"></line>
+    <line x1="130" y1="504" x2="890" y2="504"></line>
+    <line x1="130" y1="454" x2="890" y2="454"></line>
+    <line x1="130" y1="403" x2="890" y2="403"></line>
+    <line x1="130" y1="352" x2="890" y2="352"></line>
+    <line x1="130" y1="302" x2="890" y2="302"></line>
+    <line x1="130" y1="251" x2="890" y2="251"></line>
+    <line x1="130" y1="201" x2="890" y2="201"></line>
+    <line x1="130" y1="150" x2="890" y2="150"></line>
+  </g>
+  <g fill="#9AA0A6" font-size="12.5" text-anchor="end">
+    <text x="118" y="559">0</text><text x="118" y="508">40</text><text x="118" y="458">80</text>
+    <text x="118" y="407">120</text><text x="118" y="356">160</text><text x="118" y="306">200</text>
+    <text x="118" y="255">240</text><text x="118" y="205">280</text><text x="118" y="154">320</text>
+  </g>
+  
+  <line x1="130" y1="150" x2="130" y2="555" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <line x1="130" y1="555" x2="890" y2="555" stroke="#6A6A6A" stroke-width="1.4"></line>
+  <g fill="#9AA0A6" font-size="12.5" text-anchor="middle">
+    <text x="130" y="576">0</text><text x="282" y="576">2</text><text x="434" y="576">4</text>
+    <text x="586" y="576">6</text><text x="738" y="576">8</text><text x="890" y="576">10</text>
+  </g>
+  <text x="510" y="600" fill="#ECECEC" font-size="13.5" text-anchor="middle">tempo de descida (min)</text>
+  <text x="74" y="352" fill="#ECECEC" font-size="13.5" text-anchor="middle" transform="rotate(-90 74 352)">temperatura do rotor (°C)</text>
+
+  
+  <line x1="130" y1="428" x2="890" y2="428" stroke="#FF5C5C" stroke-width="1.4" stroke-dasharray="7 5"></line>
+  <text x="884" y="422" fill="#FF5C5C" font-size="12" text-anchor="end">100°C · a água no óleo mineral ferve</text>
+  <line x1="130" y1="327" x2="890" y2="327" stroke="#FFB020" stroke-width="1.4" stroke-dasharray="7 5"></line>
+  <text x="884" y="321" fill="#FFB020" font-size="12" text-anchor="end">180°C · o DOT úmido ferve</text>
+
+  
+  <polyline points="130,517 206,441 282,365 358,302 434,258 510,226 586,207 662,197 738,192 814,189 890,188" fill="none" stroke="#FF5C5C" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"></polyline>
+  <polyline points="130,517 206,460 282,397 358,346 434,308 510,283 586,266 662,255 738,247 814,242 890,240" fill="none" stroke="#46E08A" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"></polyline>
+  
+  <circle cx="890" cy="188" r="4.5" fill="#FF5C5C"></circle>
+  <text x="878" y="180" fill="#FF5C5C" font-size="14" font-weight="bold" text-anchor="end">~290°C</text>
+  <circle cx="890" cy="240" r="4.5" fill="#46E08A"></circle>
+  <text x="878" y="262" fill="#46E08A" font-size="14" font-weight="bold" text-anchor="end">&lt;250°C</text>
+
+  
+  <g>
+    <rect x="935" y="118" width="225" height="500" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+    <text x="957" y="146" fill="#9AA0A6" font-size="13" letter-spacing="1.2">[ LEITURA ]</text>
+    <line x1="957" y1="158" x2="1138" y2="158" stroke="#222" stroke-width="1"></line>
+
+    <rect x="957" y="178" width="16" height="16" fill="#FF5C5C"></rect>
+    <text x="983" y="184" fill="#ECECEC" font-size="13.5">203 mm padrão</text>
+    <text x="983" y="204" fill="#9AA0A6" font-size="12.5">pico ≈ 290°C</text>
+
+    <rect x="957" y="232" width="16" height="16" fill="#46E08A"></rect>
+    <text x="983" y="238" fill="#ECECEC" font-size="13.5">220 mm Ice-Tech</text>
+    <text x="983" y="258" fill="#9AA0A6" font-size="12.5">mantém-se &lt; 250°C</text>
+
+    <line x1="957" y1="286" x2="1138" y2="286" stroke="#222" stroke-width="1"></line>
+    <rect x="957" y="306" width="16" height="4" fill="#FF5C5C"></rect>
+    <text x="983" y="313" fill="#9AA0A6" font-size="12">100°C limiar mineral</text>
+    <rect x="957" y="330" width="16" height="4" fill="#FFB020"></rect>
+    <text x="983" y="337" fill="#9AA0A6" font-size="12">180°C limiar DOT úmido</text>
+
+    <line x1="957" y1="360" x2="1138" y2="360" stroke="#222" stroke-width="1"></line>
+    <text x="957" y="386" fill="#46E08A" font-size="13.5" font-weight="bold">A mesma descida,</text>
+    <text x="957" y="406" fill="#46E08A" font-size="13.5" font-weight="bold">rotor diferente.</text>
+    <text x="957" y="432" fill="#C9CDD2" font-size="12.5">O de maior massa e melhor</text>
+    <text x="957" y="450" fill="#C9CDD2" font-size="12.5">condução nunca cruza o</text>
+    <text x="957" y="468" fill="#C9CDD2" font-size="12.5">limiar do DOT úmido —</text>
+    <text x="957" y="486" fill="#C9CDD2" font-size="12.5">o padrão sim.</text>
+
+    <text x="957" y="560" fill="#FFB020" font-size="12.5">O fade não é opinião:</text>
+    <text x="957" y="578" fill="#FFB020" font-size="12.5">é termodinâmica.</text>
+  </g>
+
+  <text x="1160" y="640" fill="#6A6A6A" font-size="11" text-anchor="end">© Carlos Eduardo Ravello Joo · carlosravello.com</text>
+</svg>

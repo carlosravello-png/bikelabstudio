@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 1200 640" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision">
+  <title>Mais raio, mais freio: o torque cresce com o rotor — BikeLab Studio</title>
+  <desc>Par de frenado en función del radio del rotor, τ = μ·F·r, con par relativo por diámetro. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos los derechos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <defs>
+    <marker id="arrAm" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#FFB020" stroke-width="1.8"></path></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#0E0E12"></rect>
+  <rect x="8.5" y="8.5" width="1183" height="623" fill="none" stroke="#2A2A2A" stroke-width="1"></rect>
+  <g stroke="#3A3A3A" stroke-width="1" fill="none">
+    <path d="M22 22 H42 M22 22 V42"></path><path d="M1178 22 H1158 M1178 22 V42"></path>
+    <path d="M22 618 H42 M22 618 V598"></path><path d="M1178 618 H1158 M1178 618 V598"></path>
+  </g>
+
+  <rect x="40" y="34" width="6" height="30" fill="#E8FF3A"></rect>
+  <text x="62" y="57" fill="#ECECEC" font-size="25" font-weight="bold">Mais raio, mais freio: o torque cresce com o rotor</text>
+  <text x="62" y="84" fill="#9AA0A6" font-size="15">O torque de frenagem é proporcional ao raio efetivo do rotor · τ = μ·F·r</text>
+  <text x="1160" y="50" fill="#6A6A6A" font-size="12" text-anchor="end" letter-spacing="1">FIG.03 / TORQUE</text>
+  <line x1="40" y1="100" x2="1160" y2="100" stroke="#2A2A2A" stroke-width="1"></line>
+
+  
+  <g>
+    <rect x="40" y="118" width="430" height="352" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+    <text x="62" y="144" fill="#9AA0A6" font-size="13" letter-spacing="1.5">[ TORQUE DE FRENAGEM ]</text>
+    <line x1="62" y1="156" x2="448" y2="156" stroke="#222" stroke-width="1"></line>
+    <text x="62" y="206" fill="#FFB020" font-size="40" font-weight="bold">τ = μ · F · r</text>
+    <text x="62" y="240" fill="#ECECEC" font-size="14">μ = coeficiente de atrito pastilha-rotor</text>
+    <text x="62" y="262" fill="#ECECEC" font-size="14">F = força normal do pistão sobre a pastilha</text>
+    <text x="62" y="284" fill="#ECECEC" font-size="14">r = raio efetivo do rotor</text>
+    
+    <circle cx="255" cy="386" r="62" fill="none" stroke="#6A6A6A" stroke-width="2"></circle>
+    <circle cx="255" cy="386" r="20" fill="none" stroke="#6A6A6A" stroke-width="1.6"></circle>
+    <line x1="255" y1="386" x2="255" y2="324" stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3"></line>
+    <text x="266" y="352" fill="#FFB020" font-size="14">r</text>
+    
+    <rect x="238" y="316" width="34" height="16" fill="#FFB020" fill-opacity="0.25" stroke="#FFB020" stroke-width="1.4"></rect>
+    <line x1="320" y1="386" x2="320" y2="330" stroke="#FFB020" stroke-width="2.4" marker-end="url(#arrAm)"></line>
+    <path d="M255 386 m 0 -78 a 78 78 0 0 1 60 18" fill="none" stroke="#FFB020" stroke-width="1.6"></path>
+    <text x="350" y="392" fill="#9AA0A6" font-size="13">torque τ</text>
+  </g>
+
+  
+  <g>
+    <rect x="490" y="118" width="670" height="352" rx="2" fill="#121218" stroke="#2A2A2A" stroke-width="1.2"></rect>
+    <text x="512" y="144" fill="#9AA0A6" font-size="13" letter-spacing="1.5">[ TORQUE RELATIVO vs DIÂMETRO DE ROTOR ]</text>
+    <line x1="512" y1="156" x2="1138" y2="156" stroke="#222" stroke-width="1"></line>
+    
+    <line x1="640" y1="174" x2="640" y2="440" stroke="#34D2FF" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.6"></line>
+    <text x="648" y="170" fill="#34D2FF" font-size="11.5">100% = referência</text>
+
+    
+    
+    <text x="624" y="200" fill="#ECECEC" font-size="15" text-anchor="end">160 mm</text>
+    <rect x="640" y="180" width="356" height="40" fill="#34D2FF" fill-opacity="0.85"></rect>
+    <text x="1006" y="205" fill="#34D2FF" font-size="16" font-weight="bold">100%</text>
+    
+    <text x="624" y="266" fill="#ECECEC" font-size="15" text-anchor="end">180 mm</text>
+    <rect x="640" y="246" width="401" height="40" fill="#B68CFF" fill-opacity="0.85"></rect>
+    <text x="1051" y="271" fill="#B68CFF" font-size="16" font-weight="bold">+12,5%</text>
+    
+    <text x="624" y="332" fill="#ECECEC" font-size="15" text-anchor="end">203 mm</text>
+    <rect x="640" y="312" width="452" height="40" fill="#FFB020" fill-opacity="0.9"></rect>
+    <text x="1102" y="337" fill="#FFB020" font-size="16" font-weight="bold">+27%</text>
+    
+    <text x="624" y="398" fill="#ECECEC" font-size="15" text-anchor="end">220 mm</text>
+    <rect x="640" y="378" width="490" height="40" fill="#46E08A" fill-opacity="0.9"></rect>
+    <text x="1122" y="403" fill="#0E0E12" font-size="16" font-weight="bold" text-anchor="end">+37,5%</text>
+
+    <text x="512" y="464" fill="#9AA0A6" font-size="12.5">torque relativo a igual força de pistão · mesmo μ · 100% = referência (160 mm)</text>
+  </g>
+
+  
+  <g>
+    <rect x="40" y="488" width="1120" height="92" rx="2" fill="#0A1410" stroke="#46E08A" stroke-width="1.5"></rect>
+    <rect x="40" y="488" width="5" height="92" fill="#46E08A"></rect>
+    <text x="72" y="528" fill="#46E08A" font-size="21" font-weight="bold">Mais raio = mais alavanca: mais torque com o mesmo esforço</text>
+    <text x="72" y="558" fill="#C9CDD2" font-size="15">E ao distribuir o calor sobre mais superfície, baixa a temperatura por unidade de área — melhor freio e menos fade.</text>
+  </g>
+
+  <text x="1160" y="606" fill="#6A6A6A" font-size="11" text-anchor="end">© Carlos Eduardo Ravello Joo · carlosravello.com</text>
+</svg>
