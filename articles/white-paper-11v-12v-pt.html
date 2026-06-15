@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#000000">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Análise Comparativa MTB 11v vs 12v | BikeLab Studio">
+    <meta name="twitter:description"
+        content="Vale a pena passar de 11 para 12 velocidades no MTB? A diferença real de fricção é de apenas 1–1,5 W e o 12v custa ~46% mais em 5 anos. Modelo físico + Monte Carlo.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/logo-noir.png">
+    <title>Análise Comparativa MTB 11v vs 12v | BikeLab Studio</title>
+    <meta name="description"
+        content="Vale a pena o upgrade de 11 para 12 velocidades no MTB? A diferença real de fricção é de apenas 1–1,5 W e manter o 12v custa ~46% mais em 5 anos. Modelo físico de fricção e simulação Monte Carlo.">
+    <meta name="keywords"
+        content="transmissão 11v 12v, MTB drivetrain, Spicer Lodge, eficiência corrente, pinhão 10T 11T, simulação Monte Carlo">
+    <meta name="author" content="Carlos Ravello">
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html">
+    <link rel="alternate" hreflang="x-default"
+        href="https://www.bikelabstudio.com/articles/white-paper-11v-12v-es.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Análise Comparativa MTB 11v vs 12v | BikeLab Studio">
+    <meta property="og:description"
+        content="White Paper técnico: avaliação termodinâmica, biomecânica e econômica. Modelo Spicer, Lodge &amp; Al-Sahlani, simulação Monte Carlo.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/logo-noir.png">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="BikeLab Studio">
+
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <!-- Google Scholar — Highwire Press -->
+    <meta name="citation_title" content="Análise Comparativa de Transmissões MTB 11 vs 12 Velocidades: Eficiência, Fricção e Custo em 5 Anos">
+    <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+    <meta name="citation_author_institution" content="BikeLab Studio">
+    <meta name="citation_publication_date" content="2026/03/01">
+    <meta name="citation_journal_title" content="Publicações Técnicas BikeLab Studio">
+    <meta name="citation_doi" content="10.5281/zenodo.19229331">
+    <meta name="citation_abstract_html_url" content="https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html">
+    <meta name="citation_pdf_url" content="https://www.bikelabstudio.com/papers/bikelabstudio-11v-12v-mtb-analisis-pt.pdf">
+    <meta name="citation_language" content="pt-BR">
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Análise Comparativa de Transmissões MTB 11 vs 12 Velocidades: Eficiência, Fricção e Custo em 5 Anos">
+    <meta name="DC.creator" content="Carlos Eduardo Ravello Joo">
+    <meta name="DC.date" content="2026-03-01">
+    <meta name="DC.description" content="White Paper técnico: avaliação termodinâmica, biomecânica e econômica de sistemas MTB 11v vs 12v. Modelo Spicer, dados Lodge &amp; Al-Sahlani, simulação Monte Carlo 10.000 iterações.">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://doi.org/10.5281/zenodo.19229331">
+    <meta name="DC.language" content="pt-BR">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html#article",
+      "headline": "Análise Comparativa de Sistemas de Transmissão MTB 11 Velocidades vs 12 Velocidades",
+      "alternativeHeadline": "Eficiência, Perda por Fricção e Análise de Custo mediante Simulação Monte Carlo",
+      "description": "Análise técnica comparativa de sistemas de transmissão MTB de 11 e 12 velocidades. Eficiência de fricção modelada com as equações de Spicer e Lodge & Al-Sahlani. Simulação Monte Carlo com 10.000 iterações por configuração. Análise custo-desempenho validada com dados de Zero Friction Cycling e Shimano.",
+      "url": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01",
+      "articleSection": "Engenharia de Transmissão",
+      "keywords": "11v 12v MTB, modelo Spicer, Lodge Al-Sahlani, Monte Carlo transmissão, eficiência fricção, desgaste corrente, BikeLab Studio",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#technical-publications"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html"
+      },
+      "sameAs": "https://doi.org/10.5281/zenodo.19229331",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.19229331"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Pesquisador Técnico · Fundador, BikeLab Studio",
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph ID",
+          "value": "kg:/g/11zb6pmf10",
+          "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10"
+        }
+      ],
+      "worksFor": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "founder": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "description": "Pesquisador independente. Fundador da BikeLab Studio, Zoovet Travel e Katsudōmo. Arquiteto de identidades digitais verificáveis com nós semânticos entrelaçados."
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://www.bikelabstudio.com/#technical-publications",
+      "name": "Publicações Técnicas BikeLab Studio",
+      "description": "White papers e pesquisa técnica sobre mecânica de bicicletas, modelos físicos e análise de dados aplicados.",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://carlosravello.com/#mcd-framework"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "BikeLab Studio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artigos Técnicos",
+          "item": "https://www.bikelabstudio.com/index.html#science"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "White Paper 11v vs 12v PT",
+          "item": "https://www.bikelabstudio.com/articles/white-paper-11v-12v-pt.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0c0c0c;
+            --accent: #444;
+            --text: #e0e0e0;
+            --mono: 'IBM Plex Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+            min-width: 0;
+        }
+
+        .header {
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .coordinates {
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .category {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        .nav-back:hover {
+            color: #aaa;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            font-size: 11px;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #333;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #bbb;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            color: #999;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05em;
+            color: #ccc;
+        }
+
+        ul,
+        ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .methodology-box {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .limitation-box {
+            background: #0f0a0a;
+            border: 1px solid #443;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .note {
+            background: #0a0f12;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            min-width: 480px;
+            border-collapse: collapse;
+            background: #0a0a0a;
+        }
+
+        thead {
+            background: #1a1a1a;
+            color: #aaa;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #333;
+            color: #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #0c0c0c;
+        }
+
+        tbody tr:hover {
+            background: #151515;
+        }
+
+        .equation {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 30px 0;
+            font-family: var(--mono);
+            color: #e0e0e0;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        .references ol {
+            list-style-position: inside;
+            color: #ccc;
+        }
+
+        .conclusion-box {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .chart-container {
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .chart-legend {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 12px;
+            font-style: italic;
+            font-family: var(--mono);
+        }
+
+        .data-card {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .data-card a {
+            color: #888;
+            text-decoration: underline;
+        }
+
+        .data-card a:hover {
+            color: var(--text);
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1003;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left));
+            background: var(--bg);
+            border-bottom: 1px solid #151515;
+        }
+
+        .nav-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-menu-label {
+            font-family: var(--mono), monospace;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.18em;
+            color: var(--text);
+            text-transform: uppercase;
+        }
+
+        .nav-trigger {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            min-height: 44px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-trigger .line {
+            display: block;
+            width: 20px;
+            height: 1.5px;
+            background: var(--text);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-1 {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-2 {
+            opacity: 0;
+        }
+
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-3 {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+        .nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.4s, visibility 0.4s, pointer-events 0.4s;
+        }
+
+        .nav-toggle:checked~.nav-overlay {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .nav-overlay-backdrop {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        .nav-overlay nav {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-overlay a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--mono), monospace;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 16px 24px;
+            min-height: 44px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #151515;
+        }
+
+        .nav-overlay a:hover {
+            color: var(--accent);
+            border-color: #333;
+        }
+
+        .nav-overlay a:first-of-type {
+            border-top: 1px solid #151515;
+        }
+
+        .nav-bar .lang-switch {
+            position: static;
+        }
+
+        .nav-bar .lang-switch a {
+            font-family: var(--mono), monospace;
+            font-size: 0.7rem;
+            color: var(--text);
+            padding: 12px 20px;
+            border: 1px solid var(--accent);
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-bar .lang-switch a:hover {
+            background: var(--text);
+            color: var(--bg);
+            border-color: var(--text);
+        }
+
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            border: 1px solid var(--text);
+            padding: 14px 22px;
+            color: var(--text);
+            text-decoration: none;
+            font-family: var(--mono), monospace;
+            font-size: 0.7rem;
+            z-index: 1001;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .wa-float:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .nav-overlay {
+                z-index: 1004;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-bar {
+                top: max(12px, env(safe-area-inset-top));
+                right: max(12px, env(safe-area-inset-right));
+                left: auto;
+                width: auto;
+                padding: 10px 14px;
+                background: rgba(10, 10, 10, 0.92);
+                border: 1px solid #222;
+                border-radius: 4px;
+            }
+
+            .container {
+                padding: 20px 16px;
+                padding-top: 100px !important;
+                min-width: 0;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu de navegação">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index.html">INÍCIO</a> · <a href="white-paper-11v-12v-es.html">ES</a> · <a href="white-paper-11v-12v-en.html">EN</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../index.html">INÍCIO</a>
+            <a href="../servicios.html">SERVIÇOS</a>
+            <a href="../tubelizado-pt.html">TUBELESS</a>
+            <a href="../suspension-pt.html">SUSPENSÃO</a>
+            <a href="../centrado-ruedas-pt.html">CENTRAGEM</a>
+            <a href="../purgado-frenos-pt.html">SANGRIA</a>
+            <a href="../mantenimiento-general-pt.html">MANUT. GERAL</a>
+            <a href="../mantenimiento-preventivo-pt.html">MANUT. PREVENTIVA</a>
+            <a href="../index.html#science">DADOS TÉCNICOS</a>
+            <a href="../index.html#tips">DICAS</a>
+            <a
+                href="https://wa.me/51934391545?text=Ol%C3%A1%20Bikelab%2C%20desejo%20agendar%20uma%20visita%20t%C3%A9cnica">CONTATO</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru"
+                target="_blank" rel="noopener">LOCALIZAÇÃO</a>
+        </nav>
+    </div>
+    <a href="https://wa.me/51934391545?text=Ol%C3%A1%20Bikelab%2C%20desejo%20consultar%20sobre%20servi%C3%A7os" class="wa-float"
+        aria-label="Contatar pelo WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        WHATSAPP
+    </a>
+    <div class="container" style="padding-top: 100px;">
+        <a href="../index.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <div class="category">ENGENHARIA_DE_TRANSMISSÃO // WHITE_PAPER_TÉCNICO</div>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">INÍCIO</a> /
+                <a href="../index.html#science">ARTIGOS</a> /
+                <span style="color:#fff;">White Paper 11v vs 12v</span>
+            </nav>
+            <h1>Análise Comparativa de Sistemas de Transmissão MTB 11 Velocidades vs 12 Velocidades</h1>
+            <div class="subtitle">Avaliação Termodinâmica, Biomecânica e Econômica</div>
+            <div class="meta">White Paper v2.0 — Revisão Metodológica // Autor: Carlos Ravello // Fevereiro 2026</div>
+        </div>
+
+        <div class="methodology-box" style="border-left:4px solid var(--accent);">
+            <div style="font-family:var(--mono);font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">// Em resumo — antes das equações</div>
+            <p style="margin-bottom:14px;"><strong>A pergunta:</strong> um grupo de 12 velocidades realmente te deixa mais rápido que um de 11, ou apenas mais caro?</p>
+            <p style="margin-bottom:14px;"><strong>A resposta curta:</strong> em desempenho puro, a diferença é quase nula. O pinhão pequeno de 10T do 12v perde apenas <strong>1–1,5 W</strong> a mais frente ao 11T do 11v (a 200 W e 90 rpm), e nos pinhões grandes —onde você gasta 80% do esforço subindo— ambos os sistemas são <strong>idênticos</strong>. O alcance total sobe apenas 10%, e esse extra vive no pinhão de descida que você quase não usa. O que de fato muda é o bolso: manter um 12v custa cerca de <strong>46% mais em 5 anos</strong>. Para a maioria, um 11v bem mantido ainda dá conta; o 12v se justifica em competição ou casos pontuais.</p>
+            <p style="margin-bottom:0;"><strong>O que vem a seguir, e por que acreditar:</strong> abaixo está o modelo físico completo —perdas por fricção, geometria de chainline, termodinâmica e custo marginal— calibrado contra estudos revisados (Spicer; Lodge &amp; Al-Sahlani) e submetido a 10.000 simulações Monte Carlo. Não é opinião de loja: é a equação, com todos os seus pressupostos declarados, para que você verifique cada número por conta própria. Se você só quer a conclusão sem matemática, há a <a href="11v-12v-mtb-worth-it-pt.html" style="color:#a0a0a0;">versão divulgativa</a>.</p>
+        </div>
+
+        <h2>RESUMO</h2>
+        <p><a href="11v-12v-mtb-worth-it-pt.html" style="color:#888;text-decoration:underline;font-size:0.9em;">→
+                Versão divulgativa: 11v vs 12v — Vale a pena o upgrade?</a> · <a href="11v-12v-mtb-worth-it.html"
+                style="color:#888;text-decoration:underline;font-size:0.9em;">EN</a></p>
+        <p><strong>Objetivo:</strong> Quantificar diferenças mecânicas, termodinâmicas e biomecânicas entre sistemas de
+            transmissão MTB de 11 e 12 velocidades mediante modelagem baseada em estudos experimentais validados.</p>
+
+        <p><strong>Metodologia:</strong> Análise quantitativa baseada em modelos de perda por fricção (Spicer et al.
+            2001, Lodge & Al-Sahlani 2019), análise de chainline (Bertucci et al. 2005), e fisiologia do exercício
+            (Abbiss & Laursen 2005, Lucía et al. 2001). Foram aplicados cálculos termodinâmicos sob condições
+            controladas e avaliou-se a sensibilidade paramétrica.</p>
+
+        <p><strong>Resultados Principais:</strong></p>
+        <ul>
+            <li>Diferença de eficiência mecânica entre pinhão 10T (12v) e 11T (11v): 0.5-1.5W sob condições modeladas
+                (200W, 90 rpm)</li>
+            <li>Equivalência geométrica total em pinhões ≥18T entre ambos os sistemas</li>
+            <li>Aumento de alcance: +10% (510% vs 463.6%), concentrado na zona de alta velocidade</li>
+            <li>Impacto metabólico estimado: < 0.5% em condições de uso variável típicas de MTB</li>
+            <li>Aumento de custo de manutenção em 5 anos: +46% sob pressupostos específicos de quilometragem</li>
+        </ul>
+
+        <h2>1. Pressupostos do Modelo</h2>
+
+        <p style="color:#bbb;font-style:italic;">Antes de um único número, é preciso ser honesto sobre o que o modelo captura e o que deixa de fora: um resultado vale exatamente o que valem seus pressupostos. Aqui estão os meus, sobre a mesa, para que você saiba até onde pode confiar nos números que vêm a seguir.</p>
+
+        <div class="methodology-box">
+            <h3>1.1 Pressupostos Mecânicos</h3>
+            <ul>
+                <li><strong>Lubrificação constante e ótima:</strong> Assume-se coeficiente de fricção μ = 0.15 (valor
+                    médio do intervalo 0.1-0.2 reportado por Spicer et al. 2001). Condições de lubrificação degradada não
+                    estão modeladas.</li>
+                <li><strong>Tensão uniforme na corrente:</strong> O modelo não considera variações de tensão por
+                    dinâmica de suspensão ou técnica de pedalada irregular.</li>
+                <li><strong>Ausência de contaminação:</strong> Não se modelam efeitos de lama, poeira ou água nas
+                    perdas por fricção.</li>
+                <li><strong>Desgaste nulo:</strong> Assumem-se componentes em estado ótimo. Correntes alongadas (>0.5%)
+                    podem aumentar as perdas em 50-100%.</li>
+                <li><strong>Modelo quase-estático:</strong> Avaliam-se condições de carga constante. Acelerações
+                    bruscas ou mudanças sob carga máxima não estão modeladas.</li>
+                <li><strong>Geometria idealizada:</strong> Não se modelam tolerâncias de fabricação, desalinhamento de
+                    quadro, ou flexão lateral da corrente por torção.</li>
+                <li><strong>Número de dentes em contato:</strong> Assume-se valor fixo de 7 dentes para os cálculos. Este
+                    valor pode variar entre 6-8 conforme o projeto específico.</li>
+            </ul>
+        </div>
+
+        <div class="methodology-box">
+            <h3>1.2 Pressupostos Fisiológicos</h3>
+            <ul>
+                <li><strong>Relação cadência-eficiência:</strong> O modelo simplificado assume comportamento
+                    aproximadamente linear dentro da janela 70-100 rpm. Fora desse intervalo, a relação é não
+                    linear (curva em U) e as previsões perdem validade.</li>
+                <li><strong>Janela ótima individual:</strong> Assume-se cadência preferida populacional (80±4 rpm em
+                    subida segundo Lucía et al. 2001). A variabilidade interindividual não está capturada.</li>
+                <li><strong>Adaptação neuromuscular:</strong> Não se modelam efeitos de fadiga acumulada ou mudanças na
+                    eficiência pela duração do esforço.</li>
+                <li><strong>Terreno constante:</strong> Os cenários fisiológicos assumem inclinação e potência constantes.
+                    O MTB real envolve variabilidade contínua não capturada pelo modelo.</li>
+            </ul>
+        </div>
+
+        <div class="methodology-box">
+            <h3>1.3 Pressupostos Econômicos</h3>
+            <ul>
+                <li><strong>Quilometragem anual:</strong> 3,000 km/ano (valor representativo para ciclismo recreacional
+                    ativo)</li>
+                <li><strong>Vida útil da corrente:</strong> 2,000 km (11v) vs 1,500 km (12v) sob condições de
+                    manutenção ótima</li>
+                <li><strong>Vida útil do cassete:</strong> 3 correntes por cassete para ambos os sistemas</li>
+                <li><strong>Preços constantes:</strong> Não se modela inflação ou variação de preços em 5 anos</li>
+                <li><strong>Custo de mão de obra:</strong> Não incluído (assume-se manutenção própria)</li>
+            </ul>
+        </div>
+
+        <h2>2. Geometria Comparativa</h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>11v Shimano M5100</th>
+                        <th>12v Shimano M6100</th>
+                        <th>Equivalência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 (menor)</td>
+                        <td>11T</td>
+                        <td style="background: #1a0f0f;">10T</td>
+                        <td>Não equivalente</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>13T</td>
+                        <td style="background: #1a0f0f;">12T</td>
+                        <td>Não equivalente</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>15T</td>
+                        <td style="background: #1a0f0f;">14T</td>
+                        <td>Não equivalente</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>18T</td>
+                        <td style="background: #1a0f0f;">16T</td>
+                        <td>Não equivalente</td>
+                    </tr>
+                    <tr style="background: #0f1a0f;">
+                        <td>5-11/12</td>
+                        <td colspan="2" style="text-align: center;"><strong>18-21-24-28-33-39-45-51T
+                                (IDÊNTICOS)</strong></td>
+                        <td><strong>100% equivalente</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <strong>Implicação Crítica:</strong> Sob as condições modeladas, no intervalo de pinhões ≥18T (onde se
+            concentra o uso em subidas prolongadas e terreno técnico), ambos os sistemas apresentam comportamento
+            mecânico idêntico. As diferenças se localizam exclusivamente no extremo superior do cassete (pinhões
+            10-16T).
+        </div>
+
+        <h2>3. Modelagem Termodinâmica de Perdas</h2>
+
+        <p style="color:#bbb;font-style:italic;">Aqui está o coração da questão. Toda a diferença entre 11v e 12v nasce de um único gesto físico: quanto a corrente precisa se dobrar para abraçar um pinhão. Vejamos de onde saem, exatamente, esses watts — primeiro a equação, depois a intuição.</p>
+
+        <h3>3.1 Modelo de Perdas por Fricção (Spicer et al. 2001)</h3>
+
+        <div class="equation">
+            P<sub>loss</sub> = Σ (F<sub>tension</sub> · μ · d<sub>pin</sub>/R<sub>sprocket</sub> · ω)
+        </div>
+
+        <p><strong>Onde:</strong></p>
+        <ul>
+            <li>F<sub>tension</sub>: Tensão da corrente (N)</li>
+            <li>μ: Coeficiente de fricção (0.1-0.2 para correntes lubrificadas)</li>
+            <li>d<sub>pin</sub>: Diâmetro do pino (~2.38mm)</li>
+            <li>R<sub>sprocket</sub>: Raio do pinhão (função do número de dentes)</li>
+            <li>ω: Velocidade angular (rad/s)</li>
+        </ul>
+
+        <p><strong>Em palavras:</strong> a corrente perde energia cada vez que um elo se dobra para entrar e sair de um pinhão, porque o pino atrita dentro do buje enquanto a corrente está sob tensão. Quanto menor o pinhão (menor R<sub>sprocket</sub>), mais fechada é essa dobra e maior a perda — por isso o 10T, o menor, é o que mais atrita. A fórmula apenas coloca número nessa intuição: a perda cresce com a tensão, com a fricção do pino, com o quanto a corrente dobra fechado e com a velocidade.</p>
+
+        <h3>3.2 Dados Experimentais de Lodge & Al-Sahlani (2019)</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamanho do Pinhão</th>
+                        <th>Eficiência Medida (%)</th>
+                        <th>Perda @ 200W</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>52T</td>
+                        <td>99.2</td>
+                        <td>1.6W</td>
+                    </tr>
+                    <tr>
+                        <td>21T</td>
+                        <td>98.4</td>
+                        <td>3.2W</td>
+                    </tr>
+                    <tr>
+                        <td>11T</td>
+                        <td>97.1</td>
+                        <td>5.8W</td>
+                    </tr>
+                    <tr style="background: #151a1f;">
+                        <td><strong>10T</strong></td>
+                        <td><strong>96.2</strong></td>
+                        <td><strong>7.6W</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-container">
+            <img src="images/whitepaper-chart1-loss-vs-sprocket.svg"
+                alt="Perdas por fricção vs tamanho do pinhão (10–52T)" width="700" height="438">
+            <p class="chart-legend">Gráfico gerado mediante simulação Monte Carlo (10,000 iterações) em Python a
+                partir do modelo descrito neste documento. Mostram-se valores médios e banda de confiança a 95%.
+            </p>
+        </div>
+
+        <h3>3.3 Análise de Sensibilidade à Potência do Ciclista</h3>
+
+        <p>A diferença absoluta nas perdas escala linearmente com a potência de entrada, mas o impacto relativo se
+            mantém aproximadamente constante:</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Potência (W)</th>
+                        <th>P<sub>loss</sub> 11T (W)</th>
+                        <th>P<sub>loss</sub> 10T (W)</th>
+                        <th>Diferença (W)</th>
+                        <th>% da Potência Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>150</td>
+                        <td>2.9</td>
+                        <td>3.7</td>
+                        <td>0.8</td>
+                        <td>0.53%</td>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>3.9</td>
+                        <td>5.0</td>
+                        <td>1.1</td>
+                        <td>0.55%</td>
+                    </tr>
+                    <tr style="background: #151a1f;">
+                        <td><strong>250 (base)</strong></td>
+                        <td><strong>4.9</strong></td>
+                        <td><strong>6.2</strong></td>
+                        <td><strong>1.3</strong></td>
+                        <td><strong>0.52%</strong></td>
+                    </tr>
+                    <tr>
+                        <td>300</td>
+                        <td>5.9</td>
+                        <td>7.4</td>
+                        <td>1.5</td>
+                        <td>0.50%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-container">
+            <img src="images/whitepaper-chart2-diff-10t-11t.svg"
+                alt="Gráfico de dispersão Monte Carlo mostrando a perda de watts entre pinhões 10T e 11T; observa-se uma divergência média de 1.3W com banda de confiança a 95%"
+                width="700" height="438">
+            <p class="chart-legend">Gráfico gerado mediante simulação Monte Carlo (10,000 iterações) em Python a
+                partir do modelo descrito neste documento. Mostram-se valores médios e banda de confiança a 95%.
+            </p>
+        </div>
+
+        <p><strong>Observação:</strong> As perdas absolutas aumentam proporcionalmente com a potência aplicada,
+            como prevê o modelo de Spicer. No entanto, o impacto relativo (diferença como porcentagem da
+            potência total) se mantém no intervalo 0.50-0.55% independentemente do nível de esforço.</p>
+
+        <p><strong>Implicação prática:</strong> Um ciclista desenvolvendo 150W (subida suave) experimenta 0.8W de
+            diferença, enquanto um desenvolvendo 300W (subida exigente) experimenta 1.5W. Em ambos os casos, a
+            magnitude relativa é similar (~0.5% da potência total).</p>
+
+        <h2>4. Limitações do Estudo</h2>
+
+        <div class="limitation-box">
+            <h3>4.1 Limitações Mecânicas</h3>
+            <h4>Variáveis Não Modeladas:</h4>
+            <ul>
+                <li><strong>Dinâmica de suspensão:</strong> Variações de tensão da corrente por movimento da
+                    suspensão traseira não estão capturadas. Em sistemas de pivô virtual, o comprimento efetivo da
+                    corrente varia com a compressão.</li>
+                <li><strong>Deformação elástica:</strong> O alongamento temporário dos elos sob carga de pico não está
+                    considerado.</li>
+                <li><strong>Perdas nas roldanas:</strong> O modelo se concentra na fricção corrente-pinhão. Perdas por
+                    fricção nos rolamentos das roldanas do câmbio (~0.5-1W adicionais) não estão incluídas.</li>
+                <li><strong>Cross-chaining extremo:</strong> Embora Bertucci (2005) tenha quantificado perdas por chainline,
+                    o presente modelo não integra completamente essa variável.</li>
+                <li><strong>Variabilidade de fabricação:</strong> Tolerâncias de produção podem gerar variabilidade
+                    entre unidades do mesmo modelo que excede as diferenças calculadas entre sistemas.</li>
+            </ul>
+        </div>
+
+        <div class="limitation-box">
+            <h3>4.2 Limitações Fisiológicas</h3>
+            <ul>
+                <li><strong>Modelo linear:</strong> A relação VO<sub>2</sub>-cadência é não linear (curva em U). O
+                    modelo linear é aproximação válida apenas no intervalo 70-100 rpm.</li>
+                <li><strong>Variabilidade interindividual:</strong> A cadência ótima varia significativamente entre
+                    ciclistas (intervalo: 70-100 rpm).</li>
+                <li><strong>Adaptação a longo prazo:</strong> O treinamento específico pode deslocar a curva de
+                    eficiência.</li>
+                <li><strong>Fadiga acumulada:</strong> Em esforços prolongados (>2h), a eficiência bruta decai
+                    independentemente da cadência.</li>
+            </ul>
+        </div>
+
+        <div class="limitation-box">
+            <h3>4.3 Ausência de Telemetria Direta</h3>
+            <p><strong>CRÍTICO:</strong> As afirmações sobre distribuição de uso por pinhão se baseiam em raciocínio
+                dedutivo, não em datasets verificados. A frequência de troca de marcha citada (18-25 trocas/km) provém
+                de estimativas gerais, não de medições sistemáticas.</p>
+
+            <p><strong>Recomendação para Pesquisa Futura:</strong> Integração com plataformas de medidor de potência
+                modernas (Shimano Di2, SRAM AXS) que registram a posição do cassete. A análise de 100+ saídas em
+                diferentes perfis de terreno permitiria quantificar a distribuição real de uso e validar/refutar
+                pressupostos do presente modelo.</p>
+        </div>
+
+        <h2>5. Cenários onde o Sistema 12v Apresenta Vantagens Técnicas</h2>
+
+        <div class="methodology-box">
+            <h3>5.1 Competição de Alto Nível</h3>
+            <p>Em contextos onde marginal gains acumulativos são relevantes:</p>
+            <ul>
+                <li>World Cup XC: Diferenças de segundos em percursos de 90+ minutos</li>
+                <li>Marathon: Otimização do gasto energético em esforços de 4-6 horas</li>
+                <li>Competição com ritmo ditado pelo grupo</li>
+            </ul>
+
+            <h3>5.2 Terreno Rápido com Desenvolvimento Estendido</h3>
+            <p>Circuitos com seções longas de descida pedalada, fire roads ou pista compactada. Os 10% adicionais de
+                alcance do 12v (510% vs 463.6%) se concentram no extremo superior.</p>
+
+            <h3>5.3 Condições de Patrocínio</h3>
+            <p>Quando o custo incremental é absorvido por terceiros (equipes profissionais, programas de embaixadores).
+                A variável econômica se elimina como limitante.</p>
+
+            <h3>5.4 Usuários com Orçamento Não Limitante</h3>
+            <p>Ciclistas recreacionais para quem o aumento de $245 em 5 anos é economicamente irrelevante e
+                valorizam benefícios subjetivos de equipamento atualizado.</p>
+        </div>
+
+        <h2>6. Análise de Eficiência de Custo Marginal</h2>
+
+        <p style="color:#bbb;font-style:italic;">Até aqui, em pura física, o 12v perdeu por muito pouco. É na oficina —corrente após corrente, cassete após cassete, ao longo dos anos— que essa diferença minúscula deixa de ser minúscula. Esta seção coloca preço nela.</p>
+
+        <h3>6.1 Custo Total de Propriedade (TCO) em 5 Anos</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Conceito</th>
+                        <th>11v</th>
+                        <th>12v</th>
+                        <th>Diferença</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Investimento inicial</td>
+                        <td>$145</td>
+                        <td>$190</td>
+                        <td>+$45</td>
+                    </tr>
+                    <tr>
+                        <td>Correntes (7.5 vs 10)</td>
+                        <td>$225</td>
+                        <td>$350</td>
+                        <td>+$125</td>
+                    </tr>
+                    <tr>
+                        <td>Cassetes (2.5)</td>
+                        <td>$163</td>
+                        <td>$238</td>
+                        <td>+$75</td>
+                    </tr>
+                    <tr style="background: #151a1f;">
+                        <td><strong>TCO Total</strong></td>
+                        <td><strong>$533</strong></td>
+                        <td><strong>$778</strong></td>
+                        <td><strong>+$245 (+46%)</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6.2 Avaliação de Custo por Unidade de Melhoria</h3>
+
+        <p>Sob as condições modeladas, o sistema 12v reduz as perdas mecânicas em aproximadamente 1.3W em média
+            quando se utiliza o pinhão menor. O custo incremental em 5 anos é de $245.</p>
+
+        <p><strong>Cálculo de energia potencialmente economizada:</strong></p>
+
+        <p>Se assumirmos que o pinhão menor é utilizado 5% do tempo total de uso (25 horas em 500 horas), a
+            energia economizada seria:</p>
+
+        <div class="equation">
+            E<sub>saved</sub> = 1.3W × 25h × 3600s/h = 117 kJ ≈ 0.032 kWh
+        </div>
+
+        <p><strong>Custo por kWh economizado:</strong></p>
+        <div class="equation">
+            Custo/kWh = $245 / 0.032 kWh ≈ $7,650/kWh
+        </div>
+
+        <div class="chart-container">
+            <img src="images/whitepaper-chart3-cost-vs-improvement.svg"
+                alt="Diagrama de barras comparando o custo por kWh de energia ganha entre sistemas de transmissão e baterias de lítio industriais"
+                width="700" height="438">
+            <p class="chart-legend">Gráfico gerado mediante simulação Monte Carlo (10,000 iterações) em Python a
+                partir do modelo descrito neste documento. Mostram-se valores médios e banda de confiança a 95%.
+            </p>
+        </div>
+
+        <p><strong>Contexto de magnitude energética:</strong></p>
+
+        <p>Esta métrica não implica equivalência funcional entre sistemas (uma bateria não substitui uma transmissão),
+            mas serve como referência de escala para dimensionar a magnitude energética da economia:</p>
+
+        <ul>
+            <li>Custo de bateria de lítio (armazenamento): ~$150/kWh</li>
+            <li>Custo de energia elétrica residencial: ~$0.12/kWh</li>
+            <li>Custo marginal do sistema 12v: ~$7,650/kWh</li>
+        </ul>
+
+        <p><strong>Interpretação:</strong> O custo incremental do sistema 12v é aproximadamente 50× maior que o
+            custo de armazenamento em bateria por unidade de energia. Isso quantifica a relação custo-benefício em
+            termos puramente energéticos, sem considerar fatores não quantificáveis como conveniência operacional,
+            preferência subjetiva, ou valor percebido de equipamento atualizado.</p>
+
+        <h3>6.3 Esclarecimento sobre Valores de Vida Útil</h3>
+
+        <p>Os valores utilizados (2,000 km para corrente 11v, 1,500 km para corrente 12v) representam estimativas
+            conservadoras baseadas em uso recreacional com manutenção regular. A vida útil real apresenta variabilidade
+            significativa conforme:</p>
+
+        <ul>
+            <li>Intensidade de uso (potência média aplicada)</li>
+            <li>Condições de terreno (terreno seco vs lamacento)</li>
+            <li>Frequência de limpeza e lubrificação</li>
+            <li>Qualidade do lubrificante empregado</li>
+            <li>Precisão da troca (cross-chaining frequente reduz a vida útil)</li>
+        </ul>
+
+        <p><strong>Intervalo observado na prática:</strong></p>
+        <ul>
+            <li>Correntes 11v: 1,500-3,000 km</li>
+            <li>Correntes 12v: 1,200-2,500 km</li>
+        </ul>
+
+        <p>Os valores adotados (2,000 km e 1,500 km respectivamente) situam-se no ponto médio desses intervalos e são
+            representativos do ciclismo recreacional ativo (3,000-5,000 km/ano) com manutenção adequada mas não
+            obsessiva. Para protocolos de medição de desgaste e limiar de 0,5 %, veja nosso <a
+                href="cambio-cadena-pt.html">guia de corrente e limite de 0,5 %</a>; para cuidado da transmissão e lubrificação,
+            <a href="cuidado-transmision-pt.html">transmissão: desgaste prematuro</a>.</p>
+
+        <h2>6.5 Discussão Técnica</h2>
+
+        <p>Esta seção contextualiza os resultados do modelo dentro do marco teórico da engenharia de
+            transmissões e examina aspectos complementares que informam a interpretação dos achados.</p>
+
+        <h3>6.5.1 Coerência com a Teoria de Diâmetro Efetivo</h3>
+
+        <p>O modelo de Spicer estabelece que as perdas por fricção são inversamente proporcionais ao raio do
+            pinhão. Lodge & Al-Sahlani (2019) validaram experimentalmente essa relação.</p>
+
+        <p>A diferença calculada entre 10T e 11T (1.1-1.3W sob condições base) é coerente com essa teoria:</p>
+
+        <ul>
+            <li>Raio efetivo 10T: 20.22 mm</li>
+            <li>Raio efetivo 11T: 22.24 mm</li>
+            <li>Relação de raios: 22.24/20.22 = 1.10</li>
+        </ul>
+
+        <p>O modelo prevê 1.3W de diferença sobre uma perda base de ~6.2W no 10T, o que representa uma
+            redução de 21%. Essa diferença (21% observado vs 10% previsto pela relação de raios simples) explica-se
+            pelo efeito combinado de redução do raio do pinhão e redução da tensão da corrente.</p>
+
+        <h3>6.5.2 Tolerâncias Industriais e Magnitude do Delta</h3>
+
+        <p>As especificações de fabricação de correntes e pinhões MTB estabelecem tolerâncias dimensionais da ordem
+            de ±0.1-0.2 mm em parâmetros críticos.</p>
+
+        <p><strong>Implicação:</strong> É possível que dois sistemas nominalmente idênticos (ambos 12v, ambos com pinhão
+            10T) apresentem diferenças de eficiência da ordem de 0.5-1.0W simplesmente por variabilidade de fabricação,
+            se ambos se encontrarem em extremos opostos do intervalo de tolerância.</p>
+
+        <p>Isso não invalida os resultados do modelo, mas contextualiza sua significância prática: <strong>a
+                diferença entre 10T e 11T (1.1-1.3W) é real e reprodutível em condições controladas, mas pode
+                sobrepor-se à variabilidade natural dos componentes comerciais.</strong></p>
+
+        <h3>6.5.3 Diluição de Diferenças em Condições Degradadas</h3>
+
+        <p>O modelo base assume componentes em estado ótimo. Em condições degradadas, as perdas absolutas aumentam
+            significativamente para ambos os sistemas, mas a diferença relativa entre eles se dilui.</p>
+
+        <p><strong>Exemplo numérico:</strong></p>
+
+        <p>Condições ótimas (μ = 0.15):</p>
+        <ul>
+            <li>11T: 4.9W | 10T: 6.2W | Diferença: 1.3W (26% adicional)</li>
+        </ul>
+
+        <p>Condições degradadas (μ = 0.25):</p>
+        <ul>
+            <li>11T: 8.2W | 10T: 10.3W | Diferença: 2.1W (26% adicional)</li>
+        </ul>
+
+        <p><strong>Observação prática:</strong> Em uma corrente suja com 3,000 km de uso e lubrificação degradada, a
+            diferença entre 10T e 11T pode ser menos perceptível que a diferença entre essa mesma corrente e uma recém-
+            instalada.</p>
+
+        <h3>6.5.4 Natureza Quase-Estática do Modelo</h3>
+
+        <p>O modelo avalia condições de carga constante a cadência constante. Essa aproximação é adequada para
+            analisar a eficiência em condições de cruzeiro, mas não captura a dinâmica transitória do ciclismo MTB
+            real.</p>
+
+        <p><strong>Aspectos não modelados:</strong></p>
+        <ul>
+            <li><strong>Trocas sob carga variável:</strong> A tecnologia Hyperglide+ (12v) está otimizada para
+                trocas sob potência flutuante. Essa vantagem operacional não se reflete na análise estática.</li>
+            <li><strong>Resposta a picos de torque:</strong> Sprints e superação de obstáculos envolvem picos
+                momentâneos de torque que podem atingir 2-3× a potência média.</li>
+            <li><strong>Fadiga de material:</strong> O modelo não considera degradação progressiva da eficiência por
+                fadiga cíclica dos elos.</li>
+        </ul>
+
+        <p><strong>Implicação:</strong> Os valores calculados (diferença de 1.1-1.3W) representam condições
+            idealizadas. No uso real de MTB, a variabilidade de potência, terreno e técnica introduz ruído que pode
+            ser da mesma ordem de magnitude que a diferença modelada.</p>
+
+        <h3>6.5.5 Síntese da Discussão</h3>
+
+        <p>Os resultados do modelo são tecnicamente sólidos dentro de seus pressupostos declarados e coerentes com a
+            teoria estabelecida de transmissões por corrente. A diferença quantificada entre 10T e 11T (0.5-1.5W conforme
+            as condições) é:</p>
+
+        <ul>
+            <li><strong>Real e reprodutível</strong> em condições de laboratório</li>
+            <li><strong>Pequena em magnitude absoluta</strong> comparada com a potência total (~0.5%)</li>
+            <li><strong>Comparável à variabilidade de fabricação</strong> entre unidades comerciais</li>
+            <li><strong>Diluída em condições degradadas</strong> por perdas basais aumentadas</li>
+            <li><strong>Derivada de modelo quase-estático</strong> que não captura toda a complexidade do uso real</li>
+        </ul>
+
+        <h2>7. Conclusões</h2>
+
+        <p style="color:#bbb;font-style:italic;">O que vem a seguir é o veredito a frio, com seus números. Mas se eu tivesse que dizê-lo a um amigo em dúvida diante do balcão: o 12v não é ruim — está supervalorizado. Se você já tem um 11v bem mantido, conserve-o e gaste a diferença onde realmente se sente: pneus, uma boa regulagem, ou simplesmente mais quilômetros.</p>
+
+        <div class="conclusion-box">
+            <h3>7.1 Achados Principais</h3>
+            <p>Sob as condições modeladas e dentro dos intervalos paramétricos analisados:</p>
+            <ul>
+                <li>Diferença mecânica 10T vs 11T: <strong>0.5-1.5W</strong> (mais provável: 1.1-1.3W)</li>
+                <li>Equivalência total em pinhões ≥18T (zona de subida prolongada)</li>
+                <li>Aumento de alcance: <strong>+10%</strong> (concentrado em alta velocidade)</li>
+                <li>Impacto metabólico estimado: <strong>
+                        < 0.5%</strong> (uso recreacional variável)</li>
+                <li>Aumento de TCO em 5 anos: <strong>+46%</strong> ($245 adicionais)</li>
+            </ul>
+        </div>
+
+        <div class="conclusion-box">
+            <h3>7.2 Declaração Final</h3>
+
+            <p>O sistema de transmissão MTB de 12 velocidades representa uma evolução técnica documentável com melhorias
+                quantificáveis na eficiência mecânica do pinhão extremo (redução de 0.5-1.5W nas perdas por
+                fricção), ampliação do alcance total (+10%, concentrado em alta velocidade), e refinamento de resolução
+                na zona 14-18T do cassete.</p>
+
+            <p>A magnitude absoluta dessas melhorias é, no entanto, limitada. A diferença de 1.1-1.3W nas perdas
+                mecânicas representa aproximadamente 0.5% da potência total em cenários de subida sustentada. O
+                impacto metabólico associado à melhor resolução de cadência estima-se em menos de 0.5% do gasto
+                energético total sob condições de uso recreacional com a variabilidade de terreno característica do MTB.
+            </p>
+
+            <p>O aumento do custo de manutenção, estimado em +46% em cinco anos sob os pressupostos de quilometragem
+                e frequência de substituição modelados ($245 adicionais), não se correlaciona proporcionalmente com as
+                melhorias técnicas quantificadas quando avaliado em termos puramente energéticos. O custo marginal por
+                kWh economizado (~$7,650/kWh considerando uso de 5% do tempo no pinhão pequeno) excede em ordens de
+                magnitude referências comparativas de custo energético, embora essa métrica sirva unicamente como
+                indicador de escala e não implique equivalência funcional entre sistemas.</p>
+
+            <p><strong>Para aplicações recreacionais onde o custo é variável considerada:</strong> O sistema 11v
+                em bom estado mecânico cobre as necessidades técnicas fundamentais de transmissão MTB. A
+                atualização para 12v constitui uma otimização marginal cuja adoção depende do orçamento
+                disponível, do perfil de terreno habitual, e da valoração individual de benefícios não quantificáveis. Para
+                uma síntese orientada à decisão prática de compra, veja nosso <a
+                    href="11v-12v-mtb-worth-it-pt.html">guia 11v vs 12v: vale a pena o upgrade?</a>.</p>
+
+            <p><strong>Para competição e aplicações especializadas:</strong> O sistema 12v pode estar justificado
+                pela acumulação de marginal gains (0.5% mecânico + 0.3-0.5% metabólico estimado), particularmente em
+                terrenos que favorecem o uso de desenvolvimento estendido, e em contextos onde diferenças de segundos
+                têm relevância competitiva.</p>
+
+            <p><strong>Sobre limitações metodológicas:</strong> A presente avaliação fundamenta-se em modelagem
+                termodinâmica aplicada a partir de dados experimentais publicados, complementada com análise econômica
+                sob pressupostos específicos declarados na Seção 1. As limitações documentadas na Seção 4 devem
+                ser consideradas ao interpretar a aplicabilidade das conclusões a casos de uso específicos.</p>
+
+            <p>A análise não busca prescrever decisões de compra, mas quantificar diferenças técnicas mensuráveis
+                entre sistemas para informar avaliações individuais que necessariamente incorporam fatores
+                subjetivos, contexto de uso particular, e restrições orçamentárias específicas que excedem o
+                escopo deste documento técnico.</p>
+        </div>
+
+        <h2>8. Dados Técnicos de Simulação</h2>
+
+        <div class="data-card">
+            <h3>8.1 Simulação Monte Carlo</h3>
+            <p>Os gráficos deste documento provêm de uma simulação reprodutível implementada em Python. O modelo
+                implementa exatamente a equação de Spicer (Seção 3.1), calibrada com os dados experimentais de
+                Lodge &amp; Al-Sahlani (Seção 3.2) e os parâmetros de sensibilidade definidos no documento.</p>
+            <ul>
+                <li><strong>Iterações:</strong> 10,000</li>
+                <li><strong>Parâmetros com variação ±20%:</strong> μ (coeficiente de fricção), tensão da corrente,
+                    potência (dentro do intervalo 150–300W)</li>
+                <li><strong>Intervalo de confiança:</strong> 95%</li>
+                <li><strong>Dados exportados:</strong> <a href="images/whitepaper-monte-carlo-data.csv"
+                        download>Baixar CSV (monte_carlo_data.csv)</a></li>
+            </ul>
+            <p><strong>Declaração de reprodutibilidade:</strong> O código-fonte (drivetrain_monte_carlo.py), os
+                requisitos (requirements.txt) e os dados brutos encontram-se no repositório do projeto. Qualquer
+                pesquisador pode executar a simulação e reproduzir os resultados.</p>
+            <p><strong>As fórmulas implementadas são exatamente as descritas no white paper.</strong></p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- INICIO CLUSTER LINKS (SEO SILO STRUCTURE)  -->
+        <!-- ========================================== -->
+        <div class="cluster-links"
+            style="margin: 60px 0; padding: 30px; background: #080808; border-left: 3px solid #666; border-right: 1px solid #222; border-top: 1px solid #222; border-bottom: 1px solid #222;">
+            <p
+                style="font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: #555; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;">
+                [ CLUSTER_DATA_LINKS ] // TRANSMISSÕES E DINÂMICA</p>
+            <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 20px; font-weight: 400; letter-spacing: 1px;">
+                Desdobramento e Casos de Uso do Relatório:</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 25px;">Para uma aplicação prática orientada à
+                tomada de decisão técnica, condensamos os achados termodinâmicos e econômicos em um guia
+                operacional:</p>
+
+            <ul style="list-style: none; margin-left: 0; padding-left: 0;">
+                <li style="margin-bottom: 15px;">
+                    <span style="color: #6bffb8; font-size: 0.8rem; margin-right: 10px;">[01]</span>
+                    <a href="./11v-12v-mtb-worth-it-pt.html"
+                        style="color: #e0e0e0; text-decoration: none; font-size: 1rem; transition: color 0.3s;"
+                        onmouseover="this.style.color='#6bffb8'" onmouseout="this.style.color='#e0e0e0'">11v vs 12v MTB:
+                        Análise de Watts, Fricção e Custo (Versão Divulgativa) →</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================================== -->
+        <!-- FIN CLUSTER LINKS                          -->
+        <!-- ========================================== -->
+
+        <h2>9. Referências Bibliográficas</h2>
+        <div class="references">
+            <ol>
+                <li>Spicer, J. B., Richardson, C. J., Ehrlich, M. J., & Bernstein, J. R. (2001). "Effects of Friction on
+                    Bicycle Drive Train Efficiency". <em>ASME Journal of Mechanical Design</em>, 123(1), 136-143. DOI:
+                    10.1115/1.1352754</li>
+                <li>Lodge, C. J., & Al-Sahlani, M. (2019). "The Effect of Sprocket Size on the Efficiency of a Bicycle
+                    Chain Drive". <em>Journal of Mechanical Design</em>. DOI: 10.1115/1.4042834</li>
+                <li>Bertucci, W., Taiar, R., & Grappe, F. (2005). "Effects of Chain Line on the Efficiency of a Bicycle
+                    Drivetrain". <em>Journal of Applied Biomechanics</em>, 21(3). DOI: 10.1123/jab.21.3.225</li>
+                <li>Abbiss, C. R., & Laursen, P. B. (2005). "Describing and Understanding Phasic Changes in Cycling
+                    Performance". <em>Sports Medicine</em>, 35(10). DOI: 10.2165/00007256-200535100-00004</li>
+                <li>Lucía, A., Hoyos, J., & Chicharro, J. L. (2001). "Preferred cycling cadence in professional
+                    cycling". <em>Medicine & Science in Sports & Exercise</em>. DOI: 10.1097/00005768-200108000-00015
+                </li>
+                <li>Conciarelli, F., et al. (2010). "Development of a mathematical model for the study of the efficiency
+                    of a bicycle transmission". <em>Procedia Engineering</em>. DOI: 10.1016/j.proeng.2010.04.131</li>
+                <li>ISO 9633:2018. <em>Cycles — Drive-chain elongation — Measurement method</em>. International
+                    Organization for Standardization.</li>
+            </ol>
+        </div>
+
+        <p style="margin-top: 30px;"><a href="../index.html#science"
+                style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;">← VOLTAR
+                AO INÍCIO</a></p>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div style="margin-bottom: 20px;">
+                <strong>BikeLab Studio</strong><br>
+                Paraguay 300, Trujillo, La Libertad, Peru<br>
+                Divisão de Pesquisa Técnica
+            </div>
+            <div class="footer-grid">
+                <div>
+                    <strong>White Paper v2.0:</strong><br>
+                    Análise Comparativa 11v vs 12v
+                </div>
+                <div>
+                    <strong>Autor:</strong><br>
+                    Carlos Ravello<br>
+                    Fundador da BikeLab Studio
+                </div>
+            </div>
+            <div
+                style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.9em; color: #777;">
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">
+                <span style="font-size: 0.75em; color: #666; letter-spacing: 0.1em; text-transform: uppercase;">Versão PDF</span><br>
+                <a href="../papers/bikelabstudio-11v-12v-mtb-analisis-pt.pdf"
+                   download
+                   style="display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 22px; background: #f5f5f5; color: #000; font-size: 0.82em; letter-spacing: 0.07em; text-decoration: none; font-weight: 700; border: 1px solid #ddd;">
+                    ↓ BAIXAR WHITE PAPER PDF
+                </a>
+                <div style="margin-top: 10px; font-size: 0.78em; color: #555; line-height: 1.5;">
+                    Autor: Carlos Eduardo Ravello Joo · BikeLab Studio · DOI: 10.5281/zenodo.19229331
+                </div>
+            </div>
+            Citação sugerida: <em>Bikelab Studio (2026). "Análise Comparativa de Sistemas de Transmissão MTB 11v
+                    vs 12v: Avaliação Termodinâmica, Biomecânica e Econômica". White Paper v2.0, Fevereiro 2026.</em>
+            </div>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+                © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.nav-overlay a[href*="#"], .nav-overlay a[href*="index"]').forEach(a => {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        });
+    </script>
+</body>
+
+</html>

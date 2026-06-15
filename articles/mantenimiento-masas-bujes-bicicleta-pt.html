@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção de Cubos de Bicicleta: Guia Passo a Passo | BikeLab Studio</title>
+    <meta name="description"
+        content="Manutenção de cubos: cartucho vs cone-e-esfera, a física da pré-carga que quase ninguém explica, diagnóstico de folga e rugosidade, lubrificação e intervalos reais.">
+    <meta name="keywords"
+        content="manutenção cubos bicicleta, manutenção cubos, rolamentos cartucho vs cone e esfera, folga lateral roda, graxa núcleo ratchet, quando trocar rolamentos cubo">
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-pt.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/bicycle-hub-bearing-maintenance-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-pt.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-es.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Manutenção de Cubos de Bicicleta: Guia Passo a Passo | BikeLab Studio">
+    <meta property="og:description"
+        content="Cartucho vs. cone-e-esfera, a física da pré-carga, diagnóstico real e lubrificação do núcleo. Com galeria da desmontagem.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-pt.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <meta property="og:type" content="article">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manutenção de Cubos de Bicicleta: Guia Passo a Passo">
+    <meta name="twitter:description" content="Cartucho vs. cone-e-esfera, física da pré-carga, diagnóstico e lubrificação do núcleo. Galeria da desmontagem.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/articles/images/masa-nucleo-freehub-detalle.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TechArticle", "HowTo"],
+      "proficiencyLevel": "Advanced",
+      "locationCreated": "Trujillo, Perú",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-pt.html" },
+      "headline": "Manutenção de Cubos de Bicicleta: Guia Passo a Passo",
+      "name": "Manutenção de cubos de bicicleta",
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "inLanguage": "pt-BR",
+      "description": "Por que ignorar os cubos arruína sua rodagem, como diagnosticar rolamentos de cartucho vs cones e esferas, sangria de núcleos (freehubs) e manutenção com graxa marítima.",
+      "image": "https://www.bikelabstudio.com/articles/images/masa_featured.webp",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#guias-mantenimiento",
+        "name": "Guias de Manutenção BikeLab Studio",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "datePublished": "2026-06-08",
+      "dateModified": "2026-06-08"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/articles/images/masa_featured.webp#image",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/masa_featured.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Núcleo/freehub e corpo do cubo traseiro com rotor de freio a disco. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.bikelabstudio.com/articles/images/maza-despiece-rodamientos.webp",
+      "creator": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightHolder": { "@id": "https://www.bikelabstudio.com/#carlos-ravello" },
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.",
+      "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo",
+      "acquireLicensePage": "https://carlosravello.com",
+      "license": "https://carlosravello.com",
+      "caption": "Vista explodida do cubo: corpo, rolamentos e núcleo. © Carlos Eduardo Ravello Joo · carlosravello.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "kg:/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com/#person",
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ",
+        "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://github.com/carlosravello-png",
+        "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
+        "https://independent.academia.edu/CarlosRJ4",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com"
+      ],
+      "subjectOf": { "@id": "https://carlosravello.com/#mcd-framework" },
+      "description": "Investigador independente. Fundador da BikeLab Studio, Zoovet Travel e Katsudōmo. Arquiteto de identidades digitais verificáveis com nós semânticos entrelaçados."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coerência Dinâmica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "description": "Framework metodológico de três eixos aplicado ao diagnóstico físico de sistemas ciclistas: (E) mecanismos de degradação energética, (C) quantificação de sinais físicos de deterioração, (P) critérios de manutenção e longevidade."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" },
+      "sameAs": ["https://www.linkedin.com/company/bikelabstudio"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.bikelabstudio.com/#carlos-ravello",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "É normal uma pequena folga lateral na roda?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Em cubos de cone-e-esfera (Shimano), uma folga lateral mínima na bancada pode ser correta: desaparece ao fechar o blocagem rápida ou o eixo passante, porque a força de fixação comprime o eixo. Em cubos de cartucho vedado, a folga perceptível quase sempre indica um rolamento desgastado ou um espaçador interno comprimido, e se corrige trocando o rolamento, não apertando." }
+        },
+        {
+          "@type": "Question",
+          "name": "Os rolamentos vedados de cartucho podem receber manutenção?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Levanta-se com cuidado o retentor de borracha, desengraxa-se e preenche-se com graxa nova a ~70%; isso prolonga sua vida útil desde que as pistas não tenham pittings (picadas). Se a pista estiver marcada, não há lubrificação que salve: substitui-se o cartucho." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que graxa se usa no núcleo ou sistema de catracas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Uma graxa específica de baixa viscosidade (fluida), não a graxa espessa de rolamentos. A graxa de rolamento, pegajosa demais, freia o retorno das molas da catraca ou os discos dentados e provoca saltos sob carga. No núcleo: camada fina de graxa leve; nos rolamentos: graxa NLGI 2." }
+        },
+        {
+          "@type": "Question",
+          "name": "O grau ABEC dos rolamentos importa em uma bicicleta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Quase nada. O grau ABEC mede tolerâncias geométricas para regimes de 20.000–30.000 rpm; uma roda de bicicleta gira a 200–400 rpm. Pesam muito mais a qualidade do aço, a esfericidade das esferas, as vedações e a lubrificação do que o número ABEC. Um ABEC 3 bem vedado dura mais que um ABEC 9 mal protegido." }
+        },
+        {
+          "@type": "Question",
+          "name": "De quanto em quanto tempo se faz a manutenção dos cubos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Uso ocasional: inspeção a cada 150–200 h ou anual. Uso frequente: a cada 75–100 h ou semestral. Em chuva, lama ou lavagens por imersão, revisão imediata. A graxa perde propriedades com o tempo mesmo que você não rode: não a deixe mais de um ano." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://www.bikelabstudio.com/articles/scientific-noir-pt.html" },
+        { "@type": "ListItem", "position": 3, "name": "Manutenção de Cubos", "item": "https://www.bikelabstudio.com/articles/mantenimiento-masas-bujes-bicicleta-pt.html" }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --surface:#0c0c0c; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.7; }
+        body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity:0.025; pointer-events:none; z-index:1000; }
+        .container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .back-link { display:inline-flex; align-items:center; color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:0.7rem; margin-bottom:40px; letter-spacing:1px; padding:12px 0; min-height:44px; }
+        .back-link:hover { color:var(--text); }
+        .data-label { font-family:var(--mono); font-size:0.65rem; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; display:block; }
+        h1 { font-size:2.5rem; line-height:1.2; margin-bottom:20px; letter-spacing:-1px; }
+        .meta { font-family:var(--mono); font-size:0.75rem; color:#666; margin-bottom:40px; }
+        .featured-image { width:100%; height:420px; object-fit:cover; margin:40px 0; border:1px solid #222; }
+        figure { margin:34px 0; }
+        figure img { width:100%; height:auto; border:1px solid #222; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.65rem; color:#666; text-align:center; margin-top:10px; letter-spacing:0.5px; }
+        .content { font-size:1rem; color:#ccc; }
+        .content p { margin-bottom:20px; }
+        .content h2 { font-size:1.5rem; margin:46px 0 18px 0; color:var(--text); }
+        .content h3 { font-size:1.1rem; margin:26px 0 10px; color:var(--text); }
+        .content strong { color:var(--text); }
+        .content a { color:#a0a0a0; }
+        .content a:hover { color:#fff; }
+        .answer-box { margin:25px 0; padding:18px 22px; border-left:3px solid #888; background:#0a0a0a; }
+        .answer-box .lbl { font-family:var(--mono); font-size:0.65rem; color:#888; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .data-box { background:#0d0d14; border-left:3px solid #4444aa; padding:20px; margin:30px 0; }
+        .data-box .lbl { color:#7777cc; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .data-box .hi { color:#fff; font-weight:bold; }
+        .warn-box { background:#1a0a0a; border-left:3px solid #ff4444; padding:20px; margin:30px 0; }
+        .warn-box .lbl { color:#ff6b6b; font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; margin-bottom:10px; font-weight:bold; display:block; }
+        .warn-box p { color:#cc9999; margin-bottom:8px; }
+        .step { border-left:2px solid #2a2a2a; padding:4px 0 4px 18px; margin:34px 0; }
+        .step .num { font-family:var(--mono); font-size:0.62rem; color:#777; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:6px; }
+        .step h3 { margin-top:0; }
+        table.cmp { width:100%; border-collapse:collapse; margin:30px 0; font-size:0.85rem; }
+        table.cmp th, table.cmp td { border:1px solid #242424; padding:10px 12px; text-align:left; vertical-align:top; }
+        table.cmp th { background:#0d0d0d; color:#aaa; font-family:var(--mono); font-size:0.62rem; letter-spacing:1px; text-transform:uppercase; }
+        table.cmp td { color:#bbb; }
+        .ok { color:#6bffb8; font-weight:bold; } .no { color:#ff6b6b; font-weight:bold; }
+        .refs { margin-top:40px; padding-top:20px; border-top:1px solid #222; font-size:0.8rem; color:#888; }
+        .refs h2 { font-size:0.7rem; font-family:var(--mono); letter-spacing:2px; color:#666; text-transform:uppercase; margin-bottom:12px; }
+        .refs ol { margin-left:18px; } .refs li { margin-bottom:8px; } .refs a { color:#888; }
+        .signature { margin-top:60px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.8rem; color:#666; line-height:1.8; }
+        .nav-toggle { display:none; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar-left { display:flex; align-items:center; gap:10px; }
+        .nav-menu-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.22em; color:#555; text-transform:uppercase; }
+        .nav-trigger { width:44px; height:44px; min-width:44px; min-height:44px; cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; }
+        .nav-trigger .line { display:block; width:18px; height:1px; background:var(--text); transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform:translateY(6px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity:0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform:translateY(-6px) rotate(-45deg); }
+        .nav-overlay { position:fixed; inset:0; background:#080808; z-index:1002; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity:1; visibility:visible; pointer-events:auto; }
+        .nav-overlay-backdrop { position:absolute; inset:0; cursor:pointer; }
+        .nav-overlay nav { text-align:center; position:relative; z-index:1; width:100%; }
+        .nav-overlay a { display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.78rem; letter-spacing:3px; color:var(--text); text-decoration:none; padding:14px 24px; min-height:44px; border-bottom:1px solid #1a1a1a; }
+        .nav-overlay a:first-of-type { border-top:1px solid #1a1a1a; }
+        .nav-overlay a:hover { color:#fff; border-color:#333; }
+        .nav-lang a { font-family:var(--mono); font-size:0.62rem; color:var(--text); text-decoration:none; letter-spacing:2px; border:1px solid var(--accent); padding:6px 12px; background:rgba(0,0,0,0.8); }
+        .nav-lang a:hover { background:var(--text); color:var(--bg); }
+        .wa-float { position:fixed; bottom:30px; right:30px; border:1px solid #333; padding:11px 16px; min-height:44px; min-width:44px; color:var(--text); text-decoration:none; font-family:var(--mono); font-size:0.6rem; letter-spacing:2px; z-index:1001; background:var(--bg); display:flex; align-items:center; gap:8px; }
+        .wa-float:hover { background:var(--text); color:var(--bg); border-color:var(--text); }
+        .container { padding-top:110px; }
+        @media (max-width:600px) { .nav-bar { top:max(8px,env(safe-area-inset-top)); right:max(8px,env(safe-area-inset-right)); left:auto; width:auto; padding:8px 12px; border:1px solid #222; border-radius:2px; } .nav-menu-label { display:none; } h1 { font-size:1.9rem; } .featured-image { height:240px; } table.cmp { font-size:0.78rem; } }
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+<div class="nav-bar">
+    <div class="nav-bar-left">
+        <span class="nav-menu-label">MENU</span>
+        <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu de navegação">
+            <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+        </label>
+    </div>
+    <div class="nav-lang"><a href="../index-pt.html">INÍCIO</a> · <a href="mantenimiento-masas-bujes-bicicleta-es.html">ES</a> · <a href="bicycle-hub-bearing-maintenance-en.html">EN</a></div>
+</div>
+<div class="nav-overlay">
+    <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="../index-pt.html">INÍCIO</a>
+        <a href="../servicios-pt.html">SERVIÇOS</a>
+        <a href="../tubelizado-pt.html">TUBELESS</a>
+        <a href="../suspension-pt.html">SUSPENSÃO</a>
+        <a href="../centrado-ruedas-pt.html">CENTRAGEM</a>
+        <a href="../purgado-frenos-pt.html">SANGRIA</a>
+        <a href="../mantenimiento-general-pt.html">MANUT. GERAL</a>
+        <a href="../mantenimiento-preventivo-pt.html">MANUT. PREVENTIVA</a>
+        <a href="../index-pt.html#science">DADOS TÉCNICOS</a>
+        <a href="../index-pt.html#tips">DICAS</a>
+        <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTATO</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCALIZAÇÃO</a>
+    </nav>
+</div>
+<a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20consultar%20sobre%20servicio%20de%20masas" class="wa-float" aria-label="Contatar por WhatsApp">
+    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA_
+</a>
+
+    <div class="container">
+        <nav class="bc-crumb" aria-label="breadcrumb" style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:#666;margin-bottom:22px;"><a href="https://www.bikelabstudio.com/" style="color:#8a8a8a;text-decoration:none">Início</a><span style="color:#444;margin:0 7px">›</span><a href="https://www.bikelabstudio.com/articles/scientific-noir-pt.html" style="color:#8a8a8a;text-decoration:none">Artigos</a><span style="color:#444;margin:0 7px">›</span><span style="color:#6a6a6a">Manutenção de Cubos</span></nav>
+        <a href="../index-pt.html#tips" class="back-link">← VOLTAR AO INÍCIO</a>
+        <span class="data-label">MECÂNICA AVANÇADA // GUIA PASSO A PASSO</span>
+        <h1>Manutenção de Cubos de Bicicleta: Guia Passo a Passo</h1>
+        <div class="meta">Atualizado: Junho 2026 // Leitura: 10 min</div>
+
+        <img src="images/masa_featured.webp"
+            alt="Detalhe do núcleo (freehub) e rolamentos vedados de um cubo moderno — BikeLab Studio · Carlos Eduardo Ravello Joo"
+            class="featured-image" width="960" height="1280" loading="eager" fetchpriority="high">
+
+        <div class="content">
+
+            <div class="answer-box">
+                <span class="lbl">// RESPOSTA DIRETA</span>
+                <p style="margin:0;">A manutenção do cubo depende do seu tipo de rolamento. Os <strong>cartuchos vedados</strong> (6802/6902) são lubrificados levantando o retentor e são <strong>substituídos</strong> se tiverem folga ou rugosidade; os de <strong>cone-e-esfera</strong> (Shimano) são ajustados com precisão de fração de volta. A chave em ambos é a <strong>pré-carga</strong>: nem folga, nem atrito. Graxa fina para o núcleo, graxa NLGI 2 para os rolamentos. Intervalo: 75–100 h em uso frequente, 150–200 h ocasional.</p>
+            </div>
+
+            <p>O cubo é o componente que mais roda e menos se observa. Aguenta seu peso, as cargas laterais de cada curva e a água que entra a cada lavagem, e quase sempre é ignorado até que “faça um barulho estranho” ou a roda dance. Este guia não é um “limpe e lubrifique” genérico: é o porquê físico da falha e o passo a passo real do serviço, com a desmontagem documentada na bancada.</p>
+
+            <h2>1. Como funciona um cubo: cargas radiais e axiais</h2>
+            <p>Um rolamento de bicicleta suporta dois tipos de carga ao mesmo tempo. A <strong>carga radial</strong> é seu peso descendo pelos raios em direção ao eixo. A <strong>carga axial</strong> é a força lateral que surge a cada curva, cada apoio de pé, cada empurrão fora do plano da roda. E aqui está a primeira nuance que quase ninguém explica: um rolamento de cartucho radial é projetado para carga radial pura; as cargas axiais desalinhadas o desgastam antes da hora. Por isso o projeto do cubo —quantos rolamentos, a que distância, com que pré-carga— importa tanto quanto sua qualidade.</p>
+
+            <h2>2. Tipos de rolamento: cartucho vs. cone-e-esfera</h2>
+            <p>Existem duas famílias e elas recebem manutenção de forma oposta. Confundi-las é o erro mais comum dos guias genéricos.</p>
+            <table class="cmp">
+                <thead><tr><th>Característica</th><th>Cartucho vedado</th><th>Cone-e-esfera</th></tr></thead>
+                <tbody>
+                    <tr><td>Modelo típico</td><td>6802, 6902 (vedados 2RS)</td><td>Esferas soltas + cones ajustáveis</td></tr>
+                    <tr><td>Ajustável</td><td class="no">Não</td><td class="ok">Sim (fração de volta)</td></tr>
+                    <tr><td>Manutenção</td><td>Lubrificar sob o retentor; trocar se houver folga</td><td>Desmontagem, contagem de esferas, reajuste</td></tr>
+                    <tr><td>Carga axial</td><td>Menor tolerância</td><td class="ok">Excelente (contato angular)</td></tr>
+                    <tr><td>Resistência à sujeira</td><td class="ok">Melhor (retentores)</td><td>Menor</td></tr>
+                    <tr><td>Reparável se a pista falhar</td><td class="ok">Sim: troca-se o cartucho</td><td class="no">Não: condena o corpo do cubo</td></tr>
+                </tbody>
+            </table>
+            <p>A Shimano segue usando cone-e-esfera na linha alta por uma razão de engenharia: o contato angular reparte melhor as cargas oblíquas. O resto da indústria migrou para cartucho pela simplicidade de serviço. Nenhum é “melhor” em abstrato; são filosofias distintas.</p>
+
+            <figure>
+                <img src="images/masa_una_mas_me_gusta.webp" alt="Rolamentos, vedações e núcleo do cubo em vista explodida — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                <figcaption>Vista explodida: corpo, rolamentos de cartucho, vedações e núcleo. Cada vedação é uma barreira contra a água.</figcaption>
+            </figure>
+
+            <h2>3. Diagnóstico: os três sinais</h2>
+            <p>Antes de abrir qualquer coisa, diagnostique. Há três sintomas e cada um aponta para uma causa distinta.</p>
+            <h3>Folga lateral</h3>
+            <p>Segure a roda pelo aro e mova-a de lado a lado contra o quadro. Uma folga perceptível é <strong>folga</strong>. Em cone-e-esfera corrige-se com pré-carga; em cartucho quase sempre significa rolamento desgastado.</p>
+            <h3>Rugosidade</h3>
+            <p>Retire a roda, segure o eixo com os dedos e gire-o devagar. Se não estiver perfeitamente suave —se “raspa” ou tem pontos duros— há <strong>brinelling</strong> (marcas das esferas na pista) ou contaminação por areia. Isso não se lubrifica: troca-se.</p>
+            <h3>Clique do núcleo</h3>
+            <p>Um “clac” intermitente sob pedalada normalmente não é o rolamento, mas o núcleo de roda livre: catracas secas, mola cansada ou graxa errada. Tratamos disso abaixo.</p>
+
+            <figure>
+                <img src="images/masa_montada.webp" alt="Cubo traseiro montado na bicicleta com rotor de freio — BikeLab Studio · Carlos Eduardo Ravello Joo" width="640" height="1138" loading="lazy">
+                <figcaption>O diagnóstico começa com a roda montada: folga, rugosidade e ruído se sentem antes de desmontar.</figcaption>
+            </figure>
+
+            <h2>4. O erro crítico: a física da pré-carga</h2>
+            <p>Aqui está o que quase nenhum guia diz e onde se arruínam mais cubos. A <strong>pré-carga</strong> é a tensão com que as pistas do rolamento se enfrentam. Nem demais nem de menos:</p>
+            <div class="warn-box">
+                <span class="lbl">O MITO QUE FUNDE CUBOS</span>
+                <p><strong>“Se há folga, aperte mais forte.”</strong> Falso. Uma pré-carga excessiva aumenta o atrito e a carga axial sobre as esferas: o rolamento se sente “rugoso” não porque está gasto, mas porque está estrangulado. Muitos rolamentos “mortos” são rolamentos sobre-pré-carregados.</p>
+            </div>
+            <p>E o detalhe que separa um mecânico de um amador: em um cubo de cone-e-esfera, ajustar “zero folga” na bancada está <strong>errado</strong>. Ao fechar a blocagem rápida ou apertar o eixo passante ao torque do quadro (tipicamente 10–12 N·m), a força de fixação comprime microscopicamente o eixo e empurra os cones contra as esferas. O ajuste correto deixa uma <strong>folga residual imperceptível</strong> na bancada que desaparece sozinha ao montar a roda na bike. Ajustar a zero na bancada = sobre-pré-carga ao rodar.</p>
+
+            <h2>5. O serviço, passo a passo</h2>
+
+            <div class="step">
+                <span class="num">Passo 1 — À bancada</span>
+                <h3>Desmonte a roda e libere o cassete</h3>
+                <p>Roda fora da bike, cassete retirado se for mexer no núcleo. Trabalhe sobre um tapete limpo: o cubo não perdoa a areia.</p>
+                <figure>
+                    <img src="images/masa_servicio_banco.webp" alt="Roda e cubo durante serviço completo na bancada — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                    <figcaption>Passo 1: a roda na bancada, superfície limpa, tudo à vista.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 2 — Abrir</span>
+                <h3>Retire tampas e núcleo</h3>
+                <p>A maioria dos cubos modernos de linha alta (DT Swiss, Hope, e projetos de alto engate) abrem <strong>à mão</strong>: as tampas e o núcleo saem por tração, sem chaves. Se você precisar de força bruta, pare: está fazendo algo errado.</p>
+                <figure>
+                    <img src="images/masa_servicio_nucleo.webp" alt="Interior do cubo e núcleo de alto engate — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                    <figcaption>Passo 2: o interior do cubo e o núcleo de alto engate, expostos sem violência.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 3 — Desmontagem</span>
+                <h3>Ordene cada peça</h3>
+                <p>Retire rolamentos, vedações e espaçadores e coloque-os na ordem de extração. Se for cone-e-esfera, <strong>conte as esferas antes</strong> de retirá-las e nunca misture esferas velhas com novas: as velhas perderam micrômetros de diâmetro e transferem toda a carga às novas.</p>
+                <figure>
+                    <img src="images/masa_despiece.webp" alt="Vista explodida do cubo: corpo, rolamentos e núcleo — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                    <figcaption>Passo 3: desmontagem ordenada. A ordem é diagnóstico, não estética.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 4 — Limpeza</span>
+                <h3>Desengraxe os rolamentos</h3>
+                <p>Para cartuchos que vai reutilizar: levante com cuidado o retentor de borracha com um bisturi, desengraxe (ultrassom se tiver) e deixe secar. Para cone-e-esfera: limpe pistas, cones e esferas até o brilho de espelho. Sem resíduos de graxa velha não há diagnóstico confiável da pista.</p>
+                <figure>
+                    <img src="images/masa_despiece.webp" alt="Rolamentos de cartucho e núcleo do cubo prontos para limpeza — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                    <figcaption>Passo 4: desengraxe de rolamentos sobre o tapete. A graxa velha esconde o dano.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 5 — Inspeção</span>
+                <h3>Lubrificar ou substituir?</h3>
+                <p>Olhe a pista de rolagem. Se estiver polida e uniforme, lubrifique e reutilize. Se vir <strong>pitting</strong> (picadas) ou <strong>brinelling</strong> (depressões regulares das esferas), a pista perdeu sua geometria: não há graxa que conserte, substitui-se o cartucho. Uma pista marcada é vida útil imprevisível.</p>
+                <figure>
+                    <img src="images/masa_alojamiento.webp" alt="Alojamento do rolamento do corpo do cubo em inspeção — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="450" loading="lazy">
+                    <figcaption>Passo 5: inspeção do alojamento e da pista. Aqui se decide lubrificar ou trocar.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 6 — Extração / prensagem</span>
+                <h3>Troque o cartucho sem danificar o cubo</h3>
+                <p>Para retirar um cartucho usa-se um extrator de impacto cego; para instalá-lo, uma prensa com bucha que apoie sobre a <strong>pista externa</strong>. O erro fatal aqui é pressionar sobre a pista interna de um cartucho novo: marca as esferas antes do primeiro giro e o arruína. Apoio na pista correta, pressão reta, sem marteladas.</p>
+                <figure>
+                    <img src="images/masa_extraccionn.webp" alt="Extração do rolamento do cubo com ferramenta — BikeLab Studio · Carlos Eduardo Ravello Joo" width="800" height="600" loading="lazy">
+                    <figcaption>Passo 6: extração/prensagem com ferramenta. A força vai à pista correta, nunca ao martelo.</figcaption>
+                </figure>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 7 — Lubrificação</span>
+                <h3>Duas graxas, não uma</h3>
+                <p>Preencha os rolamentos a ~70% com graxa <strong>NLGI 2</strong> (consistência de manteiga de amendoim; resistente à água). O núcleo de roda livre é outra história: leva uma graxa <strong>fluida e fina</strong> (NLGI 0–1) ou óleo específico, em camada fina. Se você afogar a catraca em graxa espessa, as molas não empurram a tempo os dentes e o núcleo <em>patina</em> sob torque. Mais graxa não é mais proteção: é uma falha esperando uma subida.</p>
+            </div>
+
+            <div class="step">
+                <span class="num">Passo 8 — Pré-carga e fechamento</span>
+                <h3>Monte, ajuste e verifique na bike</h3>
+                <p>Remonte, deixe a folga residual imperceptível (ver passo 4), monte a roda e feche o eixo ao torque do quadro. Só então verifique: a roda deve girar livre e sem folga. Se ficou dura, afrouxou de menos; se dança, de mais.</p>
+            </div>
+
+            <h2>6. A oficina certa: a ferramenta faz a diferença</h2>
+            <p>Um cubo não se serve com improvisação. Serve-se com extratores cegos do diâmetro correto, prensas com buchas-guia, chaves de cone planas para cone-e-esfera, torquímetro para o fechamento e um tapete que não solte fibras. A diferença entre “meti graxa” e “ficou como de fábrica” não está na mão: está em que a força é aplicada onde o projeto pede. Uma oficina séria investe na ferramenta porque sabe que o quadro e o cubo do cliente valem muito mais que o extrator.</p>
+            <figure>
+                <img src="images/masa_herramientas.webp" alt="Ferramentas de oficina para serviço de cubos: torquímetro, extratores e prensa de rolamentos — BikeLab Studio · Carlos Eduardo Ravello Joo" width="640" height="800" loading="lazy">
+                <figcaption>O ferramental correto para servir cubos: torquímetro, extratores, prensa e utensílios de precisão.</figcaption>
+            </figure>
+
+            <h2>7. A graxa correta (e o grau ABEC que não importa)</h2>
+            <p>Duas observações que economizam dinheiro. Primeira: o <strong>grau ABEC</strong> (1, 3, 5, 7, 9) mede tolerâncias para regimes industriais de dezenas de milhares de rpm; sua roda gira a 200–400 rpm. Na bike pesam muito mais o aço das pistas, as vedações e a lubrificação do que o número ABEC. Pagar por ABEC 9 “para ir mais rápido” é jogar dinheiro fora. Segunda: não use graxa de rolamento no núcleo nem óleo de corrente nos rolamentos. Cada mecanismo pede sua <a href="grasas-tribologia-pt.html">reologia</a>; misturá-las é a causa silenciosa de metade dos “núcleos ruidosos”.</p>
+
+            <h2>8. Intervalos reais de manutenção</h2>
+            <div class="data-box">
+                <span class="lbl">QUANDO SERVIR O CUBO</span>
+                <p style="margin:0;color:#bbb;">Uso ocasional (estrada seca): inspeção a cada <span class="hi">150–200 h</span> ou anual. Uso frequente (MTB, gravel): a cada <span class="hi">75–100 h</span> ou semestral. Após chuva, lama ou lavagem por imersão: revisão <span class="hi">imediata</span>. A graxa envelhece mesmo que a bike não rode: não a deixe mais de <span class="hi">um ano</span>.</p>
+            </div>
+            <p>O inimigo número um não é a quilometragem: é a <strong>água</strong>. Uma travessia de rio ou uma lavagem sob pressão mal direcionada introduz mais contaminação em cinco minutos do que mil quilômetros secos. Se você roda perto do mar ou em clima úmido, encurte os intervalos; o mesmo princípio eletroquímico que ataca o resto da bike ataca aqui, como vimos em <a href="corrosion-bicicleta-trujillo-pt.html">corrosão e termodinâmica</a>.</p>
+
+            <div style="margin: 40px 0; padding: 22px 24px; border: 1px solid #333; border-left: 3px solid #666; background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <div style="font-family: var(--mono); font-size: 0.62rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">SERVIÇO DE CUBOS E ROLAMENTOS</div>
+                    <div style="font-size: 0.9rem; color: #aaa; line-height: 1.5;">Diagnóstico, troca de rolamentos e ajuste de pré-carga com ferramenta de precisão.<br>BikeLab Studio.</div>
+                </div>
+                <a href="../mantenimiento-general-pt.html" style="font-family: var(--mono); font-size: 0.62rem; color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 18px; letter-spacing: 1.5px; white-space: nowrap;">VER SERVIÇO →</a>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid #222;">
+                <h2>Perguntas Frequentes</h2>
+                <h3>É normal uma pequena folga lateral na roda?</h3>
+                <p>Em cubos de cone-e-esfera (Shimano), uma folga mínima na bancada pode ser correta: desaparece ao fechar a blocagem rápida ou o eixo passante, porque a força de fixação comprime o eixo. Em cartucho vedado, a folga perceptível quase sempre indica um rolamento desgastado ou um espaçador comprimido, e se corrige trocando o rolamento, não apertando.</p>
+                <h3>Os rolamentos vedados de cartucho podem receber manutenção?</h3>
+                <p>Sim. Levanta-se com cuidado o retentor, desengraxa-se e preenche-se com graxa nova a ~70%; prolonga sua vida desde que as pistas não tenham picadas. Se a pista estiver marcada, não há lubrificação que salve: substitui-se o cartucho.</p>
+                <h3>Que graxa se usa no núcleo ou sistema de catracas?</h3>
+                <p>Uma graxa específica de baixa viscosidade (fluida), não a graxa espessa de rolamentos. A de rolamento, pegajosa demais, freia o retorno das molas da catraca e provoca saltos sob carga. No núcleo: camada fina de graxa leve; nos rolamentos: graxa NLGI 2.</p>
+                <h3>O grau ABEC dos rolamentos importa em uma bicicleta?</h3>
+                <p>Quase nada. O ABEC mede tolerâncias para 20.000–30.000 rpm; uma roda gira a 200–400 rpm. Pesam mais o aço, a esfericidade das esferas, as vedações e a lubrificação. Um ABEC 3 bem vedado dura mais que um ABEC 9 mal protegido.</p>
+                <h3>De quanto em quanto tempo se faz a manutenção dos cubos?</h3>
+                <p>Ocasional: a cada 150–200 h ou anual. Frequente: a cada 75–100 h ou semestral. Em chuva, lama ou lavagem por imersão, revisão imediata. A graxa perde propriedades com o tempo: não a deixe mais de um ano.</p>
+            </div>
+
+            <div class="refs">
+                <h2>Referências</h2>
+                <ol>
+                    <li>Park Tool — <a href="https://www.parktool.com/en-us/blog/repair-help/hub-overhaul-and-adjustment" target="_blank" rel="noopener nofollow">Hub Overhaul and Adjustment</a>.</li>
+                    <li>DT Swiss — Manuais técnicos de cubos e sistema Ratchet (engagement 18T=20°, 36T=10°, 54T=6,67°).</li>
+                    <li>Shimano Dealer's Manual — Hub Set (ajuste de cone e esfera, tolerâncias).</li>
+                    <li>Enduro Bearings / SKF — Bearing basics: relevância real do grau ABEC e seleção de rolamento.</li>
+                    <li>Designações de rolamento de cartucho: 6802 (15×24×5), 6902 (15×28×7).</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 30px;"><a href="../index-pt.html#tips" class="back-link">← VOLTAR AO INÍCIO</a></p>
+        </div>
+
+        <div class="signature">
+            BikeLab Studio Industrial Noir / Pesquisa e serviço de mecânica de precisão / Carlos Eduardo Ravello Joo
+        </div>
+    </div>
+</body>
+
+</html>
