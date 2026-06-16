@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>4130 chromoly steel: three joints — BikeLab Studio</title>
+  <desc>4130 steel in three joint types: TIG (melts), fillet braze (joins without melting, no lug) and lugged (sleeve plus capillary action). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">4130 CHROMOLY STEEL</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // mat-04 · three steel joints</text>
+
+    <rect x="40" y="74" width="220" height="246" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="150" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">TIG</text>
+    <rect x="70" y="150" width="76" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <rect x="154" y="150" width="76" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <path d="M146 150 q4 17 0 34 M154 150 q-4 17 0 34" fill="#16343a" stroke="#4fb8c8" stroke-width="1.6"></path>
+    <text x="150" y="214" fill="#f0a0a0" font-size="11" text-anchor="middle">melts</text>
+    <text x="150" y="246" fill="#8f8f8f" font-size="10" text-anchor="middle">direct tube-to-tube bead</text>
+    <text x="150" y="296" fill="#4fb8c8" font-size="11" text-anchor="middle">~99% of steel frames</text>
+    <text x="150" y="312" fill="#5a5a5a" font-size="9.5" text-anchor="middle">since ~1992</text>
+
+    <rect x="270" y="74" width="220" height="246" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="380" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">fillet braze</text>
+    <rect x="300" y="150" width="76" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <rect x="384" y="150" width="76" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <path d="M368 150 Q380 138 392 150 L392 184 Q380 196 368 184 Z" fill="#c89a4a" fill-opacity="0.55" stroke="#c89a4a" stroke-width="1.2"></path>
+    <text x="380" y="214" fill="#5fbecb" font-size="11" text-anchor="middle">joins without melting</text>
+    <text x="380" y="246" fill="#8f8f8f" font-size="10" text-anchor="middle">filler fillet · no lug</text>
+    <text x="380" y="296" fill="#8f8f8f" font-size="10.5" text-anchor="middle">+~4 oz of brass</text>
+    <text x="380" y="312" fill="#5a5a5a" font-size="9.5" text-anchor="middle">handcrafted · high end</text>
+
+    <rect x="500" y="74" width="220" height="246" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <text x="610" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">lugged</text>
+    <rect x="530" y="150" width="70" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <rect x="610" y="150" width="70" height="34" fill="#1a1a1a" stroke="#5a5a5a" stroke-width="1.2"></rect>
+    <rect x="590" y="144" width="40" height="46" rx="4" fill="none" stroke="#9c9c9c" stroke-width="2"></rect>
+    <rect x="592" y="160" width="36" height="14" fill="#c89a4a" fill-opacity="0.5"></rect>
+    <text x="610" y="214" fill="#5fbecb" font-size="11" text-anchor="middle">sleeve + capillary action</text>
+    <text x="610" y="246" fill="#8f8f8f" font-size="10" text-anchor="middle">brass flows into the lug</text>
+    <text x="610" y="296" fill="#8f8f8f" font-size="10.5" text-anchor="middle">classic · high end</text>
+    <text x="610" y="312" fill="#5a5a5a" font-size="9.5" text-anchor="middle">geometry fixed by the lug</text>
+
+    <text x="380" y="350" fill="#5fbecb" font-size="12" text-anchor="middle">steel takes all three: only TIG melts the tube · braze and lug spare it</text>
+    <text x="380" y="372" fill="#5a5a5a" font-size="10.5" text-anchor="middle">today TIG dominates; lug and fillet remain for handcrafted high end</text>
+    <text x="724" y="394" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

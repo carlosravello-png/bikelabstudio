@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Alumínio 6061 vs 7005: o que muda ao soldar — BikeLab Studio</title>
+  <desc>Comparação do alumínio 6061-T6 e 7005-T6: resistência, comportamento da ZAC ao soldar e necessidade de tratamento térmico. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. Todos os direitos reservados.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">ALUMÍNIO 6061 vs 7005</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // mat-01 · o que muda ao soldar</text>
+
+    <line x1="380" y1="74" x2="380" y2="330" stroke="#2c2c2c" stroke-width="1"></line>
+
+    <text x="210" y="96" fill="#8f8f8f" font-size="13" text-anchor="middle" font-weight="bold">6061-T6</text>
+    <text x="70" y="128" fill="#5a5a5a" font-size="10.5">resistência à tração</text>
+    <rect x="70" y="134" width="186" height="16" fill="#4fb8c8" fill-opacity="0.85"></rect>
+    <text x="264" y="147" fill="#4fb8c8" font-size="12">310 MPa</text>
+    <text x="70" y="170" fill="#5a5a5a" font-size="10.5">limite de escoamento</text>
+    <rect x="70" y="176" width="165" height="16" fill="#7a7a7a"></rect>
+    <text x="243" y="189" fill="#8f8f8f" font-size="12">275 MPa</text>
+    <rect x="70" y="214" width="250" height="96" rx="6" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.2"></rect>
+    <text x="84" y="236" fill="#f0a0a0" font-size="11.5">perde a têmpera na ZAC</text>
+    <text x="84" y="258" fill="#8f8f8f" font-size="10.5">só se restitui com tratamento</text>
+    <text x="84" y="273" fill="#8f8f8f" font-size="10.5">térmico completo:</text>
+    <text x="84" y="295" fill="#4fb8c8" font-size="11">solução → têmpera → envelhecer</text>
+
+    <text x="550" y="96" fill="#8f8f8f" font-size="13" text-anchor="middle" font-weight="bold">7005-T6</text>
+    <text x="410" y="128" fill="#5a5a5a" font-size="10.5">resistência à tração</text>
+    <rect x="410" y="134" width="210" height="16" fill="#4fb8c8" fill-opacity="0.85"></rect>
+    <text x="628" y="147" fill="#4fb8c8" font-size="12">350 MPa</text>
+    <text x="410" y="170" fill="#5a5a5a" font-size="10.5">limite de escoamento</text>
+    <rect x="410" y="176" width="174" height="16" fill="#7a7a7a"></rect>
+    <text x="592" y="189" fill="#8f8f8f" font-size="12">290 MPa</text>
+    <rect x="410" y="214" width="250" height="96" rx="6" fill="#0c0c0c" stroke="#4fb8c8" stroke-width="1.3"></rect>
+    <text x="424" y="236" fill="#4fb8c8" font-size="11.5">autotemperável ao ar</text>
+    <text x="424" y="258" fill="#8f8f8f" font-size="10.5">a ZAC recupera ~80% por</text>
+    <text x="424" y="273" fill="#8f8f8f" font-size="10.5">envelhecimento natural</text>
+    <text x="424" y="295" fill="#8f8f8f" font-size="10.5">(100% se envelhecido artificial)</text>
+
+    <text x="380" y="352" fill="#5fbecb" font-size="12" text-anchor="middle">o 7005 perdoa a solda; o 6061 exige forno depois</text>
+    <text x="380" y="372" fill="#5a5a5a" font-size="10.5" text-anchor="middle">por isso muitos quadros soldados sem tratamento usam 7005</text>
+    <text x="724" y="394" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>

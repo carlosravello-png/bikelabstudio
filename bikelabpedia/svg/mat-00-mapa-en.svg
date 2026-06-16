@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Your frame and welding: what&#39;s done to each material — BikeLab Studio</title>
+  <desc>Entry matrix: the joining method that applies to each frame material (4130 steel, aluminium, titanium and carbon/CFRP). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="400" rx="14" fill="#080808"></rect>
+    <rect x="1" y="1" width="758" height="398" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="34" fill="#4fb8c8" font-size="11" letter-spacing="2.5">YOUR FRAME AND WELDING</text>
+    <text x="40" y="50" fill="#5a5a5a" font-size="11">BikeLab-pedia // mat-00 · what&#39;s done to each material</text>
+
+    <g>
+      <rect x="40" y="74" width="170" height="286" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+      <rect x="40" y="74" width="170" height="40" rx="8" fill="#101010"></rect>
+      <text x="125" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">STEEL 4130</text>
+      <text x="125" y="138" fill="#5a5a5a" font-size="10" text-anchor="middle">chromoly</text>
+      <text x="125" y="178" fill="#4fb8c8" font-size="12.5" text-anchor="middle">TIG</text>
+      <line x1="70" y1="194" x2="180" y2="194" stroke="#242424" stroke-width="1"></line>
+      <text x="125" y="220" fill="#8f8f8f" font-size="12" text-anchor="middle">fillet braze</text>
+      <line x1="70" y1="236" x2="180" y2="236" stroke="#242424" stroke-width="1"></line>
+      <text x="125" y="262" fill="#8f8f8f" font-size="12" text-anchor="middle">lugged</text>
+      <text x="125" y="332" fill="#5a5a5a" font-size="9.5" text-anchor="middle">melts or joins</text>
+      <text x="125" y="346" fill="#5a5a5a" font-size="9.5" text-anchor="middle">without melting</text>
+    </g>
+    <g>
+      <rect x="220" y="74" width="170" height="286" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+      <rect x="220" y="74" width="170" height="40" rx="8" fill="#101010"></rect>
+      <text x="305" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">ALUMINIUM</text>
+      <text x="305" y="138" fill="#5a5a5a" font-size="10" text-anchor="middle">6061 / 7005</text>
+      <text x="305" y="178" fill="#4fb8c8" font-size="12.5" text-anchor="middle">TIG</text>
+      <line x1="250" y1="194" x2="360" y2="194" stroke="#242424" stroke-width="1"></line>
+      <text x="305" y="222" fill="#8f8f8f" font-size="11" text-anchor="middle">+ heat</text>
+      <text x="305" y="238" fill="#8f8f8f" font-size="11" text-anchor="middle">treatment per</text>
+      <text x="305" y="254" fill="#8f8f8f" font-size="11" text-anchor="middle">alloy</text>
+      <text x="305" y="332" fill="#5a5a5a" font-size="9.5" text-anchor="middle">loses temper</text>
+      <text x="305" y="346" fill="#5a5a5a" font-size="9.5" text-anchor="middle">in the HAZ</text>
+    </g>
+    <g>
+      <rect x="400" y="74" width="170" height="286" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+      <rect x="400" y="74" width="170" height="40" rx="8" fill="#101010"></rect>
+      <text x="485" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">TITANIUM</text>
+      <text x="485" y="138" fill="#5a5a5a" font-size="10" text-anchor="middle">3Al-2.5V</text>
+      <text x="485" y="178" fill="#4fb8c8" font-size="12.5" text-anchor="middle">TIG</text>
+      <line x1="430" y1="194" x2="540" y2="194" stroke="#242424" stroke-width="1"></line>
+      <text x="485" y="222" fill="#8f8f8f" font-size="11" text-anchor="middle">with argon</text>
+      <text x="485" y="238" fill="#8f8f8f" font-size="11" text-anchor="middle">purge</text>
+      <text x="485" y="332" fill="#5a5a5a" font-size="9.5" text-anchor="middle">inside +</text>
+      <text x="485" y="346" fill="#5a5a5a" font-size="9.5" text-anchor="middle">outside</text>
+    </g>
+    <g>
+      <rect x="580" y="74" width="140" height="286" rx="8" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+      <rect x="580" y="74" width="140" height="40" rx="8" fill="#101010"></rect>
+      <text x="650" y="100" fill="#ECECEC" font-size="13" font-weight="bold" text-anchor="middle">CARBON</text>
+      <text x="650" y="138" fill="#5a5a5a" font-size="10" text-anchor="middle">CFRP</text>
+      <text x="650" y="174" fill="#f0a0a0" font-size="11.5" text-anchor="middle">not</text>
+      <text x="650" y="190" fill="#f0a0a0" font-size="11.5" text-anchor="middle">welded</text>
+      <line x1="610" y1="206" x2="690" y2="206" stroke="#242424" stroke-width="1"></line>
+      <text x="650" y="234" fill="#8f8f8f" font-size="11" text-anchor="middle">re-lamination</text>
+      <text x="650" y="250" fill="#8f8f8f" font-size="11" text-anchor="middle">repair</text>
+      <text x="650" y="338" fill="#5a5a5a" font-size="9.5" text-anchor="middle">thermoset</text>
+    </g>
+
+    <text x="380" y="384" fill="#5fbecb" font-size="12" text-anchor="middle">each material demands its technique · the rest of the cluster details each case</text>
+    <text x="724" y="394" fill="#2f2f2f" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>
