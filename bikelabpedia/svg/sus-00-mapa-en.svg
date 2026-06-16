@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Suspension: the cluster map — BikeLab Studio</title>
+  <desc>Hub of the suspension cluster with four blocks: fork, rear shock, rigid/gravel and dropper. © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
+  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
+    <rect x="0" y="0" width="760" height="430" rx="14" fill="#050505"></rect>
+    <rect x="1" y="1" width="758" height="428" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>
+    <text x="40" y="36" fill="#4fb8c8" font-size="11" letter-spacing="2.5">SUSPENSION · THE MAP</text>
+    <text x="40" y="54" fill="#9a9a9a" font-size="11">BikeLab-pedia // sus-00 · the cluster&#39;s four blocks</text>
+
+    <rect x="40" y="84" width="340" height="128" rx="10" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <g stroke="#4fb8c8" stroke-width="2" fill="none">
+      <line x1="80" y1="116" x2="80" y2="180"></line><line x1="104" y1="116" x2="104" y2="180"></line>
+      <line x1="72" y1="116" x2="112" y2="116"></line><circle cx="92" cy="190" r="6"></circle>
+    </g>
+    <text x="140" y="128" fill="#ffffff" font-size="15" font-weight="bold">Fork</text>
+    <text x="140" y="152" fill="#9a9a9a" font-size="11">air spring + damper</text>
+    <text x="140" y="170" fill="#9a9a9a" font-size="11">absorbs the front axle</text>
+    <text x="140" y="194" fill="#4fb8c8" font-size="10.5">sus-01 · sus-03 · sus-10 · sus-11</text>
+
+    <rect x="396" y="84" width="324" height="128" rx="10" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <g stroke="#d9a44a" stroke-width="2" fill="none">
+      <rect x="436" y="120" width="20" height="56" rx="3"></rect>
+      <path d="M446 120 v-8 M446 176 v8"></path><circle cx="446" cy="106" r="5"></circle><circle cx="446" cy="190" r="5"></circle>
+    </g>
+    <text x="486" y="128" fill="#ffffff" font-size="15" font-weight="bold">Rear shock</text>
+    <text x="486" y="152" fill="#9a9a9a" font-size="11">frame air can + damper</text>
+    <text x="486" y="170" fill="#9a9a9a" font-size="11">controls the rear triangle</text>
+    <text x="486" y="194" fill="#4fb8c8" font-size="10.5">sus-02 · sus-04 · sus-12</text>
+
+    <rect x="40" y="224" width="340" height="128" rx="10" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <g stroke="#9a9a9a" stroke-width="2" fill="none">
+      <line x1="80" y1="256" x2="92" y2="324"></line><line x1="104" y1="256" x2="92" y2="324"></line><line x1="72" y1="256" x2="112" y2="256"></line>
+    </g>
+    <text x="140" y="268" fill="#ffffff" font-size="15" font-weight="bold">Rigid / Gravel</text>
+    <text x="140" y="292" fill="#9a9a9a" font-size="11">no active suspension</text>
+    <text x="140" y="310" fill="#9a9a9a" font-size="11">geometry via axle-to-crown</text>
+    <text x="140" y="334" fill="#4fb8c8" font-size="10.5">sus-11 · equivalent A2C</text>
+
+    <rect x="396" y="224" width="324" height="128" rx="10" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.3"></rect>
+    <g stroke="#4fb8c8" stroke-width="2" fill="none">
+      <rect x="438" y="252" width="16" height="72" rx="3"></rect><line x1="446" y1="252" x2="446" y2="240"></line>
+      <path d="M438 276 h16" stroke="#d9a44a"></path>
+    </g>
+    <text x="486" y="268" fill="#ffffff" font-size="15" font-weight="bold">Dropper</text>
+    <text x="486" y="292" fill="#9a9a9a" font-size="11">adjustable telescopic post</text>
+    <text x="486" y="310" fill="#9a9a9a" font-size="11">measure well before buying</text>
+    <text x="486" y="334" fill="#4fb8c8" font-size="10.5">sus-13 ★ · sus-14 · sus-15</text>
+
+    <text x="380" y="384" fill="#4fb8c8" font-size="12" text-anchor="middle">air = cyan · coil = amber · the cluster covers all four systems</text>
+    <text x="380" y="406" fill="#9a9a9a" font-size="10.5" text-anchor="middle">each block links to its detail diagrams</text>
+    <text x="724" y="420" fill="#3a3a3a" font-size="8.5" text-anchor="end">© C.E. Ravello Joo · carlosravello.com</text>
+  </g>
+</svg>
