@@ -10,6 +10,7 @@ Disallow: /articles/sag_calculator_v2.html
 Disallow: /articles/sag_calculator_v2_pt.html
 
 Sitemap: https://www.bikelabstudio.com/sitemap.xml
+Sitemap: https://www.bikelabstudio.com/sitemap-recientes.xml
 
 # RSS feed
 # https://www.bikelabstudio.com/rss.xml
