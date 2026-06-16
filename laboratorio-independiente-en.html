@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Lab — Technical Component Testing | BikeLab Studio</title>
+    <meta name="description" content="Independent technical testing of bicycle components: white paper with permanent DOI, reproducible, no conflict of interest. Suspension, drivetrain, brakes.">
+    <meta name="keywords" content="independent bicycle component testing, white paper DOI, bicycle lab, technical validation, tribology, suspension, drivetrain, brakes, BikeLab Studio">
+    <link rel="canonical" href="https://www.bikelabstudio.com/laboratorio-independiente-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/laboratorio-independiente-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/laboratorio-independiente-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/laboratorio-independiente-pt.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/laboratorio-independiente-es.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Independent Lab — Technical Component Testing | BikeLab Studio">
+    <meta property="og:description" content="Technical component testing with permanent DOI, reproducible methodology and no conflict of interest. Send us the component; we bring the physics.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/laboratorio-independiente-en.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello — BikeLab Studio">
+    <meta name="theme-color" content="#050505">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.bikelabstudio.com/laboratorio-independiente-en.html#service",
+      "name": "Independent Technical Component Testing",
+      "serviceType": "Independent Engineering Lab",
+      "description": "Technical testing of bicycle components with reproducible methodology, Monte Carlo and Latin Hypercube simulation, and publication of results under a permanent DOI on Zenodo. No conflict of interest.",
+      "provider": { "@id": "https://www.bikelabstudio.com/#business" },
+      "areaServed": "Latin America",
+      "availableLanguage": ["es", "en", "pt-BR"],
+      "url": "https://www.bikelabstudio.com/laboratorio-independiente-en.html"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Technical Researcher · Founder, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com", "https://orcid.org/0009-0007-5631-7436",
+        "https://www.wikidata.org/wiki/Q139714842", "https://www.bikelabstudio.com", "https://zoovettravel.com"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "email": "carlos.ravello@zoovettravel.com",
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" }
+    },
+    {
+      "@type": "WebSite", "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" }, "inLanguage": ["es", "en", "pt-BR"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Independent Lab", "item": "https://www.bikelabstudio.com/laboratorio-independiente-en.html" }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --surface:#0c0c0c; --accent:#888; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.7; }
+        body::before { content:""; position:fixed; inset:0; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23000'/%3E%3C/svg%3E"); opacity:0.025; pointer-events:none; z-index:1000; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; }
+        .nav-bar a:hover { color:#fff; }
+        .nav-lang { border:1px solid #444; padding:6px 12px; }
+        header.hero { position:relative; width:100%; min-height:46vh; padding:120px 24px 46px; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; border-bottom:1px solid #1a1a1a; text-align:center; }
+        .hero-content { position:relative; z-index:1; max-width:880px; width:100%; }
+        .data-label { font-family:var(--mono); font-size:0.68rem; color:#888; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px; display:block; }
+        h1 { font-size:clamp(2.3rem,7vw,4.2rem); font-weight:900; line-height:1.0; letter-spacing:-1.5px; color:#fff; text-shadow:0 4px 20px rgba(0,0,0,0.8); }
+        h1 .mono { font-family:var(--mono); font-weight:400; font-size:0.42em; letter-spacing:2px; color:#9a9a9a; display:block; margin-top:14px; }
+        .subtitle { font-family:var(--mono); font-size:0.78rem; color:#bbb; letter-spacing:3px; text-transform:uppercase; margin-top:16px; }
+        .container { max-width:900px; margin:0 auto; padding:40px 22px 60px; }
+        .back-link { display:inline-flex; align-items:center; color:#555; text-decoration:none; font-family:var(--mono); font-size:0.7rem; margin-bottom:8px; letter-spacing:1px; padding:12px 0; min-height:44px; }
+        .back-link:hover { color:var(--text); }
+        .subnav { font-family:var(--mono); font-size:0.66rem; letter-spacing:1.5px; color:#666; margin-bottom:34px; }
+        .subnav a { color:#8a8a8a; text-decoration:none; } .subnav a:hover { color:#fff; }
+        .subnav span { color:#333; margin:0 8px; }
+        .module-label { font-family:var(--mono); font-size:0.68rem; color:#777; letter-spacing:2px; text-transform:uppercase; margin:62px 0 20px; display:block; border-bottom:1px solid #1a1a1a; padding-bottom:10px; }
+        .lead-stmt { font-size:1.32rem; font-weight:700; line-height:1.45; color:#fff; letter-spacing:-0.4px; max-width:800px; margin-bottom:18px; }
+        p.body { color:#c4c4c4; font-size:1.02rem; line-height:1.85; max-width:800px; margin-bottom:14px; }
+        p.body strong { color:#fff; }
+        .term { background:#0a0a0a; border:1px solid #2a2a2a; border-left:3px solid var(--accent); padding:22px 24px; font-family:var(--mono); font-size:0.82rem; color:#bdbdbd; line-height:1.95; white-space:pre-wrap; margin:18px 0; overflow-x:auto; }
+        .term b { color:#fff; font-weight:400; }
+        .note { font-family:var(--mono); font-size:0.72rem; color:#777; letter-spacing:0.5px; margin-top:16px; line-height:1.7; }
+        .cta-row { display:flex; gap:18px; flex-wrap:wrap; margin:30px 0 6px; }
+        .cta-link { font-family:var(--mono); font-size:0.78rem; color:#fff; letter-spacing:1.5px; border:1px solid #444; padding:13px 18px; text-decoration:none; transition:.2s; }
+        .cta-link:hover { border-color:#fff; background:#0d0d0d; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:18px; margin-top:6px; }
+        .card { background:#0a0a0a; border:1px solid #2a2a2a; padding:25px; transition:.3s; height:100%; display:block; text-decoration:none; color:inherit; }
+        .card:hover { border-color:#666; transform:translateY(-3px); }
+        .card .kicker { font-family:var(--mono); font-size:0.62rem; letter-spacing:2px; color:#666; text-transform:uppercase; }
+        .card h3 { font-size:1.18rem; line-height:1.25; margin:12px 0 10px; color:#fff; }
+        .card p { font-size:0.88rem; color:#a0a0a0; line-height:1.5; margin-bottom:14px; }
+        .card .doi { font-family:var(--mono); font-size:0.66rem; color:#7a7a7a; letter-spacing:0.5px; display:block; margin-bottom:12px; word-break:break-all; }
+        .card .cta { display:inline-block; color:#aaa; font-size:0.76rem; letter-spacing:1px; border-bottom:1px solid #555; padding-bottom:2px; }
+        .creds { background:#0a0a0a; border:1px solid #2a2a2a; padding:22px 24px; font-family:var(--mono); font-size:0.78rem; color:#bdbdbd; line-height:2; letter-spacing:0.5px; margin-top:20px; }
+        .creds b { color:#fff; font-weight:400; }
+        .step { border-left:1px solid #2a2a2a; padding:2px 0 2px 24px; margin:0 0 24px; }
+        .step .n { font-family:var(--mono); font-size:0.7rem; color:#888; letter-spacing:2px; }
+        .step h4 { color:#fff; font-size:1.06rem; margin:7px 0 7px; }
+        .step p { color:#a8a8a8; font-size:0.93rem; line-height:1.65; max-width:720px; }
+        .contact { background:#0a0a0a; border:1px solid #2a2a2a; border-left:3px solid var(--accent); padding:26px 26px; margin-top:8px; }
+        .contact .big { font-size:1.3rem; font-weight:700; color:#fff; line-height:1.5; margin-bottom:20px; }
+        .contact .lines { font-family:var(--mono); font-size:1.0rem; color:#ddd; line-height:2.1; }
+        .contact .lines a { color:#fff; text-decoration:none; border-bottom:1px solid #555; }
+        .contact .lines a:hover { border-color:#fff; }
+        .signature { margin-top:70px; padding-top:40px; border-top:1px solid #222; font-family:var(--mono); font-size:0.78rem; color:#666; line-height:1.8; }
+        @media (max-width:600px){ h1{letter-spacing:-1px;} .container{padding-top:20px;} }
+    </style>
+</head>
+
+<body>
+<div class="nav-bar">
+    <a href="index-en.html">← BIKELAB STUDIO</a>
+    <span class="nav-langs" style="display:flex;gap:10px;align-items:center"><a href="laboratorio-independiente-es.html" class="nav-lang">ES</a> <a href="laboratorio-independiente-pt.html" class="nav-lang">PT</a></span>
+</div>
+
+<header class="hero">
+    <div class="hero-content">
+        <span class="data-label">Module_01 // Independent Lab</span>
+        <h1>BikeLab Studio<span class="mono">INDEPENDENT_LAB</span></h1>
+        <div class="subtitle">Component testing · Permanent DOI · No conflict of interest</div>
+    </div>
+</header>
+
+<div class="container">
+    <a href="index-en.html" class="back-link">← HOME</a>
+    <nav class="subnav"><a href="index-en.html">HOME</a><span>·</span><a href="research-en.html">RESEARCH</a><span>·</span><a href="index-en.html#herramientas">TOOLS</a><span>·</span><a href="#contacto">CONTACT</a></nav>
+
+    <p class="lead-stmt">In-house testing has a structural problem: it's run by whoever sells the component.</p>
+    <p class="body">Press reviews have another: they don't cite equations. There's a third option almost nobody runs in this region — reproducible technical documentation, with a <strong>permanent DOI</strong>, internationally indexed, with no author on commission.</p>
+    <p class="body"><strong>That's what we do.</strong></p>
+    <div class="cta-row">
+        <a href="#ensayos" class="cta-link">SEE PUBLISHED STUDIES ↓</a>
+        <a href="#protocolo" class="cta-link">PROPOSE A STUDY →</a>
+    </div>
+
+    <span class="module-label">Module_02 // The_Document_You_Need</span>
+    <p class="body">The Product Manager doesn't need convincing. They need the document that shows their boss why the diagnosis is trustworthy.</p>
+    <p class="body">A press test is an opinion with a photo. An in-house test has a declared conflict of interest. A white paper with a DOI is something else: <strong>citable, permanent, indexed on OpenAIRE, reproducible</strong> by any engineer with access to the same conditions. It doesn't disappear. It can't be edited. It has no commercial agenda.</p>
+    <p class="body"><strong>That document is what we produce.</strong></p>
+
+    <span class="module-label">Module_03 // Deliverables</span>
+    <p class="body">Every study produces four assets:</p>
+    <div class="term">→ <b>WHITE_PAPER with a permanent DOI on Zenodo</b>
+   Citable. Indexed on OpenAIRE. Reproducible.
+
+→ <b>CSV with downloadable raw data</b>
+   No interpretation. The numbers, directly.
+
+→ <b>DECLARED UNCERTAINTY BANDS</b>
+   Monte Carlo or Latin Hypercube, per system.
+   Uncertainty isn't hidden — it's quantified.
+
+→ <b>PUBLIC METHODOLOGY</b>
+   Any engineer can replicate it or refute it.
+   That's the difference between science and marketing.</div>
+    <p class="note">// A private study builds authority for no one. Publishing the report is part of the value.</p>
+
+    <span class="module-label" id="ensayos">Module_04 // Published_Studies</span>
+    <p class="body">We built this with no one asking us to. It's the calibration of what we do when there's a real component on the table.</p>
+    <div class="grid">
+        <a class="card" href="articles/white-paper-sag-model.html">
+            <span class="kicker">White_Paper // MTB Suspension</span>
+            <h3>Dual-chamber polytropic model</h3>
+            <p>Monte Carlo 10,000 iterations. 132 suspensions calibrated against official Fox, RockShox and Öhlins tables.</p>
+            <span class="doi">DOI: 10.5281/zenodo.20672790</span>
+            <span class="cta">READ →</span>
+        </a>
+        <a class="card" href="articles/white-paper-psi-model.html">
+            <span class="kicker">White_Paper // Tyres & Pressure</span>
+            <h3>Berto 15% drop criterion</h3>
+            <p>Census of 321 tyres (BRR). Latin Hypercube 10,000 samples. Sobol indices. Cross-validation vs SILCA and Rene Herse.</p>
+            <span class="doi">DOI: 10.5281/zenodo.20671797</span>
+            <span class="cta">READ →</span>
+        </a>
+        <a class="card" href="articles/white-paper-11v-12v-en.html">
+            <span class="kicker">White_Paper // Drivetrain 11s vs 12s</span>
+            <h3>Spicer + Lodge thermodynamic model</h3>
+            <p>Monte Carlo 10,000 iterations. Friction losses, per-sprocket efficiency, 5-year cost analysis. Downloadable CSV.</p>
+            <span class="doi">DOI: 10.5281/zenodo.19229331</span>
+            <span class="cta">READ →</span>
+        </a>
+        <a class="card" href="articles/white-paper-new-bike-mechanical-state-en.html">
+            <span class="kicker">White_Paper // New-Bike Mechanical State</span>
+            <h3>5 failure vectors</h3>
+            <p>Lubrication, hydraulics, drivetrain, torque and wheel integrity. Dataset of 47 units.</p>
+            <span class="doi">DOI: 10.5281/zenodo.20249194</span>
+            <span class="cta">READ →</span>
+        </a>
+    </div>
+    <div class="creds">AUTHOR: <b>Carlos Eduardo Ravello Joo</b>
+ORCID: <b>0009-0007-5631-7436</b>
+INDEXED ON: <b>Zenodo · OpenAIRE · ORCID</b>
+LANGUAGES: <b>Español · English · Português (PT-BR)</b></div>
+
+    <span class="module-label">Module_05 // Testing_Axes</span>
+    <p class="body">Five areas with methodology already documented:</p>
+    <div class="term"><b>TYRES & PRESSURE</b>
+Constant-deflection model. Cross-validation SILCA / Rene Herse.
+Correction for real internal width. Front/rear coupling.
+
+<b>MTB SUSPENSION</b>
+Dual-chamber polytropic. Inverse calibration by brand and model.
+Leverage ratio, temperature, nitrogen variation.
+
+<b>DRIVETRAIN</b>
+Per-sprocket friction losses. Efficiency under real load.
+Energy and economic cost per kilometre.
+
+<b>HYDRAULIC BRAKES</b>
+Fade thermodynamics. DOT vs mineral behaviour.
+High-altitude analysis (>3,000 m). Pads and rotors.
+
+<b>TRIBOLOGY & LUBRICATION</b>
+Chain wear under specific contaminants.
+Galvanic corrosion between dissimilar materials.
+Greases and lubricants in local climate conditions.</div>
+    <p class="note">// If the study you need is outside these axes, we discuss the protocol before committing to anything.</p>
+
+    <span class="module-label">Module_06 // Client_Profile</span>
+    <p class="body"><strong>Brands</strong> that need independent validation before distributing in Latin America.</p>
+    <p class="body"><strong>Distributors</strong> that need a documented technical argument for their regional market, not the manufacturer's marketing material.</p>
+    <p class="body"><strong>Product engineers</strong> who need unbiased comparative data on how a component behaves in local conditions — altitude, humidity, region-specific contaminants.</p>
+    <p class="body"><strong>Importers</strong> who want to differentiate their catalogue with their own scientific documentation.</p>
+    <div class="term">// This isn't for influencers.
+// It isn't for YouTube reviews.
+// It's for those who understand a DOI is worth more than ten reviews.</div>
+
+    <span class="module-label" id="protocolo">Module_07 // Collaboration_Protocol</span>
+    <div class="step"><span class="n">_01 // INITIAL CONSULTATION</span><h4>You describe the component and the goal of the study.</h4><p>No form. No bureaucracy.</p></div>
+    <div class="step"><span class="n">_02 // METHODOLOGY PROPOSAL</span><h4>We propose protocol, instrumentation and timeline.</h4><p>Before touching anything, we agree on what we measure and how.</p></div>
+    <div class="step"><span class="n">_03 // TECHNICAL REVIEW</span><h4>You receive the draft white paper for technical review.</h4><p>You verify the methodology. We integrate factual corrections.</p></div>
+    <div class="step"><span class="n">_04 // PUBLICATION WITH DOI</span><h4>The report is published on Zenodo.</h4><p>The data is yours. The report is public. That's how independent science works.</p></div>
+
+    <span class="module-label" id="contacto">Module_08 // Contact</span>
+    <div class="contact">
+        <div class="big">Send us the component.<br>We bring the physics.</div>
+        <div class="lines">EMAIL → <a href="mailto:carlos.ravello@zoovettravel.com">carlos.ravello@zoovettravel.com</a><br>WHATSAPP → <a href="https://wa.me/51934391545?text=Hi%20BikeLab%2C%20I%20want%20to%20propose%20an%20independent%20study%20of%20a%20component.">+51 934 391 545</a></div>
+    </div>
+    <p class="note">// If you need the first study under NDA before publishing, we can talk about that too.</p>
+
+    <div class="signature">BikeLab Studio Industrial Noir / Independent component-testing lab / Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · Trujillo, Peru · COORD_8.1159_S / 79.0299_W</div>
+</div>
+</body>
+</html>
