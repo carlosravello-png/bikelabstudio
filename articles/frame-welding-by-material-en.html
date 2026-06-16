@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bicycle Frame Welding by Material: What the Sources Say | BikeLab Studio</title>
+    <meta name="description"
+        content="What welding does to your frame depending on the material. Aluminum 6061 vs 7005 (loses temper, requires an oven), cromoly steel (TIG/fillet/lug), titanium (argon purge), carbon (cannot be welded). Plus how to confirm a crack, thermal distortion, and the four questions that separate the welder who knows from the one who improvises. A documented synthesis of 19 sources.">
+    <meta name="keywords"
+        content="weld bicycle frame, aluminum 6061 7005, HAZ heat affected zone, 4043 5356, titanium argon purge, carbon scarf repair, frame fatigue, how to choose a welder, BikeLab Studio">
+    <meta name="author" content="Carlos Ravello">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Bicycle Frame Welding by Material: What the Sources Say">
+    <meta property="og:description"
+        content="What heat does to each material —steel, aluminum, titanium, carbon— and what to ask before welding. A documented synthesis.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/svg/mat-00-mapa-en.svg">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html">
+    <meta property="og:site_name" content="BikeLab Studio">
+
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/solda-quadros-materiais-pt.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Google Scholar — Highwire Press -->
+    <meta name="citation_title" content="Bicycle Frame Welding by Material: A Documented Synthesis of Process, Alloys and Assessment Criteria">
+    <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+    <meta name="citation_author_institution" content="BikeLab Studio">
+    <meta name="citation_publication_date" content="2026/06/15">
+    <meta name="citation_journal_title" content="BikeLab Studio Technical Publications">
+    <meta name="citation_abstract_html_url" content="https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html">
+    <meta name="citation_language" content="en">
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Bicycle Frame Welding by Material: A Documented Synthesis">
+    <meta name="DC.creator" content="Carlos Eduardo Ravello Joo">
+    <meta name="DC.date" content="2026-06-15">
+    <meta name="DC.description" content="A documented synthesis of how frame materials (steel, aluminum, titanium, carbon) behave under welding: HAZ, alloys, filler, distortion and assessment criteria.">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.language" content="en">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ScholarlyArticle", "TechArticle"],
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Peru",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html" },
+      "headline": "Bicycle Frame Welding by Material: What the Sources Say",
+      "alternativeHeadline": "A Documented Synthesis of Process, Alloys and Assessment Criteria",
+      "about": [
+        { "@type": "Thing", "name": "Bicycle frame welding" },
+        { "@type": "Thing", "name": "Aluminum alloys 6061 and 7005" },
+        { "@type": "Thing", "name": "Heat-affected zone (HAZ)" }
+      ],
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "image": "https://www.bikelabstudio.com/bikelabpedia/svg/mat-00-mapa-en.svg",
+      "articleSection": "Materials and Structural Integrity",
+      "keywords": "frame welding, aluminum 6061 7005, HAZ, 4043 5356, argon purge, carbon repair, fatigue",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+        "name": "BikeLab Studio Technical Articles",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Technical Researcher · Founder, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "kg:/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com", "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ", "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262", "https://www.bikelabstudio.com", "https://zoovettravel.com"
+      ],
+      "description": "Independent researcher. Founder of BikeLab Studio, an evidence-oriented cycling engineering laboratory."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Dynamic Coherence Model (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en", "pt-BR"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.bikelabstudio.com/articles/scientific-noir-en.html" },
+        { "@type": "ListItem", "position": 3, "name": "Frame Welding by Material", "item": "https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can an aluminum frame be welded?", "acceptedAnswer": { "@type": "Answer", "text": "Physically yes, with TIG. What changes depending on the alloy is what happens afterward. The 6061 loses its temper in the heat-affected zone, and restoring it requires a full heat treatment of the frame in an oven; the 7005 is self-tempering in air and naturally recovers up to around 80% of its strength. That is why the technical question is not 'can it be welded?' but 'which alloy is it?'. The decision to repair and ride again belongs to the cyclist and their professional." } },
+        { "@type": "Question", "name": "How do I know if what I have is a crack or just the paint?", "acceptedAnswer": { "@type": "Answer", "text": "The standard method is dye penetrant inspection: you clean and degrease, apply a colored penetrant, remove the excess, and a developer draws out the discontinuity. Signs of a structural crack: it concentrates near joints, reappears after cleaning, and often bleeds a line of rust from inside." } },
+        { "@type": "Question", "name": "How do I know if the welder knows bicycle frames?", "acceptedAnswer": { "@type": "Answer", "text": "Four checks, not as a certification but as a filter: that they distinguish TIG from brazing depending on the material; that they use a coherent filler (4043 or 5356 on aluminum); that they purge with argon on titanium; and that they account for post-weld heat treatment on 6061. The promise that it will be 'as good as new' correlates with less competence, not more." } },
+        { "@type": "Question", "name": "Can carbon be welded?", "acceptedAnswer": { "@type": "Answer", "text": "No. Carbon fiber is a thermoset: it does not melt to be rejoined like a metal. The existing repair is by relamination (scarf) in a composites shop, not by welding. The literature reports recoveries of 70 to 100 percent of design strength with a well-made scarf." } },
+        { "@type": "Question", "name": "Why does a frame sometimes break next to the weld and not where the crack was?", "acceptedAnswer": { "@type": "Answer", "text": "Because of the heat-affected zone (HAZ): the band around the bead where the material altered its properties without melting. In aluminum 6061 that band stays soft if it is not heat-treated, and it is there —not in the bead— that the new failure usually appears." } }
+      ]
+    }
+  ]
+}
+</script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; background-color: #0a0a0a; color: #e0e0e0; line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background-color: #121212; padding: 40px; border: 1px solid #333; }
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+        h1 { font-size: 28px; color: #fff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+        h2 { font-size: 14px; color: #aaa; letter-spacing: 3px; margin-top: 50px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        h3 { font-size: 14px; color: #ddd; margin: 24px 0 8px; }
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+        a.inl { color: #fff; text-decoration: none; border-bottom: 1px solid #4fb8c8; }
+        a.inl:hover { color: #4fb8c8; }
+        .image-container { margin: 40px 0; border: 1px solid #333; background: #0a0a0a; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption { background-color: #0a0a0a; padding: 15px; font-size: 11px; color: #888; letter-spacing: 1px; border-top: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+        .data-highlight { color: #fff; font-weight: bold; }
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+        .conclusion-box { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 40px 0; }
+        .note-box { background:#0c0c0c; border-left:3px solid #4fb8c8; border-top:1px solid #222; border-right:1px solid #222; border-bottom:1px solid #222; padding: 20px 24px; margin: 30px 0; }
+        .ask-list { list-style:none; margin:18px 0; padding:0; }
+        .ask-list li { border:1px solid #2a2a2a; border-left:3px solid #4fb8c8; background:#0a0a0a; padding:14px 18px; margin-bottom:10px; color:#cfcfcf; font-size:13px; }
+        .ask-list li b { color:#fff; }
+        .references { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 50px 0; }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 13px; padding-left: 20px; text-indent: -20px; font-size: 12px; line-height: 1.6; color:#bbb; }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .breadcrumb { font-size: 11px; color: #666; margin: 10px 0; letter-spacing: 1px; }
+        .breadcrumb a { color: #888; text-decoration: none; border-bottom: 1px solid transparent; }
+        .breadcrumb a:hover { color: #fff; border-bottom-color: #666; }
+        :root { --bg:#0a0a0a; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; gap:5px; }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all .4s; }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .4s, visibility .4s; }
+        .nav-toggle:checked~.nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; }
+        .nav-overlay a:hover { color: var(--accent); }
+        .nav-bar .lang-switch { display:flex; gap:6px; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 14px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration:none; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .container { padding: 20px; padding-top:100px; } h1 { font-size: 22px; } table { font-size: 11px; } th, td { padding: 8px; } }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation menu">
+                <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index.html">HOME</a><a href="solda-quadros-materiais-pt.html">PT</a><a href="soldadura-cuadros-materiales-es.html">ES</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="scientific-noir-en.html">RESEARCH</a>
+            <a href="../bikelabpedia/frame-welding-cluster-en.html">BIKELAB-PEDIA · WELDING</a>
+            <a href="cracked-frame-what-to-do-en.html">GUIDE: CRACKED FRAME</a>
+            <a href="https://wa.me/51934391545?text=Hi%20Bikelab%2C%20a%20frame%20question%3A%20">CONTACT</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <a href="scientific-noir-en.html" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;margin-bottom:30px;border-bottom:1px solid #333;padding-bottom:4px;">← BACK TO RESEARCH</a>
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <div class="category">MATERIALS_AND_STRUCTURAL_INTEGRITY // DOCUMENTED_SYNTHESIS</div>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">HOME</a> / <a href="scientific-noir-en.html">RESEARCH</a> / <span>Frame welding by material</span>
+            </nav>
+            <h1>Bicycle frame welding, by material</h1>
+            <div class="subtitle">What the sources say: process, alloys and assessment criteria</div>
+            <div class="meta">
+                Author: Carlos Eduardo Ravello Joo // BikeLab Studio<br>
+                Documented synthesis · June 2026 · 19 sources
+            </div>
+        </div>
+
+        <div class="note-box">
+            <p style="margin:0;color:#bdbdbd;"><strong style="color:#fff;">A note before we begin.</strong> This document is a synthesis: it compiles, organizes and translates already-published sources —alloy standards, welding guides and the documented practice of framebuilders— so that a cyclist can understand what happens when their frame is welded. It is not primary metallurgical research: it measures nothing in a laboratory. Where a source does not document something, that is stated rather than filled in. <strong style="color:#fff;">The decision to repair a frame, or to ride it again, is not the subject of this text: it belongs to the cyclist and their professional.</strong></p>
+        </div>
+
+        <div class="conclusion-box">
+            <p style="margin-bottom:10px;color:#aaa;"><strong>DIRECT ANSWER</strong></p>
+            <p style="margin:0;">Each frame material responds differently to the heat of welding. <a class="inl" href="../bikelabpedia/aluminum-6061-vs-7005-en.html">Aluminum 6061</a> loses its temper in the heat-affected zone and requires a full heat treatment in an oven; the 7005 is self-tempering in air and recovers ~80% on its own. <a class="inl" href="../bikelabpedia/steel-cromoly-joints-en.html">Cromoly steel</a> is the most versatile (TIG, fillet brazing or lug). <a class="inl" href="../bikelabpedia/titanium-argon-purge-en.html">Titanium</a> requires an interior and exterior argon purge. <a class="inl" href="../bikelabpedia/carbon-scarf-repair-en.html">Carbon cannot be welded</a>: it is repaired by relamination in a composites shop. The useful question is not "can it be welded?" but <strong>"what material is it, and what does heat do to it?"</strong> —and, before that, confirming that the mark is a real crack and not the paint—.</p>
+        </div>
+
+        <!-- HERO DIAGRAM -->
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-00-mapa-en.svg" width="900" height="510"
+                alt="Map of what welding does to each frame material: 4130 steel, 6061/7005 aluminum, 3Al-2.5V titanium and carbon CFRP" loading="lazy">
+            <div class="image-caption">FIG_00 // Which technique and what trace welding leaves depending on the material — BikeLab Studio</div>
+        </div>
+
+        <h2>MODULE_01 // BEFORE_WELDING: REAL_CRACK_OR_PAINT?</h2>
+        <p>The first decision is not to weld, but to verify. In technical communities the recurring initial question is not "how do I fix it?" but "is this a crack or is it the paint?" [15]. Telling them apart matters because both mistakes have a cost: treating a cosmetic scratch as structural, or riding for months over a real crack believing it to be paint.</p>
+        <p>The standard non-destructive testing method for this is <strong>dye penetrant inspection</strong> (dye penetrant testing, PT): the area is cleaned and degreased, a colored or fluorescent penetrant is applied, the excess is removed, and a developer is applied that draws out by capillary action the liquid retained inside the discontinuity, outlining it sharply [16]. It is one of the most accessible inspection techniques —low-cost aerosol kits exist— and is used routinely in aircraft and frame maintenance. Signs that a mark is structural and not cosmetic: it concentrates near joints (head tube, bottom bracket shell, dropouts, factory beads), it reappears after cleaning and degreasing, and it often "bleeds" a line of rust or residue from inside. Confirming the crack says nothing about the safety of riding; it only separates a paint scare from real damage.</p>
+
+        <h2>MODULE_02 // THE_HEAT_AFFECTED_ZONE</h2>
+        <p>When a tube is welded, the metal does not change only at the bead. Around it there is a band —the <a class="inl" href="../bikelabpedia/heat-affected-zone-en.html">heat-affected zone</a> (HAZ)— where the material reached a temperature high enough to alter its properties without actually melting. It is in that band where the behavior of a joint is almost always decided. How much the HAZ weakens, and whether or not it recovers, depends on the material. That is the point everything else hangs from: it explains why a frame sometimes fails millimeters from the bead and not in it.</p>
+
+        <h2>MODULE_03 // ALUMINUM: 6061_OR_7005?</h2>
+        <p>Aluminum frames are made, for the most part, from two alloys, and they behave differently when welded. The <strong>6061-T6</strong> gains its properties through a heat treatment (the "T6" temper). Welding it destroys that temper in the HAZ, and restoring it requires a full heat treatment of the frame: high-temperature solution treatment, quenching by rapid cooling, and aging. It is not something done "in passing" with the torch; it requires an oven [1][2]. The <strong>7005-T6</strong> is self-tempering in air: after welding, the HAZ naturally recovers, over time, up to around 80% of the base metal's strength, and can reach 100% if artificially aged [1][3].</p>
+
+        <table>
+            <thead><tr><th>Alloy</th><th>Tensile (MPa)</th><th>Yield strength (MPa)</th><th>After welding</th></tr></thead>
+            <tbody>
+                <tr><td>6061-T6</td><td class="data-highlight">≈310</td><td class="data-highlight">≈275</td><td>loses temper in the HAZ · requires an oven (full T6)</td></tr>
+                <tr><td>7005-T6</td><td class="data-highlight">≈350</td><td class="data-highlight">≈290</td><td>self-tempering in air · recovers ~80% on its own</td></tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [1] [2] [3]</div>
+
+        <p>The difference in figures between the two, it should be said, rarely decides how a frame behaves in use: ordinary loads stay far below those limits [1]. What really changes, for whoever is going to weld, is the process: the 6061 demands an oven afterward; the 7005 recovers on its own. Hence the useful question is not "can it be welded?" but "which alloy is it?".</p>
+
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-01-6061-vs-7005-en.svg" width="900" height="510"
+                alt="Aluminum comparison 6061-T6 (310/275 MPa, requires an oven) versus 7005-T6 (350/290 MPa, self-tempering in air)" loading="lazy">
+            <div class="image-caption">FIG_01 // 6061 requires an oven; 7005 recovers ~80% in air — BikeLab Studio</div>
+        </div>
+
+        <h2>MODULE_04 // THE_FILLER_METAL: 4043_VS_5356</h2>
+        <p>To weld aluminum one of two fillers is used, and the choice is not trivial. The <strong>4043</strong> is intended for the 6xxx series alloys; it melts at a lower temperature, flows and "wets" better, is less prone to cracking with the 6061 and leaves a darker bead, but it does not anodize well. The <strong>5356</strong> is stronger, leaves a lighter, brighter bead, and anodizes correctly; it is the most-used wire in MIG. A practical shop rule sums up the strength difference: it takes about <strong>three passes of 4043 to match in shear a single pass of 5356</strong> [4][5].</p>
+
+        <table>
+            <thead><tr><th>Filler</th><th>Intended for</th><th>Bead / finish</th><th>Strength</th></tr></thead>
+            <tbody>
+                <tr><td>4043</td><td>6xxx series (6061)</td><td>darker · does not anodize well</td><td>lower (≈3 passes = 1 of 5356)</td></tr>
+                <tr><td>5356</td><td>general use · MIG</td><td>lighter · anodizes correctly</td><td class="data-highlight">higher</td></tr>
+            </tbody>
+        </table>
+        <div class="source">Source: [4] [5]</div>
+
+        <h2>MODULE_05 // CROMOLY_4130_STEEL: THREE_WAYS_TO_JOIN</h2>
+        <p>Steel is the most versatile material to join, and there are three documented paths. <strong>TIG</strong> melts the tubes themselves to fuse them (in steel, above about 1450 °C). <strong>Fillet brazing</strong> joins them with a bronze or silver filler that melts at a lower temperature, without melting the tube: it alters the structure less, leaves a smooth transition, weighs a little more, and is slower and more expensive. <strong>Lugged</strong> uses a sleeve (lug) at the joint, with the filler entering by capillary action. In practice, about <strong>99%</strong> of steel frames built since ~1992 are TIG; lug and fillet are reserved for the high end and the artisanal [6][7]. A documented warning: the fact that steel is the most forgiving does not mean that any shop will do; on thin branded tubing or on lugged joints, the excess heat of someone who welds heavy structures burns through the thin wall or melts the adjacent bronze.</p>
+
+        <h2>MODULE_06 // TITANIUM_Ti-3Al-2.5V: THE_PURGE_DETAIL</h2>
+        <p>Frame titanium (grade 9, with 3% aluminum and 2.5% vanadium) is welded with TIG, but with a demand that sets it apart from the rest: you must <strong>purge with argon</strong> the inside and the outside of the tube during welding. Hot titanium absorbs oxygen avidly, and that oxygen embrittles the bead. There is a direct visual signal: a well-protected bead comes out straw-colored or silver; if it turns bluish, gray or whitish, there was contamination from a lack of inert gas [8][9]. This explains why titanium is not worked in just any shop: it requires the purging equipment and the skill to achieve it.</p>
+
+        <h2>MODULE_07 // CARBON_CFRP: IT_CANNOT_BE_WELDED</h2>
+        <p>Carbon fiber does not fit this framework, and it is worth saying clearly: it is a <strong>thermoset</strong> material, it does not melt to be rejoined like a metal. What exists is a different repair, by relamination, performed by a shop specialized in composites, not by a welder: the damaged area is tapered into a cone shape (scarf), new layers of fiber are applied (prepreg or wet layup) and it is cured with heat and vacuum (on the order of 120 °C for prepreg). The composites repair literature reports recoveries of between <strong>70% and 100%</strong> of design strength with a well-made scarf [10][11]. The prior diagnosis of damage in carbon is handled separately, in <a class="inl" href="danos-cuadro-carbono.html">structural damage in carbon</a>.</p>
+
+        <h2>MODULE_08 // THERMAL_DISTORTION</h2>
+        <p>There is an effect rarely named that compromises repairs even with a flawless bead: <strong>cooling shrinkage</strong>. As it solidifies, the metal of the bead contracts and pulls the joined tubes, inducing angular and linear misalignment at the joint [17]. In a frame, millimeters of deviation in a chainstay translate into a wheel out of center, a disc that rubs permanently, or a drivetrain that will not tune. That is why serious frame building and repair is done on jigs and an alignment table (frame jig), which fix the geometry during the thermal cycle and allow checking and correcting afterward [18]. It is one of the technical reasons why welding a frame is not the same as welding any structure, and why the real cost includes a step —alignment— that the "bargain" quote usually omits.</p>
+
+        <h2>MODULE_09 // HOW_TO_ASSESS_THE_WELDER</h2>
+        <p>The evidence from cycling communities is consistent across all three languages: the biggest information gap is not the metallurgy, but <strong>how to know if whoever is going to weld understands frames</strong> [19]. The usual answer ("find yourself a good TIG welder") gives no operative criterion. From the documented practice of framebuilders, four checks can be formulated, not as a certification but as a filter:</p>
+        <ul class="ask-list">
+            <li><b>1 · Technique.</b> That they distinguish TIG from brazing and justify which corresponds to the material —fusion of the tube versus joining by filler without melting it— [6][8].</li>
+            <li><b>2 · Filler.</b> For aluminum, 4043 or 5356 depending on the case; mentioning the difference is an indicator of judgment. Resorting to generic low-melting-point rods for a structural joint is a warning sign [4][5].</li>
+            <li><b>3 · Purge.</b> Essential on titanium; its absence produces embrittlement of the bead [8][9].</li>
+            <li><b>4 · Heat treatment.</b> For 6061, omitting it leaves the HAZ unrestored; denying its necessity reveals ignorance of the material [1][2].</li>
+        </ul>
+        <p>A counter-signal is worth adding: the promise that the frame will be <strong>"as good as new"</strong> correlates, in framebuilders' experience, with less competence, not more —whoever knows the material explains limits, not perfection—. And the aesthetics of the bead ("stack of coins") tell nothing about root penetration or contamination [8]. The pocket version of this filter is in the <a class="inl" href="../bikelabpedia/questions-for-the-welder-en.html">what to ask the welder</a> reference card.</p>
+
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-09-preguntas-soldador-en.svg" width="900" height="510"
+                alt="The four key questions for the welder: technique, filler, argon purge and heat treatment" loading="lazy">
+            <div class="image-caption">FIG_09 // Four questions to understand what the welder does to your frame — BikeLab Studio</div>
+        </div>
+
+        <h2>MODULE_10 // FATIGUE: THE_NUANCE_THAT_MATTERS_MORE_THAN_THE_MATERIAL</h2>
+        <p>There is a property that is usually cited only halfway. Steel and titanium have a <a class="inl" href="../bikelabpedia/fatigue-by-material-en.html">fatigue limit</a>: below a certain stress level, cycles do not accumulate damage. Aluminum and carbon do not have one: in theory, every cycle, however small, brings the material closer to failure [12][13]. But that fact, on its own, is misleading. In real fatigue tests of complete frames (the EFBe bench is the reference), quality aluminum and carbon frames <strong>outperformed</strong> several well-built steel ones [14]. Why? Because when you design with a material that has no fatigue limit, you over-size to compensate. The documented lesson is that, in a finished frame, design and execution weigh more than the material's label. The detail of the mechanism is covered in the reference card <a class="inl" href="../bikelabpedia/fatigue-by-material-en.html">fatigue by material</a>.</p>
+
+        <h2>CONCLUSION // HOW_TO_USE_ALL_THIS</h2>
+        <div class="conclusion-box">
+            <p>Nothing above says whether a frame should be repaired: that belongs to the cyclist and their professional. What it gives is the language for that conversation. If the frame is aluminum, you will know why to ask about the alloy, the filler and the heat treatment. If it is titanium, why to ask about the argon purge. If it is carbon, why to look for a composites shop and not a welder. And if it is steel, that you have the most forgiving of the four materials —without that meaning that any hand will do—.</p>
+            <p style="margin-top:18px;">The plain-language version of all this, written for someone who has just broken their frame, is in the guide <a class="inl" href="cracked-frame-what-to-do-en.html">"Your frame cracked: what to do and what to say before welding it"</a>. The individual reference cards for each material and technique are in the cluster <a class="inl" href="../bikelabpedia/frame-welding-cluster-en.html">The Frame and the Weld</a> of the BikeLab-pedia.</p>
+        </div>
+
+        <!-- CLUSTER LINKS -->
+        <div style="margin: 50px 0; padding: 30px; background: #080808; border-left: 3px solid #4fb8c8; border-top:1px solid #222; border-right:1px solid #222; border-bottom:1px solid #222;">
+            <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#555; letter-spacing:2px; margin-bottom:15px; text-transform:uppercase;">[ CLUSTER_DATA_LINKS ] // THE FRAME AND THE WELD</p>
+            <h3 style="font-size:1.1rem; color:#fff; margin-bottom:18px; font-weight:400;">Reference cards for this report:</h3>
+            <ul style="list-style:none; margin:0; padding:0;">
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/aluminum-6061-vs-7005-en.html" style="color:#e0e0e0; text-decoration:none;">→ Aluminum 6061 vs 7005: what changes when welding</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/questions-for-the-welder-en.html" style="color:#e0e0e0; text-decoration:none;">→ What to ask the welder (the 4 questions)</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/titanium-argon-purge-en.html" style="color:#e0e0e0; text-decoration:none;">→ Titanium and the argon purge</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/carbon-scarf-repair-en.html" style="color:#e0e0e0; text-decoration:none;">→ Carbon: why it cannot be welded</a></li>
+                <li><a href="../bikelabpedia/frame-welding-cluster-en.html" style="color:#4fb8c8; text-decoration:none;">→ See the full cluster (9 cards) →</a></li>
+            </ul>
+        </div>
+
+        <h2>FREQUENTLY_ASKED_QUESTIONS</h2>
+        <h3>Can an aluminum frame be welded?</h3>
+        <p>Physically yes, with TIG. What changes depending on the alloy is what happens afterward: the 6061 loses its temper in the HAZ and restoring it requires an oven; the 7005 is self-tempering and recovers ~80% on its own. The technical question is not "can it be welded?" but "which alloy is it?". The decision to repair and ride is the cyclist's and their professional's.</p>
+        <h3>How do I know if what I have is a crack or just the paint?</h3>
+        <p>The standard method is dye penetrant inspection. Signs of a real crack: it concentrates near joints, reappears after cleaning and degreasing, and often bleeds a line of rust from inside.</p>
+        <h3>How do I know if the welder knows bicycle frames?</h3>
+        <p>Four checks as a filter: that they distinguish TIG from brazing depending on the material; coherent filler (4043/5356); argon purge on titanium; post-weld heat treatment on 6061. The promise of "as good as new" correlates with less competence.</p>
+        <h3>Can carbon be welded?</h3>
+        <p>No. It is a thermoset: it does not melt to be rejoined. It is repaired by relamination (scarf) in a composites shop, with documented recoveries of 70 to 100% of design strength.</p>
+        <h3>Why did the frame break next to the weld and not where it was?</h3>
+        <p>Because of the heat-affected zone (HAZ): the band around the bead where the material altered its properties without melting. In 6061 it stays soft if it is not heat-treated, and it is there that the new failure usually appears.</p>
+
+        <!-- REFERENCES -->
+        <div class="references">
+            <h2>SOURCES</h2>
+            <div class="ref-item">[1] Aluminium-guide.com — <em>Bicycle frame aluminium: 6061 and 7005 alloys</em>.</div>
+            <div class="ref-item">[2] Technical framebuilder forums (BMXmuseum / Framebuilders) — 6061-T6 vs 7005 difference and post-weld treatment.</div>
+            <div class="ref-item">[3] 7005 alloy data — HAZ recovery by natural aging.</div>
+            <div class="ref-item">[4] Hobart Brothers — <em>Aluminum Filler Metal Guidelines (4043 vs 5356)</em>.</div>
+            <div class="ref-item">[5] The Fabricator — <em>Aluminum Etc.: 4043 for GTAW and 5356 for GMAW</em>.</div>
+            <div class="ref-item">[6] Steelframebicycle.com — <em>TIG vs Fillet/Silver Brazed: pros and cons</em>.</div>
+            <div class="ref-item">[7] Bike Forums / Framebuilders — steel joining practice (TIG, fillet, lug).</div>
+            <div class="ref-item">[8] Welding Tips &amp; Tricks — <em>TIG Welding a Titanium Bike Frame</em> (purge, bead color).</div>
+            <div class="ref-item">[9] No. 22 Bicycle Company / Guru Cycles — interior and exterior argon purge.</div>
+            <div class="ref-item">[10] Carbon Bike Doctor / TW Carbon — carbon frame repair by scarf and relamination.</div>
+            <div class="ref-item">[11] Composites repair literature — strength recovery with a scarf joint (70–100%).</div>
+            <div class="ref-item">[12] Bike Gremlin — frame materials and fatigue limit.</div>
+            <div class="ref-item">[13] Calfee Design — <em>Technical White Paper: Materials</em> (fatigue behavior).</div>
+            <div class="ref-item">[14] Sheldon Brown / Rinard — <em>EFBe Frame Fatigue Test</em> (real results by frame).</div>
+            <div class="ref-item">[15] r/bikewrench, ForoMTB, Pedal.com.br — recurring "crack or paint?" threads as a first query.</div>
+            <div class="ref-item">[16] ASNT / ASTM E1417 — <em>Liquid Penetrant Testing (PT)</em>: capillary principle, penetrant and developer.</div>
+            <div class="ref-item">[17] The Welding Institute (TWI) / Lincoln Electric — <em>Distortion in welding: causes and control</em>.</div>
+            <div class="ref-item">[18] Framebuilding (Anvil, Bringheli, Paterek Manual) — welding jig and alignment table.</div>
+            <div class="ref-item">[19] Synthesis of communities (r/bikewrench, r/MTB, ForoMTB, Pedal.com.br) — the most-cited gap: how to validate the welder's competence.</div>
+        </div>
+
+        <div class="footer">
+            <div style="margin-bottom: 14px;">
+                <strong>BikeLab Studio</strong> · Trujillo, La Libertad, Peru<br>
+                Synthesis document drawn from published sources, not primary metallurgical research. It does not constitute a safety certification or a repair recommendation.
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #333;">
+                Author: Carlos Eduardo Ravello Joo · Founder, BikeLab Studio<br>
+                © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.nav-overlay a').forEach(a => {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        });
+    </script>
+</body>
+
+</html>

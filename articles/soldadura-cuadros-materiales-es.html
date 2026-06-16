@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soldadura de Cuadros de Bicicleta por Material: Lo que Dicen las Fuentes | BikeLab Studio</title>
+    <meta name="description"
+        content="Qué le hace la soldadura a tu cuadro según el material. Aluminio 6061 vs 7005 (pierde temple, exige horno), acero cromoly (TIG/fillet/lug), titanio (purga de argón), carbono (no se suelda). Más cómo confirmar una fisura, la distorsión térmica y las cuatro preguntas que separan al soldador que sabe del que improvisa. Síntesis documentada con 19 fuentes.">
+    <meta name="keywords"
+        content="soldar cuadro bicicleta, aluminio 6061 7005, ZAC HAZ, 4043 5356, purga argón titanio, reparación carbono scarf, fatiga cuadro, cómo elegir soldador, BikeLab Studio">
+    <meta name="author" content="Carlos Ravello">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Soldadura de Cuadros de Bicicleta por Material: Lo que Dicen las Fuentes">
+    <meta property="og:description"
+        content="Qué le hace el calor a cada material —acero, aluminio, titanio, carbono— y qué preguntar antes de soldar. Síntesis documentada.">
+    <meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/svg/mat-00-mapa-es.svg">
+    <meta property="og:url" content="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+    <meta property="og:site_name" content="BikeLab Studio">
+
+    <link rel="canonical" href="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+    <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/frame-welding-by-material-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/solda-quadros-materiais-pt.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Google Scholar — Highwire Press -->
+    <meta name="citation_title" content="Soldadura de Cuadros de Bicicleta por Material: Síntesis Documentada de Proceso, Aleaciones y Criterios de Evaluación">
+    <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+    <meta name="citation_author_institution" content="BikeLab Studio">
+    <meta name="citation_publication_date" content="2026/06/15">
+    <meta name="citation_journal_title" content="Publicaciones Técnicas BikeLab Studio">
+    <meta name="citation_abstract_html_url" content="https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html">
+    <meta name="citation_language" content="es">
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Soldadura de Cuadros de Bicicleta por Material: Síntesis Documentada">
+    <meta name="DC.creator" content="Carlos Eduardo Ravello Joo">
+    <meta name="DC.date" content="2026-06-15">
+    <meta name="DC.description" content="Síntesis documentada del comportamiento de los materiales de cuadro (acero, aluminio, titanio, carbono) ante la soldadura: ZAC, aleaciones, aporte, distorsión y criterios de evaluación.">
+    <meta name="DC.publisher" content="BikeLab Studio">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.language" content="es">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ScholarlyArticle", "TechArticle"],
+      "proficiencyLevel": "Expert",
+      "locationCreated": "Trujillo, Perú",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html" },
+      "headline": "Soldadura de Cuadros de Bicicleta por Material: Lo que Dicen las Fuentes",
+      "alternativeHeadline": "Síntesis Documentada de Proceso, Aleaciones y Criterios de Evaluación",
+      "about": [
+        { "@type": "Thing", "name": "Soldadura de cuadros de bicicleta" },
+        { "@type": "Thing", "name": "Aleaciones de aluminio 6061 y 7005" },
+        { "@type": "Thing", "name": "Zona afectada por el calor (ZAC)" }
+      ],
+      "author": { "@id": "https://carlosravello.com/#person" },
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "creator": { "@id": "https://carlosravello.com/#person" },
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "image": "https://www.bikelabstudio.com/bikelabpedia/svg/mat-00-mapa-es.svg",
+      "articleSection": "Materiales e Integridad Estructural",
+      "keywords": "soldadura cuadros, aluminio 6061 7005, ZAC, 4043 5356, purga argón, reparación carbono, fatiga",
+      "inLanguage": "es-PE",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+        "name": "Artículos Técnicos BikeLab Studio",
+        "url": "https://www.bikelabstudio.com/"
+      },
+      "isBasedOn": { "@id": "https://carlosravello.com/#mcd-framework" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador Técnico · Fundador, BikeLab Studio",
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-5631-7436" },
+        { "@type": "PropertyValue", "propertyID": "Google Knowledge Graph ID", "value": "kg:/g/11zb6pmf10", "url": "https://www.google.com/search?kgmid=/g/11zb6pmf10" }
+      ],
+      "sameAs": [
+        "https://carlosravello.com", "https://orcid.org/0009-0007-5631-7436",
+        "https://scholar.google.com/citations?user=AxlI1dgAAAAJ", "https://www.wikidata.org/wiki/Q139714842",
+        "https://www.linkedin.com/in/carlos-ravello-joo-3a1047262", "https://www.bikelabstudio.com", "https://zoovettravel.com"
+      ],
+      "description": "Investigador independiente. Fundador de BikeLab Studio, laboratorio de ingeniería ciclista orientada a evidencia."
+    },
+    {
+      "@type": ["CreativeWork", "ResearchProject"],
+      "@id": "https://carlosravello.com/#mcd-framework",
+      "name": "Modelo de Coherencia Dinámica (MCD)",
+      "url": "https://carlosravello.com",
+      "creator": { "@id": "https://carlosravello.com/#person" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "founder": { "@id": "https://carlosravello.com/#person" },
+      "logo": { "@type": "ImageObject", "url": "https://www.bikelabstudio.com/logo-noir.png" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com",
+      "publisher": { "@id": "https://www.bikelabstudio.com/#business" },
+      "inLanguage": ["es", "en", "pt-BR"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.bikelabstudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://www.bikelabstudio.com/articles/scientific-noir-es.html" },
+        { "@type": "ListItem", "position": 3, "name": "Soldadura de Cuadros por Material", "item": "https://www.bikelabstudio.com/articles/soldadura-cuadros-materiales-es.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Se puede soldar un cuadro de aluminio?", "acceptedAnswer": { "@type": "Answer", "text": "Físicamente sí, con TIG. Lo que cambia según la aleación es qué pasa después. El 6061 pierde su temple en la zona afectada por el calor y restituirlo exige tratamiento térmico completo del cuadro en horno; el 7005 es autotemplante al aire y recupera de forma natural hasta cerca del 80% de su resistencia. Por eso la pregunta técnica no es '¿se suelda?' sino '¿qué aleación es?'. La decisión de reparar y volver a rodar corresponde al ciclista y a su profesional." } },
+        { "@type": "Question", "name": "¿Cómo sé si lo que tengo es una grieta o solo la pintura?", "acceptedAnswer": { "@type": "Answer", "text": "El método estándar es la inspección por líquidos penetrantes: se limpia y desengrasa, se aplica un penetrante coloreado, se retira el sobrante y un revelador dibuja la discontinuidad. Señales de fisura estructural: se concentra cerca de uniones, reaparece tras limpiar y a menudo sangra una línea de óxido desde el interior." } },
+        { "@type": "Question", "name": "¿Cómo sé si el soldador sabe de cuadros de bicicleta?", "acceptedAnswer": { "@type": "Answer", "text": "Cuatro verificaciones, no como certificación sino como filtro: que distinga TIG de brazing según el material; que use aporte coherente (4043 o 5356 en aluminio); que purgue con argón en titanio; y que contemple tratamiento térmico posterior en 6061. La promesa de que quedará 'como nuevo' correlaciona con menor competencia, no mayor." } },
+        { "@type": "Question", "name": "¿El carbono se puede soldar?", "acceptedAnswer": { "@type": "Answer", "text": "No. La fibra de carbono es termoestable: no se funde para volver a unirla como un metal. La reparación existente es por relaminado (scarf) en un taller de composites, no por soldadura. La literatura reporta recuperaciones del 70 al 100 por ciento de la resistencia de diseño con un scarf bien hecho." } },
+        { "@type": "Question", "name": "¿Por qué un cuadro a veces se rompe al lado de la soldadura y no donde estaba la grieta?", "acceptedAnswer": { "@type": "Answer", "text": "Por la zona afectada por el calor (ZAC): la franja alrededor del cordón donde el material alteró sus propiedades sin fundirse. En aluminio 6061 esa franja queda blanda si no se trata térmicamente, y es ahí —no en el cordón— donde suele aparecer la nueva falla." } }
+      ]
+    }
+  ]
+}
+</script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; background-color: #0a0a0a; color: #e0e0e0; line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background-color: #121212; padding: 40px; border: 1px solid #333; }
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+        h1 { font-size: 28px; color: #fff; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.3; }
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+        h2 { font-size: 14px; color: #aaa; letter-spacing: 3px; margin-top: 50px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        h3 { font-size: 14px; color: #ddd; margin: 24px 0 8px; }
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+        a.inl { color: #fff; text-decoration: none; border-bottom: 1px solid #4fb8c8; }
+        a.inl:hover { color: #4fb8c8; }
+        .image-container { margin: 40px 0; border: 1px solid #333; background: #0a0a0a; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption { background-color: #0a0a0a; padding: 15px; font-size: 11px; color: #888; letter-spacing: 1px; border-top: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+        .data-highlight { color: #fff; font-weight: bold; }
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+        .conclusion-box { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 40px 0; }
+        .note-box { background:#0c0c0c; border-left:3px solid #4fb8c8; border-top:1px solid #222; border-right:1px solid #222; border-bottom:1px solid #222; padding: 20px 24px; margin: 30px 0; }
+        .ask-list { list-style:none; margin:18px 0; padding:0; }
+        .ask-list li { border:1px solid #2a2a2a; border-left:3px solid #4fb8c8; background:#0a0a0a; padding:14px 18px; margin-bottom:10px; color:#cfcfcf; font-size:13px; }
+        .ask-list li b { color:#fff; }
+        .references { background-color: #0a0a0a; border: 1px solid #444; padding: 30px; margin: 50px 0; }
+        .references h2 { margin-top: 0; }
+        .ref-item { margin-bottom: 13px; padding-left: 20px; text-indent: -20px; font-size: 12px; line-height: 1.6; color:#bbb; }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .breadcrumb { font-size: 11px; color: #666; margin: 10px 0; letter-spacing: 1px; }
+        .breadcrumb a { color: #888; text-decoration: none; border-bottom: 1px solid transparent; }
+        .breadcrumb a:hover { color: #fff; border-bottom-color: #666; }
+        :root { --bg:#0a0a0a; --accent:#444; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; gap:5px; }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all .4s; }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked~.nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .4s, visibility .4s; }
+        .nav-toggle:checked~.nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; border-bottom: 1px solid #151515; }
+        .nav-overlay a:hover { color: var(--accent); }
+        .nav-bar .lang-switch { display:flex; gap:6px; }
+        .nav-bar .lang-switch a { font-family: var(--mono); font-size: 0.7rem; color: var(--text); padding: 10px 14px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); text-decoration:none; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .container { padding: 20px; padding-top:100px; } h1 { font-size: 22px; } table { font-size: 11px; } th, td { padding: 8px; } }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENÚ</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menú de navegación">
+                <span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index.html">INICIO</a><a href="solda-quadros-materiais-pt.html">PT</a><a href="frame-welding-by-material-en.html">EN</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav>
+            <a href="../index.html">INICIO</a>
+            <a href="scientific-noir-es.html">INVESTIGACIÓN</a>
+            <a href="../bikelabpedia/cuadro-soldadura-cluster-es.html">BIKELAB-PEDIA · SOLDADURA</a>
+            <a href="cuadro-roto-que-hacer-es.html">GUÍA: CUADRO ROTO</a>
+            <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20una%20duda%20de%20cuadro%3A%20">CONTACTO</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <a href="scientific-noir-es.html" style="display:inline-block;font-size:11px;color:#666;text-decoration:none;letter-spacing:2px;margin-bottom:30px;border-bottom:1px solid #333;padding-bottom:4px;">← VOLVER A INVESTIGACIÓN</a>
+        <div class="header">
+            <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE</div>
+            <div class="category">MATERIALES_E_INTEGRIDAD_ESTRUCTURAL // SÍNTESIS_DOCUMENTADA</div>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">INICIO</a> / <a href="scientific-noir-es.html">INVESTIGACIÓN</a> / <span>Soldadura de cuadros por material</span>
+            </nav>
+            <h1>Soldadura de cuadros de bicicleta, por material</h1>
+            <div class="subtitle">Lo que dicen las fuentes: proceso, aleaciones y criterios de evaluación</div>
+            <div class="meta">
+                Autor: Carlos Eduardo Ravello Joo // BikeLab Studio<br>
+                Síntesis documentada · Junio 2026 · 19 fuentes
+            </div>
+        </div>
+
+        <div class="note-box">
+            <p style="margin:0;color:#bdbdbd;"><strong style="color:#fff;">Una nota antes de empezar.</strong> Este documento es una síntesis: compila, ordena y traduce fuentes ya publicadas —normas de aleaciones, guías de soldadura y la práctica documentada de constructores de cuadros— para que un ciclista entienda qué ocurre cuando se suelda su cuadro. No es investigación metalúrgica primaria: no mide nada en laboratorio. Donde una fuente no documenta algo, se dice en vez de rellenarlo. <strong style="color:#fff;">La decisión de reparar un cuadro, o de volver a rodarlo, no es objeto de este texto: corresponde al ciclista y a su profesional.</strong></p>
+        </div>
+
+        <div class="conclusion-box">
+            <p style="margin-bottom:10px;color:#aaa;"><strong>RESPUESTA DIRECTA</strong></p>
+            <p style="margin:0;">Cada material de cuadro responde distinto al calor de la soldadura. El <a class="inl" href="../bikelabpedia/aluminio-6061-vs-7005-es.html">aluminio 6061</a> pierde su temple en la zona afectada por el calor y exige tratamiento térmico completo en horno; el 7005 es autotemplante al aire y recupera ~80% solo. El <a class="inl" href="../bikelabpedia/acero-cromoly-uniones-es.html">acero cromoly</a> es el más versátil (TIG, fillet brazing o lug). El <a class="inl" href="../bikelabpedia/titanio-purga-argon-es.html">titanio</a> exige purga de argón interior y exterior. El <a class="inl" href="../bikelabpedia/carbono-reparacion-scarf-es.html">carbono no se suelda</a>: se repara por relaminado en un taller de composites. La pregunta útil no es "¿se suelda?" sino <strong>"¿qué material es, y qué le hace el calor?"</strong> —y, antes de eso, confirmar que la marca es una grieta real y no la pintura—.</p>
+        </div>
+
+        <!-- HERO DIAGRAM -->
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-00-mapa-es.svg" width="900" height="510"
+                alt="Mapa de qué le hace la soldadura a cada material de cuadro: acero 4130, aluminio 6061/7005, titanio 3Al-2.5V y carbono CFRP" loading="lazy">
+            <div class="image-caption">FIG_00 // Qué técnica y qué huella deja la soldadura según el material — BikeLab Studio</div>
+        </div>
+
+        <h2>MÓDULO_01 // ANTES_DE_SOLDAR: ¿FISURA_REAL_O_PINTURA?</h2>
+        <p>La primera decisión no es soldar, sino verificar. En las comunidades técnicas la consulta inicial recurrente no es "¿cómo lo arreglo?" sino "¿esto es una grieta o es la pintura?" [15]. Distinguirlo importa porque ambos errores se pagan: tratar como estructural un rayón cosmético, o rodar meses sobre una fisura real creyéndola pintura.</p>
+        <p>El método estándar de ensayo no destructivo para esto es la <strong>inspección por líquidos penetrantes</strong> (dye penetrant testing, PT): se limpia y desengrasa la zona, se aplica un penetrante coloreado o fluorescente, se retira el sobrante y se aplica un revelador que extrae por capilaridad el líquido retenido dentro de la discontinuidad, dibujándola con nitidez [16]. Es una de las técnicas de inspección más accesibles —existen kits de aerosol de bajo costo— y se usa de forma rutinaria en mantenimiento aeronáutico y de bastidores. Señales de que una marca es estructural y no cosmética: se concentra cerca de uniones (tubo de dirección, caja de pedalier, punteras, cordones de fábrica), reaparece tras limpiar y desengrasar, y a menudo "sangra" una línea de óxido o residuo desde el interior. Confirmar la fisura no dice nada sobre la seguridad de rodar; solo separa el susto de pintura del daño real.</p>
+
+        <h2>MÓDULO_02 // LA_ZONA_AFECTADA_POR_EL_CALOR</h2>
+        <p>Cuando se suelda un tubo, el metal no cambia solo en el cordón. Alrededor hay una franja —la <a class="inl" href="../bikelabpedia/zona-afectada-calor-es.html">zona afectada por el calor</a> (ZAC; en inglés HAZ)— donde el material llegó a temperatura suficiente para alterar sus propiedades sin llegar a fundirse. En esa franja es donde casi siempre se juega el comportamiento de una unión. Cuánto se debilita la ZAC, y si se recupera o no, depende del material. Ese es el punto del que cuelga todo lo demás: explica por qué un cuadro a veces falla a milímetros del cordón y no en él.</p>
+
+        <h2>MÓDULO_03 // ALUMINIO: ¿6061_O_7005?</h2>
+        <p>Los cuadros de aluminio se hacen, mayoritariamente, en dos aleaciones, y se comportan de forma distinta al soldar. El <strong>6061-T6</strong> gana sus propiedades con un tratamiento térmico (el temple "T6"). Soldarlo destruye ese temple en la ZAC, y restituirlo exige un tratamiento térmico completo del cuadro: solubilizado a alta temperatura, temple por enfriamiento rápido y envejecido. No es algo que se haga "de paso" con el soplete; requiere horno [1][2]. El <strong>7005-T6</strong> es autotemplante al aire: tras soldar, la ZAC recupera de forma natural, con el tiempo, hasta cerca del 80% de la resistencia del metal base, y puede llegar al 100% si se envejece artificialmente [1][3].</p>
+
+        <table>
+            <thead><tr><th>Aleación</th><th>Tracción (MPa)</th><th>Límite elástico (MPa)</th><th>Tras soldar</th></tr></thead>
+            <tbody>
+                <tr><td>6061-T6</td><td class="data-highlight">≈310</td><td class="data-highlight">≈275</td><td>pierde temple en la ZAC · exige horno (T6 completo)</td></tr>
+                <tr><td>7005-T6</td><td class="data-highlight">≈350</td><td class="data-highlight">≈290</td><td>autotemplante al aire · recupera ~80% solo</td></tr>
+            </tbody>
+        </table>
+        <div class="source">Fuente: [1] [2] [3]</div>
+
+        <p>La diferencia de cifras entre ambas, conviene decirlo, rara vez es la que decide el comportamiento de un cuadro en uso: las cargas habituales quedan lejos de esos límites [1]. Lo que cambia de verdad, para quien va a soldar, es el proceso: el 6061 pide horno después; el 7005 se recupera solo. De ahí que la pregunta útil no sea "¿se suelda?" sino "¿qué aleación es?".</p>
+
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-01-6061-vs-7005-es.svg" width="900" height="510"
+                alt="Comparativa aluminio 6061-T6 (310/275 MPa, exige horno) frente a 7005-T6 (350/290 MPa, autotemplante al aire)" loading="lazy">
+            <div class="image-caption">FIG_01 // 6061 exige horno; 7005 recupera ~80% al aire — BikeLab Studio</div>
+        </div>
+
+        <h2>MÓDULO_04 // EL_MATERIAL_DE_APORTE: 4043_VS_5356</h2>
+        <p>Para soldar aluminio se usa uno de dos aportes, y la elección no es trivial. El <strong>4043</strong> está pensado para las aleaciones de la serie 6xxx; funde a menor temperatura, fluye y "moja" mejor, es menos propenso a la fisuración con el 6061 y deja un cordón más oscuro, pero no anodiza bien. El <strong>5356</strong> es más resistente, deja un cordón más claro y brillante, y anodiza correctamente; es el alambre más usado en MIG. Una regla práctica de taller resume la diferencia de resistencia: hacen falta unas <strong>tres pasadas de 4043 para igualar al corte una sola de 5356</strong> [4][5].</p>
+
+        <table>
+            <thead><tr><th>Aporte</th><th>Pensado para</th><th>Cordón / acabado</th><th>Resistencia</th></tr></thead>
+            <tbody>
+                <tr><td>4043</td><td>serie 6xxx (6061)</td><td>más oscuro · no anodiza bien</td><td>menor (≈3 pasadas = 1 de 5356)</td></tr>
+                <tr><td>5356</td><td>uso general · MIG</td><td>más claro · anodiza correctamente</td><td class="data-highlight">mayor</td></tr>
+            </tbody>
+        </table>
+        <div class="source">Fuente: [4] [5]</div>
+
+        <h2>MÓDULO_05 // ACERO_CROMOLY_4130: TRES_FORMAS_DE_UNIR</h2>
+        <p>El acero es el material más versátil de unir, y existen tres caminos documentados. El <strong>TIG</strong> funde los propios tubos para fusionarlos (en acero, por encima de unos 1450 °C). El <strong>fillet brazing</strong> los une con un aporte de bronce o plata que funde a menor temperatura, sin fundir el tubo: altera menos la estructura, deja una transición lisa, pesa algo más y es más lento y costoso. El <strong>lugged</strong> usa un manguito (lug) en la unión, con el aporte entrando por capilaridad. En la práctica, cerca del <strong>99%</strong> de los cuadros de acero fabricados desde ~1992 son TIG; el lug y el fillet quedan para la gama alta y artesanal [6][7]. Una advertencia documentada: que el acero sea el más amable no significa que cualquier taller sirva; en tubería fina de marca o en uniones con lug, el exceso de calor de quien suelda estructuras pesadas quema la pared delgada o derrite el bronce contiguo.</p>
+
+        <h2>MÓDULO_06 // TITANIO_Ti-3Al-2.5V: EL_DETALLE_DE_LA_PURGA</h2>
+        <p>El titanio de cuadros (grado 9, con 3% de aluminio y 2,5% de vanadio) se suelda con TIG, pero con una exigencia que lo separa de los demás: hay que <strong>purgar con argón</strong> el interior y el exterior del tubo durante la soldadura. El titanio caliente absorbe oxígeno con avidez, y ese oxígeno fragiliza el cordón. Hay una señal visual directa: un cordón bien protegido queda color pajizo o plateado; si aparece azulado, gris o blanquecino, hubo contaminación por falta de gas inerte [8][9]. Esto explica por qué el titanio no se trabaja en cualquier taller: requiere el equipo de purga y la mano para lograrlo.</p>
+
+        <h2>MÓDULO_07 // CARBONO_CFRP: NO_SE_SUELDA</h2>
+        <p>La fibra de carbono no entra en este marco, y conviene decirlo claro: es un material <strong>termoestable</strong>, no se funde para volver a unirlo como un metal. Lo que existe es una reparación distinta, por relaminado, que hace un taller especializado en composites, no un soldador: se rebaja la zona dañada en forma de cono (scarf), se aplican capas nuevas de fibra (prepreg o laminado húmedo) y se cura con calor y vacío (del orden de 120 °C para prepreg). La literatura de reparación de composites reporta recuperaciones de entre el <strong>70% y el 100%</strong> de la resistencia de diseño con un scarf bien hecho [10][11]. El diagnóstico previo de un daño en carbono se trata aparte, en <a class="inl" href="danos-cuadro-carbono-es.html">daño estructural en carbono</a>.</p>
+
+        <h2>MÓDULO_08 // LA_DISTORSIÓN_TÉRMICA</h2>
+        <p>Hay un efecto que rara vez se nombra y que compromete reparaciones aun con un cordón impecable: la <strong>contracción por enfriamiento</strong>. Al solidificar, el metal del cordón se contrae y arrastra los tubos unidos, induciendo desalineación angular y lineal en la junta [17]. En un cuadro, milímetros de desviación en una vaina se traducen en rueda descentrada, disco que roza de forma permanente o transmisión que no afina. Por eso la construcción y reparación seria de cuadros se hace sobre plantillas y banco de alineación (frame jig), que fijan la geometría durante el ciclo térmico y permiten verificar y corregir después [18]. Es una de las razones técnicas por las que soldar un cuadro no equivale a soldar una estructura cualquiera, y por las que el coste real incluye un paso —la alineación— que el presupuesto "de ganga" suele omitir.</p>
+
+        <h2>MÓDULO_09 // CÓMO_EVALUAR_AL_SOLDADOR</h2>
+        <p>La evidencia de las comunidades de ciclismo es consistente en los tres idiomas: el mayor vacío de información no es la metalurgia, sino <strong>cómo saber si quien va a soldar entiende de cuadros</strong> [19]. La respuesta habitual ("búscate un buen soldador de TIG") no da ningún criterio operativo. A partir de la práctica documentada de constructores pueden formularse cuatro verificaciones, no como certificación sino como filtro:</p>
+        <ul class="ask-list">
+            <li><b>1 · Técnica.</b> Que distinga TIG de brazing y justifique cuál corresponde al material —fusión del tubo frente a unión por aporte sin fundirlo— [6][8].</li>
+            <li><b>2 · Aporte.</b> Para aluminio, 4043 o 5356 según el caso; mencionar la diferencia es indicador de criterio. El recurso a varillas genéricas de bajo punto de fusión para una unión estructural es una señal de alarma [4][5].</li>
+            <li><b>3 · Purga.</b> Imprescindible en titanio; su ausencia produce la fragilización del cordón [8][9].</li>
+            <li><b>4 · Tratamiento térmico.</b> Para 6061, su omisión deja la ZAC sin restituir; negar su necesidad delata desconocimiento del material [1][2].</li>
+        </ul>
+        <p>Conviene añadir una contraseñal: la promesa de que el cuadro quedará <strong>"como nuevo"</strong> correlaciona, en la experiencia de los constructores, con menor competencia, no mayor —quien conoce el material explica límites, no perfección—. Y la estética del cordón ("pila de monedas") no informa sobre penetración de raíz ni sobre contaminación [8]. La versión de bolsillo de este filtro está en la ficha <a class="inl" href="../bikelabpedia/preguntas-al-soldador-es.html">qué preguntarle al soldador</a>.</p>
+
+        <div class="image-container">
+            <img src="../bikelabpedia/svg/mat-09-preguntas-soldador-es.svg" width="900" height="510"
+                alt="Las cuatro preguntas clave al soldador: técnica, aporte, purga de argón y tratamiento térmico" loading="lazy">
+            <div class="image-caption">FIG_09 // Cuatro preguntas para entender qué le hace el soldador a tu cuadro — BikeLab Studio</div>
+        </div>
+
+        <h2>MÓDULO_10 // FATIGA: EL_MATIZ_QUE_IMPORTA_MÁS_QUE_EL_MATERIAL</h2>
+        <p>Hay una propiedad que suele citarse a medias. El acero y el titanio tienen <a class="inl" href="../bikelabpedia/fatiga-material-cuadro-es.html">límite de fatiga</a>: por debajo de cierto nivel de esfuerzo, los ciclos no acumulan daño. El aluminio y el carbono no lo tienen: en teoría, cada ciclo, por pequeño que sea, acerca al material a la falla [12][13]. Pero ese dato, solo, induce a error. En ensayos de fatiga reales de cuadros completos (el banco EFBe es la referencia), cuadros de aluminio y carbono de calidad <strong>superaron</strong> a varios de acero de buena factura [14]. ¿Por qué? Porque cuando se diseña con un material sin límite de fatiga, se sobredimensiona para compensar. La lección documentada es que, en un cuadro terminado, el diseño y la ejecución pesan más que la etiqueta del material. El detalle del mecanismo está en <a class="inl" href="fatiga-metal-bicicleta-es.html">fatiga del metal en la bicicleta</a> y en <a class="inl" href="estres-mecanico-bicicleta-es.html">estrés mecánico</a>.</p>
+
+        <h2>CONCLUSIÓN // CÓMO_USAR_TODO_ESTO</h2>
+        <div class="conclusion-box">
+            <p>Nada de lo anterior dice si un cuadro debe repararse: eso es del ciclista y de su profesional. Lo que da es el idioma para esa conversación. Si el cuadro es de aluminio, se sabrá por qué preguntar la aleación, el aporte y el tratamiento térmico. Si es de titanio, por qué preguntar por la purga de argón. Si es de carbono, por qué buscar un taller de composites y no a un soldador. Y si es de acero, que se tiene el material más agradecido de los cuatro —sin que eso signifique que cualquier mano sirve—.</p>
+            <p style="margin-top:18px;">La versión en lenguaje llano de todo esto, pensada para quien acaba de romper su cuadro, está en la guía <a class="inl" href="cuadro-roto-que-hacer-es.html">"Se te rompió el cuadro: qué hacer y qué decir antes de soldarlo"</a>. Las fichas individuales de cada material y técnica están en el clúster <a class="inl" href="../bikelabpedia/cuadro-soldadura-cluster-es.html">El cuadro y la soldadura</a> de la BikeLab-pedia.</p>
+        </div>
+
+        <!-- CLUSTER LINKS -->
+        <div style="margin: 50px 0; padding: 30px; background: #080808; border-left: 3px solid #4fb8c8; border-top:1px solid #222; border-right:1px solid #222; border-bottom:1px solid #222;">
+            <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#555; letter-spacing:2px; margin-bottom:15px; text-transform:uppercase;">[ CLUSTER_DATA_LINKS ] // EL CUADRO Y LA SOLDADURA</p>
+            <h3 style="font-size:1.1rem; color:#fff; margin-bottom:18px; font-weight:400;">Fichas técnicas de este informe:</h3>
+            <ul style="list-style:none; margin:0; padding:0;">
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/aluminio-6061-vs-7005-es.html" style="color:#e0e0e0; text-decoration:none;">→ Aluminio 6061 vs 7005: qué cambia al soldar</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/preguntas-al-soldador-es.html" style="color:#e0e0e0; text-decoration:none;">→ Qué preguntarle al soldador (las 4 preguntas)</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/titanio-purga-argon-es.html" style="color:#e0e0e0; text-decoration:none;">→ Titanio y la purga de argón</a></li>
+                <li style="margin-bottom:12px; border-bottom:1px solid #1a1a1a; padding-bottom:12px;"><a href="../bikelabpedia/carbono-reparacion-scarf-es.html" style="color:#e0e0e0; text-decoration:none;">→ Carbono: por qué no se suelda</a></li>
+                <li><a href="../bikelabpedia/cuadro-soldadura-cluster-es.html" style="color:#4fb8c8; text-decoration:none;">→ Ver el clúster completo (9 fichas) →</a></li>
+            </ul>
+        </div>
+
+        <h2>PREGUNTAS_FRECUENTES</h2>
+        <h3>¿Se puede soldar un cuadro de aluminio?</h3>
+        <p>Físicamente sí, con TIG. Lo que cambia según la aleación es qué pasa después: el 6061 pierde su temple en la ZAC y restituirlo exige horno; el 7005 es autotemplante y recupera ~80% solo. La pregunta técnica no es "¿se suelda?" sino "¿qué aleación es?". La decisión de reparar y rodar es del ciclista y su profesional.</p>
+        <h3>¿Cómo sé si lo que tengo es una grieta o solo la pintura?</h3>
+        <p>El método estándar es la inspección por líquidos penetrantes. Señales de fisura real: se concentra cerca de uniones, reaparece tras limpiar y desengrasar, y a menudo sangra una línea de óxido desde el interior.</p>
+        <h3>¿Cómo sé si el soldador sabe de cuadros de bicicleta?</h3>
+        <p>Cuatro verificaciones como filtro: que distinga TIG de brazing según material; aporte coherente (4043/5356); purga de argón en titanio; tratamiento térmico posterior en 6061. La promesa de "como nuevo" correlaciona con menor competencia.</p>
+        <h3>¿El carbono se puede soldar?</h3>
+        <p>No. Es termoestable: no se funde para reunirlo. Se repara por relaminado (scarf) en un taller de composites, con recuperaciones documentadas del 70 al 100% de la resistencia de diseño.</p>
+        <h3>¿Por qué el cuadro se rompió al lado de la soldadura y no donde estaba?</h3>
+        <p>Por la zona afectada por el calor (ZAC): la franja alrededor del cordón donde el material alteró sus propiedades sin fundirse. En 6061 queda blanda si no se trata térmicamente, y es ahí donde suele aparecer la nueva falla.</p>
+
+        <!-- REFERENCIAS -->
+        <div class="references">
+            <h2>FUENTES</h2>
+            <div class="ref-item">[1] Aluminium-guide.com — <em>Bicycle frame aluminium: 6061 and 7005 alloys</em>.</div>
+            <div class="ref-item">[2] Foros técnicos de constructores (BMXmuseum / Framebuilders) — diferencia 6061-T6 vs 7005 y tratamiento post-soldadura.</div>
+            <div class="ref-item">[3] Datos de aleación 7005 — recuperación de la ZAC por envejecimiento natural.</div>
+            <div class="ref-item">[4] Hobart Brothers — <em>Aluminum Filler Metal Guidelines (4043 vs 5356)</em>.</div>
+            <div class="ref-item">[5] The Fabricator — <em>Aluminum Etc.: 4043 for GTAW and 5356 for GMAW</em>.</div>
+            <div class="ref-item">[6] Steelframebicycle.com — <em>TIG vs Fillet/Silver Brazed: pros and cons</em>.</div>
+            <div class="ref-item">[7] Bike Forums / Framebuilders — práctica de unión en acero (TIG, fillet, lug).</div>
+            <div class="ref-item">[8] Welding Tips &amp; Tricks — <em>TIG Welding a Titanium Bike Frame</em> (purga, color del cordón).</div>
+            <div class="ref-item">[9] No. 22 Bicycle Company / Guru Cycles — purga de argón interior y exterior.</div>
+            <div class="ref-item">[10] Carbon Bike Doctor / TW Carbon — reparación de cuadros de carbono por scarf y relaminado.</div>
+            <div class="ref-item">[11] Literatura de reparación de composites — recuperación de resistencia con scarf joint (70–100%).</div>
+            <div class="ref-item">[12] Bike Gremlin — materiales de cuadro y límite de fatiga.</div>
+            <div class="ref-item">[13] Calfee Design — <em>Technical White Paper: Materials</em> (comportamiento a fatiga).</div>
+            <div class="ref-item">[14] Sheldon Brown / Rinard — <em>EFBe Frame Fatigue Test</em> (resultados reales por cuadro).</div>
+            <div class="ref-item">[15] r/bikewrench, ForoMTB, Pedal.com.br — hilos recurrentes "¿grieta o pintura?" como primera consulta.</div>
+            <div class="ref-item">[16] ASNT / ASTM E1417 — <em>Liquid Penetrant Testing (PT)</em>: principio de capilaridad, penetrante y revelador.</div>
+            <div class="ref-item">[17] The Welding Institute (TWI) / Lincoln Electric — <em>Distortion in welding: causes and control</em>.</div>
+            <div class="ref-item">[18] Framebuilding (Anvil, Bringheli, Paterek Manual) — jig de soldadura y mesa de alineación.</div>
+            <div class="ref-item">[19] Síntesis de comunidades (r/bikewrench, r/MTB, ForoMTB, Pedal.com.br) — el vacío más citado: cómo validar la competencia del soldador.</div>
+        </div>
+
+        <div class="footer">
+            <div style="margin-bottom: 14px;">
+                <strong>BikeLab Studio</strong> · Trujillo, La Libertad, Perú<br>
+                Documento de síntesis a partir de fuentes publicadas, no investigación metalúrgica primaria. No constituye certificación de seguridad ni recomendación de reparación.
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #333;">
+                Autor: Carlos Eduardo Ravello Joo · Fundador, BikeLab Studio<br>
+                © 2026 BIKELAB_STUDIO // SISTEMA_ESTABLE
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.nav-overlay a').forEach(a => {
+            a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+        });
+    </script>
+</body>
+
+</html>
