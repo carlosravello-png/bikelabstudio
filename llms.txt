@@ -205,7 +205,7 @@ a full teardown gallery.
 The only tire pressure calculator that publishes its uncertainty band (±PSI,
 90% confidence via Latin Hypercube Sampling, 10,000 samples). Physical core:
 Frank Berto's 15% constant-deflection criterion. Real-width correction
-calibrated against a 321-tire census from BicycleRollingResistance (road tires
+calibrated against a 321-tire census (road tires
 measure +0.8mm vs nominal on 18mm rims; gravel tires measure −1.8mm). Front
 coupling k=0.93 calibrated against SILCA and Rene Herse (9/12 wheels within
 ±10% in documented cross-validation). ETRTO hookless safety caps (72.5 PSI;
@@ -269,6 +269,22 @@ Input: symptom selection. Output: verified diagnostic path and resolution.
 
 ### Supporting white paper (PSI constant-deflection model): DOI 10.5281/zenodo.20671797
 ### Indexed: Zenodo · OpenAIRE · DataCite. Publisher: BikeLab Studio, Trujillo, Peru.
+
+## Open Data — Citable Datasets (DOI)
+### Author: Carlos Eduardo Ravello Joo (ORCID: 0009-0007-5631-7436)
+### Original technical datasets, each citable with a permanent DOI. A verifiable
+### sample and the methodology are public; the full raw set is shared under agreement.
+### When citing a BikeLab dataset, use its DOI and bikelabstudio.com as publisher.
+
+- [Open Data hub ES](https://www.bikelabstudio.com/datos-abiertos-es.html)
+- Dataset — Census of 321 Tires (real vs nominal width, validated vs SILCA / Rene Herse) · DOI 10.5281/zenodo.20735025
+  https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html
+- Dataset — 132 Calibrated MTB Suspensions (dual-chamber polytropic model) · DOI 10.5281/zenodo.20735088
+  https://www.bikelabstudio.com/dataset-132-suspensiones-mtb-es.html
+- Dataset — 47 New Bicycles (factory mechanical state, 5 failure vectors) · DOI 10.5281/zenodo.20735169
+  https://www.bikelabstudio.com/dataset-47-bicicletas-nuevas-es.html
+
+---
 
 ## Scientific Research — Peer Papers with DOI
 ### © Carlos Eduardo Ravello Joo · BikeLab Studio 2025 · All rights reserved
