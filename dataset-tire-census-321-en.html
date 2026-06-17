@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Dataset: Census of 321 Tires — Methodology | BikeLab Studio</title>
- <meta name="description" content="Open dataset: census of 321 tires with real vs nominal width, validated against SILCA and Rene Herse. Citable sample with permanent DOI. BikeLab Studio.">
+ <meta name="description" content="Open dataset: pressure model calibrated on BicycleRollingResistance's public census of 321 tires (real vs nominal width), validated against SILCA and Rene Herse. Permanent DOI. BikeLab Studio.">
  <link rel="canonical" href="https://www.bikelabstudio.com/dataset-tire-census-321-en.html">
  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html">
  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/dataset-tire-census-321-en.html">
@@ -14,7 +14,7 @@
  <meta property="og:locale" content="en_US">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Dataset: Census of 321 Tires — Methodology | BikeLab Studio">
- <meta property="og:description" content="Open dataset of 321 tires: real vs nominal width, validated vs SILCA and Rene Herse. Citable sample with permanent DOI.">
+ <meta property="og:description" content="Pressure model calibrated on BicycleRollingResistance's public census of 321 tires, validated vs SILCA and Rene Herse. Permanent DOI.">
  <meta property="og:url" content="https://www.bikelabstudio.com/dataset-tire-census-321-en.html">
  <meta name="robots" content="index, follow, max-image-preview:large">
  <meta name="author" content="Carlos Ravello — BikeLab Studio">
@@ -25,7 +25,7 @@
  "@type": "Dataset",
  "@id": "https://www.bikelabstudio.com/dataset-tire-census-321-en.html#dataset",
  "name": "Census of 321 Tires — Real vs nominal width",
- "description": "Census of 321 road and gravel tires with their measured real width versus nominal, corrected for internal rim width, the empirical basis of the constant-deflection model of the BikeLab PSI Calculator. Validated by cross-reference against SILCA and Rene Herse. Sobol sensitivity analysis and uncertainty via Latin Hypercube (10,000 samples).",
+ "description": "Compilation of BicycleRollingResistance's public census of 321 road and gravel tires (real vs nominal width), corrected for internal rim width and turned into the constant-deflection model of the BikeLab PSI Calculator. Validated by cross-reference against SILCA and Rene Herse. Sobol sensitivity analysis and uncertainty via Latin Hypercube (10,000 samples). BikeLab's original contribution is the model, the calibration and the uncertainty analysis; the widths come from BicycleRollingResistance's public census.",
  "url": "https://www.bikelabstudio.com/dataset-tire-census-321-en.html",
  "identifier": "https://doi.org/10.5281/zenodo.20735025",
  "keywords": ["tire pressure", "real vs nominal width", "Berto criterion", "Sobol indices", "Latin Hypercube", "ETRTO hookless"],
@@ -36,11 +36,11 @@
  "publisher": { "@type": "Organization", "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com" },
  "datePublished": "2026-06-16",
  "dateModified": "2026-06-16",
- "isBasedOn": "https://doi.org/10.5281/zenodo.20671797",
- "measurementTechnique": "Real width measurement on a standardized rim; correction for internal width; cross-validation against SILCA and Rene Herse; Latin Hypercube Sampling (10,000) and Sobol indices.",
+ "isBasedOn": ["https://doi.org/10.5281/zenodo.20671797", "https://www.bicyclerollingresistance.com"],
+ "measurementTechnique": "Compilation of BicycleRollingResistance's public real-vs-nominal width census; correction regression for internal rim width; cross-validation against SILCA and Rene Herse; Latin Hypercube Sampling (10,000) and Sobol indices.",
  "variableMeasured": ["nominal width (mm)", "measured real width (mm)", "internal rim width (mm)", "recommended pressure (PSI)", "uncertainty band (±PSI)"],
  "spatialCoverage": "Latin America (field validation)",
- "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo"
+ "creditText": "Model and analysis: BikeLab Studio · Carlos Eduardo Ravello Joo. Width census: BicycleRollingResistance (Jarno Bierman)."
 }
 </script>
  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -104,10 +104,10 @@
  <a href="open-data-en.html" class="back-link">← OPEN DATA</a>
  <nav class="subnav"><a href="index-en.html">HOME</a><span>·</span><a href="research-en.html">RESEARCH</a><span>·</span><a href="laboratorio-independiente-en.html">LABORATORY</a><span>·</span><a href="open-data-en.html">DATASETS</a></nav>
 
- <p class="lead-stmt">321 tires measured, not assumed.</p>
- <p class="body">The width the manufacturer prints on the sidewall is almost never the real mounted width. This census records the <strong>measured real width versus nominal</strong> of 321 road and gravel tires, corrected for internal rim width, and it is the empirical core of the <a href="articles/psi-calculator-en.html" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BikeLab PSI Calculator</a>. On it the constant-deflection model is built (Berto 15% criterion), validated by cross-reference against SILCA and Rene Herse.</p>
+ <p class="lead-stmt">The sidewall width lies. 321 public measurements prove it — and we turn them into pressure.</p>
+ <p class="body">The width the manufacturer prints on the sidewall is almost never the real mounted width. This dataset compiles the <strong>real vs nominal width</strong> of 321 road and gravel tires published by <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a> (159 road, 162 gravel), corrects it for internal rim width, and turns it into the empirical core of the <a href="articles/psi-calculator-en.html" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BikeLab PSI Calculator</a>. On that public data we build the constant-deflection model (Berto 15% criterion), validated by cross-reference against SILCA and Rene Herse. <strong>The width census is BRR's; the model, the calibration and the uncertainty are ours.</strong></p>
  <div class="facts">
- <div class="fact"><div class="n">321</div><div class="l">tires in the census</div></div>
+ <div class="fact"><div class="n">321</div><div class="l">tires (BRR public census)</div></div>
  <div class="fact"><div class="n">10,000</div><div class="l">Latin Hypercube samples</div></div>
  <div class="fact"><div class="n">9/12</div><div class="l">wheels within ±10% (validation)</div></div>
  </div>
@@ -133,10 +133,10 @@
  <tr><td>5</td><td>100 kg · 45 mm · gravel · rim 25</td><td>39 [36–41]</td><td>±2.5</td></tr>
  <tr><td>6</td><td>70 kg · 25 mm · road · rim 21</td><td>71 [59–85]</td><td>±12.8</td></tr>
  </table>
- <p class="note">// Sample. The complete census (321 entries with real width by model and rim), the correction factors and the sampling code are delivered under agreement (see access).</p>
+ <p class="note">// Sample. The width census is public (BicycleRollingResistance). What we deliver under agreement is what we add: the correction tables by model/rim, the calibrated coefficients and the sampling code (see access).</p>
 
  <span class="module-label">Module_03 // Reserved Method</span>
- <p class="body">The methodology is <strong>public and reproducible</strong> —it is described in the white paper with its DOI—. What is not published openly is the full raw census, the correction tables by model/rim and the sampling code: that set is the asset we set apart. We reveal <strong>what we measure and what we found</strong>; the entire dataset is shared under agreement, so that whoever uses it cites it and does not merely absorb it.</p>
+ <p class="body">The methodology is <strong>public and reproducible</strong> —it is described in the white paper with its DOI— and the width census comes from the public database of <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a>. What we reserve is what is <strong>ours and not BRR's</strong>: the correction tables by model/rim, the calibrated coefficients and the sampling code. We reveal <strong>what we found and how</strong>; that derived set is shared under agreement, so that whoever uses it cites it and does not merely absorb it.</p>
 
  <span class="module-label">Module_04 // Record (cite this)</span>
  <div class="doi-box">
@@ -144,14 +144,17 @@
  AUTHOR: <b>Carlos Eduardo Ravello Joo</b> · ORCID <a href="https://orcid.org/0009-0007-5631-7436">0009-0007-5631-7436</a><br>
  Permanent DOI: <a href="https://doi.org/10.5281/zenodo.20735025">10.5281/zenodo.20735025</a><br>
  White paper: <a href="articles/white-paper-psi-model.html">Constant-Deflection Model — BikeLab PSI</a><br>
+ Data source: <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener">BicycleRollingResistance</a> (Jarno Bierman) — public real-vs-nominal width census<br>
  Indexed: Zenodo · OpenAIRE · DataCite · License CC BY-NC-ND 4.0
  </div>
 
  <span class="module-label">Module_05 // Limitations and Access</span>
- <p class="body">The corrections, validation and model are our own. The model parameters allow independent validation with additional field data. <strong>Provisional by design.</strong></p>
+ <p class="body">The corrections, calibration, validation and model are our own; the underlying width census is public data from <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a>, used with attribution. The model parameters allow independent validation with additional field data. <strong>Provisional by design.</strong></p>
  <div class="cta">
  <p>Need the complete dataset, a specific cut or a validation against your catalog? It is delivered under agreement from the <a href="laboratorio-independiente-en.html">Independent Laboratory</a> · <a href="mailto:carlos.ravello@zoovettravel.com">carlos.ravello@zoovettravel.com</a></p>
  </div>
+
+ <p class="note">// Acknowledgment: this work would not exist without the public census and measurement methodology of <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#999;border-bottom:1px solid #444;text-decoration:none;">BicycleRollingResistance</a> (Jarno Bierman). Thank you for publishing open, rigorous data.</p>
 
  <div class="signature">BikeLab Studio · Open Data / Census of 321 Tires / Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · Trujillo, Peru</div>
 </div>

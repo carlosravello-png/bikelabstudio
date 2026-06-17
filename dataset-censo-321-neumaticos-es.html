@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Dataset: Censo de 321 Neumáticos — Metodología | BikeLab Studio</title>
- <meta name="description" content="Dataset abierto: censo de 321 neumáticos con ancho real vs nominal, validado contra SILCA y Rene Herse. Muestra citable con DOI permanente. BikeLab Studio.">
+ <meta name="description" content="Dataset abierto: modelo de presión calibrado sobre el censo público de 321 neumáticos de BicycleRollingResistance (ancho real vs nominal), validado contra SILCA y Rene Herse. DOI permanente. BikeLab Studio.">
  <link rel="canonical" href="https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html">
  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html">
  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/dataset-tire-census-321-en.html">
@@ -14,7 +14,7 @@
  <meta property="og:locale" content="es_PE">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Dataset: Censo de 321 Neumáticos — Metodología | BikeLab Studio">
- <meta property="og:description" content="Dataset abierto de 321 neumáticos: ancho real vs nominal, validado vs SILCA y Rene Herse. Muestra citable con DOI permanente.">
+ <meta property="og:description" content="Modelo de presión calibrado sobre el censo público de 321 neumáticos de BicycleRollingResistance, validado vs SILCA y Rene Herse. DOI permanente.">
  <meta property="og:url" content="https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html">
  <meta name="robots" content="index, follow, max-image-preview:large">
  <meta name="author" content="Carlos Ravello — BikeLab Studio">
@@ -25,7 +25,7 @@
  "@type": "Dataset",
  "@id": "https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html#dataset",
  "name": "Censo de 321 Neumáticos — Ancho real vs nominal",
- "description": "Censo de 321 neumáticos de ruta y gravel con su ancho medido real frente al nominal, corregido por ancho interno de aro, base del modelo de deflexión constante del BikeLab PSI Calculator. Validado por referencia cruzada contra SILCA y Rene Herse. Análisis de sensibilidad de Sobol e incertidumbre por Latin Hypercube (10.000 muestras).",
+ "description": "Compilación del censo público de 321 neumáticos de ruta y gravel de BicycleRollingResistance (ancho real vs nominal), corregido por ancho interno de aro y convertido en el modelo de deflexión constante del BikeLab PSI Calculator. Validado por referencia cruzada contra SILCA y Rene Herse. Análisis de sensibilidad de Sobol e incertidumbre por Latin Hypercube (10.000 muestras). La aportación original de BikeLab es el modelo, la calibración y el análisis de incertidumbre; los anchos provienen del censo público de BicycleRollingResistance.",
  "url": "https://www.bikelabstudio.com/dataset-censo-321-neumaticos-es.html",
  "identifier": "https://doi.org/10.5281/zenodo.20735025",
  "keywords": ["presión de neumáticos", "ancho real vs nominal", "criterio Berto", "índices de Sobol", "Latin Hypercube", "ETRTO hookless"],
@@ -35,11 +35,11 @@
  "publisher": { "@type": "Organization", "name": "BikeLab Studio", "url": "https://www.bikelabstudio.com" },
  "datePublished": "2026-06-16",
  "dateModified": "2026-06-16",
- "isBasedOn": "https://doi.org/10.5281/zenodo.20671797",
- "measurementTechnique": "Medición de ancho real en aro normalizado; corrección por ancho interno; validación cruzada contra SILCA y Rene Herse; Latin Hypercube Sampling (10.000) e índices de Sobol.",
+ "isBasedOn": ["https://doi.org/10.5281/zenodo.20671797", "https://www.bicyclerollingresistance.com"],
+ "measurementTechnique": "Compilación del censo público de ancho real vs nominal de BicycleRollingResistance; regresión de corrección por ancho interno de aro; validación cruzada contra SILCA y Rene Herse; Latin Hypercube Sampling (10.000) e índices de Sobol.",
  "variableMeasured": ["ancho nominal (mm)", "ancho real medido (mm)", "ancho interno de aro (mm)", "presión recomendada (PSI)", "banda de incertidumbre (±PSI)"],
  "spatialCoverage": "Latinoamérica (validación de campo)",
- "creditText": "BikeLab Studio · Carlos Eduardo Ravello Joo"
+ "creditText": "Modelo y análisis: BikeLab Studio · Carlos Eduardo Ravello Joo. Censo de anchos: BicycleRollingResistance (Jarno Bierman)."
 }
 </script>
  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -103,10 +103,10 @@
  <a href="datos-abiertos-es.html" class="back-link">← DATOS ABIERTOS</a>
  <nav class="subnav"><a href="index.html">INICIO</a><span>·</span><a href="investigacion-es.html">INVESTIGACIÓN</a><span>·</span><a href="laboratorio-independiente-es.html">LABORATORIO</a><span>·</span><a href="datos-abiertos-es.html">DATASETS</a></nav>
 
- <p class="lead-stmt">321 neumáticos medidos, no asumidos.</p>
- <p class="body">El ancho que imprime el fabricante en el flanco casi nunca es el ancho real montado. Este censo registra el <strong>ancho medido real frente al nominal</strong> de 321 neumáticos de ruta y gravel, corregido por el ancho interno del aro, y es el núcleo empírico del <a href="articles/psi-calculator-es.html" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BikeLab PSI Calculator</a>. Sobre él se construye el modelo de deflexión constante (criterio Berto 15%), validado por referencia cruzada contra SILCA y Rene Herse.</p>
+ <p class="lead-stmt">El ancho del flanco miente. 321 mediciones públicas lo prueban — y las convertimos en presión.</p>
+ <p class="body">El ancho que imprime el fabricante en el flanco casi nunca es el ancho real montado. Este dataset recopila el <strong>ancho real vs nominal</strong> de 321 neumáticos de ruta y gravel publicado por <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a> (159 de ruta, 162 de gravel), lo corrige por el ancho interno del aro y lo convierte en el núcleo empírico del <a href="articles/psi-calculator-es.html" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BikeLab PSI Calculator</a>. Sobre esos datos públicos construimos el modelo de deflexión constante (criterio Berto 15%), validado por referencia cruzada contra SILCA y Rene Herse. <strong>El censo de anchos es de BRR; el modelo, la calibración y la incertidumbre son nuestros.</strong></p>
  <div class="facts">
- <div class="fact"><div class="n">321</div><div class="l">neumáticos en el censo</div></div>
+ <div class="fact"><div class="n">321</div><div class="l">neumáticos (censo público BRR)</div></div>
  <div class="fact"><div class="n">10.000</div><div class="l">muestras Latin Hypercube</div></div>
  <div class="fact"><div class="n">9/12</div><div class="l">ruedas dentro de ±10% (validación)</div></div>
  </div>
@@ -132,10 +132,10 @@
  <tr><td>5</td><td>100 kg · 45 mm · gravel · aro 25</td><td>39 [36–41]</td><td>±2,5</td></tr>
  <tr><td>6</td><td>70 kg · 25 mm · ruta · aro 21</td><td>71 [59–85]</td><td>±12,8</td></tr>
  </table>
- <p class="note">// Muestra. El censo completo (321 entradas con ancho real por modelo y aro), los factores de corrección y el código de muestreo se entregan bajo acuerdo (ver acceso).</p>
+ <p class="note">// Muestra. El censo de anchos es público (BicycleRollingResistance). Lo que entregamos bajo acuerdo es lo que añadimos: las tablas de corrección por modelo/aro, los coeficientes calibrados y el código de muestreo (ver acceso).</p>
 
  <span class="module-label">Módulo_03 // Método Reservado</span>
- <p class="body">La metodología es <strong>pública y reproducible</strong> —está descrita en el white paper con su DOI—. Lo que no se publica abierto es el censo crudo completo, las tablas de corrección por modelo/aro y el código de muestreo: ese conjunto es el activo que distinguimos. Revelamos <strong>qué medimos y qué encontramos</strong>; el dataset entero se comparte bajo acuerdo, para que quien lo use lo cite y no solo lo absorba.</p>
+ <p class="body">La metodología es <strong>pública y reproducible</strong> —está descrita en el white paper con su DOI— y el censo de anchos proviene de la base pública de <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a>. Lo que reservamos es lo que es <strong>nuestro y no de BRR</strong>: las tablas de corrección por modelo/aro, los coeficientes calibrados y el código de muestreo. Revelamos <strong>qué hallamos y cómo</strong>; ese conjunto derivado se comparte bajo acuerdo, para que quien lo use lo cite y no solo lo absorba.</p>
 
  <span class="module-label">Módulo_04 // Constancia (cita esto)</span>
  <div class="doi-box">
@@ -143,14 +143,17 @@
  AUTOR: <b>Carlos Eduardo Ravello Joo</b> · ORCID <a href="https://orcid.org/0009-0007-5631-7436">0009-0007-5631-7436</a><br>
  DOI permanente: <a href="https://doi.org/10.5281/zenodo.20735025">10.5281/zenodo.20735025</a><br>
  White paper: <a href="articles/white-paper-psi-model-es.html">Modelo de Deflexión Constante — BikeLab PSI</a><br>
+ Fuente de datos: <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener">BicycleRollingResistance</a> (Jarno Bierman) — censo público de ancho real vs nominal<br>
  Indexado: Zenodo · OpenAIRE · DataCite · Licencia CC BY-NC-ND 4.0
  </div>
 
  <span class="module-label">Módulo_05 // Limitaciones y Acceso</span>
- <p class="body">Las correcciones, la validación y el modelo son propios. Los parámetros del modelo admiten validación independiente con datos de campo adicionales. <strong>Provisional por diseño.</strong></p>
+ <p class="body">Las correcciones, la calibración, la validación y el modelo son propios; el censo de anchos subyacente es data pública de <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid #555;text-decoration:none;">BicycleRollingResistance</a>, usada con atribución. Los parámetros del modelo admiten validación independiente con datos de campo adicionales. <strong>Provisional por diseño.</strong></p>
  <div class="cta">
  <p>¿Necesitas el dataset completo, un corte específico o una validación sobre tu catálogo? Se entrega bajo acuerdo desde el <a href="laboratorio-independiente-es.html">Laboratorio Independiente</a> · <a href="mailto:carlos.ravello@zoovettravel.com">carlos.ravello@zoovettravel.com</a></p>
  </div>
+
+ <p class="note">// Agradecimiento: este trabajo no existiría sin el censo público y la metodología de medición de <a href="https://www.bicyclerollingresistance.com" target="_blank" rel="noopener" style="color:#999;border-bottom:1px solid #444;text-decoration:none;">BicycleRollingResistance</a> (Jarno Bierman). Gracias por publicar datos abiertos y rigurosos.</p>
 
  <div class="signature">BikeLab Studio · Datos Abiertos / Censo de 321 Neumáticos / Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · Trujillo, Perú</div>
 </div>
