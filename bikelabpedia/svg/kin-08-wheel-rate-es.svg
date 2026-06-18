@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">Wheel rate: la rigidez que de verdad sientes en la rueda</title>
+  <desc id="d">El wheel rate es la rigidez del muelle del amortiguador transformada por el leverage ratio al cuadrado. Es la fuerza real que experimenta el ciclista en la rueda, no la del amortiguador aislado.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Wheel rate explicado — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/wheel-rate-rigidez-en-la-rueda-es.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .bx{fill:#0a0a0a;stroke:#2a2a2a;stroke-width:1.5;rx:10}
+    .t{font-family:'IBM Plex Mono',monospace;fill:#cfcfcf;font-size:15px;font-weight:700}
+    .g{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:12px}
+    .a{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:15px;font-weight:700}
+    .op{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:30px;font-weight:900}
+  </style>
+  <text x="380" y="48" text-anchor="middle" class="a" font-size="20">WHEEL RATE = lo que de verdad sientes</text>
+  <!-- box 1: shock spring -->
+  <rect x="40" y="120" width="190" height="90" rx="10" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="135" y="158" text-anchor="middle" class="t">muelle / aire</text>
+  <text x="135" y="180" text-anchor="middle" class="g">rigidez del amortiguador</text>
+  <text x="135" y="198" text-anchor="middle" class="g">(un dato fijo)</text>
+  <!-- operator -->
+  <text x="262" y="175" text-anchor="middle" class="op">÷</text>
+  <!-- box 2: leverage squared -->
+  <rect x="295" y="120" width="190" height="90" rx="10" fill="#0a1315" stroke="#21383c" stroke-width="1.5"/>
+  <text x="390" y="158" text-anchor="middle" class="t">(leverage ratio)²</text>
+  <text x="390" y="180" text-anchor="middle" class="g">la palanca, al cuadrado</text>
+  <text x="390" y="198" text-anchor="middle" class="g">(cambia en el recorrido)</text>
+  <!-- operator -->
+  <text x="517" y="175" text-anchor="middle" class="op">=</text>
+  <!-- box 3: wheel rate -->
+  <rect x="550" y="120" width="190" height="90" rx="10" fill="#0a0a0a" stroke="#4fb8c8" stroke-width="2"/>
+  <text x="645" y="158" text-anchor="middle" class="a">wheel rate</text>
+  <text x="645" y="180" text-anchor="middle" class="g">la fuerza en TU rueda</text>
+  <text x="645" y="198" text-anchor="middle" class="g">(lo que percibes)</text>
+  <!-- formula -->
+  <text x="380" y="278" text-anchor="middle" class="t" font-size="18">k(rueda) = k(muelle) ÷ (leverage ratio)²</text>
+  <text x="380" y="320" text-anchor="middle" class="g" font-size="14">Por eso el mismo amortiguador se siente distinto en dos cuadros:</text>
+  <text x="380" y="342" text-anchor="middle" class="g" font-size="14">la palanca de cada cuadro transforma su curva de forma diferente.</text>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

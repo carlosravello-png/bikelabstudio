@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">Horst Link / four-bar (FSR)</title>
+  <desc id="d">Four-bar system with a pivot on the chainstay, ahead of and below the rear axle. That pivot partly decouples braking and allows tuning the axle path.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Horst Link / four-bar (FSR) — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/horst-link-four-bar-en.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .fr{stroke:#cfcfcf;stroke-width:3;fill:none;stroke-linecap:round}
+    .arm{stroke:#4fb8c8;stroke-width:4;fill:none;stroke-linecap:round}
+    .wh{stroke:#777;stroke-width:3;fill:none}
+    .sh{stroke:#cfcfcf;stroke-width:7;fill:none;stroke-linecap:round}
+    .lab{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:13px}
+    .key{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:13px;font-weight:700}
+    .ld{stroke:#3a3a3a;stroke-width:1}
+    .piv{fill:#050505;stroke:#4fb8c8;stroke-width:2.5}
+  </style>
+  <circle class="wh" cx="200" cy="310" r="74"/>
+  <circle class="wh" cx="660" cy="310" r="74" opacity="0.4"/>
+  <line class="fr" x1="430" y1="320" x2="452" y2="150"/>
+  <line class="fr" x1="452" y1="150" x2="628" y2="168"/>
+  <line class="fr" x1="430" y1="320" x2="640" y2="170"/>
+  <line class="fr" x1="628" y1="168" x2="648" y2="214"/>
+  <line class="fr" x1="648" y1="214" x2="660" y2="310" opacity="0.4"/>
+  <circle cx="430" cy="320" r="9" fill="none" stroke="#cfcfcf" stroke-width="3"/>
+  <!-- chainstay: BB pivot -> Horst pivot near axle -->
+  <line class="arm" x1="418" y1="312" x2="262" y2="318"/>
+  <circle cx="418" cy="312" r="7" class="piv"/>
+  <!-- Horst pivot (ahead & below axle) -->
+  <circle cx="262" cy="318" r="8" class="piv"/>
+  <text class="key" x="262" y="372" text-anchor="middle">HORST PIVOT</text>
+  <text class="lab" x="262" y="390" text-anchor="middle">ahead of and below the axle</text>
+  <!-- seatstay: Horst pivot -> rocker -->
+  <line class="arm" x1="262" y1="318" x2="455" y2="172"/>
+  <!-- short link from axle area up: the dropout connects axle to both stays -->
+  <line class="arm" x1="200" y1="310" x2="262" y2="318"/>
+  <line class="arm" x1="200" y1="310" x2="232" y2="300"/>
+  <!-- rocker -->
+  <circle cx="455" cy="172" r="6" class="piv"/>
+  <line class="sh" x1="455" y1="172" x2="432" y2="252"/>
+  <line class="ld" x1="450" y1="210" x2="300" y2="200"/>
+  <text class="lab" x="296" y="196" text-anchor="end">shock</text>
+  <circle cx="200" cy="310" r="6" fill="#4fb8c8"/>
+  <text class="lab" x="150" y="250" text-anchor="middle">rear axle</text>
+  <line class="ld" x1="185" y1="290" x2="160" y2="258"/>
+  <text class="key" x="560" y="120">FOUR-BAR (FSR)</text>
+  <text class="lab" x="560" y="138">more independent braking</text>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="O leverage ratio explicado como uma alavanca: a roda percorre 3 mm enquanto o amortecedor comprime 1 mm, uma relação de 3 para 1">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Leverage ratio explicado (relação de alavanca) — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/o-que-e-leverage-ratio-pt.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .t{font-family:'IBM Plex Mono',monospace;fill:#cfcfcf}
+    .a{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8}
+    .d{fill:#9a9a9a;font-family:'IBM Plex Mono',monospace}
+    .ln{stroke:#3a3a3a;stroke-width:1}
+  </style>
+  <!-- fulcrum -->
+  <polygon points="380,250 360,300 400,300" fill="#2a2a2a" stroke="#4fb8c8" stroke-width="1.5"/>
+  <text x="380" y="320" text-anchor="middle" class="d" font-size="13">pivô</text>
+  <!-- lever bar -->
+  <line x1="120" y1="250" x2="640" y2="250" stroke="#4fb8c8" stroke-width="3"/>
+  <!-- wheel side (long arm, big movement) -->
+  <circle cx="150" cy="250" r="34" fill="none" stroke="#cfcfcf" stroke-width="3"/>
+  <circle cx="150" cy="250" r="5" fill="#cfcfcf"/>
+  <text x="150" y="200" text-anchor="middle" class="t" font-size="14">RODA</text>
+  <line x1="150" y1="300" x2="150" y2="372" stroke="#4fb8c8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="150" y="398" text-anchor="middle" class="a" font-size="20" font-weight="700">3 mm</text>
+  <text x="150" y="418" text-anchor="middle" class="d" font-size="12">se move muito</text>
+  <!-- shock side (short arm, small movement) -->
+  <rect x="600" y="234" width="60" height="32" rx="4" fill="none" stroke="#cfcfcf" stroke-width="3"/>
+  <line x1="612" y1="250" x2="648" y2="250" stroke="#cfcfcf" stroke-width="2"/>
+  <text x="630" y="205" text-anchor="middle" class="t" font-size="14">AMORTECEDOR</text>
+  <line x1="630" y1="285" x2="630" y2="312" stroke="#4fb8c8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="630" y="338" text-anchor="middle" class="a" font-size="20" font-weight="700">1 mm</text>
+  <text x="630" y="358" text-anchor="middle" class="d" font-size="12">comprime pouco</text>
+  <!-- ratio label -->
+  <text x="380" y="70" text-anchor="middle" class="a" font-size="40" font-weight="900">LR = 3 : 1</text>
+  <text x="380" y="105" text-anchor="middle" class="d" font-size="15">a roda tem 3 vezes de vantagem sobre o amortecedor</text>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="4.5" refY="8" orient="auto">
+      <path d="M0,0 L9,0 L4.5,9 Z" fill="#4fb8c8"/>
+    </marker>
+  </defs>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

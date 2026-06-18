@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">DW-link: doble bieleta co-rotatoria</title>
+  <desc id="d">El DW-link usa dos bieletas cortas que giran en el mismo sentido (co-rotatorias) para conectar un triángulo trasero rígido al cuadro. Su firma es una meseta de anti-squat alta cerca del sag que cae después.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>DW-link (doble bieleta co-rotatoria) — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/dw-link-es.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .wh{stroke:#777;stroke-width:3;fill:none}
+    .rt{stroke:#cfcfcf;stroke-width:3;fill:none;stroke-linejoin:round}
+    .ft{stroke:#cfcfcf;stroke-width:3;fill:none}
+    .lk{stroke:#4fb8c8;stroke-width:6;fill:none;stroke-linecap:round}
+    .sh{stroke:#cfcfcf;stroke-width:7;fill:none;stroke-linecap:round}
+    .piv{fill:#050505;stroke:#4fb8c8;stroke-width:2.5}
+    .lab{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:13px}
+    .key{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:15px;font-weight:700}
+    .rot{stroke:#4fb8c8;stroke-width:2.5;fill:none}
+  </style>
+  <text x="380" y="42" text-anchor="middle" class="key" font-size="18">DW-LINK · bieletas CO-rotatorias (mismo sentido)</text>
+  <!-- wheel -->
+  <circle class="wh" cx="190" cy="312" r="70"/>
+  <!-- rigid rear triangle -->
+  <polygon class="rt" points="190,312 360,300 330,180 250,250"/>
+  <!-- front frame (seat tube + bb) -->
+  <line class="ft" x1="520" y1="150" x2="500" y2="330"/>
+  <circle cx="500" cy="330" r="8" class="wh" stroke="#cfcfcf"/>
+  <!-- upper link -->
+  <line class="lk" x1="500" y1="205" x2="345" y2="200"/>
+  <circle cx="500" cy="205" r="6" class="piv"/><circle cx="345" cy="200" r="6" class="piv"/>
+  <path class="rot" d="M430,178 a 16 16 0 0 1 22,6" marker-end="url(#cw)"/>
+  <!-- lower link -->
+  <line class="lk" x1="500" y1="300" x2="352" y2="296"/>
+  <circle cx="500" cy="300" r="6" class="piv"/><circle cx="352" cy="296" r="6" class="piv"/>
+  <path class="rot" d="M430,274 a 16 16 0 0 1 22,6" marker-end="url(#cw2)"/>
+  <text x="426" y="245" text-anchor="middle" class="lab">ambas giran igual →</text>
+  <!-- shock -->
+  <line class="sh" x1="512" y1="180" x2="360" y2="250"/>
+  <text x="600" y="250" class="lab">firma: anti-squat</text>
+  <text x="600" y="268" class="lab">alto al inicio,</text>
+  <text x="600" y="286" class="lab">cae después</text>
+  <defs>
+    <marker id="cw" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#4fb8c8"/></marker>
+    <marker id="cw2" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#4fb8c8"/></marker>
+  </defs>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

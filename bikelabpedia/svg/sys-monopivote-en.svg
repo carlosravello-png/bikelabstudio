@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">Single pivot suspension system</title>
+  <desc id="d">A single main pivot joins the swingarm to the frame; the rear wheel traces an arc around that pivot.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Single pivot suspension system — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/single-pivot-suspension-en.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .fr{stroke:#cfcfcf;stroke-width:3;fill:none;stroke-linecap:round}
+    .arm{stroke:#4fb8c8;stroke-width:4;fill:none;stroke-linecap:round}
+    .wh{stroke:#777;stroke-width:3;fill:none}
+    .sh{stroke:#cfcfcf;stroke-width:7;fill:none;stroke-linecap:round}
+    .path{stroke:#4fb8c8;stroke-width:2;fill:none;stroke-dasharray:6 6}
+    .lab{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:13px}
+    .key{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:13px;font-weight:700}
+    .ld{stroke:#3a3a3a;stroke-width:1}
+  </style>
+  <circle class="wh" cx="200" cy="310" r="74"/>
+  <circle class="wh" cx="660" cy="310" r="74" opacity="0.4"/>
+  <line class="fr" x1="430" y1="320" x2="452" y2="150"/>
+  <line class="fr" x1="452" y1="150" x2="628" y2="168"/>
+  <line class="fr" x1="430" y1="320" x2="640" y2="170"/>
+  <line class="fr" x1="628" y1="168" x2="648" y2="214"/>
+  <line class="fr" x1="648" y1="214" x2="660" y2="310" opacity="0.4"/>
+  <circle cx="430" cy="320" r="9" fill="none" stroke="#cfcfcf" stroke-width="3"/>
+  <text class="lab" x="430" y="352" text-anchor="middle">bottom bracket</text>
+  <line class="arm" x1="408" y1="250" x2="200" y2="310"/>
+  <circle cx="408" cy="250" r="9" fill="#050505" stroke="#4fb8c8" stroke-width="3"/>
+  <line class="ld" x1="408" y1="250" x2="470" y2="120"/>
+  <text class="key" x="474" y="116">SINGLE PIVOT</text>
+  <text class="lab" x="474" y="134">the only point of rotation</text>
+  <line class="sh" x1="446" y1="198" x2="338" y2="276"/>
+  <line class="ld" x1="392" y1="237" x2="300" y2="200"/>
+  <text class="lab" x="296" y="196" text-anchor="end">shock</text>
+  <circle cx="200" cy="310" r="6" fill="#4fb8c8"/>
+  <path class="path" d="M200,310 A 216 216 0 0 1 250,160"/>
+  <text class="key" x="150" y="150">AXLE PATH</text>
+  <text class="lab" x="150" y="168">arc around the pivot</text>
+  <line class="ld" x1="225" y1="235" x2="180" y2="172"/>
+  <text class="lab" x="300" y="300" text-anchor="middle">swingarm</text>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

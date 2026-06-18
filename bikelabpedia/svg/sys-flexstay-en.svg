@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">Linkage-driven single pivot and flex-stay</title>
+  <desc id="d">It is a single pivot, but the shock is driven by a rocker link to shape the curve; in flex-stay the rear pivot is replaced by the flexing of the carbon.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Linkage single pivot / flex-stay — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/linkage-single-pivot-flex-stay-en.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .fr{stroke:#cfcfcf;stroke-width:3;fill:none;stroke-linecap:round}
+    .arm{stroke:#4fb8c8;stroke-width:4;fill:none;stroke-linecap:round}
+    .flex{stroke:#4fb8c8;stroke-width:3;fill:none;stroke-dasharray:3 4}
+    .rk{stroke:#4fb8c8;stroke-width:5;fill:none;stroke-linecap:round}
+    .wh{stroke:#777;stroke-width:3;fill:none}
+    .sh{stroke:#cfcfcf;stroke-width:7;fill:none;stroke-linecap:round}
+    .lab{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:13px}
+    .key{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:13px;font-weight:700}
+    .ld{stroke:#3a3a3a;stroke-width:1}
+  </style>
+  <circle class="wh" cx="200" cy="310" r="74"/>
+  <circle class="wh" cx="660" cy="310" r="74" opacity="0.4"/>
+  <line class="fr" x1="430" y1="320" x2="452" y2="150"/>
+  <line class="fr" x1="452" y1="150" x2="628" y2="168"/>
+  <line class="fr" x1="430" y1="320" x2="640" y2="170"/>
+  <line class="fr" x1="628" y1="168" x2="648" y2="214"/>
+  <line class="fr" x1="648" y1="214" x2="660" y2="310" opacity="0.4"/>
+  <circle cx="430" cy="320" r="9" fill="none" stroke="#cfcfcf" stroke-width="3"/>
+  <!-- chainstay (lower arm, main pivot) -->
+  <line class="arm" x1="412" y1="300" x2="200" y2="310"/>
+  <circle cx="412" cy="300" r="8" fill="#050505" stroke="#4fb8c8" stroke-width="3"/>
+  <text class="lab" x="430" y="335" text-anchor="middle">main pivot</text>
+  <!-- seatstay flexing (no rear pivot) -->
+  <path class="flex" d="M205,305 Q 360,235 452,175"/>
+  <text class="key" x="300" y="232" text-anchor="middle">FLEX-STAY</text>
+  <text class="lab" x="300" y="250" text-anchor="middle">the seatstay flexes (no pivot)</text>
+  <line class="ld" x1="330" y1="262" x2="320" y2="236"/>
+  <!-- rocker link driving shock -->
+  <line class="rk" x1="452" y1="175" x2="470" y2="150"/>
+  <circle cx="452" cy="175" r="6" fill="#050505" stroke="#4fb8c8" stroke-width="2.5"/>
+  <text class="key" x="500" y="120">ROCKER LINK</text>
+  <text class="lab" x="500" y="138">shapes the shock curve</text>
+  <line class="ld" x1="465" y1="158" x2="498" y2="124"/>
+  <line class="sh" x1="470" y1="150" x2="430" y2="250"/>
+  <line class="ld" x1="450" y1="200" x2="300" y2="200"/>
+  <text class="lab" x="296" y="196" text-anchor="end">shock</text>
+  <circle cx="200" cy="310" r="6" fill="#4fb8c8"/>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>

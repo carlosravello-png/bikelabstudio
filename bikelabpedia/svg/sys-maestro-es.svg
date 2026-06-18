@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d">
+  <title id="t">Maestro (Giant): doble bieleta co-rotatoria</title>
+  <desc id="d">El Maestro de Giant usa dos bieletas que giran en el mismo sentido (co-rotatorias), con geometría propia. Da una trayectoria del eje casi vertical y anti-squat estable; no es idéntico al DW-link.</desc>
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Maestro (Giant) — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/maestro-giant-es.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. Licencia CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .wh{stroke:#777;stroke-width:3;fill:none}
+    .rt{stroke:#cfcfcf;stroke-width:3;fill:none;stroke-linejoin:round}
+    .ft{stroke:#cfcfcf;stroke-width:3;fill:none}
+    .lk{stroke:#4fb8c8;stroke-width:6;fill:none;stroke-linecap:round}
+    .sh{stroke:#cfcfcf;stroke-width:7;fill:none;stroke-linecap:round}
+    .piv{fill:#050505;stroke:#4fb8c8;stroke-width:2.5}
+    .lab{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:13px}
+    .key{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:15px;font-weight:700}
+    .rot{stroke:#4fb8c8;stroke-width:2.5;fill:none}
+  </style>
+  <text x="380" y="42" text-anchor="middle" class="key" font-size="18">MAESTRO (Giant) · co-rotatorias, geometría propia</text>
+  <circle class="wh" cx="190" cy="312" r="70"/>
+  <polygon class="rt" points="190,312 360,300 330,180 250,250"/>
+  <line class="ft" x1="520" y1="150" x2="500" y2="330"/>
+  <circle cx="500" cy="330" r="8" class="wh" stroke="#cfcfcf"/>
+  <!-- links nearer the BB, co-rotating -->
+  <line class="lk" x1="488" y1="232" x2="360" y2="222"/>
+  <circle cx="488" cy="232" r="6" class="piv"/><circle cx="360" cy="222" r="6" class="piv"/>
+  <path class="rot" d="M412,202 a 15 15 0 0 1 20,6" marker-end="url(#cw)"/>
+  <line class="lk" x1="496" y1="305" x2="372" y2="298"/>
+  <circle cx="496" cy="305" r="6" class="piv"/><circle cx="372" cy="298" r="6" class="piv"/>
+  <path class="rot" d="M420,280 a 15 15 0 0 1 20,6" marker-end="url(#cw2)"/>
+  <text x="430" y="262" text-anchor="middle" class="lab">ambas igual, pero IC más adelante →</text>
+  <line class="sh" x1="500" y1="180" x2="372" y2="240"/>
+  <text x="600" y="250" class="lab">firma: eje casi</text>
+  <text x="600" y="268" class="lab">vertical, anti-squat</text>
+  <text x="600" y="286" class="lab">estable (≠ DW-link)</text>
+  <defs>
+    <marker id="cw" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#4fb8c8"/></marker>
+    <marker id="cw2" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#4fb8c8"/></marker>
+  </defs>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>
