@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="O centro instantaneo de rotacao como ponto onde se cruzam os prolongamentos das duas bielas, com seta de migracao">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Centro instantaneo de rotacao (instant center) — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/centro-instantaneo-de-rotacao-pt.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .ti{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:14px;font-weight:700}
+    .lk{stroke:#4fb8c8;stroke-width:5;stroke-linecap:round}
+    .ex{stroke:#4fb8c8;stroke-width:1.6;stroke-dasharray:6 5;fill:none;opacity:.8}
+    .wh{stroke:#cfcfcf;stroke-width:2.5;fill:none}
+    .pv{fill:#4fb8c8}
+    .lb{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:11px}
+    .lic{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:12px;font-weight:700}
+  </style>
+  <text x="380" y="38" text-anchor="middle" class="ti">CENTRO INSTANTÂNEO = CRUZAMENTO DAS DUAS BIELAS</text>
+
+  <circle cx="600" cy="235" r="60" class="wh"/>
+  <circle cx="600" cy="235" r="5" fill="#cfcfcf"/>
+  <text x="600" y="315" text-anchor="middle" class="lb">eixo / roda</text>
+
+  <line x1="470" y1="165" x2="600" y2="235" stroke="#555" stroke-width="2"/>
+  <line x1="478" y1="305" x2="600" y2="235" stroke="#555" stroke-width="2"/>
+
+  <line x1="380" y1="185" x2="470" y2="165" class="lk"/>
+  <line x1="384" y1="285" x2="478" y2="305" class="lk"/>
+  <text x="430" y="150" text-anchor="middle" class="lb">biela superior</text>
+  <text x="436" y="330" text-anchor="middle" class="lb">biela inferior</text>
+
+  <circle cx="380" cy="185" r="4.5" class="pv"/><circle cx="470" cy="165" r="4.5" class="pv"/>
+  <circle cx="384" cy="285" r="4.5" class="pv"/><circle cx="478" cy="305" r="4.5" class="pv"/>
+
+  <line x1="380" y1="185" x2="150" y2="235" class="ex"/>
+  <line x1="384" y1="285" x2="150" y2="235" class="ex"/>
+
+  <circle cx="150" cy="235" r="13" fill="none" stroke="#4fb8c8" stroke-width="2"/>
+  <circle cx="150" cy="235" r="5" class="pv"/>
+  <text x="150" y="208" text-anchor="middle" class="lic">IC</text>
+  <text x="150" y="270" text-anchor="middle" class="lb">centro instantâneo</text>
+  <text x="150" y="285" text-anchor="middle" class="lb">(pivô virtual)</text>
+
+  <path d="M150,165 q40,-22 80,-6" stroke="#8a6d3b" stroke-width="2" fill="none" marker-end="url(#am)"/>
+  <text x="205" y="135" text-anchor="middle" font-family="'IBM Plex Mono',monospace" fill="#cdbd9a" font-size="11">migra ao comprimir</text>
+  <defs><marker id="am" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#8a6d3b"/></marker></defs>
+
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>
