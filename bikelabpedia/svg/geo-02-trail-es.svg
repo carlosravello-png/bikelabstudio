@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="Diagrama del trail: eje de direccion, offset de horquilla, punto de contacto, trail de suelo y trail mecanico">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Trail de bicicleta: suelo vs mecanico — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/que-es-el-trail-es.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .ti{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:14px;font-weight:700}
+    .wh{stroke:#cfcfcf;stroke-width:2.5;fill:none}
+    .ax{stroke:#4fb8c8;stroke-width:2;stroke-dasharray:7 5;fill:none}
+    .gr{stroke:#555;stroke-width:2}
+    .tg{stroke:#e8a33d;stroke-width:3}
+    .tm{stroke:#4fb8c8;stroke-width:3}
+    .of{stroke:#9a9a9a;stroke-width:2}
+    .lb{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:11px}
+    .lc{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700}
+  </style>
+  <text x="380" y="34" text-anchor="middle" class="ti">TRAIL = (R·cos θ − offset) / sin θ</text>
+
+  <!-- ground -->
+  <line x1="120" y1="370" x2="680" y2="370" class="gr"/>
+  <text x="130" y="388" class="lb">suelo</text>
+
+  <!-- wheel -->
+  <circle cx="500" cy="210" r="160" class="wh"/>
+  <circle cx="500" cy="210" r="5" fill="#cfcfcf"/>
+  <line x1="500" y1="210" x2="500" y2="370" stroke="#444" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="512" y="290" class="lb">R</text>
+  <text x="500" y="200" text-anchor="middle" class="lb">eje</text>
+
+  <!-- steering axis (dashed), hits ground at A=(545,370), top (442,150) -->
+  <line x1="545" y1="370" x2="442" y2="150" class="ax"/>
+  <text x="430" y="142" text-anchor="middle" class="lb">eje de dirección</text>
+
+  <!-- head angle arc at A -->
+  <path d="M520,370 A25,25 0 0 1 538,353" fill="none" stroke="#4fb8c8" stroke-width="1.5"/>
+  <text x="523" y="362" class="lb" fill="#4fb8c8">θ</text>
+
+  <!-- offset: from axis point (470,210) to axle (500,210) -->
+  <line x1="470" y1="210" x2="500" y2="210" class="of"/>
+  <text x="485" y="202" text-anchor="middle" class="lb">offset</text>
+
+  <!-- contact patch B=(500,370) -->
+  <circle cx="500" cy="370" r="5" fill="#e8a33d"/>
+  <text x="500" y="402" text-anchor="middle" class="lb">contacto</text>
+
+  <!-- ground trail B(500)->A(545) -->
+  <line x1="500" y1="378" x2="545" y2="378" class="tg"/>
+  <text x="610" y="382" text-anchor="middle" class="lc" fill="#e8a33d">trail de suelo</text>
+  <text x="610" y="398" text-anchor="middle" class="lb">(el de la tabla)</text>
+
+  <!-- mechanical trail: B(500,370) -> foot on axis (537,353) -->
+  <line x1="500" y1="370" x2="537" y2="353" class="tm"/>
+  <text x="600" y="330" text-anchor="middle" class="lc" fill="#4fb8c8">trail mecánico</text>
+  <text x="600" y="346" text-anchor="middle" class="lb">= suelo × sin θ</text>
+
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>
