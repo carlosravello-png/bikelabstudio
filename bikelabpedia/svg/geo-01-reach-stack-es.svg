@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="Reach y stack: distancia horizontal y vertical desde el pedalier hasta el tope del tubo de direccion">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"><cc:Work rdf:about=""><dc:title>Reach y stack de una bicicleta — BikeLab Studio</dc:title><dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436</dc:title></cc:Agent></dc:creator><dc:publisher>BikeLab Studio — bikelabstudio.com</dc:publisher><dc:source>https://www.bikelabstudio.com/bikelabpedia/que-es-el-reach-es.html</dc:source><dc:rights>© 2026 BikeLab Studio · Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights><dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier><cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+    .ti{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:14px;font-weight:700}
+    .fr{stroke:#666;stroke-width:3;fill:none;stroke-linecap:round}
+    .wh{stroke:#444;stroke-width:2.5;fill:none}
+    .dim{stroke:#4fb8c8;stroke-width:2.5}
+    .gd{stroke:#4fb8c8;stroke-width:1;stroke-dasharray:4 4}
+    .lc{font-family:'IBM Plex Mono',monospace;fill:#4fb8c8;font-size:14px;font-weight:700}
+    .lb{font-family:'IBM Plex Mono',monospace;fill:#9a9a9a;font-size:11px}
+  </style>
+  <text x="380" y="34" text-anchor="middle" class="ti">REACH = HORIZONTAL · STACK = VERTICAL · DESDE EL PEDALIER</text>
+
+  <!-- ground -->
+  <line x1="120" y1="372" x2="660" y2="372" stroke="#333" stroke-width="1.5"/>
+  <!-- wheels -->
+  <circle cx="200" cy="302" r="70" class="wh"/>
+  <circle cx="600" cy="302" r="70" class="wh"/>
+
+  <!-- frame (simplificado) -->
+  <line x1="320" y1="328" x2="278" y2="180" class="fr"/>   <!-- seat tube -->
+  <line x1="278" y1="186" x2="520" y2="196" class="fr"/>   <!-- top tube -->
+  <line x1="320" y1="328" x2="532" y2="256" class="fr"/>   <!-- down tube -->
+  <line x1="520" y1="196" x2="532" y2="256" class="fr"/>   <!-- head tube -->
+  <line x1="532" y1="256" x2="600" y2="302" class="fr"/>   <!-- fork -->
+  <line x1="320" y1="328" x2="200" y2="302" class="fr"/>   <!-- chainstay -->
+  <line x1="320" y1="328" x2="200" y2="302" class="fr"/>
+
+  <!-- BB -->
+  <circle cx="320" cy="328" r="6" fill="#cfcfcf"/>
+  <text x="320" y="350" text-anchor="middle" class="lb">pedalier (BB)</text>
+  <!-- head tube top -->
+  <circle cx="520" cy="196" r="6" fill="#cfcfcf"/>
+  <text x="520" y="182" text-anchor="middle" class="lb">tope tubo dirección</text>
+
+  <!-- guide lines -->
+  <line x1="320" y1="328" x2="520" y2="328" class="gd"/>
+  <line x1="520" y1="196" x2="520" y2="328" class="gd"/>
+
+  <!-- REACH (horizontal) -->
+  <line x1="320" y1="402" x2="520" y2="402" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="320" y1="328" x2="320" y2="408" stroke="#4fb8c8" stroke-width="1"/>
+  <line x1="520" y1="196" x2="520" y2="408" stroke="#4fb8c8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="420" y="396" text-anchor="middle" class="lc">REACH</text>
+
+  <!-- STACK (vertical) -->
+  <line x1="610" y1="196" x2="610" y2="328" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="520" y1="196" x2="618" y2="196" stroke="#4fb8c8" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="320" y1="328" x2="618" y2="328" stroke="#4fb8c8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="648" y="266" text-anchor="middle" class="lc" transform="rotate(90,648,266)">STACK</text>
+
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M2,2 L8,5 L2,8" fill="none" stroke="#4fb8c8" stroke-width="1.5"/></marker></defs>
+  <text x="752" y="425" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY-NC-ND 4.0</text>
+</svg>
