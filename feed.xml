@@ -12,9 +12,20 @@
     <copyright>© 2026 BikeLab Studio. Open access content CC BY 4.0 where noted.</copyright>
     <managingEditor>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</managingEditor>
     <webMaster>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</webMaster>
-    <lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
     <ttl>10080</ttl>
     <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- == NEW · 22 JUNE 2026 · BIKELAB TRAIL CALCULATOR == -->
+    <item>
+      <title>BikeLab Trail Calculator: trail de suelo y mecánico, sensibilidad y trail dinámico (ES/EN/PT)</title>
+      <link>https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html</guid>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <category>Herramientas</category>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Calcula el trail de suelo y mecánico, el wheel flop y la sensibilidad analítica (por grado, offset y diámetro de rueda) desde el ángulo de direccion, el offset y la rueda. Incluye trail dinámico bajo frenada y SAG. Modelo de forma cerrada validado contra un oráculo numérico independiente con guardarraíl de signo. Método abierto CC BY: modelo-trail-validacion-es.html. Versiones EN: trail-calculator-en.html · PT: calculadora-trail-geometria-pt.html</description>
+    </item>
 
     <!-- == NEW · 12 JUNE 2026 · BIKELAB PSI CALCULATOR == -->
     <item>

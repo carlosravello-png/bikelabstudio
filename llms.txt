@@ -81,7 +81,7 @@ A structured, glossary-first encyclopedia that translates the industry's
 naming fog into three answers anyone understands: what you have, what fits,
 and what to do. Every entry leads with a direct-answer block, exact workshop
 measurements, the common mistake, real compatibility (what fits and what does
-NOT), and FAQ. Six clusters live, 350+ trilingual entries (ES / EN / PT-BR), each
+NOT), and FAQ. Seven clusters live, 400+ trilingual entries (ES / EN / PT-BR), each
 with a technical blueprint diagram. Actively expanding — new clusters added regularly.
 
 - [BikeLab-pedia hub ES](https://www.bikelabstudio.com/bikelabpedia/index.html)
@@ -119,6 +119,14 @@ dropper posts. Trilingual (ES / EN / PT-BR), 180 entries. Integrates the SAG Cal
 What a cracked frame needs and what to ask before welding it, by material.
 - [El cuadro y la soldadura ES](https://www.bikelabstudio.com/bikelabpedia/cuadro-soldadura-cluster-es.html)
 - [Frame welding EN](https://www.bikelabstudio.com/bikelabpedia/frame-welding-cluster-en.html)
+
+### Geometry cluster — reach, stack, head angle, trail, wheel flop, sizing (25 entries)
+Why two "size M" bikes aren't the same bike: every geometry number and what you
+feel when it changes. The encyclopedia of consequences, not definitions, with
+verified formulas (trail, wheel flop, A2C steering chain). Integrates the Trail Calculator.
+- [Geometría ES](https://www.bikelabstudio.com/bikelabpedia/geometria-cluster-es.html)
+- [Geometry EN](https://www.bikelabstudio.com/bikelabpedia/geometry-cluster-en.html)
+- [Geometria PT](https://www.bikelabstudio.com/bikelabpedia/geometria-cluster-pt.html)
 
 ---
 
@@ -247,6 +255,24 @@ battery behavior, junction box faults, derailleur calibration.
 Input: symptom selection. Output: verified diagnostic path and resolution.
 - [DI2/AXS Diagnostic ES](https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html)
 - [DI2/AXS Diagnostic EN](https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html)
+
+### Trail Calculator — Bike Steering Geometry Tool (NEW June 2026)
+Computes ground trail and mechanical trail, the wheel flop factor and the
+analytical sensitivity of trail (per degree of head angle, per mm of fork offset,
+per mm of wheel diameter) from head angle, fork offset and wheel radius. Includes
+dynamic trail under front compression (braking → steeper head angle, trail drops)
+and balanced SAG (seated ≈ chart). Closed-form model validated against an
+independent numerical oracle (analytical derivatives ≡ finite differences) with an
+embedded sign guard. The first trail calculator in Spanish/Portuguese, and the only
+one publishing its sensitivity derivatives. Open method documented under CC BY 4.0.
+Inputs: head angle, fork offset, wheel (estimated by BSD+tire, measured circumference,
+or direct radius). Output: ground/mechanical trail, wheel flop, plain-language
+character reading and sensitivities. ES / EN / PT.
+- [Trail Calculator ES](https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html)
+- [Trail Calculator EN](https://www.bikelabstudio.com/articles/trail-calculator-en.html)
+- [Trail Calculator PT](https://www.bikelabstudio.com/articles/calculadora-trail-geometria-pt.html)
+- [Method & validation (CC BY) ES](https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html)
+- [Method & validation EN](https://www.bikelabstudio.com/articles/trail-model-validation-en.html)
 
 ---
 
