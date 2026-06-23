@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Trail de Bicicleta | Geometría de dirección · BikeLab Studio</title>
+<meta name="description" content="Calcula el trail de suelo y mecánico de tu bicicleta a partir del ángulo de dirección, el offset y la rueda. Con sensibilidad por grado/offset/diámetro y trail dinámico bajo frenada y SAG. Modelo físico verificado, abierto.">
+<meta name="keywords" content="calculadora trail bicicleta, trail de suelo mecanico, angulo de direccion offset, wheel flop, geometria mtb">
+<link rel="canonical" href="https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html">
+<link rel="alternate" hreflang="es" href="calculadora-trail-geometria-es.html">
+<link rel="alternate" hreflang="en" href="trail-calculator-en.html">
+<link rel="alternate" hreflang="pt-BR" href="calculadora-trail-geometria-pt.html">
+<link rel="alternate" hreflang="x-default" href="calculadora-trail-geometria-es.html">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Calculadora de Trail de Bicicleta | BikeLab Studio">
+<meta property="og:description" content="Trail de suelo y mecánico desde ángulo, offset y rueda. Sensibilidad y trail dinámico (frenada/SAG). Modelo verificado.">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html">
+<meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Carlos Ravello">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","@id":"https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html#app","name":"Calculadora de Trail de Bicicleta","alternateName":"BikeLab Trail Calculator","applicationCategory":"https://schema.org/UtilitiesApplication","applicationSubCategory":"Ingeniería / Geometría de dirección de la bicicleta","operatingSystem":"Web (cualquier navegador moderno)","browserRequirements":"Requiere JavaScript","softwareVersion":"1.0","datePublished":"2026-06-22","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":"es-PE","description":"Calcula el trail de suelo y el trail mecánico, el factor de wheel flop y la sensibilidad analítica del trail (por grado, por mm de offset, por mm de diámetro de rueda) a partir del ángulo de dirección, el offset de horquilla y el radio de rueda. Incluye trail dinámico bajo compresión frontal (frenada) y SAG equilibrado. Modelo físico de forma cerrada, validado contra un oráculo numérico independiente (derivadas analíticas idénticas a diferencias finitas) con un guardarraíl de signo en el término dinámico.","featureList":["Trail de suelo y mecánico","Factor de wheel flop","Sensibilidad analítica (∂trail/∂ángulo, ∂offset, ∂diámetro)","Trail dinámico: frenada vs SAG equilibrado","Autotest de vectores dorados"],"author":{"@id":"https://carlosravello.com/#person"},"creator":{"@id":"https://carlosravello.com/#person"},"copyrightHolder":{"@id":"https://carlosravello.com/#person"},"copyrightYear":2026,"publisher":{"@id":"https://www.bikelabstudio.com/#business"},"isBasedOn":"https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html","subjectOf":{"@id":"https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html#article"}},
+{"@type":"Person","@id":"https://carlosravello.com/#person","name":"Carlos Eduardo Ravello Joo","url":"https://carlosravello.com","jobTitle":"Investigador Técnico · Fundador, BikeLab Studio","identifier":[{"@type":"PropertyValue","propertyID":"ORCID","value":"0009-0007-5631-7436"},{"@type":"PropertyValue","propertyID":"Google Knowledge Graph ID","value":"kg:/g/11zb6pmf10","url":"https://www.google.com/search?kgmid=/g/11zb6pmf10"}],"sameAs":["https://carlosravello.com","https://orcid.org/0009-0007-5631-7436","https://www.wikidata.org/wiki/Q139714842","https://www.linkedin.com/in/carlos-ravello-joo-3a1047262","https://www.bikelabstudio.com","https://zoovettravel.com"]},
+{"@type":"Organization","@id":"https://www.bikelabstudio.com/#business","name":"BikeLab Studio","url":"https://www.bikelabstudio.com","founder":{"@id":"https://carlosravello.com/#person"},"logo":{"@type":"ImageObject","url":"https://www.bikelabstudio.com/logo-noir.png"},"email":"carlos.ravello@zoovettravel.com"},
+{"@type":"WebSite","@id":"https://www.bikelabstudio.com/#website","name":"BikeLab Studio","url":"https://www.bikelabstudio.com","inLanguage":["es","en","pt-BR"]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Herramientas","item":"https://www.bikelabstudio.com/index.html"},{"@type":"ListItem","position":3,"name":"Calculadora de Trail","item":"https://www.bikelabstudio.com/articles/calculadora-trail-geometria-es.html"}]}
+]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{--bg:#050505;--panel:#0a0a0a;--line:#222;--accent:#4fb8c8;--accent2:#2b6e78;--warn:#cdbd9a;--text:#d7d7d7;--mut:#8a8a8a;--mono:'IBM Plex Mono',monospace;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7}
+.wrap{max-width:760px;margin:0 auto;padding:74px 18px 50px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;padding:13px 18px;background:var(--bg);border-bottom:1px solid #1a1a1a}
+.nav a{font-family:var(--mono);font-size:.7rem;color:#aaa;text-decoration:none;letter-spacing:2px}.nav a:hover{color:#fff}
+.kicker{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:12px}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:900;letter-spacing:-1px;color:#fff;line-height:1.05;margin-bottom:14px}
+.aio{background:#0a1315;border:1px solid #21383c;border-left:3px solid var(--accent);border-radius:12px;padding:16px 20px;margin:0 0 26px}
+.aio p{margin:0;color:#cfcfcf}.aio strong{color:#fff}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:18px 0}
+.card h2{font-size:1.15rem;color:#fff;font-weight:900;margin-bottom:4px}
+.card .sub{font-family:var(--mono);font-size:.66rem;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px}
+.fld{flex:1;min-width:120px}
+label{display:block;font-family:var(--mono);font-size:.66rem;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+input,select{width:100%;background:#070707;border:1px solid #2a2a2a;border-radius:8px;color:#fff;font-family:var(--mono);font-size:1rem;padding:11px 12px}
+input:focus,select:focus{outline:none;border-color:var(--accent)}
+.seg{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.seg button{flex:1;min-width:100px;font-family:var(--mono);font-size:.72rem;letter-spacing:1px;background:#070707;border:1px solid #2a2a2a;color:#9a9a9a;padding:9px;border-radius:8px;cursor:pointer}
+.seg button.on{border-color:var(--accent);color:var(--accent);background:#0a1315}
+.out{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
+.metric{flex:1;min-width:150px;background:#070707;border:1px solid #1c1c1c;border-radius:10px;padding:14px 16px}
+.metric .v{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--accent);line-height:1}
+.metric .v.warn{color:var(--warn)}
+.metric .l{font-family:var(--mono);font-size:.62rem;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-top:7px}
+.feel{border-left:3px solid var(--accent);background:#0a1315;border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;color:#cfcfcf;font-size:.96rem}
+.sens{margin-top:16px;border-top:1px dashed #242424;padding-top:14px}
+.sens .t{font-family:var(--mono);font-size:.64rem;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.sens .l{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.86rem;padding:4px 0;border-bottom:1px solid #141414}
+.sens .l b{color:var(--accent);font-weight:400}
+.dyn{display:none}.dyn.show{display:block}
+.toggle{font-family:var(--mono);font-size:.74rem;color:var(--accent);background:none;border:1px dashed #2a4a50;border-radius:8px;padding:10px;width:100%;cursor:pointer;letter-spacing:1px}
+.note{font-family:var(--mono);font-size:.72rem;color:var(--mut);margin-top:8px;line-height:1.6}
+.badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.66rem;letter-spacing:1px;color:var(--accent);border:1px solid var(--accent2);border-radius:20px;padding:6px 13px;margin:6px 0}
+.badge.bad{color:#e08a8a;border-color:#5a2a2a}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}.badge.bad .dot{background:#e08a8a}
+.method{font-family:var(--mono);font-size:.74rem;color:var(--mut);line-height:1.7;border:1px solid #1a1a1a;border-radius:10px;padding:14px 16px;margin:18px 0}
+.method a{color:var(--accent);text-decoration:none}
+.cta{margin:24px 0 6px;padding:18px 20px;border:1px solid #2a2a2a;border-left:3px solid var(--accent);background:#0a0a0a;border-radius:10px}
+.cta a{color:#fff;text-decoration:none;border-bottom:1px solid #555}
+.sig{margin-top:40px;padding-top:26px;border-top:1px solid #1c1c1c;font-family:var(--mono);font-size:.72rem;color:#5e5e5e}
+h3{color:#fff;font-size:1rem;margin:26px 0 8px}
+p.body{color:#bdbdbd;margin-bottom:12px}
+</style>
+</head>
+<body>
+<nav class="nav"><a href="../index.html">← BIKELAB STUDIO</a><span class="nav-langs" style="display:flex;gap:10px"><a href="trail-calculator-en.html" style="border:1px solid #444;padding:4px 9px">EN</a><a href="calculadora-trail-geometria-pt.html" style="border:1px solid #444;padding:4px 9px">PT</a></span></nav>
+<div class="wrap">
+<span class="kicker">Herramientas · Geometría de dirección</span>
+<h1>Calculadora de Trail</h1>
+<div class="aio"><p>Mete el <strong>ángulo de dirección</strong>, el <strong>offset</strong> de tu horquilla y tu <strong>rueda</strong>, y te calculo el <strong>trail de suelo</strong> (el de las tablas) y el <strong>trail mecánico</strong> (el que genera el autocentrado), el <strong>wheel flop</strong>, y cuánto cambia el trail por cada grado, mm de offset o tamaño de rueda. En avanzado: el <strong>trail dinámico</strong> bajo frenada y bajo SAG. Modelo de forma cerrada, <strong>verificado contra un oráculo numérico independiente</strong>. Nada sale de tu navegador.</p></div>
+
+<div id="selftest"></div>
+
+<div class="card">
+  <h2>Trail estático</h2>
+  <div class="sub">Geometría de dirección · θ desde la horizontal</div>
+  <div class="row">
+    <div class="fld"><label>Ángulo de dirección (°)</label><input id="ha" type="number" value="64" step="0.1" min="40" max="85"></div>
+    <div class="fld"><label>Offset / rake (mm)</label><input id="off" type="number" value="44" step="1" min="0" max="70"></div>
+  </div>
+  <label>Radio de rueda — cómo lo obtienes</label>
+  <div class="seg" id="rmode">
+    <button data-m="est" class="on">Estimar (rueda+neumático)</button>
+    <button data-m="meas">Medido (circunferencia)</button>
+    <button data-m="dir">Directo (R)</button>
+  </div>
+  <div class="row" id="rEst">
+    <div class="fld"><label>Rueda (BSD ISO)</label><select id="bsd"><option value="622">29" / 700c · 622</option><option value="584">27.5" · 584</option><option value="559">26" · 559</option></select></div>
+    <div class="fld"><label>Ancho neumático (mm)</label><input id="tw" type="number" value="56" step="1" min="20" max="80"></div>
+  </div>
+  <div class="row" id="rMeas" style="display:none"><div class="fld"><label>Circunferencia rodada (mm)</label><input id="circ" type="number" value="2310" step="1"></div></div>
+  <div class="row" id="rDir" style="display:none"><div class="fld"><label>Radio R (mm)</label><input id="rdir" type="number" value="367" step="0.5"></div></div>
+
+  <div class="out">
+    <div class="metric"><div class="v" id="tg">—</div><div class="l">Trail de suelo (mm)</div></div>
+    <div class="metric"><div class="v warn" id="tm">—</div><div class="l">Trail mecánico (mm)</div></div>
+    <div class="metric"><div class="v" id="fl" style="font-size:1.4rem">—</div><div class="l">Wheel flop · R usado <span id="rused"></span></div></div>
+  </div>
+  <div class="feel" id="feel">—</div>
+
+  <div class="sens">
+    <div class="t">Sensibilidad (derivadas analíticas)</div>
+    <div class="l"><span>+1° más slack</span><b id="sHA">—</b></div>
+    <div class="l"><span>+1 mm de offset</span><b id="sOff">—</b></div>
+    <div class="l"><span>+10 mm de diámetro de rueda</span><b id="sDia">—</b></div>
+  </div>
+</div>
+
+<button class="toggle" id="dynToggle">▾ Avanzado — trail dinámico (frenada / SAG)</button>
+<div class="card dyn" id="dynCard" style="margin-top:10px">
+  <h2>Trail dinámico</h2>
+  <div class="sub">Cómo cambia el trail mientras ruedas</div>
+  <div class="seg" id="dynmode">
+    <button data-d="front" class="on">Compresión frontal (frenada)</button>
+    <button data-d="bal">SAG equilibrado (sentado)</button>
+  </div>
+  <div class="row">
+    <div class="fld"><label>Batalla / WB (mm)</label><input id="wb" type="number" value="1250" step="5"></div>
+    <div class="fld"><label>Recorrido horquilla (mm)</label><input id="ftr" type="number" value="160" step="5"></div>
+    <div class="fld"><label>SAG horquilla (%)</label><input id="fsag" type="number" value="30" step="1"></div>
+  </div>
+  <div class="row" id="rearRow" style="display:none">
+    <div class="fld"><label>Recorrido trasero (mm)</label><input id="rtr" type="number" value="160" step="5"></div>
+    <div class="fld"><label>SAG trasero (%)</label><input id="rsag" type="number" value="30" step="1"></div>
+  </div>
+  <div class="out">
+    <div class="metric"><div class="v" id="haDyn" style="font-size:1.4rem">—</div><div class="l">Ángulo dinámico (°)</div></div>
+    <div class="metric"><div class="v" id="tgDyn">—</div><div class="l">Trail dinámico (mm)</div></div>
+    <div class="metric"><div class="v" id="dDyn" style="font-size:1.4rem">—</div><div class="l">Δ vs estático (mm)</div></div>
+  </div>
+  <div class="feel" id="dynFeel">—</div>
+  <p class="note" id="dynNote"></p>
+</div>
+
+<div class="method">
+  <strong style="color:#cfcfcf">Modelo, abierto.</strong><br>
+  Trail de suelo = (R·cosθ − offset)/sinθ · Trail mecánico = R·cosθ − offset · Wheel flop = trail·sinθ·cosθ (θ desde horizontal).
+  Dinámico: la compresión de la horquilla baja el A2C → el ángulo se empina → el trail baja (verificado por guardarraíl de signo).
+  Validado contra oráculo numérico independiente (derivadas analíticas ≡ diferencias finitas). <a href="modelo-trail-validacion-es.html">Método y validación →</a> · ORCID 0009-0007-5631-7436.
+</div>
+
+<div class="cta"><span style="font-family:var(--mono);font-size:.62rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px">¿Dudas con tu geometría?</span>Dinos tu modelo y te decimos su trail, su carácter y qué cambiarías. <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20quiero%20analizar%20el%20trail%20de%20mi%20bici%3A%20">Escríbenos por WhatsApp</a></div>
+
+<h3>Qué es el trail y por qué hay dos</h3>
+<p class="body">El <strong>trail de suelo</strong> es el que aparece en las tablas de geometría: la distancia, en el suelo, entre donde apunta el eje de dirección y donde toca el neumático. El <strong>trail mecánico</strong> es la distancia perpendicular al eje de dirección, y es la que de verdad genera el par de autocentrado. Más trail = dirección más estable y plantada; menos = más ágil y rápida. Para entender qué sientes con cada número, mira la <a href="../bikelabpedia/que-es-el-trail-es.html" style="color:var(--accent)">ficha de trail</a> y el <a href="../bikelabpedia/geometria-cluster-es.html" style="color:var(--accent)">clúster de geometría</a>.</p>
+
+<div class="sig">BikeLab Studio · Calculadora de Trail v1.0 / Modelo verificado / Carlos Eduardo Ravello Joo · Trujillo, Perú</div>
+</div>
+
+<script>
+const rad=d=>d*Math.PI/180, deg=r=>r*180/Math.PI;
+// ---- núcleo (idéntico al oráculo) ----
+const trailGround=(R,o,HA)=>{const h=rad(HA);return (R*Math.cos(h)-o)/Math.sin(h);};
+const trailMech=(R,o,HA)=>{const h=rad(HA);return R*Math.cos(h)-o;};
+const wheelFlop=(R,o,HA)=>{const h=rad(HA);return trailGround(R,o,HA)*Math.sin(h)*Math.cos(h);};
+const dT_doff=HA=>-1/Math.sin(rad(HA));
+const dT_dR=HA=>1/Math.tan(rad(HA));
+const dT_dHA=(R,o,HA)=>{const h=rad(HA);return (o*Math.cos(h)-R)/(Math.sin(h)**2)*(Math.PI/180);};
+const dT_dDia=HA=>0.5/Math.tan(rad(HA));
+const frontDrop=(tr,sag,HA)=>tr*sag*Math.sin(rad(HA));
+const HA_front=(tr,sag,HA,WB)=>HA+deg(Math.atan(frontDrop(tr,sag,HA)/WB));
+const HA_bal=(ft,fs,HA,WB,rt,rs)=>HA+deg(Math.atan((frontDrop(ft,fs,HA)-rt*rs)/WB));
+
+// ---- vectores dorados del oráculo (autoverificación) ----
+const GOLDEN=[{R:370,o:44,HA:64,t:131.507},{R:365,o:44,HA:66,t:114.344},{R:360,o:51,HA:71,t:70.019},{R:370,o:44,HA:45,t:307.775}];
+function selfTest(){
+  let ok=true, msg=[];
+  for(const g of GOLDEN){ if(Math.abs(trailGround(g.R,g.o,g.HA)-g.t)>0.02){ok=false;msg.push("vector "+g.HA);} }
+  // guardarraíl de signo: compresión frontal -> steeper + menos trail
+  const hd=HA_front(160,0.30,64,1250), t0=trailGround(370,44,64), t1=trailGround(370,44,hd);
+  if(!(hd>64 && t1<t0)){ok=false;msg.push("signo dinámico");}
+  const el=document.getElementById('selftest');
+  el.innerHTML = ok
+    ? '<span class="badge"><span class="dot"></span>FÍSICA VERIFICADA · oráculo + guardarraíl de signo ✓</span>'
+    : '<span class="badge bad"><span class="dot"></span>FALLO DE VERIFICACIÓN: '+msg.join(', ')+'</span>';
+  return ok;
+}
+
+// ---- estado UI ----
+let rmode='est', dmode='front';
+const $=id=>document.getElementById(id);
+function getR(){
+  if(rmode==='meas') return (+$('circ').value)/(2*Math.PI);
+  if(rmode==='dir')  return +$('rdir').value;
+  return (+$('bsd').value)/2 + (+$('tw').value); // estimado
+}
+function feelText(t){
+  if(t<70) return "Dirección muy rápida y ágil — fácil en lo lento y revirado, pero nerviosa y propensa a irse de línea a alta velocidad.";
+  if(t<95) return "Ágil y reactiva — gira con poco esfuerzo; estable a velocidad media. Carácter de XC / ruta.";
+  if(t<120) return "Equilibrada — buen reparto entre estabilidad y agilidad. Carácter trail polivalente.";
+  if(t<140) return "Estable y plantada — se asienta sola a velocidad y en bajada; algo perezosa en lo lento. Carácter enduro.";
+  return "Muy estable — un riel a velocidad, pero con wheel flop alto: torpe y pesada de dirección a baja velocidad.";
+}
+function compute(){
+  const HA=+$('ha').value, o=+$('off').value, R=getR();
+  $('rused').textContent='= '+R.toFixed(1)+' mm';
+  const tg=trailGround(R,o,HA), tm=trailMech(R,o,HA), fl=wheelFlop(R,o,HA);
+  $('tg').textContent=tg.toFixed(1); $('tm').textContent=tm.toFixed(1); $('fl').textContent=fl.toFixed(1);
+  $('feel').textContent=feelText(tg);
+  $('sHA').textContent=(dT_dHA(R,o,HA)<0?'+':'')+(-dT_dHA(R,o,HA)).toFixed(2)+' mm de trail';
+  $('sOff').textContent=dT_doff(HA).toFixed(2)+' mm de trail';
+  $('sDia').textContent='+'+(dT_dDia(HA)*10).toFixed(1)+' mm de trail';
+  computeDyn(HA,o,R,tg);
+}
+function computeDyn(HA,o,R,tg){
+  const WB=+$('wb').value, ft=+$('ftr').value, fs=(+$('fsag').value)/100;
+  let haD;
+  if(dmode==='bal'){ const rt=+$('rtr').value, rs=(+$('rsag').value)/100; haD=HA_bal(ft,fs,HA,WB,rt,rs); }
+  else { haD=HA_front(ft,fs,HA,WB); }
+  const tgD=trailGround(R,o,haD), d=tgD-tg;
+  $('haDyn').textContent=haD.toFixed(2); $('tgDyn').textContent=tgD.toFixed(1);
+  $('dDyn').textContent=(d>=0?'+':'')+d.toFixed(1);
+  if(dmode==='front'){
+    $('dynFeel').textContent="Bajo frenada/G-out la horquilla se hunde, el ángulo se empina y el trail BAJA: la dirección se vuelve más nerviosa justo cuando clavas el freno. Es transitorio, pero real.";
+    $('dynNote').textContent="Modo front-only: solo se comprime la horquilla (frenada, drop-to-flat, G-out). El tren trasero se considera fijo.";
+  } else {
+    $('dynFeel').textContent="Sentado en tu SAG en una doble suspensión, el frente se hunde (empina) y el trasero también (tumba): se compensan. El cambio neto suele ser ~cero — tu trail sentado ≈ el de la tabla.";
+    $('dynNote').textContent="Modo SAG equilibrado: caída trasera ≈ recorrido·SAG (aproximación vertical; la curva de palanca real es V2). En hardtail pon SAG trasero 0 y colapsa al modo frontal.";
+  }
+}
+// listeners
+['ha','off','bsd','tw','circ','rdir','wb','ftr','fsag','rtr','rsag'].forEach(id=>$(id).addEventListener('input',compute));
+document.querySelectorAll('#rmode button').forEach(b=>b.addEventListener('click',()=>{
+  rmode=b.dataset.m; document.querySelectorAll('#rmode button').forEach(x=>x.classList.toggle('on',x===b));
+  $('rEst').style.display=rmode==='est'?'flex':'none'; $('rMeas').style.display=rmode==='meas'?'flex':'none'; $('rDir').style.display=rmode==='dir'?'flex':'none'; compute();
+}));
+document.querySelectorAll('#dynmode button').forEach(b=>b.addEventListener('click',()=>{
+  dmode=b.dataset.d; document.querySelectorAll('#dynmode button').forEach(x=>x.classList.toggle('on',x===b));
+  $('rearRow').style.display=dmode==='bal'?'flex':'none'; compute();
+}));
+$('dynToggle').addEventListener('click',()=>{const c=$('dynCard');c.classList.toggle('show');$('dynToggle').textContent=(c.classList.contains('show')?'▴':'▾')+' Avanzado — trail dinámico (frenada / SAG)';});
+selfTest(); compute();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de trail de bicicleta: derivación y validación | BikeLab Studio</title>
+<meta name="description" content="Documentación abierta del modelo de trail usado en la calculadora de BikeLab: derivación de forma cerrada del trail de suelo y mecánico, sensibilidades analíticas, modelo dinámico con signo corregido, y validación contra un oráculo numérico independiente.">
+<meta name="keywords" content="modelo trail bicicleta, derivacion trail mecanico, validacion calculadora trail, geometria direccion mtb">
+<link rel="canonical" href="https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html">
+<link rel="alternate" hreflang="es" href="modelo-trail-validacion-es.html">
+<link rel="alternate" hreflang="en" href="trail-model-validation-en.html">
+<link rel="alternate" hreflang="pt-BR" href="modelo-trail-validacao-pt.html">
+<link rel="alternate" hreflang="x-default" href="modelo-trail-validacion-es.html">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Modelo de trail de bicicleta: derivación y validación">
+<meta property="og:description" content="Documentación abierta del modelo: forma cerrada, sensibilidades analíticas, dinámico con signo corregido, validado vs oráculo numérico.">
+<meta property="og:url" content="https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html">
+<meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Carlos Ravello">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["TechArticle","ScholarlyArticle"],"@id":"https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html#article","headline":"Modelo de trail de bicicleta: derivación y validación","name":"Modelo de trail de bicicleta: derivación y validación","description":"Documentación del modelo físico de trail de dirección: derivación de forma cerrada del trail de suelo y mecánico, factor de wheel flop, derivadas analíticas de sensibilidad, modelo de trail dinámico bajo compresión frontal y SAG con el signo corregido, y validación contra un oráculo numérico independiente (derivadas analíticas idénticas a diferencias finitas + guardarraíl de signo).","inLanguage":"es-PE","image":"https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp","datePublished":"2026-06-22","dateModified":"2026-06-22","author":{"@id":"https://carlosravello.com/#person"},"creator":{"@id":"https://carlosravello.com/#person"},"publisher":{"@id":"https://www.bikelabstudio.com/#business"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"about":[{"@type":"Thing","name":"Trail (geometría de dirección)"},{"@type":"Thing","name":"Geometría de bicicleta"}],"citation":"Tony Foale, Motorcycle Handling and Chassis Design.","mainEntityOfPage":"https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html"},
+{"@type":"Person","@id":"https://carlosravello.com/#person","name":"Carlos Eduardo Ravello Joo","url":"https://carlosravello.com","jobTitle":"Investigador Técnico · Fundador, BikeLab Studio","identifier":[{"@type":"PropertyValue","propertyID":"ORCID","value":"0009-0007-5631-7436"},{"@type":"PropertyValue","propertyID":"Google Knowledge Graph ID","value":"kg:/g/11zb6pmf10","url":"https://www.google.com/search?kgmid=/g/11zb6pmf10"}],"sameAs":["https://carlosravello.com","https://orcid.org/0009-0007-5631-7436","https://www.wikidata.org/wiki/Q139714842","https://www.linkedin.com/in/carlos-ravello-joo-3a1047262","https://www.bikelabstudio.com","https://zoovettravel.com"]},
+{"@type":"Organization","@id":"https://www.bikelabstudio.com/#business","name":"BikeLab Studio","url":"https://www.bikelabstudio.com","founder":{"@id":"https://carlosravello.com/#person"},"logo":{"@type":"ImageObject","url":"https://www.bikelabstudio.com/logo-noir.png"}},
+{"@type":"WebSite","@id":"https://www.bikelabstudio.com/#website","name":"BikeLab Studio","url":"https://www.bikelabstudio.com","inLanguage":["es","en","pt-BR"]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.bikelabstudio.com/"},{"@type":"ListItem","position":2,"name":"Artículos","item":"https://www.bikelabstudio.com/index.html"},{"@type":"ListItem","position":3,"name":"Modelo de trail: derivación y validación","item":"https://www.bikelabstudio.com/articles/modelo-trail-validacion-es.html"}]}
+]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{--bg:#050505;--accent:#4fb8c8;--accent2:#2b6e78;--line:#222;--text:#cfcfcf;--mut:#8a8a8a;--mono:'IBM Plex Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.75}
+.wrap{max-width:740px;margin:0 auto;padding:78px 20px 50px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;padding:13px 18px;background:var(--bg);border-bottom:1px solid #1a1a1a}
+.nav a{font-family:var(--mono);font-size:.7rem;color:#aaa;text-decoration:none;letter-spacing:2px}.nav a:hover{color:#fff}.nav span a{border:1px solid #444;padding:4px 9px;margin-left:8px}
+.kicker{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:12px}
+h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:900;letter-spacing:-1px;color:#fff;line-height:1.08;margin-bottom:10px}
+.meta{font-family:var(--mono);font-size:.72rem;color:var(--mut);margin-bottom:26px;line-height:1.7}
+.meta a{color:var(--accent);text-decoration:none}
+h2{font-size:1.25rem;color:#fff;font-weight:900;margin:34px 0 12px;letter-spacing:-.5px}
+p{margin-bottom:14px;color:#bdbdbd}p strong{color:#fff}
+.eq{font-family:var(--mono);background:#0a1315;border:1px solid #21383c;border-radius:10px;padding:13px 16px;color:#d4d4d4;font-size:.94rem;margin:14px 0;overflow-x:auto}
+.box{border:1px solid var(--line);background:#0a0a0a;border-radius:10px;padding:16px 18px;margin:16px 0}
+.box .t{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+th,td{border:1px solid #242424;padding:8px 11px;text-align:left}th{font-family:var(--mono);color:var(--accent);font-size:.66rem;text-transform:uppercase;letter-spacing:1px}td{color:#c4c4c4}
+code{font-family:var(--mono);color:var(--accent);font-size:.9em}
+.cta{margin:26px 0 6px;padding:16px 20px;border:1px solid #2a2a2a;border-left:3px solid var(--accent);background:#0a0a0a;border-radius:10px}
+.cta a{color:#fff;text-decoration:none;border-bottom:1px solid #555}
+.sig{margin-top:42px;padding-top:26px;border-top:1px solid #1c1c1c;font-family:var(--mono);font-size:.72rem;color:#5e5e5e;line-height:1.8}
+.lic{font-family:var(--mono);font-size:.72rem;color:var(--mut);margin-top:10px}
+</style>
+</head>
+<body>
+<nav class="nav"><a href="../index.html">← BIKELAB STUDIO</a><span><a href="trail-model-validation-en.html">EN</a><a href="modelo-trail-validacao-pt.html">PT</a></span></nav>
+<div class="wrap">
+<span class="kicker">Documentación · Método abierto</span>
+<h1>Modelo de trail: derivación y validación</h1>
+<div class="meta">Por Carlos Eduardo Ravello Joo · ORCID <a href="https://orcid.org/0009-0007-5631-7436">0009-0007-5631-7436</a> · BikeLab Studio · 2026<br>Método que respalda la <a href="calculadora-trail-geometria-es.html">Calculadora de Trail</a>. Licencia CC BY 4.0.</div>
+
+<p>Este documento define, de forma reproducible, el modelo físico de trail de dirección que usa nuestra calculadora. No es un artículo divulgativo: es el <strong>registro del método</strong> — la derivación, las fórmulas, el modelo dinámico con su signo, y cómo se validó. Cualquiera puede reproducir cada número.</p>
+
+<h2>1. Convención</h2>
+<p>El ángulo de dirección <strong>θ se mide desde la horizontal</strong> (el de las tablas de geometría: 64° es más slack que 73°). Modelo 2D en el plano central, cuadro rígido, contacto puntual, trail a dirección recta. Es la misma convención con la que los fabricantes calculan el trail de sus tablas, de modo que los resultados son comparables.</p>
+
+<h2>2. Forma cerrada</h2>
+<div class="eq">trail de suelo  = (R·cos θ − offset) / sin θ
+trail mecánico = R·cos θ − offset
+wheel flop     = trail de suelo · sin θ · cos θ</div>
+<p>con <code>R</code> = radio de la rueda al suelo y <code>offset</code> = avance (rake) de la horquilla. El trail mecánico es la distancia perpendicular al eje de dirección —la que genera el par de autocentrado—; el de suelo es el que aparece en las tablas. El factor de wheel flop sigue la convención de Tony Foale (<em>Motorcycle Handling and Chassis Design</em>). Caso de referencia (enduro: R 370, offset 44, θ 64°): trail de suelo <strong>131,5 mm</strong>, mecánico <strong>118,2 mm</strong>, flop 51,8.</p>
+
+<h2>3. Radio: no se inventa</h2>
+<p>El radio admite dos modos etiquetados. <strong>[MEDIDO]</strong>: a partir de la circunferencia rodada real, <code>R = C/2π</code>. <strong>[ESTIMADO]</strong>: <code>R = BSD/2 + ancho</code>, con el diámetro de asiento ISO (622 para 29"/700c, 584 para 27.5", 559 para 26") y la altura del neumático aproximada al ancho. Nunca se presenta una estimación como medición.</p>
+
+<h2>4. Sensibilidades analíticas</h2>
+<p>Las derivadas exactas del trail de suelo (el activo citable; permiten frases-imán reproducibles):</p>
+<div class="eq">∂trail/∂offset = −1 / sin θ
+∂trail/∂R      =  cot θ
+∂trail/∂θ      = (offset·cos θ − R) / sin²θ   (por radián; ×π/180 por grado)
+∂trail/∂D      =  ½ cot θ   (por mm de diámetro)</div>
+<p>En el caso de referencia: <strong>+1° más slack → +7,6 mm</strong> de trail; <strong>+7 mm de offset → −7,8 mm</strong>; <strong>+10 mm de diámetro → +4,9 mm</strong>; pasar de 27.5" a 29" (Δdiámetro 38 mm, mismo ancho) → <strong>+9,3 mm</strong>.</p>
+
+<h2>5. Modelo dinámico (con el signo corregido)</h2>
+<p>Al comprimirse la horquilla baja el A2C (axle-to-crown); el frente cae, el ángulo de dirección se <strong>empina</strong> (θ aumenta) y, como <code>∂trail/∂θ &lt; 0</code>, el <strong>trail baja</strong>. Es el sentido opuesto al del overforking (una horquilla más larga, mayor A2C, hace la bici más slack).</p>
+<div class="eq">Δθ ≈ arctan( ΔA2C·sin θ / batalla )   (steeper, +)</div>
+<table><tr><th>Escenario</th><th>θ</th><th>Trail</th><th>Lectura</th></tr>
+<tr><td>Compresión frontal (frenada)</td><td>64° → 66,0°</td><td>131,5 → 116,7 (Δ −14,8)</td><td>la dirección se vuelve nerviosa al clavar el freno</td></tr>
+<tr><td>SAG equilibrado (sentado, full)</td><td>64° → 63,8°</td><td>131,5 → 133,2 (Δ +1,7)</td><td>≈ sin cambio: sentado ≈ tabla</td></tr></table>
+<p>En SAG equilibrado el frente (empina) y el trasero (tumba) casi se cancelan: el cambio neto es despreciable. El número dramático vive en el transitorio frontal (frenada), y apunta a más steep / menos trail.</p>
+
+<h2>6. Validación</h2>
+<p>El modelo se validó contra un <strong>oráculo numérico independiente</strong> implementado desde cero. Dos pruebas:</p>
+<div class="box"><div class="t">Autovalidación de derivadas</div>Cada derivada analítica se compara con su diferencia finita (perturbación ±1e-5). Coinciden a tres decimales → las derivadas no tienen erratas ni signos cruzados (∂trail/∂θ = −7,58 mm/° por ambas vías).</div>
+<div class="box"><div class="t">Guardarraíl de signo</div>Aserción permanente: bajo compresión frontal, θ debe aumentar y el trail debe bajar. Si una implementación invierte el signo dinámico, la aserción truena. La calculadora porta esta misma prueba y se autoverifica al cargar.</div>
+<p>La linealización del término dinámico (arctan ≈ x) es exacta hasta ~3° de cambio; el error frente al recálculo trigonométrico es del orden de 0,01 mm de trail en todo el rango realista de SAG.</p>
+
+<div class="cta"><span style="font-family:var(--mono);font-size:.62rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px">Usa el modelo</span>Prueba la <a href="calculadora-trail-geometria-es.html">Calculadora de Trail</a> o entiende qué sientes con cada número en el <a href="../bikelabpedia/que-es-el-trail-es.html">clúster de geometría</a>.</div>
+
+<p class="lic">Licencia del método y este documento: <a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--accent)">CC BY 4.0</a> — úsalo y cítalo con atribución. © 2026 Carlos Eduardo Ravello Joo · BikeLab Studio.</p>
+<div class="sig">BikeLab Studio · Modelo de trail / Derivación y validación / Carlos Eduardo Ravello Joo · Trujillo, Perú</div>
+</div>
+</body>
+</html>
