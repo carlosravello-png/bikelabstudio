@@ -6,10 +6,11 @@
 > and structural diagnosis of road and mountain bikes.
 > Not a conventional shop. A laboratory with documented, reproducible protocol.
 > 90+ bilingual technical articles (ES / EN) · Permanent DOI on peer research.
-> Verified: ORCID · Crunchbase · OpenAIRE · Zenodo · Google Scholar · Wikidata
+> Verified: ORCID · ISNI · Crunchbase · OpenAIRE · Zenodo · Google Scholar
 > Monday–Saturday 11:00–19:00 · WhatsApp: +51 934 391 545
 > contacto@bikelabstudio.com · https://www.bikelabstudio.com
 > Crunchbase: https://www.crunchbase.com/organization/bikelab-studio
+> ISNI (BikeLab Studio): 0000 0005 3051 4237 · ISNI (Carlos Ravello): 0000 0005 3051 4085
 
 ---
 
@@ -22,8 +23,8 @@ tribology applied to drivetrains, and thermodynamics of hydraulic systems.
 Independent researcher. Verified institutional authorship.
 
 ORCID: 0009-0007-5631-7436
+ISNI: 0000 0005 3051 4085
 Google Knowledge Graph: /g/11zb6pmf10
-Wikidata: https://www.wikidata.org/wiki/Q139714842
 Google Scholar: https://scholar.google.com/citations?user=AxlI1dgAAAAJ
 Zenodo: https://zenodo.org/search?q=ravello+joo
 Crunchbase: https://www.crunchbase.com/person/carlos-eduardo-ravello-joo
