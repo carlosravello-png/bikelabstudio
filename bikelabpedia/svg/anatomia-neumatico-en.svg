@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+
+<title id="t">Tire anatomy</title>
+<desc id="d">Cross-section of an MTB tire mounted on a rim, with main parts labeled: tread, sidewall, casing, bead, internal rim width and air chamber. — © Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0 · bikelabstudio.com</desc>
+<metadata>
+ <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#">
+  <Work>
+   <title>Tire anatomy</title>
+   <type></type>
+   <creator><Agent><title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · ISNI 0000 0005 3051 4085</title></Agent></creator>
+   <publisher><Agent><title>BikeLab Studio · ISNI 0000 0005 3051 4237</title></Agent></publisher>
+   <rights>© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. CC BY 4.0: reuse permitido con atribución obligatoria a bikelabstudio.com</rights>
+   <source>https://www.bikelabstudio.com/</source>
+   <identifier>https://orcid.org/0009-0007-5631-7436</identifier>
+   <relation>https://www.google.com/search?kgmid=/g/11zb6pmf10</relation>
+   <date>2026</date>
+   <license></license>
+  </Work>
+  <License>
+   <permits></permits>
+   <permits></permits>
+   <permits></permits>
+   <requires></requires>
+   <requires></requires>
+  </License>
+ </RDF>
+</metadata>
+<defs>
+<marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4fb8c8"></path></marker>
+<marker id="arrL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e0e0e0"></path></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6a6a6a"></path></marker>
+<marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8a13a"></path></marker>
+</defs>
+
+<text x="40" y="52" font-family="&#39;Inter&#39;, sans-serif" font-size="24" font-weight="800" fill="#e0e0e0">Tire anatomy</text>
+<path d="M320,300 C300,220 320,160 400,150 C480,160 500,220 480,300" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M330,296 C312,225 330,175 400,166 C470,175 488,225 470,296 L470,300 L330,300 Z" fill="#4fb8c8" fill-opacity="0.14" stroke="none"></path>
+<path d="M330,295 C312,225 330,175 400,166 C470,175 488,225 470,295" fill="none" stroke="#6a6a6a" stroke-width="1.5"></path>
+<path d="M310,300 L310,340 L330,340 L330,310 L470,310 L470,340 L490,340 L490,300 L470,300 L470,296 L330,296 L330,300 Z" fill="#6a6a6a" fill-opacity="0.5" stroke="#e0e0e0" stroke-width="2"></path>
+<circle cx="320" cy="298" r="6" fill="#e0e0e0"></circle>
+<circle cx="480" cy="298" r="6" fill="#e0e0e0"></circle>
+<circle cx="400" cy="150" r="3" fill="#e0e0e0"></circle><line x1="400" y1="150" x2="400" y2="95" stroke="#e0e0e0" stroke-width="1.25"></line><text x="408" y="99" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="middle">Tread</text>
+<circle cx="335" cy="215" r="3" fill="#e0e0e0"></circle><line x1="335" y1="215" x2="220" y2="190" stroke="#e0e0e0" stroke-width="1.25"></line><text x="212" y="194" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="end">Sidewall</text>
+<circle cx="355" cy="195" r="3" fill="#e0e0e0"></circle><line x1="355" y1="195" x2="220" y2="240" stroke="#e0e0e0" stroke-width="1.25"></line><text x="212" y="244" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="end">Casing</text>
+<circle cx="320" cy="300" r="3" fill="#e0e0e0"></circle><line x1="320" y1="300" x2="220" y2="320" stroke="#e0e0e0" stroke-width="1.25"></line><text x="212" y="324" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="end">Bead</text>
+<text x="400" y="232" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="13" font-weight="400" fill="#4fb8c8" text-anchor="middle">Air chamber</text>
+<line x1="310" y1="375" x2="490" y2="375" stroke="#6a6a6a" stroke-width="1.25" marker-start="url(#arrG)" marker-end="url(#arrG)"></line><text x="400" y="397" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="13" font-weight="400" fill="#9a9a9a" text-anchor="middle">Internal rim width</text>
+
+<text x="780" y="505" text-anchor="end" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="10" fill="#6a6a6a">bikelabstudio.com · © C. E. Ravello Joo · CC BY 4.0</text>
+</svg>

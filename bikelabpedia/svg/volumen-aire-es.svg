@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+
+<title id="t">Volumen de aire</title>
+<desc id="d">Comparación de dos cortes transversales, neumático estrecho y ancho, con el área de aire sombreada; a mayor volumen, mayor rango de presión disponible. — © Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0 · bikelabstudio.com</desc>
+<metadata>
+ <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#">
+  <Work>
+   <title>Volumen de aire</title>
+   <type></type>
+   <creator><Agent><title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · ISNI 0000 0005 3051 4085</title></Agent></creator>
+   <publisher><Agent><title>BikeLab Studio · ISNI 0000 0005 3051 4237</title></Agent></publisher>
+   <rights>© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. CC BY 4.0: reuse permitido con atribución obligatoria a bikelabstudio.com</rights>
+   <source>https://www.bikelabstudio.com/</source>
+   <identifier>https://orcid.org/0009-0007-5631-7436</identifier>
+   <relation>https://www.google.com/search?kgmid=/g/11zb6pmf10</relation>
+   <date>2026</date>
+   <license></license>
+  </Work>
+  <License>
+   <permits></permits>
+   <permits></permits>
+   <permits></permits>
+   <requires></requires>
+   <requires></requires>
+  </License>
+ </RDF>
+</metadata>
+<defs>
+<marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4fb8c8"></path></marker>
+<marker id="arrL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e0e0e0"></path></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6a6a6a"></path></marker>
+<marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8a13a"></path></marker>
+</defs>
+
+<text x="40" y="52" font-family="&#39;Inter&#39;, sans-serif" font-size="24" font-weight="800" fill="#e0e0e0">Volumen de aire</text>
+<line x1="400" y1="90" x2="400" y2="460" stroke="#6a6a6a" stroke-width="1.25" stroke-dasharray="4 5"></line>
+
+    <path d="M115,300 C93.75,233.375 115,183.375 200,175 C285,183.375 306.25,233.375 285,300" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M125,296 C106.25,236.304 125,191.504 200,184 C275,191.504 293.75,236.304 275,296 L275,300 L125,300 Z" fill="#4fb8c8" fill-opacity="0.16" stroke="none"></path>
+    <path d="M125,296 C106.25,236.304 125,191.504 200,184 C275,191.504 293.75,236.304 275,296" fill="none" stroke="#6a6a6a" stroke-width="1.5"></path>
+    <path d="M131,300 L131,336 L149,336 L149,308 L251,308 L251,336 L269,336 L269,300 Z" fill="#6a6a6a" fill-opacity="0.5" stroke="#e0e0e0" stroke-width="2"></path>
+    <text x="200" y="375" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="16" font-weight="700" fill="#e0e0e0" text-anchor="middle">Estrecho</text>
+    <text x="200" y="395" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#4fb8c8" text-anchor="middle">Menor volumen</text>
+    
+
+    <path d="M480,300 C450,204.06 480,132.06 600,120 C720,132.06 750,204.06 720,300" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M490,296 C462.5,206.98899999999998 490,140.189 600,129 C710,140.189 737.5,206.98899999999998 710,296 L710,300 L490,300 Z" fill="#4fb8c8" fill-opacity="0.16" stroke="none"></path>
+    <path d="M490,296 C462.5,206.98899999999998 490,140.189 600,129 C710,140.189 737.5,206.98899999999998 710,296" fill="none" stroke="#6a6a6a" stroke-width="1.5"></path>
+    <path d="M496,300 L496,336 L514,336 L514,308 L686,308 L686,336 L704,336 L704,300 Z" fill="#6a6a6a" fill-opacity="0.5" stroke="#e0e0e0" stroke-width="2"></path>
+    <text x="600" y="375" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="16" font-weight="700" fill="#e0e0e0" text-anchor="middle">Ancho</text>
+    <text x="600" y="395" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#4fb8c8" text-anchor="middle">Mayor volumen</text>
+    
+<text x="400" y="460" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="13" font-weight="400" fill="#9a9a9a" text-anchor="middle">A mayor volumen de aire → mayor margen dentro del rango de presión</text>
+
+<text x="780" y="505" text-anchor="end" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="10" fill="#6a6a6a">bikelabstudio.com · © C. E. Ravello Joo · CC BY 4.0</text>
+</svg>

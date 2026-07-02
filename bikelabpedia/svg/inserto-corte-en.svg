@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+
+<title id="t">Insert cross-section</title>
+<desc id="d">Cross-section of a tubeless tire with a foam insert inside the rim channel, protecting the rim and allowing lower pressure within the range. — © Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0 · bikelabstudio.com</desc>
+<metadata>
+ <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#">
+  <Work>
+   <title>Insert cross-section</title>
+   <type></type>
+   <creator><Agent><title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · ISNI 0000 0005 3051 4085</title></Agent></creator>
+   <publisher><Agent><title>BikeLab Studio · ISNI 0000 0005 3051 4237</title></Agent></publisher>
+   <rights>© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. CC BY 4.0: reuse permitido con atribución obligatoria a bikelabstudio.com</rights>
+   <source>https://www.bikelabstudio.com/</source>
+   <identifier>https://orcid.org/0009-0007-5631-7436</identifier>
+   <relation>https://www.google.com/search?kgmid=/g/11zb6pmf10</relation>
+   <date>2026</date>
+   <license></license>
+  </Work>
+  <License>
+   <permits></permits>
+   <permits></permits>
+   <permits></permits>
+   <requires></requires>
+   <requires></requires>
+  </License>
+ </RDF>
+</metadata>
+<defs>
+<marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4fb8c8"></path></marker>
+<marker id="arrL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e0e0e0"></path></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6a6a6a"></path></marker>
+<marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8a13a"></path></marker>
+</defs>
+
+<text x="40" y="52" font-family="&#39;Inter&#39;, sans-serif" font-size="24" font-weight="800" fill="#e0e0e0">Insert cross-section</text>
+<path d="M320,300 C300,220 320,160 400,150 C480,160 500,220 480,300" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M330,296 C312,225 330,175 400,166 C470,175 488,225 470,296 L470,300 L330,300 Z" fill="#4fb8c8" fill-opacity="0.14" stroke="none"></path>
+<path d="M330,295 C312,225 330,175 400,166 C470,175 488,225 470,295" fill="none" stroke="#6a6a6a" stroke-width="1.5"></path>
+<path d="M310,300 L310,340 L330,340 L330,310 L470,310 L470,340 L490,340 L490,300 L470,300 L470,296 L330,296 L330,300 Z" fill="#6a6a6a" fill-opacity="0.5" stroke="#e0e0e0" stroke-width="2"></path>
+<path d="M322,308 Q400,290 478,308 L478,300 L322,300 Z" fill="#6a6a6a" fill-opacity="0.85" stroke="#e0e0e0" stroke-width="2" stroke-linejoin="round"></path>
+<text x="400" y="301" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#e0e0e0" text-anchor="middle">Insert (foam)</text>
+<text x="400" y="232" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="13" font-weight="400" fill="#4fb8c8" text-anchor="middle">Air chamber</text>
+<line x1="322" y1="308" x2="322" y2="400" stroke="#4fb8c8" stroke-width="1.25"></line>
+<line x1="322" y1="400" x2="392" y2="400" stroke="#4fb8c8" stroke-width="1.25" marker-end="url(#arrC)"></line>
+<text x="400" y="420" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#4fb8c8" text-anchor="middle">Protects the rim / allows lower pressure within the range</text>
+
+<text x="780" y="505" text-anchor="end" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="10" fill="#6a6a6a">bikelabstudio.com · © C. E. Ravello Joo · CC BY 4.0</text>
+</svg>

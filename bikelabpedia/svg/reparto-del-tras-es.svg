@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+
+<title id="t">Reparto de peso y presión</title>
+<desc id="d">Silueta lateral de una bicicleta con reparto de peso aproximado (~40% delantera / ~60% trasera) y presiones relativas: delantera más baja para agarre, trasera más alta para carga y tracción. — © Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0 · bikelabstudio.com</desc>
+<metadata>
+ <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#">
+  <Work>
+   <title>Reparto de peso y presión</title>
+   <type></type>
+   <creator><Agent><title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · ISNI 0000 0005 3051 4085</title></Agent></creator>
+   <publisher><Agent><title>BikeLab Studio · ISNI 0000 0005 3051 4237</title></Agent></publisher>
+   <rights>© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. CC BY 4.0: reuse permitido con atribución obligatoria a bikelabstudio.com</rights>
+   <source>https://www.bikelabstudio.com/</source>
+   <identifier>https://orcid.org/0009-0007-5631-7436</identifier>
+   <relation>https://www.google.com/search?kgmid=/g/11zb6pmf10</relation>
+   <date>2026</date>
+   <license></license>
+  </Work>
+  <License>
+   <permits></permits>
+   <permits></permits>
+   <permits></permits>
+   <requires></requires>
+   <requires></requires>
+  </License>
+ </RDF>
+</metadata>
+<defs>
+<marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4fb8c8"></path></marker>
+<marker id="arrL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e0e0e0"></path></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6a6a6a"></path></marker>
+<marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8a13a"></path></marker>
+</defs>
+
+<text x="40" y="52" font-family="&#39;Inter&#39;, sans-serif" font-size="24" font-weight="800" fill="#e0e0e0">Reparto de peso y presión</text>
+<line x1="80" y1="380" x2="720" y2="380" stroke="#6a6a6a" stroke-width="2"></line>
+<circle cx="260" cy="380" r="70" fill="none" stroke="#e0e0e0" stroke-width="2.5"></circle>
+<circle cx="560" cy="380" r="70" fill="none" stroke="#e0e0e0" stroke-width="2.5"></circle>
+<path d="M260,340 L360,220 L470,220 L560,340 M360,220 L400,140 L440,220 M400,140 L330,290 M360,220 L470,220" fill="none" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<line x1="260" y1="310" x2="260" y2="200" stroke="#4fb8c8" stroke-width="2" marker-end="url(#arrC)"></line>
+<text x="260" y="185" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="15" font-weight="700" fill="#4fb8c8" text-anchor="middle">~40% (aprox.)</text>
+<line x1="560" y1="310" x2="560" y2="150" stroke="#4fb8c8" stroke-width="2" marker-end="url(#arrC)"></line>
+<text x="560" y="135" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="15" font-weight="700" fill="#4fb8c8" text-anchor="middle">~60% (aprox.)</text>
+<text x="260" y="440" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#e0e0e0" text-anchor="middle">Delantera</text>
+<text x="560" y="440" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#e0e0e0" text-anchor="middle">Trasera</text>
+<text x="150" y="470" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="start">↓ Presión más baja → agarre</text>
+<text x="650" y="490" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="end">↑ Presión más alta → carga / tracción</text>
+
+<text x="780" y="505" text-anchor="end" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="10" fill="#6a6a6a">bikelabstudio.com · © C. E. Ravello Joo · CC BY 4.0</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+
+<title id="t">Lectura ETRTO en el flanco</title>
+<desc id="d">Marca ETRTO en el flanco del neumático (57-622) con callouts: 57 = ancho de sección en mm, 622 = diámetro de asiento del talón (29&#34;). Tabla de equivalencias con 584 (27.5&#34;) y 559 (26&#34;). — © Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0 · bikelabstudio.com</desc>
+<metadata>
+ <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#">
+  <Work>
+   <title>Lectura ETRTO en el flanco</title>
+   <type></type>
+   <creator><Agent><title>Carlos Eduardo Ravello Joo · ORCID 0009-0007-5631-7436 · ISNI 0000 0005 3051 4085</title></Agent></creator>
+   <publisher><Agent><title>BikeLab Studio · ISNI 0000 0005 3051 4237</title></Agent></publisher>
+   <rights>© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. CC BY 4.0: reuse permitido con atribución obligatoria a bikelabstudio.com</rights>
+   <source>https://www.bikelabstudio.com/</source>
+   <identifier>https://orcid.org/0009-0007-5631-7436</identifier>
+   <relation>https://www.google.com/search?kgmid=/g/11zb6pmf10</relation>
+   <date>2026</date>
+   <license></license>
+  </Work>
+  <License>
+   <permits></permits>
+   <permits></permits>
+   <permits></permits>
+   <requires></requires>
+   <requires></requires>
+  </License>
+ </RDF>
+</metadata>
+<defs>
+<marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4fb8c8"></path></marker>
+<marker id="arrL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e0e0e0"></path></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6a6a6a"></path></marker>
+<marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8a13a"></path></marker>
+</defs>
+
+<text x="40" y="52" font-family="&#39;Inter&#39;, sans-serif" font-size="24" font-weight="800" fill="#e0e0e0">Lectura ETRTO en el flanco</text>
+<path d="M180,300 C160,220 180,160 260,150 C340,160 360,220 340,300" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M190,296 C172,225 190,175 260,166 C330,175 348,225 330,296" fill="none" stroke="#6a6a6a" stroke-width="1.5"></path>
+<rect x="200" y="205" width="120" height="44" rx="6" fill="none" stroke="#e0e0e0" stroke-width="2"></rect>
+<text x="260" y="224" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="20" font-weight="700" fill="#4fb8c8" text-anchor="middle">57-622</text>
+<line x1="212" y1="205" x2="212" y2="140" stroke="#e0e0e0" stroke-width="1.25"></line>
+<text x="212" y="128" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#e0e0e0" text-anchor="middle">57</text>
+<text x="212" y="112" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Ancho de sección (mm)</text>
+<line x1="292" y1="249" x2="292" y2="330" stroke="#4fb8c8" stroke-width="1.25"></line>
+<text x="292" y="346" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#4fb8c8" text-anchor="middle">622</text>
+<text x="292" y="362" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Diámetro de asiento del talón</text>
+<text x="560" y="120" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#e0e0e0" text-anchor="start">Equivalencias ETRTO → pulgadas</text>
+
+  <rect x="560" y="150" width="190" height="40" rx="6" fill="none" stroke="#6a6a6a" stroke-width="1.25"></rect>
+  <text x="575" y="175" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="start">622 mm</text>
+  <text x="735" y="175" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#4fb8c8" text-anchor="end">= 29&#34;</text>
+
+
+  <rect x="560" y="204" width="190" height="40" rx="6" fill="none" stroke="#6a6a6a" stroke-width="1.25"></rect>
+  <text x="575" y="229" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="start">584 mm</text>
+  <text x="735" y="229" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#4fb8c8" text-anchor="end">= 27.5&#34;</text>
+
+
+  <rect x="560" y="258" width="190" height="40" rx="6" fill="none" stroke="#6a6a6a" stroke-width="1.25"></rect>
+  <text x="575" y="283" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="400" fill="#e0e0e0" text-anchor="start">559 mm</text>
+  <text x="735" y="283" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="14" font-weight="700" fill="#4fb8c8" text-anchor="end">= 26&#34;</text>
+
+
+<text x="780" y="505" text-anchor="end" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="10" fill="#6a6a6a">bikelabstudio.com · © C. E. Ravello Joo · CC BY 4.0</text>
+</svg>
