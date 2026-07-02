@@ -131,6 +131,17 @@ Integrates the Trail Calculator.
 - [Geometry EN](https://www.bikelabstudio.com/bikelabpedia/geometry-cluster-en.html)
 - [Geometria PT](https://www.bikelabstudio.com/bikelabpedia/geometria-cluster-pt.html)
 
+### Tire cluster (MTB) — pressure, real width, tubeless, rims, casing, hookless (60 entries)
+Tire pressure is not a number, it's a range with declared uncertainty. Every tire
+variable and what it does to your pressure range: by rider weight, by discipline
+(XC/Trail/Enduro/DH), front vs rear, tubeless, minimum pressure and burping, 29 vs
+27.5, inserts, internal rim width, ETRTO, air volume, TPI and casing types, hookless
+vs hooked (5 bar / 72.5 PSI cap), rolling resistance and grip. Every ficha funnels to
+the PSI Pressure Calculator. The main cluster of the site.
+- [Neumáticos ES](https://www.bikelabstudio.com/bikelabpedia/neumaticos-cluster-es.html)
+- [Tires EN](https://www.bikelabstudio.com/bikelabpedia/tires-cluster-en.html)
+- [Pneus PT](https://www.bikelabstudio.com/bikelabpedia/pneus-cluster-pt.html)
+
 ---
 
 ## Hydraulic Brake Systems — Comprehensive Reference (Flagship 2026)
