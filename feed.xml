@@ -12,10 +12,17 @@
     <copyright>© 2026 BikeLab Studio. Open access content CC BY 4.0 where noted.</copyright>
     <managingEditor>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</managingEditor>
     <webMaster>contacto@bikelabstudio.com (Carlos Eduardo Ravello Joo)</webMaster>
-    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 12:00:00 GMT</lastBuildDate>
     <ttl>10080</ttl>
     <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
 
+<item>
+<title>BikeLab PSI Calculator: nuevo modo MTB — rango por rueda para XC, Trail, Enduro y DH (ES/EN/PT)</title>
+<link>https://www.bikelabstudio.com/articles/psi-calculator-es.html</link>
+<guid isPermaLink="false">psi-calculator-mtb-mode-2026-07</guid>
+<pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+<description>La calculadora PSI suma modo MTB: rango delantera/trasera (no un número) con modelo propio calibrado contra 30 corridas de la guía pública SRAM/Zipp, techo hookless ETRTO 72.5 PSI, insertos según CushCore, banda Monte Carlo sembrada y 8 vectores golden verificados en el navegador contra su oráculo (psi_mtb_oracle.py). Trilingüe ES/EN/PT, interlinkeada con el clúster de neumáticos de BikeLab-pedia.</description>
+</item>
     <!-- == NEW · 22 JUNE 2026 · BIKELAB TRAIL CALCULATOR == -->
     <item>
       <title>BikeLab Trail Calculator: trail de suelo y mecánico, sensibilidad y trail dinámico (ES/EN/PT)</title>

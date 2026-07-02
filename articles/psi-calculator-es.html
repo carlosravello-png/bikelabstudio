@@ -85,11 +85,11 @@
         "Campo opcional de ancho medido con calibre — reduce la incertidumbre a un tercio",
         "Análisis de sensibilidad global (índices de Sobol) publicado",
         "Validación cruzada documentada: 6 casos contra SILCA y Rene Herse",
-        "Arquitectura preparada para módulo MTB (heurísticas de fabricante, próximamente)"
+        "Modo MTB (XC/Trail/Enduro/DH): rango por rueda con modelo propio calibrado contra la guía pública SRAM/Zipp (30 corridas, 2026-07-02), techo hookless ETRTO, guía de insertos CushCore y vectores golden verificados en el navegador"
       ],
       "softwareVersion": "1.0",
       "dateCreated": "2026-06-12",
-      "dateModified": "2026-06-12",
+      "dateModified": "2026-07-02",
       "datePublished": "2026-06-12",
       "creator": {
         "@id": "https://carlosravello.com/#person"
@@ -313,10 +313,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Por qué no cubre MTB?",
+          "name": "¿Cómo calcula el modo MTB si Berto no vale para MTB?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Decisión de diseño documentada: el propio Berto declara que el criterio 15% no es válido para MTB — los aros son proporcionalmente más angostos, los tacos distorsionan la medición de deflección y el objetivo off-road es tracción y absorción, no resistencia a la rodadura. Un módulo MTB separado, basado en heurísticas de fabricantes, está en desarrollo."
+            "text": "Con un motor aparte, porque Berto declara su criterio 15% inválido para MTB. El modo MTB usa un modelo propio ajustado (r.m.s. 0.004 bar) a 30 corridas de la guía pública de presión SRAM/Zipp capturadas en vivo, con techo hookless ETRTO (72.5 PSI), guía de insertos según CushCore y validación por vectores golden contra su oráculo (psi_mtb_oracle.py). Entrega un rango por rueda —la trasera siempre más alta— y la instrucción de empezar en el centro y ajustar ±1 PSI."
           }
         }
       ]
@@ -448,9 +448,10 @@ footer a{color:var(--cyan);text-decoration:none}
   <div class="disc-tabs" role="tablist" aria-label="Disciplina">
     <button class="disc-tab on" id="tabRuta" type="button">RUTA</button>
     <button class="disc-tab" id="tabGravel" type="button">GRAVEL</button>
-    <button class="disc-tab soon" type="button" disabled title="Módulo MTB en desarrollo — heurísticas de fabricante, no Berto">MTB</button>
+    <button class="disc-tab" id="tabMTB" type="button">MTB</button>
   </div>
 
+  <div id="roadPanel">
   <div class="form-grid">
     <div class="field-wrap">
       <label class="field-label" for="inWeight">Peso total: rider + bici + equipo</label>
@@ -532,6 +533,92 @@ footer a{color:var(--cyan);text-decoration:none}
     <div id="warns"></div>
     <p class="note-method" id="noteW"></p>
   </div>
+  </div><!-- /roadPanel -->
+
+  <!-- ============ PANEL MTB (módulo aparte — motor propio, oráculo psi_mtb_oracle.py) ============ -->
+  <div id="mtbPanel" style="display:none">
+  <div class="form-grid">
+    <div class="field-wrap">
+      <label class="field-label" for="mtbWeight">Peso del ciclista con equipo</label>
+      <div class="weight-row">
+        <input class="field-input" id="mtbWeight" type="number" min="40" max="130" step="0.5" placeholder="75">
+        <div class="unit-toggle"><button type="button" id="mtbKg" class="on">kg</button><button type="button" id="mtbLb">lb</button></div>
+      </div>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbDisc">Disciplina</label>
+      <select class="field-select" id="mtbDisc">
+        <option value="xc">XC / Cross-country</option>
+        <option value="trail" selected>Trail</option>
+        <option value="enduro">Enduro</option>
+        <option value="dh">DH / Descenso</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbWidth">Ancho del neumático</label>
+      <select class="field-select" id="mtbWidth"></select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbWheel">Diámetro de rueda</label>
+      <select class="field-select" id="mtbWheel">
+        <option value="29" selected>29″ (ETRTO 622)</option>
+        <option value="27.5">27.5″ (ETRTO 584)</option>
+        <option value="26">26″ (ETRTO 559)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbSys">Sistema</label>
+      <select class="field-select" id="mtbSys">
+        <option value="tubeless" selected>Tubeless</option>
+        <option value="camara">Con cámara</option>
+        <option value="inserto">Tubeless + inserto</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbHook">Tipo de llanta</label>
+      <select class="field-select" id="mtbHook">
+        <option value="hooked" selected>Hooked (con gancho)</option>
+        <option value="hookless">Hookless (sin gancho)</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbCasing">Carcasa</label>
+      <select class="field-select" id="mtbCasing">
+        <option value="estandar" selected>Estándar / trail</option>
+        <option value="reforzada">Reforzada (EXO+, SuperTrail…)</option>
+        <option value="dh">DH / doble capa</option>
+      </select>
+    </div>
+    <div class="field-wrap">
+      <label class="field-label" for="mtbRim">Ancho interno de llanta (mm)</label>
+      <select class="field-select" id="mtbRim"></select>
+    </div>
+  </div>
+
+  <button class="calc-btn" id="btnCalcMTB" type="button">CALCULAR RANGO MTB</button>
+  <div class="error-msg" id="errMTB" role="alert"></div>
+
+  <div class="results" id="resultsMTB" aria-live="polite">
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-wheel">DELANTERA</div>
+        <div class="res-psi" id="mtbResF">—</div>
+        <div class="res-band" id="mtbBandF">—</div>
+        <div class="res-bar" id="mtbBarF">—</div>
+      </div>
+      <div class="res-card">
+        <div class="res-wheel">TRASERA</div>
+        <div class="res-psi" id="mtbResR">—</div>
+        <div class="res-band" id="mtbBandR">—</div>
+        <div class="res-bar" id="mtbBarR">—</div>
+      </div>
+    </div>
+    <div id="mtbWarns"></div>
+    <p class="note-method" id="mtbNote"></p>
+    <p class="note-method" id="mtbLinks">Fichas del clúster: <a href="../bikelabpedia/neumaticos-cluster-es.html" style="color:var(--cyan)">Neumáticos (hub)</a> · <a href="../bikelabpedia/presion-neumaticos-mtb-por-peso-es.html" style="color:var(--cyan)">Presión por peso</a> · <a href="../bikelabpedia/presion-mtb-por-disciplina-es.html" style="color:var(--cyan)">Presión por disciplina</a> · <a href="../bikelabpedia/presion-minima-burping-mtb-es.html" style="color:var(--cyan)">Presión mínima y burping</a></p>
+  </div>
+  <p class="note-method" id="mtbSelfTest" style="color:var(--green)"></p>
+  </div><!-- /mtbPanel -->
 </div>
 
 <!-- ============ AIO-ANSWERS: datos que no existen en otra fuente ============ -->
@@ -608,8 +695,8 @@ footer a{color:var(--cyan);text-decoration:none}
   <h3>8. Riders de más de 90 kg: una divergencia deliberada</h3>
   <p>Para riders >90 kg esta calculadora recomienda presiones más firmes que SILCA. No es un error: el criterio de deflección constante (15% drop) exige que la presión escale linealmente con la carga — un rider más pesado deflecta más la llanta a la misma presión. Las calculadoras que optimizan impedancia saturan con el peso; las que optimizan deflección, no. Elegimos deflección porque es el criterio medible y reproducible. Y estamos dentro del dominio empírico de Berto: él midió hasta 220 lbs por rueda. En la práctica, el techo hookless (72.5 PSI) comprime esta divergencia en la mayoría de ruedas modernas.</p>
 
-  <h3>9. Por qué no MTB (todavía)</h3>
-  <p>Berto declara explícitamente que el criterio 15% no es válido para MTB: aros proporcionalmente más angostos, tacos que distorsionan la medición y un objetivo off-road (tracción, absorción) distinto a la rodadura. Antes que inventar números, preferimos decirlo: el módulo MTB llegará aparte, basado en heurísticas de fabricantes (Maxxis, Schwalbe, Continental). El selector ya está en la interfaz, deshabilitado.</p>
+  <h3>9. El modo MTB: otra física, otra fuente</h3>
+  <p>Berto declara explícitamente que el criterio 15% no es válido para MTB: aros proporcionalmente más angostos, tacos que distorsionan la medición y un objetivo off-road (tracción, absorción) distinto a la rodadura. Por eso el modo MTB <b>no usa Berto</b>: es un modelo propio ajustado por mínimos cuadrados (r.m.s. 0.004 bar) a <b>30 corridas de la guía pública de presión de SRAM/Zipp</b>, capturadas en vivo el 2026-07-02 con harness automatizado (base: bici 13 kg, superficie seca). Modificadores medidos, no inventados: 27.5″ +11%, 26″ +14%, cámara +2.3% (el "−3 psi por tubeless" del folclore queda desmentido), hookless −7.4% más techo duro ETRTO de 72.5 PSI, carcasa reforzada −5% y DH −10%, XC −14% y DH +5% sobre trail/enduro. Los insertos siguen la guía oficial de CushCore (extienden el borde inferior de la banda hasta −5 PSI y suben el suelo de burping). El resultado es un <b>rango por rueda</b> —trasera siempre ~6% más alta, ratio medido— con banda Monte Carlo de 4.000 muestras, y todo el motor está contratado contra su oráculo (<code>psi_mtb_oracle.py</code>): 8 vectores golden + sign guard se verifican en tu navegador cada vez que cargas la página. Dominio calibrado: 55–100 kg, 2.2–2.6″, ruedas 29/27.5/26; fuera de él la UI marca extrapolación.</p>
 
   <h3>10. Límites honestos del modelo</h3>
   <p>Berto midió con tecnología de los 90 y ruedas 700C. La corrección de carcasa es una aproximación de 3 niveles sobre un continuo. Las dos referencias del mercado divergen entre sí hasta 30% en gravel — no existe una "presión óptima" verdadera contra la cual calibrar, solo filosofías empíricas razonables. Esta calculadora elige una (deflección constante), la declara, y publica su incertidumbre. Ajusta ±2-3 PSI según sensaciones: el modelo es el punto de partida riguroso, no el dogma.</p>
@@ -636,7 +723,7 @@ footer a{color:var(--cyan);text-decoration:none}
   <details class="faq"><summary>¿Por qué el techo de 72.5 PSI en hookless?</summary>
     <p>Límite ETRTO sin excepciones (60 PSI si el aro interno es ≥30 mm). Superarlo arriesga desllante súbito. Si tu valor calculado lo excede, mostramos ambos y aplicamos el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos.</p></details>
   <details class="faq"><summary>¿Por qué no cubre MTB?</summary>
-    <p>El propio Berto declara que el 15% drop no vale para MTB (aros más angostos en proporción, tacos que distorsionan la medición, objetivo de tracción y no de rodadura). El módulo MTB llegará aparte con heurísticas de fabricante — antes que inventar números, lo decimos.</p></details>
+    <p>El propio Berto declara que el 15% drop no vale para MTB, así que el modo MTB usa un motor aparte: modelo ajustado a 30 corridas de la guía pública SRAM/Zipp, techo hookless ETRTO, insertos según CushCore y vectores golden verificados en tu navegador contra su oráculo. Rango por rueda, trasera siempre más alta, empieza en el centro y ajusta ±1 PSI.</p></details>
 </section>
 
 
@@ -775,6 +862,126 @@ document.querySelectorAll(".field-input,.field-select").forEach(function(el){
   el.addEventListener("keydown",function(e){if(e.key==="Enter")calc()});
 });
 fillSelects();
+})();
+</script>
+<script>
+/* ============ MODO MTB — módulo independiente ============
+   Motor propio (NO Berto). Contrato: psi_mtb_oracle.py (raíz del repo).
+   Fuente: 30 corridas de la guía pública SRAM/Zipp capturadas 2026-07-02
+   (fit r.m.s. 0.004 bar) · Insertos: CushCore FAQ · Techo hookless: ETRTO.
+   Este bloque NO toca el motor de carretera. */
+(function(){
+"use strict";
+var A=1.925444,B=0.015156,C=-0.380833,D=-0.002667,RF=1.0631;
+var RUEDA={"29":1,"27.5":1.1086,"26":1.1371};
+var SIST={tubeless:1,camara:1.0229,inserto:1};
+var CARC={estandar:1,reforzada:0.9486,dh:0.9029};
+var DISC={xc:0.8571,trail:1,enduro:1,dh:1.0514};
+var HOOKLESS=0.9257,CAP=5.0,INS=0.3447,B2P=14.5038;
+var SIG_KG=2.0,SIG_W=0.06,N_MC=4000;
+var KG2LB=2.20462;
+var $=function(id){return document.getElementById(id)};
+var unit="kg";
+
+function mAro(r){r=Math.max(25,Math.min(35,r));return r<=30?1.0514+(1-1.0514)*(r-25)/5:1+(0.9543-1)*(r-30)/5}
+function centroF(kg,w,rueda,sys,hookless,carc,rim,disc){
+  return (A+B*kg+C*w+D*kg*w)*RUEDA[rueda]*SIST[sys]*(hookless?HOOKLESS:1)*CARC[carc]*mAro(rim)*DISC[disc];
+}
+/* PRNG sembrado (mulberry32): misma entrada → misma banda, en los 3 idiomas */
+var _s=0;function _rng(){_s=_s+0x6D2B79F5|0;var t=Math.imul(_s^_s>>>15,1|_s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}
+function randn(){var u=0,v=0;while(u===0)u=_rng();while(v===0)v=_rng();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+
+/* GOLDEN VECTORS — deben coincidir con psi_mtb_oracle.py a 1e-4 bar */
+var GOLD=[
+ [75,2.4,"29","tubeless",false,"estandar",30,"trail",1.6681,1.7733],
+ [90,2.6,"29","tubeless",false,"reforzada",30,"enduro",1.5891,1.6894],
+ [60,2.2,"29","tubeless",false,"estandar",28,"xc",1.4389,1.5296],
+ [85,2.4,"27.5","camara",false,"estandar",30,"trail",1.9909,2.1165],
+ [100,2.5,"27.5","tubeless",false,"dh",35,"dh",1.8301,1.9455],
+ [70,2.3,"26","tubeless",false,"estandar",25,"trail",2.0098,2.1366],
+ [85,2.4,"29","tubeless",true,"estandar",30,"trail",1.6252,1.7277],
+ [55,2.6,"29","inserto",true,"reforzada",32,"enduro",1.1961,1.2716]
+];
+function selfTest(){
+  var ok=0;
+  for(var i=0;i<GOLD.length;i++){var g=GOLD[i];
+    var f=centroF(g[0],g[1],g[2],g[3],g[4],g[5],g[6],g[7]),r=f*RF;
+    if(Math.abs(f-g[8])<1e-4&&Math.abs(r-g[9])<1e-4)ok++;
+  }
+  var sg=centroF(95,2.4,"29","tubeless",false,"estandar",30,"trail")>centroF(85,2.4,"29","tubeless",false,"estandar",30,"trail")
+    && centroF(85,2.6,"29","tubeless",false,"estandar",30,"trail")<centroF(85,2.4,"29","tubeless",false,"estandar",30,"trail")
+    && centroF(85,2.4,"26","tubeless",false,"estandar",30,"trail")>centroF(85,2.4,"27.5","tubeless",false,"estandar",30,"trail");
+  var msg=(ok===GOLD.length&&sg)?"✓ FÍSICA VERIFICADA — "+ok+"/"+GOLD.length+" vectores golden + sign guard (oráculo psi_mtb_oracle.py)":"✗ SELFTEST FALLÓ ("+ok+"/"+GOLD.length+") — no uses este modo";
+  $("mtbSelfTest").textContent=msg;
+  if(!(ok===GOLD.length&&sg))$("mtbSelfTest").style.color="var(--red)";
+  return ok===GOLD.length&&sg;
+}
+
+var GUIDE={
+ xc:"XC: si tu prioridad es rodar rápido, trabaja la mitad ALTA de tu banda — la eficiencia y las carcasas ligeras empujan hacia arriba.",
+ trail:"Trail: el centro es tu punto de partida; baja hacia el suelo de la banda solo si tu terreno pide agarre y tu carcasa acompaña.",
+ enduro:"Enduro: trabaja la mitad BAJA de tu banda solo con carcasa reforzada o inserto — el agarre extra no compensa una llanta golpeada.",
+ dh:"DH: no bajes del centro sin carcasa DH e inserto — la velocidad de impacto castiga la llanta y el suelo lo marca la supervivencia del aro."
+};
+
+function fillMTB(){
+  var w=$("mtbWidth");if(!w.options.length){for(var v=2.0;v<=2.81;v+=0.1){var val=Math.round(v*10)/10;var o=document.createElement("option");o.value=val;o.textContent=val.toFixed(1)+"″ ("+Math.round(val*25.4)+" mm)";if(val===2.4)o.selected=true;w.appendChild(o)}}
+  var r=$("mtbRim");if(!r.options.length){for(var m=25;m<=35;m++){var o2=document.createElement("option");o2.value=m;o2.textContent=m+" mm";if(m===30)o2.selected=true;r.appendChild(o2)}}
+}
+
+function fmt(x){return (Math.round(x*2)/2).toFixed(1).replace(/\.0$/,"")}
+function calcMTB(){
+  var err=$("errMTB");err.textContent="";
+  var wRaw=parseFloat($("mtbWeight").value);
+  if(!wRaw||wRaw<=0){err.textContent="Ingresa tu peso con equipo.";$("resultsMTB").classList.remove("show");return}
+  var kg=unit==="kg"?wRaw:wRaw/KG2LB;
+  if(kg<40||kg>130){err.textContent="Peso fuera de rango (40–130 kg).";$("resultsMTB").classList.remove("show");return}
+  var w=parseFloat($("mtbWidth").value),rueda=$("mtbWheel").value,sys=$("mtbSys").value;
+  var hookless=$("mtbHook").value==="hookless",carc=$("mtbCasing").value,rim=parseFloat($("mtbRim").value),disc=$("mtbDisc").value;
+  if(hookless&&sys==="camara"){err.textContent="Hookless requiere tubeless: la norma ETRTO define el perfil hookless para talón tubeless. Cambia el sistema o el tipo de llanta.";$("resultsMTB").classList.remove("show");return}
+  var f0=centroF(kg,w,rueda,sys,hookless,carc,rim,disc),r0=f0*RF;
+  /* banda 90% — Monte Carlo sembrado sobre kg±2 y ancho±0.06″ (≈±1.5 mm) */
+  _s=20260702;
+  var fs=new Array(N_MC);
+  for(var i=0;i<N_MC;i++){fs[i]=centroF(kg+SIG_KG*randn(),Math.max(1.8,w+SIG_W*randn()),rueda,sys,hookless,carc,rim,disc)}
+  fs.sort(function(a,b){return a-b});
+  var fLo=fs[Math.floor(.05*N_MC)],fHi=fs[Math.floor(.95*N_MC)];
+  var ins=sys==="inserto";
+  if(ins)fLo=Math.max(0.5,fLo-INS);
+  var rLo=fLo*RF,rHi=fHi*RF;
+  var capped=false;
+  if(hookless){ if(fHi>CAP){fHi=CAP;capped=true} if(rHi>CAP){rHi=CAP;capped=true} if(f0>CAP)f0=CAP; if(r0>CAP)r0=CAP; }
+  var fP=[fLo*B2P,f0*B2P,fHi*B2P],rP=[rLo*B2P,r0*B2P,rHi*B2P];
+  $("mtbResF").innerHTML=fmt(fP[0])+"–"+fmt(fP[2])+"<small> PSI</small>";
+  $("mtbResR").innerHTML=fmt(rP[0])+"–"+fmt(rP[2])+"<small> PSI</small>";
+  $("mtbBandF").textContent="centro "+fmt(fP[1])+" PSI · "+fLo.toFixed(2)+"–"+fHi.toFixed(2)+" bar";
+  $("mtbBandR").textContent="centro "+fmt(rP[1])+" PSI · "+rLo.toFixed(2)+"–"+rHi.toFixed(2)+" bar";
+  $("mtbBarF").textContent=(f0).toFixed(2)+" bar";
+  $("mtbBarR").textContent=(r0).toFixed(2)+" bar";
+  var warns=['<div class="warn-box"><b>Empieza en el centro del rango y ajusta ±1 PSI por salida.</b> '+GUIDE[disc]+'</div>'];
+  if(ins)warns.push('<div class="warn-box"><b>Inserto:</b> el borde inferior de tu banda se extiende hasta −5 PSI (guía oficial CushCore: "la mayoría corre 1–5 psi menos; baja de a 1 psi"). El inserto sube tu suelo de burping, no tu techo.</div>');
+  if(sys==="camara")warns.push('<div class="warn-box"><b>Dato anti-mito:</b> la diferencia real cámara vs tubeless capturada de la referencia es +2.3% (≈ +0.6 PSI) — el "−3 PSI por pasar a tubeless" del folclore NO es una regla numérica.</div>');
+  if(hookless)warns.push('<div class="warn-box cap"><b>Hookless: techo duro 72.5 PSI / 5 bar (ETRTO), sin excepciones.</b>'+(capped?' Tu rango fue capeado.':' Tu rango está muy por debajo del techo — en MTB el límite que importa es el de abajo (burping).')+'</div>');
+  warns.push('<div class="warn-box"><b>El suelo real lo marca el burping</b> — depende de tu llanta, carcasa e insertos, no de una cifra universal. No busques el mínimo a ciegas: <a href="../bikelabpedia/presion-minima-burping-mtb-es.html" style="color:var(--yellow)">ficha de presión mínima y burping</a>.</div>');
+  if(kg<55||kg>100)warns.push('<div class="warn-box red"><b>Extrapolación:</b> el modelo está calibrado entre 55 y 100 kg; fuera de ese dominio el resultado es una extensión lineal marcada como tal.</div>');
+  if(w<2.2||w>2.6)warns.push('<div class="warn-box red"><b>Extrapolación:</b> el dominio calibrado de ancho es 2.2–2.6″; fuera de él el resultado es extensión lineal.</div>');
+  $("mtbWarns").innerHTML=warns.join("");
+  $("mtbNote").textContent="Modelo propio ajustado (r.m.s. 0.004 bar) a 30 corridas de la guía pública de presión SRAM/Zipp, capturadas en vivo el 2026-07-02 (base: bici 13 kg, superficie seca) · Insertos: CushCore FAQ · Techo: ETRTO · Banda: MC "+N_MC+" muestras (peso ±2 kg, ancho ±1.5 mm), percentiles 5–95 · Contrato: psi_mtb_oracle.py.";
+  $("resultsMTB").classList.add("show");
+}
+
+/* wiring — solo AÑADE listeners; no modifica el motor de carretera */
+function showMTB(){$("roadPanel").style.display="none";$("mtbPanel").style.display="block";$("tabMTB").classList.add("on");$("tabRuta").classList.remove("on");$("tabGravel").classList.remove("on")}
+function showRoad(){$("roadPanel").style.display="block";$("mtbPanel").style.display="none";$("tabMTB").classList.remove("on")}
+$("tabMTB").addEventListener("click",showMTB);
+$("tabRuta").addEventListener("click",showRoad);
+$("tabGravel").addEventListener("click",showRoad);
+$("btnCalcMTB").addEventListener("click",calcMTB);
+$("mtbKg").addEventListener("click",function(){unit="kg";this.classList.add("on");$("mtbLb").classList.remove("on")});
+$("mtbLb").addEventListener("click",function(){unit="lb";this.classList.add("on");$("mtbKg").classList.remove("on")});
+$("mtbWeight").addEventListener("keydown",function(e){if(e.key==="Enter")calcMTB()});
+fillMTB();
+selfTest();
 })();
 </script>
 </body>

@@ -8,6 +8,13 @@
 <lastBuildDate>Thu, 02 Jul 2026 12:00:00 GMT</lastBuildDate>
 <atom:link href="https://www.bikelabstudio.com/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
+<title>BikeLab PSI Calculator: nuevo modo MTB — rango por rueda para XC, Trail, Enduro y DH (ES/EN/PT)</title>
+<link>https://www.bikelabstudio.com/articles/psi-calculator-es.html</link>
+<guid isPermaLink="false">psi-calculator-mtb-mode-2026-07</guid>
+<pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+<description>La calculadora PSI suma modo MTB: rango delantera/trasera (no un número) con modelo propio calibrado contra 30 corridas de la guía pública SRAM/Zipp, techo hookless ETRTO 72.5 PSI, insertos según CushCore, banda Monte Carlo sembrada y 8 vectores golden verificados en el navegador contra su oráculo (psi_mtb_oracle.py). Trilingüe ES/EN/PT, interlinkeada con el clúster de neumáticos de BikeLab-pedia.</description>
+</item>
+<item>
 <title>Neumáticos MTB: presión, ancho real, tubeless y llantas explicados (clúster completo) | BikeLab-pedia</title>
 <link>https://www.bikelabstudio.com/bikelabpedia/neumaticos-cluster-es.html</link>
 <guid isPermaLink="true">https://www.bikelabstudio.com/bikelabpedia/neumaticos-cluster-es.html</guid>
