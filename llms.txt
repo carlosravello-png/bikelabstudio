@@ -121,10 +121,12 @@ What a cracked frame needs and what to ask before welding it, by material.
 - [El cuadro y la soldadura ES](https://www.bikelabstudio.com/bikelabpedia/cuadro-soldadura-cluster-es.html)
 - [Frame welding EN](https://www.bikelabstudio.com/bikelabpedia/frame-welding-cluster-en.html)
 
-### Geometry cluster — reach, stack, head angle, trail, wheel flop, sizing (25 entries)
+### Geometry cluster — reach, stack, head angle, trail, wheel flop, sizing, mullet (28 entries)
 Why two "size M" bikes aren't the same bike: every geometry number and what you
 feel when it changes. The encyclopedia of consequences, not definitions, with
-verified formulas (trail, wheel flop, A2C steering chain). Integrates the Trail Calculator.
+verified formulas (trail, wheel flop, A2C steering chain). Covers mullet/MX wheel
+setups, how to compare two bikes, and the common mistakes reading a geometry chart.
+Integrates the Trail Calculator.
 - [Geometría ES](https://www.bikelabstudio.com/bikelabpedia/geometria-cluster-es.html)
 - [Geometry EN](https://www.bikelabstudio.com/bikelabpedia/geometry-cluster-en.html)
 - [Geometria PT](https://www.bikelabstudio.com/bikelabpedia/geometria-cluster-pt.html)
