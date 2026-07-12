@@ -139,4 +139,5 @@
       <line x1="30" y1="700" x2="770" y2="700" stroke="#2a2a2a" stroke-width="1"></line>
       <text x="30" y="720" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
       <text x="30" y="732" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
-    </svg>
+      <text x="791.6" y="741.3" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10.5" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY 4.0</text>
+</svg>

@@ -90,4 +90,5 @@
 
     <defs><marker id="ac" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8" fill="none" stroke="#5fbecb" stroke-width="1.4"></path></marker></defs>
   </g>
+  <text x="752" y="395.4" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY 4.0</text>
 </svg>

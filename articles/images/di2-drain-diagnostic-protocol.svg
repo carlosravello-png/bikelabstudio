@@ -192,4 +192,5 @@
       <text x="670" y="872" fill="#cfcfcf" font-size="10" text-anchor="end">→ Use BikeLab Di2/AXS Diagnostic Tool</text>
       <text x="30" y="872" fill="#5e5e5e" font-size="8.6">© Carlos Eduardo Ravello Joo · BikeLab Studio 2026</text>
       <text x="30" y="884" fill="#4a4a4a" font-size="8.6">carlosravello.com</text>
-    </svg>
+      <text x="692.6" y="889.6" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="9.2" fill="#333">bikelabstudio.com · C.E. Ravello Joo · CC BY 4.0</text>
+</svg>
