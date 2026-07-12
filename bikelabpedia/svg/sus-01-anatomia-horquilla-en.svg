@@ -2,7 +2,34 @@
 <svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
   <title>Fork anatomy — BikeLab Studio</title>
   <desc>Cutaway of a suspension fork: left leg with air spring (positive and negative chamber, piston, bypass) and right leg with damper (oil, compression and rebound valve). © Carlos Eduardo Ravello Joo · carlosravello.com</desc>
-  <metadata><RDF xmlns:dc="http://purl.org/dc/elements/1.1/"><Description><creator>Carlos Eduardo Ravello Joo</creator><rights>© 2026 Carlos Eduardo Ravello Joo. All rights reserved.</rights><publisher>BikeLab Studio</publisher><source>https://carlosravello.com</source><identifier>https://orcid.org/0009-0007-5631-7436</identifier></Description></RDF></metadata>
+  <metadata>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:cc="http://creativecommons.org/ns#">
+   <cc:Work rdf:about="https://www.bikelabstudio.com/bikelabpedia/svg/sus-01-anatomia-horquilla-en.svg">
+    <dc:title>Fork anatomy — BikeLab Studio</dc:title>
+    <dc:description>Cutaway of a suspension fork: left leg with air spring (positive and negative chamber, piston, bypass) and right leg with damper (oil, compression and rebound valve). © Carlos Eduardo Ravello Joo · carlosravello.com</dc:description>
+    <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+    <dc:publisher>BikeLab Studio</dc:publisher>
+    <dc:source>https://www.bikelabstudio.com</dc:source>
+    <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
+    <dc:date>2026</dc:date>
+    <dc:rights>© 2026 BikeLab Studio — CC BY 4.0. Reutilización permitida, incluso comercial. La atribución es obligatoria.</dc:rights>
+    <cc:attributionName>BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436)</cc:attributionName>
+    <cc:attributionURL>https://www.bikelabstudio.com</cc:attributionURL>
+    <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="https://creativecommons.org/licenses/by/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+   </cc:License>
+  </rdf:RDF>
+</metadata>
   <g font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace">
     <rect x="0" y="0" width="760" height="430" rx="14" fill="#050505"></rect>
     <rect x="1" y="1" width="758" height="428" rx="14" fill="none" stroke="#242424" stroke-width="1.5"></rect>

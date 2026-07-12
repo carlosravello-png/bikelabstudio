@@ -12,9 +12,9 @@
         <dc:publisher>BikeLab Studio</dc:publisher>
         <dc:description>Line chart showing boiling point degradation of DOT 4 and DOT 5.1 brake fluid over 18 months in MTB conditions. Includes danger zone and bleed intervals. BikeLab Studio.</dc:description>
         <dc:date>2026-05-30</dc:date>
-        <dc:rights>© 2026 Carlos Eduardo Ravello Joo. CC BY-NC-ND 4.0.</dc:rights>
+        <dc:rights>© 2026 Carlos Eduardo Ravello Joo. CC BY 4.0.</dc:rights>
         <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <cc:attributionName>Carlos Eduardo Ravello Joo — BikeLab Studio</cc:attributionName>
         <cc:attributionURL rdf:resource="https://carlosravello.com"/>
       </rdf:Description>
