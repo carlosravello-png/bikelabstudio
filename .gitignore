@@ -7,3 +7,41 @@ para crear articulos/
 *.tif
 tools/snippets_images.html
 outputs/
+
+# ---------------------------------------------------------------------------
+# INTERNO — nada de esto se sirve al publico.
+#
+# El sitio es GitHub Pages: TODO lo que esta en el repo se puede descargar
+# desde bikelabstudio.com. Los oraculos (psi_mtb_oracle.py, trail_oracle.py)
+# estaban publicos: el modelo fisico de las calculadoras, en abierto, sin
+# licencia, mientras su JavaScript estaba ofuscado para protegerlo.
+#
+# Estos archivos siguen en el disco de Carlos. Solo dejan de publicarse.
+# ---------------------------------------------------------------------------
+
+# Scripts y oraculos
+*.py
+*.pyc
+*.ps1
+
+# Notas internas, auditorias y estrategia
+AUDITORIA-*.md
+NOTAS-INVESTIGACION-*.md
+MAPA-*.md
+MAPEO-*.md
+INFORME-*.md
+INFORME-*.docx
+BIKELAB-PEDIA-*.md
+PAGESPEED-*.md
+WORKSHOP-*.md
+SCHEMA-GUIDE.md
+GUIA-SCHEMA-UNIVERSAL.md
+LISTADO_JSON-LD_*.md
+
+# Borradores
+_drafts-materiales/
+_drafts-suspension/
+
+# Listas de trabajo
+urls.txt
+DEPLOYMENT_*.txt
