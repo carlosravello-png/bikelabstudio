@@ -161,7 +161,9 @@
       },
       "logo": {
         "@type": "ImageObject",
-        "creator": {"@id": "https://carlosravello.com/#person"},
+        "creator": {
+          "@id": "https://carlosravello.com/#person"
+        },
         "url": "https://www.bikelabstudio.com/logo-noir.png",
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html#fotos",
@@ -199,7 +201,7 @@
           "name": "Is a creak while pedaling always the bottom bracket?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. If it creaks mostly seated, the seatpost is the likeliest culprit. Standing, the frame twists and propagates the sound through the tubes; in many cases the real source is dry pedal threads, the cleats, the chainring bolts or the rear hub. The bottom bracket is checked last, by elimination."
+            "text": "No. If it creaks mostly seated, the seatpost is the likeliest culprit. Standing, the frame twists and propagates the sound; in many cases the real source is dry pedal threads, cleats, chainring bolts or the rear hub. The bottom bracket is checked last, by elimination."
           }
         },
         {
@@ -207,7 +209,7 @@
           "name": "Should I grease a press-fit bottom bracket so it doesn't creak?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not on press-fit. Grease lubricates the micro-movement of the cup inside the frame and over time accelerates fretting and brings the creak back. Press-fit uses an anaerobic retaining compound (Loctite 609 metal-to-metal, 641 serviceable, 480 with composite cups); on a carbon frame you need an activator. Grease or anti-seize is for threads (BSA/T47)."
+            "text": "Not on press-fit. Grease lubricates the micro-movement of the cup and over time accelerates fretting and brings the creak back. Press-fit uses a retaining compound (Loctite 609 metal-to-metal, 641 serviceable, 480 with composite cups); on carbon you need an activator. Grease or anti-seize is for threads (BSA/T47)."
           }
         },
         {
@@ -215,7 +217,7 @@
           "name": "Does tightening harder eliminate the creak?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, and it usually damages. Threaded cups go to their torque (~35–50 N·m), no more. The crank preload (dial or wave washer) only removes lateral play with very little torque (1–2 N·m); over-tightening it loads the bearings axially and destroys them. Tightening harder doesn't silence: it breaks."
+            "text": "No, and it usually damages. Threaded cups go to their torque (~35–50 N·m), no more. The crank preload only removes lateral play with very little torque (1–2 N·m); over-tightening loads the bearings axially and destroys them. Tightening harder doesn't silence: it breaks."
           }
         },
         {
@@ -231,7 +233,15 @@
           "name": "How do I tell whether the cup or the bearing is creaking?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Remove the cranks and spin the bearing with your finger: if it feels rough or notchy, the cartridge is damaged (pitting) and gets replaced. If it spins smooth but the bike creaks under real load (climbing or standing), the cup is moving inside the frame: the fix is a retaining compound or correcting the tolerance, not a new bearing."
+            "text": "Remove the cranks and spin the bearing: rough or notchy = damaged cartridge, replace it. If it spins smooth but the bike creaks under real load, the cup is moving inside the frame: the fix is a retaining compound or correcting the tolerance, not a new bearing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Seated or standing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seated → suspect the seatpost first. Standing → BB or false culprits. This single observation saves hours."
           }
         }
       ]

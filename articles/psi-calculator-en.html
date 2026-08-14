@@ -54,14 +54,24 @@
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#app",
       "about": [
         {
-        "@type": "Thing",
-        "@id": "https://www.wikidata.org/wiki/Q55670129",
-        "name": "Bicycle tyre pressure",
-        "description": "Pressure calculation by rider weight, tyre width and discipline, with calibrated model and cross-validation",
-        "sameAs": "https://www.wikidata.org/wiki/Q55670129"
-      },
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q771452", "name": "Bicycle tire", "sameAs": "https://www.wikidata.org/wiki/Q771452"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q223705", "name": "Mountain bike", "sameAs": "https://www.wikidata.org/wiki/Q223705"}
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q55670129",
+          "name": "Bicycle tyre pressure",
+          "description": "Pressure calculation by rider weight, tyre width and discipline, with calibrated model and cross-validation",
+          "sameAs": "https://www.wikidata.org/wiki/Q55670129"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q771452",
+          "name": "Bicycle tire",
+          "sameAs": "https://www.wikidata.org/wiki/Q771452"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q223705",
+          "name": "Mountain bike",
+          "sameAs": "https://www.wikidata.org/wiki/Q223705"
+        }
       ],
       "name": "BikeLab PSI Calculator",
       "alternateName": [
@@ -297,44 +307,11 @@
     {
       "@type": "FAQPage",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-en.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Why does this calculator recommend different pressures than SILCA or Rene Herse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Because they optimize different objective functions. This calculator applies Frank Berto's constant-deflection 15% drop criterion, which requires pressure to scale linearly with load. SILCA optimizes impedance and saturates with weight; Rene Herse gives a single value for both wheels. In our 6-case cross-validation, 9 of 12 wheels landed within ±10% of the average of both references — and every remaining deviation has a documented physical cause."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the uncertainty band (±PSI) mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the 90% confidence interval propagated via Latin Hypercube sampling over the real uncertainty of your inputs: ±2 kg of weight, ±1.5 mm of real width and ±3 points of load distribution. It does not include your pressure gauge error (typically ±5%), which is instrument uncertainty, not model uncertainty. No other calculator on the market publishes this."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why the 72.5 PSI cap on hookless rims?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the ETRTO limit for hookless (straight-side) rims: 72.5 PSI / 5 bar with no exceptions, and 60 PSI if the rim has an internal width of 30 mm or more. Exceeding it risks sudden tire blow-off. If your calculated pressure exceeds the cap, the calculator shows both values and applies the cap. Never exceed the tire or rim manufacturer maximum — whichever is lower."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does MTB mode calculate if Berto doesn't hold for MTB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "With a separate engine, because Berto declares his 15% criterion invalid for MTB. MTB mode uses an own model fitted (r.m.s. 0.004 bar) to 30 runs of the public SRAM/Zipp pressure guide captured live, with the ETRTO hookless cap (72.5 PSI), insert guidance per CushCore, and golden-vector validation against its oracle (psi_mtb_oracle.py). It returns a per-wheel range — rear always higher — and the instruction to start at the center and adjust ±1 PSI."
-          }
-        }
-      ]
+      "mainEntity": []
     }
   ]
 }
-  </script>
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -54,14 +54,24 @@
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app",
       "about": [
         {
-        "@type": "Thing",
-        "@id": "https://www.wikidata.org/wiki/Q55670129",
-        "name": "Presión de neumático de bicicleta",
-        "description": "Cálculo de presión por peso, ancho de llanta y disciplina, con modelo calibrado y validación cruzada",
-        "sameAs": "https://www.wikidata.org/wiki/Q55670129"
-      },
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q771452", "name": "Neumático de bicicleta", "sameAs": "https://www.wikidata.org/wiki/Q771452"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q223705", "name": "Bicicleta de montaña", "sameAs": "https://www.wikidata.org/wiki/Q223705"}
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q55670129",
+          "name": "Presión de neumático de bicicleta",
+          "description": "Cálculo de presión por peso, ancho de llanta y disciplina, con modelo calibrado y validación cruzada",
+          "sameAs": "https://www.wikidata.org/wiki/Q55670129"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q771452",
+          "name": "Neumático de bicicleta",
+          "sameAs": "https://www.wikidata.org/wiki/Q771452"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q223705",
+          "name": "Bicicleta de montaña",
+          "sameAs": "https://www.wikidata.org/wiki/Q223705"
+        }
       ],
       "name": "BikeLab PSI Calculator",
       "alternateName": [
@@ -297,44 +307,11 @@
     {
       "@type": "FAQPage",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Por qué esta calculadora recomienda presiones distintas a SILCA o Rene Herse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Porque optimizan funciones distintas. Esta calculadora aplica el criterio de deflección constante 15% de Frank Berto, que exige que la presión escale linealmente con la carga. SILCA optimiza impedancia y satura con el peso; Rene Herse da un solo valor para ambas ruedas. En nuestra validación cruzada de 6 casos, 9 de 12 ruedas quedaron dentro de ±10% del promedio de ambas referencias — y cada desviación restante tiene causa física documentada."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué significa la banda de incertidumbre (±PSI)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es el intervalo de confianza 90% calculado por muestreo Latin Hypercube sobre la incertidumbre real de los inputs: ±2 kg de peso, ±1.5 mm de ancho real y ±3 puntos de distribución de carga. No incluye el error de tu manómetro (típicamente ±5%), que es incertidumbre de tu instrumento, no del modelo. Ninguna otra calculadora del mercado publica este dato."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Por qué el techo de 72.5 PSI en aros hookless?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es el límite ETRTO para aros sin gancho (hookless): 72.5 PSI / 5 bar sin excepciones, y 60 PSI si el aro tiene ancho interno de 30 mm o más. Superarlo arriesga desllante súbito. Si tu presión calculada excede el techo, la calculadora muestra ambos valores y aplica el techo. Nunca excedas el máximo del fabricante de llanta o aro — el menor de los dos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo calcula el modo MTB si Berto no vale para MTB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Con un motor aparte, porque Berto declara su criterio 15% inválido para MTB. El modo MTB usa un modelo propio ajustado (r.m.s. 0.004 bar) a 30 corridas de la guía pública de presión SRAM/Zipp capturadas en vivo, con techo hookless ETRTO (72.5 PSI), guía de insertos según CushCore y validación por vectores golden contra su oráculo (psi_mtb_oracle.py). Entrega un rango por rueda —la trasera siempre más alta— y la instrucción de empezar en el centro y ajustar ±1 PSI."
-          }
-        }
-      ]
+      "mainEntity": []
     }
   ]
 }
-  </script>
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

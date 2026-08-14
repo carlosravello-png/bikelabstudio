@@ -54,14 +54,24 @@
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#app",
       "about": [
         {
-        "@type": "Thing",
-        "@id": "https://www.wikidata.org/wiki/Q55670129",
-        "name": "Pressão de pneu de bicicleta",
-        "description": "Cálculo de pressão por peso, largura do aro e modalidade, com modelo calibrado e validação cruzada",
-        "sameAs": "https://www.wikidata.org/wiki/Q55670129"
-      },
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q771452", "name": "Pneu de bicicleta", "sameAs": "https://www.wikidata.org/wiki/Q771452"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q223705", "name": "Bicicleta de montanha", "sameAs": "https://www.wikidata.org/wiki/Q223705"}
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q55670129",
+          "name": "Pressão de pneu de bicicleta",
+          "description": "Cálculo de pressão por peso, largura do aro e modalidade, com modelo calibrado e validação cruzada",
+          "sameAs": "https://www.wikidata.org/wiki/Q55670129"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q771452",
+          "name": "Pneu de bicicleta",
+          "sameAs": "https://www.wikidata.org/wiki/Q771452"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q223705",
+          "name": "Bicicleta de montanha",
+          "sameAs": "https://www.wikidata.org/wiki/Q223705"
+        }
       ],
       "name": "BikeLab PSI Calculator",
       "alternateName": [
@@ -297,44 +307,11 @@
     {
       "@type": "FAQPage",
       "@id": "https://www.bikelabstudio.com/articles/psi-calculator-es.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Por que esta calculadora recomenda pressões diferentes de SILCA ou Rene Herse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Porque otimizam funções diferentes. Esta calculadora aplica o critério de deflexão constante 15% de Frank Berto, que exige que a pressão escale linearmente com a carga. SILCA otimiza impedância e satura com o peso; Rene Herse dá um único valor para ambas as rodas. Na nossa validação cruzada de 6 casos, 9 de 12 rodas ficaram dentro de ±10% da média de ambas as referências — e cada desvio restante tem causa física documentada."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O que significa a faixa de incerteza (±PSI)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É o intervalo de confiança 90% calculado por amostragem Latin Hypercube sobre a incerteza real dos inputs: ±2 kg de peso, ±1.5 mm de largura real e ±3 pontos de distribuição de carga. Não inclui o erro do seu manômetro (tipicamente ±5%), que é incerteza do seu instrumento, não do modelo. Nenhuma outra calculadora do mercado publica este dado."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Por que o limite de 72.5 PSI em aros hookless?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É o limite ETRTO para aros sem gancho (hookless): 72.5 PSI / 5 bar sem exceções, e 60 PSI se o aro tiver largura interna de 30 mm ou mais. Ultrapassá-lo arrisca estouro súbito. Se sua pressão calculada exceder o limite, a calculadora mostra ambos os valores e aplica o limite. Nunca ultrapasse o máximo do fabricante do pneu ou aro — o menor dos dois."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como o modo MTB calcula se Berto não vale para MTB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Com um motor à parte, porque Berto declara seu critério 15% inválido para MTB. O modo MTB usa um modelo próprio ajustado (r.m.s. 0.004 bar) a 30 execuções do guia público de pressão SRAM/Zipp capturadas ao vivo, com teto hookless ETRTO (72.5 PSI), guia de insertos segundo a CushCore e validação por vetores golden contra seu oráculo (psi_mtb_oracle.py). Entrega uma faixa por roda — a traseira sempre mais alta — e a instrução de começar no centro e ajustar ±1 PSI."
-          }
-        }
-      ]
+      "mainEntity": []
     }
   ]
 }
-  </script>
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
