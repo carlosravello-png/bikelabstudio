@@ -929,7 +929,32 @@ body {
     </ul>
 </div>
 
-  <div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+  <!-- faq-visible -->
+<section class="faq-section" style="max-width:900px;margin:0 auto;padding:8px 24px 40px;">
+<span class="protocol-tag" style="display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#9a9a00;margin-bottom:10px;">Protocolo_FAQ // Consultas frecuentes</span>
+<h2 style="font-size:1.25rem;margin:0 0 18px;font-weight:800;letter-spacing:-.01em;">Preguntas frecuentes</h2>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Por qué mi Di2 no cambia de marcha?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Las causas más comunes son: (1) Batería agotada o muy baja — revisa el LED indicador en la caja de unión. (2) Modo crash activado tras un impacto — mantén presionado el botón de la caja de unión 3 segundos para salir. (3) Conector E-Tube suelto — recoloca todas las conexiones de la caja de unión. (4) Firmware desactualizado que causa errores de comunicación entre componentes. Usa la herramienta de diagnóstico Di2 de BikeLab Studio para identificar en qué capa está la falla.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Cómo reseteo el pairing de SRAM AXS sin la app?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Retira la batería del desviador trasero. Mantén presionado el botón AXS del RD, luego reinstala la batería mientras sigues presionando el botón — esto inicia un restablecimiento de fábrica. Para volver a emparejar: presiona el botón del RD hasta que el LED parpadee verde lento (modo pairing abierto), luego presiona el botón de cada componente (manetas, tija) hasta ver un parpadeo verde rápido que confirma el emparejamiento. No se requiere la app.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Por qué se descarga rápido la batería del Di2?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">El drenaje anormal de la batería Di2 es casi siempre causado por: el módulo Bluetooth activo (Wireless Unit EW-WU111 o EW-WU101) conectado a la app E-Tube en segundo plano, un bug de firmware en versiones antiguas de Di2, o un cable interno defectuoso con cortocircuito parcial. Verifica en E-Tube si el Bluetooth está activo y desactívalo cuando no estés calibrando. Si el drenaje persiste tras desactivar el Bluetooth y actualizar el firmware, el cable interno debe ser inspeccionado en taller.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué es el modo crash del Di2 y cómo se soluciona?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">El modo crash es un estado de protección que activa automáticamente la caja de unión al detectar un impacto repentino. En modo crash, el movimiento del desviador delantero queda bloqueado para evitar daños por un hanger doblado o tren de tracción desalineado. El LED de la caja de unión parpadea con un patrón específico. Para salir: primero endereza el hanger, luego mantén presionado el botón de la caja de unión durante 3 segundos hasta que el LED cambie. El sistema reanudará la operación normal.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Puedo actualizar el firmware Di2 por Bluetooth?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">No — nunca actualices el firmware Shimano Di2 por Bluetooth. Una actualización interrumpida puede corromper la memoria EPROM y dejar el sistema inoperativo de forma permanente. La recuperación requiere la herramienta de diagnóstico SM-PCE02, disponible solo en centros de servicio Shimano certificados. Siempre actualiza Di2 por cable USB usando E-TUBE PROJECT en un computador, con la batería por encima del 50% y sin interrumpir la conexión.</p>
+</div>
+</section>
+<div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
     <p class="license-notice" style="font-size:0.68rem;line-height:1.75;color:#7a7a7a;border-top:1px solid #333;padding-top:18px;margin:0;">© 2026 BikeLab Studio. Contenido bajo <a href="/licencia.html" style="color:#9a9a00;">CC BY 4.0</a>: puedes copiarlo, traducirlo y publicarlo, incluso con fines comerciales. La cita es obligatoria. Sin atribución, la licencia se revoca de forma automática (CC BY 4.0, §6.a) y el uso pasa a ser una infracción de derechos de autor: solicitamos la retirada del contenido y su desindexación. · Diseño y propiedad: Carlos Ravello Joo</p>
   </div>
 </body>

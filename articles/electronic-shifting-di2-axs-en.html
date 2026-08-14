@@ -593,7 +593,32 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; font-famil
     </ul>
 </div>
 
-  <div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+  <!-- faq-visible -->
+<section class="faq-section" style="max-width:900px;margin:0 auto;padding:8px 24px 40px;">
+<span class="protocol-tag" style="display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#9a9a00;margin-bottom:10px;">Protocol_FAQ // Common questions</span>
+<h2 style="font-size:1.25rem;margin:0 0 18px;font-weight:800;letter-spacing:-.01em;">Frequently asked questions</h2>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">Why is my Shimano Di2 not shifting?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">The most common causes are: (1) Dead or low battery — check the indicator LED on the junction box. (2) Di2 crash mode triggered after an impact — press and hold the junction box button for 3 seconds to exit. (3) Loose E-Tube connector — reseat all junction box connections. (4) Outdated firmware causing communication errors between components. Use the BikeLab Di2 diagnostic tool to identify which layer the failure is in.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">How do I reset SRAM AXS pairing without the app?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Remove the battery from the rear derailleur. Press and hold the AXS button on the RD, then reinstall the battery while still holding — this initiates a factory reset. To re-pair: press the RD button until the LED blinks slow green (pairing mode open), then press the button on each component (shifters, dropper) until you see a fast green blink confirming pairing. No app required.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">Why does my Di2 battery drain so fast?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Abnormal Di2 battery drain is almost always caused by: active Bluetooth module (Wireless Unit EW-WU111 or EW-WU101) connected to E-Tube app in the background, a firmware bug on older Di2 versions, or a faulty internal cable with a partial short. Check in E-Tube whether Bluetooth is active and turn it off when not calibrating. If drain persists after disabling Bluetooth and updating firmware, the internal cable should be inspected at a workshop.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">What is Di2 crash mode and how do I fix it?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Di2 crash mode is a protective state the junction box enters automatically when it detects a sudden impact. In crash mode, the front derailleur movement is locked to prevent damage from a bent hanger or misaligned drivetrain. The junction box LED blinks in a specific pattern. To exit: straighten the hanger first, then press and hold the junction box button for 3 seconds until the LED pattern changes. The system will resume normal operation.</p>
+</div>
+<div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">Can I update Di2 firmware via Bluetooth?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">No — never update Shimano Di2 firmware via Bluetooth. An interrupted update can corrupt the EPROM memory and permanently brick the system. Recovery requires the SM-PCE02 dealer diagnostic tool, available only at certified Shimano service centers. Always update Di2 via USB cable using E-TUBE PROJECT on a computer, with the battery above 50% and without interrupting the connection.</p>
+</div>
+</section>
+<div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
     <p class="license-notice" style="font-size:0.68rem;line-height:1.75;color:#7a7a7a;border-top:1px solid #333;padding-top:18px;margin:0;">© 2026 BikeLab Studio. Content under <a href="/licencia-en.html" style="color:#9a9a00;">CC BY 4.0</a>: you may copy, translate and publish it, even for commercial purposes. Citation is mandatory. Without attribution, the license terminates automatically (CC BY 4.0, §6.a) and the use becomes copyright infringement: we request the removal of the content and its deindexing. · Design and ownership: Carlos Ravello Joo</p>
   </div>
 </body>
