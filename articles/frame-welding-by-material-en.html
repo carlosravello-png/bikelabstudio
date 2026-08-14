@@ -71,11 +71,36 @@
       "headline": "Bicycle Frame Welding by Material: What the Sources Say",
       "alternativeHeadline": "A Documented Synthesis of Process, Alloys and Assessment Criteria",
       "about": [
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q131172", "name": "Bicycle frame welding", "sameAs": "https://www.wikidata.org/wiki/Q131172"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q447725", "name": "Aluminum alloys 6061 and 7005", "sameAs": "https://www.wikidata.org/wiki/Q447725"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q2137729", "name": "Heat-affected zone (HAZ)", "sameAs": "https://www.wikidata.org/wiki/Q2137729"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q11442", "name": "Bicycle", "sameAs": "https://www.wikidata.org/wiki/Q11442"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q167130", "name": "Bicycle frame", "sameAs": "https://www.wikidata.org/wiki/Q167130"}
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q131172",
+          "name": "Bicycle frame welding",
+          "sameAs": "https://www.wikidata.org/wiki/Q131172"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q447725",
+          "name": "Aluminum alloys 6061 and 7005",
+          "sameAs": "https://www.wikidata.org/wiki/Q447725"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q2137729",
+          "name": "Heat-affected zone (HAZ)",
+          "sameAs": "https://www.wikidata.org/wiki/Q2137729"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q11442",
+          "name": "Bicycle",
+          "sameAs": "https://www.wikidata.org/wiki/Q11442"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q167130",
+          "name": "Bicycle frame",
+          "sameAs": "https://www.wikidata.org/wiki/Q167130"
+        }
       ],
       "author": {
         "@id": "https://carlosravello.com/#person"
@@ -154,7 +179,9 @@
       },
       "logo": {
         "@type": "ImageObject",
-        "creator": {"@id": "https://carlosravello.com/#person"},
+        "creator": {
+          "@id": "https://carlosravello.com/#person"
+        },
         "url": "https://www.bikelabstudio.com/logo-noir.png",
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html#fotos",
@@ -207,7 +234,7 @@
           "name": "Can an aluminum frame be welded?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Physically yes, with TIG. What changes depending on the alloy is what happens afterward. The 6061 loses its temper in the heat-affected zone, and restoring it requires a full heat treatment of the frame in an oven; the 7005 is self-tempering in air and naturally recovers up to around 80% of its strength. That is why the technical question is not 'can it be welded?' but 'which alloy is it?'. The decision to repair and ride again belongs to the cyclist and their professional."
+            "text": "Physically yes, with TIG. What changes depending on the alloy is what happens afterward: the 6061 loses its temper in the HAZ and restoring it requires an oven; the 7005 is self-tempering and recovers ~80% on its own. The technical question is not \"can it be welded?\" but \"which alloy is it?\". The decision to repair and ride is the cyclist's and their professional's."
           }
         },
         {
@@ -215,7 +242,7 @@
           "name": "How do I know if what I have is a crack or just the paint?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The standard method is dye penetrant inspection: you clean and degrease, apply a colored penetrant, remove the excess, and a developer draws out the discontinuity. Signs of a structural crack: it concentrates near joints, reappears after cleaning, and often bleeds a line of rust from inside."
+            "text": "The standard method is dye penetrant inspection. Signs of a real crack: it concentrates near joints, reappears after cleaning and degreasing, and often bleeds a line of rust from inside."
           }
         },
         {
@@ -223,7 +250,7 @@
           "name": "How do I know if the welder knows bicycle frames?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Four checks, not as a certification but as a filter: that they distinguish TIG from brazing depending on the material; that they use a coherent filler (4043 or 5356 on aluminum); that they purge with argon on titanium; and that they account for post-weld heat treatment on 6061. The promise that it will be 'as good as new' correlates with less competence, not more."
+            "text": "Four checks as a filter: that they distinguish TIG from brazing depending on the material; coherent filler (4043/5356); argon purge on titanium; post-weld heat treatment on 6061. The promise of \"as good as new\" correlates with less competence."
           }
         },
         {
@@ -231,15 +258,15 @@
           "name": "Can carbon be welded?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Carbon fiber is a thermoset: it does not melt to be rejoined like a metal. The existing repair is by relamination (scarf) in a composites shop, not by welding. The literature reports recoveries of 70 to 100 percent of design strength with a well-made scarf."
+            "text": "No. It is a thermoset: it does not melt to be rejoined. It is repaired by relamination (scarf) in a composites shop, with documented recoveries of 70 to 100% of design strength."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does a frame sometimes break next to the weld and not where the crack was?",
+          "name": "Why did the frame break next to the weld and not where it was?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because of the heat-affected zone (HAZ): the band around the bead where the material altered its properties without melting. In aluminum 6061 that band stays soft if it is not heat-treated, and it is there —not in the bead— that the new failure usually appears."
+            "text": "Because of the heat-affected zone (HAZ): the band around the bead where the material altered its properties without melting. In 6061 it stays soft if it is not heat-treated, and it is there that the new failure usually appears."
           }
         }
       ]

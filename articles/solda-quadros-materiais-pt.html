@@ -71,11 +71,36 @@
       "headline": "Solda de Quadros de Bicicleta por Material: O que Dizem as Fontes",
       "alternativeHeadline": "Síntese Documentada de Processo, Ligas e Critérios de Avaliação",
       "about": [
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q131172", "name": "Solda de quadros de bicicleta", "sameAs": "https://www.wikidata.org/wiki/Q131172"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q447725", "name": "Ligas de alumínio 6061 e 7005", "sameAs": "https://www.wikidata.org/wiki/Q447725"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q2137729", "name": "Zona afetada pelo calor (ZAC)", "sameAs": "https://www.wikidata.org/wiki/Q2137729"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q11442", "name": "Bicicleta", "sameAs": "https://www.wikidata.org/wiki/Q11442"},
-        {"@type": "Thing", "@id": "https://www.wikidata.org/wiki/Q167130", "name": "Quadro de bicicleta", "sameAs": "https://www.wikidata.org/wiki/Q167130"}
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q131172",
+          "name": "Solda de quadros de bicicleta",
+          "sameAs": "https://www.wikidata.org/wiki/Q131172"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q447725",
+          "name": "Ligas de alumínio 6061 e 7005",
+          "sameAs": "https://www.wikidata.org/wiki/Q447725"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q2137729",
+          "name": "Zona afetada pelo calor (ZAC)",
+          "sameAs": "https://www.wikidata.org/wiki/Q2137729"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q11442",
+          "name": "Bicicleta",
+          "sameAs": "https://www.wikidata.org/wiki/Q11442"
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://www.wikidata.org/wiki/Q167130",
+          "name": "Quadro de bicicleta",
+          "sameAs": "https://www.wikidata.org/wiki/Q167130"
+        }
       ],
       "author": {
         "@id": "https://carlosravello.com/#person"
@@ -154,7 +179,9 @@
       },
       "logo": {
         "@type": "ImageObject",
-        "creator": {"@id": "https://carlosravello.com/#person"},
+        "creator": {
+          "@id": "https://carlosravello.com/#person"
+        },
         "url": "https://www.bikelabstudio.com/logo-noir.png",
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html#fotos",
@@ -207,7 +234,7 @@
           "name": "Dá para soldar um quadro de alumínio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fisicamente sim, com TIG. O que muda conforme a liga é o que acontece depois. O 6061 perde a têmpera na zona afetada pelo calor e restituí-la exige tratamento térmico completo do quadro em forno; o 7005 é autotemperante ao ar e recupera de forma natural até cerca de 80% da sua resistência. Por isso a pergunta técnica não é 'dá para soldar?' e sim 'que liga é essa?'. A decisão de reparar e voltar a rodar cabe ao ciclista e ao seu profissional."
+            "text": "Fisicamente sim, com TIG. O que muda conforme a liga é o que acontece depois: o 6061 perde a têmpera na ZAC e restituí-la exige forno; o 7005 é autotemperante e recupera ~80% sozinho. A pergunta técnica não é \"dá para soldar?\" e sim \"que liga é essa?\". A decisão de reparar e rodar é do ciclista e do seu profissional."
           }
         },
         {
@@ -215,7 +242,7 @@
           "name": "Como sei se o que tenho é uma trinca ou só a pintura?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O método padrão é a inspeção por líquidos penetrantes: limpa-se e desengordura-se, aplica-se um penetrante colorido, retira-se o excesso e um revelador desenha a descontinuidade. Sinais de trinca estrutural: concentra-se perto de uniões, reaparece após limpar e muitas vezes sangra uma linha de óxido a partir do interior."
+            "text": "O método padrão é a inspeção por líquidos penetrantes. Sinais de trinca real: concentra-se perto de uniões, reaparece após limpar e desengordurar, e muitas vezes sangra uma linha de óxido a partir do interior."
           }
         },
         {
@@ -223,7 +250,7 @@
           "name": "Como sei se o soldador entende de quadros de bicicleta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Quatro verificações, não como certificação e sim como filtro: que distinga TIG de brazing conforme o material; que use metal de adição coerente (4043 ou 5356 no alumínio); que purgue com argônio no titânio; e que contemple tratamento térmico posterior no 6061. A promessa de que ficará 'como novo' correlaciona-se com menor competência, não maior."
+            "text": "Quatro verificações como filtro: que distinga TIG de brazing conforme o material; metal de adição coerente (4043/5356); purga de argônio no titânio; tratamento térmico posterior no 6061. A promessa de \"como novo\" correlaciona-se com menor competência."
           }
         },
         {
@@ -231,15 +258,15 @@
           "name": "O carbono pode ser soldado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não. A fibra de carbono é termofixa: não funde para uni-la de novo como um metal. O reparo existente é por relaminação (scarf) numa oficina de compósitos, não por solda. A literatura reporta recuperações de 70 a 100 por cento da resistência de projeto com um scarf bem feito."
+            "text": "Não. É termofixo: não funde para reuni-lo. Repara-se por relaminação (scarf) numa oficina de compósitos, com recuperações documentadas de 70 a 100% da resistência de projeto."
           }
         },
         {
           "@type": "Question",
-          "name": "Por que um quadro às vezes se rompe ao lado da solda e não onde estava a trinca?",
+          "name": "Por que o quadro se rompeu ao lado da solda e não onde estava?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pela zona afetada pelo calor (ZAC): a faixa ao redor do cordão onde o material alterou suas propriedades sem fundir. No alumínio 6061 essa faixa fica mole se não for tratada termicamente, e é ali —não no cordão— que costuma aparecer a nova falha."
+            "text": "Pela zona afetada pelo calor (ZAC): a faixa ao redor do cordão onde o material alterou suas propriedades sem fundir. No 6061 fica mole se não for tratada termicamente, e é ali que costuma aparecer a nova falha."
           }
         }
       ]
