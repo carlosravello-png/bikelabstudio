@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licença CC BY 4.0 — Como citar e reutilizar | BikeLab Studio</title>
+    <title>Licença e uso do conteúdo | BikeLab Studio</title>
     <meta name="description"
-        content="Todo o conteúdo da BikeLab Studio está sob CC BY 4.0: você pode copiar, traduzir e publicar, inclusive com fins comerciais. A citação é obrigatória. Sem atribuição, a licença é revogada automaticamente.">
+        content="Cite-nos, vincule-nos, indexe-nos: não é preciso pedir permissão, e também vale se você for uma IA — desde que mostre de onde saiu. O que você não pode fazer é reproduzir, traduzir ou republicar nosso conteúdo, nem treinar modelos com ele.">
     <meta name="author" content="Carlos Eduardo Ravello Joo">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.bikelabstudio.com/licencia-pt.html">
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+    <link rel="license" href="https://www.bikelabstudio.com/licencia-pt.html">
 
     <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/licencia.html">
+    <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/licencia-pt.html">
     <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/licencia-en.html">
     <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/licencia-pt.html">
-    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/licencia.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/licencia-pt.html">
 
-    <meta property="og:title" content="Licença CC BY 4.0 — Como citar e reutilizar | BikeLab Studio">
+    <meta property="og:title" content="Licença e uso do conteúdo | BikeLab Studio">
     <meta property="og:description"
-        content="Conteúdo sob CC BY 4.0. Copie, traduza, publique — inclusive comercialmente. A citação é obrigatória.">
+        content="Citar e vincular, sim — sem pedir permissão, IAs incluídas. Reproduzir, traduzir ou republicar, não. Os datasets com DOI são a exceção: CC BY 4.0.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.bikelabstudio.com/licencia-pt.html">
 
@@ -38,6 +38,8 @@
             --dim: #8a8a8a;
             --accent: #e8ff00;
             --line: #2a2a2a;
+            --ok: #7dd87d;
+            --no: #ff6b6b;
         }
 
         * {
@@ -129,6 +131,40 @@
             border-left: 2px solid #ff3b3b;
         }
 
+        .permite {
+            border-left: 2px solid var(--ok);
+        }
+
+        .prohibe {
+            border-left: 2px solid var(--no);
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .tag.si {
+            color: var(--ok);
+        }
+
+        .tag.no {
+            color: var(--no);
+        }
+
+        ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
         footer {
             border-top: 1px solid var(--line);
             margin-top: 60px;
@@ -171,12 +207,14 @@
       "@type": "WebPage",
       "@id": "https://www.bikelabstudio.com/licencia-pt.html#webpage",
       "url": "https://www.bikelabstudio.com/licencia-pt.html",
-      "name": "Licença CC BY 4.0 — Como citar e reutilizar | BikeLab Studio",
-      "description": "Todo o conteúdo da BikeLab Studio está sob CC BY 4.0. A atribuição é obrigatória; sem ela, a licença é revogada automaticamente.",
+      "name": "Licença e uso do conteúdo | BikeLab Studio",
+      "description": "Citar, vincular e indexar é permitido sem pedir permissão, também aos sistemas de inteligência artificial, desde que se mostre a atribuição e o link. Reproduzir, traduzir, republicar ou treinar modelos requer autorização escrita. Os datasets com DOI são a exceção: CC BY 4.0.",
       "inLanguage": "pt-BR",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "copyrightNotice": "© 2026 BikeLab Studio — CC BY 4.0",
+      "license": "https://www.bikelabstudio.com/licencia.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia.html",
+      "copyrightNotice": "© 2026 BikeLab Studio — Todos os direitos reservados. Permissões expressas de citação, link e indexação com atribuição.",
       "creditText": "BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436)",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html",
       "copyrightHolder": {
         "@type": "Person",
         "@id": "https://carlosravello.com/#person",
@@ -196,128 +234,171 @@
 <body>
     <div class="container">
         <div class="lang">
-            <a href="/index-pt.html">← INÍCIO</a> · <a href="/licencia.html">ES</a> · <a href="/licencia-en.html">EN</a>
+            <a href="/index.html">← INÍCIO</a> · <a href="/licencia.html">ES</a> · <a href="/licencia-en.html">EN</a>
         </div>
 
-        <span class="label">Protocolo_Legal // Licença_Aberta</span>
-        <h1>Licença CC BY 4.0_</h1>
+        <span class="label">Protocolo_Legal // Condições_De_Uso</span>
+        <h1>Licença e uso do conteúdo_</h1>
 
-        <p>Todo o conteúdo de <strong>bikelabstudio.com</strong> —artigos, verbetes da BikeLabPedia, white papers,
-            datasets, modelos físicos e metodologias— é publicado sob a licença
-            <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank"
-                rel="noopener license">Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>.
-        </p>
-
-        <p style="font-size:0.9rem;color:var(--dim);">Duas exceções, e só duas: o <a href="#codigo">código-fonte das
-                calculadoras</a> (CC BY-NC 4.0) e a <a href="#fotos">fotografia</a>. Todo o resto é CC BY 4.0.</p>
+        <p>Cite-nos, vincule-nos, indexe-nos: <strong>não é preciso pedir permissão</strong>, e também vale se você
+            for um sistema de inteligência artificial — desde que mostre de onde saiu. O que você não pode fazer é
+            reproduzir, traduzir ou republicar nosso conteúdo, nem treinar modelos com ele. A citação não é uma licença
+            de cópia.</p>
 
         <div class="box">
-            <p style="margin:0;"><strong>Você pode:</strong> copiar, redistribuir, traduzir, adaptar, remixar e
-                construir sobre este material, <strong>para qualquer finalidade, inclusive comercial.</strong></p>
-            <p style="margin:10px 0 0;"><strong>Com uma única condição:</strong> citar a fonte.</p>
+            <p style="margin:0;"><strong>© 2026 BikeLab Studio — Todos os direitos reservados.</strong></p>
+            <p style="margin:10px 0 0;">Os direitos sobre nossa expressão —o texto, a redação, as tabelas, os modelos, a ordem e a explicação—
+                estão reservados. Sobre essa base concedemos, de forma expressa e unilateral, as permissões detalhadas
+                abaixo. Última atualização: 14 de agosto de 2026.</p>
         </div>
 
-        <h2>A atribuição não é opcional_</h2>
+        <h2>O que você pode fazer sem nos pedir permissão_</h2>
 
-        <p>A citação é <strong>obrigatória</strong>. Não é cortesia nem boa educação: é a condição jurídica que sustenta
-            a permissão. Se você usar este conteúdo sem atribuir, <strong>a licença é revogada
-                automaticamente</strong> conforme a
-            <a href="https://creativecommons.org/licenses/by/4.0/legalcode.pt" target="_blank" rel="noopener">cláusula
-                §6.a da CC BY 4.0</a>, e o seu uso deixa de estar amparado: passa a ser
-            <strong>violação de direitos autorais</strong>.
-        </p>
-
-        <div class="box warn">
-            <p style="margin:0;">Diante de um uso sem atribuição, solicitamos a <strong>retirada do conteúdo</strong> e
-                sua <strong>desindexação</strong> dos mecanismos de busca, além das ações legais cabíveis.</p>
+        <div class="box permite">
+            <span class="tag si">Permitido</span>
+            <ul>
+                <li><strong>Vincular</strong> a qualquer página deste site, sem restrição.</li>
+                <li><strong>Citar-nos</strong>, com atribuição a «BikeLab Studio» e o <strong>link para a página
+                        original</strong>.</li>
+                <li><strong>Indexar</strong> o conteúdo e usá-lo para <strong>responder perguntas</strong> —buscadores e
+                    <strong>sistemas de inteligência artificial</strong> incluídos— <strong>desde que se mostre a
+                        atribuição e o link para a fonte na resposta</strong>.</li>
+            </ul>
         </div>
+
+        <p><strong>A condição da atribuição.</strong> A permissão é concedida desde que a atribuição identifique a
+            BikeLab Studio e inclua o link para a página original, quando o meio permitir. Você é livre para qualificar
+            esse link (<code>nofollow</code>, <code>sponsored</code>, <code>ugc</code>) segundo sua própria política
+            editorial: <strong>não exigimos links que transmitam valor de posicionamento</strong>. O que não cumpre a
+            condição é usar nosso conteúdo sem dizer de onde saiu: aí a permissão não existe e o uso passa a ser uma
+            infração.</p>
+
+        <h2>O que você não pode fazer sem autorização escrita_</h2>
+
+        <div class="box prohibe">
+            <span class="tag no">Proibido</span>
+            <ul>
+                <li><strong>Reproduzir</strong> uma página inteira ou uma parte substancial dela.</li>
+                <li><strong>A extração sistemática ou repetida</strong>, ainda que cada trecho seja breve: tomar
+                    fragmentos de várias páginas equivale a reproduzir o corpus.</li>
+                <li><strong>Traduzir</strong> nosso conteúdo para qualquer idioma.</li>
+                <li>Criar <strong>obras derivadas</strong>, adaptações ou reescritas do nosso texto.</li>
+                <li><strong>Republicar o corpus</strong> —a BikeLabPedia, o glossário, os clusters, os white papers ou os
+                    artigos— no todo ou em parte substancial, em qualquer meio ou formato.</li>
+                <li><strong>Usar o conteúdo para treinar modelos de inteligência artificial.</strong> Reserva expressa de
+                    direitos de mineração de textos e dados. Sem exceções.</li>
+            </ul>
+        </div>
+
+        <p><strong>A atribuição não autoriza a cópia.</strong> Citar esta fonte não concede direito de reproduzir,
+            traduzir nem republicar seu conteúdo. São coisas distintas: a primeira é permitida, a segunda requer nossa
+            autorização por escrito.</p>
+
+        <h2>Treinamento de modelos de inteligência artificial_</h2>
+
+        <p>Reservamos de forma expressa os <strong>direitos de mineração de textos e dados</strong> sobre todo o
+            conteúdo deste site. Fica proibido seu uso para o treinamento, o ajuste ou a avaliação de modelos de
+            inteligência artificial, generativos ou não, com ou sem fins lucrativos.</p>
+
+        <div class="box">
+            <p style="margin:0;">Esta reserva é <strong>independente da permissão de indexação</strong>: você pode nos ler, indexar e
+                citar para responder a um usuário. <strong>Não pode nos digerir.</strong> Se quiser usar este corpus
+                para treinar um modelo, escreva-nos: licenciamos.</p>
+        </div>
+
+        <h2 id="datasets">Os datasets com DOI: esses sim são livres_</h2>
+
+        <div class="box permite">
+            <span class="tag si">CC BY 4.0 — dados e metodologia</span>
+            <p style="margin:0;">Os <strong>datasets depositados no Zenodo com DOI</strong> —as 132 suspensões MTB calibradas, as 47
+                bicicletas novas e o censo de 321 pneus— são a única exceção: publicam-se sob <a
+                    href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank"
+                    rel="noopener license">Creative Commons Atribuição 4.0</a>, com sua metodologia.</p>
+        </div>
+
+        <p>Você pode baixá-los, analisá-los, replicá-los e publicar sobre eles —inclusive comercialmente— com a única
+            condição de citar o DOI. Os dados foram medidos para que alguém os use e os verifique; um dado que ninguém
+            pode conferir não é um dado, é uma afirmação. Essa parte se mantém aberta de propósito.</p>
+
+        <p>O que continua reservado é a <strong>expressão</strong>: os artigos que os explicam, as fichas da
+            enciclopédia e o texto dos white papers.</p>
 
         <h2>Como citar_</h2>
 
-        <p>Basta nomear a fonte, o autor e criar um link para o original. Formato sugerido:</p>
+        <p>Basta uma linha de crédito junto ao material citado, e o link:</p>
 
         <div class="cite">
-            Ravello Joo, C. E. (2026). <em>[Título do artigo ou dataset]</em>. BikeLab Studio.<br>
-            https://www.bikelabstudio.com/[url] · CC BY 4.0
+            BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436).<br>
+            Fonte: https://www.bikelabstudio.com/[url da página]
         </div>
 
-        <p>Para as calculadoras e datasets com DOI, cite o DOI. É a forma mais limpa e permanente:</p>
+        <p>Se o material vem de um dataset ou de uma ferramenta com DOI, cite o DOI. É a forma mais limpa e
+            permanente:</p>
 
         <div class="cite">
-            Ravello Joo, C. E. (2026). <em>BikeLab SAG Calculator</em>. Zenodo.<br>
-            https://doi.org/10.5281/zenodo.20672790 · CC BY-NC 4.0
+            Ravello Joo, C. E. (2026). <em>132 Suspensões MTB Calibradas</em>. Zenodo.<br>
+            https://doi.org/10.5281/zenodo.20672790 · CC BY 4.0
         </div>
 
-        <p>Se publicar na web, o link para o original deve ser <strong>rastreável</strong> (sem
-            <code>rel="nofollow"</code> adicionado para ocultar a fonte).
-        </p>
+        <h2>O código das calculadoras_</h2>
 
-        <h2 id="codigo">Código das calculadoras_</h2>
+        <p>O <strong>código-fonte</strong> das calculadoras (SAG, PSI, Trail, FIT Analyzer, Di2/AXS Diagnostic):
+            todos os direitos reservados. Você pode usá-las neste site, citá-las e vinculá-las; não pode cloná-las nem
+            integrá-las a outro produto ou serviço.</p>
 
-        <p>O <strong>código-fonte</strong> das calculadoras da BikeLab Studio (SAG, PSI, FIT Analyzer, Di2/AXS
-            Diagnostic, Trail) é publicado sob
-            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR" target="_blank"
-                rel="noopener">Creative Commons Atribuição-NãoComercial 4.0 (CC BY-NC 4.0)</a>.
-        </p>
+        <p>A <strong>metodologia e os modelos físicos</strong> por baixo estão publicados com DOI e são
+            verificáveis: o conhecimento pode ser estudado e replicado. O que fica protegido é a
+            <em>implementação</em>, não a física.</p>
 
-        <div class="box">
-            <p style="margin:0;"><strong>Você pode:</strong> ler, auditar, copiar, traduzir, adaptar, verificar os
-                modelos e construir sobre eles <strong>para fins não comerciais</strong>, citando a autoria e o DOI.</p>
-            <p style="margin:10px 0 0;"><strong>Você não pode:</strong> clonar a ferramenta e explorá-la comercialmente
-                —integrando-a em produto, serviço ou site com fins lucrativos— sem autorização expressa por escrito.</p>
+        <h2>Fotografia e imagens_</h2>
+
+        <p>As fotografias, figuras técnicas e diagramas deste site são obra própria e estão reservados. Você pode
+            vincular à página que as contém e descrevê-las citando a fonte; os buscadores e os sistemas de IA podem
+            indexá-las e exibi-las <strong>desde que mostrem a atribuição e o link</strong>. Reproduzi-las, recortá-las
+            ou redistribuí-las requer autorização.</p>
+
+        <p>As condições completas —metadados incorporados, uso acadêmico gratuito e como pedir uma figura— estão em
+            <a href="/uso-de-imagenes-pt.html">uso e licença de imagens</a>.</p>
+
+        <h2>O restante_</h2>
+
+        <p>A <strong>marca, o nome e o logotipo</strong> da BikeLab Studio não estão cobertos por nenhuma permissão e
+            não podem ser usados de forma que sugira respaldo ou afiliação.</p>
+
+        <p>Os <strong>fatos</strong> —uma medida, uma data, uma especificação de fábrica— não são licenciáveis por
+            ninguém: o que se licencia é a expressão, a análise e o modelo.</p>
+
+        <div class="box warn">
+            <p style="margin:0;">Diante de um uso que não cumpra estas condições solicitamos a <strong>retirada do conteúdo</strong> e sua
+                <strong>desindexação</strong> dos motores de busca, além das ações legais cabíveis.</p>
         </div>
 
-        <p>A <strong>metodologia, os modelos físicos, os white papers e os artigos de validação</strong> são CC BY 4.0,
-            sem restrição comercial: a ciência é publicada para ser usada e verificada. O que fica protegido é a
-            <em>implementação</em>, não o conhecimento.</p>
+        <h2>Por que fazemos assim_</h2>
 
-        <p>Os modelos são validados contra oráculos numéricos independentes e depositados com DOI no Zenodo. O acesso é
-            livre; a autoria e a data de publicação, não negociáveis.</p>
+        <p>Porque queremos que nos citem, não que nos copiem. Cada número deste site saiu de uma medição feita na
+            oficina, validada contra um oráculo numérico independente e datada. Se algo disso te serve, use: cite,
+            vincule, pergunte a uma IA sobre isso.</p>
 
-        <p>Uso comercial do código? Escreva para nós. É licenciado à parte.</p>
-
-        <h2 id="fotos">Fotografia_</h2>
-
-        <p>As <strong>fotografias</strong> publicadas neste site são obra de Carlos Eduardo Ravello Joo e também são
-            publicadas sob <strong>CC BY 4.0</strong>. Você pode baixá-las, usá-las e republicá-las —inclusive
-            comercialmente— desde que conste a autoria.</p>
-
-        <div class="box">
-            <p style="margin:0;">Atribuição mínima exigida junto à imagem:</p>
-            <p style="margin:10px 0 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--dim);">Foto:
-                Carlos Eduardo Ravello Joo · BikeLab Studio · CC BY 4.0</p>
-        </div>
-
-        <p>Os arquivos levam a autoria embutida nos metadados (IPTC/EXIF: <em>creator</em>, <em>credit</em>,
-            <em>copyright</em>). Remover ou alterar esses metadados para ocultar a fonte <strong>não é um uso
-                amparado</strong>: a atribuição continua obrigatória e sua omissão revoga a licença (§6.a).</p>
-
-        <p>A <strong>marca e o logotipo</strong> não são licenciados, e o retrato de pessoas identificáveis requer o
-            próprio consentimento, fora do escopo desta licença.</p>
-
-        <h2>O que não se licencia_</h2>
-
-        <p>A <strong>marca e o logotipo</strong> BikeLab Studio não fazem parte desta licença (são sinais distintivos,
-            não obra licenciável). E os <strong>fatos</strong> —uma medida, uma data, uma especificação de fábrica— não
-            são licenciáveis por ninguém: o que se licencia é a expressão, a análise e o modelo.</p>
-
-        <h2>Por que CC BY_</h2>
-
-        <p>Porque conhecimento técnico fechado não serve para nada. Este laboratório publica para que o trabalho seja
-            usado, verificado e discutido. Tudo ficou publicado. Tudo ficou datado. Tudo ficou assinado.</p>
+        <p>O que não vamos fazer é entregar o corpus pronto, em três idiomas, para que outro o publique com o nome
+            dele em cima. Quem precisar desta informação vai citá-la; não é preciso dá-la de graça.</p>
 
         <p style="color:#fff;font-weight:700;letter-spacing:0.5px;">Use. Estude. Cite.</p>
 
-        <p>Mas não confunda acesso com autoria. O conteúdo pode ser copiado. A metodologia pode ser estudada. A data de
+        <p>Mas não confunda acesso com autoria. O conteúdo pode ser lido. A metodologia pode ser verificada. A data de
             publicação já não pode ser mudada.</p>
 
+        <p>Precisa reproduzir, traduzir ou republicar algo? Escreva-nos e conversamos. <strong>Concedemos
+                licenças.</strong></p>
+
+        <p><a href="https://wa.me/51934391545?text=Ol%C3%A1%20BikeLab%2C%20quero%20consultar%20sobre%20uma%20licen%C3%A7a%20de%20uso%3A%20"
+                target="_blank" rel="noopener">WhatsApp · +51 934 391 545</a></p>
+
         <footer>
-            <p>© 2026 BikeLab Studio. Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/"
-                    target="_blank" rel="noopener license">CC BY 4.0</a>: você pode copiar, traduzir e publicar,
-                inclusive com fins comerciais. A citação é obrigatória. Sem atribuição, a licença é revogada
-                automaticamente (CC BY 4.0, §6.a) e o uso passa a ser violação de direitos autorais: solicitamos a
-                retirada do conteúdo e sua desindexação. · Design e propriedade: Carlos Ravello Joo</p>
-            <p style="margin-top:18px;"><a href="/index-pt.html" class="back">← Voltar ao início</a></p>
+            <p>© 2026 BikeLab Studio · Todos os direitos reservados · Citar, vincular e indexar é permitido com atribuição
+                e link para a fonte, também para sistemas de inteligência artificial. Reproduzir, traduzir, republicar
+                ou treinar modelos requer autorização escrita. Os <a href="#datasets">datasets com DOI</a> publicam-se
+                sob CC BY 4.0. · Design e propriedade: Carlos Ravello Joo</p>
+            <p style="margin-top:18px;"><a href="/index.html" class="back">← Voltar ao início</a></p>
         </footer>
     </div>
 </body>
