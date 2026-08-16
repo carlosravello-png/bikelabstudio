@@ -461,5 +461,8 @@ Tension de radios, centrado y las fuentes primarias leidas enteras: ISO 4210-7:2
 tablas 6.1 y 6.2 de DT Swiss, Ford (2018) y Gavin (1996). Incluye la derivacion de la
 relacion de tension entre lados de la rueda, con el codigo que la valida.
 - [Tensión de radios y centrado de ruedas](https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html)
+- [Spoke tension and wheel truing](https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html)
+- [Tensão de raios e centragem de rodas](https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html)
 - [Cuánta tensión lleva un radio de bicicleta](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-es.html)
 - [How much tension does a spoke carry](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html)
+- [Quanta tensão tem um raio de bicicleta](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html)

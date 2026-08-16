@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensão de raios e centragem de rodas | BikeLab Studio</title>
+  <meta name="description" content="Dez páginas de norma ISO e nenhum valor em milímetros. Os newtons que a DT Swiss publica, onde quebram 68 de 76 raios e o que ninguém mede.">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html">
+  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html">
+  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html">
+  <meta name="author" content="Carlos Eduardo Ravello Joo">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="BikeLab Studio">
+  <meta property="og:title" content="Tensão de raios e centragem de rodas: o que dizem as fontes">
+  <meta property="og:description" content="Dez páginas de norma, zero milímetros. E a derivação do lado frouxo, com o código que a valida.">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html">
+  <meta property="og:image" content="https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tensão de raios: o que dizem as fontes">
+  <meta name="twitter:description" content="O 0,5 mm não está na norma. Ford: mais tensão, menos rigidez lateral. Gavin: 68 de 76 quebram no cotovelo.">
+  <meta name="twitter:image" content="https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg">
+
+  <meta name="DC.title" content="Tensão de raios e centragem de rodas: o que dizem as fontes primárias">
+  <meta name="DC.creator" content="Ravello Joo, Carlos Eduardo">
+  <meta name="DC.creator.url" content="https://carlosravello.com">
+  <meta name="DC.identifier.orcid" content="https://orcid.org/0009-0007-5631-7436">
+  <meta name="DC.language" content="pt-BR">
+  <meta name="DC.publisher" content="BikeLab Studio">
+  <meta name="DC.date" content="2026-08-16">
+  <meta name="DC.rights" content="https://www.bikelabstudio.com/licencia-pt.html">
+  <meta name="DC.type" content="Text">
+  <meta name="citation_title" content="Tensão de raios e centragem de rodas: o que dizem as fontes primárias">
+  <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+  <meta name="citation_author_institution" content="BikeLab Studio">
+  <meta name="citation_publication_date" content="2026-08-16">
+  <meta name="citation_language" content="pt-BR">
+  <link rel="license" href="https://www.bikelabstudio.com/licencia-pt.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "ScholarlyArticle"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#article",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html",
+      "mainEntityOfPage": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html"
+      },
+      "headline": "Tensão de raios e centragem de rodas: o que dizem as fontes",
+      "alternativeHeadline": "Ninguém leu a norma: as fontes primárias, lidas por inteiro",
+      "description": "Auditoria das fontes primárias sobre tensão de raios e centragem de rodas. A ISO 4210-7:2023 não contém nenhum valor em milímetros e remete o limite à parte 2, que é paga. O 0,5 mm citado como normativo é critério da Park Tool; a DT Swiss especifica 0,3. Ford (2018) demonstra que subir a tensão reduz a rigidez lateral. Gavin (1996) quebrou 76 raios por fadiga: 68 no cotovelo. A relação de tensão entre os dois lados da roda, que ninguém publica, é aqui derivada da estática e validada com código.",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": "2026",
+      "license": "https://www.bikelabstudio.com/licencia-pt.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia-pt.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-pt.html",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos"
+      },
+      "isAccessibleForFree": true,
+      "proficiencyLevel": "Expert",
+      "dependencies": "Tensiômetro calibrado, bancada de centragem e relógio comparador",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".respuesta-directa",
+          ".faq-answer"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Raio de bicicleta",
+          "@id": "https://www.wikidata.org/wiki/Q845671",
+          "sameAs": "https://www.wikidata.org/wiki/Q845671"
+        },
+        {
+          "@type": "Thing",
+          "name": "Roda de bicicleta",
+          "@id": "https://www.wikidata.org/wiki/Q161798",
+          "sameAs": "https://www.wikidata.org/wiki/Q161798"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tensão mecânica",
+          "@id": "https://www.wikidata.org/wiki/Q206175",
+          "sameAs": "https://www.wikidata.org/wiki/Q206175"
+        },
+        {
+          "@type": "Thing",
+          "name": "Fadiga dos materiais",
+          "@id": "https://www.wikidata.org/wiki/Q507234",
+          "sameAs": "https://www.wikidata.org/wiki/Q507234"
+        },
+        {
+          "@type": "Thing",
+          "name": "Rigidez",
+          "@id": "https://www.wikidata.org/wiki/Q569057",
+          "sameAs": "https://www.wikidata.org/wiki/Q569057"
+        },
+        {
+          "@type": "Thing",
+          "name": "Flambagem",
+          "@id": "https://www.wikidata.org/wiki/Q693104",
+          "sameAs": "https://www.wikidata.org/wiki/Q693104"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Organization",
+          "name": "Park Tool",
+          "@id": "https://www.wikidata.org/wiki/Q20968253",
+          "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+        },
+        {
+          "@type": "Organization",
+          "name": "DT Swiss",
+          "@id": "https://www.wikidata.org/wiki/Q11964439",
+          "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+        },
+        {
+          "@type": "Organization",
+          "name": "Organização Internacional de Normalização",
+          "@id": "https://www.wikidata.org/wiki/Q15028",
+          "sameAs": "https://www.wikidata.org/wiki/Q15028"
+        },
+        {
+          "@type": "Thing",
+          "name": "Niple de raio",
+          "@id": "https://www.wikidata.org/wiki/Q1255302",
+          "sameAs": "https://www.wikidata.org/wiki/Q1255302"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cubo de bicicleta",
+          "@id": "https://www.wikidata.org/wiki/Q105150560",
+          "sameAs": "https://www.wikidata.org/wiki/Q105150560"
+        },
+        {
+          "@type": "Thing",
+          "name": "Aro de bicicleta",
+          "@id": "https://www.wikidata.org/wiki/Q1392541",
+          "sameAs": "https://www.wikidata.org/wiki/Q1392541"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicicleta elétrica",
+          "@id": "https://www.wikidata.org/wiki/Q924724",
+          "sameAs": "https://www.wikidata.org/wiki/Q924724"
+        },
+        {
+          "@type": "Thing",
+          "name": "Extensômetro",
+          "@id": "https://www.wikidata.org/wiki/Q610723",
+          "sameAs": "https://www.wikidata.org/wiki/Q610723"
+        }
+      ],
+      "citation": [
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://doi.org/10.21985/n2-3sh0-m798",
+          "name": "Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel",
+          "author": {
+            "@type": "Person",
+            "name": "Matthew P. Ford"
+          },
+          "datePublished": "2018",
+          "publisher": {
+            "@type": "CollegeOrUniversity",
+            "name": "Northwestern University",
+            "sameAs": "https://www.wikidata.org/wiki/Q309350"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.21985/n2-3sh0-m798"
+          },
+          "url": "https://arch.library.northwestern.edu/concern/generic_works/rn301170f",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)",
+          "name": "Bicycle-Wheel Spoke Patterns and Spoke Fatigue",
+          "author": {
+            "@type": "Person",
+            "name": "Henri P. Gavin"
+          },
+          "datePublished": "1996-08-01",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Engineering Mechanics",
+            "publisher": {
+              "@type": "Organization",
+              "name": "American Society of Civil Engineers",
+              "sameAs": "https://www.wikidata.org/wiki/Q466880"
+            }
+          },
+          "pagination": "736-742",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.1061/(ASCE)0733-9399(1996)122:8(736)"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.iso.org/standard/78082.html",
+          "name": "ISO 4210-7:2023 — Cycles — Safety requirements for bicycles — Part 7: Wheel and rim test methods",
+          "datePublished": "2023-01",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Organização Internacional de Normalização",
+            "sameAs": "https://www.wikidata.org/wiki/Q15028"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ISO",
+            "value": "ISO 4210-7:2023"
+          },
+          "numberOfPages": 10,
+          "isAccessibleForFree": false
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.iso.org/standard/78077.html",
+          "name": "ISO 4210-2:2023 — Part 2: Requirements for city and trekking, young adult, mountain and racing bicycles",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Organização Internacional de Normalização",
+            "sameAs": "https://www.wikidata.org/wiki/Q15028"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ISO",
+            "value": "ISO 4210-2:2023"
+          },
+          "isAccessibleForFree": false,
+          "description": "Citado através da parte 7, item 4.4, que remete ao item 4.10.1 deste documento. Não consultado: norma paga."
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#spline",
+          "name": "DT Swiss Wheels Technical Manual — Spline",
+          "version": "V2024.06",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "WXD10000000861S"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#dicut",
+          "name": "DT Swiss Wheels Technical Manual — Dicut",
+          "version": "V2024.06",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "WXD10000000860S"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#astm",
+          "name": "DT Swiss Wheels User Manual — ASTM & System Weight",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "MAN_WXWASTMSWWRXXS_WEB_ZZ_001"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-and-rim-truing",
+          "name": "Wheel Truing (Lateral & Radial)",
+          "datePublished": "2021-03-31",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-tension-measurement",
+          "name": "Spoke Tension Measurement and Adjustment",
+          "datePublished": "2021-04-06",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-dishing-centering",
+          "name": "Wheel Dishing (Centering)",
+          "datePublished": "2021-04-01",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        }
+      ],
+      "image": [
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-pt.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-pt.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-pt.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp#image"
+        }
+      ],
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tensão máxima admissível, lado mais tensionado, roda traseira de disco",
+          "value": 1300,
+          "unitText": "N",
+          "measurementTechnique": "Especificação de fabricante",
+          "description": "DT Swiss, tabela 6.1 (Spline e Dicut, V2024.06)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tensão máxima admissível, lado mais tensionado, roda traseira de bicicleta elétrica",
+          "value": 1400,
+          "unitText": "N",
+          "measurementTechnique": "Especificação de fabricante",
+          "description": "DT Swiss, tabela 6.1, linha Hybrid. Presente no manual Spline, ausente no de Dicut"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tolerância de desalinhamento lateral, aro de carbono",
+          "value": 0.3,
+          "unitText": "mm",
+          "measurementTechnique": "Especificação de fabricante",
+          "description": "DT Swiss, tabela 6.2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Força lateral de ensaio sobre o aro, bicicleta de montanha",
+          "value": 370,
+          "unitText": "N",
+          "measurementTechnique": "Ensaio normativo de resistência estática, carga perpendicular ao plano da roda",
+          "description": "ISO 4210-7:2023, tabela 1. Os outros três tipos de bicicleta: 250 N"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Carga estática máxima por roda, como fração do peso de sistema",
+          "value": 60,
+          "unitText": "%",
+          "measurementTechnique": "Regra declarada pelo fabricante",
+          "description": "DT Swiss, manual ASTM & System Weight"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Quebras por fadiga localizadas no cotovelo do raio",
+          "value": 68,
+          "unitText": "raios de 76 ensaiados",
+          "measurementTechnique": "Ensaio de fadiga até a quebra",
+          "description": "Gavin (1996). Os 8 restantes quebraram na rosca"
+        }
+      ],
+      "workExample": {
+        "@id": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html#article"
+      },
+      "translationOfWork": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html#article"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Janela de tensão admissível dos raios segundo a DT Swiss, por tipo de freio e de uso",
+      "caption": "As seis faixas de tensão admissível do lado mais tensionado, em newtons. A linha Hybrid, de e-bike, sobe o teto da traseira para 1400 N.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-pt.html",
+      "isBasedOn": {
+        "@id": "https://www.dtswiss.com/en/support/manuals#spline"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-pt.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-pt.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Onde quebraram os 76 raios ensaiados por Gavin",
+      "caption": "68 no cotovelo trabalhado a frio, 8 na rosca, nenhum pelo meio. Embaixo, a faixa de tensão ensaiada frente à faixa de uso real.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-pt.html",
+      "isBasedOn": {
+        "@id": "https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-pt.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-pt.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Anatomia da equação 2.71c de Ford",
+      "caption": "Dois termos que somam e um que subtrai com a tensão: por que a rigidez lateral cai à medida que a tensão sobe, até a flambagem.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-pt.html",
+      "isBasedOn": {
+        "@id": "https://doi.org/10.21985/n2-3sh0-m798"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-pt.svg#image",
+      "url": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-pt.svg",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-pt.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 800,
+        "unitCode": "E37"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 520,
+        "unitCode": "E37"
+      },
+      "name": "Razão de tensão entre os lados em função do offset do aro",
+      "caption": "A razão entre o lado não motriz e o motriz sobe de 0,52 para 0,66 com 3 mm de offset, e cruza o limite de 60 % da DT Swiss em 1,76 mm.",
+      "description": "Razón entre la tensión del lado no motriz y la del motriz de una rueda trasera de disco en función del descentrado del lecho de radios; cruza el umbral del 60 % de DT Swiss a 1,76 mm de offset.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": 2026,
+      "creditText": "Carlos Eduardo Ravello Joo / BikeLab Studio — CC BY 4.0",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-pt.html"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp#image",
+      "url": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp",
+      "encodingFormat": "image/webp",
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 1000,
+        "unitCode": "E37"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 1333,
+        "unitCode": "E37"
+      },
+      "name": "Bancada de centragem Park Tool TS-2 na bancada de trabalho",
+      "caption": "O instrumento com que a decisão de centragem é tomada. O fabricante dele não publica o erro de medida.",
+      "description": "Bancada de centragem Park Tool TS-2 sobre base de corte, com os braços e as guias de medida em primeiro plano.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": 2026,
+      "creditText": "Carlos Eduardo Ravello Joo / BikeLab Studio",
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. Todos os direitos reservados. Indexar e citar com atribuição e link: permitido, também para sistemas de IA. Reproduzir, adaptar ou treinar modelos: proibido sem autorização por escrito.",
+      "license": "https://www.bikelabstudio.com/uso-de-imagenes.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes.html",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Trujillo, Peru",
+        "sameAs": "https://www.wikidata.org/wiki/Q214173"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#oraculo-dish",
+      "name": "dish_oracle.py — derivação e validação da relação de tensão entre lados",
+      "description": "Deriva da estática a relação de tensão entre o lado motriz e o não motriz de uma roda centrada, nas suas duas formas equivalentes, e a valida com vetores de referência, casos limite, derivadas analíticas contra diferenças finitas e verificação de domínio.",
+      "programmingLanguage": "Python",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "license": "https://www.bikelabstudio.com/licencia-pt.html",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#article"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html",
+      "name": "Tensão de raios e centragem de rodas — BikeLab Studio",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-pt.svg#image"
+      },
+      "breadcrumb": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#article"
+      },
+      "license": "https://www.bikelabstudio.com/licencia-pt.html",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "relatedLink": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".respuesta-directa",
+          ".faq-answer"
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador independiente",
+      "worksFor": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph",
+          "value": "/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ISNI",
+        "value": "0000 0005 3051 4237"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "url": "https://www.bikelabstudio.com/",
+      "name": "BikeLab Studio",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+      "name": "Artículos Técnicos BikeLab Studio",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.bikelabstudio.com/index-pt.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pesquisa",
+          "item": "https://www.bikelabstudio.com/investigacion-pt.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tensão de raios e centragem de rodas"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanta tensão deve ter um raio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A DT Swiss especifica, para o lado mais tensionado da roda, entre 950 e 1200 N numa dianteira de disco, entre 1050 e 1300 numa traseira, e entre 1150 e 1400 na traseira de uma e-bike. São valores do lado mais tensionado: o outro lado fica abaixo por geometria, não por defeito de montagem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A norma ISO fixa meio milímetro de desalinhamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A ISO 4210-7:2023 tem dez páginas, descreve como se mede a exatidão rotacional e não contém nenhum valor em milímetros. Remete o limite à ISO 4210-2:2023, item 4.10.1, que é um documento pago. O 0,5 mm que se cita habitualmente é uma orientação de oficina da Park Tool; a DT Swiss especifica 0,3 mm para as suas próprias rodas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mais tensão deixa a roda mais rígida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Ford demonstrou em 2018, com cálculo, elementos finitos e ensaio, que subir a tensão reduz a rigidez lateral. A tensão traz rigidez por um lado e comprime o aro por outro, e com tensão alta domina o segundo efeito. A tensão serve para impedir que um raio chegue a zero sob carga, não para endurecer a roda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o lado esquerdo da minha roda traseira está mais frouxo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por geometria, e não se resolve apertando. O cassete obriga a aproximar o flange motriz do centro, então os seus raios saem com menos ângulo e precisam de mais tensão para centrar o aro. A relação entre lados vale (n_D/n_N)·(sen a_D/sen a_N) e só depende da geometria do cubo, do aro e do número de raios. Apertar o lado frouxo descentra a roda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde os raios quebram?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No cotovelo. De 76 raios levados à quebra por fadiga por Gavin em 1996, 68 quebraram no cotovelo trabalhado a frio e 8 na rosca. Nenhum pela zona central. A localização da quebra indica a causa: o cotovelo aponta para tensão baixa ou mau assentamento, a rosca para concentração ou aperto excessivo."
+          }
+        }
+      ],
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html#article",
+      "url": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html",
+      "name": "Quanta tensão tem um raio",
+      "headline": "Quanta tensão tem um raio",
+      "description": "Versão de divulgação deste estudo, sem a carga matemática.",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#article"
+      }
+    },
+    {
+      "@type": [
+        "TechArticle",
+        "ScholarlyArticle"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html#article",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html",
+      "name": "Tensión de radios y centrado de ruedas: lo que dicen las fuentes",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "workTranslation": [
+        {
+          "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html#article"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .lang-switch { float: right; font-size: 12px; }
+        .lang-switch a { color: #888; text-decoration: none; padding: 5px 10px; border: 1px solid #444; transition: all 0.3s; }
+        .lang-switch a:hover { color: #fff; border-color: #666; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+
+        .image-container { margin: 50px 0; border: 1px solid #333; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow-x: auto;
+        }
+        .formula mjx-container { color: #f2f2f2 !important; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .field-note {
+            background-color: #0a0f0a;
+            border-left: 3px solid #4a9e6b;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .field-note p { color: #aac8b4; margin-bottom: 0; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; }
+
+        .myth-box {
+            background-color: #140a0a;
+            border: 1px solid #5a2a2a;
+            border-left: 3px solid #cc3333;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .myth-box .myth-label { font-size: 10px; color: #cc3333; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .myth-box p { color: #cc9999; margin-bottom: 0; }
+
+        .fact-box {
+            background-color: #0a140a;
+            border: 1px solid #2a5a2a;
+            border-left: 3px solid #33cc66;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .fact-box .fact-label { font-size: 10px; color: #33cc66; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .fact-box p { color: #99cc99; margin-bottom: 0; }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        .references h2 { margin-top: 0; }
+
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #888;
+        }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #aaa; }
+
+        .market-card {
+            background-color: #0e0e0e;
+            border: 1px solid #2a2a2a;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-left: 3px solid #555;
+        }
+        .market-card .country { font-size: 10px; color: #888; letter-spacing: 3px; margin-bottom: 6px; }
+        .market-card .leader { font-size: 13px; color: #fff; margin-bottom: 6px; }
+        .market-card p { font-size: 12px; color: #999; margin-bottom: 0; }
+
+        .big-number {
+            font-size: 36px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 2px;
+            display: block;
+            margin: 10px 0 4px 0;
+        }
+        .big-number-label {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+            background-color: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            padding: 25px;
+        }
+
+        .number-cell { text-align: center; }
+
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 22px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .footer-grid, .numbers-grid { grid-template-columns: 1fr; }
+        }
+        /* Nav bar */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono), monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s, pointer-events 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono), monospace; font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; box-sizing: border-box; border-bottom: 1px solid #151515; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:hover { color: var(--accent); border-color: #333; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-bar .lang-switch { position: static; float: none; }
+        .nav-bar .lang-switch a { font-family: var(--mono), monospace; font-size: 0.7rem; color: var(--text); padding: 12px 20px; min-height: 44px; min-width: 44px; box-sizing: border-box; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); display: inline-flex; align-items: center; justify-content: center; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; min-width: 44px; box-sizing: border-box; color: var(--text); text-decoration: none; font-family: var(--mono), monospace; font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .nav-overlay { z-index: 1004; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; gap: 12px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Abrir menu de navegação">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index-pt.html">INÍCIO</a> · <a href="tension-radios-centrado-ruedas-es.html" hreflang="es">ES</a> · <a href="tension-radios-centrado-ruedas-en.html" hreflang="en">EN</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../index-pt.html">INÍCIO</a>
+            <a href="../servicios-pt.html">SERVIÇOS</a>
+            <a href="../tubelizado-pt.html">TUBELESS</a>
+            <a href="../suspension-pt.html">SUSPENSÃO</a>
+            <a href="../centrado-ruedas-pt.html">CENTRAGEM</a>
+            <a href="../purgado-frenos-pt.html">SANGRIA</a>
+            <a href="../mantenimiento-general-pt.html">MANUT. GERAL</a>
+            <a href="../mantenimiento-preventivo-pt.html">MANUT. PREVENTIVA</a>
+            <a href="../index-pt.html#science">DADOS TÉCNICOS</a>
+            <a href="../index-pt.html#tips">DICAS</a>
+            <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20agendar%20una%20cita%20t%C3%A9cnica">CONTATO</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCALIZAÇÃO</a>
+        </nav>
+    </div>
+
+    <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20deseo%20consultar%20sobre%20servicios" class="wa-float" aria-label="Contactar por WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WHATSAPP_
+    </a>
+
+
+<div class="container" style="padding-top: 100px;">
+
+    <a href="../index-pt.html#science" class="nav-back">← VOLTAR AO INÍCIO</a>
+
+    <nav aria-label="breadcrumb" style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:#666;margin:18px 0 22px;"><a href="../index-pt.html" style="color:#8a8a8a;text-decoration:none">Início</a><span style="color:#444;margin:0 7px">›</span><a href="../investigacion-pt.html" style="color:#8a8a8a;text-decoration:none">Pesquisa</a><span style="color:#444;margin:0 7px">›</span><span style="color:#6a6a6a">Tensão de raios e centragem</span></nav>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // ESTUDO_DOCUMENTAL</div>
+        <div class="category">TECHNICAL_REPORT // RODAS E RAIOS // FONTES PRIMÁRIAS</div>
+        <h1>Tensão de raios e centragem de rodas: o que dizem as fontes</h1>
+        <div class="subtitle">Ninguém leu a norma: ISO 4210-7, DT Swiss, Ford e Gavin lidos no documento original</div>
+        <div class="meta">
+            Autor: Carlos Ravello // Fundador da BikeLab Studio · ORCID 0009-0007-5631-7436<br>
+            Agosto de 2026 // Fontes primárias: ISO 4210-7:2023 · DT Swiss V2024.06 · Ford (2018) · Gavin (1996) · Park Tool (2021)
+        </div>
+    </div>
+
+    <div class="respuesta-directa" style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #e8ff00;padding:22px;margin:28px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// O que foi conferido e o que não</div>
+      <p style="margin:0;">Lidos no documento original: a <strong>ISO 4210-7:2023</strong> inteira —dez páginas, <strong>sem um único valor em milímetros</strong>—, as tabelas 6.1 e 6.2 de dois manuais técnicos da DT Swiss, a tese de Ford (2018) e o artigo de Gavin (1996) por completo, e três guias da Park Tool. <strong>Não</strong> foi lida a ISO 4210-2:2023, que é onde mora o limite de desalinhamento e que é paga: ela é citada através da parte 7, e isso está dito. A relação de tensão entre os dois lados de uma roda traseira não é publicada por ninguém: aqui ela é <strong>derivada</strong> da estática, com o código que a valida.</p>
+    </div>
+
+    <p>Um raio soa. Você bate com a unha e ele dá uma nota. Se já centrou algumas rodas, acaba afinando de ouvido sem querer, e quando um desafina você ouve antes de ver no relógio comparador.</p>
+
+    <p>Isso é física de primeiro ano —a frequência de uma corda depende de quanto você a estica— e é também a primeira coisa que aprende qualquer um que fique na frente de uma bancada de centragem. O que quase ninguém aprende é quanta tensão deveria haver ali. Pergunte em dez oficinas. Vai receber dez respostas. E oito dessas dez vão dizer, com a segurança tranquila de quem repete algo que ouviu direito, que meio milímetro de desalinhamento lateral é o que a norma ISO manda.</p>
+
+    <p><strong>Não manda. Fui olhar.</strong></p>
+
+    <p>Antes disso é preciso entender o que sustenta o quê, porque quase todo mundo tem isso invertido e a culpa não é sua: a roda engana.</p>
+
+    <p>Um raio é um arame. Ele puxa. Nunca empurra: se você o comprime, ele dobra e deixa de fazer qualquer coisa. Então, quando você vê trinta e dois raios sustentando alguém de oitenta quilos, o que está vendo não são os de cima pendurando a bicicleta. É um aro que chegou de fábrica apertado por trinta e dois arames que puxam todos para o cubo ao mesmo tempo. O aro vive comprimido. É um anel com diâmetro sobrando e sem para onde esticar.</p>
+
+    <p>Você sobe e a roda achata um pouco onde toca o chão. Os raios daquela zona <strong>perdem</strong> tensão. Os de cima quase não ganham nada. O peso não desce pelos raios superiores: ele se transmite porque embaixo se deixa de puxar.</p>
+
+    <p>Daí sai todo o resto. Se a tensão de repouso for suficiente, os raios de baixo afrouxam um pouco a cada volta e voltam, e o ciclo que eles veem é pequeno. Se for insuficiente eles chegam a zero, ficam soltos por um instante e voltam a carregar de repente. Um raio não quebra por puxar muito. Quebra por soltar e voltar a puxar, volta após volta, durante anos.</p>
+
+    <p>Isso qualquer um que tenha refeito uma roda frouxa sabe com as mãos. O que vem a seguir é o que acontece quando você pede o número às fontes.</p>
+
+    <h2 id="a-tabela">MÓDULO_01 // A TABELA</h2>
+
+    <p>A DT Swiss publica. E publica bem: em newtons, separado por tipo de freio e por uso, na tabela 6.1 dos seus manuais técnicos —o da série Spline, documento <span class="data-highlight">WXD10000000861S</span>, versão 2024.06, e o de Dicut, <span class="data-highlight">WXD10000000860S</span>, da mesma data—. O cabeçalho traz uma precisão que se agradece: os valores são do <strong>lado mais tensionado da roda</strong>, não da roda inteira.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/tension-radios-dtswiss-pt.svg" width="800" height="520" loading="eager" decoding="async"
+             alt="Gráfico de barras com as seis faixas de tensão admissível da DT Swiss para o lado mais tensionado da roda, de 900 a 1400 newtons por tipo de freio e de uso — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Janela de tensão admissível segundo a DT Swiss, tabela 6.1">
+        <div class="image-caption">Faixa clara: máximo e mínimo admissíveis. Faixa sólida: a média que o fabricante recomenda, que é um intervalo e não um número.</div>
+    </div>
+
+    <table style="width:100%;border-collapse:collapse;margin:26px 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem;">
+      <caption style="text-align:left;color:#888;font-size:0.7rem;letter-spacing:1px;padding-bottom:10px;">TENSÃO ADMISSÍVEL — LADO MAIS TENSIONADO // DT SWISS, TABELA 6.1, V2024.06</caption>
+      <thead>
+        <tr style="border-bottom:1px solid #444;color:#e8ff00;">
+          <th style="text-align:left;padding:10px 8px;">Roda</th>
+          <th style="text-align:right;padding:10px 8px;">Máximo</th>
+          <th style="text-align:right;padding:10px 8px;">Mínimo</th>
+          <th style="text-align:right;padding:10px 8px;">Média recomendada</th>
+        </tr>
+      </thead>
+      <tbody style="color:#c8c8c8;">
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Disco · dianteira</td><td style="text-align:right;padding:9px 8px;">1200 N</td><td style="text-align:right;padding:9px 8px;">950 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1150 – 1000 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Disco · traseira</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Freio de aro · dianteira</td><td style="text-align:right;padding:9px 8px;">1100 N</td><td style="text-align:right;padding:9px 8px;">900 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1050 – 950 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Freio de aro · traseira</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Hybrid (e-bike) · dianteira</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr><td style="padding:9px 8px;color:#fff;"><strong>Hybrid (e-bike) · traseira</strong></td><td style="text-align:right;padding:9px 8px;color:#fff;"><strong>1400 N</strong></td><td style="text-align:right;padding:9px 8px;color:#fff;"><strong>1150 N</strong></td><td style="text-align:right;padding:9px 8px;color:#e8ff00;">1350 – 1200 N</td></tr>
+      </tbody>
+    </table>
+
+    <p>A última coluna não é um valor, é um intervalo, e é assim que vem no original: a DT Swiss não recomenda um número e sim uma faixa dentro da janela. Deixei como está, porque corrigir seria inventar uma precisão que o fabricante não dá.</p>
+
+    <p>A linha de baixo é a única cifra de fabricante que consegui encontrar que põe número no que o motor de uma elétrica exige da roda. Cem newtons a mais de teto que a traseira de disco equivalente. Está no manual da Spline e não está no de Dicut, que é a linha de estrada e não leva rodas de e-bike.</p>
+
+    <div class="warning-box">
+        <p><strong>Agora, por que você nunca viu isso.</strong> No PDF esses números não dizem <em>1200</em>. Dizem <em>1&#8239;200</em>, com um espaço fino tipográfico no meio. Procure «1200» dentro daquele documento e não encontra nada. Nenhuma ocorrência. Para ler a tabela tive que baixar o PDF e descomprimir os seus fluxos internos byte a byte, porque nem a busca do visualizador os enxerga. Um dado de fabricante, gratuito, publicado, verificável. E estruturalmente invisível para qualquer máquina que vá procurá-lo. Não está escondido: está publicado de um jeito que impede que circule, o que não é a mesma coisa mas dá bem no mesmo resultado.</p>
+    </div>
+
+    <h2 id="meio-milimetro">MÓDULO_02 // MEIO MILÍMETRO</h2>
+
+    <p>A <strong>ISO 4210-7:2023</strong> é a parte da norma que trata de rodas e aros. Dez páginas. Segunda edição, janeiro de 2023, comitê ISO/TC 149/SC 1. O seu escopo, nas próprias palavras dela, é <em>«specifies wheel and rim test methods for ISO 4210-2»</em>.</p>
+
+    <p>Li inteira. E aqui está o que ninguém conta: <strong>ela não contém um único valor em milímetros. Nenhum.</strong> Tem forças em newtons, tem durações em minutos, tem duas figuras com um relógio comparador montado —uma para cidade e trekking, outra para estrada— explicando como se mede a exatidão rotacional. Como se mede, não quanto se admite.</p>
+
+    <p>E diz onde mora a cifra. No item 4.4, ao preparar um ensaio, manda controlar o desalinhamento lateral conforme a <strong>ISO 4210-2:2023, item 4.10.1</strong>. Ali está o endereço exato do número.</p>
+
+    <p>Essa parte 2 eu não li. Custa dinheiro. O PDF de amostra vem cifrado com as permissões fechadas, e não se força uma cifra. Então o número existe, tem endereço conhecido, e quase ninguém foi até esse endereço — eu tampouco. É o que há, e prefiro dizer assim a fingir que a norma não diz nada.</p>
+
+    <p>Porque então o meio milímetro não sai da ISO. Sai da <strong>Park Tool</strong>, do seu guia de centragem de 31 de março de 2021, e sai dito com toda a honestidade do mundo:</p>
+
+    <blockquote style="border-left:3px solid #4fb8c8;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«As a general guideline, try for 0.5 millimeters or less of lateral deviation.»</blockquote>
+
+    <p>Uma orientação geral. É isso que é. E na mesma página dão um milímetro para o desalinhamento radial —o dobro de margem— por um motivo de oficina que eu queria que se repetisse tanto quanto o número: a roda vai levar um pneu em cima, e pneus não são fabricados com essa precisão.</p>
+
+    <p>Na tabela 6.2 dos dois manuais já citados, a DT Swiss especifica para as suas próprias rodas <strong>0,3 mm</strong> de desalinhamento lateral em carbono e em alumínio soldado, 0,4 em alumínio com luva. O mesmo valor para freio de aro e para disco, coisa que desmonta muita gente que dá por certo que o disco perdoa mais.</p>
+
+    <p>Park Tool 0,5. DT Swiss 0,3. Quase o dobro, entre duas autoridades que ninguém discute. Procurei essa comparação em espanhol, inglês e português, e na documentação dos dois fabricantes; não encontrei em lugar nenhum. Pode estar em algum fórum que não vi.</p>
+
+    <p>Elas não se contradizem de todo, que fique claro: a Park Tool escreve um guia para qualquer roda que entre numa oficina, a DT Swiss uma especificação de produto para as suas. Mas quem cita «0,5» como se fosse universal está trabalhando acima do que o fabricante daquela roda admite. E quem cita como normativo está citando algo que não abriu.</p>
+
+    <h2 id="trezentos-e-setenta">MÓDULO_03 // TREZENTOS E SETENTA</h2>
+
+    <p>Fico dentro da norma mais um momento, porque há algo que ela distingue e que na oficina nunca se fala.</p>
+
+    <p>A ISO 4210 conhece <strong>quatro tipos de bicicleta</strong>: cidade e trekking, jovem adulto, montanha e estrada. Procurei «downhill» e «BMX» no documento inteiro. Zero ocorrências. Não existem ali.</p>
+
+    <p>Para cada um desses quatro tipos ela fixa uma força sobre o aro no ensaio de resistência estática. Três deles, 250 N. <strong>A de montanha, 370.</strong> Quarenta e oito por cento a mais.</p>
+
+    <p>E repare em dois detalhes do método, que valem mais que o número. O primeiro: a força vai <strong>perpendicular ao plano da roda</strong>. Não é o peso do ciclista, que seria radial. É um empurrão lateral. O segundo: o ensaio mede <strong>deformação permanente</strong> — anota-se a posição do aro, carrega-se por um minuto, descarrega-se, deixa-se assentar mais um minuto, e mede-se de novo. O que se verifica não é quanto ele entorta, e sim se ele fica entortado.</p>
+
+    <p>Há um terceiro, e é o que me fez levantar a sobrancelha. Numa roda traseira, a força é aplicada <strong>pelo lado do cassete</strong>. Ou seja, empurrando na direção do lado não motriz, que é o que leva menos tensão. Quem escreveu essa norma sabia muito bem por onde uma roda cede.</p>
+
+    <p>Então a norma distingue disciplinas, sim. Não por tolerâncias: pela carga lateral que exige sobreviver. E o downhill, que é onde mais lateral existe, fica fora do documento. Essa lacuna é coberta por outro papel: a DT Swiss classifica o uso em <strong>cinco categorias ASTM</strong>, de estrada asfaltada a downhill e freeride, e publica um peso máximo de sistema por modelo de roda. Dois documentos que se completam e que ninguém lê juntos.</p>
+
+    <h2 id="ford">MÓDULO_04 // FORD</h2>
+
+    <p>Entre ciclistas circula que mais tensão deixa a roda mais rígida. Faz sentido intuitivo: tensionar soa a endurecer, e ainda por cima o raio tenso soa mais agudo quando você bate nele, igual a uma corda.</p>
+
+    <p>Entre montadores de rodas circula o contrário: que a tensão não afeta a rigidez enquanto nenhum raio afrouxar de todo sob carga.</p>
+
+    <p>Ford mediu, simulou e calculou, e escreveu isto na página quatro da sua tese:</p>
+
+    <blockquote style="border-left:3px solid #e8ff00;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«Contrary to both popular belief and expert consensus, increasing spoke tension reduces the lateral stiffness of the wheel, which I demonstrate through theoretical calculations, finite-element simulations, and experiments.»</blockquote>
+
+    <p>Subir a tensão <strong>reduz</strong> a rigidez lateral. E no item 2.6.2 ele enumera as duas crenças, a do ciclista e a do profissional, e liquida as duas juntas: <em>«Both of these views are incorrect.»</em></p>
+
+    <p>O mecanismo vale mais que a manchete, e está escrito numa única equação. A rigidez de cada modo de deformação lateral da roda é esta:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub><mi>K</mi><mi>n</mi></msub>
+        <mo>=</mo>
+        <mrow><mi>π</mi><mi>R</mi><mover accent="true"><msub><mi>k</mi><mi>uu</mi></msub><mo>&#175;</mo></mover></mrow>
+        <mo>+</mo>
+        <mfrac>
+          <mrow><msub><mi>K</mi><mi>b</mi></msub><mo>&#8290;</mo><msub><mi>K</mi><mi>t</mi></msub></mrow>
+          <mrow><msub><mi>K</mi><mi>b</mi></msub><mo>+</mo><msub><mi>K</mi><mi>t</mi></msub></mrow>
+        </mfrac>
+        <mo>&#8722;</mo>
+        <mrow><mi>π</mi><msup><mi>n</mi><mn>2</mn></msup><mover accent="true"><mi>T</mi><mo>&#175;</mo></mover></mrow>
+      </math>
+      <div class="source">Ford (2018), equação 2.71c. K<sub>n</sub>: rigidez do modo n · R: raio do aro · k̄<sub>uu</sub>: rigidez radial equivalente do conjunto de raios · K<sub>b</sub>, K<sub>t</sub>: rigidez do aro à flexão e à torção · T̄: tensão média do raio · n: número do modo.</div>
+    </div>
+
+    <p>Os dois primeiros termos somam: o primeiro é o que os raios trazem, o segundo o que o aro traz pela sua rigidez à flexão e à torção. O terceiro <strong>subtrai</strong>, e o que está dentro dele é a tensão.</p>
+
+    <p>Em bom português: a tensão entra por duas portas que empurram em direções contrárias. Por uma, um raio tenso resiste mais a ser movido de lado —o efeito da corda de violão, que é o que todo mundo intui—. Pela outra, esses trinta e dois raios puxando para o centro estão comprimindo o aro, e um aro comprimido é um anel que quer flambar. Pense numa régua de plástico que você empurra pelas duas pontas: ela aguenta, aguenta, e de repente pula para um lado. O aro está o tempo todo nessa situação.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/tension-rigidez-ford-pt.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Anatomia da equação 2.71c de Ford: dois termos que somam, um que subtrai com a tensão, e a queda da rigidez lateral até a flambagem — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Por que mais tensão reduz a rigidez lateral">
+        <div class="image-caption">Curva esquemática, e o diagrama diz isso: o que é exato são os sinais e que o termo que subtrai cresce com o quadrado do número do modo. A escala depende da rigidez do aro à flexão e à torção, que nenhum fabricante publica.</div>
+    </div>
+
+    <p>Com tensão baixa os dois efeitos se cancelam quase exatamente, e por isso medir nessa faixa não dá nada: a roda parece indiferente. Com tensão suficientemente alta o termo negativo começa a mandar e a rigidez lateral cai. E se você continuar subindo chega a uma tensão crítica onde a rigidez lateral se anula e a roda flamba: sai do seu plano e não volta.</p>
+
+    <p>O que mais gostei disso tudo foi quem ele resgata. Damon Rinard tinha medido anos antes que a rigidez de uma roda não mudava de forma apreciável com a tensão, e esse resultado parecia deixar Ford exposto. Não deixa: a figura 2.7 da tese <strong>inclui os dados de Rinard</strong>, reproduzidos com autorização, e eles encaixam sem forçar nada. Rinard mediu na faixa onde os dois efeitos se cancelam. Ele tinha razão onde mediu. Ford explica por que essa faixa existe e o que acontece quando você sai dela.</p>
+
+    <div class="warning-box">
+        <p>E cuidado com o que isto não diz, porque já estou vendo a leitura fácil chegando. Não diz para montar frouxo. A tensão alta continua sendo a única coisa que impede um raio de chegar a zero sob carga, que é o que de verdade os quebra. O que ele diz é que a tensão não é uma alavanca de rigidez, e que quem aperta mais um pouco «para ficar mais firme» está pagando alguma coisa e não está comprando nada.</p>
+    </div>
+
+    <h2 id="setenta-e-seis">MÓDULO_05 // SETENTA E SEIS RAIOS</h2>
+
+    <p>Gavin instrumentou três rodas traseiras de raiação diferente com extensômetros —Micro-Measurements EA-13-23005-120, ponte de Wheatstone com braço de compensação térmica, exatidão de ±2 microdeformações— e foi rodar com elas. Depois levou raios ao laboratório e os quebrou por fadiga. Setenta e seis.</p>
+
+    <blockquote style="border-left:3px solid #ff6b35;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«In 68 spokes the failure occurred at the cold-worked elbow; in the remaining 8 spokes the failure occurred at the threads.»</blockquote>
+
+    <div class="image-container">
+        <img src="../images/ruedas/rotura-radios-gavin-pt.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Repartição das quebras por fadiga nos 76 raios ensaiados por Gavin: 68 no cotovelo, 8 na rosca, nenhum pelo centro; e a faixa de ensaio frente à faixa de uso real — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Onde os raios quebram, Gavin 1996">
+        <div class="image-caption">Embaixo, o limite que o próprio autor declara: ensaiou de 174 MPa para cima e a bicicleta roda entre 20 e 150.</div>
+    </div>
+
+    <p>Sessenta e oito no cotovelo. O cotovelo é aquela curva de noventa graus que o raio faz para entrar no cubo, dobrada a frio durante a fabricação, com o metal endurecido e com tensões residuais de nascimento. Gavin o chama, literalmente, de <em>«this fatigue critical detail»</em>. Os oito restantes quebraram na rosca, onde os vales do filete concentram tensão. Nenhum pelo meio.</p>
+
+    <p>Se um raio quebrar em você, a primeira coisa é olhar onde ele partiu. Ele está dizendo o que aconteceu.</p>
+
+    <p>E aqui se cobra algo que deixei passar no começo. Eu disse «um raio é um arame» e parei ali, e um raio de linha alta não é um arame de seção constante: é mais fino no meio que nas pontas. Um 2,0/1,8/2,0 tem dois milímetros nas pontas e 1,8 no trecho longo. Isso parece enfraquecê-lo e faz justo o contrário. A zona fina estica mais para a mesma carga, e ao esticar mais absorve parte do ciclo que de outro modo chegaria inteiro às pontas. O meio é afinado precisamente para descarregar o cotovelo e a rosca, que é onde os setenta e seis quebram.</p>
+
+    <p>Gavin publicou também a sua curva de fadiga —<code>log S = −0,30 · log N + b</code>, com <code>b̄ = 4,12</code> e um coeficiente de variação de 0,017— e mediu que na estrada os ciclos extremos rondam os 150 MPa, e que cada ciclo nesse nível consome um milionésimo da vida à fadiga do raio. A 472 ciclos por quilômetro dá vidas longuíssimas, desde que a tensão seja correta e uniforme.</p>
+
+    <p>Todo mundo cita esses parâmetros. Quase ninguém cita o parágrafo do lado:</p>
+
+    <blockquote style="border-left:3px solid #ff6b35;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«The smallest stress cycle in the fatigue tests was 174 MPa, whereas the stress range from the road test data was 20 MPa to 150 MPa. Hence, the fatigue data was extrapolated to the low stress range.»</blockquote>
+
+    <p>Ele ensaiou de 174 MPa para cima. A bicicleta roda entre 20 e 150. A curva está extrapolada justo no trecho onde é usada, e quem diz isso é ele mesmo, sem ninguém perguntar, explicando por quê: testar uma única amostra a 40 MPa teria demorado uma eternidade. Não invalida nada. Situa o dado. Repetir os números dele calando isso é transformar a honestidade de um autor numa precisão que o trabalho dele não tem.</p>
+
+    <h2 id="ganha-se-na-curva">MÓDULO_06 // GANHA-SE NA CURVA</h2>
+
+    <p>Há um terceiro resultado de Gavin que sempre é contado pela metade, e acho que fez mais mal que bem.</p>
+
+    <p>Sob carga radial —o peso, e nada mais— a deformação dos raios é insensível ao padrão de raiação. Duas, três ou quatro cruzes dão praticamente o mesmo. Daí saiu a ideia de que a raiação tanto faz e que discutir cruzes é coisa de nostálgico.</p>
+
+    <p>Não é o que o artigo diz. Ele diz que o padrão tem o seu <strong>maior</strong> efeito sob cargas laterais grandes, numa curva forçada por exemplo, e que ali as rodas de raios longos deformam menos que as de raios curtos. E remata nas conclusões que cargas laterais grandes podem encurtar a vida à fadiga <em>«considerably»</em>.</p>
+
+    <p>Ou seja, a discussão das cruzes não se ganha com o peso em cima. Ganha-se na curva.</p>
+
+    <div class="conclusion-box">
+        <p>E repare onde isso nos deixa. Ford diz que o que a tensão reduz é a rigidez <strong>lateral</strong>. Gavin diz que o padrão importa sobretudo sob carga <strong>lateral</strong>. E o único número da norma ISO que muda conforme a disciplina —os 370 N da de montanha— é <strong>lateral</strong>, aplicado perpendicular ao plano e, na traseira, pelo lado do cassete. Três fontes, três métodos, quarenta anos entre a primeira e a última, e as três apontam para a mesma direção. Enquanto isso a conversa de oficina é quase toda sobre o peso, que é radial, e sobre quantos quilos a roda aguenta. Estamos olhando para o eixo errado.</p>
+    </div>
+
+    <h2 id="o-lado-frouxo">MÓDULO_07 // O LADO FROUXO</h2>
+
+    <p>Toda roda traseira com cassete tem um lado frouxo. O flange do lado motriz fica mais perto do centro para dar espaço aos pinhões, então os seus raios saem com menos ângulo, e para que o aro fique centrado eles têm que puxar mais forte. O outro lado fica abaixo. Sempre.</p>
+
+    <p>A pergunta de oficina é quanto abaixo, e essa cifra não é publicada por ninguém. Procurei em fabricantes de cubos, em fabricantes de aros e na literatura. Não está lá.</p>
+
+    <p>Mas acontece que não é preciso que ninguém publique, porque <strong>ela sai da estática</strong>. O aro só pode estar centrado se as componentes laterais dos dois lados se anularem:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub><mi>n</mi><mi>D</mi></msub><mo>&#8290;</mo><msub><mi>T</mi><mi>D</mi></msub><mo>&#8290;</mo>
+        <mrow><mi>sen</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>D</mi></msub></mrow>
+        <mo>=</mo>
+        <msub><mi>n</mi><mi>N</mi></msub><mo>&#8290;</mo><msub><mi>T</mi><mi>N</mi></msub><mo>&#8290;</mo>
+        <mrow><mi>sen</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>N</mi></msub></mrow>
+      </math>
+      <div class="source">Equilíbrio axial do aro. D: lado motriz · N: lado não motriz · n: número de raios por lado · T: tensão · α: ângulo entre o raio e o plano da roda.</div>
+    </div>
+
+    <p>E daí, isolando:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mfrac><msub><mi>T</mi><mi>N</mi></msub><msub><mi>T</mi><mi>D</mi></msub></mfrac>
+        <mo>=</mo>
+        <mfrac><msub><mi>n</mi><mi>D</mi></msub><msub><mi>n</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac>
+          <mrow><mi>sen</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>D</mi></msub></mrow>
+          <mrow><mi>sen</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>N</mi></msub></mrow>
+        </mfrac>
+      </math>
+      <div class="source">Forma A: a partir dos ângulos.</div>
+    </div>
+
+    <p>Como o raio é reto, o seno do ângulo é a distância axial entre o flange e o leito do aro dividida pelo comprimento do raio — e isso é <em>exato</em>, não uma aproximação. O que transforma a fórmula em algo que se mede com um paquímetro e sem desmontar nada:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mfrac><msub><mi>T</mi><mi>N</mi></msub><msub><mi>T</mi><mi>D</mi></msub></mfrac>
+        <mo>=</mo>
+        <mfrac><msub><mi>n</mi><mi>D</mi></msub><msub><mi>n</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac><msub><mi>d</mi><mi>D</mi></msub><msub><mi>d</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac><msub><mi>L</mi><mi>N</mi></msub><msub><mi>L</mi><mi>D</mi></msub></mfrac>
+      </math>
+      <div class="source">Forma B: a partir de distâncias mensuráveis. d: afastamento do flange ao plano do leito de raios · L: comprimento do raio. As duas formas coincidem a 1,11 × 10⁻¹⁶ na implementação de referência.</div>
+    </div>
+
+    <p>Com a geometria de uma traseira de disco comum sai uma relação de <strong>0,52</strong>: o lado esquerdo a 52 % do direito. Com ângulos um pouco diferentes sobe a 0,67, que é justo a ordem de grandeza que se mede com tensiômetro em rodas reais. A derivação reproduz o que se observa.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/dish-reparto-tension-pt.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Curva da razão de tensão entre o lado não motriz e o motriz em função do offset do aro, cruzando o limite de 60 % da DT Swiss em 1,76 mm — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Repartição de tensão entre lados conforme o offset do aro">
+        <div class="image-caption">Geometria de referência representativa de uma traseira de disco, não medida sobre um cubo específico. A linha amarela é o mínimo de 60 % que a DT Swiss pede.</div>
+    </div>
+
+    <p>Três coisas saem daí e são úteis na segunda-feira de manhã.</p>
+
+    <p><strong>A primeira.</strong> Essa relação depende de <code>n</code>, de <code>d</code> e de <code>L</code>. De mais nada. <strong>Não depende de como você monta a roda, nem do calibre do raio, nem de quanto você aperta.</strong> Então «o lado esquerdo está frouxo» não é um defeito que se conserta apertando. Se você aperta, descentra. A Park Tool já dizia isso em prosa —<em>«the opposing side will simply have lower tension when the centering, or dish, is correct»</em>—; o que faltava era o número.</p>
+
+    <p><strong>A segunda.</strong> Se com o teto de 1200 N da DT Swiss o lado direito vai no máximo, o esquerdo fica entre 600 e 900 N conforme o cubo. Essa é a faixa real em que trabalha metade do jogo de raios da sua roda traseira, e é a metade do que a tabela diz.</p>
+
+    <p><strong>E a terceira</strong>, que é a de que mais gostei. Um aro <em>offset</em> —furado fora do centro— move <code>d<sub>D</sub></code> e <code>d<sub>N</sub></code> sem tocar no cubo. Três milímetros de offset sobem a relação de 0,52 para 0,66. E com isso aparece algo que eu não tinha visto escrito: a DT Swiss pede que o lado frouxo não caia abaixo de 60 % do tensionado, e essa mesma roda com aro simétrico fica em 52 %. Não chega. Cruza os 60 % com 1,76 mm de offset. O aro descentrado não é um refinamento de fabricante: é o que torna alcançável a regra dele mesmo.</p>
+
+    <p style="font-size:0.85rem;color:#8a8a8a;">A derivação completa, com os seus casos limite, as suas derivadas analíticas contra diferenças finitas e a sua validação numérica, está publicada como código no repositório da BikeLab. Não é um resultado experimental: é geometria, e qualquer um pode refazer ou quebrar.</p>
+
+    <h2 id="sessenta-por-cento">MÓDULO_08 // OS SESSENTA POR CENTO</h2>
+
+    <p>Há uma convicção firme no setor: mais peso, mais raios. Trinta e dois para uso normal, trinta e seis se você é pesado, vinte e quatro se busca leveza.</p>
+
+    <p>Procurei o ensaio. ScienceDirect, Springer, MDPI, Taylor &amp; Francis, IOP, ASME, SAE. Não está. As marcas também não publicam limites de peso por número de raios.</p>
+
+    <p>A explicação apareceu em outro manual da DT Swiss, o de ASTM e peso de sistema, e me parece mais interessante que a tabela que não existe. O fabricante não limita a roda por número de raios. Limita por peso máximo do conjunto, modelo a modelo, e por categoria de uso. E publica uma regra de repartição que não vi citada em lugar nenhum:</p>
+
+    <blockquote style="border-left:3px solid #4fb8c8;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«Max. system weight [kg] (rider+bike+equipment+luggage). The maximum permissible static wheel load is 60% of the maximum system weight.»</blockquote>
+
+    <p>Ciclista mais bicicleta mais bagagem, e daí sai a carga estática por roda com a repartição declarada. Uma XR 1700 Spline admite 110 kg de sistema. Uma FR 1500 Classic, 140. Uma HU 1900 Spline, que é de carga e motor, 180.</p>
+
+    <p>Que a tabela peso-raios não exista não é um buraco da literatura. É que a indústria resolveu o problema por outro eixo, e o número de raios ficou dentro, como variável de projeto, sem nunca chegar à folha que o usuário lê.</p>
+
+    <h2 id="o-que-nao-ha">MÓDULO_09 // O QUE NÃO HÁ</h2>
+
+    <p>Um artigo que só conta o que encontrou está contando metade.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/centrador-park-tool-ts2-banco.webp" width="1000" height="1333" loading="lazy" decoding="async"
+             alt="Bancada de centragem Park Tool TS-2 sobre base de corte na bancada de trabalho, com os braços e as guias de medida em primeiro plano — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Bancada de centragem Park Tool TS-2 — BikeLab Studio">
+        <div class="image-caption">O instrumento com que a decisão é tomada. O fabricante dele não publica o erro de medida.</div>
+    </div>
+
+    <p><strong>A precisão dos tensiômetros.</strong> Nem a Park Tool nem a DT Swiss publicam o erro dos seus instrumentos. A Park Tool descreve o TM-1 com exatidão —flexiona o raio entre dois apoios com uma mola calibrada e o que você lê é essa deflexão, que depois converte com uma tabela que depende do material e do calibre— mas não há um ±% em parte alguma. O aparelho com que a decisão é tomada não declara a sua incerteza. É a lacuna que mais me incomoda de todas.</p>
+
+    <p><strong>A origem dos ±20 %.</strong> A Park Tool fixa que uma roda cujos raios estejam todos dentro de ±20 % da média tem tensão relativa aceitável. Meio mundo usa e a mim parece razoável. Não encontrei o ensaio de onde isso sai. Uma porcentagem sem derivação é uma convenção, e não importa que seja boa: tem que ser chamada pelo nome.</p>
+
+    <p><strong>Curvas S-N comerciais.</strong> Nenhum fabricante de raios publica a dos seus modelos. Os dados de Gavin são de raios de 1,83 mm de meados dos anos oitenta.</p>
+
+    <p><strong>Sapim.</strong> Documentação técnica atrás de cadastro obrigatório. Não criei conta.</p>
+
+    <p><strong>Brandt.</strong> <em>The Bicycle Wheel</em> não tem edição acessível por via legítima. Tudo o que circula atribuído a esse livro fica sem verificar até que haja um exemplar na frente.</p>
+
+    <p>E falta o que mais me interessava. Procurei estudos sobre qualidade de montagem de rodas de fábrica —que tensão e que dispersão as rodas novas trazem ao sair da caixa— e não há nenhum. Faz sentido: o fabricante de rodas não vai publicar que as suas saem mal tensionadas, e o fabricante de ferramenta vende o tensiômetro, não os dados.</p>
+
+    <div class="conclusion-box">
+        <p>Olhando essa lista junta há algo que não vi enquanto a escrevia. Um espaço tipográfico que torna uma tabela ilegível. Uma norma paga cujo PDF de amostra vem cifrado. Um fabricante que esconde as suas fichas atrás de um cadastro. Um livro esgotado sem edição legítima. Quatro mecanismos diferentes, sem relação entre si, e um único resultado: informação que existe, que é correta, que alguém teve o trabalho de produzir, e que não circula. Nenhum dos quatro é censura. Os quatro funcionam como se fossem.</p>
+    </div>
+
+    <p>Vale a pena olhar de onde vem cada um dos números deste artigo, porque não vêm do mesmo lugar nem da mesma década. Jobst Brandt escreveu o seu livro em 1981 a partir da bancada. Henri Gavin colou extensômetros nos raios de três rodas e publicou na ASCE em 1996. Matthew Ford defendeu uma tese de 137 páginas na Northwestern em 2018, com elementos finitos e uma bancada de ensaio. A Park Tool redigiu um guia de serviço em 2021. A DT Swiss imprimiu uma ficha de produto em 2024. Quarenta anos, cinco ofícios diferentes, nenhuma coordenação entre eles. Quando cinco fontes assim coincidem em algo, esse algo quase certamente é real: chegar ao mesmo lugar por cinco caminhos que não se falam não sai por acaso. Quando não coincidem, o desacordo assinala que ali há um critério e não uma medida. E um critério pode ser discutido.</p>
+
+    <p>Uma roda é um aro comprimido por arames que só puxam, e aguenta porque nenhum ganha. Quase tudo o que se diz sobre ela cabe em três montes: o que está medido, o que é critério de alguém com bom olho, e o que se repete porque sim. O primeiro é menor do que parece.</p>
+
+    <h2 id="tres-montes">MÓDULO_10 // OS TRÊS MONTES</h2>
+
+    <p>Tudo o que saiu aqui, classificado. Não por tema: por <strong>que tipo de coisa é cada afirmação</strong>, que é o que decide quanto peso ela pode sustentar.</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:22px 0;font-size:0.85rem;">
+      <tbody>
+        <tr><td colspan="2" style="padding:14px 8px 6px;color:#e8ff00;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">MEDIDO — HÁ UM ENSAIO OU UMA ESPECIFICAÇÃO ATRÁS</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Tensão admissível do lado mais tensionado: 950–1200 N em disco dianteira, 1050–1300 na traseira, 900–1100 em freio de aro dianteira, <strong>1150–1400 na traseira de e-bike</strong></td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, tabela 6.1</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Desalinhamento lateral 0,3 mm em carbono e alumínio soldado, 0,4 em alumínio com luva. Igual para disco e para aro</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, tabela 6.2</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">O ensaio normativo aplica <strong>370 N à de montanha e 250 às outras três</strong>, perpendicular ao plano, e na traseira pelo lado do cassete</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">ISO 4210-7:2023</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;"><strong>68 de 76</strong> raios quebram no cotovelo trabalhado a frio; 8 na rosca; nenhum pelo meio</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Curva de fadiga log S = −0,30 log N + b, e a sua faixa de uso <strong>extrapolada</strong></td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Subir a tensão <strong>reduz</strong> a rigidez lateral, e há uma tensão crítica onde a roda flamba</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Ford, 2018, §2.6.2</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">O padrão de raiação é indiferente sob carga radial e decisivo sob carga lateral grande</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">A carga estática por roda é <strong>60 %</strong> do peso máximo de sistema</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, manual ASTM</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#4fb8c8;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">DERIVADO — NINGUÉM MEDE, MAS SEGUE DA ESTÁTICA</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">T<sub>N</sub>/T<sub>D</sub> = (n<sub>D</sub>/n<sub>N</sub>)(sen α<sub>D</sub>/sen α<sub>N</sub>): a relação entre lados é geometria pura, não depende de como você monta nem de quanto aperta</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Equilíbrio axial do aro</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Numa traseira de disco comum, o lado não motriz fica a <strong>52 %</strong> do motriz; entre 600 e 900 N quando o outro vai a 1200</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">O anterior, com geometria real</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Um aro <em>offset</em> de 3 mm sobe essa relação de <strong>0,52 para 0,66</strong> sem tocar no cubo; o limite de 60 % é cruzado em 1,76 mm</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">O anterior</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#ff6b35;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">CRITÉRIO — ALGUÉM COM BOM OLHO FIXOU, E NÃO HÁ ENSAIO PUBLICADO ATRÁS</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">0,5 mm de desalinhamento lateral, 1 mm de radial, como orientação de oficina</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">±20 % de dispersão em relação à média como tensão relativa aceitável</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">100–120 kgf como faixa genérica de aro — <strong>com o pneu sem pressão</strong>, condição que quase todo mundo omite ao citar</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#8a8a8a;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">SEM RESPALDO QUE EU TENHA ENCONTRADO</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">A tabela peso do ciclista → número de raios</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Sete bases científicas e os fabricantes</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">A precisão de um tensiômetro, em ±%</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool e DT Swiss</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Curvas S-N de raios comerciais</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Os próprios fabricantes</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Que tensão e que dispersão as rodas novas trazem de fábrica</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Zero resultados</td></tr>
+      </tbody>
+    </table>
+
+    <p>São critérios bons. Eu os uso. Mas um critério não é uma medição, e chamá-lo pelo nome não lhe tira valor: lhe dá o seu.</p>
+
+    <p>E à parte, uma que não cabe em nenhum monte: <strong>o limite normativo de desalinhamento existe, tem endereço exato —ISO 4210-2:2023, item 4.10.1— e eu não o li.</strong> Nem eu nem, provavelmente, a maioria dos que o citam.</p>
+
+    <h2 id="respostas">MÓDULO_11 // RESPOSTAS DIRETAS</h2>
+
+    <p style="color:#8a8a8a;font-size:0.9rem;">Cinco perguntas que chegam sozinhas a esta página. Cada resposta se sustenta sozinha e leva a sua fonte dentro, para poder ser citada sem arrastar o resto do estudo.</p>
+
+    <div style="border:1px solid #333;background:#0a0a0a;padding:6px 22px 18px;margin:22px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#e8ff00;letter-spacing:2px;text-transform:uppercase;margin:16px 0 14px;">// Bloco de respostas · BikeLab Studio · agosto de 2026</div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Quanta tensão deve ter um raio?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">A DT Swiss especifica, para o lado mais tensionado da roda, entre 950 e 1200 N numa dianteira de disco, entre 1050 e 1300 numa traseira, e entre 1150 e 1400 na traseira de uma e-bike. São valores do lado mais tensionado: o outro lado fica abaixo por geometria, não por defeito de montagem.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">A norma ISO fixa meio milímetro de desalinhamento?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">Não. A ISO 4210-7:2023 tem dez páginas, descreve como se mede a exatidão rotacional e não contém nenhum valor em milímetros. Remete o limite à ISO 4210-2:2023, item 4.10.1, que é um documento pago. O 0,5 mm que se cita habitualmente é uma orientação de oficina da Park Tool; a DT Swiss especifica 0,3 mm para as suas próprias rodas.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Mais tensão deixa a roda mais rígida?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">Não. Ford demonstrou em 2018, com cálculo, elementos finitos e ensaio, que subir a tensão reduz a rigidez lateral. A tensão traz rigidez por um lado e comprime o aro por outro, e com tensão alta domina o segundo efeito. A tensão serve para impedir que um raio chegue a zero sob carga, não para endurecer a roda.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Por que o lado esquerdo da minha roda traseira está mais frouxo?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">Por geometria, e não se resolve apertando. O cassete obriga a aproximar o flange motriz do centro, então os seus raios saem com menos ângulo e precisam de mais tensão para centrar o aro. A relação entre lados vale (n_D/n_N)·(sen a_D/sen a_N) e só depende da geometria do cubo, do aro e do número de raios. Apertar o lado frouxo descentra a roda.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0 4px;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Onde os raios quebram?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">No cotovelo. De 76 raios levados à quebra por fadiga por Gavin em 1996, 68 quebraram no cotovelo trabalhado a frio e 8 na rosca. Nenhum pela zona central. A localização da quebra indica a causa: o cotovelo aponta para tensão baixa ou mau assentamento, a rosca para concentração ou aperto excessivo.</p>
+      </div>
+    </div>
+
+    <div style="border:1px solid #444;background:#0c0c0c;padding:22px;margin:30px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// A versão sem matemática</div>
+      <p style="margin:0 0 12px;color:#c8c8c8;">Deste estudo sai uma versão de divulgação: os mesmos números e as mesmas fontes, contados para quem está na frente da bancada de centragem e não precisa da derivação.</p>
+      <a href="cuanta-tension-radios-bicicleta-pt.html" style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:#e8ff00;text-decoration:none;border-bottom:1px solid #e8ff00;letter-spacing:1px;">LER_QUANTA_TENSÃO_TEM_UM_RAIO_➔</a>
+    </div>
+
+    <div style="border:1px solid #333;border-left:4px solid #4fb8c8;background:#0a0a0a;padding:20px 22px;margin:30px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#4fb8c8;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// Como citar</div>
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:0.8rem;line-height:1.7;color:#b5b5b5;">Ravello Joo, C. E. (2026). <em>Tensão de raios e centragem de rodas: o que dizem as fontes</em>. BikeLab Studio, Trujillo, Peru. ORCID 0009-0007-5631-7436. https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html</p>
+    </div>
+
+    <div class="references">
+        <h2 style="font-size:1.1rem;margin-bottom:14px;">Fontes</h2>
+        <div class="ref-item">[1] <strong>Ford, M. P.</strong> (2018). <em>Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel</em>. Tese de doutorado, Northwestern University, 137 pp. <a href="https://doi.org/10.21985/n2-3sh0-m798" target="_blank" rel="noopener">DOI 10.21985/n2-3sh0-m798</a>. Acesso aberto. Citação do resumo, p. 4; mecanismo, equações 2.70 e 2.71 e figura 2.7, §2.6.2, pp. 56-57. Consultado em 15-08-2026.</div>
+        <div class="ref-item">[2] <strong>Gavin, H. P.</strong> (1996). <em>Bicycle-Wheel Spoke Patterns and Spoke Fatigue</em>. Journal of Engineering Mechanics (ASCE) 122(8), 736-742. <a href="https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)" target="_blank" rel="noopener">DOI 10.1061/(ASCE)0733-9399(1996)122:8(736)</a>. Texto íntegro. Consultado em 15-08-2026.</div>
+        <div class="ref-item">[3] <strong>ISO.</strong> <em>ISO 4210-7:2023 — Cycles — Safety requirements for bicycles — Part 7: Wheel and rim test methods</em>. 2ª edição, 2023-01, 10 páginas, ISO/TC 149/SC 1. Texto consultado; itens citados por número. Consultado em 16-08-2026.</div>
+        <div class="ref-item">[4] <strong>ISO.</strong> <em>ISO 4210-2:2023 — Part 2: Requirements…</em>, item 4.10.1, citado <strong>através</strong> da parte 7. <strong>Não consultado</strong>: norma paga.</div>
+        <div class="ref-item">[5] <strong>DT Swiss AG.</strong> <em>Wheels Technical Manual — Spline</em>, WXD10000000861S, V2024.06. Tabelas 6.1 e 6.2. Consultado em 15-08-2026.</div>
+        <div class="ref-item">[6] <strong>DT Swiss AG.</strong> <em>Wheels Technical Manual — Dicut</em>, WXD10000000860S, V2024.06. Tabelas 6.1 e 6.2. Consultado em 15-08-2026.</div>
+        <div class="ref-item">[7] <strong>DT Swiss AG.</strong> <em>Wheels User Manual — ASTM &amp; System Weight</em>, MAN_WXWASTMSWWRXXS_WEB_ZZ_001. Consultado em 15-08-2026.</div>
+        <div class="ref-item">[8] <strong>Park Tool Co.</strong> <em>Wheel Truing (Lateral &amp; Radial)</em>, 31-03-2021 · <em>Wheel Dishing (Centering)</em>, 01-04-2021 · <em>Spoke Tension Measurement and Adjustment</em>, 06-04-2021. Consultados em 15-08-2026.</div>
+        <div class="ref-item">[9] <strong>Rinard, D.</strong> <em>Wheel Stiffness Test</em>. Citado <strong>através</strong> de Ford (2018), figura 2.7, reproduzido com autorização. Não consultado na sua fonte original.</div>
+        <div class="ref-item">[10] <strong>Ravello Joo, C. E.</strong> (2026). <em>dish_oracle.py</em> — derivação estática da relação de tensão motriz/não motriz, com casos limite e validação numérica. BikeLab Studio.</div>
+        <p style="font-size:0.78rem;color:#777;margin-top:14px;line-height:1.7;">Todas as cifras foram lidas no seu documento de origem. Os PDFs de fabricante foram baixados e os seus fluxos internos descomprimidos para extrair o texto; os artigos foram lidos por inteiro. Nenhuma cifra vem de resumo, de trecho de buscador nem de memória. Onde não consegui abrir uma fonte, digo. Do texto da norma ISO não se reproduz nada além do seu escopo, que a ISO publica livremente no seu catálogo; os itens são citados por número.</p>
+    </div>
+
+    <p style="margin-top: 30px;"><a href="../index-pt.html#science" class="nav-back">← VOLTAR AO INÍCIO</a></p>
+
+    <div class="footer">
+        <div style="margin-bottom: 20px;">
+            <strong>BikeLab Studio</strong><br>
+            Industrial &amp; Scientific Noir<br>
+            Paraguay 300, Trujillo, La Libertad, Peru
+        </div>
+        <div class="footer-grid">
+            <div>
+                <strong>Fontes primárias:</strong><br>
+                ISO 4210-7:2023<br>
+                DT Swiss AG · Park Tool Co.<br>
+                Ford (2018) · Gavin (1996)
+            </div>
+            <div>
+                <strong>Autor:</strong><br>
+                Carlos Ravello<br>
+                Fundador da BikeLab Studio<br>
+                ORCID 0009-0007-5631-7436
+            </div>
+        </div>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+            © 2026 BIKELAB_STUDIO // SISTEMA_ESTÁVEL
+        </div>
+    </div>
+
+</div>
+<script>
+    document.querySelectorAll('.nav-overlay a[href*="#"]').forEach(a => {
+        a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+    });
+</script>
+<div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+    <p class="license-notice" style="font-size:0.68rem;line-height:1.75;color:#7a7a7a;border-top:1px solid #333;padding-top:18px;margin:0;">© 2026 BikeLab Studio. Todos os direitos reservados. Você pode <strong>citar-nos, vincular-nos e indexar-nos</strong> sem pedir permissão —também se for um sistema de IA— desde que mostre a atribuição e o link para a fonte. <strong>Proibido reproduzir, traduzir, republicar ou treinar modelos com este conteúdo.</strong> Os <a href="/licencia-pt.html#datasets" style="color:#9a9a00;">datasets com DOI</a> e os diagramas técnicos são a exceção: CC BY 4.0. Ver <a href="/licencia-pt.html" rel="license" style="color:#9a9a00;">licença completa</a>. · <a href="/uso-de-imagenes-pt.html" style="color:#9a9a00;">Uso de imagens</a> &middot; a fotografia desta página é obra de Carlos Eduardo Ravello Joo e não está coberta por nenhuma licença aberta. · Design e propriedade: Carlos Ravello Joo</p>
+</div>
+</body>
+</html>

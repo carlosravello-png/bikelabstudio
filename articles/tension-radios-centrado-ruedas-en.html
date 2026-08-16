@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoke tension and wheel truing | BikeLab Studio</title>
+  <meta name="description" content="Ten pages of ISO standard and not one value in millimetres. The newtons DT Swiss does publish, where 68 of 76 spokes break, and what nobody measures.">
+  <link rel="canonical" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html">
+  <link rel="alternate" hreflang="es" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html">
+  <link rel="alternate" hreflang="en" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-pt.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html">
+  <meta name="author" content="Carlos Eduardo Ravello Joo">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:site_name" content="BikeLab Studio">
+  <meta property="og:title" content="Spoke tension and wheel truing: what the sources actually say">
+  <meta property="og:description" content="Ten pages of standard, zero millimetres. And the derivation of the loose side, with the code that validates it.">
+  <meta property="og:url" content="https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html">
+  <meta property="og:image" content="https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spoke tension: what the sources actually say">
+  <meta name="twitter:description" content="The 0.5 mm is not in the standard. Ford: more tension, less lateral stiffness. Gavin: 68 of 76 break at the elbow.">
+  <meta name="twitter:image" content="https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg">
+
+  <meta name="DC.title" content="Spoke tension and wheel truing: what the primary sources actually say">
+  <meta name="DC.creator" content="Ravello Joo, Carlos Eduardo">
+  <meta name="DC.creator.url" content="https://carlosravello.com">
+  <meta name="DC.identifier.orcid" content="https://orcid.org/0009-0007-5631-7436">
+  <meta name="DC.language" content="en">
+  <meta name="DC.publisher" content="BikeLab Studio">
+  <meta name="DC.date" content="2026-08-16">
+  <meta name="DC.rights" content="https://www.bikelabstudio.com/licencia-en.html">
+  <meta name="DC.type" content="Text">
+  <meta name="citation_title" content="Spoke tension and wheel truing: what the primary sources actually say">
+  <meta name="citation_author" content="Ravello Joo, Carlos Eduardo">
+  <meta name="citation_author_institution" content="BikeLab Studio">
+  <meta name="citation_publication_date" content="2026-08-16">
+  <meta name="citation_language" content="en">
+  <link rel="license" href="https://www.bikelabstudio.com/licencia-en.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "ScholarlyArticle"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html",
+      "mainEntityOfPage": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html"
+      },
+      "headline": "Spoke tension and wheel truing: what the sources actually say",
+      "alternativeHeadline": "Nobody has read the standard: the primary sources, read end to end",
+      "description": "Audit of the primary sources on spoke tension and wheel truing. ISO 4210-7:2023 contains no value in millimetres and refers the threshold to part 2, which is paid. The 0.5 mm quoted as normative is a Park Tool guideline; DT Swiss specifies 0.3. Ford (2018) shows that raising tension reduces lateral stiffness. Gavin (1996) broke 76 spokes in fatigue: 68 at the elbow. The tension ratio between the two sides of the wheel, published by nobody, is derived here from statics and validated with code.",
+      "inLanguage": "en",
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": "2026",
+      "license": "https://www.bikelabstudio.com/licencia-en.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia-en.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-en.html",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#articulos-tecnicos"
+      },
+      "isAccessibleForFree": true,
+      "proficiencyLevel": "Expert",
+      "dependencies": "Calibrated tensiometer, truing stand and dial indicator",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".respuesta-directa",
+          ".faq-answer"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Bicycle spoke",
+          "@id": "https://www.wikidata.org/wiki/Q845671",
+          "sameAs": "https://www.wikidata.org/wiki/Q845671"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicycle wheel",
+          "@id": "https://www.wikidata.org/wiki/Q161798",
+          "sameAs": "https://www.wikidata.org/wiki/Q161798"
+        },
+        {
+          "@type": "Thing",
+          "name": "Stress (mechanics)",
+          "@id": "https://www.wikidata.org/wiki/Q206175",
+          "sameAs": "https://www.wikidata.org/wiki/Q206175"
+        },
+        {
+          "@type": "Thing",
+          "name": "Fatigue (material)",
+          "@id": "https://www.wikidata.org/wiki/Q507234",
+          "sameAs": "https://www.wikidata.org/wiki/Q507234"
+        },
+        {
+          "@type": "Thing",
+          "name": "Stiffness",
+          "@id": "https://www.wikidata.org/wiki/Q569057",
+          "sameAs": "https://www.wikidata.org/wiki/Q569057"
+        },
+        {
+          "@type": "Thing",
+          "name": "Buckling",
+          "@id": "https://www.wikidata.org/wiki/Q693104",
+          "sameAs": "https://www.wikidata.org/wiki/Q693104"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Organization",
+          "name": "Park Tool",
+          "@id": "https://www.wikidata.org/wiki/Q20968253",
+          "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+        },
+        {
+          "@type": "Organization",
+          "name": "DT Swiss",
+          "@id": "https://www.wikidata.org/wiki/Q11964439",
+          "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+        },
+        {
+          "@type": "Organization",
+          "name": "International Organization for Standardization",
+          "@id": "https://www.wikidata.org/wiki/Q15028",
+          "sameAs": "https://www.wikidata.org/wiki/Q15028"
+        },
+        {
+          "@type": "Thing",
+          "name": "Spoke nipple",
+          "@id": "https://www.wikidata.org/wiki/Q1255302",
+          "sameAs": "https://www.wikidata.org/wiki/Q1255302"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicycle hub",
+          "@id": "https://www.wikidata.org/wiki/Q105150560",
+          "sameAs": "https://www.wikidata.org/wiki/Q105150560"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bicycle rim",
+          "@id": "https://www.wikidata.org/wiki/Q1392541",
+          "sameAs": "https://www.wikidata.org/wiki/Q1392541"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electric bicycle",
+          "@id": "https://www.wikidata.org/wiki/Q924724",
+          "sameAs": "https://www.wikidata.org/wiki/Q924724"
+        },
+        {
+          "@type": "Thing",
+          "name": "Strain gauge",
+          "@id": "https://www.wikidata.org/wiki/Q610723",
+          "sameAs": "https://www.wikidata.org/wiki/Q610723"
+        }
+      ],
+      "citation": [
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://doi.org/10.21985/n2-3sh0-m798",
+          "name": "Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel",
+          "author": {
+            "@type": "Person",
+            "name": "Matthew P. Ford"
+          },
+          "datePublished": "2018",
+          "publisher": {
+            "@type": "CollegeOrUniversity",
+            "name": "Northwestern University",
+            "sameAs": "https://www.wikidata.org/wiki/Q309350"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.21985/n2-3sh0-m798"
+          },
+          "url": "https://arch.library.northwestern.edu/concern/generic_works/rn301170f",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)",
+          "name": "Bicycle-Wheel Spoke Patterns and Spoke Fatigue",
+          "author": {
+            "@type": "Person",
+            "name": "Henri P. Gavin"
+          },
+          "datePublished": "1996-08-01",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Engineering Mechanics",
+            "publisher": {
+              "@type": "Organization",
+              "name": "American Society of Civil Engineers",
+              "sameAs": "https://www.wikidata.org/wiki/Q466880"
+            }
+          },
+          "pagination": "736-742",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.1061/(ASCE)0733-9399(1996)122:8(736)"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.iso.org/standard/78082.html",
+          "name": "ISO 4210-7:2023 — Cycles — Safety requirements for bicycles — Part 7: Wheel and rim test methods",
+          "datePublished": "2023-01",
+          "publisher": {
+            "@type": "Organization",
+            "name": "International Organization for Standardization",
+            "sameAs": "https://www.wikidata.org/wiki/Q15028"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ISO",
+            "value": "ISO 4210-7:2023"
+          },
+          "numberOfPages": 10,
+          "isAccessibleForFree": false
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.iso.org/standard/78077.html",
+          "name": "ISO 4210-2:2023 — Part 2: Requirements for city and trekking, young adult, mountain and racing bicycles",
+          "publisher": {
+            "@type": "Organization",
+            "name": "International Organization for Standardization",
+            "sameAs": "https://www.wikidata.org/wiki/Q15028"
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ISO",
+            "value": "ISO 4210-2:2023"
+          },
+          "isAccessibleForFree": false,
+          "description": "Cited through part 7, clause 4.4, which refers to clause 4.10.1 of this document. Not consulted: paid standard."
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#spline",
+          "name": "DT Swiss Wheels Technical Manual — Spline",
+          "version": "V2024.06",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "WXD10000000861S"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#dicut",
+          "name": "DT Swiss Wheels Technical Manual — Dicut",
+          "version": "V2024.06",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "WXD10000000860S"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.dtswiss.com/en/support/manuals#astm",
+          "name": "DT Swiss Wheels User Manual — ASTM & System Weight",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "documento",
+            "value": "MAN_WXWASTMSWWRXXS_WEB_ZZ_001"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DT Swiss",
+            "sameAs": "https://www.wikidata.org/wiki/Q11964439"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-and-rim-truing",
+          "name": "Wheel Truing (Lateral & Radial)",
+          "datePublished": "2021-03-31",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-tension-measurement",
+          "name": "Spoke Tension Measurement and Adjustment",
+          "datePublished": "2021-04-06",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://www.parktool.com/en-int/blog/repair-help/wheel-dishing-centering",
+          "name": "Wheel Dishing (Centering)",
+          "datePublished": "2021-04-01",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Park Tool",
+            "sameAs": "https://www.wikidata.org/wiki/Q20968253"
+          }
+        }
+      ],
+      "image": [
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-en.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-en.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-en.svg#image"
+        },
+        {
+          "@id": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp#image"
+        }
+      ],
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum allowable tension, tightest side, rear disc wheel",
+          "value": 1300,
+          "unitText": "N",
+          "measurementTechnique": "Manufacturer specification",
+          "description": "DT Swiss, table 6.1 (Spline and Dicut, V2024.06)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum allowable tension, tightest side, e-bike rear wheel",
+          "value": 1400,
+          "unitText": "N",
+          "measurementTechnique": "Manufacturer specification",
+          "description": "DT Swiss, table 6.1, Hybrid row. Present in the Spline manual, absent from Dicut"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Lateral runout tolerance, carbon rim",
+          "value": 0.3,
+          "unitText": "mm",
+          "measurementTechnique": "Manufacturer specification",
+          "description": "DT Swiss, table 6.2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Lateral test force on the rim, mountain bicycle",
+          "value": 370,
+          "unitText": "N",
+          "measurementTechnique": "Standard static strength test, load perpendicular to the plane of the wheel",
+          "description": "ISO 4210-7:2023, table 1. The other three bicycle types: 250 N"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Maximum static load per wheel, as a fraction of system weight",
+          "value": 60,
+          "unitText": "%",
+          "measurementTechnique": "Rule declared by the manufacturer",
+          "description": "DT Swiss, ASTM & System Weight manual"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Fatigue failures located at the spoke elbow",
+          "value": 68,
+          "unitText": "spokes of 76 tested",
+          "measurementTechnique": "Fatigue test to failure",
+          "description": "Gavin (1996). The remaining 8 broke at the threads"
+        }
+      ],
+      "workExample": {
+        "@id": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html#article"
+      },
+      "translationOfWork": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html#article"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Allowable spoke tension window per DT Swiss, by brake type and use",
+      "caption": "The six allowable tension ranges for the tightest side, in newtons. The Hybrid row, for e-bikes, raises the rear ceiling to 1400 N.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-en.html",
+      "isBasedOn": {
+        "@id": "https://www.dtswiss.com/en/support/manuals#spline"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-en.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/rotura-radios-gavin-en.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Where the 76 spokes tested by Gavin broke",
+      "caption": "68 at the cold-worked elbow, 8 at the threads, none through the middle. Below, the tested stress range against the real riding range.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-en.html",
+      "isBasedOn": {
+        "@id": "https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-en.svg#image",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/tension-rigidez-ford-en.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": 800,
+      "height": 520,
+      "name": "Anatomy of Ford's equation 2.71c",
+      "caption": "Two terms that add and one that subtracts with tension: why lateral stiffness falls as tension rises, down to buckling.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "creditText": "Carlos Eduardo Ravello Joo — BikeLab Studio",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-en.html",
+      "isBasedOn": {
+        "@id": "https://doi.org/10.21985/n2-3sh0-m798"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-en.svg#image",
+      "url": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-en.svg",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/dish-reparto-tension-en.svg",
+      "encodingFormat": "image/svg+xml",
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 800,
+        "unitCode": "E37"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 520,
+        "unitCode": "E37"
+      },
+      "name": "Tension ratio between sides as a function of rim offset",
+      "caption": "The non-drive to drive ratio rises from 0.52 to 0.66 with 3 mm of offset, and crosses the DT Swiss 60 % threshold at 1.76 mm.",
+      "description": "Razón entre la tensión del lado no motriz y la del motriz de una rueda trasera de disco en función del descentrado del lecho de radios; cruza el umbral del 60 % de DT Swiss a 1,76 mm de offset.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": 2026,
+      "creditText": "Carlos Eduardo Ravello Joo / BikeLab Studio — CC BY 4.0",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes-en.html"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp#image",
+      "url": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp",
+      "contentUrl": "https://www.bikelabstudio.com/images/ruedas/centrador-park-tool-ts2-banco.webp",
+      "encodingFormat": "image/webp",
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 1000,
+        "unitCode": "E37"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 1333,
+        "unitCode": "E37"
+      },
+      "name": "Park Tool TS-2 truing stand on the workbench",
+      "caption": "The instrument the truing decision is made with. Its manufacturer does not publish its measurement error.",
+      "description": "Park Tool TS-2 wheel truing stand on a cutting mat, with the arms and measuring guides in the foreground.",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "copyrightYear": 2026,
+      "creditText": "Carlos Eduardo Ravello Joo / BikeLab Studio",
+      "copyrightNotice": "© 2026 Carlos Eduardo Ravello Joo — BikeLab Studio. All rights reserved. Indexing and citing with attribution and a link: allowed, AI included. Reproducing, adapting or training models: prohibited without written permission.",
+      "license": "https://www.bikelabstudio.com/uso-de-imagenes.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/uso-de-imagenes.html",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Trujillo, Peru",
+        "sameAs": "https://www.wikidata.org/wiki/Q214173"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#oraculo-dish",
+      "name": "dish_oracle.py — derivation and validation of the tension ratio between sides",
+      "description": "Derives from statics the tension ratio between the drive and non-drive sides of a dished wheel, in its two equivalent forms, and validates it with reference vectors, limit cases, analytical derivatives against finite differences and domain checking.",
+      "programmingLanguage": "Python",
+      "creator": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "license": "https://www.bikelabstudio.com/licencia-en.html",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html",
+      "name": "Spoke tension and wheel truing — BikeLab Studio",
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.bikelabstudio.com/images/ruedas/tension-radios-dtswiss-en.svg#image"
+      },
+      "breadcrumb": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article"
+      },
+      "license": "https://www.bikelabstudio.com/licencia-en.html",
+      "inLanguage": "en",
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "relatedLink": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".respuesta-directa",
+          ".faq-answer"
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "jobTitle": "Investigador independiente",
+      "worksFor": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5631-7436"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Google Knowledge Graph",
+          "value": "/g/11zb6pmf10"
+        }
+      ],
+      "sameAs": [
+        "https://carlosravello.com",
+        "https://orcid.org/0009-0007-5631-7436"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/",
+      "founder": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ISNI",
+        "value": "0000 0005 3051 4237"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "url": "https://www.bikelabstudio.com/",
+      "name": "BikeLab Studio",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://www.bikelabstudio.com/#articulos-tecnicos",
+      "name": "Artículos Técnicos BikeLab Studio",
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bikelabstudio.com/index-en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Research",
+          "item": "https://www.bikelabstudio.com/research-en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Spoke tension and wheel truing"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much tension should a spoke have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DT Swiss specifies, for the tightest side of the wheel, between 950 and 1200 N on a disc front, between 1050 and 1300 on a rear, and between 1150 and 1400 on the rear of an e-bike. These are values for the tightest side: the other side sits below it by geometry, not by a build fault."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the ISO standard set half a millimetre of runout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. ISO 4210-7:2023 runs to ten pages, describes how rotational accuracy is measured and contains no value in millimetres at all. It refers the threshold to ISO 4210-2:2023, clause 4.10.1, which is a paid document. The 0.5 mm usually quoted is a Park Tool workshop guideline; DT Swiss specifies 0.3 mm for its own wheels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does more tension make the wheel stiffer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Ford demonstrated in 2018, with calculation, finite elements and testing, that raising tension reduces lateral stiffness. Tension adds stiffness through one route and compresses the rim through another, and at high tension the second effect dominates. Tension is there to keep a spoke from reaching zero under load, not to harden the wheel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the left side of my rear wheel looser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By geometry, and it isn't fixed by tightening it. The cassette forces the drive-side flange closer to the centre, so its spokes leave at a shallower angle and need more tension to centre the rim. The ratio between sides is (n_D/n_N)·(sin a_D/sin a_N) and depends only on the geometry of hub and rim and on the spoke count. Tightening the loose side pulls the wheel off centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do spokes break?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At the elbow. Of 76 spokes taken to fatigue failure by Gavin in 1996, 68 broke at the cold-worked elbow and 8 at the threads. None through the central section. Where it broke tells you the cause: the elbow points to low tension or poor seating, the thread to stress concentration or overtightening."
+          }
+        }
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html#article",
+      "url": "https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html",
+      "name": "How much tension does a spoke carry",
+      "headline": "How much tension does a spoke carry",
+      "description": "Plain-language version of this study, without the mathematical load.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "isBasedOn": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article"
+      }
+    },
+    {
+      "@type": [
+        "TechArticle",
+        "ScholarlyArticle"
+      ],
+      "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html#article",
+      "url": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-es.html",
+      "name": "Tensión de radios y centrado de ruedas: lo que dicen las fuentes",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "workTranslation": {
+        "@id": "https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html#article"
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .header { border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 40px; }
+        .lang-switch { float: right; font-size: 12px; }
+        .lang-switch a { color: #888; text-decoration: none; padding: 5px 10px; border: 1px solid #444; transition: all 0.3s; }
+        .lang-switch a:hover { color: #fff; border-color: #666; }
+        .coordinates { font-size: 11px; color: #888; letter-spacing: 2px; margin-bottom: 10px; }
+        .category { font-size: 12px; color: #666; letter-spacing: 3px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle { font-size: 16px; color: #999; margin-bottom: 20px; }
+        .meta { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 15px; }
+
+        h2 {
+            font-size: 14px;
+            color: #aaa;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p { margin-bottom: 20px; color: #ccc; font-size: 14px; }
+
+        .image-container { margin: 50px 0; border: 1px solid #333; }
+        .image-container img { width: 100%; height: auto; display: block; }
+        .image-caption {
+            background-color: #0a0a0a;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            border-top: 1px solid #333;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 13px; background-color: #0a0a0a; }
+        th { background-color: #1a1a1a; color: #aaa; padding: 12px; text-align: left; border: 1px solid #333; font-weight: 400; letter-spacing: 1px; }
+        td { padding: 12px; border: 1px solid #333; color: #ccc; }
+        tr:hover { background-color: #151515; }
+
+        .formula {
+            background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            color: #f2f2f2;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 26px 32px;
+            margin: 28px 0;
+            border: 2px solid #444;
+            border-left: 6px solid #aaa;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow-x: auto;
+        }
+        .formula mjx-container { color: #f2f2f2 !important; }
+
+        .data-highlight { color: #fff; font-weight: bold; }
+        .data-red { color: #ff6b6b; font-weight: bold; }
+        .data-green { color: #6bffb8; font-weight: bold; }
+        .data-yellow { color: #ffd86b; font-weight: bold; }
+
+        .source { font-size: 11px; color: #666; font-style: italic; margin-top: 10px; }
+
+        .warning-box {
+            background-color: #1a0a0a;
+            border-left: 3px solid #ff4444;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .field-note {
+            background-color: #0a0f0a;
+            border-left: 3px solid #4a9e6b;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .field-note p { color: #aac8b4; margin-bottom: 0; }
+        .field-note p:first-child { color: #6bffb8; margin-bottom: 10px; font-weight: bold; }
+
+        .myth-box {
+            background-color: #140a0a;
+            border: 1px solid #5a2a2a;
+            border-left: 3px solid #cc3333;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .myth-box .myth-label { font-size: 10px; color: #cc3333; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .myth-box p { color: #cc9999; margin-bottom: 0; }
+
+        .fact-box {
+            background-color: #0a140a;
+            border: 1px solid #2a5a2a;
+            border-left: 3px solid #33cc66;
+            padding: 20px 25px;
+            margin: 30px 0;
+        }
+        .fact-box .fact-label { font-size: 10px; color: #33cc66; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
+        .fact-box p { color: #99cc99; margin-bottom: 0; }
+
+        .conclusion-box {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+
+        .references {
+            background-color: #0a0a0a;
+            border: 1px solid #444;
+            padding: 30px;
+            margin: 50px 0;
+        }
+        .references h2 { margin-top: 0; }
+
+        .ref-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #888;
+        }
+        .ref-item a { color: #888; text-decoration: none; }
+        .ref-item a:hover { color: #fff; }
+
+        .footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #333; font-size: 11px; color: #666; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        .nav-back {
+            display: inline-block;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #aaa; }
+
+        .market-card {
+            background-color: #0e0e0e;
+            border: 1px solid #2a2a2a;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-left: 3px solid #555;
+        }
+        .market-card .country { font-size: 10px; color: #888; letter-spacing: 3px; margin-bottom: 6px; }
+        .market-card .leader { font-size: 13px; color: #fff; margin-bottom: 6px; }
+        .market-card p { font-size: 12px; color: #999; margin-bottom: 0; }
+
+        .big-number {
+            font-size: 36px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 2px;
+            display: block;
+            margin: 10px 0 4px 0;
+        }
+        .big-number-label {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+            background-color: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            padding: 25px;
+        }
+
+        .number-cell { text-align: center; }
+
+        ul { color: #ccc; margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 22px; }
+            table { font-size: 11px; }
+            th, td { padding: 8px; }
+            .footer-grid, .numbers-grid { grid-template-columns: 1fr; }
+        }
+        /* Nav bar */
+        :root { --bg: #0a0a0a; --accent: #444; --text: #e0e0e0; --mono: 'IBM Plex Mono', monospace; }
+        .nav-toggle { display: none; }
+        .nav-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1003; display: flex; align-items: center; justify-content: space-between; padding: 18px max(24px, env(safe-area-inset-right)) 18px max(24px, env(safe-area-inset-left)); background: var(--bg); border-bottom: 1px solid #151515; }
+        .nav-bar-left { display: flex; align-items: center; gap: 14px; }
+        .nav-menu-label { font-family: var(--mono), monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; color: var(--text); text-transform: uppercase; }
+        .nav-trigger { width: 44px; height: 44px; min-width: 44px; min-height: 44px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-trigger .line { display: block; width: 20px; height: 1.5px; background: var(--text); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-1 { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-2 { opacity: 0; }
+        .nav-toggle:checked ~ .nav-bar .nav-trigger .line-3 { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 1002; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s, visibility 0.4s, pointer-events 0.4s; }
+        .nav-toggle:checked ~ .nav-overlay { opacity: 1; visibility: visible; pointer-events: auto; }
+        .nav-overlay-backdrop { position: absolute; inset: 0; cursor: pointer; }
+        .nav-overlay nav { text-align: center; position: relative; z-index: 1; }
+        .nav-overlay a { display: flex; align-items: center; justify-content: center; font-family: var(--mono), monospace; font-size: 0.85rem; letter-spacing: 3px; color: var(--text); text-decoration: none; padding: 16px 24px; min-height: 44px; box-sizing: border-box; border-bottom: 1px solid #151515; transition: color 0.3s, border-color 0.3s; }
+        .nav-overlay a:hover { color: var(--accent); border-color: #333; }
+        .nav-overlay a:first-of-type { border-top: 1px solid #151515; }
+        .nav-bar .lang-switch { position: static; float: none; }
+        .nav-bar .lang-switch a { font-family: var(--mono), monospace; font-size: 0.7rem; color: var(--text); padding: 12px 20px; min-height: 44px; min-width: 44px; box-sizing: border-box; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); display: inline-flex; align-items: center; justify-content: center; }
+        .nav-bar .lang-switch a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .wa-float { position: fixed; bottom: 40px; right: 40px; border: 1px solid var(--text); padding: 14px 22px; min-height: 44px; min-width: 44px; box-sizing: border-box; color: var(--text); text-decoration: none; font-family: var(--mono), monospace; font-size: 0.7rem; z-index: 1001; background: var(--bg); transition: 0.4s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .wa-float:hover { background: var(--text); color: var(--bg); }
+        @media (max-width: 768px) { .nav-overlay { z-index: 1004; overflow-y: auto; -webkit-overflow-scrolling: touch; } .nav-bar { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); left: auto; width: auto; padding: 10px 14px; gap: 12px; background: rgba(10,10,10,0.92); border: 1px solid #222; border-radius: 4px; } }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <span class="nav-menu-label">MENU</span>
+            <label for="nav-toggle" class="nav-trigger" aria-label="Open navigation menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
+        <div class="lang-switch"><a href="../index-en.html">HOME</a> · <a href="tension-radios-centrado-ruedas-es.html" hreflang="es">ES</a> · <a href="tension-radios-centrado-ruedas-pt.html" hreflang="pt-BR">PT</a></div>
+    </div>
+    <div class="nav-overlay">
+        <label for="nav-toggle" class="nav-overlay-backdrop" aria-hidden="true"></label>
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../index-en.html">HOME</a>
+            <a href="../servicios-en.html">SERVICES</a>
+            <a href="../tubelizado-en.html">TUBELESS</a>
+            <a href="../suspension-en.html">SUSPENSION</a>
+            <a href="../centrado-ruedas-en.html">WHEEL TRUING</a>
+            <a href="../purgado-frenos-en.html">BRAKE BLEED</a>
+            <a href="../mantenimiento-general-en.html">GENERAL SERVICE</a>
+            <a href="../mantenimiento-preventivo-en.html">PREVENTIVE SERVICE</a>
+            <a href="../index-en.html#science">TECHNICAL DATA</a>
+            <a href="../index-en.html#tips">TIPS</a>
+            <a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20I%20would%20like%20to%20book%20a%20technical%20appointment">CONTACT</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraguay+300+Trujillo+La+Libertad+Peru" target="_blank" rel="noopener">LOCATION</a>
+        </nav>
+    </div>
+
+    <a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20a%20question%20about%20your%20services" class="wa-float" aria-label="Contact on WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WHATSAPP_
+    </a>
+
+
+<div class="container" style="padding-top: 100px;">
+
+    <a href="../index-en.html#science" class="nav-back">← BACK TO HOME</a>
+
+    <nav aria-label="breadcrumb" style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:#666;margin:18px 0 22px;"><a href="../index-en.html" style="color:#8a8a8a;text-decoration:none">Home</a><span style="color:#444;margin:0 7px">›</span><a href="../research-en.html" style="color:#8a8a8a;text-decoration:none">Research</a><span style="color:#444;margin:0 7px">›</span><span style="color:#6a6a6a">Spoke tension and wheel dish</span></nav>
+
+    <div class="header">
+        <div class="coordinates">COORD_8.1159_S / 79.0299_W // TRUJILLO_PE // DOCUMENT_STUDY</div>
+        <div class="category">TECHNICAL_REPORT // WHEELS AND SPOKES // PRIMARY SOURCES</div>
+        <h1>Spoke tension and wheel truing: what the sources actually say</h1>
+        <div class="subtitle">Nobody has read the standard: ISO 4210-7, DT Swiss, Ford and Gavin read in the original document</div>
+        <div class="meta">
+            Author: Carlos Ravello // Founder of BikeLab Studio · ORCID 0009-0007-5631-7436<br>
+            August 2026 // Primary sources: ISO 4210-7:2023 · DT Swiss V2024.06 · Ford (2018) · Gavin (1996) · Park Tool (2021)
+        </div>
+    </div>
+
+    <div class="respuesta-directa" style="background:#0a0a0a;border:1px solid #333;border-left:4px solid #e8ff00;padding:22px;margin:28px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.65rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// What was checked and what wasn't</div>
+      <p style="margin:0;">Read in the original document: <strong>ISO 4210-7:2023</strong> in full —ten pages, <strong>not one value in millimetres</strong>—, tables 6.1 and 6.2 of two DT Swiss technical manuals, Ford's thesis (2018) and Gavin's paper (1996) end to end, and three Park Tool guides. <strong>Not</strong> read: ISO 4210-2:2023, which is where the runout threshold lives and which costs money — it is cited through part 7 and said so. The tension ratio between the two sides of a rear wheel is published by nobody: here it is <strong>derived</strong> from statics, with the code that validates it.</p>
+    </div>
+
+    <p>A spoke rings. Flick it with a fingernail and it gives you a note. Build a few wheels and you end up tuning by ear without deciding to, and when one goes flat you hear it before the dial indicator shows it.</p>
+
+    <p>That's first-year physics —the frequency of a string depends on how hard you pull it— and it's also the first thing anyone learns standing in front of a truing stand. What almost nobody learns is how much tension ought to be in there. Ask ten shops. You'll get ten answers. And eight of those ten will tell you, with the calm confidence of somebody repeating something they heard properly, that half a millimetre of lateral runout is what the ISO standard demands.</p>
+
+    <p><strong>It doesn't. I went and looked.</strong></p>
+
+    <p>Before that you need to know what holds up what, because most people have it backwards and it isn't their fault: the wheel lies to you.</p>
+
+    <p>A spoke is a wire. It pulls. It never pushes: compress it and it buckles and does nothing at all. So when you see thirty-two spokes holding up somebody who weighs eighty kilos, what you are looking at is not the top ones hanging the bike. It's a rim that arrived from the factory squeezed by thirty-two wires all pulling toward the hub at once. The rim lives in compression. It's a ring with too much diameter and nowhere to stretch.</p>
+
+    <p>You get on and the wheel flattens slightly where it touches the ground. The spokes down there <strong>lose</strong> tension. The ones up top gain almost nothing. Your weight doesn't come down through the upper spokes: it transfers because the bottom ones stop pulling.</p>
+
+    <p>Everything else follows from that. If resting tension is enough, the bottom spokes slacken a little each revolution and come back, and the cycle they see is small. If it isn't enough they reach zero, hang loose for an instant and snap back into load. A spoke doesn't break from pulling hard. It breaks from letting go and pulling again, turn after turn, for years.</p>
+
+    <p>Anyone who has rebuilt a loose wheel knows that with their hands. What follows is what happens when you ask the sources for the number.</p>
+
+    <h2 id="the-table">MODULE_01 // THE TABLE</h2>
+
+    <p>DT Swiss publishes it. And publishes it properly: in newtons, split by brake type and by use, in table 6.1 of its technical manuals —the Spline series one, document <span class="data-highlight">WXD10000000861S</span>, version 2024.06, and the Dicut one, <span class="data-highlight">WXD10000000860S</span>, same date—. The header carries a precision worth thanking them for: the values are for the <strong>tightest side of the wheel</strong>, not the wheel as a whole.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/tension-radios-dtswiss-en.svg" width="800" height="520" loading="eager" decoding="async"
+             alt="Bar chart of the six allowable DT Swiss tension ranges for the tightest side of the wheel, 900 to 1400 newtons by brake type and use — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Allowable tension window per DT Swiss, table 6.1">
+        <div class="image-caption">Light band: allowable maximum and minimum. Solid band: the average the manufacturer recommends, which is an interval and not a number.</div>
+    </div>
+
+    <table style="width:100%;border-collapse:collapse;margin:26px 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem;">
+      <caption style="text-align:left;color:#888;font-size:0.7rem;letter-spacing:1px;padding-bottom:10px;">ALLOWABLE TENSION — TIGHTEST SIDE // DT SWISS, TABLE 6.1, V2024.06</caption>
+      <thead>
+        <tr style="border-bottom:1px solid #444;color:#e8ff00;">
+          <th style="text-align:left;padding:10px 8px;">Wheel</th>
+          <th style="text-align:right;padding:10px 8px;">Maximum</th>
+          <th style="text-align:right;padding:10px 8px;">Minimum</th>
+          <th style="text-align:right;padding:10px 8px;">Recommended average</th>
+        </tr>
+      </thead>
+      <tbody style="color:#c8c8c8;">
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Disc · front</td><td style="text-align:right;padding:9px 8px;">1200 N</td><td style="text-align:right;padding:9px 8px;">950 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1150 – 1000 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Disc · rear</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Rim brake · front</td><td style="text-align:right;padding:9px 8px;">1100 N</td><td style="text-align:right;padding:9px 8px;">900 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1050 – 950 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Rim brake · rear</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr style="border-bottom:1px solid #222;"><td style="padding:9px 8px;">Hybrid (e-bike) · front</td><td style="text-align:right;padding:9px 8px;">1300 N</td><td style="text-align:right;padding:9px 8px;">1050 N</td><td style="text-align:right;padding:9px 8px;color:#8a8a8a;">1250 – 1100 N</td></tr>
+        <tr><td style="padding:9px 8px;color:#fff;"><strong>Hybrid (e-bike) · rear</strong></td><td style="text-align:right;padding:9px 8px;color:#fff;"><strong>1400 N</strong></td><td style="text-align:right;padding:9px 8px;color:#fff;"><strong>1150 N</strong></td><td style="text-align:right;padding:9px 8px;color:#e8ff00;">1350 – 1200 N</td></tr>
+      </tbody>
+    </table>
+
+    <p>That last column isn't a value, it's an interval, and that's how the original has it: DT Swiss doesn't recommend a number but a band inside the window. I've left it as it stands, because tidying it up would mean inventing a precision the manufacturer doesn't give.</p>
+
+    <p>The bottom row is the only manufacturer figure I've managed to find that puts a number on what an e-bike motor asks of a wheel. A hundred newtons more ceiling than the equivalent disc rear. It's in the Spline manual and it isn't in the Dicut one, which is the road range and carries no e-bike wheels.</p>
+
+    <div class="warning-box">
+        <p><strong>Now, why you've never seen it.</strong> In the PDF those numbers don't say <em>1200</em>. They say <em>1&#8239;200</em>, with a thin typographic space in the middle. Search for «1200» inside that document and you get nothing. Not one hit. To read the table I had to download the PDF and decompress its internal streams byte by byte, because not even the viewer's own search sees them. A manufacturer figure, free, published, verifiable. And structurally invisible to any machine that goes looking for it. It isn't hidden: it's published in a way that stops it circulating, which is not the same thing but comes out fairly close in the end.</p>
+    </div>
+
+    <h2 id="half-a-millimetre">MODULE_02 // HALF A MILLIMETRE</h2>
+
+    <p><strong>ISO 4210-7:2023</strong> is the part of the standard that deals with wheels and rims. Ten pages. Second edition, January 2023, committee ISO/TC 149/SC 1. Its scope, in its own words, is <em>«specifies wheel and rim test methods for ISO 4210-2»</em>.</p>
+
+    <p>I read it end to end. And here's what nobody tells you: <strong>it contains not one single value in millimetres. None.</strong> It has forces in newtons, it has durations in minutes, it has two figures with a dial indicator rigged up —one for city and trekking, one for road— explaining how rotational accuracy is measured. How it's measured, not how much is allowed.</p>
+
+    <p>And it says where the figure lives. In clause 4.4, setting up a test, it requires lateral runout to be checked in accordance with <strong>ISO 4210-2:2023, clause 4.10.1</strong>. That's the exact address of the number.</p>
+
+    <p>I haven't read that part 2. It costs money. The sample PDF comes encrypted with the permissions locked and you don't break encryption. So the number exists, it has a known address, and almost nobody has gone to that address — me included. That's what there is, and I'd rather say it that way than pretend the standard says nothing.</p>
+
+    <p>Because then the half millimetre doesn't come from ISO. It comes from <strong>Park Tool</strong>, from their truing guide of 31 March 2021, and it comes stated with all the honesty in the world:</p>
+
+    <blockquote style="border-left:3px solid #4fb8c8;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«As a general guideline, try for 0.5 millimeters or less of lateral deviation.»</blockquote>
+
+    <p>A general guideline. That's what it is. And on the same page they give a millimetre for radial runout —twice the margin— for a workshop reason I wish got repeated as often as the number does: the wheel is going to have a tyre on it, and tyres aren't manufactured to that precision.</p>
+
+    <p>In table 6.2 of the two manuals already cited, DT Swiss specifies for its own wheels <strong>0.3 mm</strong> of lateral runout in carbon and in welded aluminium, 0.4 in aluminium with a sleeve. The same value for rim brake as for disc, which throws a lot of people who assume disc is more forgiving.</p>
+
+    <p>Park Tool 0.5. DT Swiss 0.3. Nearly double, between two authorities nobody disputes. I looked for that comparison in Spanish, English and Portuguese, and in both manufacturers' documentation; I found it nowhere. It may be on some forum I didn't see.</p>
+
+    <p>They don't flatly contradict each other, to be clear: Park Tool writes a guide for any wheel that comes into a shop, DT Swiss a product spec for its own. But whoever quotes «0.5» as though it were universal is working looser than the maker of that wheel allows. And whoever quotes it as normative is quoting something they haven't opened.</p>
+
+    <h2 id="three-seventy">MODULE_03 // THREE HUNDRED AND SEVENTY</h2>
+
+    <p>I'll stay inside the standard a moment longer, because there is something it does distinguish that never gets said in the workshop.</p>
+
+    <p>ISO 4210 knows <strong>four types of bicycle</strong>: city and trekking, young adult, mountain and racing. I searched the whole document for «downhill» and «BMX». Zero hits. They don't exist in there.</p>
+
+    <p>For each of those four types it sets a force on the rim in the static strength test. Three of them, 250 N. <strong>Mountain, 370.</strong> Forty-eight per cent more.</p>
+
+    <p>And look at two details of the method, which are worth more than the number. First: the force goes <strong>perpendicular to the plane of the wheel</strong>. It isn't the rider's weight, which would be radial. It's a sideways shove. Second: the test measures <strong>permanent deformation</strong> — the rim position is noted, load is applied for a minute, released, left to settle another minute, and measured again. What gets checked is not how far it bends, but whether it stays bent.</p>
+
+    <p>There's a third, and it's the one that made me raise an eyebrow. On a rear wheel, the force is applied <strong>from the cassette side</strong>. That is, pushing toward the non-drive side, which is the one carrying less tension. Whoever wrote that standard knew exactly where a wheel gives.</p>
+
+    <p>So the standard does distinguish disciplines. Not by tolerances: by the lateral load it demands you survive. And downhill, which is where the most lateral load there is, sits outside the document. That gap is covered by another paper: DT Swiss classifies use in <strong>five ASTM categories</strong>, from paved road to downhill and freeride, and publishes a maximum system weight per wheel model. Two documents that complete each other and that nobody reads together.</p>
+
+    <h2 id="ford">MODULE_04 // FORD</h2>
+
+    <p>Among riders it goes around that more tension makes the wheel stiffer. It makes intuitive sense: tightening sounds like hardening, and on top of that a tight spoke rings higher when you flick it, same as a string.</p>
+
+    <p>Among wheelbuilders the opposite goes around: that tension doesn't affect stiffness as long as no spoke goes fully slack under load.</p>
+
+    <p>Ford measured, simulated and calculated, and wrote this on page four of his thesis:</p>
+
+    <blockquote style="border-left:3px solid #e8ff00;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«Contrary to both popular belief and expert consensus, increasing spoke tension reduces the lateral stiffness of the wheel, which I demonstrate through theoretical calculations, finite-element simulations, and experiments.»</blockquote>
+
+    <p>Raising tension <strong>reduces</strong> lateral stiffness. And in section 2.6.2 he lists the two beliefs, the rider's and the professional's, and finishes them off together: <em>«Both of these views are incorrect.»</em></p>
+
+    <p>The mechanism is worth more than the headline, and it's written in a single equation. The stiffness of each lateral deformation mode of the wheel is this:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub><mi>K</mi><mi>n</mi></msub>
+        <mo>=</mo>
+        <mrow><mi>π</mi><mi>R</mi><mover accent="true"><msub><mi>k</mi><mi>uu</mi></msub><mo>&#175;</mo></mover></mrow>
+        <mo>+</mo>
+        <mfrac>
+          <mrow><msub><mi>K</mi><mi>b</mi></msub><mo>&#8290;</mo><msub><mi>K</mi><mi>t</mi></msub></mrow>
+          <mrow><msub><mi>K</mi><mi>b</mi></msub><mo>+</mo><msub><mi>K</mi><mi>t</mi></msub></mrow>
+        </mfrac>
+        <mo>&#8722;</mo>
+        <mrow><mi>π</mi><msup><mi>n</mi><mn>2</mn></msup><mover accent="true"><mi>T</mi><mo>&#175;</mo></mover></mrow>
+      </math>
+      <div class="source">Ford (2018), equation 2.71c. K<sub>n</sub>: stiffness of mode n · R: rim radius · k̄<sub>uu</sub>: equivalent radial stiffness of the spoke set · K<sub>b</sub>, K<sub>t</sub>: rim bending and torsional stiffness · T̄: mean spoke tension · n: mode number.</div>
+    </div>
+
+    <p>The first two terms add: the first is what the spokes contribute, the second what the rim contributes through its bending and torsional stiffness. The third one <strong>subtracts</strong>, and what sits inside it is the tension.</p>
+
+    <p>In plain terms: tension comes in through two doors that push opposite ways. Through one, a tight spoke resists being moved sideways more —the guitar-string effect, the one everybody intuits—. Through the other, those thirty-two spokes pulling toward the centre are compressing the rim, and a compressed rim is a ring that wants to buckle. Think of a plastic ruler you press from both ends: it holds, it holds, and then it jumps to one side. The rim is in that situation the whole time.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/tension-rigidez-ford-en.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Anatomy of Ford's equation 2.71c: two terms that add, one that subtracts with tension, and the fall of lateral stiffness down to buckling — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Why more tension reduces lateral stiffness">
+        <div class="image-caption">Schematic curve, and the diagram says so: what is exact are the signs, and that the subtracting term grows with the square of the mode number. The scale depends on the rim's bending and torsional stiffness, which no manufacturer publishes.</div>
+    </div>
+
+    <p>At low tension the two effects cancel almost exactly, and that's why measuring in that range gives you nothing: the wheel looks indifferent. At high enough tension the negative term starts to run the show and lateral stiffness drops. Keep going up and you reach a critical tension where lateral stiffness vanishes and the wheel buckles: it leaves its plane and doesn't come back.</p>
+
+    <p>What I liked most about all this is who it rescues. Damon Rinard had measured years earlier that a wheel's stiffness didn't change appreciably with tension, and that result seemed to leave Ford exposed. It doesn't: figure 2.7 of the thesis <strong>includes Rinard's data</strong>, reproduced with permission, and it fits without forcing anything. Rinard measured in the range where the two effects cancel. He was right where he measured. Ford explains why that range exists and what happens when you leave it.</p>
+
+    <div class="warning-box">
+        <p>And careful with what this doesn't say, because I can see the easy reading coming. It doesn't say build them slack. High tension is still the only thing keeping a spoke from reaching zero under load, which is what actually breaks them. What it says is that tension is not a stiffness lever, and that whoever gives it another quarter turn «so it feels firmer» is paying something and buying nothing.</p>
+    </div>
+
+    <h2 id="seventy-six">MODULE_05 // SEVENTY-SIX SPOKES</h2>
+
+    <p>Gavin instrumented three rear wheels of different lacing with strain gauges —Micro-Measurements EA-13-23005-120, Wheatstone bridge with a thermal compensation arm, accuracy of ±2 microstrain— and went out riding on them. Then he took spokes into the lab and broke them in fatigue. Seventy-six of them.</p>
+
+    <blockquote style="border-left:3px solid #ff6b35;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«In 68 spokes the failure occurred at the cold-worked elbow; in the remaining 8 spokes the failure occurred at the threads.»</blockquote>
+
+    <div class="image-container">
+        <img src="../images/ruedas/rotura-radios-gavin-en.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Distribution of fatigue failures across the 76 spokes tested by Gavin: 68 at the elbow, 8 at the threads, none through the middle; and the test range against the real riding range — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Where spokes break, Gavin 1996">
+        <div class="image-caption">At the bottom, the limit the author declares himself: he tested from 174 MPa upward and the bicycle rides between 20 and 150.</div>
+    </div>
+
+    <p>Sixty-eight at the elbow. The elbow is that ninety-degree bend the spoke makes to enter the hub, cold-formed during manufacture, with hardened metal and residual stresses it was born with. Gavin calls it, in those words, <em>«this fatigue critical detail»</em>. The remaining eight broke at the threads, where the roots of the thread concentrate stress. None through the middle.</p>
+
+    <p>If a spoke breaks on you, the first thing is to look at where it parted. It's telling you what happened.</p>
+
+    <p>And here something I let slide earlier comes due. I said «a spoke is a wire» and left it at that, and a good spoke is not a wire of constant section: it's thinner in the middle than at the ends. A 2.0/1.8/2.0 has two millimetres at the tips and 1.8 along the long stretch. That looks like weakening it and does exactly the opposite. The thin zone stretches more for the same load, and by stretching more it absorbs part of the cycle that would otherwise arrive whole at the ends. The middle is thinned precisely to unload the elbow and the thread, which is where the seventy-six break.</p>
+
+    <p>Gavin also published his fatigue curve —<code>log S = −0.30 · log N + b</code>, with <code>b̄ = 4.12</code> and a coefficient of variation of 0.017— and measured that on the road the extreme cycles run around 150 MPa, and that each cycle at that level consumes a millionth of the spoke's fatigue life. At 472 cycles per kilometre that works out to very long lives, provided tension is correct and even.</p>
+
+    <p>Everybody quotes those parameters. Almost nobody quotes the paragraph next door:</p>
+
+    <blockquote style="border-left:3px solid #ff6b35;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«The smallest stress cycle in the fatigue tests was 174 MPa, whereas the stress range from the road test data was 20 MPa to 150 MPa. Hence, the fatigue data was extrapolated to the low stress range.»</blockquote>
+
+    <p>He tested from 174 MPa upward. The bicycle rides between 20 and 150. The curve is extrapolated exactly across the stretch where it gets used, and he says so himself, unprompted, explaining why: testing a single sample at 40 MPa would have taken an eternity. It invalidates nothing. It places the figure. Repeating his numbers while keeping quiet about that turns an author's honesty into a precision his work doesn't have.</p>
+
+    <h2 id="won-in-corners">MODULE_06 // IT'S WON IN THE CORNERS</h2>
+
+    <p>There's a third result of Gavin's that always gets told half way, and I think it has done more harm than good.</p>
+
+    <p>Under radial load —weight, nothing else— spoke strain is insensitive to the lacing pattern. Two, three or four cross come out practically the same. From there came the idea that lacing doesn't matter and that arguing about crosses is for nostalgics.</p>
+
+    <p>That isn't what the paper says. It says the pattern has its <strong>greatest</strong> effect under large lateral loads, in a hard corner for instance, and that there long-spoked wheels deform less than short-spoked ones. And it closes in the conclusions that large lateral loads can shorten fatigue life <em>«considerably»</em>.</p>
+
+    <p>Which means the crosses argument isn't won with weight on top. It's won in the corners.</p>
+
+    <div class="conclusion-box">
+        <p>And look where that leaves us. Ford says what tension reduces is <strong>lateral</strong> stiffness. Gavin says the pattern matters above all under <strong>lateral</strong> load. And the only number in the ISO standard that changes with discipline —the 370 N for mountain— is <strong>lateral</strong>, applied perpendicular to the plane and, on the rear, from the cassette side. Three sources, three methods, forty years between the first and the last, and all three point the same way. Meanwhile the workshop conversation is almost entirely about weight, which is radial, and about how many kilos the wheel takes. We're watching the wrong axis.</p>
+    </div>
+
+    <h2 id="the-loose-side">MODULE_07 // THE LOOSE SIDE</h2>
+
+    <p>Every rear wheel with a cassette has a loose side. The drive-side flange sits closer to the centre to make room for the sprockets, so its spokes leave at a shallower angle, and for the rim to end up centred they have to pull harder. The other side ends up below. Always.</p>
+
+    <p>The workshop question is how far below, and that figure is published by nobody. I looked in hub makers, in rim makers and in the literature. It isn't there.</p>
+
+    <p>But it turns out nobody needs to publish it, because <strong>it falls out of statics</strong>. The rim can only be centred if the lateral components from the two sides cancel:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub><mi>n</mi><mi>D</mi></msub><mo>&#8290;</mo><msub><mi>T</mi><mi>D</mi></msub><mo>&#8290;</mo>
+        <mrow><mi>sin</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>D</mi></msub></mrow>
+        <mo>=</mo>
+        <msub><mi>n</mi><mi>N</mi></msub><mo>&#8290;</mo><msub><mi>T</mi><mi>N</mi></msub><mo>&#8290;</mo>
+        <mrow><mi>sin</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>N</mi></msub></mrow>
+      </math>
+      <div class="source">Axial equilibrium of the rim. D: drive side · N: non-drive side · n: spokes per side · T: tension · α: angle between the spoke and the plane of the wheel.</div>
+    </div>
+
+    <p>And from there, rearranging:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mfrac><msub><mi>T</mi><mi>N</mi></msub><msub><mi>T</mi><mi>D</mi></msub></mfrac>
+        <mo>=</mo>
+        <mfrac><msub><mi>n</mi><mi>D</mi></msub><msub><mi>n</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac>
+          <mrow><mi>sin</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>D</mi></msub></mrow>
+          <mrow><mi>sin</mi><mo>&#8289;</mo><msub><mi>α</mi><mi>N</mi></msub></mrow>
+        </mfrac>
+      </math>
+      <div class="source">Form A: from the angles.</div>
+    </div>
+
+    <p>Since the spoke is straight, the sine of the angle is the axial distance from flange to spoke bed divided by spoke length — and that is <em>exact</em>, not an approximation. Which turns the formula into something you can measure with a caliper and without stripping anything:</p>
+
+    <div class="formula" style="text-align:center;padding:22px 12px;">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mfrac><msub><mi>T</mi><mi>N</mi></msub><msub><mi>T</mi><mi>D</mi></msub></mfrac>
+        <mo>=</mo>
+        <mfrac><msub><mi>n</mi><mi>D</mi></msub><msub><mi>n</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac><msub><mi>d</mi><mi>D</mi></msub><msub><mi>d</mi><mi>N</mi></msub></mfrac>
+        <mo>&#8290;</mo>
+        <mfrac><msub><mi>L</mi><mi>N</mi></msub><msub><mi>L</mi><mi>D</mi></msub></mfrac>
+      </math>
+      <div class="source">Form B: from measurable distances. d: flange offset from the plane of the spoke bed · L: spoke length. The two forms agree to 1.11 × 10⁻¹⁶ in the reference implementation.</div>
+    </div>
+
+    <p>With the geometry of an ordinary disc rear you get a ratio of <strong>0.52</strong>: the left side at 52 % of the right. With somewhat different angles it rises to 0.67, which is exactly the order of magnitude you measure with a tensiometer on real wheels. The derivation reproduces what gets observed.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/dish-reparto-tension-en.svg" width="800" height="520" loading="lazy" decoding="async"
+             alt="Curve of the tension ratio between non-drive and drive side as a function of rim offset, crossing the DT Swiss 60 % threshold at 1.76 mm — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Tension split between sides as a function of rim offset">
+        <div class="image-caption">Reference geometry representative of a disc rear, not measured on a specific hub. The yellow line is the 60 % minimum DT Swiss asks for.</div>
+    </div>
+
+    <p>Three things come out of that and they are useful on Monday morning.</p>
+
+    <p><strong>The first.</strong> That ratio depends on <code>n</code>, on <code>d</code> and on <code>L</code>. On nothing else. <strong>It does not depend on how you build the wheel, nor on spoke gauge, nor on how hard you tighten.</strong> So «the left side is loose» is not a defect you fix by tightening it. Tighten it and you pull the wheel off centre. Park Tool already said it in prose —<em>«the opposing side will simply have lower tension when the centering, or dish, is correct»</em>—; what was missing was the number.</p>
+
+    <p><strong>The second.</strong> If with the DT Swiss ceiling of 1200 N the right side runs at maximum, the left sits between 600 and 900 N depending on the hub. That's the real range half the spokes in your rear wheel work in, and it's half of what the table says.</p>
+
+    <p><strong>And the third</strong>, which is the one I liked best. An <em>offset</em> rim —drilled off centre— moves <code>d<sub>D</sub></code> and <code>d<sub>N</sub></code> without touching the hub. Three millimetres of offset raise the ratio from 0.52 to 0.66. And with that something appears I hadn't seen written down: DT Swiss asks that the loose side not drop below 60 % of the tight one, and that same wheel with a symmetric rim sits at 52 %. It doesn't get there. It crosses 60 % at 1.76 mm of offset. The offset rim is not a manufacturer's refinement: it's what makes their own rule reachable.</p>
+
+    <p style="font-size:0.85rem;color:#8a8a8a;">The full derivation, with its limit cases, its analytical derivatives against finite differences and its numerical validation, is published as code in the BikeLab repository. It isn't an experimental result: it's geometry, and anyone can redo it or break it.</p>
+
+    <h2 id="sixty-per-cent">MODULE_08 // SIXTY PER CENT</h2>
+
+    <p>There's a firm conviction in the trade: more weight, more spokes. Thirty-two for normal use, thirty-six if you're heavy, twenty-four if you're chasing light.</p>
+
+    <p>I went looking for the test. ScienceDirect, Springer, MDPI, Taylor &amp; Francis, IOP, ASME, SAE. It isn't there. The brands don't publish weight limits by spoke count either.</p>
+
+    <p>The explanation turned up in another DT Swiss manual, the ASTM and system weight one, and I find it more interesting than the table that doesn't exist. The manufacturer doesn't bound the wheel by spoke count. It bounds it by maximum system weight, model by model, and by use category. And it publishes a split rule I haven't seen quoted anywhere:</p>
+
+    <blockquote style="border-left:3px solid #4fb8c8;padding:14px 20px;margin:24px 0;color:#c8c8c8;font-style:italic;">«Max. system weight [kg] (rider+bike+equipment+luggage). The maximum permissible static wheel load is 60% of the maximum system weight.»</blockquote>
+
+    <p>Rider plus bike plus luggage, and from there comes static load per wheel with the split declared. An XR 1700 Spline allows 110 kg of system. An FR 1500 Classic, 140. An HU 1900 Spline, which is cargo and motor, 180.</p>
+
+    <p>That the weight-to-spokes table doesn't exist isn't a hole in the literature. It's that the industry solved the problem on another axis, and spoke count stayed inside, as a design variable, never reaching the sheet the user reads.</p>
+
+    <h2 id="what-isnt-there">MODULE_09 // WHAT ISN'T THERE</h2>
+
+    <p>An article that only reports what it found is reporting half.</p>
+
+    <div class="image-container">
+        <img src="../images/ruedas/centrador-park-tool-ts2-banco.webp" width="1000" height="1333" loading="lazy" decoding="async"
+             alt="Park Tool TS-2 truing stand on a cutting mat on the workbench, with the arms and measuring guides in the foreground — BikeLab Studio · Carlos Eduardo Ravello Joo"
+             title="Park Tool TS-2 truing stand — BikeLab Studio">
+        <div class="image-caption">The instrument the decision is made with. Its manufacturer doesn't publish its measurement error.</div>
+    </div>
+
+    <p><strong>Tensiometer accuracy.</strong> Neither Park Tool nor DT Swiss publishes the error of its instruments. Park Tool describes the TM-1 precisely —it flexes the spoke between two supports with a calibrated spring and what you read is that deflection, which you then convert with a table depending on material and gauge— but there is no ±% anywhere. The device the decision is made with doesn't declare its uncertainty. That's the gap that bothers me most of all of them.</p>
+
+    <p><strong>Where the ±20 % comes from.</strong> Park Tool sets that a wheel with all spokes within ±20 % of the mean has acceptable relative tension. Half the world uses it and it strikes me as reasonable. I didn't find the test it comes from. A percentage without a derivation is a convention, and it doesn't matter how good it is: it has to be called by its name.</p>
+
+    <p><strong>Commercial S-N curves.</strong> No spoke manufacturer publishes one for its models. Gavin's data is from 1.83 mm spokes of the mid-eighties.</p>
+
+    <p><strong>Sapim.</strong> Technical documentation behind mandatory registration. I didn't create an account.</p>
+
+    <p><strong>Brandt.</strong> <em>The Bicycle Wheel</em> has no edition accessible by legitimate means. Everything circulating attributed to that book stays unverified until there's a copy in front of me.</p>
+
+    <p>And the one I wanted most is missing. I looked for studies on factory wheel-build quality —what tension and what spread new wheels come out of the box with— and there are none. It figures: the wheel maker isn't going to publish that its own come out badly tensioned, and the tool maker sells the tensiometer, not the data.</p>
+
+    <div class="conclusion-box">
+        <p>Looking at that list together there's something I didn't see while writing it. A typographic space that makes a table unreadable. A paid standard whose sample PDF comes encrypted. A manufacturer hiding its datasheets behind a registration. An out-of-print book with no legitimate edition. Four different mechanisms, unrelated to each other, and one single outcome: information that exists, that is correct, that somebody took the trouble to produce, and that doesn't circulate. None of the four is censorship. All four work as if they were.</p>
+    </div>
+
+    <p>It's worth looking at where each of the numbers in this article comes from, because they don't come from the same place or the same decade. Jobst Brandt wrote his book in 1981 from the workbench. Henri Gavin glued gauges to the spokes of three wheels and published in the ASCE in 1996. Matthew Ford defended a 137-page thesis at Northwestern in 2018, with finite elements and a test rig. Park Tool wrote a service guide in 2021. DT Swiss printed a product sheet in 2024. Forty years, five different trades, no coordination between them. When five sources like that agree on something, that something is almost certainly real: arriving at the same place by five roads that don't talk to each other doesn't happen by accident. When they don't agree, the disagreement flags that there's a judgement call there and not a measurement. And a judgement call can be argued with.</p>
+
+    <p>A wheel is a rim compressed by wires that only pull, and it holds because none of them wins. Almost everything said about it can be sorted into three piles: what has been measured, what is somebody's good judgement, and what gets repeated because it gets repeated. The first pile is smaller than it looks.</p>
+
+    <h2 id="three-piles">MODULE_10 // THE THREE PILES</h2>
+
+    <p>Everything that came up here, sorted. Not by topic: by <strong>what kind of thing each claim is</strong>, which is what decides how much weight it can hold.</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:22px 0;font-size:0.85rem;">
+      <tbody>
+        <tr><td colspan="2" style="padding:14px 8px 6px;color:#e8ff00;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">MEASURED — THERE IS A TEST OR A SPECIFICATION BEHIND IT</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Allowable tension on the tightest side: 950–1200 N disc front, 1050–1300 rear, 900–1100 rim brake front, <strong>1150–1400 e-bike rear</strong></td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, table 6.1</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Lateral runout 0.3 mm in carbon and welded aluminium, 0.4 in sleeved aluminium. Same for disc as for rim brake</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, table 6.2</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">The standard test applies <strong>370 N to mountain and 250 to the other three</strong>, perpendicular to the plane, and on the rear from the cassette side</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">ISO 4210-7:2023</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;"><strong>68 of 76</strong> spokes break at the cold-worked elbow; 8 at the threads; none through the middle</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Fatigue curve log S = −0.30 log N + b, and its working range <strong>extrapolated</strong></td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Raising tension <strong>reduces</strong> lateral stiffness, and there is a critical tension where the wheel buckles</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Ford, 2018, §2.6.2</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Lacing pattern is indifferent under radial load and decisive under large lateral load</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Gavin, 1996</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">Static load per wheel is <strong>60 %</strong> of maximum system weight</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">DT Swiss, ASTM manual</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#4fb8c8;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">DERIVED — NOBODY MEASURES IT, BUT IT FOLLOWS FROM STATICS</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">T<sub>N</sub>/T<sub>D</sub> = (n<sub>D</sub>/n<sub>N</sub>)(sin α<sub>D</sub>/sin α<sub>N</sub>): the ratio between sides is pure geometry, it doesn't depend on how you build or how hard you tighten</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Axial equilibrium of the rim</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">On an ordinary disc rear, the non-drive side sits at <strong>52 %</strong> of the drive side; between 600 and 900 N when the other runs at 1200</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">The above, with real geometry</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">A 3 mm <em>offset</em> rim raises that ratio from <strong>0.52 to 0.66</strong> without touching the hub; the 60 % threshold is crossed at 1.76 mm</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">The above</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#ff6b35;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">JUDGEMENT — SOMEBODY WITH A GOOD EYE SET IT, AND THERE IS NO PUBLISHED TEST BEHIND IT</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">0.5 mm lateral runout, 1 mm radial, as a workshop guideline</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">±20 % spread about the mean as acceptable relative tension</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">100–120 kgf as a generic rim range — <strong>with the tyre unpressurised</strong>, a condition almost everyone drops when quoting it</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool, 2021</td></tr>
+
+        <tr><td colspan="2" style="padding:20px 8px 6px;color:#8a8a8a;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:2px;">NO BACKING THAT I COULD FIND</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">The rider weight → spoke count table</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Seven scientific databases and the manufacturers</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">The accuracy of a tensiometer, in ±%</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Park Tool and DT Swiss</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">S-N curves for commercial spokes</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">The manufacturers themselves</td></tr>
+        <tr style="border-top:1px solid #222;"><td style="padding:9px 8px;color:#c8c8c8;">What tension and what spread factory wheels arrive with</td><td style="padding:9px 8px;color:#888;text-align:right;white-space:nowrap;">Zero results</td></tr>
+      </tbody>
+    </table>
+
+    <p>They are good judgements. I use them. But a judgement is not a measurement, and calling it by its name doesn't take value away from it: it gives it its own.</p>
+
+    <p>And separately, one that fits no pile: <strong>the normative runout threshold exists, has an exact address —ISO 4210-2:2023, clause 4.10.1— and I haven't read it.</strong> Neither have, probably, most of the people who quote it.</p>
+
+    <h2 id="answers">MODULE_11 // DIRECT ANSWERS</h2>
+
+    <p style="color:#8a8a8a;font-size:0.9rem;">Five questions that arrive at this page on their own. Each answer stands alone and carries its source inside, so it can be quoted without dragging the rest of the study along.</p>
+
+    <div style="border:1px solid #333;background:#0a0a0a;padding:6px 22px 18px;margin:22px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#e8ff00;letter-spacing:2px;text-transform:uppercase;margin:16px 0 14px;">// Answer block · BikeLab Studio · August 2026</div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">How much tension should a spoke have?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">DT Swiss specifies, for the tightest side of the wheel, between 950 and 1200 N on a disc front, between 1050 and 1300 on a rear, and between 1150 and 1400 on the rear of an e-bike. These are values for the tightest side: the other side sits below it by geometry, not by a build fault.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Does the ISO standard set half a millimetre of runout?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">No. ISO 4210-7:2023 runs to ten pages, describes how rotational accuracy is measured and contains no value in millimetres at all. It refers the threshold to ISO 4210-2:2023, clause 4.10.1, which is a paid document. The 0.5 mm usually quoted is a Park Tool workshop guideline; DT Swiss specifies 0.3 mm for its own wheels.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Does more tension make the wheel stiffer?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">No. Ford demonstrated in 2018, with calculation, finite elements and testing, that raising tension reduces lateral stiffness. Tension adds stiffness through one route and compresses the rim through another, and at high tension the second effect dominates. Tension is there to keep a spoke from reaching zero under load, not to harden the wheel.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Why is the left side of my rear wheel looser?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">By geometry, and it isn't fixed by tightening it. The cassette forces the drive-side flange closer to the centre, so its spokes leave at a shallower angle and need more tension to centre the rim. The ratio between sides is (n_D/n_N)·(sin a_D/sin a_N) and depends only on the geometry of hub and rim and on the spoke count. Tightening the loose side pulls the wheel off centre.</p>
+      </div>
+
+      <div style="border-top:1px solid #262626;padding:14px 0 4px;">
+        <h3 class="faq-question" style="font-size:0.95rem;margin:0 0 6px;color:#fff;">Where do spokes break?</h3>
+        <p class="faq-answer" style="font-size:0.87rem;line-height:1.75;color:#b5b5b5;">At the elbow. Of 76 spokes taken to fatigue failure by Gavin in 1996, 68 broke at the cold-worked elbow and 8 at the threads. None through the central section. Where it broke tells you the cause: the elbow points to low tension or poor seating, the thread to stress concentration or overtightening.</p>
+      </div>
+    </div>
+
+    <div style="border:1px solid #444;background:#0c0c0c;padding:22px;margin:30px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// The version without the maths</div>
+      <p style="margin:0 0 12px;color:#c8c8c8;">A plain-language version comes out of this study: the same numbers and the same sources, told for whoever is standing at the truing stand and doesn't need the derivation.</p>
+      <a href="cuanta-tension-radios-bicicleta-en.html" style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:#e8ff00;text-decoration:none;border-bottom:1px solid #e8ff00;letter-spacing:1px;">READ_HOW_MUCH_TENSION_DOES_A_SPOKE_CARRY_➔</a>
+    </div>
+
+    <div style="border:1px solid #333;border-left:4px solid #4fb8c8;background:#0a0a0a;padding:20px 22px;margin:30px 0;">
+      <div style="font-family:'Courier New',monospace;font-size:0.62rem;color:#4fb8c8;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">// How to cite</div>
+      <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:0.8rem;line-height:1.7;color:#b5b5b5;">Ravello Joo, C. E. (2026). <em>Spoke tension and wheel truing: what the sources actually say</em>. BikeLab Studio, Trujillo, Peru. ORCID 0009-0007-5631-7436. https://www.bikelabstudio.com/articles/tension-radios-centrado-ruedas-en.html</p>
+    </div>
+
+    <div class="references">
+        <h2 style="font-size:1.1rem;margin-bottom:14px;">Sources</h2>
+        <div class="ref-item">[1] <strong>Ford, M. P.</strong> (2018). <em>Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel</em>. Doctoral thesis, Northwestern University, 137 pp. <a href="https://doi.org/10.21985/n2-3sh0-m798" target="_blank" rel="noopener">DOI 10.21985/n2-3sh0-m798</a>. Open access. Abstract quote, p. 4; mechanism, equations 2.70 and 2.71 and figure 2.7, §2.6.2, pp. 56-57. Accessed 15-08-2026.</div>
+        <div class="ref-item">[2] <strong>Gavin, H. P.</strong> (1996). <em>Bicycle-Wheel Spoke Patterns and Spoke Fatigue</em>. Journal of Engineering Mechanics (ASCE) 122(8), 736-742. <a href="https://doi.org/10.1061/(ASCE)0733-9399(1996)122:8(736)" target="_blank" rel="noopener">DOI 10.1061/(ASCE)0733-9399(1996)122:8(736)</a>. Full text. Accessed 15-08-2026.</div>
+        <div class="ref-item">[3] <strong>ISO.</strong> <em>ISO 4210-7:2023 — Cycles — Safety requirements for bicycles — Part 7: Wheel and rim test methods</em>. Edition 2, 2023-01, 10 pages, ISO/TC 149/SC 1. Text consulted; clauses cited by number. Accessed 16-08-2026.</div>
+        <div class="ref-item">[4] <strong>ISO.</strong> <em>ISO 4210-2:2023 — Part 2: Requirements…</em>, clause 4.10.1, cited <strong>through</strong> part 7. <strong>Not consulted</strong>: paid standard.</div>
+        <div class="ref-item">[5] <strong>DT Swiss AG.</strong> <em>Wheels Technical Manual — Spline</em>, WXD10000000861S, V2024.06. Tables 6.1 and 6.2. Accessed 15-08-2026.</div>
+        <div class="ref-item">[6] <strong>DT Swiss AG.</strong> <em>Wheels Technical Manual — Dicut</em>, WXD10000000860S, V2024.06. Tables 6.1 and 6.2. Accessed 15-08-2026.</div>
+        <div class="ref-item">[7] <strong>DT Swiss AG.</strong> <em>Wheels User Manual — ASTM &amp; System Weight</em>, MAN_WXWASTMSWWRXXS_WEB_ZZ_001. Accessed 15-08-2026.</div>
+        <div class="ref-item">[8] <strong>Park Tool Co.</strong> <em>Wheel Truing (Lateral &amp; Radial)</em>, 31-03-2021 · <em>Wheel Dishing (Centering)</em>, 01-04-2021 · <em>Spoke Tension Measurement and Adjustment</em>, 06-04-2021. Accessed 15-08-2026.</div>
+        <div class="ref-item">[9] <strong>Rinard, D.</strong> <em>Wheel Stiffness Test</em>. Cited <strong>through</strong> Ford (2018), figure 2.7, reproduced with permission. Not consulted in its original source.</div>
+        <div class="ref-item">[10] <strong>Ravello Joo, C. E.</strong> (2026). <em>dish_oracle.py</em> — static derivation of the drive/non-drive tension ratio, with limit cases and numerical validation. BikeLab Studio.</div>
+        <p style="font-size:0.78rem;color:#777;margin-top:14px;line-height:1.7;">Every figure was read in its source document. Manufacturer PDFs were downloaded and their internal streams decompressed to extract the text; the papers were read end to end. No figure comes from an abstract, a search-engine snippet or memory. Where I couldn't open a source, I say so. Nothing is reproduced from the ISO text beyond its scope, which ISO publishes freely in its catalogue; clauses are cited by number.</p>
+    </div>
+
+    <p style="margin-top: 30px;"><a href="../index-en.html#science" class="nav-back">← BACK TO HOME</a></p>
+
+    <div class="footer">
+        <div style="margin-bottom: 20px;">
+            <strong>BikeLab Studio</strong><br>
+            Industrial &amp; Scientific Noir<br>
+            Paraguay 300, Trujillo, La Libertad, Peru
+        </div>
+        <div class="footer-grid">
+            <div>
+                <strong>Primary sources:</strong><br>
+                ISO 4210-7:2023<br>
+                DT Swiss AG · Park Tool Co.<br>
+                Ford (2018) · Gavin (1996)
+            </div>
+            <div>
+                <strong>Author:</strong><br>
+                Carlos Ravello<br>
+                Founder of BikeLab Studio<br>
+                ORCID 0009-0007-5631-7436
+            </div>
+        </div>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; text-align: center;">
+            © 2026 BIKELAB_STUDIO // SYSTEM_STABLE
+        </div>
+    </div>
+
+</div>
+<script>
+    document.querySelectorAll('.nav-overlay a[href*="#"]').forEach(a => {
+        a.addEventListener('click', () => { document.getElementById('nav-toggle').checked = false; });
+    });
+</script>
+<div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+    <p class="license-notice" style="font-size:0.68rem;line-height:1.75;color:#7a7a7a;border-top:1px solid #333;padding-top:18px;margin:0;">© 2026 BikeLab Studio. All rights reserved. You may <strong>cite, link to and index us</strong> without asking —AI systems included— provided you show the attribution and the link to the source. <strong>Reproducing, translating, republishing or training models on this content is prohibited.</strong> The <a href="/licencia-en.html#datasets" style="color:#9a9a00;">DOI datasets</a> and the technical diagrams are the exception: CC BY 4.0. See the <a href="/licencia-en.html" rel="license" style="color:#9a9a00;">full licence</a>. · <a href="/uso-de-imagenes-en.html" style="color:#9a9a00;">Image use</a> — the photograph on this page is the work of Carlos Eduardo Ravello Joo and is not covered by any open licence. · Design and ownership: Carlos Ravello Joo</p>
+</div>
+</body>
+</html>
