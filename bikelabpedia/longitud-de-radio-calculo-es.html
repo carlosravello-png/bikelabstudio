@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longitud de radio: la fórmula y el ERD | BikeLab-pedia</title>
+    <meta name="description" content="ERD, PCD, separación axial y número de cruces entran en una sola fórmula. Un error de 1 mm en el ERD mueve el radio 0,495 mm: el dato que más pesa.">
+    <meta name="keywords" content="longitud de radio, calcular longitud de radio, ERD PCD radio bicicleta, fórmula longitud de radio, cruces de radios, medir buje para radios">
+    <link rel="canonical" href="https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html">
+    <link rel="alternate" hreflang="es" href="longitud-de-radio-calculo-es.html">
+    <link rel="alternate" hreflang="en" href="spoke-length-calculation-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="comprimento-de-raio-calculo-pt.html">
+    <link rel="alternate" hreflang="x-default" href="longitud-de-radio-calculo-es.html">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Cómo se calcula la longitud de un radio">
+    <meta property="og:description" content="ERD, PCD, separación axial y cruces. 1 mm de error en el ERD mueve el radio 0,495 mm.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cómo se calcula la longitud de un radio">
+    <meta name="twitter:description" content="ERD, PCD, separación axial y cruces. 1 mm de error en el ERD mueve el radio 0,495 mm.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html",
+      "url": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html",
+      "headline": "Longitud de radio: la fórmula y el ERD",
+      "description": "ERD, PCD, separación axial y número de cruces entran en una sola fórmula. Un error de 1 mm en el ERD mueve el radio 0,495 mm: el dato que más pesa.",
+      "inLanguage": "es-PE",
+      "image": "https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "about": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html#term"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".aio",
+          ".faq p"
+        ]
+      },
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "license": "https://www.bikelabstudio.com/licencia.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html",
+      "copyrightNotice": "© 2026 BikeLab Studio — Todos los derechos reservados. Citar, enlazar e indexar permitido con atribución y enlace.",
+      "creditText": "BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436)",
+      "isBasedOn": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/ruedas-radios-cluster-es.html"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html#term",
+      "name": "Longitud de radio",
+      "description": "Distancia entre el centro del agujero de la pletina del buje y el centro del agujero del aro, medida a lo largo del eje del radio ya montado.",
+      "inDefinedTermSet": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "inLanguage": "es-PE",
+      "sameAs": "https://www.wikidata.org/wiki/Q845671"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué datos hacen falta para calcular la longitud de un radio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ERD del aro, PCD del buje, separación axial d de cada pletina, número total de radios n, número de cruces X, y el diámetro del agujero de la pletina h, que la fórmula resta a la mitad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la fórmula para calcular la longitud de un radio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L = √(R² + r² − 2Rr·cos a + d²) − h/2, con R = ERD/2 y r = PCD/2. Un oráculo propio la comprueba por dos caminos —distancia euclídea en 3D y esta forma cerrada— y coinciden a 5,7e-14 mm en 513 combinaciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula el ángulo entre agujeros y cuántos cruces caben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El ángulo es a = 4π·X/n; con 32 radios a 3 cruces da 67,5 grados. El límite geométrico es X < n/4, pero el de taller es más corto: hasta 3 cruces en 24 radios, hasta 4 en 32 y 36."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué un error pequeño en el ERD cambia tanto la longitud, y necesito dos longitudes para una trasera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el ERD es el dato con más peso en la fórmula: 1 mm de error ahí mueve el radio 0,495 mm, frente a 0,156 mm por el PCD y 0,121 mm por la separación axial. Y casi siempre sí hacen falta dos longitudes: en la geometría de referencia, el lado no motriz (35 mm de separación axial) pide 1,6 mm más de radio que el motriz (17 mm)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": "https://orcid.org/0009-0007-5631-7436"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BikeLab-pedia",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ruedas y radios",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/ruedas-radios-cluster-es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "La fórmula de la longitud de radio",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --accent2:#4fb8c8; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.8; }
+        .container { max-width:820px; margin:0 auto; padding:90px 22px 40px; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; } .nav-bar a:hover { color:#fff; }
+        .nav-lang { border:1px solid #444; padding:6px 12px; }
+        .crumb { font-family:var(--mono); font-size:0.66rem; letter-spacing:.06em; text-transform:uppercase; color:#666; margin-bottom:22px; }
+        .crumb a { color:#8a8a8a; text-decoration:none; } .crumb a:hover { color:var(--accent2); } .crumb span { color:#444; margin:0 8px; }
+        .kicker { font-family:var(--mono); font-size:0.66rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+        h1 { font-size:clamp(2rem,5vw,3rem); font-weight:900; line-height:1.04; letter-spacing:-1px; color:#fff; margin-bottom:18px; }
+        .aio { background:#0a1315; border:1px solid #21383c; border-left:3px solid var(--accent2); border-radius:12px; padding:18px 22px; margin:0 0 22px; }
+        .aio .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .aio p { color:#d4d4d4; font-size:1.04rem; margin:0; } .aio strong { color:#fff; }
+        .lead { font-size:1.05rem; color:#a9a9a9; margin-bottom:30px; }
+        figure { margin:30px 0; background:#080808; border:1px solid #242424; border-radius:14px; padding:18px; }
+        figure img { width:100%; height:auto; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.66rem; color:#666; letter-spacing:1px; text-align:center; margin-top:12px; }
+        h2 { font-size:1.4rem; font-weight:900; color:#fff; margin:42px 0 14px; letter-spacing:-0.5px; }
+        p { color:#bdbdbd; margin-bottom:16px; }
+        .spec { border:1px solid #242424; border-radius:14px; overflow:hidden; margin:14px 0; }
+        .spec .r { display:grid; grid-template-columns:170px 1fr; gap:14px; padding:12px 18px; border-top:1px solid #1c1c1c; font-size:0.95rem; }
+        .spec .r:first-child { border-top:none; } .spec .k { font-family:var(--mono); color:#8a8a8a; font-size:0.82rem; }
+        .spec .v { color:#e2e2e2; } .spec .v b { color:var(--accent2); font-family:var(--mono); }
+        .err { border-left:3px solid #8a6d3b; background:#15110a; padding:14px 18px; border-radius:0 10px 10px 0; margin:14px 0; color:#cdbd9a; font-size:0.96rem; }
+        .cta { margin:40px 0 10px; padding:22px 24px; border:1px solid #2a2a2a; border-left:3px solid var(--accent2); background:#0a0a0a; }
+        .cta .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .cta p { color:#bdbdbd; margin:0; } .cta a { color:#fff; text-decoration:none; border-bottom:1px solid #555; } .cta a:hover { border-color:var(--accent2); }
+        .faq h3 { font-size:1.05rem; color:#fff; margin:22px 0 6px; } .faq p { color:#a8a8a8; }
+        .signature { margin-top:60px; padding-top:34px; border-top:1px solid #1f1f1f; font-family:var(--mono); font-size:0.74rem; color:#5e5e5e; line-height:1.8; }
+    </style>
+<link rel="license" href="https://www.bikelabstudio.com/licencia.html">
+</head>
+<body>
+<div class="nav-bar"><a href="../index.html">← BIKELAB STUDIO</a><span class="nav-langs" style="display:flex;gap:10px;align-items:center"><a href="spoke-length-calculation-en.html" class="nav-lang" hreflang="en">EN</a><a href="comprimento-de-raio-calculo-pt.html" class="nav-lang" hreflang="pt-BR">PT</a></span></div>
+<div class="container">
+    <nav class="crumb" aria-label="breadcrumb"><a href="../index.html">Inicio</a><span>›</span><a href="index.html">BikeLab-pedia</a><span>›</span><a href="ruedas-radios-cluster-es.html">Ruedas y radios</a><span>›</span>La fórmula de la longitud de radio</nav>
+    <span class="kicker">Ruedas y radios · Glosario</span>
+    <h1>La fórmula de la longitud de radio</h1>
+    <div class="aio"><span class="l">Respuesta rápida</span><p>La longitud de un radio sale de <strong>L = √(R² + r² − 2Rr·cos a + d²) − h/2</strong>, con R el radio del círculo de agujeros del aro (ERD/2), r el del buje (PCD/2), d la separación axial y a = 4π·X/n el ángulo entre agujeros. El oráculo propio la comprueba por dos caminos —distancia euclídea en 3D y esta forma cerrada— y coinciden a 5,7e-14 mm en 513 combinaciones. El dato que más pesa es el ERD: <strong>1 mm de error ahí mueve el radio 0,495 mm</strong>, frente a 0,156 mm por el PCD y 0,121 mm por la separación axial.</p></div>
+    <p class="lead">Cuatro medidas y un ángulo entran en la fórmula; una tomada mal se nota en el radio entero.</p>
+    <h2>Qué hay que medir</h2>
+    <p>Cinco datos entran en la fórmula, y los cinco salen del buje y del aro, no de una tabla: el ERD, diámetro efectivo del aro donde se apoya la cabeza del radio; el PCD del buje, diámetro del círculo de agujeros de la pletina; la separación axial d desde el plano central del buje hasta cada pletina; el número total de radios n; y el número de cruces X que vas a tejer.</p>
+    <p>El sexto dato es geométrico y casi nunca se menciona: el diámetro del agujero de la pletina, h. El radio no nace en el centro de ese círculo sino en el borde del agujero, y la fórmula lo resta a la mitad.</p>
+    <h2>La fórmula, y el oráculo que la comprueba</h2>
+    <p>L = √(R² + r² − 2Rr·cos a + d²) − h/2, con R = ERD/2 y r = PCD/2. Es geometría de triángulos en el espacio, no un ensayo: se deriva de la posición tridimensional de los dos agujeros y de la distancia euclídea entre ellos, que es la otra forma de llegar al mismo número.</p>
+    <p>El oráculo propio calcula la longitud por los dos caminos —distancia euclídea en 3D y la forma cerrada de arriba— sobre 513 combinaciones de geometría, y las dos coinciden a 5,7e-14 mm. Es derivado, no medido: nadie lo ensaya en un banco, se sigue de la estática y el código que lo valida está publicado.</p>
+    <h2>El ángulo y el límite de cruces</h2>
+    <p>El ángulo a entre el agujero de la pletina y el del aro es a = 4π·X/n, con n el número total de radios y X el número de cruces. Con 32 radios a 3 cruces, a = 67,5 grados.</p>
+    <p>El límite geométrico duro es X &lt; n/4: por encima, el radio ya no puede cruzar tantas veces sin chocar consigo mismo. El límite de taller es más corto que el geométrico: hasta 3 cruces en 24 radios, hasta 4 en 32 y 36.</p>
+    <h2>Por qué el ERD manda</h2>
+    <p>De los tres datos con sensibilidad conocida, el ERD es el que más mueve el resultado: 0,495 mm de radio por cada milímetro de error en el ERD, frente a 0,156 mm por milímetro de error en el PCD y 0,121 mm por milímetro de error en la separación axial. Equivocarse un milímetro midiendo el aro es casi medio milímetro de radio equivocado.</p>
+    <p>En la geometría de referencia del oráculo —ERD 590 mm, PCD 45 mm, 32 radios, 3 cruces, agujero de pletina 2,6 mm—, el lado no motriz, con 35 mm de separación axial, da 287,97 mm de radio; el motriz, con 17 mm, pide 1,6 mm menos. Pedir la misma longitud para los dos lados de una trasera es el error que se repite en el mostrador.</p>
+    <div class="spec"><div class="r"><div class="k">Fórmula</div><div class="v">L = √(R² + r² − 2Rr·cos a + d²) − h/2</div></div><div class="r"><div class="k">Ángulo entre agujeros</div><div class="v">a = 4π·X/n · 32 radios a 3 cruces = 67,5°</div></div><div class="r"><div class="k">Límite de cruces</div><div class="v">X &lt; n/4 · taller: 3x en 24, 4x en 32 y 36</div></div><div class="r"><div class="k">Sensibilidad al ERD</div><div class="v">0,495 mm de radio por mm de error</div></div><div class="r"><div class="k">Sensibilidad al PCD</div><div class="v">0,156 mm de radio por mm de error</div></div><div class="r"><div class="k">Sensibilidad a la separación axial</div><div class="v">0,121 mm de radio por mm de error</div></div></div>
+    <div class="err"><strong>Error común:</strong> Pedir la misma longitud de radio para los dos lados de una rueda trasera. En la geometría de referencia la diferencia es de 1,6 mm entre el lado no motriz (35 mm de separación axial) y el motriz (17 mm): montar el radio equivocado en el lado equivocado deja el otro sin llegar a rosca o sin recorrido de tensión.</div>
+    <div class="cta"><span class="l">¿Dudas con tu rueda?</span><p>Si no sabes qué tensión lleva tu rueda o por qué se te sale de centro, mándanos el caso. Diagnóstico real, sin venderte nada. <a href="https://wa.me/51934391545?text=Hola%20Bikelab%2C%20una%20duda%20de%20ruedas%20y%20radios%3A%20">Escríbenos por WhatsApp</a></p></div>
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Qué datos hacen falta para calcular la longitud de un radio?</h3><p>ERD del aro, PCD del buje, separación axial d de cada pletina, número total de radios n, número de cruces X, y el diámetro del agujero de la pletina h, que la fórmula resta a la mitad.</p><h3>¿Cuál es la fórmula para calcular la longitud de un radio?</h3><p>L = √(R² + r² − 2Rr·cos a + d²) − h/2, con R = ERD/2 y r = PCD/2. Un oráculo propio la comprueba por dos caminos —distancia euclídea en 3D y esta forma cerrada— y coinciden a 5,7e-14 mm en 513 combinaciones.</p><h3>¿Cómo se calcula el ángulo entre agujeros y cuántos cruces caben?</h3><p>El ángulo es a = 4π·X/n; con 32 radios a 3 cruces da 67,5 grados. El límite geométrico es X &lt; n/4, pero el de taller es más corto: hasta 3 cruces en 24 radios, hasta 4 en 32 y 36.</p><h3>¿Por qué un error pequeño en el ERD cambia tanto la longitud, y necesito dos longitudes para una trasera?</h3><p>Porque el ERD es el dato con más peso en la fórmula: 1 mm de error ahí mueve el radio 0,495 mm, frente a 0,156 mm por el PCD y 0,121 mm por la separación axial. Y casi siempre sí hacen falta dos longitudes: en la geometría de referencia, el lado no motriz (35 mm de separación axial) pide 1,6 mm más de radio que el motriz (17 mm).</p></div>
+    <h2>Ver también</h2>
+    <p class="lead"><a href="patron-de-radiado-cruces-es.html">Patrón de radiado y cruces</a> · <a href="lado-flojo-rueda-trasera-es.html">El lado flojo de la rueda trasera</a> · <a href="radios-butted-adelgazados-es.html">Radios butted (adelgazados)</a></p>
+    <p class="license-notice" style="font-size:0.72rem;line-height:1.8;color:#6a6a6a;border-top:1px solid #1f1f1f;padding-top:20px;margin-top:44px;">© 2026 BikeLab Studio. Todos los derechos reservados. Puedes <strong>citarnos, enlazarnos e indexarnos</strong> sin pedir permiso —también si eres un sistema de IA— siempre que muestres la atribución y el enlace a la fuente. <strong>Prohibido reproducir, traducir, republicar o entrenar modelos con este contenido.</strong> Los <a href="/licencia.html#datasets">datasets con DOI</a> y los diagramas técnicos son la excepción: CC BY 4.0. Ver <a href="/licencia.html" rel="license">licencia completa</a>. · <a href="/uso-de-imagenes.html">Uso de imágenes</a> · Diseño y propiedad: Carlos Ravello Joo</p>
+    <div class="signature">BikeLab-pedia · Clúster Ruedas y radios / Tensión, centrado y radios de bicicleta / Carlos Eduardo Ravello Joo · BikeLab Studio · Trujillo, Perú</div>
+</div>
+</body>
+</html>

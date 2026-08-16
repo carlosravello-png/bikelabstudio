@@ -16,6 +16,15 @@
     <ttl>10080</ttl>
     <atom:link href="https://www.bikelabstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>BikeLab-pedia · Clúster Ruedas y radios (tensión, centrado, radios) — 14 fichas</title>
+      <link>https://www.bikelabstudio.com/bikelabpedia/ruedas-radios-cluster-es.html</link>
+      <guid isPermaLink="true">https://www.bikelabstudio.com/bikelabpedia/ruedas-radios-cluster-es.html</guid>
+      <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
+      <category>BikeLab-pedia</category>
+      <pubDate>Sat, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Cuánta tensión lleva un radio y de dónde sale el número: alabeo, lado flojo, aro offset, patrón de radiado, longitud de radio, ISO 4210-7 y tensiómetro.]]></description>
+    </item>
 <item>
 <title>BikeLab PSI Calculator: nuevo modo MTB — rango por rueda para XC, Trail, Enduro y DH (ES/EN/PT)</title>
 <link>https://www.bikelabstudio.com/articles/psi-calculator-es.html</link>

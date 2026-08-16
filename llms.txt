@@ -466,3 +466,6 @@ relacion de tension entre lados de la rueda, con el codigo que la valida.
 - [Cuánta tensión lleva un radio de bicicleta](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-es.html)
 - [How much tension does a spoke carry](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-en.html)
 - [Quanta tensão tem um raio de bicicleta](https://www.bikelabstudio.com/articles/cuanta-tension-radios-bicicleta-pt.html)
+- [Clúster Ruedas y radios — 14 fichas](https://www.bikelabstudio.com/bikelabpedia/ruedas-radios-cluster-es.html)
+- [Wheels and spokes cluster — 14 entries](https://www.bikelabstudio.com/bikelabpedia/wheels-spokes-cluster-en.html)
+- [Cluster Rodas e raios — 14 fichas](https://www.bikelabstudio.com/bikelabpedia/rodas-raios-cluster-pt.html)

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprimento de raio: a fórmula e o ERD | BikeLab-pedia</title>
+    <meta name="description" content="ERD, PCD, distância axial e número de cruzamentos entram numa só fórmula. Um erro de 1 mm no ERD move o raio 0,495 mm: o dado que mais pesa.">
+    <meta name="keywords" content="comprimento de raio, calcular comprimento do raio, ERD PCD raio bicicleta, fórmula comprimento de raio, cruzamentos de raios, medir cubo para raios">
+    <link rel="canonical" href="https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html">
+    <link rel="alternate" hreflang="es" href="longitud-de-radio-calculo-es.html">
+    <link rel="alternate" hreflang="en" href="spoke-length-calculation-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="comprimento-de-raio-calculo-pt.html">
+    <link rel="alternate" hreflang="x-default" href="longitud-de-radio-calculo-es.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Como calcular o comprimento de um raio">
+    <meta property="og:description" content="ERD, PCD, distância axial e cruzamentos. 1 mm de erro no ERD move o raio 0,495 mm.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como calcular o comprimento de um raio">
+    <meta name="twitter:description" content="ERD, PCD, distância axial e cruzamentos. 1 mm de erro no ERD move o raio 0,495 mm.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html",
+      "url": "https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html",
+      "headline": "Comprimento de raio: a fórmula e o ERD",
+      "description": "ERD, PCD, distância axial e número de cruzamentos entram numa só fórmula. Um erro de 1 mm no ERD move o raio 0,495 mm: o dado que mais pesa.",
+      "inLanguage": "pt-BR",
+      "image": "https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "about": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html#term"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".aio",
+          ".faq p"
+        ]
+      },
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "license": "https://www.bikelabstudio.com/licencia-pt.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia-pt.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-pt.html",
+      "copyrightNotice": "© 2026 BikeLab Studio — Todos os direitos reservados. Citar, vincular e indexar permitido com atribuição e link.",
+      "creditText": "BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436)",
+      "isBasedOn": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/rodas-raios-cluster-pt.html"
+      },
+      "translationOfWork": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/longitud-de-radio-calculo-es.html"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html#term",
+      "name": "Comprimento de raio",
+      "description": "Distância entre o centro do furo do flange do cubo e o centro do furo do aro, medida ao longo do eixo do raio já montado.",
+      "inDefinedTermSet": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "inLanguage": "pt-BR",
+      "sameAs": "https://www.wikidata.org/wiki/Q845671"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quais dados preciso para calcular o comprimento de um raio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ERD do aro, PCD do cubo, distância axial d de cada flange, número total de raios n, número de cruzamentos X, e o diâmetro do furo do flange h, que a fórmula subtrai pela metade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a fórmula para calcular o comprimento de um raio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L = √(R² + r² − 2Rr·cos a + d²) − h/2, com R = ERD/2 e r = PCD/2. Um oráculo próprio confere por dois caminhos independentes — distância euclidiana em 3D e essa forma fechada — e os dois batem em 5,7e-14 mm em 513 combinações."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como se calcula o ângulo entre furos e quantos cruzamentos cabem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O ângulo é a = 4π·X/n; com 32 raios a 3 cruzamentos dá 67,5 graus. O limite geométrico é X < n/4, mas o de oficina é mais curto: até 3 cruzamentos em 24 raios, até 4 em 32 e 36."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que um erro pequeno no ERD muda tanto o comprimento, e preciso de dois comprimentos numa traseira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque o ERD é o dado com mais peso na fórmula: 1 mm de erro nele move o raio 0,495 mm, contra 0,156 mm pelo PCD e 0,121 mm pela distância axial. E quase sempre sim, dois comprimentos: na geometria de referência do oráculo, o lado não motriz (35 mm de distância axial) pede 1,6 mm a mais de raio que o motriz (17 mm)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": "https://orcid.org/0009-0007-5631-7436"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BikeLab-pedia",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rodas e raios",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/rodas-raios-cluster-pt.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "A fórmula do comprimento de raio",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/comprimento-de-raio-calculo-pt.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --accent2:#4fb8c8; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.8; }
+        .container { max-width:820px; margin:0 auto; padding:90px 22px 40px; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; } .nav-bar a:hover { color:#fff; }
+        .nav-lang { border:1px solid #444; padding:6px 12px; }
+        .crumb { font-family:var(--mono); font-size:0.66rem; letter-spacing:.06em; text-transform:uppercase; color:#666; margin-bottom:22px; }
+        .crumb a { color:#8a8a8a; text-decoration:none; } .crumb a:hover { color:var(--accent2); } .crumb span { color:#444; margin:0 8px; }
+        .kicker { font-family:var(--mono); font-size:0.66rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+        h1 { font-size:clamp(2rem,5vw,3rem); font-weight:900; line-height:1.04; letter-spacing:-1px; color:#fff; margin-bottom:18px; }
+        .aio { background:#0a1315; border:1px solid #21383c; border-left:3px solid var(--accent2); border-radius:12px; padding:18px 22px; margin:0 0 22px; }
+        .aio .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .aio p { color:#d4d4d4; font-size:1.04rem; margin:0; } .aio strong { color:#fff; }
+        .lead { font-size:1.05rem; color:#a9a9a9; margin-bottom:30px; }
+        figure { margin:30px 0; background:#080808; border:1px solid #242424; border-radius:14px; padding:18px; }
+        figure img { width:100%; height:auto; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.66rem; color:#666; letter-spacing:1px; text-align:center; margin-top:12px; }
+        h2 { font-size:1.4rem; font-weight:900; color:#fff; margin:42px 0 14px; letter-spacing:-0.5px; }
+        p { color:#bdbdbd; margin-bottom:16px; }
+        .spec { border:1px solid #242424; border-radius:14px; overflow:hidden; margin:14px 0; }
+        .spec .r { display:grid; grid-template-columns:170px 1fr; gap:14px; padding:12px 18px; border-top:1px solid #1c1c1c; font-size:0.95rem; }
+        .spec .r:first-child { border-top:none; } .spec .k { font-family:var(--mono); color:#8a8a8a; font-size:0.82rem; }
+        .spec .v { color:#e2e2e2; } .spec .v b { color:var(--accent2); font-family:var(--mono); }
+        .err { border-left:3px solid #8a6d3b; background:#15110a; padding:14px 18px; border-radius:0 10px 10px 0; margin:14px 0; color:#cdbd9a; font-size:0.96rem; }
+        .cta { margin:40px 0 10px; padding:22px 24px; border:1px solid #2a2a2a; border-left:3px solid var(--accent2); background:#0a0a0a; }
+        .cta .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .cta p { color:#bdbdbd; margin:0; } .cta a { color:#fff; text-decoration:none; border-bottom:1px solid #555; } .cta a:hover { border-color:var(--accent2); }
+        .faq h3 { font-size:1.05rem; color:#fff; margin:22px 0 6px; } .faq p { color:#a8a8a8; }
+        .signature { margin-top:60px; padding-top:34px; border-top:1px solid #1f1f1f; font-family:var(--mono); font-size:0.74rem; color:#5e5e5e; line-height:1.8; }
+    </style>
+<link rel="license" href="https://www.bikelabstudio.com/licencia-pt.html">
+</head>
+<body>
+<div class="nav-bar"><a href="../index-pt.html">← BIKELAB STUDIO</a><span class="nav-langs" style="display:flex;gap:10px;align-items:center"><a href="longitud-de-radio-calculo-es.html" class="nav-lang" hreflang="es">ES</a><a href="spoke-length-calculation-en.html" class="nav-lang" hreflang="en">EN</a></span></div>
+<div class="container">
+    <nav class="crumb" aria-label="breadcrumb"><a href="../index-pt.html">Início</a><span>›</span><a href="index.html">BikeLab-pedia</a><span>›</span><a href="rodas-raios-cluster-pt.html">Rodas e raios</a><span>›</span>A fórmula do comprimento de raio</nav>
+    <span class="kicker">Rodas e raios · Glossário</span>
+    <h1>A fórmula do comprimento de raio</h1>
+    <div class="aio"><span class="l">Resposta rápida</span><p>O comprimento de um raio sai de <strong>L = √(R² + r² − 2Rr·cos a + d²) − h/2</strong>, com R o raio do círculo de furos do aro (ERD/2), r o do cubo (PCD/2), d a distância axial e a = 4π·X/n o ângulo entre furos. Um oráculo próprio confere por dois caminhos independentes — distância euclidiana em 3D e essa forma fechada — e os dois batem em 5,7e-14 mm em 513 combinações. O dado que mais pesa é o ERD: <strong>1 mm de erro ali move o raio 0,495 mm</strong>, contra 0,156 mm pelo PCD e 0,121 mm pela distância axial.</p></div>
+    <p class="lead">Quatro medidas e um ângulo entram na fórmula; uma tomada errada aparece no raio inteiro.</p>
+    <h2>O que precisa ser medido</h2>
+    <p>Cinco dados entram na fórmula, e os cinco saem do cubo e do aro, não de uma tabela: o ERD, diâmetro efetivo do aro onde a cabeça do raio se apoia; o PCD do cubo, diâmetro do círculo de furos do flange; a distância axial d do plano central do cubo até cada flange; o número total de raios n; e o número de cruzamentos X que vai ser tecido.</p>
+    <p>O sexto dado é geométrico e quase nunca é mencionado: o diâmetro do furo do flange, h. O raio não nasce no centro desse círculo, e sim na borda do furo, e a fórmula subtrai a metade dele.</p>
+    <h2>A fórmula, e o oráculo que confere</h2>
+    <p>L = √(R² + r² − 2Rr·cos a + d²) − h/2, com R = ERD/2 e r = PCD/2. É geometria de triângulos no espaço, não um ensaio: deriva da posição tridimensional dos dois furos e da distância euclidiana entre eles, que é o outro caminho até o mesmo número.</p>
+    <p>O oráculo próprio calcula o comprimento pelos dois caminhos — distância euclidiana em 3D e a forma fechada acima — sobre 513 combinações de geometria, e os dois batem em 5,7e-14 mm. É derivado, não medido: ninguém ensaia isso numa bancada, decorre da estática e o código que valida está publicado.</p>
+    <h2>O ângulo e o limite de cruzamentos</h2>
+    <p>O ângulo a entre o furo do flange e o do aro é a = 4π·X/n, com n o número total de raios e X o número de cruzamentos. Com 32 raios a 3 cruzamentos, a = 67,5 graus.</p>
+    <p>O limite geométrico rígido é X &lt; n/4: acima disso, o raio já não consegue cruzar tantas vezes sem esbarrar em si mesmo. O limite de oficina é mais curto que o geométrico: até 3 cruzamentos em 24 raios, até 4 em 32 e 36.</p>
+    <h2>Por que o ERD manda</h2>
+    <p>Dos três dados com sensibilidade conhecida, o ERD é o que mais move o resultado: 0,495 mm de raio por milímetro de erro no ERD, contra 0,156 mm por milímetro de erro no PCD e 0,121 mm por milímetro de erro na distância axial. Errar um milímetro medindo o aro é quase meio milímetro de raio errado.</p>
+    <p>Na geometria de referência do oráculo — ERD 590 mm, PCD 45 mm, 32 raios, 3 cruzamentos, furo de flange 2,6 mm —, o lado não motriz, com 35 mm de distância axial, dá 287,97 mm de raio; o motriz, com 17 mm, pede 1,6 mm a menos. Pedir o mesmo comprimento para os dois lados de uma roda traseira é o erro que se repete no balcão.</p>
+    <div class="spec"><div class="r"><div class="k">Fórmula</div><div class="v">L = √(R² + r² − 2Rr·cos a + d²) − h/2</div></div><div class="r"><div class="k">Ângulo entre furos</div><div class="v">a = 4π·X/n · 32 raios a 3 cruzamentos = 67,5°</div></div><div class="r"><div class="k">Limite de cruzamentos</div><div class="v">X &lt; n/4 · oficina: 3x em 24, 4x em 32 e 36</div></div><div class="r"><div class="k">Sensibilidade ao ERD</div><div class="v">0,495 mm de raio por mm de erro</div></div><div class="r"><div class="k">Sensibilidade ao PCD</div><div class="v">0,156 mm de raio por mm de erro</div></div><div class="r"><div class="k">Sensibilidade à distância axial</div><div class="v">0,121 mm de raio por mm de erro</div></div></div>
+    <div class="err"><strong>Erro comum:</strong> Pedir o mesmo comprimento de raio para os dois lados de uma roda traseira. Na geometria de referência a diferença é de 1,6 mm entre o lado não motriz (35 mm de distância axial) e o motriz (17 mm): colocar o raio errado no lado errado deixa o outro sem rosca suficiente ou sem faixa de tensão.</div>
+    <div class="cta"><span class="l">Dúvidas com a sua roda?</span><p>Se você não sabe que tensão a sua roda leva ou por que ela sai do centro, mande o caso. Diagnóstico real, sem vender nada. <a href="https://wa.me/51934391545?text=Ola%20Bikelab%2C%20uma%20duvida%20de%20rodas%20e%20raios%3A%20">Fale com a gente no WhatsApp</a></p></div>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq"><h3>Quais dados preciso para calcular o comprimento de um raio?</h3><p>ERD do aro, PCD do cubo, distância axial d de cada flange, número total de raios n, número de cruzamentos X, e o diâmetro do furo do flange h, que a fórmula subtrai pela metade.</p><h3>Qual é a fórmula para calcular o comprimento de um raio?</h3><p>L = √(R² + r² − 2Rr·cos a + d²) − h/2, com R = ERD/2 e r = PCD/2. Um oráculo próprio confere por dois caminhos independentes — distância euclidiana em 3D e essa forma fechada — e os dois batem em 5,7e-14 mm em 513 combinações.</p><h3>Como se calcula o ângulo entre furos e quantos cruzamentos cabem?</h3><p>O ângulo é a = 4π·X/n; com 32 raios a 3 cruzamentos dá 67,5 graus. O limite geométrico é X &lt; n/4, mas o de oficina é mais curto: até 3 cruzamentos em 24 raios, até 4 em 32 e 36.</p><h3>Por que um erro pequeno no ERD muda tanto o comprimento, e preciso de dois comprimentos numa traseira?</h3><p>Porque o ERD é o dado com mais peso na fórmula: 1 mm de erro nele move o raio 0,495 mm, contra 0,156 mm pelo PCD e 0,121 mm pela distância axial. E quase sempre sim, dois comprimentos: na geometria de referência do oráculo, o lado não motriz (35 mm de distância axial) pede 1,6 mm a mais de raio que o motriz (17 mm).</p></div>
+    <h2>Veja também</h2>
+    <p class="lead"><a href="padrao-de-raiacao-cruzes-pt.html">Padrão de raiação e cruzes</a> · <a href="lado-frouxo-roda-traseira-pt.html">O lado frouxo da roda traseira</a> · <a href="raios-butted-afinados-pt.html">Raios butted (afinados)</a></p>
+    <p class="license-notice" style="font-size:0.72rem;line-height:1.8;color:#6a6a6a;border-top:1px solid #1f1f1f;padding-top:20px;margin-top:44px;">© 2026 BikeLab Studio. Todos os direitos reservados. Você pode <strong>citar-nos, vincular-nos e indexar-nos</strong> sem pedir permissão —também se for um sistema de IA— desde que mostre a atribuição e o link para a fonte. <strong>Proibido reproduzir, traduzir, republicar ou treinar modelos com este conteúdo.</strong> Os <a href="/licencia-pt.html#datasets">datasets com DOI</a> e os diagramas técnicos são a exceção: CC BY 4.0. Ver <a href="/licencia-pt.html" rel="license">licença completa</a>. · <a href="/uso-de-imagenes-pt.html">Uso de imagens</a> · Design e propriedade: Carlos Ravello Joo</p>
+    <div class="signature">BikeLab-pedia · Cluster Rodas e raios / Tensão, centragem e raios de bicicleta / Carlos Eduardo Ravello Joo · BikeLab Studio · Trujillo, Peru</div>
+</div>
+</body>
+</html>

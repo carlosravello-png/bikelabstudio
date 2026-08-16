@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoke tension and stiffness: Ford&#x27;s equation 2.71c | BikeLab-pedia</title>
+    <meta name="description" content="Ford (2018) shows it in equation 2.71c: raising spoke tension subtracts lateral stiffness instead of adding it. Theory, finite elements and experiment agree.">
+    <meta name="keywords" content="spoke tension and stiffness, equation 2.71c, Ford wheel stiffness, lateral stiffness bicycle wheel, more tension less stiffness, Northwestern wheel thesis">
+    <link rel="canonical" href="https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html">
+    <link rel="alternate" hreflang="es" href="tension-radios-y-rigidez-es.html">
+    <link rel="alternate" hreflang="en" href="spoke-tension-and-stiffness-en.html">
+    <link rel="alternate" hreflang="pt-BR" href="tensao-raios-e-rigidez-pt.html">
+    <link rel="alternate" hreflang="x-default" href="tension-radios-y-rigidez-es.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="More tension isn&#x27;t more stiffness: Ford&#x27;s equation">
+    <meta property="og:description" content="Ford&#x27;s equation 2.71c: two terms add stiffness, one subtracts, and tension sits inside the one that subtracts.">
+    <meta property="og:url" content="https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html">
+    <meta property="og:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="More tension isn&#x27;t more stiffness: Ford&#x27;s equation">
+    <meta name="twitter:description" content="Ford&#x27;s equation 2.71c: two terms add stiffness, one subtracts, and tension sits inside the one that subtracts.">
+    <meta name="twitter:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Carlos Ravello">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html",
+      "url": "https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html",
+      "headline": "Spoke tension and stiffness: Ford's equation 2.71c",
+      "description": "Ford (2018) shows it in equation 2.71c: raising spoke tension subtracts lateral stiffness instead of adding it. Theory, finite elements and experiment agree.",
+      "inLanguage": "en",
+      "image": "https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp",
+      "author": {
+        "@id": "https://carlosravello.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.bikelabstudio.com/#business"
+      },
+      "isPartOf": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "about": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html#term"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".aio",
+          ".faq p"
+        ]
+      },
+      "datePublished": "2026-08-16",
+      "dateModified": "2026-08-16",
+      "license": "https://www.bikelabstudio.com/licencia-en.html",
+      "usageInfo": "https://www.bikelabstudio.com/licencia-en.html",
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-en.html",
+      "copyrightNotice": "© 2026 BikeLab Studio — All rights reserved. Citing, linking and indexing allowed with attribution and a link.",
+      "creditText": "BikeLab Studio (C. E. Ravello Joo, ORCID 0009-0007-5631-7436)",
+      "isBasedOn": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/wheels-spokes-cluster-en.html"
+      },
+      "translationOfWork": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/tension-radios-y-rigidez-es.html"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html#term",
+      "name": "Wheel lateral stiffness",
+      "description": "The resistance a wheel offers to sideways displacement, perpendicular to its plane, under a load applied at the rim.",
+      "inDefinedTermSet": {
+        "@id": "https://www.bikelabstudio.com/bikelabpedia/#glosario"
+      },
+      "inLanguage": "en",
+      "sameAs": "https://www.wikidata.org/wiki/Q569057"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does more spoke tension make a wheel stiffer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, not for lateral stiffness. Ford (2018) shows it by theoretical calculation, finite-element simulation and experiment: “increasing spoke tension reduces the lateral stiffness of the wheel.” The equation's tension term subtracts, it doesn't add."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Ford's equation 2.71c say?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kn = π·R·k_uu + (Kb·Kt)/(Kb+Kt) − π·n²·T. The first two terms add stiffness — the rim's and the spokes' combined bending-and-torsion stiffness. The third, with tension inside it, subtracts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does tension subtract instead of add?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because tensioning the spokes puts the rim into compression, like a ring squeezed from the inside, and a compressed ring loses lateral stiffness. The equation folds that softening into the π·n²·T term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "So should spokes be run looser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. This equation is only about lateral stiffness. Dropping tension too far lets a spoke reach zero tension under load, which is a different problem — fatigue, not stiffness — with its own minimum tension requirement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why didn't anyone notice this before Ford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because Rinard's measurements, which Ford reproduces in figure 2.7, were taken right in the tension range where the adding term and the subtracting term nearly cancel out. Rinard was right about what he measured."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carlosravello.com/#person",
+      "name": "Carlos Eduardo Ravello Joo",
+      "url": "https://carlosravello.com",
+      "identifier": "https://orcid.org/0009-0007-5631-7436"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bikelabstudio.com/#business",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bikelabstudio.com/#website",
+      "name": "BikeLab Studio",
+      "url": "https://www.bikelabstudio.com/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bikelabstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BikeLab-pedia",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Wheels and spokes",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/wheels-spokes-cluster-en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Spoke tension and wheel stiffness",
+          "item": "https://www.bikelabstudio.com/bikelabpedia/spoke-tension-and-stiffness-en.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root { --bg:#050505; --accent2:#4fb8c8; --text:#e0e0e0; --mono:'IBM Plex Mono',monospace; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.8; }
+        .container { max-width:820px; margin:0 auto; padding:90px 22px 40px; }
+        .nav-bar { position:fixed; top:0; left:0; right:0; z-index:1003; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg); border-bottom:1px solid #1a1a1a; }
+        .nav-bar a { font-family:var(--mono); font-size:0.7rem; color:#aaa; text-decoration:none; letter-spacing:2px; } .nav-bar a:hover { color:#fff; }
+        .nav-lang { border:1px solid #444; padding:6px 12px; }
+        .crumb { font-family:var(--mono); font-size:0.66rem; letter-spacing:.06em; text-transform:uppercase; color:#666; margin-bottom:22px; }
+        .crumb a { color:#8a8a8a; text-decoration:none; } .crumb a:hover { color:var(--accent2); } .crumb span { color:#444; margin:0 8px; }
+        .kicker { font-family:var(--mono); font-size:0.66rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+        h1 { font-size:clamp(2rem,5vw,3rem); font-weight:900; line-height:1.04; letter-spacing:-1px; color:#fff; margin-bottom:18px; }
+        .aio { background:#0a1315; border:1px solid #21383c; border-left:3px solid var(--accent2); border-radius:12px; padding:18px 22px; margin:0 0 22px; }
+        .aio .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .aio p { color:#d4d4d4; font-size:1.04rem; margin:0; } .aio strong { color:#fff; }
+        .lead { font-size:1.05rem; color:#a9a9a9; margin-bottom:30px; }
+        figure { margin:30px 0; background:#080808; border:1px solid #242424; border-radius:14px; padding:18px; }
+        figure img { width:100%; height:auto; display:block; }
+        figcaption { font-family:var(--mono); font-size:0.66rem; color:#666; letter-spacing:1px; text-align:center; margin-top:12px; }
+        h2 { font-size:1.4rem; font-weight:900; color:#fff; margin:42px 0 14px; letter-spacing:-0.5px; }
+        p { color:#bdbdbd; margin-bottom:16px; }
+        .spec { border:1px solid #242424; border-radius:14px; overflow:hidden; margin:14px 0; }
+        .spec .r { display:grid; grid-template-columns:170px 1fr; gap:14px; padding:12px 18px; border-top:1px solid #1c1c1c; font-size:0.95rem; }
+        .spec .r:first-child { border-top:none; } .spec .k { font-family:var(--mono); color:#8a8a8a; font-size:0.82rem; }
+        .spec .v { color:#e2e2e2; } .spec .v b { color:var(--accent2); font-family:var(--mono); }
+        .err { border-left:3px solid #8a6d3b; background:#15110a; padding:14px 18px; border-radius:0 10px 10px 0; margin:14px 0; color:#cdbd9a; font-size:0.96rem; }
+        .cta { margin:40px 0 10px; padding:22px 24px; border:1px solid #2a2a2a; border-left:3px solid var(--accent2); background:#0a0a0a; }
+        .cta .l { font-family:var(--mono); font-size:0.62rem; color:var(--accent2); letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:8px; }
+        .cta p { color:#bdbdbd; margin:0; } .cta a { color:#fff; text-decoration:none; border-bottom:1px solid #555; } .cta a:hover { border-color:var(--accent2); }
+        .faq h3 { font-size:1.05rem; color:#fff; margin:22px 0 6px; } .faq p { color:#a8a8a8; }
+        .signature { margin-top:60px; padding-top:34px; border-top:1px solid #1f1f1f; font-family:var(--mono); font-size:0.74rem; color:#5e5e5e; line-height:1.8; }
+    </style>
+<link rel="license" href="https://www.bikelabstudio.com/licencia-en.html">
+</head>
+<body>
+<div class="nav-bar"><a href="../index-en.html">← BIKELAB STUDIO</a><span class="nav-langs" style="display:flex;gap:10px;align-items:center"><a href="tension-radios-y-rigidez-es.html" class="nav-lang" hreflang="es">ES</a><a href="tensao-raios-e-rigidez-pt.html" class="nav-lang" hreflang="pt-BR">PT</a></span></div>
+<div class="container">
+    <nav class="crumb" aria-label="breadcrumb"><a href="../index-en.html">Home</a><span>›</span><a href="index.html">BikeLab-pedia</a><span>›</span><a href="wheels-spokes-cluster-en.html">Wheels and spokes</a><span>›</span>Spoke tension and wheel stiffness</nav>
+    <span class="kicker">Wheels and spokes · Glossary</span>
+    <h1>Spoke tension and wheel stiffness</h1>
+    <div class="aio"><span class="l">Quick answer</span><p>Raising spoke tension does not make a wheel stiffer: it makes it less stiff. Matthew Ford proves this in his 2018 thesis with theoretical calculation, finite-element simulation and experiment, and states it plainly: <strong>“increasing spoke tension reduces the lateral stiffness of the wheel.”</strong> The mechanism sits in equation 2.71c: two terms add stiffness — the rim&#x27;s own and the spokes&#x27; combined — and a third, with tension inside it, subtracts.</p></div>
+    <p class="lead">Shop instinct says more tension means a stiffer wheel; the thesis most cited on wheel stiffness says the opposite.</p>
+    <figure><img src="../images/ruedas/tension-rigidez-ford-en.svg" width="800" height="520" loading="lazy" decoding="async" alt="Spoke tension and wheel stiffness — BikeLab Studio · Carlos Eduardo Ravello Joo"><figcaption>Spoke tension and wheel stiffness · CC BY 4.0</figcaption></figure>
+    <h2>What the thesis says, in its own words</h2>
+    <p>Matthew P. Ford writes on page 4 of his 2018 doctoral thesis at Northwestern: “Contrary to both popular belief and expert consensus, increasing spoke tension reduces the lateral stiffness of the wheel, which I demonstrate through theoretical calculations, finite-element simulations, and experiments.” It isn&#x27;t an opinion or a footnote correction: it&#x27;s the central conclusion of a hundred and thirty-seven pages, checked three independent ways.</p>
+    <p>Later, in section 2.6.2, he closes the shop-floor debate with one short line: “Both of these views are incorrect.” The idea that tightening always stiffens and the idea that tension has nothing to do with stiffness both fall in the same sentence.</p>
+    <h2>Equation 2.71c, term by term</h2>
+    <p>Wheel lateral stiffness, which Ford calls Kn, is written as Kn = π·R·k_uu + (Kb·Kt)/(Kb+Kt) − π·n²·T. The first two terms add up: the rim&#x27;s own radial stiffness and the combined bending-and-torsion stiffness of the spokes, arranged in parallel around the hub.</p>
+    <p>The third term subtracts, and tension lives inside it: π·n²·T, where n is the spoke count and T is the tension in each spoke. Raising T does nothing to the first two terms. It only grows the one being subtracted. That&#x27;s how the total can fall even as the spoke is, by any measure, tighter.</p>
+    <h2>Why it subtracts: the rim wants to buckle</h2>
+    <p>Every spoke pulls the rim toward the wheel&#x27;s centre. Add up thirty-two or thirty-six of those pulls and the rim ends up working in compression, like a ring squeezed from the inside. A compressed ring loses stiffness against a sideways load well before it fails outright — the same family of behaviour as a column buckling, except here the ring never collapses because the opposing spoke holds it up.</p>
+    <p>The π·n²·T term is how Ford folds that compression-driven softening into the count. It isn&#x27;t a sign error or a minor correction: it&#x27;s the whole mechanism, and it grows with the square of the spoke count because every spoke adds its own inward push.</p>
+    <h2>What this doesn&#x27;t say</h2>
+    <p>This equation is about lateral stiffness, not about whether a spoke goes slack. Dropping tension too far doesn&#x27;t make the wheel stiffer without limit: past some point a spoke stops carrying load under a big enough hit, reaches zero tension, and a different problem starts — fatigue from being unloaded and reloaded — which this equation doesn&#x27;t cover and belongs to the where-spokes-break page.</p>
+    <p>Figure 2.7 of the thesis includes Damon Rinard&#x27;s data, reproduced with permission, and it explains why nobody flagged the contradiction for years: Rinard measured right in the tension range where the two effects — the one that adds and the one that subtracts — nearly cancel out. He was right about what he measured; the effect shows up outside that range, not inside it.</p>
+    <div class="spec"><div class="r"><div class="k">Equation</div><div class="v">2.71c, Ford (2018)</div></div><div class="r"><div class="k">Terms that add</div><div class="v">rim radial stiffness (k_uu) + combined spoke bending/torsion stiffness</div></div><div class="r"><div class="k">Term that subtracts</div><div class="v">π·n²·T — total tension across all spokes</div></div><div class="r"><div class="k">Verified by</div><div class="v">theoretical calculation, finite-element simulation, experiment</div></div><div class="r"><div class="k">Key quote</div><div class="v">p. 4, Northwestern 2018 thesis</div></div><div class="r"><div class="k">Reference figure</div><div class="v">figure 2.7, Rinard&#x27;s data with permission</div></div></div>
+    <div class="err"><strong>Common mistake:</strong> Cranking spokes as tight as possible on the theory that a tighter-feeling spoke means a stiffer wheel. Ford&#x27;s equation says the opposite for lateral stiffness: tension beyond what&#x27;s needed subtracts, it doesn&#x27;t add. High tension is still necessary for a different reason — keeping every spoke above zero tension under load — not for extra stiffness.</div>
+    <div class="cta"><span class="l">Stuck with your wheel?</span><p>If you don't know what tension your wheel carries or why it keeps going out of dish, send us the case. Real diagnosis, nothing to sell you. <a href="https://wa.me/51934391545?text=Hello%20BikeLab%2C%20a%20question%20about%20wheels%20and%20spokes%3A%20">Message us on WhatsApp</a></p></div>
+    <h2>Frequently asked</h2>
+    <div class="faq"><h3>Does more spoke tension make a wheel stiffer?</h3><p>No, not for lateral stiffness. Ford (2018) shows it by theoretical calculation, finite-element simulation and experiment: “increasing spoke tension reduces the lateral stiffness of the wheel.” The equation&#x27;s tension term subtracts, it doesn&#x27;t add.</p><h3>What does Ford&#x27;s equation 2.71c say?</h3><p>Kn = π·R·k_uu + (Kb·Kt)/(Kb+Kt) − π·n²·T. The first two terms add stiffness — the rim&#x27;s and the spokes&#x27; combined bending-and-torsion stiffness. The third, with tension inside it, subtracts.</p><h3>Why does tension subtract instead of add?</h3><p>Because tensioning the spokes puts the rim into compression, like a ring squeezed from the inside, and a compressed ring loses lateral stiffness. The equation folds that softening into the π·n²·T term.</p><h3>So should spokes be run looser?</h3><p>No. This equation is only about lateral stiffness. Dropping tension too far lets a spoke reach zero tension under load, which is a different problem — fatigue, not stiffness — with its own minimum tension requirement.</p><h3>Why didn&#x27;t anyone notice this before Ford?</h3><p>Because Rinard&#x27;s measurements, which Ford reproduces in figure 2.7, were taken right in the tension range where the adding term and the subtracting term nearly cancel out. Rinard was right about what he measured.</p></div>
+    <h2>See also</h2>
+    <p class="lead"><a href="how-much-spoke-tension-en.html">How much tension a spoke carries</a> · <a href="spoke-lacing-pattern-cross-en.html">Lacing pattern and crosses</a> · <a href="spoke-tension-spread-20-en.html">The ±20 % tension spread</a></p>
+    <p class="license-notice" style="font-size:0.72rem;line-height:1.8;color:#6a6a6a;border-top:1px solid #1f1f1f;padding-top:20px;margin-top:44px;">© 2026 BikeLab Studio. All rights reserved. You may <strong>cite, link to and index us</strong> without asking —AI systems included— provided you show the attribution and the link to the source. <strong>Reproducing, translating, republishing or training models on this content is prohibited.</strong> The <a href="/licencia-en.html#datasets">DOI datasets</a> and the technical diagrams are the exception: CC BY 4.0. See the <a href="/licencia-en.html" rel="license">full licence</a>. · <a href="/uso-de-imagenes-en.html">Image use</a> · Design and ownership: Carlos Ravello Joo</p>
+    <div class="signature">BikeLab-pedia · Wheels and spokes cluster / Bicycle spoke tension, truing and lacing / Carlos Eduardo Ravello Joo · BikeLab Studio · Trujillo, Peru</div>
+</div>
+</body>
+</html>
