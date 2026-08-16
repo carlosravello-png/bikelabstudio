@@ -1,0 +1,35 @@
+{
+  "_nota": "Diccionario fuente-de-verdad de entidades Wikidata para bikelabstudio.com. Cada Q se verifico A MANO en Claude in Chrome con triple chequeo: etiqueta + descripcion + instance-of/subclass-of, mas numero de articulos en Wikipedia. NUNCA se escribe un Q que no este aqui.",
+  "_prohibido": "JAMAS un Q para Carlos Eduardo Ravello Joo ni para BikeLab Studio. El Wikidata personal (Q139714842) fue BORRADO. Su identidad es ORCID + ISNI, nunca Wikidata.",
+  "_verificado": "2026-08-16",
+  "conceptos": {
+    "bicycle_wheel":      {"Q":"Q161798",  "label":"bicycle wheel",      "desc":"wheel designed for a bicycle",                    "P279":["Q446","Q30246160"],        "wikipedia":24, "es":"rueda de bicicleta","pt":"roda de bicicleta","estado":"verificado"},
+    "spoke":              {"Q":"Q845671",  "label":"spoke",              "desc":"part of a wheel extending radially from the hub to the rim","P31":["Q811909"],         "wikipedia":35, "es":"radio","pt":"raio","estado":"verificado"},
+    "bicycle_rim":        {"Q":"Q1392541", "label":"bicycle rim",        "desc":"bicycle part",                                    "P279":["Q30246160"],               "wikipedia":5,  "es":"llanta","pt":"-","estado":"verificado"},
+    "wheelbuilding":      {"Q":"Q7992053", "label":"Wheelbuilding",      "desc":"process of assembling wire wheels",               "P279":[],                          "wikipedia":1,  "es":"-","pt":"-","estado":"verificado","aviso":"Item sin declaraciones, pero tiene Freebase /m/05__ky: el Knowledge Graph de Google ya lo conoce. Usar como secundaria, nunca como unica."},
+    "truing_stand":       {"Q":"Q190886",  "label":"wheel truing stand", "desc":"tool for straightening bicycle wheels",           "P279":["Q572809"],                 "wikipedia":4,  "estado":"verificado"},
+    "bicycle_tire":       {"Q":"Q771452",  "label":"bicycle tire",       "desc":"a tire that fits on the wheel of a bicycle",      "P279":["Q169545","Q30246160"],     "wikipedia":22, "es":"neumatico de bicicleta","estado":"verificado"},
+    "bottom_bracket":     {"Q":"Q1426724", "label":"bottom bracket",     "desc":"bicycle part that connects the crankset to the bicycle","P279":["Q30246160"],         "wikipedia":18, "es":"eje pedalier","pt":"movimento central","estado":"verificado"},
+    "bicycle_brake":      {"Q":"Q1147317", "label":"bicycle brake",      "desc":"braking device for bicycles",                     "P279":["Q1534839","Q30246160"],    "wikipedia":20, "es":"freno de bicicleta","pt":"freio de bicicleta","estado":"verificado"},
+    "bicycle_chain":      {"Q":"Q189940",  "label":"bicycle chain",      "desc":"part of the drivetrain on a bike",                "P279":["Q9394185","Q30246160"],    "wikipedia":20, "es":"cadena de bicicleta","estado":"verificado"},
+    "drivetrain":         {"Q":"Q1786258", "label":"drivetrain",         "desc":"group of components that deliver power",          "P279":["Q839546","Q2583685"],      "wikipedia":14, "es":"transmision mecanica","estado":"verificado","trampa":"'drivetrain' devuelve tambien Q5308035, album de 38 Special"},
+    "bicycle_frame":      {"Q":"Q167130",  "label":"bicycle frame",      "desc":"main component of a bicycle",                     "P279":["Q139067417","Q30246160"],  "wikipedia":29, "es":"cuadro","pt":"quadro de bicicleta","estado":"verificado"},
+    "bicycle_suspension": {"Q":"Q4903805", "label":"bicycle suspension", "desc":"bicycle part used primarily in mountain biking",  "P279":["Q272870","Q30246160"],     "wikipedia":8,  "es":"suspension de bicicleta","estado":"verificado"},
+    "bicycle_fork":       {"Q":"Q651103",  "label":"bicycle fork",       "desc":"bicycle piece",                                   "P279":["Q30246160"],               "wikipedia":18, "es":"horquilla","estado":"verificado"},
+    "axle":               {"Q":"Q188209",  "label":"axle",               "desc":"central shaft for a rotating wheel or gear",      "P279":["Q839546"],                 "wikipedia":58, "es":"eje","pt":"eixo","estado":"verificado","trampa":"'axle' devuelve apellidos Axley/Axlev"},
+    "welding":            {"Q":"Q131172",  "label":"welding",            "desc":"any fabrication process for joining workpieces",  "P279":["Q10843872","Q1480529"],    "wikipedia":76, "es":"soldadura","pt":"soldagem","estado":"verificado","trampa":"'welding' devuelve Q37030223 apellido y Q15761453 revista"},
+    "bicycle":            {"Q":"Q11442",   "label":"bicycle",            "desc":"pedal-driven two-wheel vehicle",                  "P31":["Q334166"],                  "wikipedia":187,"es":"bicicleta","pt":"bicicleta","estado":"verificado"},
+    "bicycle_part":       {"Q":"Q30246160","label":"bicycle part",       "desc":"part used in creating bicycles",                  "P279":["Q60673395"],               "wikipedia":1,  "es":"parte de una bicicleta","estado":"verificado"}
+  },
+  "marcas": {
+    "dt_swiss":  {"Q":"Q11964439","label":"DT Swiss", "P31":["Q4830453"],"wikipedia":6,  "estado":"verificado"},
+    "park_tool": {"Q":"Q20968253","label":"Park Tool","desc":"U.S. bicycle repair tool and equipment company","P31":["Q4830453"],"wikipedia":5,"estado":"verificado"},
+    "iso":       {"Q":"Q15028",   "label":"International Organization for Standardization","P31":["Q1328899","Q1194093","Q79913"],"wikipedia":111,"estado":"verificado","trampa":"Q140183189 y Q140258605 son 'scholarly work', no la organizacion"}
+  },
+  "descartados": {
+    "bicycle_geometry": "No existe entidad en Wikidata. Busqueda sin resultados el 2026-08-16.",
+    "bicycle_hub": "Q105150560 (0 articulos Wikipedia) y Q20820025 (1). Ambas demasiado debiles; no se usan.",
+    "iso_4210": "La norma ISO 4210 no tiene Q propio. Se ancla la organizacion (Q15028), no la norma.",
+    "bicycle_wheel_duchamp": "Q164918 / Q80174005 / Q131604529 son la escultura de Marcel Duchamp. NUNCA usarlas."
+  }
+}

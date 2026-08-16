@@ -26,8 +26,7 @@
     <meta name="twitter:image" content="https://www.bikelabstudio.com/bikelabpedia/bikelabpedia_hero.webp">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Carlos Ravello">
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -43,9 +42,21 @@
       "isPartOf": {
         "@id": "https://www.bikelabstudio.com/#website"
       },
-      "about": {
-        "@id": "https://carlosravello.com/#mcd-framework"
-      },
+      "about": [
+        {
+          "@id": "https://carlosravello.com/#mcd-framework"
+        },
+        {
+          "@type": "Thing",
+          "name": "bicycle",
+          "sameAs": "https://www.wikidata.org/wiki/Q11442"
+        },
+        {
+          "@type": "Thing",
+          "name": "bicycle part",
+          "sameAs": "https://www.wikidata.org/wiki/Q30246160"
+        }
+      ],
       "author": {
         "@id": "https://carlosravello.com/#person"
       },
@@ -53,8 +64,7 @@
         "@id": "https://www.bikelabstudio.com/#business"
       },
       "usageInfo": "https://www.bikelabstudio.com/licencia-pt.html",
-      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-pt.html"
-    ,
+      "acquireLicensePage": "https://www.bikelabstudio.com/licencia-pt.html",
       "mainEntity": {
         "@type": "ItemList",
         "numberOfItems": 9,
@@ -238,8 +248,7 @@
       ]
     }
   ]
-}
-</script>
+}</script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
     <style>
