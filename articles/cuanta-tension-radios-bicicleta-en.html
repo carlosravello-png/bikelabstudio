@@ -711,7 +711,7 @@
           "name": "How much tension should a bicycle spoke have?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "DT Swiss publishes the window in table 6.1 of its technical manuals (Spline WXD10000000861S and Dicut WXD10000000860S, V2024.06), and the values are for the tightest side of the wheel, not the whole wheel: 950 to 1200 N on a front disc wheel, 1050 to 1300 N on a rear disc wheel, 900 to 1100 N on a front rim-brake wheel and 1150 to 1400 N on a rear e-bike wheel. In kilograms-force, dividing by 9.80665: 97-122, 107-133, 92-112 and 117-143 kgf."
+            "text": "DT Swiss publishes the window in table 6.1 of its technical manuals (Spline WXD10000000861S and Dicut WXD10000000860S, V2024.06), and the values are for the tightest side of the wheel, not the whole wheel: 950 to 1200 N on a front disc wheel, 1050 to 1300 N on a rear disc wheel, 900 to 1100 N on a front rim-brake wheel and 1150 to 1400 N on a rear e-bike wheel, which is the highest ceiling the manufacturer publishes. In kilograms-force, dividing by 9.80665: 97–122, 107–133, 92–112 and 117–143 kgf."
           }
         },
         {
@@ -719,7 +719,7 @@
           "name": "Does the ISO standard require 0.5 mm of lateral runout?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. ISO 4210-7:2023 contains no value in millimetres at all: only forces, times and measurement methods. In clause 4.4 it refers lateral runout control to ISO 4210-2:2023, clause 4.10.1, a paid standard. The 0.5 mm repeated in workshops comes from Park Tool's wheel truing guide of 31 March 2021, where it is written as a general guideline. DT Swiss specifies 0.3 mm for its own wheels."
+            "text": "No. ISO 4210-7:2023, the part of the standard covering wheels and rims, contains no value in millimetres at all: only forces, times and measurement methods. In clause 4.4 it refers lateral runout control to ISO 4210-2:2023, clause 4.10.1, which is a paid standard. The 0.5 mm repeated in workshops comes from Park Tool's wheel truing guide of 31 March 2021, where it is written as a general guideline. DT Swiss specifies 0.3 mm for its own wheels in carbon and welded aluminium (table 6.2)."
           }
         },
         {
@@ -727,7 +727,7 @@
           "name": "Why is the non-drive side of a rear wheel looser, and can you fix it by tightening?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because the drive-side flange sits closer to the wheel centre to make room for the cassette, so its spokes leave at a shallower angle and must pull harder for the rim to be centred. The ratio between sides is geometry and does not depend on how the wheel is built or how hard it is tensioned, so tightening the loose side pulls the wheel out of dish instead of fixing it. On an ordinary rear disc wheel the non-drive side sits around 52 % of the drive side; a 3 mm offset rim raises that ratio to 0.66 without touching the hub."
+            "text": "It is looser because the drive-side flange sits closer to the wheel centre to make room for the cassette: its spokes leave at a shallower angle and must pull harder for the rim to be centred. The ratio between sides is geometry —spokes per side, flange spacing and spoke lengths— and does not depend on how the wheel is built or how hard it is tensioned, so tightening the loose side does not correct it: it pulls the wheel out of dish. On an ordinary rear disc wheel the non-drive side sits around 52 % of the drive side; an offset rim of 3 mm raises that ratio to 0.66 without touching the hub. Open derivation by BikeLab Studio, 2026."
           }
         },
         {
@@ -735,7 +735,7 @@
           "name": "Where do bicycle spokes break?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At the elbow. Gavin fatigue-tested 76 spokes to failure and published the split in the Journal of Engineering Mechanics (ASCE) in 1996: 68 broke at the cold-worked elbow, 8 at the threads and none in the middle."
+            "text": "At the elbow. Henri Gavin fatigue-tested 76 spokes to failure in the laboratory and published the split in the Journal of Engineering Mechanics (ASCE) in 1996: 68 broke at the cold-worked elbow, 8 at the threads and none along the central section. That is why high-end spokes are thinned in the middle: the thin section stretches more and absorbs part of the cycle that would otherwise arrive whole at the elbow and the threads."
           }
         },
         {
@@ -743,7 +743,7 @@
           "name": "Does more spoke tension make the wheel stiffer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Ford demonstrated the opposite in his 2018 Northwestern thesis (DOI 10.21985/n2-3sh0-m798): increasing spoke tension reduces the lateral stiffness of the wheel, and there is a critical tension at which the rim buckles. High tension is still needed to keep any spoke from reaching zero under load, which is what breaks them in fatigue."
+            "text": "No. Matthew Ford demonstrated the opposite in his doctoral thesis at Northwestern University (2018, DOI 10.21985/n2-3sh0-m798) through calculation, finite elements and experiment: increasing spoke tension reduces the lateral stiffness of the wheel, because the spokes compress the rim and a compressed rim tends to buckle; there is a critical tension at which lateral stiffness vanishes. High tension is still necessary for a different reason: keeping any spoke from reaching zero under load, which is what breaks them in fatigue."
           }
         },
         {
@@ -751,7 +751,7 @@
           "name": "Does the standard ask the same of a mountain bike and a road bike?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not in lateral load. ISO 4210-7:2023 sets 370 N on the rim for the mountain bicycle and 250 N for the other three types it recognises. The force is applied perpendicular to the wheel plane and, on a rear wheel, from the cassette side. Downhill and BMX do not appear in the document."
+            "text": "Not in lateral load. ISO 4210-7:2023 sets 370 N on the rim for the mountain bicycle and 250 N for the other three types it recognises —city and trekking, young adult and racing. The force is applied perpendicular to the plane of the wheel and, on a rear wheel, from the cassette side, which is the side with less tension. The test measures permanent deformation, not deflection. Downhill and BMX do not appear in the document."
           }
         },
         {
@@ -759,7 +759,7 @@
           "name": "How many spokes do I need for my weight?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "That table does not exist. Seven scientific databases and the manufacturers' own documentation return no published test relating rider weight to spoke count. DT Swiss bounds the wheel by maximum system weight per model, and states that the maximum permissible static wheel load is 60 % of that system weight."
+            "text": "That table does not exist. We searched seven scientific databases and the manufacturers' own documentation and found no published test relating rider weight to spoke count. The industry bounds the wheel along a different axis: DT Swiss publishes a maximum system weight per model —rider plus bike plus luggage— and a split rule stating that the maximum permissible static wheel load is 60 % of that system weight."
           }
         }
       ]

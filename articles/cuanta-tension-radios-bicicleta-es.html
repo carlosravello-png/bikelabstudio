@@ -737,7 +737,7 @@
           "name": "¿Cuánta tensión debe llevar un radio de bicicleta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "DT Swiss publica la ventana en su tabla 6.1 y los valores son del lado más tensado de la rueda, no de la rueda entera: rueda de disco delantera entre 950 y 1200 N (97 a 122 kgf), trasera de disco entre 1050 y 1300 N (107 a 133 kgf), freno de llanta delantera entre 900 y 1100 N (92 a 112 kgf), y trasera de bicicleta eléctrica entre 1150 y 1400 N (117 a 143 kgf), el techo más alto que publica el fabricante. La conversión a kilogramos-fuerza es nuestra: 1 kgf = 9,80665 N."
+            "text": "DT Swiss publica la ventana en la tabla 6.1 de sus manuales técnicos (Spline WXD10000000861S y Dicut WXD10000000860S, V2024.06), y los valores son del lado más tensado de la rueda, no de la rueda entera: 950 a 1200 N en rueda de disco delantera, 1050 a 1300 N en trasera de disco, 900 a 1100 N en freno de llanta delantera y 1150 a 1400 N en trasera de bicicleta eléctrica, que es el techo más alto que publica el fabricante. En kilogramos-fuerza, dividiendo por 9,80665: 97–122, 107–133, 92–112 y 117–143 kgf."
           }
         },
         {
@@ -745,47 +745,47 @@
           "name": "¿La norma ISO exige 0,5 mm de alabeo lateral?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. ISO 4210-7:2023, la parte de la norma dedicada a ruedas y llantas, no contiene ningún valor en milímetros: solo fuerzas, tiempos y métodos de medida. Remite el control del alabeo a ISO 4210-2:2023, apartado 4.10.1, que es una norma de pago. El 0,5 mm que circula en los talleres viene de una guía de Park Tool de 2021, donde está escrito como orientación general, no como norma."
+            "text": "No. ISO 4210-7:2023, la parte de la norma dedicada a ruedas y llantas, no contiene ningún valor en milímetros: solo fuerzas, tiempos y métodos de medida. En su apartado 4.4 remite el control del alabeo a ISO 4210-2:2023, apartado 4.10.1, que es una norma de pago. El 0,5 mm que se repite en los talleres viene de la guía de centrado de Park Tool del 31 de marzo de 2021, donde está escrito como orientación general. DT Swiss, para sus propias ruedas, especifica 0,3 mm en carbono y aluminio soldado (tabla 6.2)."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Por qué los radios del lado izquierdo de la rueda trasera están más flojos?",
+          "name": "¿Por qué el lado izquierdo de la rueda trasera va más flojo, y se arregla apretándolo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Porque la pletina del lado del casete está más cerca del centro de la rueda para dejar sitio a los piñones, así que sus radios salen con menos ángulo y tienen que tirar más fuerte para que el aro quede centrado. La relación entre los dos lados es geometría del buje y del aro: depende del número de radios, de la separación de las pletinas y de la longitud de los radios, y de nada más. En una trasera de disco corriente el lado no motriz queda alrededor del 52 % del motriz."
+            "text": "Va más flojo porque la pletina del lado del casete está más cerca del centro de la rueda para dejar sitio a los piñones: sus radios salen con menos ángulo y tienen que tirar más fuerte para que el aro quede centrado. La relación entre los dos lados es geometría —número de radios por lado, separación de las pletinas y longitud de los radios— y no depende de cómo se monte ni de cuánto se apriete, así que apretar el lado flojo no lo corrige: descentra la rueda. En una trasera de disco corriente el lado no motriz queda alrededor del 52 % del motriz; un aro descentrado (offset) de 3 mm sube esa relación a 0,66 sin tocar el buje. Derivación abierta de BikeLab Studio, 2026."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se arregla apretando los radios del lado flojo?",
+          "name": "¿Dónde se rompen los radios de una bicicleta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Si aprietas el lado flojo, la rueda se descentra: la relación de tensión entre los dos lados no depende de cómo montes ni de cuánto aprietes. Solo cambia si cambia la geometría, por ejemplo con un aro descentrado (offset). En la rueda de referencia, 3 mm de offset suben la relación de 0,52 a 0,66."
+            "text": "En el codo. Henri Gavin rompió a fatiga 76 radios en laboratorio y publicó el reparto en el Journal of Engineering Mechanics de la ASCE en 1996: 68 rompieron en el codo trabajado en frío, 8 en la rosca y ninguno por el tramo central. Por eso los radios de gama alta se adelgazan por el medio: la zona fina estira más y absorbe parte del ciclo que si no llegaría entero al codo y a la rosca."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Dónde se rompen los radios?",
+          "name": "¿Más tensión de radios hace la rueda más rígida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En el codo. Gavin rompió a fatiga 76 radios en laboratorio y publicó el reparto: 68 rompieron en el codo trabajado en frío, 8 en la rosca, ninguno por el medio. Si se te parte un radio, mirar dónde se partió dice qué pasó."
+            "text": "No. Matthew Ford demostró lo contrario en su tesis doctoral de Northwestern University (2018, DOI 10.21985/n2-3sh0-m798) con cálculo, elementos finitos y ensayo: subir la tensión de los radios reduce la rigidez lateral de la rueda, porque los radios comprimen el aro y un aro comprimido tiende a pandear; existe una tensión crítica a la que la rigidez lateral se anula. La tensión alta sigue siendo necesaria por otro motivo: impedir que algún radio llegue a cero bajo carga, que es lo que los rompe por fatiga."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Más tensión hace la rueda más rígida?",
+          "name": "¿La norma pide lo mismo a una bicicleta de montaña que a una de carretera?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Ford midió, simuló y calculó lo contrario en su tesis de 2018: subir la tensión reduce la rigidez lateral de la rueda, y existe una tensión crítica a la que el aro pandea. La tensión alta sigue siendo necesaria por otro motivo, que es impedir que un radio llegue a cero bajo carga, que es lo que de verdad los rompe por fatiga."
+            "text": "En la carga lateral, no. ISO 4210-7:2023 fija 370 N sobre el aro para la bicicleta de montaña y 250 N para los otros tres tipos que reconoce —ciudad y trekking, joven adulto y carretera—. La fuerza se aplica perpendicular al plano de la rueda y, en la rueda trasera, desde el lado del casete, que es el lado con menos tensión. El ensayo mide deformación permanente, no deflexión. El downhill y el BMX no aparecen en el documento."
           }
         },
         {
           "@type": "Question",
-          "name": "¿La norma trata igual a una bicicleta de montaña que a una de carretera?",
+          "name": "¿Cuántos radios necesito según mi peso?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No en la carga lateral. ISO 4210-7:2023 fija 370 N sobre el aro para la de montaña y 250 N para ciudad y trekking, joven adulto y carretera. El downhill y el BMX no aparecen en el documento."
+            "text": "No existe esa tabla. Se buscó en siete bases de datos científicas y en la documentación de los fabricantes y no hay ensayo publicado que relacione peso del ciclista con número de radios. La industria acota la rueda por otro eje: DT Swiss publica un peso máximo de sistema por modelo —ciclista más bicicleta más equipaje— y una regla de reparto, que la carga estática máxima por rueda es el 60 % de ese peso de sistema."
           }
         }
       ]
