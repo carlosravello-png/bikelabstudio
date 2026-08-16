@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="es"
+     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="pt-BR"
      aria-labelledby="gav-t gav-d" font-family="'IBM Plex Mono',ui-monospace,monospace">
-  <title id="gav-t">Localizacion de la rotura por fatiga en 76 radios ensayados por Gavin (1996)</title>
-  <desc id="gav-d">De 76 radios de acero inoxidable llevados a rotura por fatiga, 68 rompieron en el codo trabajado en frio y 8 en la rosca. Ninguno rompio por la zona central. El grafico inferior situa ademas el rango de tension del ensayo, que empieza en 174 megapascales, frente al rango medido rodando en carretera, de 20 a 150 megapascales: la curva de fatiga publicada esta extrapolada en todo el tramo de uso real, como el propio autor declara. Fuente: Gavin 1996, ASCE. Diagrama de Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) para BikeLab Studio, 2026. Licencia CC BY 4.0.</desc>
+  <title id="gav-t">Localizacao da ruptura por fadiga em 76 raios ensaiados por Gavin (1996)</title>
+  <desc id="gav-d">De 76 raios de aco inoxidavel levados a ruptura por fadiga, 68 quebraram no cotovelo trabalhado a frio e 8 na rosca. Nenhum quebrou na parte central. O grafico inferior situa a faixa de tensao do ensaio, que comeca em 174 megapascals, diante da faixa medida rodando na estrada, de 20 a 150 megapascals: a curva de fadiga publicada esta extrapolada em todo o trecho de uso real, como o proprio autor declara. Fonte: Gavin 1996, ASCE. Diagrama de Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) para a BikeLab Studio, 2026. Licenca CC BY 4.0.</desc>
   <metadata>
     <rdf:RDF>
       <cc:Work rdf:about="">
-        <dc:title>Localizacion de la rotura por fatiga en 76 radios ensayados por Gavin (1996)</dc:title>
+        <dc:title>Localizacao da ruptura por fadiga em 76 raios ensaiados por Gavin (1996)</dc:title>
         <dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo</dc:title></cc:Agent></dc:creator>
         <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
         <dc:publisher><cc:Agent><dc:title>BikeLab Studio</dc:title></cc:Agent></dc:publisher>
         <dc:source>Gavin, H. P. (1996), Bicycle-Wheel Spoke Patterns and Spoke Fatigue, Journal of Engineering Mechanics ASCE 122(8), 736-742, DOI 10.1061/(ASCE)0733-9399(1996)122:8(736)</dc:source>
         <dc:date>2026</dc:date>
-        <dc:language>es</dc:language>
+        <dc:language>pt-BR</dc:language>
         <dc:rights>CC BY 4.0 &#8212; atribucion a Carlos Eduardo Ravello Joo, https://www.bikelabstudio.com/</dc:rights>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
       </cc:Work>
@@ -27,14 +27,14 @@
     </rdf:RDF>
   </metadata>
   <rect width="800" height="520" fill="#050505"/>
-  <text x="40" y="52" fill="#e0e0e0" font-size="19">Donde rompen los radios</text>
-  <text x="40" y="74" fill="#8a8a8a" font-size="12">Gavin 1996 · 76 radios de acero inoxidable ensayados a fatiga hasta la rotura</text>
+  <text x="40" y="52" fill="#e0e0e0" font-size="19">Onde os raios quebram</text>
+  <text x="40" y="74" fill="#8a8a8a" font-size="12">Gavin 1996 · 76 raios de aco inoxidavel ensaiados a fadiga ate a ruptura</text>
   <rect x="60.0" y="108" width="608.4" height="46" fill="#ff6b35" fill-opacity="0.85"/>
   <rect x="668.4" y="108" width="71.6" height="46" fill="#4fb8c8" fill-opacity="0.85"/>
-  <text x="364" y="137" fill="#050505" font-size="16" text-anchor="middle" font-weight="bold">68 en el codo</text>
-  <text x="704" y="172" fill="#4fb8c8" font-size="12" text-anchor="middle">8 en la rosca</text>
-  <text x="60.0" y="194" fill="#8a8a8a" font-size="12">El codo es la curva de 90 grados doblada en frio para entrar en el buje. Ninguno rompio por el centro.</text>
-  <text x="40" y="216" fill="#e0e0e0" font-size="15">El limite que declara el propio autor</text>
+  <text x="364" y="137" fill="#050505" font-size="16" text-anchor="middle" font-weight="bold">68 no cotovelo</text>
+  <text x="704" y="172" fill="#4fb8c8" font-size="12" text-anchor="middle">8 na rosca</text>
+  <text x="60.0" y="194" fill="#8a8a8a" font-size="12">O cotovelo e a curva de 90 graus dobrada a frio para entrar no cubo. Nenhum quebrou pelo meio.</text>
+  <text x="40" y="216" fill="#e0e0e0" font-size="15">O limite que o proprio autor declara</text>
   <line x1="130.0" y1="240" x2="130.0" y2="358" stroke="#222222" stroke-width="1"/>
   <text x="130.0" y="378" fill="#8a8a8a" font-size="11" text-anchor="middle">0</text>
   <line x1="206.2" y1="240" x2="206.2" y2="358" stroke="#222222" stroke-width="1"/>
@@ -53,17 +53,17 @@
   <text x="663.8" y="378" fill="#8a8a8a" font-size="11" text-anchor="middle">350</text>
   <line x1="740.0" y1="240" x2="740.0" y2="358" stroke="#222222" stroke-width="1"/>
   <text x="740.0" y="378" fill="#8a8a8a" font-size="11" text-anchor="middle">400</text>
-  <text x="435" y="398" fill="#8a8a8a" font-size="12" text-anchor="middle">amplitud del ciclo de tension [MPa]</text>
+  <text x="435" y="398" fill="#8a8a8a" font-size="12" text-anchor="middle">amplitude do ciclo de tensao [MPa]</text>
   <rect x="160.5" y="254" width="198.2" height="34" fill="#4fb8c8" fill-opacity="0.22" stroke="#4fb8c8" stroke-width="1"/>
-  <text x="40" y="276" fill="#4fb8c8" font-size="12">en carretera</text>
+  <text x="40" y="276" fill="#4fb8c8" font-size="12">na estrada</text>
   <text x="260" y="276" fill="#4fb8c8" font-size="12" text-anchor="middle">20 – 150</text>
   <rect x="395.4" y="302" width="344.6" height="34" fill="#e8ff00" fill-opacity="0.22" stroke="#e8ff00" stroke-width="1"/>
-  <text x="40" y="324" fill="#e8ff00" font-size="12">ensayado</text>
-  <text x="403" y="324" fill="#e8ff00" font-size="12">desde 174</text>
+  <text x="40" y="324" fill="#e8ff00" font-size="12">ensaiado</text>
+  <text x="403" y="324" fill="#e8ff00" font-size="12">a partir de 174</text>
   <rect x="130.0" y="302" width="265.4" height="34" fill="none" stroke="#ff6b35" stroke-width="1" stroke-dasharray="5 4"/>
   <text x="263" y="324" fill="#ff6b35" font-size="12" text-anchor="middle">extrapolado</text>
-  <text x="40" y="426" fill="#e0e0e0" font-size="12">La curva S-N publicada (log S = -0,30 log N + b) esta extrapolada justo en el tramo donde rueda una bicicleta.</text>
-  <text x="40" y="444" fill="#8a8a8a" font-size="11">Lo dice Gavin en el mismo parrafo, sin que nadie se lo pregunte.</text>
-  <text x="40" y="500" fill="#8a8a8a" font-size="11">Fuente: Gavin (1996) · DOI 10.1061/(ASCE)0733-9399(1996)122:8(736)</text>
+  <text x="40" y="426" fill="#e0e0e0" font-size="12">A curva S-N publicada (log S = -0,30 log N + b) esta extrapolada justo no trecho onde a bicicleta roda.</text>
+  <text x="40" y="444" fill="#8a8a8a" font-size="11">Quem diz isso e o proprio Gavin, no mesmo paragrafo, sem que ninguem pergunte.</text>
+  <text x="40" y="500" fill="#8a8a8a" font-size="11">Fonte: Gavin (1996) · DOI 10.1061/(ASCE)0733-9399(1996)122:8(736)</text>
   <text x="760" y="500" fill="#8a8a8a" font-size="11" text-anchor="end">bikelabstudio.com · CC BY 4.0</text>
 </svg>

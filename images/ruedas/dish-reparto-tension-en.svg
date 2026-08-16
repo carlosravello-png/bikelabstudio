@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="en"
+     aria-labelledby="dsh-t dsh-d" font-family="'IBM Plex Mono',ui-monospace,monospace">
+  <title id="dsh-t">Why an offset rim makes the 60 % rule reachable: tension split between wheel sides</title>
+  <desc id="dsh-d">Curve of the ratio between non-drive-side and drive-side spoke tension on a rear disc wheel, as a function of the offset in millimetres of the rim spoke bed towards the non-drive side. With a symmetric rim the ratio is 0.52, meaning the loose side works at 52 % of the tight side, below the 60 % DT Swiss requires; the curve crosses that threshold at 1.76 millimetres of offset and reaches 0.66 at three millimetres. The ratio depends only on the number of spokes per side, the flange spacing of the hub and the spoke lengths: it does not depend on how the wheel is built or how hard it is tensioned. Reference geometry representative of a rear disc wheel, not measured on a specific hub. Source: own derivation from the axial equilibrium of the rim, validated in dish_oracle.py (BikeLab Studio, 2026); 60 % threshold per DT Swiss. Diagram by Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) for BikeLab Studio, 2026. Licensed CC BY 4.0.</desc>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:title>Why an offset rim makes the 60 % rule reachable: tension split between wheel sides</dc:title>
+        <dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo</dc:title></cc:Agent></dc:creator>
+        <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
+        <dc:publisher><cc:Agent><dc:title>BikeLab Studio</dc:title></cc:Agent></dc:publisher>
+        <dc:source>Derivacion propia por equilibrio axial del aro, validada en dish_oracle.py (BikeLab Studio, 2026); umbral del 60 % segun DT Swiss, Wheels User Manual ASTM &amp; System Weight</dc:source>
+        <dc:date>2026</dc:date>
+        <dc:language>en</dc:language>
+        <dc:rights>CC BY 4.0 &#8212; atribucion a Carlos Eduardo Ravello Joo, https://www.bikelabstudio.com/</dc:rights>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <rect width="800" height="520" fill="#050505"/>
+  <text x="40" y="52" fill="#e0e0e0" font-size="19">The loose side is not a defect: it is geometry</text>
+  <text x="40" y="74" fill="#8a8a8a" font-size="12">Non-drive / drive tension ratio vs rim offset · derivation validated in dish_oracle.py</text>
+  <line x1="120.0" y1="380.0" x2="700.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="384.0" fill="#8a8a8a" font-size="11" text-anchor="end">45 %</text>
+  <line x1="120.0" y1="341.8" x2="700.0" y2="341.8" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="345.8" fill="#8a8a8a" font-size="11" text-anchor="end">50 %</text>
+  <line x1="120.0" y1="303.6" x2="700.0" y2="303.6" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="307.6" fill="#8a8a8a" font-size="11" text-anchor="end">55 %</text>
+  <line x1="120.0" y1="265.5" x2="700.0" y2="265.5" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="269.5" fill="#8a8a8a" font-size="11" text-anchor="end">60 %</text>
+  <line x1="120.0" y1="227.3" x2="700.0" y2="227.3" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="231.3" fill="#8a8a8a" font-size="11" text-anchor="end">65 %</text>
+  <line x1="120.0" y1="189.1" x2="700.0" y2="189.1" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="193.1" fill="#8a8a8a" font-size="11" text-anchor="end">70 %</text>
+  <line x1="120.0" y1="150.9" x2="700.0" y2="150.9" stroke="#222222" stroke-width="1"/>
+  <text x="110.0" y="154.9" fill="#8a8a8a" font-size="11" text-anchor="end">75 %</text>
+  <line x1="120.0" y1="128.0" x2="120.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="120.0" y="400.0" fill="#8a8a8a" font-size="11" text-anchor="middle">0</text>
+  <line x1="265.0" y1="128.0" x2="265.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="265.0" y="400.0" fill="#8a8a8a" font-size="11" text-anchor="middle">1</text>
+  <line x1="410.0" y1="128.0" x2="410.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="410.0" y="400.0" fill="#8a8a8a" font-size="11" text-anchor="middle">2</text>
+  <line x1="555.0" y1="128.0" x2="555.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="555.0" y="400.0" fill="#8a8a8a" font-size="11" text-anchor="middle">3</text>
+  <line x1="700.0" y1="128.0" x2="700.0" y2="380.0" stroke="#222222" stroke-width="1"/>
+  <text x="700.0" y="400.0" fill="#8a8a8a" font-size="11" text-anchor="middle">4</text>
+  <text x="410" y="422.0" fill="#8a8a8a" font-size="12" text-anchor="middle">rim spoke bed offset [mm]</text>
+  <text x="40" y="114.0" fill="#8a8a8a" font-size="12">loose side tension, as % of the tight side</text>
+  <line x1="120.0" y1="265.5" x2="700.0" y2="265.5" stroke="#e8ff00" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="696" y="257.5" fill="#e8ff00" font-size="12" text-anchor="end">60 % · DT Swiss minimum</text>
+  <polyline points="120.0,326.9 122.9,326.2 125.8,325.5 128.7,324.9 131.6,324.2 134.5,323.6 137.4,322.9 140.3,322.2 143.2,321.5 146.1,320.9 149.0,320.2 151.9,319.5 154.8,318.9 157.7,318.2 160.6,317.5 163.5,316.8 166.4,316.2 169.3,315.5 172.2,314.8 175.1,314.1 178.0,313.5 180.9,312.8 183.8,312.1 186.7,311.4 189.6,310.8 192.5,310.1 195.4,309.4 198.3,308.7 201.2,308.0 204.1,307.3 207.0,306.7 209.9,306.0 212.8,305.3 215.7,304.6 218.6,303.9 221.5,303.2 224.4,302.5 227.3,301.8 230.2,301.1 233.1,300.4 236.0,299.8 238.9,299.1 241.8,298.4 244.7,297.7 247.6,297.0 250.5,296.3 253.4,295.6 256.3,294.9 259.2,294.2 262.1,293.5 265.0,292.8 267.9,292.1 270.8,291.4 273.7,290.7 276.6,290.0 279.5,289.3 282.4,288.6 285.3,287.8 288.2,287.1 291.1,286.4 294.0,285.7 296.9,285.0 299.8,284.3 302.7,283.6 305.6,282.9 308.5,282.2 311.4,281.4 314.3,280.7 317.2,280.0 320.1,279.3 323.0,278.6 325.9,277.9 328.8,277.1 331.7,276.4 334.6,275.7 337.5,275.0 340.4,274.3 343.3,273.5 346.2,272.8 349.1,272.1 352.0,271.4 354.9,270.6 357.8,269.9 360.7,269.2 363.6,268.4 366.5,267.7 369.4,267.0 372.3,266.2 375.2,265.5 378.1,264.8 381.0,264.0 383.9,263.3 386.8,262.6 389.7,261.8 392.6,261.1 395.5,260.4 398.4,259.6 401.3,258.9 404.2,258.1 407.1,257.4 410.0,256.6 412.9,255.9 415.8,255.2 418.7,254.4 421.6,253.7 424.5,252.9 427.4,252.2 430.3,251.4 433.2,250.7 436.1,249.9 439.0,249.2 441.9,248.4 444.8,247.6 447.7,246.9 450.6,246.1 453.5,245.4 456.4,244.6 459.3,243.9 462.2,243.1 465.1,242.3 468.0,241.6 470.9,240.8 473.8,240.1 476.7,239.3 479.6,238.5 482.5,237.8 485.4,237.0 488.3,236.2 491.2,235.5 494.1,234.7 497.0,233.9 499.9,233.1 502.8,232.4 505.7,231.6 508.6,230.8 511.5,230.0 514.4,229.3 517.3,228.5 520.2,227.7 523.1,226.9 526.0,226.1 528.9,225.4 531.8,224.6 534.7,223.8 537.6,223.0 540.5,222.2 543.4,221.4 546.3,220.7 549.2,219.9 552.1,219.1 555.0,218.3 557.9,217.5 560.8,216.7 563.7,215.9 566.6,215.1 569.5,214.3 572.4,213.5 575.3,212.7 578.2,211.9 581.1,211.1 584.0,210.3 586.9,209.5 589.8,208.7 592.7,207.9 595.6,207.1 598.5,206.3 601.4,205.5 604.3,204.7 607.2,203.9 610.1,203.1 613.0,202.3 615.9,201.5 618.8,200.6 621.7,199.8 624.6,199.0 627.5,198.2 630.4,197.4 633.3,196.6 636.2,195.7 639.1,194.9 642.0,194.1 644.9,193.3 647.8,192.5 650.7,191.6 653.6,190.8 656.5,190.0 659.4,189.2 662.3,188.3 665.2,187.5 668.1,186.7 671.0,185.8 673.9,185.0 676.8,184.2 679.7,183.3 682.6,182.5 685.5,181.7 688.4,180.8 691.3,180.0 694.2,179.2 697.1,178.3 700.0,177.5" fill="none" stroke="#4fb8c8" stroke-width="3"/>
+  <rect x="120.0" y="128.0" width="255.4" height="252.0" fill="#ff6b35" fill-opacity="0.07"/>
+  <line x1="375.4" y1="128.0" x2="375.4" y2="380.0" stroke="#ff6b35" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="367.4" y="144" fill="#ff6b35" font-size="11" text-anchor="end">below spec</text>
+  <text x="383.4" y="144" fill="#8a8a8a" font-size="11">crosses 60 % at 1.76 mm</text>
+  <circle cx="120.0" cy="326.9" r="4.5" fill="#4fb8c8"/>
+  <text x="126.0" y="314.9" fill="#e0e0e0" font-size="12" text-anchor="start">0.52</text>
+  <circle cx="265.0" cy="292.8" r="4.5" fill="#4fb8c8"/>
+  <text x="265.0" y="280.8" fill="#e0e0e0" font-size="12" text-anchor="middle">0.56</text>
+  <circle cx="410.0" cy="256.6" r="4.5" fill="#4fb8c8"/>
+  <text x="410.0" y="244.6" fill="#e0e0e0" font-size="12" text-anchor="middle">0.61</text>
+  <circle cx="555.0" cy="218.3" r="4.5" fill="#4fb8c8"/>
+  <text x="555.0" y="206.3" fill="#e0e0e0" font-size="12" text-anchor="middle">0.66</text>
+  <circle cx="700.0" cy="177.5" r="4.5" fill="#4fb8c8"/>
+  <text x="694.0" y="165.5" fill="#e0e0e0" font-size="12" text-anchor="end">0.72</text>
+  <text x="40" y="452" fill="#e0e0e0" font-size="12">Three millimetres of rim offset raise the ratio from 0.52 to 0.66 without touching the hub.</text>
+  <text x="40" y="470" fill="#8a8a8a" font-size="11">Reference geometry representative of a rear disc wheel: not a measured wheel.</text>
+  <text x="40" y="484" fill="#8a8a8a" font-size="11">Axial force balance does not rule out an overturning moment; that requires angularly symmetric lacing.</text>
+  <text x="40" y="500" fill="#8a8a8a" font-size="11">Own derivation validated in dish_oracle.py · threshold: DT Swiss</text>
+  <text x="760" y="500" fill="#8a8a8a" font-size="11" text-anchor="end">bikelabstudio.com · CC BY 4.0</text>
+</svg>

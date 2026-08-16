@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="es"
+     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="en"
      aria-labelledby="ten-t ten-d" font-family="'IBM Plex Mono',ui-monospace,monospace">
-  <title id="ten-t">Ventana de tension de radios admisible segun DT Swiss, por tipo de freno y de uso</title>
-  <desc id="ten-d">Grafico de barras con los seis rangos de tension admisible del lado mas tensado de la rueda, en newton: disco delantera 950 a 1200, disco trasera 1050 a 1300, freno de llanta delantera 900 a 1100, freno de llanta trasera 1050 a 1300, hibrida delantera 1050 a 1300 e hibrida trasera 1150 a 1400. La banda solida interior marca la media recomendada por el fabricante. Fuente: DT Swiss, manual tecnico Spline WXD10000000861S version 2024.06, tabla 6.1. Diagrama de Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) para BikeLab Studio, 2026. Licencia CC BY 4.0.</desc>
+  <title id="ten-t">Allowable spoke tension window per DT Swiss, by brake type and use</title>
+  <desc id="ten-d">Bar chart of the six allowable tension ranges for the tightest side of the wheel, in newtons: disc front 950 to 1200, disc rear 1050 to 1300, rim brake front 900 to 1100, rim brake rear 1050 to 1300, hybrid front 1050 to 1300 and hybrid rear 1150 to 1400. The solid inner band is the average recommended by the manufacturer. Source: DT Swiss, Spline technical manual WXD10000000861S version 2024.06, table 6.1. Diagram by Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) for BikeLab Studio, 2026. Licensed CC BY 4.0.</desc>
   <metadata>
     <rdf:RDF>
       <cc:Work rdf:about="">
-        <dc:title>Ventana de tension de radios admisible segun DT Swiss, por tipo de freno y de uso</dc:title>
+        <dc:title>Allowable spoke tension window per DT Swiss, by brake type and use</dc:title>
         <dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo</dc:title></cc:Agent></dc:creator>
         <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
         <dc:publisher><cc:Agent><dc:title>BikeLab Studio</dc:title></cc:Agent></dc:publisher>
         <dc:source>DT Swiss, Wheels Technical Manual Spline WXD10000000861S V2024.06, tabla 6.1</dc:source>
         <dc:date>2026</dc:date>
-        <dc:language>es</dc:language>
+        <dc:language>en</dc:language>
         <dc:rights>CC BY 4.0 &#8212; atribucion a Carlos Eduardo Ravello Joo, https://www.bikelabstudio.com/</dc:rights>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
       </cc:Work>
@@ -27,8 +27,8 @@
     </rdf:RDF>
   </metadata>
   <rect width="800" height="520" fill="#050505"/>
-  <text x="40" y="52" fill="#e0e0e0" font-size="19">Tension admisible del lado mas tensado</text>
-  <text x="40" y="74" fill="#8a8a8a" font-size="12">DT Swiss · manual tecnico Spline WXD10000000861S V2024.06 · tabla 6.1</text>
+  <text x="40" y="52" fill="#e0e0e0" font-size="19">Allowable tension, tightest side of the wheel</text>
+  <text x="40" y="74" fill="#8a8a8a" font-size="12">DT Swiss · Spline technical manual WXD10000000861S V2024.06 · table 6.1</text>
   <line x1="250.0" y1="105" x2="250.0" y2="400" stroke="#222222" stroke-width="1"/>
   <text x="250.0" y="418" fill="#8a8a8a" font-size="11" text-anchor="middle">800</text>
   <line x1="325.4" y1="105" x2="325.4" y2="400" stroke="#222222" stroke-width="1"/>
@@ -44,38 +44,38 @@
   <line x1="702.3" y1="105" x2="702.3" y2="400" stroke="#222222" stroke-width="1"/>
   <text x="702.3" y="418" fill="#8a8a8a" font-size="11" text-anchor="middle">1400</text>
   <text x="495" y="437" fill="#8a8a8a" font-size="12" text-anchor="middle">tension [N]</text>
-  <text x="40" y="137" fill="#e0e0e0" font-size="13">Disco · delantera</text>
+  <text x="40" y="137" fill="#e0e0e0" font-size="13">Disc · front</text>
   <rect x="363.1" y="122" width="188.5" height="22" fill="#4fb8c8" fill-opacity="0.16" stroke="#4fb8c8" stroke-width="1"/>
   <rect x="400.8" y="128" width="113.1" height="10" fill="#4fb8c8" fill-opacity="0.55"/>
   <text x="357.1" y="138" fill="#8a8a8a" font-size="11" text-anchor="end">950</text>
   <text x="557.5" y="138" fill="#4fb8c8" font-size="11">1200</text>
-  <text x="40" y="187" fill="#e0e0e0" font-size="13">Disco · trasera</text>
+  <text x="40" y="187" fill="#e0e0e0" font-size="13">Disc · rear</text>
   <rect x="438.5" y="172" width="188.5" height="22" fill="#4fb8c8" fill-opacity="0.16" stroke="#4fb8c8" stroke-width="1"/>
   <rect x="476.2" y="178" width="113.1" height="10" fill="#4fb8c8" fill-opacity="0.55"/>
   <text x="432.5" y="188" fill="#8a8a8a" font-size="11" text-anchor="end">1050</text>
   <text x="632.9" y="188" fill="#4fb8c8" font-size="11">1300</text>
-  <text x="40" y="237" fill="#e0e0e0" font-size="13">Llanta · delantera</text>
+  <text x="40" y="237" fill="#e0e0e0" font-size="13">Rim brake · front</text>
   <rect x="325.4" y="222" width="150.8" height="22" fill="#4fb8c8" fill-opacity="0.16" stroke="#4fb8c8" stroke-width="1"/>
   <rect x="363.1" y="228" width="75.4" height="10" fill="#4fb8c8" fill-opacity="0.55"/>
   <text x="319.4" y="238" fill="#8a8a8a" font-size="11" text-anchor="end">900</text>
   <text x="482.2" y="238" fill="#4fb8c8" font-size="11">1100</text>
-  <text x="40" y="287" fill="#e0e0e0" font-size="13">Llanta · trasera</text>
+  <text x="40" y="287" fill="#e0e0e0" font-size="13">Rim brake · rear</text>
   <rect x="438.5" y="272" width="188.5" height="22" fill="#4fb8c8" fill-opacity="0.16" stroke="#4fb8c8" stroke-width="1"/>
   <rect x="476.2" y="278" width="113.1" height="10" fill="#4fb8c8" fill-opacity="0.55"/>
   <text x="432.5" y="288" fill="#8a8a8a" font-size="11" text-anchor="end">1050</text>
   <text x="632.9" y="288" fill="#4fb8c8" font-size="11">1300</text>
-  <text x="40" y="337" fill="#e0e0e0" font-size="13">Hybrid · delantera</text>
+  <text x="40" y="337" fill="#e0e0e0" font-size="13">Hybrid · front</text>
   <rect x="438.5" y="322" width="188.5" height="22" fill="#e8ff00" fill-opacity="0.16" stroke="#e8ff00" stroke-width="1"/>
   <rect x="476.2" y="328" width="113.1" height="10" fill="#e8ff00" fill-opacity="0.55"/>
   <text x="432.5" y="338" fill="#8a8a8a" font-size="11" text-anchor="end">1050</text>
   <text x="632.9" y="338" fill="#e8ff00" font-size="11">1300</text>
-  <text x="40" y="387" fill="#e0e0e0" font-size="13">Hybrid · trasera</text>
+  <text x="40" y="387" fill="#e0e0e0" font-size="13">Hybrid · rear</text>
   <rect x="513.8" y="372" width="188.5" height="22" fill="#e8ff00" fill-opacity="0.16" stroke="#e8ff00" stroke-width="1"/>
   <rect x="551.5" y="378" width="113.1" height="10" fill="#e8ff00" fill-opacity="0.55"/>
   <text x="507.8" y="388" fill="#8a8a8a" font-size="11" text-anchor="end">1150</text>
   <text x="708.3" y="388" fill="#e8ff00" font-size="11">1400</text>
-  <text x="40" y="458" fill="#ff6b35" font-size="12">La fila Hybrid (e-bike) esta en el manual Spline. No aparece en el de Dicut.</text>
-  <text x="40" y="476" fill="#8a8a8a" font-size="11">Banda clara: maximo y minimo admisibles. Banda solida: media recomendada por el fabricante.</text>
-  <text x="40" y="500" fill="#8a8a8a" font-size="11">Fuente: DT Swiss, tabla 6.1 (Spline y Dicut, V2024.06)</text>
+  <text x="40" y="458" fill="#ff6b35" font-size="12">The Hybrid (e-bike) row is in the Spline manual. It is not in the Dicut one.</text>
+  <text x="40" y="476" fill="#8a8a8a" font-size="11">Light band: allowable maximum and minimum. Solid band: manufacturer's recommended average.</text>
+  <text x="40" y="500" fill="#8a8a8a" font-size="11">Source: DT Swiss, table 6.1 (Spline and Dicut, V2024.06)</text>
   <text x="760" y="500" fill="#8a8a8a" font-size="11" text-anchor="end">bikelabstudio.com · CC BY 4.0</text>
 </svg>

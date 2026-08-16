@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="es"
+     viewBox="0 0 800 520" width="800" height="520" role="img" xml:lang="en"
      aria-labelledby="frd-t frd-d" font-family="'IBM Plex Mono',ui-monospace,monospace">
-  <title id="frd-t">Por que subir la tension de radios reduce la rigidez lateral de la rueda</title>
-  <desc id="frd-d">Anatomia de la ecuacion 2.71c de Ford (2018). La rigidez de cada modo lateral de la rueda suma dos contribuciones positivas, la de los radios y la del aro por flexion y torsion, y resta una tercera, menos pi por ene al cuadrado por la tension media. A tension baja las dos se compensan casi exactamente, y por eso medir en ese rango no detecta ningun cambio. A tension suficientemente alta domina el termino negativo y la rigidez lateral cae. Existe una tension critica a la que la rigidez lateral se anula y la rueda pandea fuera de su plano. Curva esquematica: la escala depende de la rigidez a flexion y a torsion del aro, que los fabricantes no publican. Fuente: Ford 2018. Diagrama de Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) para BikeLab Studio, 2026. Licencia CC BY 4.0.</desc>
+  <title id="frd-t">Why raising spoke tension reduces the lateral stiffness of the wheel</title>
+  <desc id="frd-d">Anatomy of equation 2.71c in Ford (2018). The stiffness of each lateral mode of the wheel adds two positive contributions, from the spokes and from the rim in bending and torsion, and subtracts a third, minus pi times n squared times the mean tension. At low tension the two nearly cancel, which is why measuring in that range detects no change. At high enough tension the negative term dominates and lateral stiffness falls. There is a critical tension at which lateral stiffness vanishes and the wheel buckles out of plane. Schematic curve: the scale depends on the bending and torsional stiffness of the rim, which manufacturers do not publish. Source: Ford 2018. Diagram by Carlos Eduardo Ravello Joo (ORCID 0009-0007-5631-7436) for BikeLab Studio, 2026. Licensed CC BY 4.0.</desc>
   <metadata>
     <rdf:RDF>
       <cc:Work rdf:about="">
-        <dc:title>Por que subir la tension de radios reduce la rigidez lateral de la rueda</dc:title>
+        <dc:title>Why raising spoke tension reduces the lateral stiffness of the wheel</dc:title>
         <dc:creator><cc:Agent><dc:title>Carlos Eduardo Ravello Joo</dc:title></cc:Agent></dc:creator>
         <dc:identifier>https://orcid.org/0009-0007-5631-7436</dc:identifier>
         <dc:publisher><cc:Agent><dc:title>BikeLab Studio</dc:title></cc:Agent></dc:publisher>
         <dc:source>Ford, M. P. (2018), Reinventing the Wheel, tesis doctoral, Northwestern University, DOI 10.21985/n2-3sh0-m798, ecuaciones 2.70 y 2.71</dc:source>
         <dc:date>2026</dc:date>
-        <dc:language>es</dc:language>
+        <dc:language>en</dc:language>
         <dc:rights>CC BY 4.0 &#8212; atribucion a Carlos Eduardo Ravello Joo, https://www.bikelabstudio.com/</dc:rights>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
       </cc:Work>
@@ -27,27 +27,27 @@
     </rdf:RDF>
   </metadata>
   <rect width="800" height="520" fill="#050505"/>
-  <text x="40" y="52" fill="#e0e0e0" font-size="19">Los dos efectos que se oponen</text>
-  <text x="40" y="74" fill="#8a8a8a" font-size="12">Ford 2018 · tesis doctoral, Northwestern · ecuacion 2.71c</text>
+  <text x="40" y="52" fill="#e0e0e0" font-size="19">The two effects that oppose each other</text>
+  <text x="40" y="74" fill="#8a8a8a" font-size="12">Ford 2018 · doctoral thesis, Northwestern · equation 2.71c</text>
   <text x="40" y="136" font-size="22" fill="#e0e0e0"><tspan>K</tspan><tspan font-size="14" dy="6">n</tspan><tspan dy="-6"> = </tspan><tspan fill="#4fb8c8" text-decoration="overline">&#960;R k</tspan><tspan fill="#4fb8c8" font-size="14" dy="6">uu</tspan><tspan dy="-6"> + </tspan><tspan fill="#4fb8c8">K</tspan><tspan fill="#4fb8c8" font-size="14" dy="6">b</tspan><tspan dy="-6" fill="#4fb8c8">K</tspan><tspan fill="#4fb8c8" font-size="14" dy="6">t</tspan><tspan dy="-6" fill="#4fb8c8"> / (K</tspan><tspan fill="#4fb8c8" font-size="14" dy="6">b</tspan><tspan dy="-6" fill="#4fb8c8"> + K</tspan><tspan fill="#4fb8c8" font-size="14" dy="6">t</tspan><tspan dy="-6" fill="#4fb8c8">)</tspan><tspan fill="#ff6b35">  &#8722; &#960;n</tspan><tspan fill="#ff6b35" font-size="14" dy="-9">2</tspan><tspan dy="9" fill="#ff6b35" text-decoration="overline"> T</tspan></text>
-  <text x="40" y="170" fill="#4fb8c8" font-size="12">suman: los radios, y el aro por flexion y torsion</text>
-  <text x="430" y="170" fill="#ff6b35" font-size="12">resta: la tension</text>
+  <text x="40" y="170" fill="#4fb8c8" font-size="12">add: the spokes, and the rim in bending and torsion</text>
+  <text x="430" y="170" fill="#ff6b35" font-size="12">subtracts: the tension</text>
   <line x1="120.0" y1="400.0" x2="710.0" y2="400.0" stroke="#8a8a8a" stroke-width="1"/>
   <line x1="120.0" y1="214.0" x2="120.0" y2="400.0" stroke="#8a8a8a" stroke-width="1"/>
-  <text x="136.0" y="420.0" fill="#8a8a8a" font-size="12">tension del radio &#8594;</text>
-  <text x="110.0" y="226.0" fill="#8a8a8a" font-size="12" text-anchor="end">rigidez</text>
-  <text x="110.0" y="242.0" fill="#8a8a8a" font-size="12" text-anchor="end">lateral</text>
+  <text x="136.0" y="420.0" fill="#8a8a8a" font-size="12">spoke tension &#8594;</text>
+  <text x="110.0" y="226.0" fill="#8a8a8a" font-size="12" text-anchor="end">lateral</text>
+  <text x="110.0" y="242.0" fill="#8a8a8a" font-size="12" text-anchor="end">stiffness</text>
   <polyline points="120.0,243.6 123.6,243.4 127.2,243.3 130.9,243.1 134.5,243.0 138.1,242.8 141.8,242.7 145.4,242.5 149.0,242.4 152.6,242.2 156.2,242.1 159.9,241.9 163.5,241.8 167.1,241.6 170.8,241.5 174.4,241.3 178.0,241.2 181.6,241.1 185.2,241.0 188.9,240.8 192.5,240.7 196.1,240.6 199.8,240.5 203.4,240.4 207.0,240.3 210.6,240.2 214.2,240.1 217.9,240.0 221.5,239.9 225.1,239.8 228.8,239.8 232.4,239.7 236.0,239.6 239.6,239.6 243.2,239.6 246.9,239.5 250.5,239.5 254.1,239.5 257.8,239.5 261.4,239.5 265.0,239.5 268.6,239.5 272.2,239.5 275.9,239.6 279.5,239.6 283.1,239.7 286.8,239.8 290.4,239.8 294.0,239.9 297.6,240.0 301.2,240.2 304.9,240.3 308.5,240.4 312.1,240.6 315.8,240.8 319.4,241.0 323.0,241.1 326.6,241.4 330.2,241.6 333.9,241.8 337.5,242.1 341.1,242.3 344.8,242.6 348.4,242.9 352.0,243.3 355.6,243.6 359.2,243.9 362.9,244.3 366.5,244.7 370.1,245.1 373.8,245.5 377.4,246.0 381.0,246.4 384.6,246.9 388.2,247.4 391.9,247.9 395.5,248.5 399.1,249.0 402.8,249.6 406.4,250.2 410.0,250.8 413.6,251.5 417.2,252.1 420.9,252.8 424.5,253.5 428.1,254.3 431.8,255.0 435.4,255.8 439.0,256.6 442.6,257.4 446.2,258.3 449.9,259.2 453.5,260.1 457.1,261.0 460.8,262.0 464.4,263.0 468.0,264.0 471.6,265.0 475.2,266.1 478.9,267.2 482.5,268.3 486.1,269.4 489.8,270.6 493.4,271.8 497.0,273.0 500.6,274.3 504.2,275.6 507.9,276.9 511.5,278.3 515.1,279.7 518.8,281.1 522.4,282.5 526.0,284.0 529.6,285.5 533.2,287.1 536.9,288.7 540.5,290.3 544.1,291.9 547.8,293.6 551.4,295.3 555.0,297.1 558.6,298.9 562.2,300.7 565.9,302.6 569.5,304.5 573.1,306.4 576.8,308.4 580.4,310.4 584.0,312.4 587.6,314.5 591.2,316.6 594.9,318.8 598.5,321.0 602.1,323.2 605.8,325.5 609.4,327.8 613.0,330.2 616.6,332.6 620.2,335.0 623.9,337.5 627.5,340.0 631.1,342.6 634.8,345.2 638.4,347.9 642.0,350.6 645.6,353.3 649.2,356.1 652.9,358.9 656.5,361.8 660.1,364.7 663.8,367.7 667.4,370.7 671.0,373.8 674.6,376.9 678.2,380.1 681.9,383.3 685.5,386.5 689.1,389.8 692.8,393.2 696.4,396.6 700.0,400.0" fill="none" stroke="#4fb8c8" stroke-width="3"/>
   <circle cx="700" cy="400" r="5" fill="#ff6b35"/>
   <line x1="294" y1="214.0" x2="294" y2="400.0" stroke="#222222" stroke-width="1" stroke-dasharray="4 4"/>
   <line x1="538" y1="214.0" x2="538" y2="400.0" stroke="#222222" stroke-width="1" stroke-dasharray="4 4"/>
-  <text x="207" y="206.0" fill="#8a8a8a" font-size="11" text-anchor="middle">se compensan</text>
-  <text x="416" y="206.0" fill="#8a8a8a" font-size="11" text-anchor="middle">empieza a mandar el negativo</text>
-  <text x="619" y="206.0" fill="#ff6b35" font-size="11" text-anchor="middle">pandeo</text>
-  <text x="700" y="422.0" fill="#ff6b35" font-size="11" text-anchor="end">tension critica</text>
-  <text x="40" y="452" fill="#e0e0e0" font-size="12">Los modos se combinan en serie, 1/K = Σ 1/Kₙ, asi que el primero que se anula arrastra a toda la rueda.</text>
-  <text x="40" y="470" fill="#ff6b35" font-size="11">Curva esquematica. Exactos: los signos y que el termino que resta crece con n².</text>
-  <text x="40" y="484" fill="#8a8a8a" font-size="11">La escala depende de la rigidez a flexion (EI) y a torsion (GJ) del aro, que nadie publica.</text>
-  <text x="40" y="500" fill="#8a8a8a" font-size="11">Fuente: Ford (2018) · DOI 10.21985/n2-3sh0-m798 · ec. 2.71c</text>
+  <text x="207" y="206.0" fill="#8a8a8a" font-size="11" text-anchor="middle">they cancel</text>
+  <text x="416" y="206.0" fill="#8a8a8a" font-size="11" text-anchor="middle">the negative term takes over</text>
+  <text x="619" y="206.0" fill="#ff6b35" font-size="11" text-anchor="middle">buckling</text>
+  <text x="700" y="422.0" fill="#ff6b35" font-size="11" text-anchor="end">critical tension</text>
+  <text x="40" y="452" fill="#e0e0e0" font-size="12">The modes combine in series, 1/K = Σ 1/Kₙ, so the first one to vanish takes the whole wheel with it.</text>
+  <text x="40" y="470" fill="#ff6b35" font-size="11">Schematic curve. Exact: the signs, and that the subtracted term grows with n².</text>
+  <text x="40" y="484" fill="#8a8a8a" font-size="11">The scale depends on the bending (EI) and torsional (GJ) stiffness of the rim, unpublished.</text>
+  <text x="40" y="500" fill="#8a8a8a" font-size="11">Source: Ford (2018) · DOI 10.21985/n2-3sh0-m798 · eq. 2.71c</text>
   <text x="760" y="500" fill="#8a8a8a" font-size="11" text-anchor="end">bikelabstudio.com · CC BY 4.0</text>
 </svg>
