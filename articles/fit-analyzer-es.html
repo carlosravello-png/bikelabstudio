@@ -323,7 +323,7 @@
           "name": "¿Qué es el Variability Index en ciclismo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El Variability Index (VI) es el cociente entre Potencia Normalizada (NP) y Potencia Media (AP). Un VI menor a 1.05 indica ritmo muy estable."
+            "text": "El Variability Index (VI) es el cociente entre la potencia normalizada (NP) y la potencia media (AP), ambas calculadas segundo a segundo e incluyendo los ratos sin pedalear. En esta herramienta, en una bici de ruta rígida con 2x, un VI menor a 1.030 se clasifica como muy estable y menor a 1.080 como estable; en gravel, MTB, con suspensión o con 1x los umbrales suben hasta +0.055. Son umbrales de referencia de BikeLab, no un estándar publicado."
           }
         },
         {
@@ -519,7 +519,7 @@ footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--amber);text-ali
           <input class="field-input" type="text" id="inp-name" autocomplete="name">
         </div>
         <div class="field-wrap">
-          <label class="field-label" for="inp-email">Correo electrónico *</label>
+          <label class="field-label" for="inp-email">Correo electrónico (opcional)</label>
           <input class="field-input" type="email" id="inp-email" autocomplete="email">
         </div>
       </div>
@@ -575,10 +575,7 @@ footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--amber);text-ali
         <label class="field-label" for="inp-bike">Modelo de bicicleta (opcional)</label>
         <input class="field-input" type="text" id="inp-bike" autocomplete="off">
       </div>
-      <label class="consent-wrap" for="inp-consent">
-        <input type="checkbox" id="inp-consent">
-        <span class="consent-text">Acepto que BikeLab Studio almacene mis datos para mejorar el servicio. Tu archivo FIT nunca sale de tu dispositivo — procesamiento 100% local.</span>
-      </label>
+      <p class="consent-text">Tu archivo FIT y tus datos no salen de tu dispositivo: todo se procesa en tu navegador. El nombre solo aparece en tu reporte.</p>
       <div class="error-msg" id="err1"></div>
       <button type="button" class="btn btn-primary" id="btn-continue">Continuar →</button>
     </div>
@@ -658,7 +655,7 @@ footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--amber);text-ali
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
 <h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué es el Variability Index en ciclismo?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">El Variability Index (VI) es el cociente entre Potencia Normalizada (NP) y Potencia Media (AP). Un VI menor a 1.05 indica ritmo muy estable.</p>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">El Variability Index (VI) es el cociente entre la potencia normalizada (NP) y la potencia media (AP), ambas calculadas segundo a segundo e incluyendo los ratos sin pedalear. En esta herramienta, en una bici de ruta rígida con 2x, un VI menor a 1.030 se clasifica como muy estable y menor a 1.080 como estable; en gravel, MTB, con suspensión o con 1x los umbrales suben hasta +0.055. Son umbrales de referencia de BikeLab, no un estándar publicado.</p>
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
 <h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué es el índice de estabilidad en subida (IES)?</h3>
@@ -713,14 +710,12 @@ document.getElementById('btn-continue').addEventListener('click',function(){
   var sus=document.getElementById('sel-sus').value;
   var tx=document.getElementById('sel-tx').value;
   var wheel=document.getElementById('sel-wheel').value;
-  var consent=document.getElementById('inp-consent').checked;
   if(!name){showErr('err1','Nombre obligatorio.');return;}
-  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showErr('err1','Correo electrónico obligatorio.');return;}
+  if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showErr('err1','Correo electrónico no válido.');return;}
   if(!disc){showErr('err1','Selecciona disciplina.');return;}
   if(!sus){showErr('err1','Selecciona tipo de suspensión.');return;}
   if(!tx){showErr('err1','Selecciona transmisión.');return;}
   if(!wheel){showErr('err1','Selecciona diámetro de rueda.');return;}
-  if(!consent){showErr('err1','Debes aceptar el consentimiento.');return;}
   fd={name:name,email:email,age:(document.getElementById('inp-age').value||'').trim(),country:(document.getElementById('inp-country').value||'').trim(),discipline:disc,suspension:sus,transmission:tx,wheel:wheel,bikeModel:(document.getElementById('inp-bike').value||'').trim()};
   showStep(2); window.scrollTo({top:0,behavior:'smooth'});
 });
@@ -754,10 +749,9 @@ function startAnalysis(file){
     try{
       var records=parseFIT(reader.result);
       var config={discipline:fd.discipline,suspension:fd.suspension,transmission:fd.transmission,wheel:fd.wheel};
-      analysisResult=computeAll(records,config);
-      analysisResult.config=config; analysisResult.formData=fd;
-      setTimeout(function(){showStep(4);renderResults(analysisResult);window.scrollTo({top:0,behavior:'smooth'});},400);
-    }catch(e){
+      computeAllAsync(records,config,function(p){document.getElementById('prog-txt').textContent=PROGRESS[2]+' '+Math.round(p*100)+'%';},function(res){analysisResult=res;analysisResult.config=config;analysisResult.formData=fd;setTimeout(function(){showStep(4);renderResults(analysisResult);window.scrollTo({top:0,behavior:'smooth'});},400);},onErr);
+    }catch(e){onErr(e);}
+    function onErr(e){
       document.getElementById('prog-txt').textContent='Error de análisis: '+(e.message||'');
       setTimeout(function(){showStep(2);},2500);
     }
@@ -768,73 +762,91 @@ function startAnalysis(file){
 
 function parseFIT(buf){
   // FIT reader 1.1.0 — validado contra @garmin/fitsdk 21.222.0
-  var dv=new DataView(buf);
-  if(dv.byteLength<12)throw new Error('Invalid FIT file');
-  var hs=dv.getUint8(0);
-  if(hs!==12&&hs!==14)throw new Error('Invalid FIT header: '+hs);
-  if(dv.getUint32(8,true)!==0x5449462E)throw new Error('Invalid FIT signature');
-  var ds=dv.getUint32(4,true),offset=hs,end=Math.min(hs+ds,dv.byteLength);
-  var EPOCH=631065600,defs={},lastTs=null,records=[];
-  function rd(f,o,le){
-    var b=f.bt&0x1F,v;
-    if(f.s===1){v=(b===1)?dv.getInt8(o):dv.getUint8(o);if(b===1?v===0x7F:(b===10?v===0:v===0xFF))return null;return v;}
-    if(f.s===2){if(b===3){v=dv.getInt16(o,le);return v===0x7FFF?null:v;}v=dv.getUint16(o,le);if(b===11?v===0:v===0xFFFF)return null;return v;}
-    if(f.s===4){if(b===5){v=dv.getInt32(o,le);return v===0x7FFFFFFF?null:v;}if(b===8)return null;v=dv.getUint32(o,le);if(b===12?v===0:v===0xFFFFFFFF)return null;return v;}
-    return null;
-  }
-  function readMsg(def,ts){
-    var r=def.gn===20?{}:null,o=offset;
-    for(var i=0;i<def.fields.length;i++){
-      var f=def.fields[i];
-      if(o+f.s>end)return false;
-      var v=rd(f,o,def.le);o+=f.s;
-      if(v===null)continue;
-      if(f.n===253&&f.s===4){lastTs=v;if(r)r.timestamp=v+EPOCH;}
-      else if(r)aF(r,f.n,v);
+  var dv=new DataView(buf),N=dv.byteLength;
+  if(N<12)throw new Error('Invalid FIT file');
+  var EPOCH=631065600,records=[],timer=[],base=0,first=true;
+  while(base+12<=N){
+    var hs=dv.getUint8(base);
+    if((hs!==12&&hs!==14)||base+hs>N||dv.getUint32(base+8,true)!==0x5449462E){
+      if(first)throw new Error(hs!==12&&hs!==14?'Invalid FIT header: '+hs:'Invalid FIT signature');
+      break;
     }
-    if(o+def.dsz>end)return false;
-    offset=o+def.dsz;
-    if(r){
-      if(r.timestamp==null&&ts!=null)r.timestamp=ts+EPOCH;
-      delete r._ea;delete r._es;
-      if(r.timestamp!=null)records.push(r);
-    }
-    return true;
-  }
-  while(offset<end){
-    var hb=dv.getUint8(offset++);
-    if(hb&0x80){
-      var ln=(hb>>5)&0x03,to=hb&0x1F,ts=null;
-      if(lastTs!=null){ts=(lastTs&0xFFFFFFE0)+to;if(to<(lastTs&0x1F))ts+=0x20;lastTs=ts;}
-      var def=defs[ln];
-      if(!def)throw new Error('FIT: data before definition');
-      if(!readMsg(def,ts))break;
-      continue;
-    }
-    var local=hb&0x0F;
-    if(hb&0x40){
-      if(offset+5>end)break;
-      var le=dv.getUint8(offset+1)===0;
-      var gn=dv.getUint16(offset+2,le),nf=dv.getUint8(offset+4);offset+=5;
-      if(offset+nf*3>end)break;
-      var fields=[];
-      for(var i=0;i<nf;i++){fields.push({n:dv.getUint8(offset),s:dv.getUint8(offset+1),bt:dv.getUint8(offset+2)});offset+=3;}
-      var dsz=0;
-      if(hb&0x20){
-        if(offset+1>end)break;
-        var nd=dv.getUint8(offset++);
-        if(offset+nd*3>end)break;
-        for(var k=0;k<nd;k++){dsz+=dv.getUint8(offset+1);offset+=3;}
+    var ds=dv.getUint32(base+4,true),offset=base+hs,end=Math.min(base+hs+ds,N);
+    var defs={},lastTs=null,csRaw=null,csAcc=0,stop=false;
+    first=false;
+    var rd=function(f,o,le){
+      var b=f.bt&0x1F,v;
+      if(f.s===1){v=(b===1)?dv.getInt8(o):dv.getUint8(o);if(b===1?v===0x7F:(b===10?v===0:v===0xFF))return null;return v;}
+      if(f.s===2){if(b===3){v=dv.getInt16(o,le);return v===0x7FFF?null:v;}v=dv.getUint16(o,le);if(b===11?v===0:v===0xFFFF)return null;return v;}
+      if(f.s===4){if(b===5){v=dv.getInt32(o,le);return v===0x7FFFFFFF?null:v;}if(b===8)return null;v=dv.getUint32(o,le);if(b===12?v===0:v===0xFFFFFFFF)return null;return v;}
+      return null;
+    };
+    var readMsg=function(def,ts){
+      var r=def.gn===20?{}:null,ev=def.gn===21?{}:null,o=offset,cs=null;
+      for(var i=0;i<def.fields.length;i++){
+        var f=def.fields[i];
+        if(o+f.s>end)return false;
+        if(r&&f.n===8&&f.s===3){var c=dv.getUint8(o)|(dv.getUint8(o+1)<<8)|(dv.getUint8(o+2)<<16);o+=3;if(c!==0xFFFFFF)cs=c;continue;}
+        var v=rd(f,o,def.le);o+=f.s;
+        if(v===null)continue;
+        if(f.n===253&&f.s===4){lastTs=v;if(r)r.timestamp=v+EPOCH;if(ev)ev.t=v+EPOCH;}
+        else if(r)aF(r,f.n,v);
+        else if(ev&&f.n<=1&&f.s===1)ev[f.n===0?'e':'k']=v;
       }
-      defs[local]={gn:gn,fields:fields,le:le,dsz:dsz};
-    }else{
-      var def2=defs[local];
-      if(!def2)throw new Error('FIT: data before definition');
-      if(!readMsg(def2,null))break;
+      if(ev&&ev.e===0&&ev.k!=null){if(ev.t==null&&ts!=null)ev.t=ts+EPOCH;if(ev.t!=null)timer.push({t:ev.t,k:ev.k});}
+      if(o+def.dsz>end)return false;
+      offset=o+def.dsz;
+      if(r){
+        if(cs!==null){
+          var raw=(cs>>12)&0xFFF;
+          if(csRaw===null)csAcc=raw;else csAcc+=(raw-csRaw)&0xFFF;
+          csRaw=raw;
+          if(r.speed==null)r.speed=(cs&0xFFF)/100;
+          if(r.distance==null)r.distance=csAcc/16;
+        }
+        if(r.timestamp==null&&ts!=null)r.timestamp=ts+EPOCH;
+        delete r._ea;delete r._es;
+        if(r.timestamp!=null)records.push(r);
+      }
+      return true;
+    };
+    while(offset<end){
+      var hb=dv.getUint8(offset++);
+      if(hb&0x80){
+        var ln=(hb>>5)&0x03,to=hb&0x1F,ts=null;
+        if(lastTs!=null){ts=(lastTs&0xFFFFFFE0)+to;if(to<(lastTs&0x1F))ts+=0x20;lastTs=ts;}
+        var def=defs[ln];
+        if(!def||!readMsg(def,ts)){stop=true;break;}
+        continue;
+      }
+      var local=hb&0x0F;
+      if(hb&0x40){
+        if(offset+5>end){stop=true;break;}
+        var le=dv.getUint8(offset+1)===0;
+        var gn=dv.getUint16(offset+2,le),nf=dv.getUint8(offset+4);offset+=5;
+        if(offset+nf*3>end){stop=true;break;}
+        var fields=[];
+        for(var i=0;i<nf;i++){fields.push({n:dv.getUint8(offset),s:dv.getUint8(offset+1),bt:dv.getUint8(offset+2)});offset+=3;}
+        var dsz=0;
+        if(hb&0x20){
+          if(offset+1>end){stop=true;break;}
+          var nd=dv.getUint8(offset++);
+          if(offset+nd*3>end){stop=true;break;}
+          for(var k=0;k<nd;k++){dsz+=dv.getUint8(offset+1);offset+=3;}
+        }
+        defs[local]={gn:gn,fields:fields,le:le,dsz:dsz};
+      }else{
+        var def2=defs[local];
+        if(!def2||!readMsg(def2,null)){stop=true;break;}
+      }
     }
+    if(stop)break;
+    base=base+hs+ds+2;
   }
   if(!records.length)throw new Error('el archivo no trae registros de actividad');
   records.sort(function(a,b){return a.timestamp-b.timestamp;});
+  timer.sort(function(a,b){return a.t-b.t;});
+  records.timer=timer;
   return records;
 }
 function aF(r,n,v){
@@ -862,47 +874,75 @@ function getThresh(m,c){
 }
 
 var N_MC=500;
-function computeAll(recs,cfg){
-  var hasPow=recs.some(function(r){return r.power>0&&r.power<=3000;});
-  var hasHR=recs.some(function(r){return r.heart_rate>=40&&r.heart_rate<=220;});
-  var p=window._dp;
-  var thCV=getThresh('CV_c',cfg),thVC=getThresh('VC_r',cfg),thIES=getThresh('IES',cfg),thVI=getThresh('VI',cfg),thPW=getThresh('PwHR',cfg);
-  var sCV=[],sVC=[],sIES=[],sVI=[],sPW=[];
-  for(var i=0;i<N_MC;i++){
+function mcInit(recs,cfg){
+  return{recs:recs,i:0,
+    hasPow:recs.some(function(r){return r.power>0&&r.power<=3000;}),
+    hasHR:recs.some(function(r){return r.heart_rate>=40&&r.heart_rate<=220;}),
+    th:{cv:getThresh('CV_c',cfg),vc:getThresh('VC_r',cfg),ies:getThresh('IES',cfg),vi:getThresh('VI',cfg),pw:getThresh('PwHR',cfg)},
+    s:{cv:[],vc:[],ies:[],vi:[],pw:[]}};
+}
+function mcRun(st,n){
+  var recs=st.recs,s=st.s,end=Math.min(N_MC,st.i+n);
+  for(;st.i<end;st.i++){
     var nr=recs.map(function(r){
       var pd=0.05+Math.random()*0.10;
-      return{timestamp:r.timestamp,speed:r.speed!=null?r.speed+(Math.random()*.6-.3):null,altitude:r.altitude!=null?r.altitude+(Math.random()*4-2):null,cadence:r.cadence!=null&&Math.random()>pd?r.cadence:null,power:r.power!=null&&r.power>0?r.power*(1+(Math.random()*2-1)*.02):null,heart_rate:r.heart_rate,distance:r.distance};
+      return{timestamp:r.timestamp,speed:r.speed!=null?r.speed+(Math.random()*.6-.3):null,altitude:r.altitude!=null?r.altitude+(Math.random()*4-2):null,cadence:r.cadence!=null&&Math.random()>pd?r.cadence:null,power:r.power!=null&&r.power>0?r.power*(1+(Math.random()*2-1)*.02):(r.power===0?0:null),heart_rate:r.heart_rate,distance:r.distance};
     });
-    var cs=p?p.cs:1,vs2=p?p.vs:0;
-    var cv=mCV(nr),vc=mVC(nr),ies=mIES(nr),vi=hasPow?mVI(nr):null,pw=(hasPow&&hasHR)?mPW(nr):null;
-    if(cv!=null)sCV.push(cv*cs);if(vc!=null)sVC.push(vc*cs);if(ies!=null)sIES.push(ies);if(vi!=null)sVI.push(vi+vs2);if(pw!=null)sPW.push(pw);
+    nr.timer=recs.timer;
+    var cv=mCV(nr),vc=mVC(nr),ies=mIES(nr),vi=st.hasPow?mVI(nr):null,pw=(st.hasPow&&st.hasHR)?mPW(nr):null;
+    if(cv!=null)s.cv.push(cv);if(vc!=null)s.vc.push(vc);if(ies!=null)s.ies.push(ies);if(vi!=null)s.vi.push(vi);if(pw!=null)s.pw.push(pw);
   }
-  var sp=p&&p.sp;
-  function stat2(arr,est,falla){
-    if(!arr.length)return{status:'na',M_obs:null,M_p5:null,M_p95:null,P_s:0,P_w:0,P_f:0,T_est:est,T_falla:falla,margin_est:null};
-    arr.sort(function(a,b){return a-b;});
-    var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
-    if(sp){var t=p5;p5=p95;p95=t;}
-    var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<est)ns++;else if(v<falla)nw++;else nf++;});
-    return{status:obs<est?'stable':obs<falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_est:est,T_falla:falla,margin_est:obs-est};
-  }
-  function statVI(arr,th){
-    if(!arr.length)return{status:'na',M_obs:null,M_p5:null,M_p95:null,P_s:0,P_w:0,P_f:0,T_vst:th.vst,T_st:th.st,T_falla:th.falla};
-    arr.sort(function(a,b){return a-b;});
-    var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
-    var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<th.st)ns++;else if(v<th.falla)nw++;else nf++;});
-    return{status:obs<th.st?'stable':obs<th.falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_vst:th.vst,T_st:th.st,T_falla:th.falla,margin_est:obs-th.st,isVeryStable:obs<th.vst};
-  }
+  return st.i>=N_MC;
+}
+function stat2(arr,est,falla){
+  if(!arr.length)return{status:'na',M_obs:null,M_p5:null,M_p95:null,P_s:0,P_w:0,P_f:0,T_est:est,T_falla:falla,margin_est:null};
+  arr.sort(function(a,b){return a-b;});
+  var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
+  var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<est)ns++;else if(v<falla)nw++;else nf++;});
+  return{status:obs<est?'stable':obs<falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_est:est,T_falla:falla,margin_est:obs-est};
+}
+function statVI(arr,th){
+  if(!arr.length)return{status:'na',M_obs:null,M_p5:null,M_p95:null,P_s:0,P_w:0,P_f:0,T_vst:th.vst,T_st:th.st,T_falla:th.falla};
+  arr.sort(function(a,b){return a-b;});
+  var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
+  var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<th.st)ns++;else if(v<th.falla)nw++;else nf++;});
+  return{status:obs<th.st?'stable':obs<th.falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_vst:th.vst,T_st:th.st,T_falla:th.falla,margin_est:obs-th.st,isVeryStable:obs<th.vst};
+}
+function mcEnd(st){
+  var recs=st.recs,s=st.s,th=st.th,hasPow=st.hasPow,hasHR=st.hasHR;
   var dur=0;if(recs.length>1&&recs[0].timestamp&&recs[recs.length-1].timestamp)dur=recs[recs.length-1].timestamp-recs[0].timestamp;
   var dist=0;recs.forEach(function(r){if(r.distance!=null)dist=r.distance;});
   var sv=0,sn=0;recs.forEach(function(r){if(r.speed!=null&&r.speed>0){sv+=r.speed;sn++;}});
-  return{cv:stat2(sCV,thCV.est,thCV.falla),vc:stat2(sVC,thVC.est,thVC.falla),ies:stat2(sIES,thIES.est,thIES.falla),vi:hasPow?statVI(sVI,thVI):{status:'na',M_obs:null},pw:(hasPow&&hasHR)?stat2(sPW,thPW.est,thPW.falla):{status:'na',M_obs:null},hasPow:hasPow,hasHR:hasHR,duration:dur,distance:dist,speedAvg:sn?sv/sn:0,recordCount:recs.length};
+  return{cv:stat2(s.cv,th.cv.est,th.cv.falla),vc:stat2(s.vc,th.vc.est,th.vc.falla),ies:stat2(s.ies,th.ies.est,th.ies.falla),vi:hasPow?statVI(s.vi,th.vi):{status:'na',M_obs:null},pw:(hasPow&&hasHR)?stat2(s.pw,th.pw.est,th.pw.falla):{status:'na',M_obs:null},hasPow:hasPow,hasHR:hasHR,duration:dur,distance:dist,speedAvg:sn?sv/sn:0,recordCount:recs.length};
+}
+function computeAll(recs,cfg){var st=mcInit(recs,cfg);mcRun(st,N_MC);return mcEnd(st);}
+function computeAllAsync(recs,cfg,prog,done,fail){
+  var st=mcInit(recs,cfg);
+  (function step(){
+    try{var fin=mcRun(st,20);if(prog)prog(st.i/N_MC);if(fin)done(mcEnd(st));else setTimeout(step,0);}
+    catch(e){fail(e);}
+  })();
 }
 
 function mCV(r){var v=r.filter(function(x){return x.cadence>=30&&x.cadence<=160&&x.speed!=null&&x.speed>1;});if(v.length<30)return null;var cvs=[],W=30,st=10;for(var i=0;i<=v.length-W;i+=st){var w=v.slice(i,i+W).map(function(x){return x.cadence;});var mu=w.reduce(function(a,b){return a+b;},0)/W;var sd=Math.sqrt(w.reduce(function(s,x){return s+(x-mu)*(x-mu);},0)/(W-1));if(mu>0)cvs.push(sd/mu);}return cvs.length?cvs.reduce(function(a,b){return a+b;},0)/cvs.length:null;}
 function mVC(r){var v=r.filter(function(x){return x.cadence>=30&&x.speed!=null&&x.speed>=2.5&&x.speed<=20;});if(v.length<20)return null;var R=v.map(function(x){return 60*x.speed/x.cadence;});var mu=R.reduce(function(a,b){return a+b;},0)/R.length;var sd=Math.sqrt(R.reduce(function(s,x){return s+(x-mu)*(x-mu);},0)/R.length);return mu>0?sd/mu:null;}
 function mIES(r){if(r.length<50)return null;var alt=r.map(function(x){return x.altitude!=null?x.altitude:NaN;});var f0=-1;for(var i=0;i<alt.length;i++){if(!isNaN(alt[i])){f0=i;break;}}if(f0<0)return null;for(var i=0;i<f0;i++)alt[i]=alt[f0];for(var i=f0+1;i<alt.length;i++){if(isNaN(alt[i]))alt[i]=alt[i-1];}var segs=[],inC=false,sS=0;for(var i=50;i<r.length;i++){var dh=alt[i]-alt[i-50];var dd=r[i].distance!=null&&r[i-50].distance!=null?(r[i].distance-r[i-50].distance):50*(r[i].speed||0);var g=dd>5?dh/dd:0;if(g>=.03){if(!inC){inC=true;sS=i;}}else{if(inC&&i-sS>=30)segs.push({a:sS,b:i});inC=false;}}if(inC&&r.length-sS>=30)segs.push({a:sS,b:r.length});if(!segs.length)return null;var sum=0,n=0;segs.forEach(function(s){var ch=r.slice(s.a,s.b);var vs=ch.map(function(x){return x.speed;}).filter(function(x){return x!=null;});var cs=ch.map(function(x){return x.cadence;}).filter(function(x){return x!=null;});if(vs.length<10||cs.length<10)return;var vm=vs.reduce(function(a,b){return a+b;},0)/vs.length;var cm=cs.reduce(function(a,b){return a+b;},0)/cs.length;var sv2=Math.sqrt(vs.reduce(function(s,x){return s+(x-vm)*(x-vm);},0)/vs.length);var sc=Math.sqrt(cs.reduce(function(s,x){return s+(x-cm)*(x-cm);},0)/cs.length);sum+=.5*(sv2/(vm||1))+.5*(sc/(cm||1));n++;});return n?sum/n:null;}
-function mVI(r){var v=r.filter(function(x){return x.power>0&&x.power<=3000;});if(v.length<30)return null;var P=v.map(function(x){return x.power;});var npS=0,n=0;for(var i=29;i<P.length;i++){var w=P.slice(i-29,i+1);var avg=w.reduce(function(a,b){return a+b;},0)/30;npS+=Math.pow(avg,4);n++;}var NP=Math.pow(npS/n,.25);var AP=P.reduce(function(a,b){return a+b;},0)/P.length;return AP>0?NP/AP:null;}
+function mVI(r){
+  var tm=r.timer||[],ev=tm.length>0,GAP=30,W=30,win=[],ws=0,s4=0,n4=0,sP=0,nP=0,pT=null,pP=0,j=0;
+  function put(p){sP+=p;nP++;win.push(p);ws+=p;if(win.length>W)ws-=win.shift();if(win.length===W){var a=ws/W;s4+=a*a*a*a;n4++;}}
+  for(var i=0;i<r.length;i++){
+    var x=r[i];if(x.timestamp==null||x.power==null||!(x.power>=0&&x.power<=3000))continue;
+    var t=Math.round(x.timestamp),p=x.power,stop=false;
+    while(j<tm.length&&tm[j].t<t){if(pT!==null&&tm[j].t>=pT&&(tm[j].k===1||tm[j].k===4||tm[j].k===8||tm[j].k===9))stop=true;j++;}
+    if(pT===null)put(p);
+    else{var dt=t-pT;if(dt<=0)continue;
+      if(ev?stop:dt>GAP){win=[];ws=0;put(p);}
+      else{for(var k=1;k<dt;k++)put(pP);put(p);}}
+    pT=t;pP=p;
+  }
+  if(!n4)return null;
+  var NP=Math.pow(s4/n4,.25),AP=sP/nP;return AP>0?NP/AP:null;
+}
 function mPW(r){var v=r.filter(function(x){return x.power>0&&x.power<=3000&&x.heart_rate>=40&&x.heart_rate<=220;});if(v.length<20)return null;var h=Math.floor(v.length/2);var r1=v.slice(0,h).map(function(x){return x.power/x.heart_rate;});var r2=v.slice(h).map(function(x){return x.power/x.heart_rate;});var R1=r1.reduce(function(a,b){return a+b;},0)/r1.length;var R2=r2.reduce(function(a,b){return a+b;},0)/r2.length;return R1>0?(R1-R2)/R1*100:null;}
 
 var MF={cv:function(v){return v.toFixed(4);},vc:function(v){return v.toFixed(4);},ies:function(v){return(v*100).toFixed(2)+'%';},vi:function(v){return v.toFixed(3);},pw:function(v){return v.toFixed(2)+' pp';}};
@@ -952,7 +992,6 @@ document.getElementById('btn-new').addEventListener('click',function(){
   document.getElementById('btn-analyze').disabled=true;
   ['inp-name','inp-email','inp-age','inp-country','inp-bike'].forEach(function(id){document.getElementById(id).value='';});
   ['sel-disc','sel-sus','sel-tx','sel-wheel'].forEach(function(id){document.getElementById(id).value='';});
-  document.getElementById('inp-consent').checked=false;
   clrErr('err1');clrErr('err2');showStep(1);window.scrollTo({top:0,behavior:'smooth'});
 });
 
