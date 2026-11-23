@@ -314,7 +314,7 @@ character reading and sensitivities. ES / EN / PT.
 
 - BikeLab SAG Calculator — Software · DOI 10.5281/zenodo.20672790
   https://www.bikelabstudio.com/articles/sag-calculator-es.html
-- BikeLab PSI Calculator — Software · DOI 10.5281/zenodo.20673124
+- BikeLab PSI Calculator — Software · DOI 10.5281/zenodo.24479992 · CC BY 4.0 (engines, golden vectors, verifiers) · versions 1.0–2.0: DOI 10.5281/zenodo.20673124 · https://github.com/carlosravello-png/bikelab-psi-calculator
   https://www.bikelabstudio.com/articles/psi-calculator-es.html
 - BikeLab FIT Analyzer — Software · DOI 10.5281/zenodo.20673166
   https://www.bikelabstudio.com/articles/fit-analyzer-es.html
