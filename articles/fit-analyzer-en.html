@@ -767,68 +767,84 @@ function startAnalysis(file){
 }
 
 function parseFIT(buf){
+  // FIT reader 1.1.0 — validado contra @garmin/fitsdk 21.222.0
   var dv=new DataView(buf);
+  if(dv.byteLength<12)throw new Error('Invalid FIT file');
   var hs=dv.getUint8(0);
   if(hs!==12&&hs!==14)throw new Error('Invalid FIT header: '+hs);
-  var ds=dv.getUint32(4,true),offset=hs,end=Math.min(offset+ds,dv.byteLength);
-  var EPOCH=631065600,INV1=0xFF,INV2=0xFFFF,INV4=0xFFFFFFFF;
-  var defs={},lastTs=0,le=true,records=[];
+  if(dv.getUint32(8,true)!==0x5449462E)throw new Error('Invalid FIT signature');
+  var ds=dv.getUint32(4,true),offset=hs,end=Math.min(hs+ds,dv.byteLength);
+  var EPOCH=631065600,defs={},lastTs=null,records=[];
+  function rd(f,o,le){
+    var b=f.bt&0x1F,v;
+    if(f.s===1){v=(b===1)?dv.getInt8(o):dv.getUint8(o);if(b===1?v===0x7F:(b===10?v===0:v===0xFF))return null;return v;}
+    if(f.s===2){if(b===3){v=dv.getInt16(o,le);return v===0x7FFF?null:v;}v=dv.getUint16(o,le);if(b===11?v===0:v===0xFFFF)return null;return v;}
+    if(f.s===4){if(b===5){v=dv.getInt32(o,le);return v===0x7FFFFFFF?null:v;}if(b===8)return null;v=dv.getUint32(o,le);if(b===12?v===0:v===0xFFFFFFFF)return null;return v;}
+    return null;
+  }
+  function readMsg(def,ts){
+    var r=def.gn===20?{}:null,o=offset;
+    for(var i=0;i<def.fields.length;i++){
+      var f=def.fields[i];
+      if(o+f.s>end)return false;
+      var v=rd(f,o,def.le);o+=f.s;
+      if(v===null)continue;
+      if(f.n===253&&f.s===4){lastTs=v;if(r)r.timestamp=v+EPOCH;}
+      else if(r)aF(r,f.n,v);
+    }
+    if(o+def.dsz>end)return false;
+    offset=o+def.dsz;
+    if(r){
+      if(r.timestamp==null&&ts!=null)r.timestamp=ts+EPOCH;
+      delete r._ea;delete r._es;
+      if(r.timestamp!=null)records.push(r);
+    }
+    return true;
+  }
   while(offset<end){
-    if(offset>=dv.byteLength)break;
     var hb=dv.getUint8(offset++);
-    if(hb===0)break;
     if(hb&0x80){
-      var ln=(hb>>5)&0x03,to=hb&0x1F;
-      lastTs=(lastTs&0xFFFFFFE0)+to;
-      if(to<(lastTs&0x1F))lastTs+=0x20;
+      var ln=(hb>>5)&0x03,to=hb&0x1F,ts=null;
+      if(lastTs!=null){ts=(lastTs&0xFFFFFFE0)+to;if(to<(lastTs&0x1F))ts+=0x20;lastTs=ts;}
       var def=defs[ln];
-      if(def&&def.gn===20){
-        var r={timestamp:lastTs+EPOCH},fo=offset;
-        for(var i=0;i<def.fields.length&&fo+def.fields[i].s<=end;i++){
-          var f=def.fields[i],val=null;
-          if(f.s===1){var v=dv.getUint8(fo);if(v!==INV1)val=v;}
-          else if(f.s===2){var v=dv.getUint16(fo,le);if(v!==INV2)val=v;}
-          else if(f.s===4){var v=dv.getUint32(fo,le);if(v!==INV4)val=v;}
-          fo+=f.s;if(val===null)continue;aF(r,f.n,val);
-        }
-        offset=fo;records.push(r);
-      }else{if(def)offset+=def.ts;}
+      if(!def)throw new Error('FIT: data before definition');
+      if(!readMsg(def,ts))break;
       continue;
     }
-    var local=hb&0x0F,isDef=(hb>>6)&1,hasDev=(hb>>5)&1;
-    if(isDef){
-      if(offset+4>end)break;
-      offset++;var isBe=dv.getUint8(offset++)!==0;le=!isBe;
-      var gn=dv.getUint16(offset,le);offset+=2;
-      var nf=dv.getUint8(offset++),fields2=[],ts2=0;
-      for(var i=0;i<nf;i++){var fn=dv.getUint8(offset++),fs=dv.getUint8(offset++);offset++;fields2.push({n:fn,s:fs});ts2+=fs;}
-      if(hasDev){var nd=dv.getUint8(offset++);offset+=nd*3;}
-      defs[local]={gn:gn,fields:fields2,ts:ts2};
+    var local=hb&0x0F;
+    if(hb&0x40){
+      if(offset+5>end)break;
+      var le=dv.getUint8(offset+1)===0;
+      var gn=dv.getUint16(offset+2,le),nf=dv.getUint8(offset+4);offset+=5;
+      if(offset+nf*3>end)break;
+      var fields=[];
+      for(var i=0;i<nf;i++){fields.push({n:dv.getUint8(offset),s:dv.getUint8(offset+1),bt:dv.getUint8(offset+2)});offset+=3;}
+      var dsz=0;
+      if(hb&0x20){
+        if(offset+1>end)break;
+        var nd=dv.getUint8(offset++);
+        if(offset+nd*3>end)break;
+        for(var k=0;k<nd;k++){dsz+=dv.getUint8(offset+1);offset+=3;}
+      }
+      defs[local]={gn:gn,fields:fields,le:le,dsz:dsz};
     }else{
       var def2=defs[local];
-      if(def2&&def2.gn===20){
-        var r2={};
-        for(var i=0;i<def2.fields.length&&offset+def2.fields[i].s<=end;i++){
-          var f2=def2.fields[i],val2=null;
-          if(f2.s===1){var v2=dv.getUint8(offset);if(v2!==INV1)val2=v2;}
-          else if(f2.s===2){var v2=dv.getUint16(offset,le);if(v2!==INV2)val2=v2;}
-          else if(f2.s===4){var v2=dv.getUint32(offset,le);if(v2!==INV4)val2=v2;}
-          offset+=f2.s;if(val2===null)continue;
-          if(f2.n===253){lastTs=val2;r2.timestamp=val2+EPOCH;}else aF(r2,f2.n,val2);
-        }
-        if(r2.timestamp!=null)records.push(r2);
-      }else{if(def2)offset+=def2.ts;else offset++;}
+      if(!def2)throw new Error('FIT: data before definition');
+      if(!readMsg(def2,null))break;
     }
   }
-  records.sort(function(a,b){return(a.timestamp||0)-(b.timestamp||0);});
-  return records.filter(function(r){return r.timestamp!=null;});
+  if(!records.length)throw new Error('the file contains no activity records');
+  records.sort(function(a,b){return a.timestamp-b.timestamp;});
+  return records;
 }
 function aF(r,n,v){
-  if(n===2||n===78)r.altitude=v/5-500;
+  if(n===2){if(r._ea==null)r.altitude=v/5-500;}
+  else if(n===78){r.altitude=v/5-500;r._ea=1;}
   else if(n===3)r.heart_rate=v;
   else if(n===4)r.cadence=v;
   else if(n===5)r.distance=v/100;
-  else if(n===6||n===32)r.speed=v/1000;
+  else if(n===6){if(r._es==null)r.speed=v/1000;}
+  else if(n===73){r.speed=v/1000;r._es=1;}
   else if(n===7)r.power=v;
 }
 
