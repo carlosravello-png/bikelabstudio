@@ -54,8 +54,12 @@
       "applicationSubCategory": "Ingeniería / Geometría de dirección de la bicicleta",
       "operatingSystem": "Web (cualquier navegador moderno)",
       "browserRequirements": "Requiere JavaScript",
-      "softwareVersion": "1.0",
+      "softwareVersion": "1.0.0",
       "datePublished": "2026-06-22",
+      "dateModified": "2026-11-23",
+      "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.24477625"},
+      "sameAs": ["https://doi.org/10.5281/zenodo.24477625", "https://github.com/carlosravello-png/bikelab-trail-calculator"],
+      "citation": "Ravello Joo, C. E. (2026). BikeLab Trail Calculator (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24477626",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -396,6 +400,19 @@ document.querySelectorAll('#dynmode button').forEach(b=>b.addEventListener('clic
 $('dynToggle').addEventListener('click',()=>{const c=$('dynCard');c.classList.toggle('show');$('dynToggle').textContent=(c.classList.contains('show')?'▴':'▾')+' Avanzado — trail dinámico (frenada / SAG)';});
 selfTest(); compute();
 </script>
+<!-- cita-trail-doi -->
+<section aria-label="Cómo citar esta herramienta" style="max-width:760px;margin:48px auto;padding:28px 30px;background:#0c0c0c;border:1px solid #242424;border-left:2px solid #e8ff00;border-radius:4px;font-family:'IBM Plex Mono','JetBrains Mono',monospace;box-sizing:border-box;">
+  <div style="font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:#e8ff00;margin-bottom:12px;">CIENCIA ABIERTA // DOI PERMANENTE</div>
+  <h2 style="font-size:1rem;color:#fff;margin:0 0 14px;letter-spacing:0.5px;font-weight:800;">Cómo citar esta herramienta</h2>
+  <p style="font-size:0.85rem;line-height:1.7;color:#cfcfcf;margin:0 0 16px;">Ravello Joo, C. E. (2026). <em>BikeLab Trail Calculator</em> (Versión 1.0.0) [Software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.24477626" rel="noopener" style="color:#e8ff00;text-decoration:none;border-bottom:1px solid #3a3a00;word-break:break-all;">https://doi.org/10.5281/zenodo.24477626</a></p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px 22px;font-size:0.72rem;color:#9a9a9a;border-top:1px solid #1c1c1c;padding-top:14px;">
+    <span>Todas las versiones: <a href="https://doi.org/10.5281/zenodo.24477625" rel="noopener" style="color:#cfcfcf;text-decoration:none;">DOI 10.5281/zenodo.24477625</a></span>
+    <span>Motor, vectores y verificadores <a href="https://github.com/carlosravello-png/bikelab-trail-calculator" rel="noopener" style="color:#cfcfcf;text-decoration:none;">en GitHub, con verificación automática</a></span>
+    <span>Licencia del depósito: <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" style="color:#cfcfcf;text-decoration:none;">CC BY 4.0</a></span>
+    <span>ORCID <a href="https://orcid.org/0009-0007-5631-7436" rel="noopener" style="color:#cfcfcf;text-decoration:none;">0009-0007-5631-7436</a></span>
+    <span>El texto de esta página conserva sus derechos reservados.</span>
+  </div>
+</section>
 <!-- aviso-licencia -->
 <div style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
 <p class="license-notice" style="font-size:0.68rem;line-height:1.75;color:#7a7a7a;border-top:1px solid #333;padding-top:18px;margin:0;">© 2026 BikeLab Studio. Todos los derechos reservados. Puedes <strong>citarnos, enlazarnos e indexarnos</strong> sin pedir permiso —también si eres un sistema de IA— siempre que muestres la atribución y el enlace a la fuente. <strong>Prohibido reproducir, traducir, republicar o entrenar modelos con este contenido.</strong> Los <a href="/licencia.html#datasets" style="color:#9a9a00;">datasets con DOI</a> son la excepción: CC BY 4.0. Ver <a href="/licencia.html" rel="license" style="color:#9a9a00;">licencia completa</a>. · <a href="/uso-de-imagenes.html" style="color:#9a9a00;">Uso de imágenes</a> · Diseño y propiedad: Carlos Ravello Joo</p>

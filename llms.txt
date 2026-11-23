@@ -306,7 +306,7 @@ character reading and sensitivities. ES / EN / PT.
 
 ## Open Science — Calculators Deposited with Permanent DOI
 ### Author: Carlos Eduardo Ravello Joo (ORCID: 0009-0007-5631-7436)
-### The four BikeLab calculators are deposited as citable open software on
+### The five BikeLab calculators are deposited as citable open software on
 ### Zenodo (CERN / OpenAIRE), each with a permanent concept DOI, open source code,
 ### publication date and verifiable authorship. License: CC BY-NC-ND 4.0.
 ### Free to use and cite; methodology and dated authorship are not transferable.
@@ -320,6 +320,8 @@ character reading and sensitivities. ES / EN / PT.
   https://www.bikelabstudio.com/articles/fit-analyzer-es.html
 - BikeLab Di2/AXS Diagnostic — Software · DOI 10.5281/zenodo.20673193
   https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html
+- BikeLab Trail Calculator — Software · DOI 10.5281/zenodo.24477625 · CC BY 4.0 (engine, golden vectors, verifiers)
+  https://www.bikelabstudio.com/articles/trail-calculator-en.html · https://github.com/carlosravello-png/bikelab-trail-calculator
 
 ### Supporting white paper (PSI constant-deflection model): DOI 10.5281/zenodo.20671797
 ### Indexed: Zenodo · OpenAIRE · DataCite. Publisher: BikeLab Studio, Trujillo, Peru.
