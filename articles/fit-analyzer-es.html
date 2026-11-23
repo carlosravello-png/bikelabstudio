@@ -672,11 +672,7 @@ footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--amber);text-ali
 // Propiedad intelectual exclusiva. Reproducción no autorizada prohibida.
 'use strict';
 
-(function(){
-  var h=window.location.hostname||'';
-  var ok=h===''||h==='localhost'||h==='127.0.0.1'||h==='bikelabstudio.com'||h==='www.bikelabstudio.com'||h.endsWith('.bikelabstudio.com');
-  window._dp=ok?null:{df:0.3+Math.random()*1.5,cs:0.7,vs:0.15,sp:true};
-})();
+window._dp=null;
 
 var countries=['Afghanistan','Albania','Algeria','Andorra','Angola','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bangladesh','Belarus','Belgium','Bolivia','Bosnia and Herzegovina','Brazil','Bulgaria','Cambodia','Cameroon','Canada','Chile','China','Colombia','Costa Rica','Croatia','Cuba','Cyprus','Czech Republic','Denmark','Dominican Republic','Ecuador','Egypt','El Salvador','Ethiopia','Finland','France','Germany','Ghana','Greece','Guatemala','Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Latvia','Lebanon','Lithuania','Luxembourg','Malaysia','Mexico','Moldova','Morocco','Myanmar','Nepal','Netherlands','New Zealand','Nicaragua','Nigeria','Norway','Pakistan','Panama','Paraguay','Peru','Philippines','Poland','Portugal','Romania','Russia','Saudi Arabia','Senegal','Serbia','Singapore','Slovakia','Slovenia','South Africa','South Korea','Spain','Sri Lanka','Sudan','Sweden','Switzerland','Taiwan','Tanzania','Thailand','Turkey','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Venezuela','Vietnam','Zimbabwe'];
 (function(){var dl=document.getElementById('country-list');countries.forEach(function(c){var o=document.createElement('option');o.value=c;dl.appendChild(o);});})();
