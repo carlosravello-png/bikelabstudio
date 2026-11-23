@@ -323,7 +323,7 @@
           "name": "O que é o Variability Index no ciclismo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O Variability Index (VI) é o quociente entre a potência normalizada (NP) e a potência média (AP), ambas calculadas segundo a segundo e incluindo os momentos sem pedalar. Nesta ferramenta, numa bicicleta de estrada rígida com 2x, um VI menor que 1.030 é classificado como muito estável e menor que 1.080 como estável; em gravel, MTB, com suspensão ou com 1x os limiares sobem até +0.055. São limiares de referência da BikeLab, não um padrão publicado."
+            "text": "O Variability Index (VI) é o quociente entre a potência normalizada (NP) e a potência média (AP), ambas calculadas segundo a segundo e incluindo os momentos sem pedalar. Os limiares desta ferramenta vêm da tabela de referência da TrainingPeaks: na estrada, menos de 1.02 é muito estável, menos de 1.06 é estável e a partir de 1.35 fica acima do típico mesmo em critériums e provas com subidas; no MTB, estável é menos de 1.13 e o teto é 1.50. Gravel não aparece nessa tabela, então usa os valores de estrada."
           }
         },
         {
@@ -655,7 +655,7 @@ footer{margin-top:2rem;padding:1rem 0;border-top:2px solid var(--amber);text-ali
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
 <h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">O que é o Variability Index no ciclismo?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">O Variability Index (VI) é o quociente entre a potência normalizada (NP) e a potência média (AP), ambas calculadas segundo a segundo e incluindo os momentos sem pedalar. Nesta ferramenta, numa bicicleta de estrada rígida com 2x, um VI menor que 1.030 é classificado como muito estável e menor que 1.080 como estável; em gravel, MTB, com suspensão ou com 1x os limiares sobem até +0.055. São limiares de referência da BikeLab, não um padrão publicado.</p>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">O Variability Index (VI) é o quociente entre a potência normalizada (NP) e a potência média (AP), ambas calculadas segundo a segundo e incluindo os momentos sem pedalar. Os limiares desta ferramenta vêm da tabela de referência da TrainingPeaks: na estrada, menos de 1.02 é muito estável, menos de 1.06 é estável e a partir de 1.35 fica acima do típico mesmo em critériums e provas com subidas; no MTB, estável é menos de 1.13 e o teto é 1.50. Gravel não aparece nessa tabela, então usa os valores de estrada.</p>
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
 <h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">O que é o índice de estabilidade em subida (IES)?</h3>
@@ -860,6 +860,8 @@ function aF(r,n,v){
   else if(n===7)r.power=v;
 }
 
+// VI: TrainingPeaks Help Center, art. 204071734 (tabla de referencia). Gravel = ruta (no está en la tabla).
+var VIT={ruta:{vst:1.02,st:1.06,falla:1.35},gravel:{vst:1.02,st:1.06,falla:1.35},mtb:{vst:1.02,st:1.13,falla:1.50}};
 function getThresh(m,c){
   var p=window._dp,dF=p?p.df:1;
   var B={CV_c:{est:.030,falla:.060},VC_r:{est:.040,falla:.080},IES:{est:.040,falla:.080},VI:{vst:1.030,st:1.080,falla:1.150},PwHR:{est:5.0,falla:8.0}};
@@ -869,7 +871,7 @@ function getThresh(m,c){
   var DW={CV_c:{'29':0,'27.5':.003,'26':.005},VC_r:{'29':0,'27.5':.002,'26':.003},IES:{'29':0,'27.5':.004,'26':.007},VI:{'29':0,'27.5':0,'26':0},PwHR:{'29':0,'27.5':0,'26':0}};
   var d=(DD[m][c.discipline]||0)+(DS[m][c.suspension]||0)+(DT[m][c.transmission]||0)+(DW[m][c.wheel]||0);
   var b=B[m];
-  if(m==='VI')return{vst:(b.vst+d)*dF,st:(b.st+d)*dF,falla:(b.falla+d)*dF};
+  if(m==='VI'){var vt=VIT[c.discipline]||VIT.ruta;return{vst:vt.vst*dF,st:vt.st*dF,falla:vt.falla*dF};}
   return{est:(b.est+d)*dF,falla:(b.falla+d)*dF};
 }
 
