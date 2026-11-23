@@ -884,14 +884,14 @@ function computeAll(recs,cfg){
     var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
     if(sp){var t=p5;p5=p95;p95=t;}
     var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<est)ns++;else if(v<falla)nw++;else nf++;});
-    return{status:obs<est?'stable':obs<falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/N_MC,P_w:nw/N_MC,P_f:nf/N_MC,T_est:est,T_falla:falla,margin_est:obs-est};
+    return{status:obs<est?'stable':obs<falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_est:est,T_falla:falla,margin_est:obs-est};
   }
   function statVI(arr,th){
     if(!arr.length)return{status:'na',M_obs:null,M_p5:null,M_p95:null,P_s:0,P_w:0,P_f:0,T_vst:th.vst,T_st:th.st,T_falla:th.falla};
     arr.sort(function(a,b){return a-b;});
     var obs=arr[Math.floor(arr.length/2)],p5=arr[Math.floor(arr.length*.05)],p95=arr[Math.floor(arr.length*.95)];
-    var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<th.vst)ns++;else if(v<th.falla)nw++;else nf++;});
-    return{status:obs<th.vst?'stable':obs<th.falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/N_MC,P_w:nw/N_MC,P_f:nf/N_MC,T_vst:th.vst,T_st:th.st,T_falla:th.falla,isVeryStable:obs<th.vst};
+    var ns=0,nw=0,nf=0;arr.forEach(function(v){if(v<th.st)ns++;else if(v<th.falla)nw++;else nf++;});
+    return{status:obs<th.st?'stable':obs<th.falla?'warning':'fail',M_obs:obs,M_p5:p5,M_p95:p95,P_s:ns/arr.length,P_w:nw/arr.length,P_f:nf/arr.length,T_vst:th.vst,T_st:th.st,T_falla:th.falla,margin_est:obs-th.st,isVeryStable:obs<th.vst};
   }
   var dur=0;if(recs.length>1&&recs[0].timestamp&&recs[recs.length-1].timestamp)dur=recs[recs.length-1].timestamp-recs[0].timestamp;
   var dist=0;recs.forEach(function(r){if(r.distance!=null)dist=r.distance;});
@@ -901,10 +901,16 @@ function computeAll(recs,cfg){
 
 function mCV(r){var v=r.filter(function(x){return x.cadence>=30&&x.cadence<=160&&x.speed!=null&&x.speed>1;});if(v.length<30)return null;var cvs=[],W=30,st=10;for(var i=0;i<=v.length-W;i+=st){var w=v.slice(i,i+W).map(function(x){return x.cadence;});var mu=w.reduce(function(a,b){return a+b;},0)/W;var sd=Math.sqrt(w.reduce(function(s,x){return s+(x-mu)*(x-mu);},0)/(W-1));if(mu>0)cvs.push(sd/mu);}return cvs.length?cvs.reduce(function(a,b){return a+b;},0)/cvs.length:null;}
 function mVC(r){var v=r.filter(function(x){return x.cadence>=30&&x.speed!=null&&x.speed>=2.5&&x.speed<=20;});if(v.length<20)return null;var R=v.map(function(x){return 60*x.speed/x.cadence;});var mu=R.reduce(function(a,b){return a+b;},0)/R.length;var sd=Math.sqrt(R.reduce(function(s,x){return s+(x-mu)*(x-mu);},0)/R.length);return mu>0?sd/mu:null;}
-function mIES(r){if(r.length<50)return null;var alt=r.map(function(x){return x.altitude!=null?x.altitude:NaN;});for(var i=1;i<alt.length;i++){if(isNaN(alt[i]))alt[i]=alt[i-1]||0;}var segs=[],inC=false,sS=0;for(var i=50;i<r.length;i++){var dh=alt[i]-alt[i-50];var dd=r[i].distance!=null&&r[i-50].distance!=null?(r[i].distance-r[i-50].distance):50*(r[i].speed||0);var g=dd>5?dh/dd:0;if(g>=.03){if(!inC){inC=true;sS=i;}}else{if(inC&&i-sS>=30)segs.push({a:sS,b:i});inC=false;}}if(inC&&r.length-sS>=30)segs.push({a:sS,b:r.length});if(!segs.length)return null;var sum=0,n=0;segs.forEach(function(s){var ch=r.slice(s.a,s.b);var vs=ch.map(function(x){return x.speed;}).filter(function(x){return x!=null;});var cs=ch.map(function(x){return x.cadence;}).filter(function(x){return x!=null;});if(vs.length<10||cs.length<10)return;var vm=vs.reduce(function(a,b){return a+b;},0)/vs.length;var cm=cs.reduce(function(a,b){return a+b;},0)/cs.length;var sv2=Math.sqrt(vs.reduce(function(s,x){return s+(x-vm)*(x-vm);},0)/vs.length);var sc=Math.sqrt(cs.reduce(function(s,x){return s+(x-cm)*(x-cm);},0)/cs.length);sum+=.5*(sv2/(vm||1))+.5*(sc/(cm||1));n++;});return n?sum/n:null;}
+function mIES(r){if(r.length<50)return null;var alt=r.map(function(x){return x.altitude!=null?x.altitude:NaN;});var f0=-1;for(var i=0;i<alt.length;i++){if(!isNaN(alt[i])){f0=i;break;}}if(f0<0)return null;for(var i=0;i<f0;i++)alt[i]=alt[f0];for(var i=f0+1;i<alt.length;i++){if(isNaN(alt[i]))alt[i]=alt[i-1];}var segs=[],inC=false,sS=0;for(var i=50;i<r.length;i++){var dh=alt[i]-alt[i-50];var dd=r[i].distance!=null&&r[i-50].distance!=null?(r[i].distance-r[i-50].distance):50*(r[i].speed||0);var g=dd>5?dh/dd:0;if(g>=.03){if(!inC){inC=true;sS=i;}}else{if(inC&&i-sS>=30)segs.push({a:sS,b:i});inC=false;}}if(inC&&r.length-sS>=30)segs.push({a:sS,b:r.length});if(!segs.length)return null;var sum=0,n=0;segs.forEach(function(s){var ch=r.slice(s.a,s.b);var vs=ch.map(function(x){return x.speed;}).filter(function(x){return x!=null;});var cs=ch.map(function(x){return x.cadence;}).filter(function(x){return x!=null;});if(vs.length<10||cs.length<10)return;var vm=vs.reduce(function(a,b){return a+b;},0)/vs.length;var cm=cs.reduce(function(a,b){return a+b;},0)/cs.length;var sv2=Math.sqrt(vs.reduce(function(s,x){return s+(x-vm)*(x-vm);},0)/vs.length);var sc=Math.sqrt(cs.reduce(function(s,x){return s+(x-cm)*(x-cm);},0)/cs.length);sum+=.5*(sv2/(vm||1))+.5*(sc/(cm||1));n++;});return n?sum/n:null;}
 function mVI(r){var v=r.filter(function(x){return x.power>0&&x.power<=3000;});if(v.length<30)return null;var P=v.map(function(x){return x.power;});var npS=0,n=0;for(var i=29;i<P.length;i++){var w=P.slice(i-29,i+1);var avg=w.reduce(function(a,b){return a+b;},0)/30;npS+=Math.pow(avg,4);n++;}var NP=Math.pow(npS/n,.25);var AP=P.reduce(function(a,b){return a+b;},0)/P.length;return AP>0?NP/AP:null;}
 function mPW(r){var v=r.filter(function(x){return x.power>0&&x.power<=3000&&x.heart_rate>=40&&x.heart_rate<=220;});if(v.length<20)return null;var h=Math.floor(v.length/2);var r1=v.slice(0,h).map(function(x){return x.power/x.heart_rate;});var r2=v.slice(h).map(function(x){return x.power/x.heart_rate;});var R1=r1.reduce(function(a,b){return a+b;},0)/r1.length;var R2=r2.reduce(function(a,b){return a+b;},0)/r2.length;return R1>0?(R1-R2)/R1*100:null;}
 
+var MF={cv:function(v){return v.toFixed(4);},vc:function(v){return v.toFixed(4);},ies:function(v){return(v*100).toFixed(2)+'%';},vi:function(v){return v.toFixed(3);},pw:function(v){return v.toFixed(2)+' pp';}};
+function sysBad(res){return['cv','vc','ies','vi'].some(function(k){var s=res[k]&&res[k].status;return s==='fail'||s==='warning';});}
+function thStr(k,d){if(k==='vi')return d.T_vst!=null?MF.vi(d.T_vst)+' / '+MF.vi(d.T_st)+' / '+MF.vi(d.T_falla):'—';return d.T_est!=null?MF[k](d.T_est)+' / '+MF[k](d.T_falla):'—';}
+function stTxt(k,d){var s=(d&&d.status)||'na';if(k==='vi'&&s==='stable'&&d.isVeryStable)return LABELS.vstable;return LABELS[s]||s;}
+function optTxt(id,v){var s=document.getElementById(id);if(!s||v==null)return v||'';for(var i=0;i<s.options.length;i++)if(s.options[i].value===v)return s.options[i].text;return v;}
+function cfgTxt(f){return optTxt('sel-disc',f.discipline)+' · '+optTxt('sel-sus',f.suspension)+' · '+optTxt('sel-tx',f.transmission)+' · '+optTxt('sel-wheel',f.wheel);}
 function fmtDur(s){if(!s)return'—';var h=Math.floor(s/3600),m=Math.floor((s%3600)/60);return h>0?h+'h '+m+'m':m+'m '+Math.floor(s%60)+'s';}
 function pct(v){return Math.round((v||0)*100)+'%';}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -912,7 +918,7 @@ function sc(val,lbl){return'<div class="stat-card"><span class="stat-val">'+val+
 
 function renderResults(res){
   var fd2=res.formData;
-  document.getElementById('results-header').innerHTML='<strong>'+esc(fd2.name||'')+'</strong>'+(fd2.bikeModel?' | '+esc(fd2.bikeModel):'')+' | '+esc(fd2.discipline||'')+' · '+esc(fd2.suspension||'')+' · '+esc(fd2.transmission||'')+' · '+esc(fd2.wheel||'')+' | '+(res.hasPow?LABELS.withPow:LABELS.noPow);
+  document.getElementById('results-header').innerHTML='<strong>'+esc(fd2.name||'')+'</strong>'+(fd2.bikeModel?' | '+esc(fd2.bikeModel):'')+' | '+esc(cfgTxt(fd2))+' | '+(res.hasPow?LABELS.withPow:LABELS.noPow);
   document.getElementById('stats-grid').innerHTML=sc(fmtDur(res.duration),LABELS.duration)+sc((res.distance/1000).toFixed(2)+' km',LABELS.distance)+sc((res.speedAvg*3.6).toFixed(1)+' km/h',LABELS.speed)+sc(res.recordCount,LABELS.records);
   var metrics=[
     {key:'cv',d:res.cv,name:LABELS.mCvName,desc:LABELS.mCvDesc,isPhys:false,naNote:null,fmt:function(v){return v.toFixed(4);}},
@@ -924,15 +930,15 @@ function renderResults(res){
   var html='';
   metrics.forEach(function(m){
     var d=m.d,st=d.status||'na';
-    var sl=m.key==='vi'&&st==='stable'&&d.isVeryStable?LABELS.vstable:st==='stable'?LABELS.stable:st==='warning'?LABELS.warning:st==='fail'?LABELS.fail:LABELS.na;
+    var sl=stTxt(m.key,d);
     var vs=d.M_obs!=null?m.fmt(d.M_obs):'—';
     var ci=d.M_p5!=null?' ['+m.fmt(d.M_p5)+' — '+m.fmt(d.M_p95)+']':'';
     var ps=Math.round((d.P_s||0)*100),pw2=Math.round((d.P_w||0)*100),pf=Math.round((d.P_f||0)*100);
-    var th=m.key==='vi'?(d.T_vst!=null?d.T_vst.toFixed(3):'-')+' / '+(d.T_falla!=null?d.T_falla.toFixed(3):'-'):(d.T_est!=null?d.T_est.toFixed(4):'-')+' / '+(d.T_falla!=null?d.T_falla.toFixed(4):'-');
-    html+='<div class="metric-card '+st+'"><div class="metric-name">'+esc(m.name)+'</div><div class="metric-val">'+vs+'<span class="metric-ci">'+ci+'</span></div><div class="metric-badge '+st+'">'+sl+'</div><div class="prob-bar"><span class="pb-s" style="width:'+ps+'%"></span><span class="pb-w" style="width:'+pw2+'%"></span><span class="pb-f" style="width:'+pf+'%"></span></div><div class="prob-labels"><span>'+pct(d.P_s)+' '+LABELS.stable.toLowerCase()+'</span><span>'+pct(d.P_w)+' '+LABELS.warning.toLowerCase()+'</span><span>'+pct(d.P_f)+' '+LABELS.fail.toLowerCase()+'</span></div><div class="metric-ci" style="margin-top:.4rem">'+LABELS.margin+': '+(d.margin_est!=null?d.margin_est.toFixed(4):'—')+'</div><div class="metric-ci">'+LABELS.thresh+': '+th+'</div><div class="metric-desc">'+esc(m.desc)+'</div>'+(st==='na'&&m.naNote?'<div class="metric-ci" style="margin-top:.3rem">'+esc(m.naNote)+'</div>':'')+(m.isPhys?'<div class="phys-note">'+esc(LABELS.physNote)+'</div>':'')+'</div>';
+    var th=thStr(m.key,d);
+    html+='<div class="metric-card '+st+'"><div class="metric-name">'+esc(m.name)+'</div><div class="metric-val">'+vs+'<span class="metric-ci">'+ci+'</span></div><div class="metric-badge '+st+'">'+sl+'</div><div class="prob-bar"><span class="pb-s" style="width:'+ps+'%"></span><span class="pb-w" style="width:'+pw2+'%"></span><span class="pb-f" style="width:'+pf+'%"></span></div><div class="prob-labels"><span>'+pct(d.P_s)+' '+LABELS.stable.toLowerCase()+'</span><span>'+pct(d.P_w)+' '+LABELS.warning.toLowerCase()+'</span><span>'+pct(d.P_f)+' '+LABELS.fail.toLowerCase()+'</span></div><div class="metric-ci" style="margin-top:.4rem">'+LABELS.margin+': '+(d.margin_est!=null?m.fmt(d.margin_est):'—')+'</div><div class="metric-ci">'+LABELS.thresh+': '+th+'</div><div class="metric-desc">'+esc(m.desc)+'</div>'+(st==='na'&&m.naNote?'<div class="metric-ci" style="margin-top:.3rem">'+esc(m.naNote)+'</div>':'')+(m.isPhys?'<div class="phys-note">'+esc(LABELS.physNote)+'</div>':'')+'</div>';
   });
   document.getElementById('metrics-list').innerHTML=html;
-  var bad=res.cv.status==='fail'||res.vc.status==='fail'||res.ies.status==='fail'||res.vi.status==='fail';
+  var bad=sysBad(res);
   document.getElementById('interp-box').innerHTML='<div class="interp-title">'+LABELS.interp+'</div><p style="font-size:.85rem;color:var(--text-dim)">'+(bad?LABELS.interpWarn:LABELS.interpOk)+'</p>';
   document.getElementById('cta-box').innerHTML='<p>'+esc(LABELS.cta)+' <a href="https://bikelabstudio.com">bikelabstudio.com</a></p>';
 }
@@ -965,29 +971,29 @@ function genPDF(res){
   doc.setTextColor(230,230,230);doc.setFontSize(12);doc.setFont('helvetica','bold');doc.text('FIT ANALYSIS REPORT',20,32);
   doc.setFontSize(8);doc.setFont('helvetica','normal');doc.setTextColor(150,150,150);doc.text(new Date().toISOString().slice(0,10),190,32,{align:'right'});
   var y=52;doc.setFontSize(9);doc.setTextColor(180,180,180);
-  doc.text('Cyclist: '+(fd2.name||'')+(fd2.bikeModel?' | '+fd2.bikeModel:'')+' | '+(fd2.discipline||'')+' · '+(fd2.suspension||'')+' · '+(fd2.transmission||'')+' · '+(fd2.wheel||''),20,y,{maxWidth:170});y+=8;
-  doc.text('Duration: '+fmtDur(res.duration)+'  |  Distance: '+(res.distance/1000).toFixed(2)+' km  |  Avg speed: '+(res.speedAvg*3.6).toFixed(1)+' km/h  |  Records: '+res.recordCount,20,y,{maxWidth:170});y+=6;
+  doc.text('Cyclist: '+(fd2.name||'')+(fd2.bikeModel?' | '+fd2.bikeModel:'')+' | '+cfgTxt(fd2),20,y,{maxWidth:170});y+=8;
+  doc.text('Duration: '+fmtDur(res.duration)+'  |  Distance: '+(res.distance/1000).toFixed(2)+' km  |  Avg speed: '+(res.speedAvg*3.6).toFixed(1)+' km/h  |  '+LABELS.records+': '+res.recordCount,20,y,{maxWidth:170});y+=6;
   doc.setDrawColor(40,40,40);doc.setLineWidth(.3);doc.line(20,y,190,y);y+=8;
-  var mL=[{nm:'CV cad',d:res.cv},{nm:'CV v/c',d:res.vc},{nm:'IES',d:res.ies},{nm:'VI',d:res.vi},{nm:'Pw:HR',d:res.pw}];
+  var mL=[{k:'cv',nm:'CV cad',d:res.cv},{k:'vc',nm:'CV v/c',d:res.vc},{k:'ies',nm:'IES',d:res.ies},{k:'vi',nm:'VI',d:res.vi},{k:'pw',nm:'Pw:HR',d:res.pw}];
   mL.forEach(function(m){
     var d=m.d;if(!d||d.status==null)return;
     var col=d.status==='stable'?[74,222,128]:d.status==='warning'?[251,191,36]:d.status==='fail'?[248,113,113]:[80,80,80];
     doc.setFillColor(col[0],col[1],col[2]);doc.rect(20,y-3,2,8,'F');
     doc.setTextColor(220,220,220);doc.setFont('helvetica','bold');doc.setFontSize(9);
-    doc.text(m.nm+': '+(d.M_obs!=null?d.M_obs.toFixed(4):'N/A')+(d.M_p5!=null?' ['+d.M_p5.toFixed(4)+'-'+d.M_p95.toFixed(4)+']':''),24,y+2);
+    doc.text(m.nm+': '+(d.M_obs!=null?MF[m.k](d.M_obs):'N/A')+(d.M_p5!=null?' ['+MF[m.k](d.M_p5)+' - '+MF[m.k](d.M_p95)+']':''),24,y+2);
     doc.setFont('helvetica','normal');doc.setTextColor(140,140,140);doc.setFontSize(8);
-    doc.text('Status: '+(d.status||'—')+'  |  Threshold: '+(d.T_est!=null?d.T_est.toFixed(4):d.T_vst!=null?d.T_vst.toFixed(3):'—')+' / '+(d.T_falla!=null?d.T_falla.toFixed(3):'—')+'  |  P(ok)='+Math.round((d.P_s||0)*100)+'%  P(fail)='+Math.round((d.P_f||0)*100)+'%',24,y+8);
+    doc.text('Status: '+stTxt(m.k,d)+'  |  Threshold: '+thStr(m.k,d)+'  |  P(ok)='+Math.round((d.P_s||0)*100)+'%  P(fail)='+Math.round((d.P_f||0)*100)+'%',24,y+8);
     y+=20;if(y>265){doc.addPage();doc.setFillColor(8,8,8);doc.rect(0,0,210,297,'F');y=20;}
   });
   doc.setDrawColor(40,40,40);doc.line(20,y,190,y);y+=8;
   doc.setFontSize(8);doc.setTextColor(90,90,90);
-  doc.text('Interpretation: '+(res.cv.status==='fail'||res.vc.status==='fail'?'Some metrics in warning or critical range.':'Metrics within expected ranges.'),20,y,{maxWidth:170});y+=10;
+  doc.text('Interpretation: '+(sysBad(res)?'Some metrics in warning or critical range.':'Metrics within expected ranges.'),20,y,{maxWidth:170});y+=10;
   doc.text('This report is a kinematic analysis of the bike-rider system based on FIT data. Not a medical diagnosis. © 2025 BikeLab Studio — bikelabstudio.com',20,y,{maxWidth:170});
   doc.setFillColor(200,146,42);doc.rect(0,285,210,12,'F');
   doc.setTextColor(0,0,0);doc.setFontSize(8);doc.setFont('helvetica','bold');
   doc.text('BIKELAB STUDIO — CYCLING ENGINEERING — TRUJILLO, PERU — BIKELABSTUDIO.COM',105,292,{align:'center'});
   doc.setTextColor(255,255,255);doc.setFontSize(7);doc.setFont('helvetica','normal');
-  doc.text('BLS-FIT-2025-BIKELABSTUDIO.COM',105,150,{align:'center'});
+  doc.text('BLS-FIT-2025-BIKELABSTUDIO.COM',105,281,{align:'center'});
   doc.save('BikeLab-FIT-'+(fd2.name||'report').replace(/[^a-zA-Z0-9]/g,'-')+'-'+new Date().toISOString().slice(0,10)+'.pdf');
 }
 </script>
