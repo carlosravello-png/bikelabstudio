@@ -768,7 +768,7 @@ function startAnalysis(file){
 }
 
 function parseFIT(buf){
-  // FIT reader 1.1.0 — validado contra @garmin/fitsdk 21.222.0
+  // BikeLab FIT Analyzer 2.0.0 — lector validado contra @garmin/fitsdk 21.222.0
   var dv=new DataView(buf),N=dv.byteLength;
   if(N<12)throw new Error('Invalid FIT file');
   var EPOCH=631065600,records=[],timer=[],base=0,first=true;
