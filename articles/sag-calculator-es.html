@@ -76,7 +76,7 @@
         "Calculadora de Presión Suspensión MTB",
         "Calculadora SAG Horquilla MTB"
       ],
-      "description": "Calculadora profesional de SAG para suspensiones MTB de resorte neumático. Motor de doble cámara politrópica (γ propietario) calibrado con tablas oficiales de Fox, RockShox, SR Suntour y Öhlins. 132 modelos. Validación Monte Carlo a escala. BikeLab Studio — Trujillo, Perú.",
+      "description": "Calculadora de SAG para suspensiones MTB de resorte neumático: 132 modelos (102 horquillas y 30 amortiguadores) de 16 marcas, con parámetros por modelo. Modelo de cámara positiva politrópica (γ = 1,30) resuelto por bisección, SAG en rueda con 26 curvas de leverage de cuadros y 6 genéricas, y banda de incertidumbre fija por segmento. Código abierto con verificador y DOI. BikeLab Studio — Trujillo, Perú.",
       "applicationCategory": "SportsApplication",
       "applicationSubCategory": "Bicycle Suspension Calculator",
       "operatingSystem": "Web Browser",
@@ -97,15 +97,15 @@
         "SR Suntour — 12 modelos (Epixon, Raidon, Auron, Durolux, Zeron e-MTB)",
         "Öhlins — 6 modelos (RXF32, RXF36, RXF38 m.2, TTX Air, TTX22, TTX2L)",
         "Manitou, Marzocchi, DVO, Cane Creek, X-Fusion, MRP, Formula",
-        "Modelo físico de doble cámara politrópica (γ propietario)",
-        "Calibración inversa con tablas oficiales de fabricante",
-        "Validación Monte Carlo 10.000 iteraciones por modelo",
+        "Modelo de cámara positiva politrópica (γ = 1,30)",
+        "Presión resuelta por bisección para cada peso y SAG objetivo",
+        "Banda de incertidumbre fija por segmento (±15/10/7/5 %)",
         "Cálculo de SAG de rueda real con leverage ratio",
-        "33 cuadros con curvas de leverage catalogados",
+        "26 cuadros con curva de leverage y 6 curvas genéricas por tipo de suspensión",
         "Soporte legacy: Monarch RT3, Revelation, Yari, Pike 2016-18",
         "Cobertura XC, Trail, Enduro, DH, E-MTB, Trekking"
       ],
-      "softwareVersion": "5.0",
+      "softwareVersion": "1.0.0",
       "dateCreated": "2026-02-01",
       "dateModified": "2026-02-26",
       "datePublished": "2026-02-26",
@@ -177,10 +177,14 @@
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "DOI",
-        "value": "10.5281/zenodo.20672790"
+        "value": "10.5281/zenodo.24484750"
       },
-      "citation": "Ravello Joo, C. E. (2026). BikeLab SAG Calculator (Version 1.0.0) [Software]. BikeLab Studio. https://doi.org/10.5281/zenodo.20672790",
-      "sameAs": "https://doi.org/10.5281/zenodo.20672790",
+      "citation": "Ravello Joo, C. E. (2026). BikeLab SAG Calculator (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24484751",
+      "sameAs": [
+        "https://doi.org/10.5281/zenodo.24484750",
+        "https://github.com/carlosravello-png/bikelab-sag-calculator",
+        "https://doi.org/10.5281/zenodo.20672790"
+      ],
       "usageInfo": "https://www.bikelabstudio.com/licencia.html",
       "acquireLicensePage": "https://www.bikelabstudio.com/licencia.html"
     },
