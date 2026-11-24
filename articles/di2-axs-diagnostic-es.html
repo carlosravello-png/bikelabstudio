@@ -48,7 +48,7 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "license": "https://www.bikelabstudio.com/licencia.html",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
       "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html#app",
       "name": "Herramienta de Diagnóstico Di2 y AXS",
       "alternateName": [
@@ -59,7 +59,7 @@
         "Diagnóstico Cambio Electrónico Bicicleta",
         "Árbol de Diagnóstico Di2 AXS"
       ],
-      "description": "Herramienta interactiva de diagnóstico para fallas en cambios electrónicos Shimano Di2 y SRAM AXS. Identifica fallas en capa de potencia, comunicación y mecánica mediante árbol de decisión guiado. Gratis, sin app, sin registro. BikeLab Studio — Trujillo, Perú.",
+      "description": "Árbol de decisión interactivo para fallas de cambios electrónicos Shimano Di2 (ruta de 12 velocidades y 11 velocidades con junction A) y SRAM eTap AXS de ruta y XPLR. Cada diagnóstico da el procedimiento del fabricante y enlaza el documento de Shimano o SRAM del que sale. Gratis, sin app, sin registro. BikeLab Studio — Trujillo, Perú.",
       "applicationCategory": "SportsApplication",
       "applicationSubCategory": "Bicycle Electronics Diagnostic Tool",
       "operatingSystem": "Web Browser",
@@ -73,23 +73,10 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
-      "featureList": [
-        "Diagnóstico Shimano Di2 11 velocidades",
-        "Diagnóstico Shimano Di2 12 velocidades",
-        "Diagnóstico SRAM AXS Ruta (Red, Force, Rival)",
-        "Diagnóstico SRAM AXS MTB (XX, X01, GX Eagle)",
-        "Diagnóstico de capa de potencia: batería, conectores, tensión",
-        "Diagnóstico de capa de comunicación: protocolos inalámbricos, firmware",
-        "Diagnóstico de capa mecánica: indexación, alineación, tensión de cable",
-        "Detección y reset de crash mode Di2",
-        "Guía de inspección de pogo pins y junction box",
-        "Procedimiento de factory reset de controlador AXS",
-        "Diagnóstico de patrón de cambio intermitente",
-        "Gratis — sin app ni registro requerido"
-      ],
-      "softwareVersion": "1.0",
+      "featureList": ["Diagnóstico Shimano Di2 de ruta de 12 velocidades (RD-R9250, RD-R8150, RD-R7150)", "Diagnóstico Shimano Di2 de 11 velocidades con junction A (EW-RS910, SM-EW90)", "Diagnóstico SRAM eTap AXS de ruta y XPLR (RED, Force, Rival)", "Revisión de batería y procedimiento de carga por generación", "Reset de protección del cambio por generación", "Ajuste de los cambios en modo ajuste", "Modo de cambio y cambio sincronizado", "Emparejamiento AXS, MicroAdjust, chain gap y reinicio", "Cada diagnóstico enlaza su documento fuente de Shimano o SRAM", "Gratis — sin app ni registro"],
+      "softwareVersion": "3.0.0",
       "dateCreated": "2026-03-05",
-      "dateModified": "2026-03-05",
+      "dateModified": "2026-11-24",
       "datePublished": "2026-03-05",
       "creator": {
         "@id": "https://carlosravello.com/#person"
@@ -236,10 +223,10 @@
     },
     {
       "@type": "Dataset",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
       "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html#dataset",
       "name": "Árbol de reglas de diagnóstico — Shimano Di2 y SRAM AXS",
-      "description": "Base de reglas de diagnóstico para fallas en cambios electrónicos Shimano Di2 (11 y 12 velocidades) y SRAM AXS (Road y MTB). Organizado en tres capas: potencia, comunicación y mecánica. Cubre crash mode Di2, factory reset AXS, pogo pins, junction box, firmware y patrón de cambio intermitente.",
+      "description": "Árbol de reglas de diagnóstico para fallas de cambios electrónicos Shimano Di2 (ruta de 12 velocidades y 11 velocidades con junction A) y SRAM eTap AXS de ruta y XPLR, versión 3.0.0: 7 preguntas, 30 respuestas y 22 diagnósticos, cada uno enlazado al documento de Shimano o SRAM del que sale. Código y registro de verificación: https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic",
       "url": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html",
       "inLanguage": "es",
       "temporalCoverage": "2026",
@@ -269,7 +256,7 @@
       },
       "inLanguage": "es",
       "datePublished": "2026-03-05",
-      "dateModified": "2026-03-05",
+      "dateModified": "2026-11-24",
       "mainEntity": {
         "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html#app"
       },
@@ -307,40 +294,7 @@
     {
       "@type": "FAQPage",
       "@id": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué sistemas electrónicos cubre esta herramienta de diagnóstico?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Shimano Di2 de 11 y 12 velocidades, y SRAM AXS en versiones Ruta (Red, Force, Rival) y MTB (XX, X01, GX Eagle)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué es el crash mode en Shimano Di2?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El crash mode es un estado de protección que activa el Di2 automáticamente tras detectar un impacto fuerte. El desviador deja de responder aunque la batería esté cargada. Se resuelve manteniendo presionado el botón de ajuste por 3 segundos. La herramienta te guía por el procedimiento completo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Mi cambio electrónico falla solo a veces, ¿qué lo causa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Las fallas intermitentes en Di2 y AXS casi siempre están en la capa de comunicación: batería al límite de voltaje, pogo pins oxidados, firmware desactualizado o pérdida de emparejamiento inalámbrico. La herramienta tiene un módulo específico para diagnóstico de patrón intermitente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Necesito la app E-TUBE o AXS para usar esta herramienta?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Esta herramienta funciona en el navegador sin app ni registro. Te indica cuándo necesitas abrir E-TUBE o la app AXS, pero el árbol de diagnóstico completo funciona sin ellas."
-          }
-        }
-      ]
+      "mainEntity": [{"@type": "Question", "name": "¿Qué sistemas cubre esta herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Shimano Di2 de ruta de 12 velocidades (Dura-Ace R9200, Ultegra R8100, 105 R7100), Shimano Di2 de 11 velocidades con junction A (Ultegra R8050, Dura-Ace R9150 y otros) y SRAM eTap AXS de ruta y XPLR (RED, Force, Rival). Todavía no cubre Shimano Di2 MTB de 12 velocidades, GRX Di2 de 12 velocidades ni SRAM Eagle AXS o Transmission: para esos sistemas te envía a sus manuales."}}, {"@type": "Question", "name": "¿Qué es la protección del cambio (RD protection) en Shimano Di2?", "acceptedAnswer": {"@type": "Answer", "text": "Tras un impacto fuerte, como una caída, el Di2 desconecta por un momento el motor del cambio trasero de su mecanismo para proteger el sistema, y el cambio deja de funcionar. La recuperación depende de la generación: en ruta de 12 velocidades se cambia al piñón más grande y luego al más pequeño girando la biela; en 11 velocidades se mantiene el botón de la junction A 5 segundos o más girando el plato."}}, {"@type": "Question", "name": "¿De dónde sale cada procedimiento?", "acceptedAnswer": {"@type": "Answer", "text": "De los manuales del distribuidor y de usuario de Shimano, y del manual de usuario y las páginas de soporte de SRAM. Cada diagnóstico enlaza el documento y la página de donde sale, y el registro completo de afirmaciones y fuentes es público en el repositorio de la herramienta."}}, {"@type": "Question", "name": "¿Necesito la app E-TUBE o AXS para usar esta herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "No. La herramienta funciona en el navegador sin app ni registro. Algunos procedimientos sí necesitan la app, como actualizar el firmware o reiniciar un cambio AXS, y la herramienta lo indica."}}]
     },
     {
       "@type": "HowTo",
@@ -353,32 +307,7 @@
         "currency": "USD",
         "value": "0"
       },
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": "1",
-          "name": "Identifica tu sistema",
-          "text": "Selecciona si tienes Shimano Di2 o SRAM AXS, y la versión específica (11v, 12v, Road, MTB). Esto determina el árbol de diagnóstico correcto."
-        },
-        {
-          "@type": "HowToStep",
-          "position": "2",
-          "name": "Describe el síntoma",
-          "text": "El árbol te pregunta por el síntoma exacto: no cambia, cambia solo, cambia intermitente, no responde el shifter, batería no carga. Cada síntoma abre una rama específica."
-        },
-        {
-          "@type": "HowToStep",
-          "position": "3",
-          "name": "Sigue el diagnóstico por capa",
-          "text": "La herramienta evalúa primero la capa de potencia (batería, conectores), luego comunicación (firmware, emparejamiento), luego mecánica (indexación, alineación). Cada capa tiene verificaciones guiadas."
-        },
-        {
-          "@type": "HowToStep",
-          "position": "4",
-          "name": "Aplica la solución o deriva a servicio",
-          "text": "Si la falla es resoluble en casa, la herramienta te da el procedimiento exacto. Si requiere servicio técnico certificado, te lo indica antes de que tomes decisiones que puedan agravar el problema."
-        }
-      ]
+      "step": [{"@type": "HowToStep", "position": "1", "name": "Identifica tu sistema", "text": "Elige Shimano Di2 de ruta de 12 velocidades, Shimano Di2 de 11 velocidades con junction A, o SRAM eTap AXS. Sus botones y procedimientos son distintos, así que esto define la rama."}, {"@type": "HowToStep", "position": "2", "name": "Revisa la batería", "text": "Presiona el botón que indica la herramienta y lee el LED. Con batería baja pasas directo al procedimiento de carga del fabricante."}, {"@type": "HowToStep", "position": "3", "name": "Elige el síntoma", "text": "Tras una caída, cambios ruidosos, un mando que no hace nada, batería que se descarga rápido, cambios automáticos o fallas tras actualizar el firmware o cambiar una pieza."}, {"@type": "HowToStep", "position": "4", "name": "Aplica el procedimiento o ve al taller", "text": "La herramienta da el procedimiento del fabricante y enlaza el documento del que sale, o te indica ir a un distribuidor y enlaza el servicio de la marca."}]
     }
   ]
 }
@@ -1116,13 +1045,13 @@ body {
 </a>
 
 <section class="hero" style="padding-top: calc(clamp(48px,8vh,100px) + 64px);">
-  <p class="hero-label" id="h-label">// Diagnostic Tool v1.0 — Free & Interactive</p>
+  <p class="hero-label" id="h-label">// Herramienta de Diagnóstico v3.0 — Gratis e Interactiva</p>
   <h1 class="hero-title" id="h-title">ELECTRONIC<br>SHIFTING<br><span>DIAGNOSTIC_</span></h1>
   <p class="hero-sub" id="h-sub">One question at a time. Shimano Di2 and SRAM AXS. No app required to start.</p>
   <div class="badges">
     <span class="badge di2">Shimano Di2</span>
     <span class="badge axs">SRAM AXS</span>
-    <span class="badge" id="h-badge1">Road &amp; MTB</span>
+    <span class="badge" id="h-badge1">Ruta y gravel</span>
     <span class="badge" id="h-badge2">11v &amp; 12v</span>
     <span class="badge" id="h-badge3">Free Tool</span>
   </div>
@@ -1141,47 +1070,55 @@ body {
 
   <div id="faq-en">
     <div class="faq-item">
-      <p class="faq-q">Why does electronic shifting stop responding without warning?</p>
-      <p class="faq-a">Electronic drivetrains are IoT devices on a bike. They operate across three layers: power, communication, and mechanical. The problem is rarely where it seems — a communication failure can look exactly like a mechanical one.</p>
+      <p class="faq-q">How does the tool order the checks?</p>
+      <p class="faq-a">It follows the Dynamic Coherence Model (MCD) by Carlos Ravello: power first (battery and charging), then communication (pairing, firmware), then the mechanical side (adjustment, limits). A fault in one layer can look like a fault in another, so the tool always starts with the battery.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">What are the most common Di2 and AXS failures?</p>
-      <p class="faq-a">Layer 1 (Power): dead battery, abnormal drain. Layer 2 (Communication): lost pairing, outdated firmware. Layer 3 (Mechanical): broken cable, dirty pogo pin, misaligned hanger. Most field failures are Layer 1 or 2.</p>
+      <p class="faq-q">Why does the same button do different things on different Di2 systems?</p>
+      <p class="faq-a">Each generation assigns its own functions and press times. On the 12-speed road rear derailleur, holding the function button 2–5 seconds enters adjustment mode and 5–8 seconds starts wired pairing. On 11-speed junction A with a BT-DN110 battery, 2 seconds enters adjustment mode and 5 seconds starts the RD protection reset. That is why the tool asks for your system first.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Which Di2 and AXS problems can I fix at home?</p>
-      <p class="faq-a">You can fix: charging issues, AXS re-pairing, Di2 crash mode reset, pogo pin cleaning, and derailleur hanger alignment. Do not attempt: Di2 firmware updates via Bluetooth, internal cable replacement in full-carbon frames, or junction box damage repair.</p>
+      <p class="faq-q">Which problems can I solve at home?</p>
+      <p class="faq-a">Charging, checking the battery level, the RD protection reset after a fall, the gear shifting adjustment, changing the shift mode, replacing shifter coin cells and re-pairing SRAM AXS. The tool gives the manufacturer's procedure for each one and links the document it comes from.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Why should I never update Di2 firmware over Bluetooth?</p>
-      <p class="faq-a">An interruption during the update can permanently brick the system. Shimano specifies that all firmware updates must be done via USB cable using E-TUBE PROJECT. A Di2 firmware brick cannot be recovered at home and requires authorized service.</p>
+      <p class="faq-q">Can I update Di2 firmware over Bluetooth?</p>
+      <p class="faq-a">Yes. Shimano documents firmware updates from a smartphone with E-TUBE PROJECT Cyclist over Bluetooth LE, and from a PC with E-TUBE PROJECT Professional and the SM-PCE02. It also asks you to keep E-TUBE PROJECT and every component's firmware up to date, and recommends asking the place of purchase about updates.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">When do I need to take my electronic drivetrain to a workshop?</p>
-      <p class="faq-a">When diagnostic steps don't resolve the issue, when you need a Di2 firmware update, when there's physical damage to the junction box, or when AXS doesn't respond after a factory reset. Correct home diagnosis saves you time and money at the shop.</p>
+      <p class="faq-q">Why do my AXS batteries drain in the car?</p>
+      <p class="faq-a">With the battery installed, AXS only sleeps while the bike is still and wakes as soon as it moves. SRAM recommends removing the derailleur batteries and fitting the battery blocks whenever the bike is transported.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">When should I take the bike to a workshop?</p>
+      <p class="faq-a">When the manufacturer's procedure does not recover the system, when charging fails with a suitable adapter, after a firmware problem you cannot solve with the app, or when there is physical damage. The tool tells you which case you are in and links the brand's service page.</p>
     </div>
   </div>
 
   <div id="faq-es" style="display:none">
     <div class="faq-item">
-      <p class="faq-q">¿Por qué el cambio electrónico deja de responder sin causa aparente?</p>
-      <p class="faq-a">Los cambios electrónicos son dispositivos IoT montados en una bicicleta. Operan en tres capas: energía, comunicación y mecánica. El problema casi nunca está donde parece — una falla de comunicación puede manifestarse exactamente igual que una mecánica.</p>
+      <p class="faq-q">¿En qué orden revisa la herramienta?</p>
+      <p class="faq-a">Sigue el Modelo de Coherencia Dinámica (MCD) de Carlos Ravello: primero la energía (batería y carga), luego la comunicación (emparejamiento, firmware) y después la parte mecánica (ajuste, límites). Una falla en una capa puede parecer una falla en otra, por eso la herramienta siempre empieza por la batería.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">¿Cuáles son las fallas más comunes en Shimano Di2 y SRAM AXS?</p>
-      <p class="faq-a">Capa 1 (Energía): batería sin carga, drenaje anormal. Capa 2 (Comunicación): pérdida de pairing, firmware desactualizado. Capa 3 (Mecánica): cable roto, pogo pin sucio, hanger desalineado. La mayoría de fallas de campo son capa 1 o 2.</p>
+      <p class="faq-q">¿Por qué el mismo botón hace cosas distintas en cada Di2?</p>
+      <p class="faq-a">Cada generación asigna sus propias funciones y tiempos. En el cambio trasero de ruta de 12 velocidades, mantener el botón de función 2 a 5 segundos entra al modo ajuste y 5 a 8 segundos inicia el emparejamiento por cable. En la junction A de 11 velocidades con batería BT-DN110, 2 segundos entra al modo ajuste y 5 segundos inicia el reset de protección del cambio. Por eso la herramienta pregunta primero por tu sistema.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">¿Qué problemas de Di2 y AXS puedo resolver en casa?</p>
-      <p class="faq-a">Puedes resolver: problemas de carga, re-pairing AXS, crash mode reset Di2, limpieza de pogo pins y ajuste de hanger. No debes intentar: actualizar firmware Di2 por Bluetooth, reemplazar cables internos en cuadros full-carbon, ni reparar daños en la junction box.</p>
+      <p class="faq-q">¿Qué problemas puedo resolver en casa?</p>
+      <p class="faq-a">La carga, revisar el nivel de batería, el reset de protección tras una caída, el ajuste de los cambios, cambiar el modo de cambio, reemplazar las pilas de los mandos y volver a emparejar SRAM AXS. La herramienta da el procedimiento del fabricante para cada uno y enlaza el documento del que sale.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">¿Por qué nunca debo actualizar el firmware Di2 por Bluetooth?</p>
-      <p class="faq-a">Una interrupción durante la actualización puede dejar el sistema irrecuperable (brick). Shimano especifica que las actualizaciones deben realizarse siempre por cable USB con E-TUBE PROJECT. Un brick de firmware Di2 no se puede recuperar en casa y requiere servicio técnico autorizado.</p>
+      <p class="faq-q">¿Puedo actualizar el firmware Di2 por Bluetooth?</p>
+      <p class="faq-a">Sí. Shimano documenta la actualización desde el celular con E-TUBE PROJECT Cyclist por Bluetooth LE, y desde una PC con E-TUBE PROJECT Professional y el SM-PCE02. También pide mantener al día E-TUBE PROJECT y el firmware de cada componente, y recomienda consultar al lugar de compra para las actualizaciones.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">¿Cuándo necesito llevar mi transmisión electrónica al taller?</p>
-      <p class="faq-a">Cuando el diagnóstico no resuelve el problema, cuando necesitas actualizar firmware Di2, cuando hay daño físico en la junction box, o cuando AXS no responde tras un factory reset. El diagnóstico correcto en casa te ahorra tiempo y dinero en taller.</p>
+      <p class="faq-q">¿Por qué se descargan las baterías AXS en el auto?</p>
+      <p class="faq-a">Con la batería puesta, AXS solo duerme mientras la bici está quieta y se despierta apenas se mueve. SRAM recomienda sacar las baterías de los cambios y poner los bloques de batería cada vez que se transporta la bici.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Cuándo llevo la bici al taller?</p>
+      <p class="faq-a">Cuando el procedimiento del fabricante no recupera el sistema, cuando la carga falla con un adaptador adecuado, tras un problema de firmware que no resuelves con la app, o cuando hay daño físico. La herramienta te dice en qué caso estás y enlaza el servicio de la marca.</p>
     </div>
   </div>
 </section>
@@ -1228,27 +1165,27 @@ body {
 <span class="protocol-tag" style="display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#9a9a00;margin-bottom:10px;">Protocolo_FAQ // Consultas frecuentes</span>
 <h2 style="font-size:1.25rem;margin:0 0 18px;font-weight:800;letter-spacing:-.01em;">Preguntas frecuentes</h2>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
-<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué sistemas electrónicos cubre esta herramienta de diagnóstico?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Shimano Di2 de 11 y 12 velocidades, y SRAM AXS en versiones Ruta (Red, Force, Rival) y MTB (XX, X01, GX Eagle).</p>
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué sistemas cubre esta herramienta?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Shimano Di2 de ruta de 12 velocidades (Dura-Ace R9200, Ultegra R8100, 105 R7100), Shimano Di2 de 11 velocidades con junction A (Ultegra R8050, Dura-Ace R9150 y otros) y SRAM eTap AXS de ruta y XPLR (RED, Force, Rival). Todavía no cubre Shimano Di2 MTB de 12 velocidades, GRX Di2 de 12 velocidades ni SRAM Eagle AXS o Transmission: para esos sistemas te envía a sus manuales.</p>
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
-<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué es el crash mode en Shimano Di2?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">El crash mode es un estado de protección que activa el Di2 automáticamente tras detectar un impacto fuerte. El desviador deja de responder aunque la batería esté cargada. Se resuelve manteniendo presionado el botón de ajuste por 3 segundos. La herramienta te guía por el procedimiento completo.</p>
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Qué es la protección del cambio (RD protection) en Shimano Di2?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Tras un impacto fuerte, como una caída, el Di2 desconecta por un momento el motor del cambio trasero de su mecanismo para proteger el sistema, y el cambio deja de funcionar. La recuperación depende de la generación: en ruta de 12 velocidades se cambia al piñón más grande y luego al más pequeño girando la biela; en 11 velocidades se mantiene el botón de la junction A 5 segundos o más girando el plato.</p>
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
-<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">Mi cambio electrónico falla solo a veces, ¿qué lo causa?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">Las fallas intermitentes en Di2 y AXS casi siempre están en la capa de comunicación: batería al límite de voltaje, pogo pins oxidados, firmware desactualizado o pérdida de emparejamiento inalámbrico. La herramienta tiene un módulo específico para diagnóstico de patrón intermitente.</p>
+<h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿De dónde sale cada procedimiento?</h3>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">De los manuales del distribuidor y de usuario de Shimano, y del manual de usuario y las páginas de soporte de SRAM. Cada diagnóstico enlaza el documento y la página de donde sale, y el registro completo de afirmaciones y fuentes es público en el repositorio de la herramienta.</p>
 </div>
 <div class="faq-item" style="border-top:1px solid #333;padding:14px 0;">
 <h3 class="faq-question" style="font-size:.95rem;margin:0 0 6px;font-weight:700;">¿Necesito la app E-TUBE o AXS para usar esta herramienta?</h3>
-<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">No. Esta herramienta funciona en el navegador sin app ni registro. Te indica cuándo necesitas abrir E-TUBE o la app AXS, pero el árbol de diagnóstico completo funciona sin ellas.</p>
+<p class="faq-answer" style="font-size:.85rem;line-height:1.7;color:#b5b5b5;margin:0;">No. La herramienta funciona en el navegador sin app ni registro. Algunos procedimientos sí necesitan la app, como actualizar el firmware o reiniciar un cambio AXS, y la herramienta lo indica.</p>
 </div>
 </section>
 <footer class="footer-tool">
   <div class="footer-copy">
     BikeLab Studio — Electronic Shifting Diagnostic<br>
     © 2026 Carlos Ravello — bikelabstudio.com<br>
-    <span id="f-note">Procedures based on official Shimano & SRAM documentation</span>
+    <span id="f-note">Cada diagnóstico cita el documento de Shimano o SRAM del que sale</span>
   </div>
   <div class="footer-links">
     <a href="https://www.bikelabstudio.com" id="f-home">← BikeLab Studio</a>
@@ -1258,411 +1195,37 @@ body {
 </footer>
 
 <script>
-// ─── LANGUAGE ──────────────────────────────────────────────────────────────
-let LANG = (function(){
+// BikeLab Di2/AXS Diagnostic 3.0.0 · https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic · CC BY-NC 4.0
+const TREE = {"q0":{"step":{"en":"STEP_01 / SYSTEM","es":"PASO_01 / SISTEMA","pt":"PASSO_01 / SISTEMA"},"q":{"en":"What electronic system do you have?","es":"¿Qué sistema electrónico tienes?","pt":"Qual sistema eletrônico você tem?"},"desc":{"en":"Procedures change between generations: the same button press does different things. Pick yours by where the button and the LED are.","es":"Los procedimientos cambian entre generaciones: el mismo botón hace cosas distintas. Elige la tuya según dónde están el botón y el LED.","pt":"Os procedimentos mudam entre gerações: o mesmo botão faz coisas diferentes. Escolha a sua pelo lugar onde ficam o botão e o LED."},"opts":[{"key":"A","text":{"en":"Shimano Di2 12-speed, road","es":"Shimano Di2 12 velocidades, ruta","pt":"Shimano Di2 12 velocidades, estrada"},"sub":{"en":"Dura-Ace R9200, Ultegra R8100, 105 R7100 — button and LED on the rear derailleur, wireless levers","es":"Dura-Ace R9200, Ultegra R8100, 105 R7100 — botón y LED en el cambio trasero, mandos inalámbricos","pt":"Dura-Ace R9200, Ultegra R8100, 105 R7100 — botão e LED no câmbio traseiro, alavancas sem fio"},"next":"q_s12"},{"key":"B","text":{"en":"Shimano Di2 11-speed with junction A","es":"Shimano Di2 11 velocidades con junction A","pt":"Shimano Di2 11 velocidades com junction A"},"sub":{"en":"Ultegra R8050, Dura-Ace R9150 and others — button and LEDs on junction A (bar end or under the stem)","es":"Ultegra R8050, Dura-Ace R9150 y otros — botón y LEDs en la junction A (punta del manubrio o bajo la potencia)","pt":"Ultegra R8050, Dura-Ace R9150 e outros — botão e LEDs na junction A (ponta do guidão ou sob a mesa)"},"next":"q_s11"},{"key":"C","text":{"en":"SRAM eTap AXS, road and gravel","es":"SRAM eTap AXS, ruta y gravel","pt":"SRAM eTap AXS, estrada e gravel"},"sub":{"en":"RED, Force, Rival eTap AXS and XPLR — a battery on each derailleur","es":"RED, Force, Rival eTap AXS y XPLR — una batería en cada desviador","pt":"RED, Force, Rival eTap AXS e XPLR — uma bateria em cada câmbio"},"cls":"axs-opt","next":"q_axs"},{"key":"D","text":{"en":"Another system","es":"Otro sistema","pt":"Outro sistema"},"sub":{"en":"Shimano MTB Di2 12-speed, GRX Di2 12-speed, SRAM Eagle AXS or Transmission","es":"Shimano Di2 MTB de 12 velocidades, GRX Di2 de 12 velocidades, SRAM Eagle AXS o Transmission","pt":"Shimano Di2 MTB de 12 velocidades, GRX Di2 de 12 velocidades, SRAM Eagle AXS ou Transmission"},"next":"r_other"}],"progress":5},"r_other":{"type":"limit","brand":null,"basis":"official","step":{"en":"RESULT / NOT COVERED","es":"RESULTADO / SIN COBERTURA","pt":"RESULTADO / SEM COBERTURA"},"title":{"en":"This tool does not cover your system yet","es":"Esta herramienta todavía no cubre tu sistema","pt":"Esta ferramenta ainda não cobre o seu sistema"},"desc":{"en":"Its buttons, LEDs and procedures are not the ones checked here, and a procedure from another generation can put the system in the wrong mode. Use your model's manual.","es":"Sus botones, LEDs y procedimientos no son los que se verificaron aquí, y un procedimiento de otra generación puede poner el sistema en el modo equivocado. Usa el manual de tu modelo.","pt":"Seus botões, LEDs e procedimentos não são os verificados aqui, e um procedimento de outra geração pode colocar o sistema no modo errado. Use o manual do seu modelo."},"steps":[{"en":"Shimano: the user's manual and the dealer's manual of each model are at si.shimano.com.","es":"Shimano: el manual de usuario y el manual del distribuidor de cada modelo están en si.shimano.com.","pt":"Shimano: o manual do usuário e o manual do revendedor de cada modelo estão em si.shimano.com."},{"en":"SRAM: search your model at sram.com/service, under Manuals & Documents.","es":"SRAM: busca tu modelo en sram.com/service, en Manuals & Documents.","pt":"SRAM: procure o seu modelo em sram.com/service, em Manuals & Documents."}],"sources":[{"label":"Shimano manuals","url":"https://si.shimano.com"},{"label":"SRAM service","url":"https://www.sram.com/en/service"}],"progress":100},"q_s12":{"step":{"en":"STEP_02 / DI2 12s — BATTERY","es":"PASO_02 / DI2 12v — BATERÍA","pt":"PASSO_02 / DI2 12v — BATERIA"},"q":{"en":"Press the function button on the rear derailleur once. What does its LED do?","es":"Presiona una vez el botón de función del cambio trasero. ¿Qué hace su LED?","pt":"Aperte uma vez o botão de função do câmbio traseiro. O que o LED faz?"},"desc":{"en":"A single click shows the battery level.","es":"Un clic muestra el nivel de batería.","pt":"Um clique mostra o nível da bateria."},"opts":[{"key":"A","text":{"en":"Solid or flashing green","es":"Verde fijo o intermitente","pt":"Verde fixo ou piscando"},"sub":{"en":"Battery between 26 and 100 %","es":"Batería entre 26 y 100 %","pt":"Bateria entre 26 e 100 %"},"next":"q_s12_sym"},{"key":"B","text":{"en":"Solid red","es":"Rojo fijo","pt":"Vermelho fixo"},"sub":{"en":"Battery between 1 and 25 %","es":"Batería entre 1 y 25 %","pt":"Bateria entre 1 e 25 %"},"next":"r_s12_charge"},{"key":"C","text":{"en":"Nothing lights up","es":"No se enciende nada","pt":"Nada acende"},"sub":{"en":"Battery at 0 %","es":"Batería en 0 %","pt":"Bateria em 0 %"},"next":"r_s12_charge"}],"progress":25},"r_s12_charge":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"Charge the battery through the rear derailleur","es":"Carga la batería por el cambio trasero","pt":"Carregue a bateria pelo câmbio traseiro"},"desc":{"en":"On 12-speed road Di2 the BT-DN300 battery sits inside the seatpost or the frame and is charged through the charging port on the rear derailleur, with the EW-EC300 cable.","es":"En el Di2 de ruta de 12 velocidades la batería BT-DN300 va dentro de la tija o del cuadro y se carga por el puerto de carga del cambio trasero, con el cable EW-EC300.","pt":"No Di2 de estrada de 12 velocidades a bateria BT-DN300 fica dentro do canote ou do quadro e é carregada pela porta de carga do câmbio traseiro, com o cabo EW-EC300."},"steps":[{"en":"Connect the EW-EC300 cable to the charging port on the rear derailleur, under its cover.","es":"Conecta el cable EW-EC300 al puerto de carga del cambio trasero, bajo su tapa.","pt":"Conecte o cabo EW-EC300 à porta de carga do câmbio traseiro, sob a tampa."},{"en":"Use an AC adapter with a USB port of 5.0 V DC and **at least 1.0 A**. With less current the adapter can overheat.","es":"Usa un adaptador de corriente con puerto USB de 5,0 V DC y **al menos 1,0 A**. Con menos corriente el adaptador puede recalentarse.","pt":"Use um adaptador de tomada com porta USB de 5,0 V DC e **pelo menos 1,0 A**. Com menos corrente o adaptador pode superaquecer."},{"en":"The LED stays **solid blue** while charging and **turns off** when charging is complete. Flashing red is a charging error; the manual points to too little current or a USB hub. Connect straight to an adapter of 1.0 A or more.","es":"El LED queda **azul fijo** mientras carga y **se apaga** al terminar. Rojo intermitente es un error de carga; el manual apunta a corriente insuficiente o a un hub USB. Conéctalo directo a un adaptador de 1,0 A o más.","pt":"O LED fica **azul fixo** durante a carga e **apaga** ao terminar. Vermelho piscando é erro de carga; o manual aponta corrente insuficiente ou um hub USB. Conecte direto a um adaptador de 1,0 A ou mais."},{"en":"If the battery is not full after 4 hours, stop charging.","es":"Si la batería no se llena en 4 horas, deja de cargar.","pt":"Se a bateria não estiver cheia em 4 horas, pare de carregar."},{"en":"While charging, shifting and the adjustment modes are disabled, and connecting E-TUBE PROJECT stops the charge.","es":"Mientras carga, los cambios y los modos de ajuste quedan desactivados, y conectar E-TUBE PROJECT detiene la carga.","pt":"Durante a carga, as trocas e os modos de ajuste ficam desativados, e conectar o E-TUBE PROJECT interrompe a carga."},{"en":"If the LED does not light up when the cable is connected, unplug and reconnect the adapter and charge again. If it still does not light, contact a Shimano dealer.","es":"Si el LED no enciende al conectar el cable, desconecta y vuelve a conectar el adaptador y carga otra vez. Si sigue sin encender, contacta a un distribuidor Shimano.","pt":"Se o LED não acender ao conectar o cabo, desconecte e reconecte o adaptador e carregue de novo. Se continuar apagado, procure um revendedor Shimano."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 5, 13, 51","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"},{"label":"Shimano EW-EC300","url":"https://bike.shimano.com/en-NA/products/components/pdp.P-EW-EC300.html"},{"label":"Shimano BT-DN300","url":"https://bike.shimano.com/en-NA/products/components/pdp.P-BT-DN300.html"}],"progress":100},"q_s12_sym":{"step":{"en":"STEP_03 / DI2 12s — SYMPTOM","es":"PASO_03 / DI2 12v — SÍNTOMA","pt":"PASSO_03 / DI2 12v — SINTOMA"},"q":{"en":"What exactly is failing?","es":"¿Qué es exactamente lo que falla?","pt":"O que exatamente está falhando?"},"desc":{"en":"Select the symptom that best describes your problem.","es":"Selecciona el síntoma que mejor describe tu problema.","pt":"Selecione o sintoma que melhor descreve o seu problema."},"opts":[{"key":"A","text":{"en":"The rear derailleur stopped working after a fall or a hit","es":"El cambio trasero dejó de funcionar tras una caída o un golpe","pt":"O câmbio traseiro parou depois de uma queda ou batida"},"next":"r_s12_protect"},{"key":"B","text":{"en":"Noisy or imprecise shifting, chain rubbing","es":"Cambios ruidosos o imprecisos, la cadena roza","pt":"Trocas barulhentas ou imprecisas, corrente raspando"},"next":"r_s12_adjust"},{"key":"C","text":{"en":"A lever does nothing","es":"Un mando no hace nada","pt":"Uma alavanca não faz nada"},"sub":{"en":"The derailleur battery is fine","es":"La batería del cambio está bien","pt":"A bateria do câmbio está boa"},"next":"r_s12_lever"},{"key":"D","text":{"en":"The battery runs down faster than it should","es":"La batería se descarga más rápido de lo normal","pt":"A bateria descarrega mais rápido que o normal"},"next":"r_s12_drain"},{"key":"E","text":{"en":"The front shifts by itself, or the rear moves when I shift the front","es":"El plato cambia solo, o el piñón se mueve cuando cambio adelante","pt":"A coroa troca sozinha, ou o câmbio traseiro se move quando troco na frente"},"next":"r_s12_auto"},{"key":"F","text":{"en":"It stopped working right after a firmware update or a part change","es":"Dejó de funcionar justo después de actualizar el firmware o cambiar una pieza","pt":"Parou logo depois de atualizar o firmware ou trocar uma peça"},"next":"r_s12_firmware"}],"progress":50},"r_s12_protect":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"RD protection reset","es":"Reset de la protección del cambio (RD protection)","pt":"Reset da proteção do câmbio (RD protection)"},"desc":{"en":"After a strong impact, such as a fall, the RD protection function disconnects the motor from the linkage for a moment and the rear derailleur stops working. This is Shimano's recovery procedure for this generation.","es":"Tras un impacto fuerte, como una caída, la función RD protection desconecta por un momento el motor del mecanismo y el cambio trasero deja de funcionar. Este es el procedimiento de recuperación de Shimano para esta generación.","pt":"Depois de um impacto forte, como uma queda, a função RD protection desconecta por um instante o motor do mecanismo e o câmbio traseiro para de funcionar. Este é o procedimento de recuperação da Shimano para esta geração."},"steps":[{"en":"Keep turning the crank arm during both steps.","es":"Mantén la biela girando durante los dos pasos.","pt":"Mantenha o pedivela girando durante os dois passos."},{"en":"While turning the crank, shift to the **largest** sprocket.","es":"Girando la biela, cambia al piñón **más grande**.","pt":"Girando o pedivela, troque para a catraca **maior**."},{"en":"Still turning the crank, shift to the **smallest** sprocket.","es":"Sin dejar de girar, cambia al piñón **más pequeño**.","pt":"Sem parar de girar, troque para a catraca **menor**."},{"en":"Do not hold the function button for 5 seconds or more: on this generation, 5–8 s starts wired pairing.","es":"No mantengas el botón de función 5 segundos o más: en esta generación, 5 a 8 s inicia el emparejamiento por cable.","pt":"Não segure o botão de função por 5 segundos ou mais: nesta geração, 5 a 8 s inicia o pareamento por cabo."},{"en":"If the derailleur still does not respond, take the bike to a Shimano dealer.","es":"Si el cambio sigue sin responder, lleva la bici a un distribuidor Shimano.","pt":"Se o câmbio continuar sem responder, leve a bicicleta a um revendedor Shimano."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 13, 21","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s12_adjust":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"Gear shifting adjustment in adjustment mode","es":"Ajuste de los cambios en modo ajuste","pt":"Ajuste das trocas no modo de ajuste"},"desc":{"en":"Shimano's procedure for the 12-speed rear derailleur. You turn the crank while you adjust.","es":"Procedimiento de Shimano para el cambio trasero de 12 velocidades. Se gira la biela mientras se ajusta.","pt":"Procedimento da Shimano para o câmbio traseiro de 12 velocidades. Gire o pedivela enquanto ajusta."},"steps":[{"en":"Shift to the **fifth sprocket from the largest**.","es":"Cambia al **quinto piñón contando desde el más grande**.","pt":"Troque para a **quinta catraca a partir da maior**."},{"en":"Hold the function button for **2–5 s** until the LED changes from solid blue to **solid yellow**: that is adjustment mode.","es":"Mantén el botón de función **2 a 5 s** hasta que el LED pase de azul fijo a **amarillo fijo**: ese es el modo ajuste.","pt":"Segure o botão de função por **2 a 5 s** até o LED passar de azul fixo para **amarelo fixo**: esse é o modo de ajuste."},{"en":"While turning the crank, press the shift switch that moves toward the larger sprockets until the chain touches the **fourth** sprocket and makes a subtle noise.","es":"Girando la biela, presiona el pulsador que mueve hacia los piñones grandes hasta que la cadena toque el **cuarto** piñón y haga un ruido leve.","pt":"Girando o pedivela, aperte o botão que move para as catracas maiores até a corrente tocar a **quarta** catraca e fazer um ruído leve."},{"en":"Press the opposite shift switch **5 times**: five steps toward the smallest sprocket. That is the target position. Check positions only once the derailleur has stopped: in this mode it overruns slightly to show the direction.","es":"Presiona el pulsador contrario **5 veces**: cinco pasos hacia el piñón más pequeño. Esa es la posición objetivo. Revisa la posición solo cuando el cambio se haya detenido: en este modo se pasa un poco para mostrar la dirección.","pt":"Aperte o botão oposto **5 vezes**: cinco passos em direção à catraca menor. Essa é a posição-alvo. Confira a posição só depois que o câmbio parar: neste modo ele passa um pouco para mostrar a direção."},{"en":"Hold the function button for **0.5 s or more** to return to normal mode.","es":"Mantén el botón de función **0,5 s o más** para volver al modo normal.","pt":"Segure o botão de função por **0,5 s ou mais** para voltar ao modo normal."},{"en":"Shift through every gear and check there is no noise. If needed, repeat the adjustment.","es":"Pasa por todos los cambios y comprueba que no haya ruido. Si hace falta, repite el ajuste.","pt":"Passe por todas as marchas e confira que não há ruído. Se precisar, repita o ajuste."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 32–34","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s12_lever":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"A lever does nothing: check its coin battery","es":"Un mando no hace nada: revisa su pila","pt":"Uma alavanca não faz nada: confira a pilha"},"desc":{"en":"On 12-speed road Di2 the dual control levers are wireless and run on CR1632 coin cells. Shimano rates them at 1.5 to 2 years, and says the first batteries may last less.","es":"En el Di2 de ruta de 12 velocidades los mandos son inalámbricos y funcionan con pilas de botón CR1632. Shimano les da de 1,5 a 2 años, y advierte que las primeras pilas pueden durar menos.","pt":"No Di2 de estrada de 12 velocidades as alavancas são sem fio e usam pilhas de botão CR1632. A Shimano indica de 1,5 a 2 anos, e avisa que as primeiras pilhas podem durar menos."},"steps":[{"en":"Replace the CR1632 of the lever that does not respond, following that lever's user's manual.","es":"Cambia la CR1632 del mando que no responde, siguiendo el manual de usuario de ese mando.","pt":"Troque a CR1632 da alavanca que não responde, seguindo o manual do usuário dessa alavanca."},{"en":"If it still does nothing: Shimano requires pairing after reinstalling or replacing a lever or the rear derailleur. The ST-R9270 and ST-R8170 pair wirelessly only through the E-TUBE PROJECT app.","es":"Si sigue sin hacer nada: Shimano exige emparejar después de reinstalar o cambiar un mando o el cambio trasero. Los ST-R9270 y ST-R8170 se emparejan de forma inalámbrica solo con la app E-TUBE PROJECT.","pt":"Se continuar sem funcionar: a Shimano exige parear depois de reinstalar ou trocar uma alavanca ou o câmbio traseiro. As ST-R9270 e ST-R8170 pareiam sem fio só pelo app E-TUBE PROJECT."},{"en":"If the problem stays, take the bike to a Shimano dealer.","es":"Si el problema sigue, lleva la bici a un distribuidor Shimano.","pt":"Se o problema continuar, leve a bicicleta a um revendedor Shimano."}],"sources":[{"label":"Shimano ST-R9270 (CR1632)","url":"https://bike.shimano.com/products/components/pdp.P-ST-R9270-L.html"},{"label":"Shimano DM-RARD010-08, pp. 9, 15","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s12_drain":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"Battery runs down fast: two causes Shimano documents","es":"La batería se descarga rápido: dos causas que documenta Shimano","pt":"A bateria descarrega rápido: duas causas que a Shimano documenta"},"desc":{"en":"The dealer's manual names two sources of extra consumption in this derailleur.","es":"El manual del distribuidor menciona dos fuentes de consumo extra en este cambio.","pt":"O manual do revendedor cita duas fontes de consumo extra neste câmbio."},"steps":[{"en":"**Bluetooth LE left connected.** Disconnect it when you are not using E-TUBE PROJECT Cyclist: staying connected increases battery consumption.","es":"**Bluetooth LE conectado.** Desconéctalo cuando no uses E-TUBE PROJECT Cyclist: mantenerlo conectado aumenta el consumo de batería.","pt":"**Bluetooth LE conectado.** Desconecte quando não estiver usando o E-TUBE PROJECT Cyclist: ficar conectado aumenta o consumo da bateria."},{"en":"**Low/high limits out of adjustment.** They put an undue load on the motor and make the battery level drop quickly. The limit adjustment is in the dealer's manual; if you are not sure, have it done at a shop.","es":"**Límites bajo/alto mal ajustados.** Cargan de más al motor y hacen que la batería baje rápido. El ajuste de límites está en el manual del distribuidor; si no estás seguro, hazlo en un taller.","pt":"**Limites baixo/alto desregulados.** Sobrecarregam o motor e fazem a bateria cair rápido. O ajuste dos limites está no manual do revendedor; se não tiver certeza, faça numa oficina."},{"en":"If it keeps draining with both points checked, take the bike to a Shimano dealer.","es":"Si sigue descargándose con los dos puntos revisados, lleva la bici a un distribuidor Shimano.","pt":"Se continuar descarregando com os dois pontos conferidos, leve a bicicleta a um revendedor Shimano."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 9, 34","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s12_auto":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"Gear position control and shift modes","es":"Control de posición de marchas y modos de cambio","pt":"Controle de posição das marchas e modos de troca"},"desc":{"en":"Some automatic movements are by design: the system avoids certain chainring–sprocket combinations, and in synchronized shift the front derailleur shifts on its own following the rear.","es":"Algunos movimientos automáticos son de diseño: el sistema evita ciertas combinaciones de plato y piñón, y en cambio sincronizado el desviador delantero cambia solo siguiendo al trasero.","pt":"Alguns movimentos automáticos são de projeto: o sistema evita certas combinações de coroa e catraca, e na troca sincronizada o câmbio dianteiro troca sozinho acompanhando o traseiro."},"steps":[{"en":"**Gear position control:** in some positions a front shift does not move the front derailleur; instead the rear moves two sprockets toward the largest. That is normal.","es":"**Control de posición:** en algunas posiciones, un cambio delantero no mueve el desviador; en su lugar el trasero sube dos piñones hacia el más grande. Es normal.","pt":"**Controle de posição:** em algumas posições, uma troca na frente não move o câmbio dianteiro; em vez disso o traseiro sobe duas catracas em direção à maior. É normal."},{"en":"That control depends on the components configured. If they are set wrong, select the correct combination in E-TUBE PROJECT.","es":"Ese control depende de los componentes configurados. Si están mal configurados, elige la combinación correcta en E-TUBE PROJECT.","pt":"Esse controle depende dos componentes configurados. Se estiverem errados, escolha a combinação correta no E-TUBE PROJECT."},{"en":"**Shift mode:** double-click the function button. Solid blue for 2 s = manual shift; blue flashing twice = shift mode 1; three times = shift mode 2. Each double-click moves to the next.","es":"**Modo de cambio:** doble clic en el botón de función. Azul fijo 2 s = cambio manual; azul intermitente dos veces = modo 1; tres veces = modo 2. Cada doble clic pasa al siguiente.","pt":"**Modo de troca:** clique duas vezes no botão de função. Azul fixo por 2 s = troca manual; azul piscando duas vezes = modo 1; três vezes = modo 2. Cada clique duplo passa para o próximo."},{"en":"What shift modes 1 and 2 do is set up in E-TUBE PROJECT.","es":"Lo que hacen los modos 1 y 2 se configura en E-TUBE PROJECT.","pt":"O que os modos 1 e 2 fazem é configurado no E-TUBE PROJECT."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 13–14, 22, 39–40","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s12_firmware":{"type":"limit","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 12s","es":"RESULTADO / DI2 12v","pt":"RESULTADO / DI2 12v"},"title":{"en":"After a firmware update or a part change","es":"Después de actualizar el firmware o cambiar una pieza","pt":"Depois de atualizar o firmware ou trocar uma peça"},"desc":{"en":"Shimano asks for up-to-date firmware and E-TUBE PROJECT on every component, and for pairing whenever a lever or the rear derailleur is reinstalled or replaced. Out-of-date versions can cause operating problems.","es":"Shimano pide firmware y E-TUBE PROJECT al día en todos los componentes, y emparejar cada vez que se reinstala o cambia un mando o el cambio trasero. Las versiones desactualizadas pueden causar fallas de funcionamiento.","pt":"A Shimano pede firmware e E-TUBE PROJECT atualizados em todos os componentes, e pareamento sempre que uma alavanca ou o câmbio traseiro for reinstalado ou trocado. Versões desatualizadas podem causar falhas."},"steps":[{"en":"Update E-TUBE PROJECT and the firmware of every component to the latest version, then check again.","es":"Actualiza E-TUBE PROJECT y el firmware de cada componente a la última versión, y vuelve a probar.","pt":"Atualize o E-TUBE PROJECT e o firmware de cada componente para a última versão, e teste de novo."},{"en":"If you reinstalled or replaced a lever or the derailleur, pair them again.","es":"Si reinstalaste o cambiaste un mando o el cambio, vuelve a emparejarlos.","pt":"Se reinstalou ou trocou uma alavanca ou o câmbio, pareie de novo."},{"en":"Firmware can be updated from a smartphone with E-TUBE PROJECT Cyclist over Bluetooth LE, or from a PC with E-TUBE PROJECT Professional and the SM-PCE02.","es":"El firmware se puede actualizar desde el celular con E-TUBE PROJECT Cyclist por Bluetooth LE, o desde una PC con E-TUBE PROJECT Professional y el SM-PCE02.","pt":"O firmware pode ser atualizado pelo celular com o E-TUBE PROJECT Cyclist via Bluetooth LE, ou por um PC com o E-TUBE PROJECT Professional e o SM-PCE02."},{"en":"Shimano recommends contacting the place of purchase for firmware updates. If the system still does not respond, take it to a Shimano dealer.","es":"Shimano recomienda consultar al lugar de compra para actualizar el firmware. Si el sistema sigue sin responder, llévalo a un distribuidor Shimano.","pt":"A Shimano recomenda procurar o local de compra para atualizar o firmware. Se o sistema continuar sem responder, leve a um revendedor Shimano."}],"sources":[{"label":"Shimano DM-RARD010-08, pp. 7, 9, 15, 36","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"q_s11":{"step":{"en":"STEP_02 / DI2 11s — BATTERY","es":"PASO_02 / DI2 11v — BATERÍA","pt":"PASSO_02 / DI2 11v — BATERIA"},"q":{"en":"Hold a shift switch for 0.5 s. What does the battery LED on junction A show?","es":"Mantén un pulsador de cambio 0,5 s. ¿Qué muestra el LED de batería de la junction A?","pt":"Segure um botão de troca por 0,5 s. O que mostra o LED de bateria da junction A?"},"desc":{"en":"It shows the remaining battery, then the current shift mode.","es":"Muestra la batería restante y después el modo de cambio actual.","pt":"Mostra a bateria restante e depois o modo de troca atual."},"opts":[{"key":"A","text":{"en":"Green, steady or flashing","es":"Verde, fijo o intermitente","pt":"Verde, fixo ou piscando"},"sub":{"en":"Steady = 100 %, flashing = 50 %","es":"Fijo = 100 %, intermitente = 50 %","pt":"Fixo = 100 %, piscando = 50 %"},"next":"q_s11_sym"},{"key":"B","text":{"en":"Red, steady or flashing","es":"Rojo, fijo o intermitente","pt":"Vermelho, fixo ou piscando"},"sub":{"en":"Steady = 25 %, flashing = 0 %","es":"Fijo = 25 %, intermitente = 0 %","pt":"Fixo = 25 %, piscando = 0 %"},"next":"r_s11_charge"},{"key":"C","text":{"en":"Nothing lights up","es":"No se enciende nada","pt":"Nada acende"},"next":"r_s11_charge"}],"progress":25},"r_s11_charge":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"Charge the battery through junction A","es":"Carga la batería por la junction A","pt":"Carregue a bateria pela junction A"},"desc":{"en":"With the built-in battery (BT-DN110) the SM-BCR2 charger connects to junction A. When the battery runs low the front derailleur stops first, then the rear; fully drained, the derailleurs stay in the last gear.","es":"Con la batería interna (BT-DN110) el cargador SM-BCR2 se conecta a la junction A. Cuando la batería baja, primero se detiene el desviador delantero y luego el trasero; descargada del todo, los cambios quedan en la última marcha.","pt":"Com a bateria interna (BT-DN110) o carregador SM-BCR2 se conecta à junction A. Quando a bateria fica fraca, primeiro para o câmbio dianteiro e depois o traseiro; descarregada de vez, os câmbios ficam na última marcha."},"steps":[{"en":"Connect the SM-BCR2 charging cable to the charging port on junction A, and the charger to an AC adapter with a USB port or to a PC.","es":"Conecta el cable del SM-BCR2 al puerto de carga de la junction A, y el cargador a un adaptador de corriente con puerto USB o a una PC.","pt":"Conecte o cabo do SM-BCR2 à porta de carga da junction A, e o carregador a um adaptador de tomada com porta USB ou a um PC."},{"en":"Use the USB cable supplied with the charger and an AC adapter of 5.0 V DC and at least 1.0 A. From a PC, plug straight into its USB port, not through a hub.","es":"Usa el cable USB que viene con el cargador y un adaptador de 5,0 V DC y al menos 1,0 A. Desde una PC, conéctalo directo a su puerto USB, sin hub.","pt":"Use o cabo USB que vem com o carregador e um adaptador de 5,0 V DC e pelo menos 1,0 A. Num PC, ligue direto na porta USB, sem hub."},{"en":"It takes about 1.5 h with an AC adapter and about 3 h from a PC port. Charging is complete when the orange CHARGE indicator on the charger turns off.","es":"Tarda unas 1,5 h con adaptador de corriente y unas 3 h desde el puerto de una PC. La carga termina cuando se apaga el indicador naranja CHARGE del cargador.","pt":"Leva cerca de 1,5 h com adaptador de tomada e cerca de 3 h pela porta de um PC. A carga termina quando o indicador laranja CHARGE do carregador apaga."},{"en":"If the ERROR or CHARGE indicator blinks, follow \"When charging is not possible\" in the dealer's manual, or take it to a Shimano dealer.","es":"Si parpadea el indicador ERROR o CHARGE, sigue \"When charging is not possible\" del manual del distribuidor, o llévala a un distribuidor Shimano.","pt":"Se piscar o indicador ERROR ou CHARGE, siga \"When charging is not possible\" do manual do revendedor, ou leve a um revendedor Shimano."}],"sources":[{"label":"Shimano UM-71J0B (junction A EW-RS910)","url":"https://si.shimano.com/en/pdfs/um/71J0B/UM-71J0B.pdf"},{"label":"Shimano DM-R8050-07, pp. 8, 161–162","url":"https://si.shimano.com/en/pdfs/dm/R8050/DM-R8050-07-ENG.pdf"}],"progress":100},"q_s11_sym":{"step":{"en":"STEP_03 / DI2 11s — SYMPTOM","es":"PASO_03 / DI2 11v — SÍNTOMA","pt":"PASSO_03 / DI2 11v — SINTOMA"},"q":{"en":"What exactly is failing?","es":"¿Qué es exactamente lo que falla?","pt":"O que exatamente está falhando?"},"desc":{"en":"Select the symptom that best describes your problem.","es":"Selecciona el síntoma que mejor describe tu problema.","pt":"Selecione o sintoma que melhor descreve o seu problema."},"opts":[{"key":"A","text":{"en":"The rear derailleur stopped after a fall; red LED on junction A","es":"El cambio trasero se detuvo tras una caída; LED rojo en la junction A","pt":"O câmbio traseiro parou depois de uma queda; LED vermelho na junction A"},"next":"r_s11_protect"},{"key":"B","text":{"en":"Noisy or imprecise shifting, chain rubbing","es":"Cambios ruidosos o imprecisos, la cadena roza","pt":"Trocas barulhentas ou imprecisas, corrente raspando"},"next":"r_s11_adjust"},{"key":"C","text":{"en":"The battery runs down faster than it should","es":"La batería se descarga más rápido de lo normal","pt":"A bateria descarrega mais rápido que o normal"},"next":"r_s11_drain"},{"key":"D","text":{"en":"The front derailleur shifts by itself when I shift the rear","es":"El desviador delantero cambia solo cuando cambio atrás","pt":"O câmbio dianteiro troca sozinho quando troco atrás"},"next":"r_s11_mode"},{"key":"E","text":{"en":"It stopped working after a firmware update or a part change","es":"Dejó de funcionar tras actualizar el firmware o cambiar una pieza","pt":"Parou depois de atualizar o firmware ou trocar uma peça"},"next":"r_s11_firmware"}],"progress":50},"r_s11_protect":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"RD protection reset from junction A","es":"Reset de la protección del cambio desde la junction A","pt":"Reset da proteção do câmbio pela junction A"},"desc":{"en":"After a strong impact the RD protection function disconnects the motor from the linkage. While the red LED on junction A is lit, the rear derailleur will not shift.","es":"Tras un impacto fuerte la función RD protection desconecta el motor del mecanismo. Mientras el LED rojo de la junction A esté encendido, el cambio trasero no cambia.","pt":"Depois de um impacto forte a função RD protection desconecta o motor do mecanismo. Enquanto o LED vermelho da junction A estiver aceso, o câmbio traseiro não troca."},"steps":[{"en":"Turn the front chainwheel during the whole procedure.","es":"Gira el plato durante todo el procedimiento.","pt":"Gire a coroa durante todo o procedimento."},{"en":"Hold the junction A button for **5 seconds or more** (3 seconds or more if your battery is the older SM-BTR2).","es":"Mantén el botón de la junction A **5 segundos o más** (3 segundos o más si tu batería es la antigua SM-BTR2).","pt":"Segure o botão da junction A por **5 segundos ou mais** (3 segundos ou mais se a sua bateria for a antiga SM-BTR2)."},{"en":"The red LED flashes during the reset, about 5 seconds. Keep pressing until the red LED turns off.","es":"El LED rojo parpadea durante el reset, unos 5 segundos. Sigue presionando hasta que el LED rojo se apague.","pt":"O LED vermelho pisca durante o reset, cerca de 5 segundos. Continue apertando até o LED vermelho apagar."},{"en":"If the button does not recover it, it may be possible by hand: check with the place of purchase first.","es":"Si con el botón no se recupera, puede hacerse a mano: consulta antes al lugar de compra.","pt":"Se o botão não recuperar, pode ser possível à mão: consulte antes o local de compra."}],"sources":[{"label":"Shimano UM-71J0B (junction A EW-RS910)","url":"https://si.shimano.com/en/pdfs/um/71J0B/UM-71J0B.pdf"}],"progress":100},"r_s11_adjust":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"Rear derailleur adjustment from junction A","es":"Ajuste del cambio trasero desde la junction A","pt":"Ajuste do câmbio traseiro pela junction A"},"desc":{"en":"Shimano's procedure for the 11-speed rear derailleur. You turn the crank while you adjust.","es":"Procedimiento de Shimano para el cambio trasero de 11 velocidades. Se gira la biela mientras se ajusta.","pt":"Procedimento da Shimano para o câmbio traseiro de 11 velocidades. Gire o pedivela enquanto ajusta."},"steps":[{"en":"Shift the rear derailleur to the **5th sprocket**.","es":"Pon el cambio trasero en el **5.º piñón**.","pt":"Coloque o câmbio traseiro na **5.ª catraca**."},{"en":"Hold the junction A button until the button LED lights **red**: adjustment mode (2 s or more with a BT-DN110, 0.5 s with an SM-BTR2). Do not keep holding: a longer press starts the RD protection reset.","es":"Mantén el botón de la junction A hasta que su LED se encienda en **rojo**: modo ajuste (2 s o más con BT-DN110, 0,5 s con SM-BTR2). No sigas presionando: una presión más larga inicia el reset de protección.","pt":"Segure o botão da junction A até o LED do botão acender em **vermelho**: modo de ajuste (2 s ou mais com BT-DN110, 0,5 s com SM-BTR2). Não continue segurando: uma pressão mais longa inicia o reset de proteção."},{"en":"While turning the crank, press the shift switch that moves the pulley inward until the chain touches the **4th** sprocket and makes a slight noise.","es":"Girando la biela, presiona el pulsador que mueve la roldana hacia adentro hasta que la cadena toque el **4.º** piñón y haga un ruido leve.","pt":"Girando o pedivela, aperte o botão que move a roldana para dentro até a corrente tocar a **4.ª** catraca e fazer um ruído leve."},{"en":"Press the opposite shift switch **4 times**: four steps outward. That is the target position.","es":"Presiona el pulsador contrario **4 veces**: cuatro pasos hacia afuera. Esa es la posición objetivo.","pt":"Aperte o botão oposto **4 vezes**: quatro passos para fora. Essa é a posição-alvo."},{"en":"Press the junction A button until the red LED turns off to return to shifting mode.","es":"Presiona el botón de la junction A hasta que el LED rojo se apague para volver al modo de cambio.","pt":"Aperte o botão da junction A até o LED vermelho apagar para voltar ao modo de troca."},{"en":"Shift through every gear. If some gears still do not shift, a dealer can run an error check with E-TUBE PROJECT Professional.","es":"Pasa por todas las marchas. Si algunas siguen sin entrar, un distribuidor puede hacer una revisión de errores con E-TUBE PROJECT Professional.","pt":"Passe por todas as marchas. Se algumas ainda não entrarem, um revendedor pode fazer uma verificação de erros com o E-TUBE PROJECT Professional."}],"sources":[{"label":"Shimano DM-R8050-07, pp. 138–140","url":"https://si.shimano.com/en/pdfs/dm/R8050/DM-R8050-07-ENG.pdf"},{"label":"Shimano UM-71J0B (junction A EW-RS910)","url":"https://si.shimano.com/en/pdfs/um/71J0B/UM-71J0B.pdf"}],"progress":100},"r_s11_drain":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"Battery runs down fast","es":"La batería se descarga rápido","pt":"A bateria descarrega rápido"},"desc":{"en":"Shimano documents one cause of extra consumption in this generation, and reminds that the battery wears out with use.","es":"Shimano documenta una causa de consumo extra en esta generación, y recuerda que la batería se desgasta con el uso.","pt":"A Shimano documenta uma causa de consumo extra nesta geração, e lembra que a bateria se desgasta com o uso."},"steps":[{"en":"**Bluetooth LE left connected.** Disconnect it when you are not using E-TUBE PROJECT Cyclist: using the wireless unit (EW-WU111) without disconnecting can increase battery consumption.","es":"**Bluetooth LE conectado.** Desconéctalo cuando no uses E-TUBE PROJECT Cyclist: usar la unidad inalámbrica (EW-WU111) sin desconectar puede aumentar el consumo.","pt":"**Bluetooth LE conectado.** Desconecte quando não estiver usando o E-TUBE PROJECT Cyclist: usar a unidade sem fio (EW-WU111) sem desconectar pode aumentar o consumo."},{"en":"**Battery wear.** The battery is a consumable and gradually loses capacity with repeated charging.","es":"**Desgaste de la batería.** La batería es un consumible y pierde capacidad poco a poco con las cargas.","pt":"**Desgaste da bateria.** A bateria é um item de consumo e perde capacidade aos poucos com as cargas."},{"en":"If it keeps draining, take the bike to a Shimano dealer.","es":"Si sigue descargándose, lleva la bici a un distribuidor Shimano.","pt":"Se continuar descarregando, leve a bicicleta a um revendedor Shimano."}],"sources":[{"label":"Shimano DM-R8050-07, pp. 13, 17","url":"https://si.shimano.com/en/pdfs/dm/R8050/DM-R8050-07-ENG.pdf"}],"progress":100},"r_s11_mode":{"type":"solved","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"Synchronized shift: check the shift mode","es":"Cambio sincronizado: revisa el modo de cambio","pt":"Troca sincronizada: confira o modo de troca"},"desc":{"en":"In synchronized shift the front derailleur shifts automatically following the rear. Each double-click on the junction A button switches the shift mode.","es":"En cambio sincronizado el desviador delantero cambia solo siguiendo al trasero. Cada doble clic en el botón de la junction A cambia el modo.","pt":"Na troca sincronizada o câmbio dianteiro troca sozinho acompanhando o traseiro. Cada clique duplo no botão da junction A muda o modo."},"steps":[{"en":"Double-click the junction A button and watch the LEDs.","es":"Haz doble clic en el botón de la junction A y mira los LEDs.","pt":"Clique duas vezes no botão da junction A e observe os LEDs."},{"en":"**Manual shift:** battery LED steady green and button LED steady red, 2 s.","es":"**Cambio manual:** LED de batería verde fijo y LED del botón rojo fijo, 2 s.","pt":"**Troca manual:** LED da bateria verde fixo e LED do botão vermelho fixo, 2 s."},{"en":"**Synchronized shift 1:** both flash twice. **Synchronized shift 2:** both flash three times.","es":"**Sincronizado 1:** ambos parpadean dos veces. **Sincronizado 2:** ambos parpadean tres veces.","pt":"**Sincronizada 1:** os dois piscam duas vezes. **Sincronizada 2:** os dois piscam três vezes."},{"en":"If you want each lever to move only its own derailleur, leave it in manual shift.","es":"Si quieres que cada mando mueva solo su propio cambio, déjalo en cambio manual.","pt":"Se quiser que cada alavanca mova só o seu próprio câmbio, deixe na troca manual."}],"sources":[{"label":"Shimano UM-71J0B (junction A EW-RS910)","url":"https://si.shimano.com/en/pdfs/um/71J0B/UM-71J0B.pdf"},{"label":"Shimano DM-RARD010-08, p. 40 (synchronized shift)","url":"https://si.shimano.com/en/pdfs/dm/RARD010/DM-RARD010-08-ENG.pdf"}],"progress":100},"r_s11_firmware":{"type":"limit","brand":"shimano","basis":"official","step":{"en":"RESULT / DI2 11s","es":"RESULTADO / DI2 11v","pt":"RESULTADO / DI2 11v"},"title":{"en":"After a firmware update or a part change","es":"Después de actualizar el firmware o cambiar una pieza","pt":"Depois de atualizar o firmware ou trocar uma peça"},"desc":{"en":"On wired 11-speed Di2 a reinstalled or replaced component is recognized by the system automatically. Out-of-date E-TUBE PROJECT or firmware can cause operating problems.","es":"En el Di2 de 11 velocidades con cable, el sistema reconoce solo un componente reinstalado o cambiado. Un E-TUBE PROJECT o un firmware desactualizados pueden causar fallas de funcionamiento.","pt":"No Di2 de 11 velocidades com cabo, o sistema reconhece sozinho um componente reinstalado ou trocado. E-TUBE PROJECT ou firmware desatualizados podem causar falhas."},"steps":[{"en":"If the configuration changed or something malfunctions, update the firmware of every component to the latest version with E-TUBE PROJECT, and check again.","es":"Si cambió la configuración o algo falla, actualiza el firmware de cada componente a la última versión con E-TUBE PROJECT y vuelve a probar.","pt":"Se a configuração mudou ou algo falha, atualize o firmware de cada componente para a última versão com o E-TUBE PROJECT e teste de novo."},{"en":"Shimano asks users to contact the place of purchase for firmware updates.","es":"Shimano pide consultar al lugar de compra para actualizar el firmware.","pt":"A Shimano pede procurar o local de compra para atualizar o firmware."},{"en":"If some gears still do not shift, a dealer can run an error check with E-TUBE PROJECT Professional.","es":"Si algunas marchas siguen sin entrar, un distribuidor puede hacer una revisión de errores con E-TUBE PROJECT Professional.","pt":"Se algumas marchas ainda não entrarem, um revendedor pode fazer uma verificação de erros com o E-TUBE PROJECT Professional."}],"sources":[{"label":"Shimano DM-R8050-07, pp. 13, 17, 140","url":"https://si.shimano.com/en/pdfs/dm/R8050/DM-R8050-07-ENG.pdf"},{"label":"Shimano UM-71J0B (junction A EW-RS910)","url":"https://si.shimano.com/en/pdfs/um/71J0B/UM-71J0B.pdf"}],"progress":100},"q_axs":{"step":{"en":"STEP_02 / AXS — BATTERY","es":"PASO_02 / AXS — BATERÍA","pt":"PASSO_02 / AXS — BATERIA"},"q":{"en":"Press the AXS button on the rear derailleur once. What does its LED show?","es":"Presiona una vez el botón AXS del cambio trasero. ¿Qué muestra su LED?","pt":"Aperte uma vez o botão AXS do câmbio traseiro. O que mostra o LED?"},"desc":{"en":"The LED next to the button shows the battery status as hours of riding left.","es":"El LED junto al botón muestra el estado de la batería en horas de uso restantes.","pt":"O LED ao lado do botão mostra o estado da bateria em horas de uso restantes."},"opts":[{"key":"A","text":{"en":"Green","es":"Verde","pt":"Verde"},"sub":{"en":"15–60 hours left","es":"Quedan 15–60 horas","pt":"Restam 15–60 horas"},"next":"q_axs_sym"},{"key":"B","text":{"en":"Red, or flashing red","es":"Rojo, o rojo intermitente","pt":"Vermelho, ou vermelho piscando"},"sub":{"en":"Red: 6–15 hours left · flashing: under 6","es":"Rojo: quedan 6–15 horas · intermitente: menos de 6","pt":"Vermelho: restam 6–15 horas · piscando: menos de 6"},"next":"r_axs_charge"},{"key":"C","text":{"en":"Nothing lights up","es":"No se enciende nada","pt":"Nada acende"},"next":"r_axs_dead"}],"progress":25},"r_axs_charge":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Charge the derailleur battery","es":"Carga la batería del cambio","pt":"Carregue a bateria do câmbio"},"desc":{"en":"Red means 6 to 15 hours of riding left; flashing red, less than 6.","es":"Rojo indica de 6 a 15 horas de uso restantes; rojo intermitente, menos de 6.","pt":"Vermelho indica de 6 a 15 horas de uso restantes; vermelho piscando, menos de 6."},"steps":[{"en":"Open the battery latch, take the battery out and charge it on the SRAM charger.","es":"Abre el seguro de la batería, sácala y cárgala en el cargador SRAM.","pt":"Abra a trava da bateria, retire-a e carregue no carregador SRAM."},{"en":"Put it back and close the latch.","es":"Vuelve a ponerla y cierra el seguro.","pt":"Recoloque e feche a trava."},{"en":"Out on a ride with a 2x system, SRAM suggests moving the front derailleur battery to the rear to get home with more gears.","es":"En plena salida con un sistema 2x, SRAM sugiere pasar la batería del desviador delantero al trasero para volver con más cambios.","pt":"No meio do pedal com um sistema 2x, a SRAM sugere passar a bateria do câmbio dianteiro para o traseiro para voltar com mais marchas."}],"sources":[{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"},{"label":"SRAM Rival eTap AXS guide","url":"https://www.sram.com/de/learn/rival-etap-axs-welcome-guide/be-ride-ready"}],"progress":100},"r_axs_dead":{"type":"limit","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"No LED: charge, then reboot the derailleur","es":"Sin LED: carga y luego reinicia el cambio","pt":"Sem LED: carregue e depois reinicie o câmbio"},"desc":{"en":"SRAM: if the LED does not light, the battery is dead.","es":"SRAM: si el LED no enciende, la batería está agotada.","pt":"SRAM: se o LED não acende, a bateria está descarregada."},"steps":[{"en":"If the derailleur does not wake when you move the bike, press its AXS button for two seconds or less. If that does not work, charge the battery fully on the AXS charger and try again.","es":"Si el cambio no despierta al mover la bici, presiona su botón AXS dos segundos o menos. Si no funciona, carga la batería por completo en el cargador AXS y prueba de nuevo.","pt":"Se o câmbio não acordar ao mover a bicicleta, aperte o botão AXS por dois segundos ou menos. Se não funcionar, carregue a bateria por completo no carregador AXS e teste de novo."},{"en":"Still no shifting: reboot the rear derailleur with the AXS app open. Remove the battery, press and hold the AXS button, reinstall the battery, then release the button. The LED should flash yellow and light green.","es":"Si sigue sin cambiar: reinicia el cambio trasero con la app AXS abierta. Saca la batería, mantén presionado el botón AXS, vuelve a poner la batería y suelta el botón. El LED debería parpadear en amarillo y encenderse en verde.","pt":"Se continuar sem trocar: reinicie o câmbio traseiro com o app AXS aberto. Retire a bateria, segure o botão AXS, recoloque a bateria e solte o botão. O LED deve piscar em amarelo e acender em verde."},{"en":"While it flashes, tap Tools in the app to find the derailleur. The app shows \"Recovery Required\"; complete the update to finish the reboot.","es":"Mientras parpadea, toca Tools en la app para encontrar el cambio. La app mostrará \"Recovery Required\"; completa la actualización para terminar el reinicio.","pt":"Enquanto pisca, toque em Tools no app para encontrar o câmbio. O app mostra \"Recovery Required\"; conclua a atualização para terminar o reinício."},{"en":"If none of this works, take the bike to a SRAM dealer.","es":"Si nada de esto funciona, lleva la bici a un distribuidor SRAM.","pt":"Se nada disso funcionar, leve a bicicleta a um revendedor SRAM."}],"sources":[{"label":"SRAM — AXS digital troubleshooting","url":"https://www.sram.com/en/learn/axs-digital-troubleshooting"},{"label":"SRAM support — waking AXS components","url":"https://support.sram.com/hc/en-us/articles/6030792022171"}],"progress":100},"q_axs_sym":{"step":{"en":"STEP_03 / AXS — SYMPTOM","es":"PASO_03 / AXS — SÍNTOMA","pt":"PASSO_03 / AXS — SINTOMA"},"q":{"en":"What exactly is failing?","es":"¿Qué es exactamente lo que falla?","pt":"O que exatamente está falhando?"},"desc":{"en":"Select the symptom that best describes your problem.","es":"Selecciona el síntoma que mejor describe tu problema.","pt":"Selecione o sintoma que melhor descreve o seu problema."},"opts":[{"key":"A","text":{"en":"A shifter does nothing","es":"Un mando no hace nada","pt":"Uma alavanca não faz nada"},"next":"r_axs_shifter"},{"key":"B","text":{"en":"The derailleur ignores the shifters","es":"El cambio no hace caso a los mandos","pt":"O câmbio não obedece às alavancas"},"sub":{"en":"Batteries are fine","es":"Las baterías están bien","pt":"As baterias estão boas"},"next":"r_axs_pair"},{"key":"C","text":{"en":"The rear derailleur LED blinks red and green when I shift","es":"El LED del cambio trasero parpadea rojo y verde al cambiar","pt":"O LED do câmbio traseiro pisca vermelho e verde ao trocar"},"next":"r_axs_reject"},{"key":"D","text":{"en":"Noisy or imprecise shifting","es":"Cambios ruidosos o imprecisos","pt":"Trocas barulhentas ou imprecisas"},"next":"r_axs_index"},{"key":"E","text":{"en":"The chain drops at the front","es":"La cadena se cae adelante","pt":"A corrente cai na frente"},"next":"r_axs_chain_drop"},{"key":"F","text":{"en":"Batteries run down during car trips","es":"Las baterías se descargan en los viajes en auto","pt":"As baterias descarregam nas viagens de carro"},"next":"r_axs_transport"}],"progress":50},"r_axs_shifter":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Replace the shifter's coin battery","es":"Cambia la pila del mando","pt":"Troque a pilha da alavanca"},"desc":{"en":"Press the AXS button on the shifter: the LED shows its battery (green 6–24 months, red 1–6 months, flashing red under 1 month). No light means it is out of charge. Road shifters use a CR2032.","es":"Presiona el botón AXS del mando: el LED muestra su pila (verde 6–24 meses, rojo 1–6 meses, rojo intermitente menos de 1 mes). Sin luz, está agotada. Los mandos de ruta usan CR2032.","pt":"Aperte o botão AXS da alavanca: o LED mostra a pilha (verde 6–24 meses, vermelho 1–6 meses, vermelho piscando menos de 1 mês). Sem luz, está descarregada. As alavancas de estrada usam CR2032."},"steps":[{"en":"Fold the hood cover forward.","es":"Dobla la goma del mando hacia adelante.","pt":"Dobre a capa da manopla para a frente."},{"en":"With a coin, turn the battery cover 90° counter-clockwise until it stops, and remove it.","es":"Con una moneda, gira la tapa de la pila 90° en sentido antihorario hasta el tope y sácala.","pt":"Com uma moeda, gire a tampa da pilha 90° no sentido anti-horário até o fim e retire."},{"en":"Insert a new CR2032 with the **+** side facing the cover.","es":"Coloca una CR2032 nueva con el lado **+** hacia la tapa.","pt":"Coloque uma CR2032 nova com o lado **+** voltado para a tampa."},{"en":"Refit the cover turning it 90° clockwise, and check that the o-ring sits in its groove.","es":"Vuelve a poner la tapa girándola 90° en sentido horario y comprueba que la junta tórica quede en su ranura.","pt":"Recoloque a tampa girando 90° no sentido horário e confira que o o-ring fica no canal."},{"en":"If the shifter still does not work, pair the system again.","es":"Si el mando sigue sin funcionar, vuelve a emparejar el sistema.","pt":"Se a alavanca continuar sem funcionar, pareie o sistema de novo."}],"sources":[{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"},{"label":"SRAM RED XPLR AXS guide","url":"https://sram.com/en/learn/red-xplr-axs-welcome-guide/tech-tips-and-tuning"}],"progress":100},"r_axs_pair":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Pair the AXS system again","es":"Vuelve a emparejar el sistema AXS","pt":"Pareie o sistema AXS de novo"},"desc":{"en":"SRAM: if every component has battery but shifts still do not work, re-pair. Pairing must also be repeated whenever a component is replaced, added or removed.","es":"SRAM: si todos los componentes tienen batería y aun así no cambia, vuelve a emparejar. También hay que emparejar cada vez que se cambia, agrega o quita un componente.","pt":"SRAM: se todos os componentes têm bateria e mesmo assim não troca, pareie de novo. Também é preciso parear sempre que um componente é trocado, adicionado ou removido."},"steps":[{"en":"**Rear derailleur:** press and hold the AXS button until the green LED blinks **slowly**, then release. The session times out after 30 seconds of inactivity.","es":"**Cambio trasero:** mantén presionado el botón AXS hasta que el LED verde parpadee **lento** y suelta. La sesión se cierra tras 30 segundos sin actividad.","pt":"**Câmbio traseiro:** segure o botão AXS até o LED verde piscar **devagar** e solte. A sessão expira após 30 segundos sem atividade."},{"en":"**Front derailleur (2x only):** press and hold its AXS button until the green LED blinks **quickly**, then release.","es":"**Desviador delantero (solo 2x):** mantén su botón AXS hasta que el LED verde parpadee **rápido** y suelta.","pt":"**Câmbio dianteiro (só 2x):** segure o botão AXS até o LED verde piscar **rápido** e solte."},{"en":"**Each shifter:** press and hold its AXS button until the green LED blinks **quickly**, then release.","es":"**Cada mando:** mantén su botón AXS hasta que el LED verde parpadee **rápido** y suelta.","pt":"**Cada alavanca:** segure o botão AXS até o LED verde piscar **rápido** e solte."},{"en":"Press and release the AXS button on the rear derailleur to end the session.","es":"Presiona y suelta el botón AXS del cambio trasero para cerrar la sesión.","pt":"Aperte e solte o botão AXS do câmbio traseiro para encerrar a sessão."},{"en":"Test it: the shifter LED blinks every time it sends a command.","es":"Pruébalo: el LED del mando parpadea cada vez que envía una orden.","pt":"Teste: o LED da alavanca pisca cada vez que envia um comando."}],"sources":[{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"},{"label":"SRAM — AXS digital troubleshooting","url":"https://www.sram.com/en/learn/axs-digital-troubleshooting"}],"progress":100},"r_axs_reject":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Rejected shift","es":"Cambio rechazado","pt":"Troca rejeitada"},"desc":{"en":"The red-and-green blink means the shift was rejected to protect the derailleur from damage. On 2x systems the rear derailleur also does it when you try to shift into a locked-out gear combination.","es":"El parpadeo rojo y verde significa que el cambio fue rechazado para proteger el desviador. En sistemas 2x el cambio trasero también lo hace cuando intentas entrar en una combinación de marchas bloqueada.","pt":"O pisca vermelho e verde significa que a troca foi rejeitada para proteger o câmbio. Em sistemas 2x o câmbio traseiro também faz isso quando você tenta entrar numa combinação de marchas bloqueada."},"steps":[{"en":"Choose another chainring–cog combination: the rejection is a protection, not a fault.","es":"Elige otra combinación de plato y piñón: el rechazo es una protección, no una falla.","pt":"Escolha outra combinação de coroa e catraca: a rejeição é uma proteção, não um defeito."}],"sources":[{"label":"SRAM — AXS digital troubleshooting","url":"https://www.sram.com/en/learn/axs-digital-troubleshooting"},{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"}],"progress":100},"r_axs_index":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Chain gap, then MicroAdjust","es":"Chain gap y luego MicroAdjust","pt":"Chain gap e depois MicroAdjust"},"desc":{"en":"Check the chain gap first: SRAM sets it with its gauge, not by eye.","es":"Revisa primero el chain gap: SRAM lo ajusta con su galga, no a ojo.","pt":"Confira primeiro o chain gap: a SRAM ajusta com o gabarito dela, não no olho."},"steps":[{"en":"**Chain gap:** front on the largest chainring, rear on the largest cog. Place the SRAM chain gap gauge on the upper pulley and turn the B-adjust screw to the gap the manual gives for your cassette.","es":"**Chain gap:** adelante en el plato más grande, atrás en el piñón más grande. Pon la galga SRAM de chain gap en la roldana superior y gira el tornillo B hasta el hueco que indica el manual para tu cassette.","pt":"**Chain gap:** na frente na coroa maior, atrás na catraca maior. Coloque o gabarito SRAM de chain gap na roldana superior e gire o parafuso B até a folga que o manual indica para o seu cassete."},{"en":"**MicroAdjust:** hold the AXS button on the shifter and press the shift paddle. The right shifter moves the derailleur outboard, the left one inboard, 0.25 mm per press.","es":"**MicroAdjust:** mantén el botón AXS del mando y presiona la paleta de cambio. El mando derecho mueve el cambio hacia afuera y el izquierdo hacia adentro, 0,25 mm por pulsación.","pt":"**MicroAdjust:** segure o botão AXS da alavanca e aperte a paleta de troca. A alavanca direita move o câmbio para fora e a esquerda para dentro, 0,25 mm por toque."},{"en":"Shift through every gear and repeat until it runs quiet.","es":"Pasa por todas las marchas y repite hasta que quede silencioso.","pt":"Passe por todas as marchas e repita até ficar silencioso."}],"sources":[{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"}],"progress":100},"r_axs_chain_drop":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Front chain drop: front derailleur setup","es":"La cadena se cae adelante: montaje del desviador","pt":"A corrente cai na frente: montagem do câmbio dianteiro"},"desc":{"en":"SRAM: chain drop with eTap AXS is often the result of the front derailleur being set up outside its specifications.","es":"SRAM: la caída de cadena con eTap AXS suele deberse a un desviador delantero montado fuera de sus especificaciones.","pt":"SRAM: a queda de corrente no eTap AXS costuma vir de um câmbio dianteiro montado fora das especificações."},"steps":[{"en":"Check that the **support wedge** behind the front derailleur is installed and adjusted. SRAM strongly recommends it: without it the outer limit has to compensate and the chain can drop when shifting up.","es":"Revisa que la **cuña de soporte** detrás del desviador esté instalada y ajustada. SRAM la recomienda con fuerza: sin ella el límite exterior tiene que compensar y la cadena puede caerse al subir de plato.","pt":"Confira se a **cunha de apoio** atrás do câmbio dianteiro está instalada e ajustada. A SRAM recomenda fortemente: sem ela o limite externo precisa compensar e a corrente pode cair ao subir de coroa."},{"en":"If the wedge is missing on a bike that came with eTap AXS, ask your dealer: SRAM offers a free replacement.","es":"Si falta la cuña en una bici que vino con eTap AXS, pídela a tu distribuidor: SRAM da el reemplazo gratis.","pt":"Se faltar a cunha numa bicicleta que veio com eTap AXS, peça ao revendedor: a SRAM dá a reposição grátis."},{"en":"If the chain drops inboard, adjust the low limit screw (L).","es":"Si la cadena se cae hacia adentro, ajusta el tornillo de límite bajo (L).","pt":"Se a corrente cai para dentro, ajuste o parafuso de limite baixo (L)."},{"en":"Use a road Flattop chain: those are the chains SRAM lists as compatible with eTap AXS road.","es":"Usa una cadena Flattop de ruta: son las que SRAM indica como compatibles con eTap AXS de ruta.","pt":"Use uma corrente Flattop de estrada: são as que a SRAM indica como compatíveis com o eTap AXS de estrada."},{"en":"The complete setup is in the SRAM user manual and in SRAM's chain drop troubleshooting guide.","es":"El montaje completo está en el manual de usuario de SRAM y en su guía de caída de cadena.","pt":"A montagem completa está no manual do usuário da SRAM e no guia de queda de corrente da SRAM."}],"sources":[{"label":"SRAM support — eTap AXS chain drop","url":"https://support.sram.com/hc/en-us/articles/6495179996699"},{"label":"SRAM — chain drop troubleshooting guide","url":"https://www.sram.com/en/sram/road/campaigns/troubleshooting-etap-axs-chain-drop"},{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"},{"label":"SRAM Road AXS guide","url":"https://www.sram.com/de/learn/road-axs-welcome-guide/tech-tips-and-tuning"},{"label":"SRAM support — Force AXS chains","url":"https://support.sram.com/hc/en-us/articles/36351047209627"}],"progress":100},"r_axs_transport":{"type":"solved","brand":"sram","basis":"official","step":{"en":"RESULT / AXS","es":"RESULTADO / AXS","pt":"RESULTADO / AXS"},"title":{"en":"Take the batteries out for transport","es":"Saca las baterías para transportar la bici","pt":"Tire as baterias para transportar a bicicleta"},"desc":{"en":"With the battery installed, AXS goes into power save only while the bike is still; as soon as it moves, it wakes. In a car or on a rack it can stay awake the whole trip.","es":"Con la batería puesta, AXS entra en ahorro de energía solo mientras la bici está quieta; apenas se mueve, se despierta. En el auto o en un portabicis puede quedar despierto todo el viaje.","pt":"Com a bateria instalada, o AXS entra em economia de energia só enquanto a bicicleta está parada; assim que ela se move, ele acorda. No carro ou no rack pode ficar acordado a viagem inteira."},"steps":[{"en":"SRAM: remove the derailleur batteries and fit the battery blocks whenever the bike is transported.","es":"SRAM: saca las baterías de los cambios y pon los bloques de batería cada vez que transportes la bici.","pt":"SRAM: retire as baterias dos câmbios e coloque os blocos de bateria sempre que transportar a bicicleta."},{"en":"Put the covers on the batteries while they are out.","es":"Pon las tapas a las baterías mientras estén fuera.","pt":"Coloque as tampas nas baterias enquanto estiverem fora."}],"sources":[{"label":"SRAM Road AXS and XPLR AXS User Manual","url":"https://docs.sram.com/s/RoadAXSandXPLRAXSUserManual.html"},{"label":"SRAM support — AXS batteries when travelling","url":"https://support.sram.com/hc/en-us/articles/29407870212379"}],"progress":100}};
+const UI = {"en":{"progress":"DIAGNOSTIC PROGRESS","back":"← BACK","restart":"START OVER","wa":"CONTACT BIKELAB","shimano_service":"SHIMANO SERVICE","sram_service":"SRAM SERVICE","community_note":"NOTE: this step is not in the manufacturer's documentation; it comes from the technical community. If it does not work, go to an authorized dealer.","peru":"🇵🇪 Based in Peru? Send us your diagnostic result — ","peru2":"BikeLab Studio, Trujillo.","social_cta":"Saved you time? Follow us — it's the only way to help.","social_ig":"Instagram","social_fb":"Facebook","static":{"h-label":"// Diagnostic Tool v3.0 — Free & Interactive","h-title":"ELECTRONIC<br>SHIFTING<br><span>DIAGNOSTIC_</span>","h-sub":"One question at a time. Shimano Di2 and SRAM AXS. No app required to start.","h-badge3":"Free Tool","f-note":"Each diagnosis cites the Shimano or SRAM document it comes from","f-home":"← BikeLab Studio","sag-card-title":"Suspension SAG Calculator","sag-card-desc":"Set your fork and shock sag correctly — the other key variable in bike performance.","sag-link":"CALCULATE SAG →","h-badge1":"Road & Gravel"},"solved":"✓ SOLUTION FOUND","limit":"⚠ HOME FIX LIMIT","workshop":"✕ PROFESSIONAL SERVICE REQUIRED","wa_peru":"Hi BikeLab, Di2/AXS diagnostic result: ","wa_button":"Hi BikeLab, Di2/AXS diagnostic: ","sources":"SOURCE:"},"es":{"progress":"PROGRESO DEL DIAGNÓSTICO","back":"← VOLVER","restart":"EMPEZAR DE NUEVO","wa":"CONTACTAR BIKELAB","shimano_service":"SERVICIO SHIMANO","sram_service":"SERVICIO SRAM","community_note":"NOTA: este paso no está en la documentación del fabricante; viene de la comunidad técnica. Si no funciona, ve a un distribuidor autorizado.","peru":"🇵🇪 ¿Estás en Perú? Escríbenos con el resultado de tu diagnóstico — ","peru2":"BikeLab Studio, Trujillo.","social_cta":"¿Te ahorró tiempo? Síguenos — es la única forma de ayudarnos.","social_ig":"Instagram","social_fb":"Facebook","static":{"h-label":"// Herramienta de Diagnóstico v3.0 — Gratis e Interactiva","h-title":"DIAGNÓSTICO<br>CAMBIOS<br><span>ELECTRÓNICOS_</span>","h-sub":"Una pregunta a la vez. Shimano Di2 y SRAM AXS. No necesitas la app para empezar.","h-badge3":"Herramienta Gratuita","f-note":"Cada diagnóstico cita el documento de Shimano o SRAM del que sale","f-home":"← BikeLab Studio","sag-card-title":"Calculadora de SAG para Suspensión","sag-card-desc":"Configura correctamente el SAG de tu horquilla y amortiguador — la otra variable clave del rendimiento.","sag-link":"CALCULAR SAG →","h-badge1":"Ruta y gravel"},"solved":"✓ SOLUCIÓN ENCONTRADA","limit":"⚠ LÍMITE CASERO","workshop":"✕ REQUIERE TALLER","wa_peru":"Hola BikeLab, diagnóstico Di2/AXS: ","wa_button":"Hola BikeLab, diagnóstico Di2/AXS: ","sources":"FUENTE:"},"pt":{"progress":"PROGRESSO DO DIAGNÓSTICO","back":"← VOLTAR","restart":"COMEÇAR DE NOVO","wa":"CONTATAR BIKELAB","shimano_service":"ASSISTÊNCIA SHIMANO","sram_service":"ASSISTÊNCIA SRAM","community_note":"NOTA: este passo não está na documentação do fabricante; vem da comunidade técnica. Se não funcionar, procure um revendedor autorizado.","peru":"🇵🇪 Está no Peru? Escreva para nós com o resultado do seu diagnóstico — ","peru2":"BikeLab Studio, Trujillo.","social_cta":"Te poupou tempo? Siga-nos — é a única forma de ajudar.","social_ig":"Instagram","social_fb":"Facebook","static":{"h-label":"// Ferramenta de Diagnóstico v3.0 — Grátis e Interativa","h-title":"DIAGNÓSTICO<br>CÂMBIO<br><span>ELETRÔNICO_</span>","h-sub":"Uma pergunta por vez. Shimano Di2 e SRAM AXS. Você não precisa do app para começar.","h-badge3":"Ferramenta Gratuita","f-note":"Cada diagnóstico cita o documento da Shimano ou da SRAM de onde vem","f-home":"← BikeLab Studio","sag-card-title":"Calculadora de SAG para Suspensão","sag-card-desc":"Configure corretamente o SAG do seu garfo e amortecedor — a outra variável chave do desempenho.","sag-link":"CALCULAR SAG →","h-badge1":"Estrada e gravel"},"solved":"✓ SOLUÇÃO ENCONTRADA","limit":"⚠ LIMITE CASEIRO","workshop":"✕ REQUER OFICINA","wa_peru":"Olá BikeLab, resultado do diagnóstico Di2/AXS: ","wa_button":"Olá BikeLab, diagnóstico Di2/AXS: ","sources":"FONTE:"}};
+// BikeLab Di2/AXS Diagnostic — engine.
+// TREE (src/tree.json) and UI (src/ui.json) are inserted above this code by tools/build.mjs.
+// Language: the page's <html lang> (en, es, pt-BR); ?lang=en|es|pt overrides it.
+
+let LANG = (function () {
   var p = new URLSearchParams(location.search).get('lang');
-  if (p === 'en') return 'en';
-  return 'es';
+  if (p === 'en' || p === 'es' || p === 'pt') return p;
+  var h = (document.documentElement.lang || 'en').toLowerCase();
+  if (h.indexOf('pt') === 0) return 'pt';
+  if (h.indexOf('es') === 0) return 'es';
+  return 'en';
 })();
-// Set initial button active state once DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  ['en','es'].forEach(function(lang) {
-    var btn = document.getElementById('btn-' + lang);
-    if (!btn) return;
-    btn.style.color = (lang === LANG) ? 'var(--yellow)' : 'var(--dim)';
-    btn.style.borderColor = (lang === LANG) ? 'var(--yellow)' : 'var(--border2)';
-  });
-});
 
-const T = {
-  en: {
-    progress: 'DIAGNOSTIC PROGRESS',
-    back: '← BACK',
-    restart: 'START OVER',
-    wa: 'CONTACT BIKELAB',
-    shimano_service: 'SHIMANO SERVICE',
-    sram_service: 'SRAM SERVICE',
-    community_note: 'NOTE: This procedure is not in the official manual — documented by the technical community (Reddit r/bikewrench, BikeRadar forums). It works in most cases. If it fails, go to a certified dealer.',
-    no_return: 'This problem has no documented home fix. Attempting repairs without the right tools risks further damage.',
-    peru: '🇵🇪 Based in Peru? Send us your diagnostic result — ',
-    peru2: 'BikeLab Studio, Trujillo.',
-    social_cta: 'Saved you time? Follow us — it\'s the only way to help.',
-    social_ig: 'Instagram',
-    social_fb: 'Facebook',
-  },
-  es: {
-    progress: 'PROGRESO DEL DIAGNÓSTICO',
-    back: '← VOLVER',
-    restart: 'EMPEZAR DE NUEVO',
-    wa: 'CONTACTAR BIKELAB',
-    shimano_service: 'SERVICIO SHIMANO',
-    sram_service: 'SERVICIO SRAM',
-    community_note: 'NOTA: Este procedimiento no está en el manual oficial — documentado por la comunidad técnica (Reddit r/bikewrench, foros BikeRadar). Funciona en la mayoría de casos. Si no funciona, visita un dealer certificado.',
-    no_return: 'Este problema no tiene solución casera documentada. Intentar la reparación sin herramientas profesionales puede empeorar el daño.',
-    peru: '🇵🇪 ¿Estás en Perú? Escríbenos con el resultado de tu diagnóstico — ',
-    peru2: 'BikeLab Studio, Trujillo.',
-    social_cta: '¿Te ahorró tiempo? Síguenos — es la única forma de ayudarnos.',
-    social_ig: 'Instagram',
-    social_fb: 'Facebook',
-  }
-};
-
-function t(key) { return T[LANG][key] || T.en[key]; }
-
-function setLang(l) {
-  LANG = l;
-  document.documentElement.lang = l;
-  ['en','es'].forEach(function(lang) {
-    var btn = document.getElementById('btn-' + lang);
-    if (!btn) return;
-    btn.style.color = (lang === l) ? 'var(--yellow)' : 'var(--dim)';
-    btn.style.borderColor = (lang === l) ? 'var(--yellow)' : 'var(--border2)';
-  });
-  updateStaticText();
-  restart();
-}
+function t(key) { return (UI[LANG] && UI[LANG][key]) || UI.en[key]; }
+function tx(obj) { return obj ? (obj[LANG] || obj.en) : ''; }
+function md(s) { return s.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); }
 
 function updateStaticText() {
-  const s = LANG === 'es';
-  document.getElementById('h-label').textContent = s ? '// Herramienta de Diagnóstico v1.0 — Gratis e Interactiva' : '// Diagnostic Tool v1.0 — Free & Interactive';
-  document.getElementById('h-title').innerHTML = s ? 'DIAGNÓSTICO<br>CAMBIOS<br><span>ELECTRÓNICOS_</span>' : 'ELECTRONIC<br>SHIFTING<br><span>DIAGNOSTIC_</span>';
-  document.getElementById('h-sub').textContent = s ? 'Una pregunta a la vez. Shimano Di2 y SRAM AXS. No necesitas la app para empezar.' : 'One question at a time. Shimano Di2 and SRAM AXS. No app required to start.';
-  document.getElementById('h-badge3').textContent = s ? 'Herramienta Gratuita' : 'Free Tool';
+  var st = UI[LANG].static;
+  Object.keys(st).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (id === 'h-title') el.innerHTML = st[id]; else el.textContent = st[id];
+  });
   document.getElementById('prog-label').textContent = t('progress');
-  document.getElementById('f-note').textContent = s ? 'Procedimientos basados en documentación oficial Shimano y SRAM' : 'Procedures based on official Shimano & SRAM documentation';
-  document.getElementById('f-home').textContent = s ? '← BikeLab Studio' : '← BikeLab Studio';
-  document.getElementById('faq-en').style.display = s ? 'none' : 'block';
-  document.getElementById('faq-es').style.display = s ? 'block' : 'none';
-  document.getElementById('sag-card-title').textContent = s ? 'Calculadora de SAG para Suspensión' : 'Suspension SAG Calculator';
-  document.getElementById('sag-card-desc').textContent = s ? 'Configura correctamente el SAG de tu horquilla y amortiguador — la otra variable clave del rendimiento.' : 'Set your fork and shock sag correctly — the other key variable in bike performance.';
-  document.getElementById('sag-link').textContent = s ? 'CALCULAR SAG →' : 'CALCULATE SAG →';
+  document.getElementById('faq-en').style.display = LANG === 'en' ? 'block' : 'none';
+  document.getElementById('faq-es').style.display = LANG === 'en' ? 'none' : 'block';
 }
-
-// ─── TREE ──────────────────────────────────────────────────────────────────
-const TREE = {
-  // Q0 — System select
-  q0: {
-    step: { en: 'STEP_01 / SYSTEM', es: 'PASO_01 / SISTEMA' },
-    q: { en: 'What electronic system do you have?', es: '¿Qué sistema electrónico tienes?' },
-    desc: { en: 'Select your groupset brand to get accurate procedures.', es: 'Selecciona la marca de tu grupo para obtener procedimientos exactos.' },
-    opts: [
-      { key:'A', text:{ en:'Shimano Di2', es:'Shimano Di2' }, sub:{ en:'Dura-Ace, Ultegra, 105, GRX, XTR, XT, SLX — 11v or 12v', es:'Dura-Ace, Ultegra, 105, GRX, XTR, XT, SLX — 11v o 12v' }, cls:'di2-opt', next:'q1' },
-      { key:'B', text:{ en:'SRAM AXS', es:'SRAM AXS' }, sub:{ en:'Red, Force, Rival eTap AXS — Road or MTB Eagle', es:'Red, Force, Rival eTap AXS — Ruta o MTB Eagle' }, cls:'axs-opt', next:'q1_axs' }
-    ],
-    progress: 5
-  },
-
-  // ─── DI2 BRANCH ────────────────────────────────────────────────────────
-  q1: {
-    step: { en: 'STEP_02 / DI2 — INITIAL CHECK', es: 'PASO_02 / DI2 — DIAGNÓSTICO INICIAL' },
-    q: { en: 'Any sign of life?', es: '¿Hay alguna señal de vida?' },
-    desc: { en: 'Press any shifter button or the button on the rear derailleur. Any LED, sound, or partial response?', es: 'Presiona cualquier pulsador o el botón del desviador trasero. ¿Hay algún LED, sonido o respuesta parcial?' },
-    opts: [
-      { key:'A', text:{ en:'Yes — LED on, some shifts work, or partial response', es:'Sí — LED encendido, algunos cambios funcionan, o respuesta parcial' }, next:'q2_di2' },
-      { key:'B', text:{ en:'No — Completely dead, zero response', es:'No — Todo muerto, cero respuesta' }, next:'q_di2_dead' }
-    ],
-    progress: 20
-  },
-
-  q_di2_dead: {
-    step: { en: 'STEP_03 / DI2 — DEAD SYSTEM', es: 'PASO_03 / DI2 — SISTEMA MUERTO' },
-    q: { en: 'Where is your battery?', es: '¿Dónde está tu batería?' },
-    desc: { en: 'Di2 12v: built into the seatpost (BT-DN300). Di2 11v: in the seatpost or frame (BT-DN110). Location affects the reset procedure.', es: 'Di2 12v: integrada en el tija de sillín (BT-DN300). Di2 11v: en la tija o el cuadro (BT-DN110). Esto afecta el procedimiento.' },
-    opts: [
-      { key:'A', text:{ en:'12v — Battery in seatpost (slide-out)', es:'12v — Batería en tija (deslizable)' }, next:'q_di2_charge' },
-      { key:'B', text:{ en:'11v — Battery in seatpost or frame (push-button)', es:'11v — Batería en tija o cuadro (botón)' }, next:'q_di2_charge' },
-      { key:'C', text:{ en:'Not sure', es:'No estoy seguro' }, next:'q_di2_charge' }
-    ],
-    progress: 35
-  },
-
-  q_di2_charge: {
-    step: { en: 'STEP_04 / DI2 — BATTERY', es: 'PASO_04 / DI2 — BATERÍA' },
-    q: { en: 'Remove and reconnect the battery. Press the RD button for 5 sec. Any LED?', es: 'Retira y reconecta la batería. Presiona el botón del RD 5 seg. ¿Hay LED?' },
-    desc: { en: 'Remove the battery fully, wait 30 seconds, reinstall. Then press the rear derailleur button (or Junction A on 11v) for 5–10 seconds.', es: 'Retira la batería completamente, espera 30 segundos, reinstala. Luego presiona el botón del desviador trasero (o Junction A en 11v) 5–10 segundos.' },
-    opts: [
-      { key:'A', text:{ en:'Yes — LED appeared after reconnecting', es:'Sí — Apareció LED al reconectar' }, next:'q2_di2' },
-      { key:'B', text:{ en:'No LED at all — tried charging for 1+ hour', es:'Ningún LED — intenté cargar 1+ hora' }, next:'r_di2_battery_dead' },
-      { key:'C', text:{ en:'Red LED solid or rapid red blink', es:'LED rojo fijo o parpadeo rojo rápido' }, next:'r_di2_charge_now' }
-    ],
-    progress: 50
-  },
-
-  q2_di2: {
-    step: { en: 'STEP_03 / DI2 — SYMPTOM', es: 'PASO_03 / DI2 — SÍNTOMA' },
-    q: { en: 'What exactly is failing?', es: '¿Qué exactamente está fallando?' },
-    desc: { en: 'Select the symptom that best describes your problem.', es: 'Selecciona el síntoma que mejor describe el problema.' },
-    opts: [
-      { key:'A', text:{ en:'Shifting fails under load or on climbs', es:'Los cambios fallan bajo carga o en cuestas' }, sub:{ en:'Works on the flat, fails when pedaling hard', es:'Funciona en llano, falla pedalando fuerte' }, next:'r_di2_synchro' },
-      { key:'B', text:{ en:'Battery drains too fast', es:'La batería se descarga demasiado rápido' }, sub:{ en:'100% to dead in days without riding', es:'De 100% a vacía en días sin pedalear' }, next:'r_di2_drain' },
-      { key:'C', text:{ en:'System crashed after impact', es:'Sistema bloqueado tras un golpe' }, sub:{ en:'Fell or hit something, now won\'t shift', es:'Caída o golpe, ahora no cambia' }, next:'r_di2_crash' },
-      { key:'D', text:{ en:'Shifter not responding or needs hard press', es:'Pulsador no responde o requiere presión fuerte' }, sub:{ en:'One or both sides intermittent or sticky', es:'Uno o ambos lados intermitente o pegajoso' }, next:'r_di2_shifter' },
-      { key:'E', text:{ en:'Indexing off — noisy, imprecise, chain rubs', es:'Indexing desajustado — ruidoso, impreciso, roce de cadena' }, next:'r_di2_index' },
-      { key:'F', text:{ en:'Firmware update failed / system unresponsive after update', es:'Actualización de firmware fallida / sistema muerto tras update' }, next:'r_di2_brick' }
-    ],
-    progress: 40
-  },
-
-  // ─── AXS BRANCH ────────────────────────────────────────────────────────
-  q1_axs: {
-    step: { en: 'STEP_02 / AXS — INITIAL CHECK', es: 'PASO_02 / AXS — DIAGNÓSTICO INICIAL' },
-    q: { en: 'Any sign of life?', es: '¿Hay alguna señal de vida?' },
-    desc: { en: 'Press the AXS button on the rear derailleur for 1 second. Any LED response?', es: 'Presiona el botón AXS del desviador trasero 1 segundo. ¿Hay respuesta LED?' },
-    opts: [
-      { key:'A', text:{ en:'Yes — LED lights up or partial function', es:'Sí — LED enciende o función parcial' }, next:'q2_axs' },
-      { key:'B', text:{ en:'No — Completely dead', es:'No — Todo muerto' }, next:'q_axs_dead' }
-    ],
-    progress: 20
-  },
-
-  q_axs_dead: {
-    step: { en: 'STEP_03 / AXS — DEAD SYSTEM', es: 'PASO_03 / AXS — SISTEMA MUERTO' },
-    q: { en: 'Remove the derailleur battery and do a hard reset', es: 'Retira la batería del desviador y haz un hard reset' },
-    desc: { en: 'Official SRAM procedure: Remove battery → wait 15 seconds → press AXS button without battery to drain residual energy → reinstall charged battery.', es: 'Procedimiento oficial SRAM: Retira la batería → espera 15 segundos → presiona el botón AXS sin batería para drenar energía residual → reinstala batería cargada.' },
-    opts: [
-      { key:'A', text:{ en:'Done — LED appeared after reinstalling', es:'Hecho — Apareció LED al reinstalar' }, next:'q2_axs' },
-      { key:'B', text:{ en:'Still nothing after hard reset', es:'Sigue sin respuesta tras el hard reset' }, next:'r_axs_battery_check' }
-    ],
-    progress: 40
-  },
-
-  q2_axs: {
-    step: { en: 'STEP_03 / AXS — SYMPTOM', es: 'PASO_03 / AXS — SÍNTOMA' },
-    q: { en: 'What exactly is failing?', es: '¿Qué exactamente está fallando?' },
-    desc: { en: 'Select the symptom that best describes your problem.', es: 'Selecciona el síntoma que mejor describe el problema.' },
-    opts: [
-      { key:'A', text:{ en:'Pairing lost — shifter not talking to derailleur', es:'Pairing perdido — pulsador no comunica con desviador' }, sub:{ en:'LED blinks strangely, won\'t shift despite battery OK', es:'LED parpadea raro, no cambia aunque batería OK' }, next:'r_axs_pair' },
-      { key:'B', text:{ en:'Shifter dead or unresponsive', es:'Pulsador muerto o sin respuesta' }, sub:{ en:'One or both levers do nothing', es:'Una o ambas palancas no hacen nada' }, next:'r_axs_shifter' },
-      { key:'C', text:{ en:'Battery drains too fast or false low reading', es:'Batería drena rápido o lectura falsa de baja' }, next:'r_axs_drain' },
-      { key:'D', text:{ en:'Chain drops when shifting to large chainring', es:'Cadena cae al cambiar al plato grande' }, sub:{ en:'Common on Force/Rival 1st gen', es:'Común en Force/Rival 1ª gen' }, next:'r_axs_chain_drop' },
-      { key:'E', text:{ en:'Shifting imprecise, skipping, or noisy', es:'Cambios imprecisos, salta o ruidoso' }, next:'r_axs_index' },
-      { key:'F', text:{ en:'Oil leak from rear derailleur pivot', es:'Fuga de aceite en el pivote del desviador trasero' }, sub:{ en:'Oily residue, chain noise, Red/Force only', es:'Residuo aceitoso, ruido cadena, solo Red/Force' }, next:'r_axs_orbit' }
-    ],
-    progress: 40
-  },
-
-  // ─── DI2 RESULTS ──────────────────────────────────────────────────────
-  r_di2_charge_now: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Battery low — charge now', es: 'Batería baja — carga ahora' },
-    desc: { en: 'Red LED = battery depleted. This is normal. Charge with the standard USB charger for 1–3 hours until LED turns green.', es: 'LED rojo = batería agotada. Esto es normal. Carga con el cargador USB estándar 1–3 horas hasta que el LED sea verde.' },
-    steps: [
-      { en: 'Connect battery charger (SM-BCR2 for 11v, or USB-C seatpost cable for 12v)', es: 'Conecta el cargador de batería (SM-BCR2 para 11v, o cable USB-C de tija para 12v)' },
-      { en: 'Charge until LED solid green (1–3 hours depending on depletion)', es: 'Carga hasta LED verde sólido (1–3 horas según nivel de agotamiento)' },
-      { en: 'Reconnect battery and press shifter 3–5 times quickly to wake up the system', es: 'Reconecta la batería y presiona el pulsador 3–5 veces rápido para despertar el sistema' },
-      { en: 'If system doesn\'t wake up after full charge — proceed to next issue', es: 'Si el sistema no despierta tras carga completa — continúa al siguiente problema' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_di2_battery_dead: {
-    type: 'workshop',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Battery likely failed or internal cable issue', es: 'Batería probablemente fallida o problema de cable interno' },
-    desc: { en: 'No response after charge and reset indicates a failed battery or disconnected internal cable — both require professional diagnosis.', es: 'Sin respuesta tras carga y reset indica batería fallida o cable interno desconectado — ambos requieren diagnóstico profesional.' },
-    steps: [],
-    official: true,
-    progress: 100
-  },
-
-  r_di2_synchro: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Disable Synchro Shift mode', es: 'Desactiva el modo Synchro Shift' },
-    desc: { en: 'Synchro Shift can reject commands under load. Disable it via E-Tube app or directly on the bike.', es: 'Synchro Shift puede rechazar comandos bajo carga. Desactívalo vía app E-Tube o directamente en la bici.' },
-    steps: [
-      { en: 'Option A (with app): Open E-Tube Cyclist → My Bike → Shift Mode → select Manual or Semi-Synchro', es: 'Opción A (con app): Abre E-Tube Cyclist → Mi Bici → Modo de cambio → selecciona Manual o Semi-Synchro' },
-      { en: 'Option B (without app): Hold the RD button for 0.5–2 seconds until LED blinks blue — this temporarily enters manual mode', es: 'Opción B (sin app): Mantén el botón RD 0.5–2 segundos hasta que LED parpadee azul — entra temporalmente en modo manual' },
-      { en: 'Test: shift through all gears under moderate load on a climb', es: 'Prueba: cambia por todos los piñones bajo carga moderada en una cuesta' },
-      { en: 'Also check: L/H limit screws — if too tight, loosen 1/4 turn each', es: 'Verifica también: tornillos límite L/H — si están muy apretados, afloja 1/4 vuelta' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_di2_drain: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Phantom battery drain — known issue on Di2 11v with EW-WU111', es: 'Drenaje fantasma — problema conocido en Di2 11v con EW-WU111' },
-    desc: { en: 'The Bluetooth module (EW-WU111) on 11v can stay awake, draining the battery in days. Isolate the faulty component.', es: 'El módulo Bluetooth (EW-WU111) en 11v puede quedarse activo, drenando la batería en días. Aísla el componente defectuoso.' },
-    steps: [
-      { en: 'Charge battery to 100%', es: 'Carga la batería al 100%' },
-      { en: 'Disconnect one component from the E-Tube network each day (start with EW-WU111 if present)', es: 'Desconecta un componente de la red E-Tube cada día (empieza por el EW-WU111 si lo tienes)' },
-      { en: 'Check charge each morning — the disconnected component that stops the drain is the cause', es: 'Revisa la carga cada mañana — el componente desconectado que detiene el drenaje es el causante' },
-      { en: 'Also: Disable Bluetooth in E-Tube app when not in use. Loosen L/H limits 1/4 turn (tight limits = motor overworks)', es: 'También: Desactiva Bluetooth en app E-Tube cuando no uses. Afloja límites L/H 1/4 vuelta (límites apretados = motor trabaja de más)' },
-      { en: 'If drain continues after isolation test — faulty cable or component requires professional diagnosis with SM-PCE02', es: 'Si el drenaje continúa tras el test de aislamiento — cable o componente defectuoso requiere diagnóstico con SM-PCE02' }
-    ],
-    official: false,
-    progress: 100
-  },
-
-  r_di2_crash: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Crash Recovery mode — system self-locked after impact', es: 'Modo Crash Recovery — sistema bloqueado tras impacto' },
-    desc: { en: 'Di2 has a safety mechanism that disconnects the motor servo after impact. Follow these steps to re-engage it.', es: 'Di2 tiene un mecanismo de seguridad que desconecta el servo motor tras un impacto. Sigue estos pasos para reactivarlo.' },
-    steps: [
-      { en: 'Place bike in a stand. Keep the cranks turning slowly throughout the process', es: 'Pon la bici en el soporte. Mantén las bielas girando lentamente durante todo el proceso' },
-      { en: 'Hold the RD button (or Junction A on 11v) until the RED LED blinks (approx. 5 seconds)', es: 'Mantén presionado el botón del RD (o Junction A en 11v) hasta que el LED ROJO parpadee (aprox. 5 segundos)' },
-      { en: 'Release the button. The derailleur will sweep through all gears automatically', es: 'Suelta el botón. El desviador hará un barrido por todos los piñones automáticamente' },
-      { en: 'When sweep completes, LED turns off. Test shifting normally', es: 'Cuando el barrido termine, el LED se apaga. Prueba los cambios normalmente' }
-    ],
-    official: false,
-    community: true,
-    progress: 100
-  },
-
-  r_di2_shifter: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Sticky or unresponsive shifter', es: 'Pulsador pegajoso o sin respuesta' },
-    desc: { en: 'Buttons can get sticky from sweat, rain, or dust. Before assuming internal failure, try cleaning.', es: 'Los botones pueden pegarse por sudor, lluvia o polvo. Antes de asumir falla interna, prueba a limpiar.' },
-    steps: [
-      { en: 'Clean buttons with dry cloth. Use compressed air if available. Do NOT use liquid cleaners', es: 'Limpia los botones con trapo seco. Usa aire comprimido si tienes. NO uses limpiadores líquidos' },
-      { en: 'Press the sticky button 20–30 times firmly to "unstick" it', es: 'Presiona el botón pegajoso 20–30 veces con firmeza para "despegarlo"' },
-      { en: 'Check E-Tube connector: press firmly with TL-EW02 tool (or gentle thumb pressure) — vibration can partially disconnect it', es: 'Verifica el conector E-Tube: presiona firmemente con herramienta TL-EW02 (o presión suave del pulgar) — la vibración puede desconectarlo parcialmente' },
-      { en: 'If problem persists after cleaning — internal PCB failure. Requires replacement', es: 'Si el problema persiste tras limpiar — fallo interno de PCB. Requiere reemplazo' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_di2_index: {
-    type: 'solved',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Indexing adjustment — on-bike without app', es: 'Ajuste de indexing — en la bici sin app' },
-    desc: { en: 'Official Di2 micro-adjustment procedure. Shift to the 5th largest sprocket first.', es: 'Procedimiento oficial de micro-ajuste Di2. Primero cambia al 5º piñón más grande.' },
-    steps: [
-      { en: 'Shift chain to the 5th largest sprocket', es: 'Cambia la cadena al 5º piñón más grande' },
-      { en: 'Press and hold RD button until YELLOW LED lights solid — you are now in adjustment mode', es: 'Mantén presionado el botón del RD hasta que el LED AMARILLO se encienda fijo — estás en modo ajuste' },
-      { en: 'Use right shifter: one button moves derailleur 0.2mm inward, other moves 0.2mm outward', es: 'Usa el pulsador derecho: un botón mueve el desviador 0.2mm hacia adentro, el otro 0.2mm hacia afuera' },
-      { en: 'Adjust inward until you hear chain rub on 4th sprocket, then back out 4 clicks to center', es: 'Ajusta hacia adentro hasta escuchar roce en el 4º piñón, luego 4 clics hacia afuera para centrar' },
-      { en: 'Press RD button again until YELLOW LED turns off — adjustment saved', es: 'Presiona el botón RD nuevamente hasta que LED AMARILLO se apague — ajuste guardado' },
-      { en: 'Test all gears. Repeat if needed', es: 'Prueba todos los piñones. Repite si es necesario' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_di2_brick: {
-    type: 'workshop',
-    step: { en: 'RESULT / DI2', es: 'RESULTADO / DI2' },
-    title: { en: 'Firmware brick — no home fix possible', es: 'Brick de firmware — no hay solución casera' },
-    desc: { en: 'A failed Bluetooth firmware update corrupts the EPROM memory. Recovery requires a wired connection to a PC using the SM-PCE02 tool — Shimano dealer equipment only.', es: 'Una actualización de firmware fallida por Bluetooth corrompe la memoria EPROM. La recuperación requiere conexión por cable a una PC con la herramienta SM-PCE02 — equipo exclusivo de dealers Shimano.' },
-    steps: [],
-    official: true,
-    prevention: { en: 'Prevention: NEVER update Di2 firmware via Bluetooth. Always use a wired connection with SM-PCE02 when available.', es: 'Prevención: NUNCA actualices firmware Di2 por Bluetooth. Usa siempre conexión por cable con SM-PCE02 cuando esté disponible.' },
-    progress: 100
-  },
-
-  // ─── AXS RESULTS ──────────────────────────────────────────────────────
-  r_axs_battery_check: {
-    type: 'workshop',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'Battery or pogo pin issue — check before going to service', es: 'Problema de batería o pogo pin — verifica antes de ir al servicio' },
-    desc: { en: 'After a full hard reset with no response, the issue is either a dead battery, a broken pogo pin, or an internal component failure.', es: 'Tras un hard reset completo sin respuesta, el problema es batería muerta, pogo pin roto o fallo interno de componente.' },
-    steps: [
-      { en: 'Try a different known-good AXS battery if available', es: 'Prueba con otra batería AXS que funcione, si tienes' },
-      { en: 'Inspect the pogo pin (small spring-loaded pin on the derailleur): if collapsed or broken, it cannot be repaired at home', es: 'Inspecciona el pogo pin (pequeño pin con resorte en el desviador): si está hundido o roto, no se puede reparar en casa' },
-      { en: 'If battery swap doesn\'t help — warranty claim or professional service required', es: 'Si cambiar la batería no ayuda — reclamación de garantía o servicio profesional requerido' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_axs_pair: {
-    type: 'solved',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'Re-pair AXS components — official procedure without app', es: 'Re-emparejar componentes AXS — procedimiento oficial sin app' },
-    desc: { en: 'The rear derailleur is always the master. Start pairing from there. Turn off WiFi and other Bluetooth devices nearby to reduce interference.', es: 'El desviador trasero siempre es el maestro. Empieza el pairing desde ahí. Apaga WiFi y otros dispositivos Bluetooth cercanos para reducir interferencias.' },
-    steps: [
-      { en: 'Start pairing session: Hold AXS button on rear derailleur until GREEN LED blinks slowly. Release. (Session expires in 30 sec)', es: 'Inicia sesión de pairing: Mantén botón AXS en desviador trasero hasta LED VERDE parpadee lento. Suelta. (Sesión expira en 30 seg)' },
-      { en: 'For 2x systems: Hold AXS button on front derailleur until GREEN LED blinks fast. Release', es: 'Para sistemas 2x: Mantén botón AXS en desviador delantero hasta LED VERDE parpadee rápido. Suelta' },
-      { en: 'Pair right shifter: Hold AXS button inside right lever until GREEN LED blinks fast. Release', es: 'Empareja pulsador derecho: Mantén botón AXS dentro de la palanca derecha hasta LED VERDE parpadee rápido. Suelta' },
-      { en: 'Pair left shifter: Repeat step 3 with left lever', es: 'Empareja pulsador izquierdo: Repite paso 3 con palanca izquierda' },
-      { en: 'Close session: Press and release AXS button on rear derailleur once. LED stops blinking', es: 'Cierra sesión: Presiona y suelta botón AXS del desviador trasero una vez. LED deja de parpadear' },
-      { en: 'Test: press a shifter — RD LED should blink when receiving command', es: 'Prueba: presiona un pulsador — LED del RD debe parpadear al recibir comando' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_axs_shifter: {
-    type: 'solved',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'Dead AXS shifter — CR2032 battery', es: 'Pulsador AXS muerto — batería CR2032' },
-    desc: { en: 'AXS shifters run on a CR2032 coin cell battery. This is the most common cause of a dead lever.', es: 'Los pulsadores AXS funcionan con una pila de botón CR2032. Es la causa más frecuente de una palanca muerta.' },
-    steps: [
-      { en: 'Open the shifter battery cover with a coin (turn counterclockwise)', es: 'Abre la tapa de la pila del pulsador con una moneda (gira en sentido antihorario)' },
-      { en: 'Replace CR2032 (available at pharmacies and electronics stores, ~$1–2)', es: 'Reemplaza la CR2032 (disponible en farmacias y tiendas de electrónica, ~S/5)' },
-      { en: 'If new battery also fails: use a small precision flathead screwdriver to VERY gently lift the contact tabs ~1mm upward to restore spring tension', es: 'Si la pila nueva también falla: usa un destornillador de precisión plano para levantar MUY suavemente las pestañas de contacto ~1mm para restaurar la tensión' },
-      { en: 'Re-pair the shifter following the pairing procedure', es: 'Vuelve a emparejar el pulsador siguiendo el procedimiento de pairing' },
-      { en: 'WARNING: If you over-bend and break the contact tabs — the shifter needs replacement', es: 'ADVERTENCIA: Si doblas demasiado y rompes las pestañas de contacto — el pulsador necesita reemplazo' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_axs_drain: {
-    type: 'solved',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'AXS battery drain — transport accelerometer issue', es: 'Drenaje AXS — problema del acelerómetro en transporte' },
-    desc: { en: 'AXS derailleurs have internal accelerometers. Car vibration triggers them and "wakes" the motors continuously, draining batteries on transport.', es: 'Los desviadores AXS tienen acelerómetros internos. Las vibraciones del coche los activan y "despiertan" los motores continuamente, drenando baterías en transporte.' },
-    steps: [
-      { en: 'Transport fix: ALWAYS remove AXS batteries before loading the bike on a car rack or vehicle. Replace the red protective caps on terminals', es: 'Fix para transporte: SIEMPRE retira las baterías AXS antes de cargar la bici en portabicicletas o vehículo. Pon las tapas rojas protectoras en los terminales' },
-      { en: 'False low reading fix: Charge for 1 hour → remove battery 30 sec → reinstall → update firmware in AXS app', es: 'Fix para lectura falsa: Carga 1 hora → retira batería 30 seg → reinstala → actualiza firmware en app AXS' },
-      { en: 'If battery won\'t hold charge even in static storage — battery is degraded, needs replacement', es: 'Si la batería no retiene carga incluso guardada estática — batería degradada, necesita reemplazo' }
-    ],
-    official: false,
-    community: true,
-    progress: 100
-  },
-
-  r_axs_chain_drop: {
-    type: 'solved',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'Chain drop to large chainring — Force/Rival 1st gen known issue', es: 'Caída de cadena al plato grande — problema conocido Force/Rival 1ª gen' },
-    desc: { en: 'This is a documented design tolerance issue in early Force and Rival eTap AXS. The red adjustment wedge and High limit are the fix.', es: 'Es un problema documentado de tolerancias de diseño en Force y Rival eTap AXS primeras generaciones. La cuña roja y el límite High son la solución.' },
-    steps: [
-      { en: 'Install the SRAM red adjustment wedge (included in box or available from SRAM dealer) — this is mandatory for 1st gen Force/Rival', es: 'Instala la cuña roja de ajuste SRAM (incluida en la caja o disponible en dealer SRAM) — obligatoria para Force/Rival 1ª gen' },
-      { en: 'Adjust High-Limit (H) screw: maximum 0.5mm chain clearance from the chainring', es: 'Ajusta el tornillo High-Limit (H): máximo 0.5mm de holgura entre cadena y plato' },
-      { en: 'Check chainring inner bolt rotation: align the position mark with the crank spider — incorrect rotation from factory causes this', es: 'Verifica la rotación del perno interno del plato: alinea la marca de posición con la araña de la biela — la rotación incorrecta de fábrica causa esto' },
-      { en: 'If using original SRAM chain: replace with KMC chain — many users report this resolves the issue completely', es: 'Si usas cadena original SRAM: reemplaza con cadena KMC — muchos usuarios reportan que esto lo resuelve completamente' },
-      { en: 'If chain drop continues after all adjustments — derailleur cage may be twisted from a previous chain jam. Needs inspection', es: 'Si la cadena sigue cayendo tras todos los ajustes — la jaula del desviador puede estar torcida por un atasco previo. Necesita inspección' }
-    ],
-    official: false,
-    community: true,
-    progress: 100
-  },
-
-  r_axs_index: {
-    type: 'solved',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'AXS micro-adjustment — on-bike without app', es: 'Micro-ajuste AXS — en la bici sin app' },
-    desc: { en: 'First clean the chain and cassette with a dry cloth. Dirty drivetrain mimics indexing problems.', es: 'Primero limpia la cadena y el cassette con un trapo seco. La transmisión sucia imita problemas de indexing.' },
-    steps: [
-      { en: 'Clean chain and cassette with dry cloth (remove gross dirt first)', es: 'Limpia la cadena y cassette con trapo seco (elimina la suciedad gruesa primero)' },
-      { en: 'On-bike micro-adjust: Press AXS button on RD until LED blinks → use shifter buttons to move derailleur +/- in small increments', es: 'Micro-ajuste en bici: Presiona botón AXS en RD hasta LED parpadee → usa botones del pulsador para mover desviador +/- en pequeños incrementos' },
-      { en: 'Adjust B-screw for 5–7mm gap between guide pulley and largest sprocket (use a finger as gauge)', es: 'Ajusta el tornillo B para 5–7mm de holgura entre la polea guía y el piñón más grande (usa un dedo como medida)' },
-      { en: 'If skipping persists after adjustment: check derailleur hanger — if bent, indexing cannot be corrected without replacing it', es: 'Si el salto persiste tras el ajuste: verifica el adaptador del desviador — si está doblado, el indexing no se puede corregir sin reemplazarlo' }
-    ],
-    official: true,
-    progress: 100
-  },
-
-  r_axs_orbit: {
-    type: 'workshop',
-    step: { en: 'RESULT / AXS', es: 'RESULTADO / AXS' },
-    title: { en: 'Orbit fluid leak — warranty claim required', es: 'Fuga del sistema Orbit — reclamación de garantía requerida' },
-    desc: { en: 'The Orbit fluid damper in SRAM Red and Force AXS is a sealed system — it cannot be serviced or refilled at home. A leak means the internal seals have failed.', es: 'El amortiguador de fluido Orbit en SRAM Red y Force AXS es un sistema sellado — no se puede revisar ni rellenar en casa. Una fuga significa que los sellos internos han fallado.' },
-    steps: [],
-    official: true,
-    warranty: true,
-    progress: 100
-  },
-};
 
 // ─── STATE & ENGINE ────────────────────────────────────────────────────────
 let history = [];
@@ -1702,25 +1265,25 @@ function renderQuestion(node, container) {
 
   const step = document.createElement('p');
   step.className = 'card-step';
-  step.textContent = node.step[LANG] || node.step.en;
+  step.textContent = tx(node.step);
   card.appendChild(step);
 
   const q = document.createElement('h2');
   q.className = 'card-question';
-  q.textContent = node.q[LANG] || node.q.en;
+  q.textContent = tx(node.q);
   card.appendChild(q);
 
   if (node.desc) {
     const desc = document.createElement('p');
     desc.className = 'card-desc';
-    desc.innerHTML = (node.desc[LANG] || node.desc.en).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    desc.innerHTML = md(tx(node.desc));
     card.appendChild(desc);
   }
 
   const opts = document.createElement('div');
   opts.className = 'options';
 
-  node.opts.forEach((opt, i) => {
+  node.opts.forEach((opt) => {
     const btn = document.createElement('button');
     btn.className = 'opt ' + (opt.cls || '');
 
@@ -1732,13 +1295,13 @@ function renderQuestion(node, container) {
     const textWrap = document.createElement('div');
     const text = document.createElement('div');
     text.className = 'opt-text';
-    text.textContent = opt.text[LANG] || opt.text.en;
+    text.textContent = tx(opt.text);
     textWrap.appendChild(text);
 
     if (opt.sub) {
       const sub = document.createElement('div');
       sub.className = 'opt-sub';
-      sub.textContent = opt.sub[LANG] || opt.sub.en;
+      sub.textContent = tx(opt.sub);
       textWrap.appendChild(sub);
     }
 
@@ -1752,11 +1315,11 @@ function renderQuestion(node, container) {
 }
 
 function renderResult(node, container) {
-  const typeMap = { solved:'solved', limit:'limit', workshop:'workshop' };
+  const typeMap = { solved: 'solved', limit: 'limit', workshop: 'workshop' };
   const iconMap = {
-    solved: { cls:'green', label: LANG==='es' ? '✓ SOLUCIÓN ENCONTRADA' : '✓ SOLUTION FOUND' },
-    limit:  { cls:'orange', label: LANG==='es' ? '⚠ LÍMITE CASERO' : '⚠ HOME FIX LIMIT' },
-    workshop: { cls:'red', label: LANG==='es' ? '✕ REQUIERE TALLER' : '✕ PROFESSIONAL SERVICE REQUIRED' },
+    solved: { cls: 'green', label: t('solved') },
+    limit: { cls: 'orange', label: t('limit') },
+    workshop: { cls: 'red', label: t('workshop') },
   };
 
   const card = document.createElement('div');
@@ -1769,17 +1332,17 @@ function renderResult(node, container) {
 
   const step = document.createElement('p');
   step.className = 'card-step';
-  step.textContent = node.step[LANG] || node.step.en;
+  step.textContent = tx(node.step);
   card.appendChild(step);
 
   const title = document.createElement('h2');
   title.className = 'result-title';
-  title.textContent = node.title[LANG] || node.title.en;
+  title.textContent = tx(node.title);
   card.appendChild(title);
 
   const desc = document.createElement('p');
   desc.className = 'card-desc';
-  desc.innerHTML = (node.desc[LANG] || node.desc.en).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  desc.innerHTML = md(tx(node.desc));
   card.appendChild(desc);
 
   if (node.steps && node.steps.length > 0) {
@@ -1789,41 +1352,49 @@ function renderResult(node, container) {
       const li = document.createElement('li');
       const num = document.createElement('span');
       num.className = 'step-num';
-      num.textContent = String(i+1).padStart(2,'0');
+      num.textContent = String(i + 1).padStart(2, '0');
       li.appendChild(num);
       const txt = document.createElement('span');
-      txt.innerHTML = (s[LANG] || s.en).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      txt.innerHTML = md(tx(s));
       li.appendChild(txt);
       ul.appendChild(li);
     });
     card.appendChild(ul);
   }
 
-  if (node.prevention) {
-    const prev = document.createElement('div');
-    prev.className = 'result-note';
-    prev.innerHTML = '<strong>' + (LANG==='es' ? 'PREVENCIÓN: ' : 'PREVENTION: ') + '</strong>' + (node.prevention[LANG] || node.prevention.en);
-    card.appendChild(prev);
-  }
-
-  if (node.warranty) {
-    const w = document.createElement('div');
-    w.className = 'result-note';
-    w.innerHTML = '<strong>' + (LANG==='es' ? 'GARANTÍA: ' : 'WARRANTY: ') + '</strong>' + (LANG==='es' ? 'Contacta a tu dealer SRAM autorizado. Proporciona el número de serie del componente y evidencia fotográfica de la fuga.' : 'Contact your authorized SRAM dealer. Provide the component serial number and photographic evidence of the leak.');
-    card.appendChild(w);
-  }
-
-  if (node.community) {
+  if (node.basis === 'community') {
     const cn = document.createElement('div');
     cn.className = 'result-note community';
     cn.textContent = t('community_note');
     card.appendChild(cn);
   }
 
+  // Sources: every diagnosis says which manufacturer document it comes from
+  if (node.sources && node.sources.length) {
+    const src = document.createElement('div');
+    src.className = 'result-note result-sources';
+    const lbl = document.createElement('strong');
+    lbl.textContent = t('sources') + ' ';
+    src.appendChild(lbl);
+    node.sources.forEach((s, i) => {
+      const a = document.createElement('a');
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = s.label;
+      a.style.color = 'var(--yellow)';
+      a.style.textDecoration = 'none';
+      a.style.overflowWrap = 'anywhere';
+      src.appendChild(a);
+      if (i < node.sources.length - 1) src.appendChild(document.createTextNode(' · '));
+    });
+    card.appendChild(src);
+  }
+
   // Peru note
   const peru = document.createElement('div');
   peru.className = 'peru-note';
-  peru.innerHTML = t('peru') + '<a href="https://wa.me/51934391545?text=' + encodeURIComponent(LANG==='es' ? 'Hola BikeLab, diagnóstico Di2/AXS: ' : 'Hi BikeLab, Di2/AXS diagnostic result: ') + '" style="color:var(--yellow);text-decoration:none"><strong>' + t('peru2') + '</strong></a>';
+  peru.innerHTML = t('peru') + '<a href="https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_peru') + tx(node.title)) + '" style="color:var(--yellow);text-decoration:none"><strong>' + t('peru2') + '</strong></a>';
   card.appendChild(peru);
 
   // Social follow
@@ -1856,33 +1427,36 @@ function renderResult(node, container) {
   const actions = document.createElement('div');
   actions.className = 'actions';
 
-  const restart = document.createElement('button');
-  restart.className = 'btn-restart';
-  restart.textContent = t('restart');
-  restart.onclick = () => { history = []; render('q0'); };
-  actions.appendChild(restart);
+  const restartBtn = document.createElement('button');
+  restartBtn.className = 'btn-restart';
+  restartBtn.textContent = t('restart');
+  restartBtn.onclick = () => { history = []; render('q0'); };
+  actions.appendChild(restartBtn);
 
-  if (node.type === 'workshop') {
-    const shimano = document.createElement('a');
-    shimano.className = 'btn-service';
-    shimano.href = 'https://si.shimano.com';
-    shimano.target = '_blank';
-    shimano.rel = 'noopener';
-    shimano.textContent = t('shimano_service') + ' →';
-    actions.appendChild(shimano);
-
-    const sram = document.createElement('a');
-    sram.className = 'btn-service';
-    sram.href = 'https://www.sram.com/en/service';
-    sram.target = '_blank';
-    sram.rel = 'noopener';
-    sram.textContent = t('sram_service') + ' →';
-    actions.appendChild(sram);
+  if (node.type === 'workshop' || node.type === 'limit') {
+    if (node.brand !== 'sram') {
+      const shimano = document.createElement('a');
+      shimano.className = 'btn-service';
+      shimano.href = 'https://si.shimano.com';
+      shimano.target = '_blank';
+      shimano.rel = 'noopener';
+      shimano.textContent = t('shimano_service') + ' →';
+      actions.appendChild(shimano);
+    }
+    if (node.brand !== 'shimano') {
+      const sram = document.createElement('a');
+      sram.className = 'btn-service';
+      sram.href = 'https://www.sram.com/en/service';
+      sram.target = '_blank';
+      sram.rel = 'noopener';
+      sram.textContent = t('sram_service') + ' →';
+      actions.appendChild(sram);
+    }
   }
 
   const wa = document.createElement('a');
   wa.className = 'btn-wa';
-  wa.href = 'https://wa.me/51934391545?text=' + encodeURIComponent(LANG==='es' ? 'Hola BikeLab, diagnóstico Di2/AXS: ' : 'Hi BikeLab, Di2/AXS diagnostic: ');
+  wa.href = 'https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_button') + tx(node.title));
   wa.target = '_blank';
   wa.rel = 'noopener';
   wa.textContent = t('wa') + ' →';

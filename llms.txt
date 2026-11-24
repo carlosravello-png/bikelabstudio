@@ -277,10 +277,11 @@ heart rate zones, efficiency indicators, biomechanical flags.
 - [FIT Analyzer EN](https://www.bikelabstudio.com/articles/fit-analyzer-en.html)
 
 ### DI2/AXS Diagnostic — Electronic Shifting Diagnostic Tree
-Proprietary decision tree for diagnosing Shimano Di2 and SRAM AXS
-electronic shifting systems. Covers: connection failures, sync errors,
-battery behavior, junction box faults, derailleur calibration.
-Input: symptom selection. Output: verified diagnostic path and resolution.
+Decision tree (v3.0.0) for electronic shifting faults on Shimano Di2 12-speed road
+(RD-R9250/R8150/R7150), Shimano Di2 11-speed with junction A, and SRAM eTap AXS road and XPLR:
+7 questions, 30 answers, 22 diagnoses in ES/EN/PT. Each diagnosis gives the manufacturer's
+procedure and links the Shimano or SRAM document and page it comes from.
+Code and verification record: https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic (CC BY-NC 4.0).
 - [DI2/AXS Diagnostic ES](https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html)
 - [DI2/AXS Diagnostic EN](https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html)
 

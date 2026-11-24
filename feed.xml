@@ -541,7 +541,7 @@
       <link>https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html</link>
       <guid isPermaLink="true">https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html</guid>
       <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
-      <description>Proprietary decision tree for diagnosing Shimano Di2 and SRAM AXS electronic shifting systems. Covers connection failures, sync errors, battery behavior, junction box faults, derailleur calibration.</description>
+      <description>Decision tree for electronic shifting faults on Shimano Di2 (12-speed road, 11-speed with junction A) and SRAM eTap AXS road and XPLR. Version 3.0.0: every diagnosis links the Shimano or SRAM document it comes from.</description>
       <dc:creator>Carlos Eduardo Ravello Joo</dc:creator>
       <dc:publisher>BikeLab Studio</dc:publisher>
       <dc:rights>© 2026 BikeLab Studio. All rights reserved. Proprietary methodology.</dc:rights>
