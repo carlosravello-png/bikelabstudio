@@ -76,7 +76,7 @@
         "Mountain Bike SAG Setup Tool",
         "Bicycle Suspension Pressure Calculator"
       ],
-      "description": "SAG calculator for air-sprung MTB suspension: 132 models (102 forks and 30 shocks) from 16 brands, with per-model parameters. Polytropic positive-chamber model (γ = 1.30) solved by bisection, wheel SAG with 26 frame leverage curves plus 6 generic ones, and a fixed uncertainty band by segment. Open source with a verifier and a DOI. BikeLab Studio — Trujillo, Peru.",
+      "description": "SAG calculator for air-sprung MTB suspension: 132 models (102 forks and 30 shocks) from 16 brands, with per-model parameters. Polytropic positive-chamber model (γ = 1.30) solved by bisection, wheel SAG with 26 frame leverage curves plus 6 generic ones, and a fixed uncertainty band by segment. Validated during development with a Monte Carlo in Python (10,000 iterations per model). Open source with a verifier and a DOI. BikeLab Studio — Trujillo, Peru.",
       "applicationCategory": "SportsApplication",
       "applicationSubCategory": "Bicycle Suspension Calculator",
       "operatingSystem": "Web Browser",
@@ -100,6 +100,7 @@
         "Polytropic positive-chamber model (γ = 1.30)",
         "Pressure solved by bisection for each weight and target SAG",
         "Fixed uncertainty band by segment (±15/10/7/5 %)",
+        "Monte Carlo validation in Python during development (10,000 iterations per model); the published engine does not run it",
         "Real wheel SAG calculation with leverage ratio",
         "26 frames with leverage curves plus 6 generic linkage curves",
         "Legacy support: Monarch RT3, Revelation, Yari, Pike 2016-18",
