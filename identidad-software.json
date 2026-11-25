@@ -17,6 +17,7 @@
       "https://www.crunchbase.com/person/carlos-eduardo-ravello-joo",
       "https://independent.academia.edu/CarlosRJ4",
       "https://www.researchgate.net/profile/Carlos-Ravello-Joo",
+      "https://research-software-directory.org/persons/c4196778-e17d-4746-ad11-ce6d6c99ac09",
       "https://www.bikelabstudio.com/#carlos-ravello",
       "https://zoovettravel.com/#carlos-ravello"
     ],
@@ -28,7 +29,11 @@
     "rsd_persona": {
       "url": "https://research-software-directory.org/persons/0009-0007-5631-7436",
       "publica": true,
-      "estado": "pendiente: aun NO esta en el sameAs canonico de carlosravello.com. Entra en bikelabstudio despues."
+      "estado": "pendiente: aun NO esta en el sameAs canonico de carlosravello.com. Entra en bikelabstudio despues.",
+      "url_canonica": "https://research-software-directory.org/persons/c4196778-e17d-4746-ad11-ce6d6c99ac09",
+      "url_alias": "https://research-software-directory.org/persons/0009-0007-5631-7436",
+      "nota_formas": "Las dos URL abren el mismo perfil (verificado en Chrome el 25/11/2026: HTTP 200, mismo nombre, mismas 6 herramientas; RSD no declara canonical). El JSON-LD usa la UUID porque es la cadena exacta del Person canonico. llms.txt cita la forma ORCID y se deja asi.",
+      "estado_tras_fase4": "En el sameAs del Person canonico de carlosravello.com desde el 25/11/2026 (forma UUID). En los 821 nodos Person de bikelabstudio desde el commit 20b3a80."
     },
     "estado_en_bikelabstudio_2026-11-25": {
       "nodos_Person": 850,
@@ -45,6 +50,31 @@
         "https://zenodo.org/search?q=ravello+joo",
         "https://carlosravello.com/#person"
       ]
+    },
+    "estado_en_bikelabstudio_tras_fase4": {
+      "medido_en": "HEAD 20b3a80 (repo) y en vivo sobre las 881 URL del sitemap, 25/11/2026",
+      "commits": [
+        "1f68cc8 piloto 6 paginas",
+        "20b3a80 resto del sitio (782 paginas)"
+      ],
+      "paginas_con_Person": 788,
+      "nodos_Person": 821,
+      "con_los_7_enlaces_sumados": 821,
+      "enlaces_sumados": [
+        "ISNI",
+        "Google Scholar",
+        "GitHub",
+        "Crunchbase",
+        "Academia",
+        "ResearchGate",
+        "RSD (UUID)"
+      ],
+      "no_sumados_por_decision": [
+        "https://pe.linkedin.com/in/carlos-ravello-joo-3a1047262 (ya esta www.linkedin.com, mismo perfil)",
+        "https://www.bikelabstudio.com/#carlos-ravello",
+        "https://zoovettravel.com/#carlos-ravello"
+      ],
+      "sameAs_no_Person_intactos": 1173
     }
   },
   "organizacion": {
@@ -272,6 +302,7 @@
     "feanor": "carlosravello.com"
   },
   "_correcciones": [
-    "2026-11-25: en la primera version, 20671797 (white paper PSI) y 20735088 (dataset 132 suspensiones) estaban mal clasificados como versiones previas del software. RSD los enlaza desde la ficha, pero no son versiones. Corregido a dois_relacionados."
+    "2026-11-25: en la primera version, 20671797 (white paper PSI) y 20735088 (dataset 132 suspensiones) estaban mal clasificados como versiones previas del software. RSD los enlaza desde la ficha, pero no son versiones. Corregido a dois_relacionados.",
+    "2026-11-25 (tarde): las cifras de estado_en_bikelabstudio_2026-11-25 (850 nodos, isni 3, orcid 780) no coinciden con el censo estructural sobre HEAD 1c15098 (821 nodos, isni 6, orcid 821). Se conservan como historia; las cifras validas son las de estado_en_bikelabstudio_tras_fase4."
   ]
 }
