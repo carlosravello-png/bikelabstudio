@@ -91,6 +91,28 @@
       "nodos": 803,
       "sin_founder": 50,
       "sin_sameAs": 680
+    },
+    "sameAs_retirado_2026-11-25": {
+      "url": "https://orcid.org/0009-0007-5631-7436",
+      "quitado_de": {
+        "#business (Organization/LocalBusiness)": [
+          "index.html",
+          "index-en.html",
+          "index-pt.html",
+          "about.html",
+          "about-en.html",
+          "about-pt.html"
+        ],
+        "#website (WebSite)": [
+          "index.html",
+          "index-en.html",
+          "index-pt.html"
+        ]
+      },
+      "por_que": "sameAs afirma identidad. El ORCID identifica a Carlos (persona); en #business y #website decia que el negocio y el sitio SON Carlos. Son entidades distintas con identidad propia: BikeLab Studio tiene ISNI 0000000530514237; Carlos tiene ORCID, ISNI 0000000530514085 y Knowledge Graph /g/11zb6pmf10.",
+      "relacion_que_se_conserva": "#business -> founder -> #person; #website -> author -> #person. El Person lleva el ORCID.",
+      "regla_para_el_futuro": "El ORCID de Carlos va SOLO en el sameAs del Person (https://carlosravello.com/#person). Nunca en el sameAs de #business, #website ni de ningun otro nodo. No reponerlo.",
+      "excepcion_a_solo_suma": "Unica retirada aprobada por Carlos de forma explicita, 25/11/2026."
     }
   },
   "proyecto": {
