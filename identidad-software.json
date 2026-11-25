@@ -3,7 +3,6 @@
   "_verificado": "2026-11-25",
   "_regla": "Solo suma. Nada de lo existente en el sitio se quita ni se renombra (decision de Carlos, 2026-11-25). Los @id de software se conservan tal cual.",
   "_alcance": "Solo bikelabstudio.com. exactcdf y Feanor pertenecen a carlosravello.com (decision de Carlos, 2026-11-25) y NO entran aqui.",
-
   "persona": {
     "id": "https://carlosravello.com/#person",
     "nombre": "Carlos Eduardo Ravello Joo",
@@ -21,108 +20,258 @@
       "https://www.bikelabstudio.com/#carlos-ravello",
       "https://zoovettravel.com/#carlos-ravello"
     ],
-    "identificadores_canonicos": {"ORCID": "0009-0007-5631-7436", "ISNI": "0000 0005 3051 4085", "Google Knowledge Graph ID": "/g/11zb6pmf10"},
-    "rsd_persona": {"url": "https://research-software-directory.org/persons/0009-0007-5631-7436", "publica": true, "estado": "pendiente: aun NO esta en el sameAs canonico de carlosravello.com. Entra en bikelabstudio despues."},
+    "identificadores_canonicos": {
+      "ORCID": "0009-0007-5631-7436",
+      "ISNI": "0000 0005 3051 4085",
+      "Google Knowledge Graph ID": "/g/11zb6pmf10"
+    },
+    "rsd_persona": {
+      "url": "https://research-software-directory.org/persons/0009-0007-5631-7436",
+      "publica": true,
+      "estado": "pendiente: aun NO esta en el sameAs canonico de carlosravello.com. Entra en bikelabstudio despues."
+    },
     "estado_en_bikelabstudio_2026-11-25": {
       "nodos_Person": 850,
       "variantes_de_sameAs": 9,
-      "isni": 3, "researchgate": 0, "github": 154, "orcid": 780,
+      "isni": 3,
+      "researchgate": 0,
+      "github": 154,
+      "orcid": 780,
       "linkedin": "usa www.linkedin.com; el canonico usa pe.linkedin.com (mismo perfil)",
-      "extras_que_se_conservan": ["https://carlosravello.com", "https://www.bikelabstudio.com", "https://zoovettravel.com", "https://zenodo.org/search?q=ravello+joo", "https://carlosravello.com/#person"]
+      "extras_que_se_conservan": [
+        "https://carlosravello.com",
+        "https://www.bikelabstudio.com",
+        "https://zoovettravel.com",
+        "https://zenodo.org/search?q=ravello+joo",
+        "https://carlosravello.com/#person"
+      ]
     }
   },
-
   "organizacion": {
     "id": "https://www.bikelabstudio.com/#business",
     "founder": "https://carlosravello.com/#person",
-    "rsd": {"url": "https://research-software-directory.org/organisations/bikelab-studio", "software_vinculado": 0, "logo": false, "carlos_maintainer": false,
-            "estado": "NO USAR todavia: la pagina muestra 'Nothing to show'. Correo de maintainer enviado 2026-11-25."},
-    "estado_en_bikelabstudio_2026-11-25": {"nodos": 803, "sin_founder": 50, "sin_sameAs": 680}
+    "rsd": {
+      "url": "https://research-software-directory.org/organisations/bikelab-studio",
+      "software_vinculado": 0,
+      "logo": false,
+      "carlos_maintainer": false,
+      "estado": "NO USAR todavia: la pagina muestra 'Nothing to show'. Correo de maintainer enviado 2026-11-25."
+    },
+    "estado_en_bikelabstudio_2026-11-25": {
+      "nodos": 803,
+      "sin_founder": 50,
+      "sin_sameAs": 680
+    }
   },
-
   "proyecto": {
     "titulo": "BikeLab Studio: verified cycling engineering",
     "rsd": "https://research-software-directory.org/projects/bikelab-studio-verified-cycling-engineering",
     "inicio": "2026-06-12",
-    "dominios_erc": ["PE Physical Sciences and Engineering", "PE8 Products and Processes Engineering", "PE8_7 Mechanical engineering"],
+    "dominios_erc": [
+      "PE Physical Sciences and Engineering",
+      "PE8 Products and Processes Engineering",
+      "PE8_7 Mechanical engineering"
+    ],
     "codigo": "https://github.com/carlosravello-png",
-    "regla_de_cada_herramienta": ["motor copiado byte a byte con SHA-256", "golden vectors", "verificador independiente", "CI publico", "DOI Zenodo + archivo Software Heritage", "notas honestas de limites"]
+    "regla_de_cada_herramienta": [
+      "motor copiado byte a byte con SHA-256",
+      "golden vectors",
+      "verificador independiente",
+      "CI publico",
+      "DOI Zenodo + archivo Software Heritage",
+      "notas honestas de limites"
+    ]
   },
-
   "software": {
     "trail": {
       "nombre": "BikeLab Trail Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-trail-calculator",
       "version": "1.0.0",
-      "doi_concepto": "10.5281/zenodo.24477625", "doi_version": "10.5281/zenodo.24477626", "dois_previos": [],
+      "doi_concepto": "10.5281/zenodo.24477625",
+      "doi_version": "10.5281/zenodo.24477626",
+      "dois_previos": [],
       "swhid": "swh:1:rev:109d2c84229e3f9afcf18d6aca8eedfe1a76aacb",
       "github": "https://github.com/carlosravello-png/bikelab-trail-calculator",
       "github_pages": "https://carlosravello-png.github.io/bikelab-trail-calculator/",
       "ci": "https://github.com/carlosravello-png/bikelab-trail-calculator/actions/workflows/verify.yml",
-      "licencia": {"spdx": "CC-BY-4.0", "url": "https://spdx.org/licenses/CC-BY-4.0.html"},
-      "keywords_rsd": ["Verification", "bicycle", "fork offset", "golden vectors", "head angle", "mountain bike", "steering geometry", "trail", "wheel flop"],
-      "paginas": {"en": "articles/trail-calculator-en.html", "es": "articles/calculadora-trail-geometria-es.html", "pt": "articles/calculadora-trail-geometria-pt.html"}
+      "licencia": {
+        "spdx": "CC-BY-4.0",
+        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+      },
+      "keywords_rsd": [
+        "Verification",
+        "bicycle",
+        "fork offset",
+        "golden vectors",
+        "head angle",
+        "mountain bike",
+        "steering geometry",
+        "trail",
+        "wheel flop"
+      ],
+      "paginas": {
+        "en": "articles/trail-calculator-en.html",
+        "es": "articles/calculadora-trail-geometria-es.html",
+        "pt": "articles/calculadora-trail-geometria-pt.html"
+      }
     },
     "psi": {
       "nombre": "BikeLab PSI Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-psi-calculator",
       "version": "3.0.0",
-      "doi_concepto": "10.5281/zenodo.24479992", "doi_version": "10.5281/zenodo.24479993", "dois_previos": ["10.5281/zenodo.20673124", "10.5281/zenodo.20671797"],
+      "doi_concepto": "10.5281/zenodo.24479992",
+      "doi_version": "10.5281/zenodo.24479993",
+      "dois_previos": [
+        "10.5281/zenodo.20673124"
+      ],
       "swhid": "swh:1:rev:d76a0fa901142aa7a22e3a2a99c15b0ab210965a",
       "github": "https://github.com/carlosravello-png/bikelab-psi-calculator",
       "github_pages": null,
       "ci": "https://github.com/carlosravello-png/bikelab-psi-calculator/actions/workflows/verify.yml",
-      "licencia": {"spdx": "CC-BY-4.0", "url": "https://spdx.org/licenses/CC-BY-4.0.html"},
-      "keywords_rsd": ["Berto", "Verification", "bicycle", "constant deflection", "golden vectors", "gravel", "mountain bike", "road", "tire pressure"],
-      "paginas": {"en": "articles/psi-calculator-en.html", "es": "articles/psi-calculator-es.html", "pt": "articles/psi-calculator-pt.html"}
+      "licencia": {
+        "spdx": "CC-BY-4.0",
+        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+      },
+      "keywords_rsd": [
+        "Berto",
+        "Verification",
+        "bicycle",
+        "constant deflection",
+        "golden vectors",
+        "gravel",
+        "mountain bike",
+        "road",
+        "tire pressure"
+      ],
+      "paginas": {
+        "en": "articles/psi-calculator-en.html",
+        "es": "articles/psi-calculator-es.html",
+        "pt": "articles/psi-calculator-pt.html"
+      },
+      "dois_relacionados": [
+        {
+          "doi": "10.5281/zenodo.20671797",
+          "tipo": "white paper del modelo de deformacion constante (PSI)",
+          "fuente": "llms.txt linea 333"
+        }
+      ]
     },
     "sag": {
       "nombre": "BikeLab SAG Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-sag-calculator",
       "version": "1.0.0",
-      "doi_concepto": "10.5281/zenodo.24484750", "doi_version": "10.5281/zenodo.24484751", "dois_previos": ["10.5281/zenodo.20672790", "10.5281/zenodo.20735088"],
+      "doi_concepto": "10.5281/zenodo.24484750",
+      "doi_version": "10.5281/zenodo.24484751",
+      "dois_previos": [
+        "10.5281/zenodo.20672790"
+      ],
       "swhid": "swh:1:rev:6a590fe9132a25a709670a9fc74c4a4f802684b7",
       "github": "https://github.com/carlosravello-png/bikelab-sag-calculator",
       "github_pages": "https://carlosravello-png.github.io/bikelab-sag-calculator/",
       "ci": "https://github.com/carlosravello-png/bikelab-sag-calculator/actions/workflows/verify.yml",
-      "licencia": {"spdx": "CC-BY-4.0", "url": "https://spdx.org/licenses/CC-BY-4.0.html"},
-      "keywords_rsd": ["Verification", "air spring", "fork", "golden vectors", "mountain bike", "polytropic", "rear shock", "sag", "suspension"],
-      "paginas": {"en": "articles/sag-calculator-en.html", "es": "articles/sag-calculator-es.html", "pt": "articles/sag-calculator-pt.html"}
+      "licencia": {
+        "spdx": "CC-BY-4.0",
+        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+      },
+      "keywords_rsd": [
+        "Verification",
+        "air spring",
+        "fork",
+        "golden vectors",
+        "mountain bike",
+        "polytropic",
+        "rear shock",
+        "sag",
+        "suspension"
+      ],
+      "paginas": {
+        "en": "articles/sag-calculator-en.html",
+        "es": "articles/sag-calculator-es.html",
+        "pt": "articles/sag-calculator-pt.html"
+      },
+      "dois_relacionados": [
+        {
+          "doi": "10.5281/zenodo.20735088",
+          "tipo": "dataset de 132 suspensiones MTB calibradas",
+          "fuente": "llms.txt linea 345"
+        }
+      ]
     },
     "fit": {
       "nombre": "BikeLab FIT Analyzer",
       "rsd": "https://research-software-directory.org/software/bikelab-fit-analyzer",
       "version": "2.0.0",
-      "doi_concepto": "10.5281/zenodo.24485833", "doi_version": "10.5281/zenodo.24485834", "dois_previos": ["10.5281/zenodo.20673166"],
+      "doi_concepto": "10.5281/zenodo.24485833",
+      "doi_version": "10.5281/zenodo.24485834",
+      "dois_previos": [
+        "10.5281/zenodo.20673166"
+      ],
       "swhid": "swh:1:rev:f0cf8f435ea3030afdef07709e3199f0198001df",
       "github": "https://github.com/carlosravello-png/bikelab-fit-analyzer",
       "github_pages": null,
       "ci": "https://github.com/carlosravello-png/bikelab-fit-analyzer/actions/workflows/verify.yml",
-      "licencia": {"spdx": "PolyForm-Noncommercial-1.0.0", "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html"},
-      "keywords_rsd": ["FIT file", "Monte Carlo", "cadence", "cycling", "normalized power", "variability index"],
-      "paginas": {"en": "articles/fit-analyzer-en.html", "es": "articles/fit-analyzer-es.html", "pt": "articles/fit-analyzer-pt.html"},
+      "licencia": {
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html"
+      },
+      "keywords_rsd": [
+        "FIT file",
+        "Monte Carlo",
+        "cadence",
+        "cycling",
+        "normalized power",
+        "variability index"
+      ],
+      "paginas": {
+        "en": "articles/fit-analyzer-en.html",
+        "es": "articles/fit-analyzer-es.html",
+        "pt": "articles/fit-analyzer-pt.html"
+      },
       "pendiente_rsd": "En RSD el 'get started' apunta a .../fit-analyzer-en sin .html y no enlaza ES ni PT (las otras cuatro si)."
     },
     "di2axs": {
       "nombre": "BikeLab Di2/AXS Diagnostic",
       "rsd": "https://research-software-directory.org/software/bikelab-di2axs-diagnostic",
       "version": "3.0.0",
-      "doi_concepto": "10.5281/zenodo.24488780", "doi_version": "10.5281/zenodo.24488781", "dois_previos": ["10.5281/zenodo.20673193"],
+      "doi_concepto": "10.5281/zenodo.24488780",
+      "doi_version": "10.5281/zenodo.24488781",
+      "dois_previos": [
+        "10.5281/zenodo.20673193"
+      ],
       "swhid": "swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8",
       "github": "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic",
       "github_pages": "https://carlosravello-png.github.io/bikelab-di2-axs-diagnostic/",
       "ci": "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml",
-      "licencia": {"spdx": "CC-BY-NC-4.0", "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"},
-      "keywords_rsd": ["SRAM AXS", "Shimano Di2", "bicycle", "decision tree", "electronic shifting", "troubleshooting"],
-      "paginas": {"en": "articles/di2-axs-diagnostic.html", "es": "articles/di2-axs-diagnostic-es.html", "pt": "articles/di2-axs-diagnostic-pt.html"}
+      "licencia": {
+        "spdx": "CC-BY-NC-4.0",
+        "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+      },
+      "keywords_rsd": [
+        "SRAM AXS",
+        "Shimano Di2",
+        "bicycle",
+        "decision tree",
+        "electronic shifting",
+        "troubleshooting"
+      ],
+      "paginas": {
+        "en": "articles/di2-axs-diagnostic.html",
+        "es": "articles/di2-axs-diagnostic-es.html",
+        "pt": "articles/di2-axs-diagnostic-pt.html"
+      }
     }
   },
-
   "pendientes_en_rsd_que_hace_carlos": [
     "Vincular las 5 herramientas a la organizacion BikeLab Studio (hoy 0) y subir logo: espera respuesta de maintainer.",
     "Marcar persona de contacto (hoy false en las 5 herramientas y en el proyecto).",
     "FIT: get started con .html y enlaces ES/PT.",
     "Mentions: hoy 0. Anadir white papers y articulos de validacion con DOI."
   ],
-  "excluido": {"exactcdf": "carlosravello.com", "feanor": "carlosravello.com"}
+  "excluido": {
+    "exactcdf": "carlosravello.com",
+    "feanor": "carlosravello.com"
+  },
+  "_correcciones": [
+    "2026-11-25: en la primera version, 20671797 (white paper PSI) y 20735088 (dataset 132 suspensiones) estaban mal clasificados como versiones previas del software. RSD los enlaza desde la ficha, pero no son versiones. Corregido a dois_relacionados."
+  ]
 }
