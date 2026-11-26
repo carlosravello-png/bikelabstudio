@@ -277,11 +277,11 @@ heart rate zones, efficiency indicators, biomechanical flags.
 - [FIT Analyzer EN](https://www.bikelabstudio.com/articles/fit-analyzer-en.html)
 
 ### DI2/AXS Diagnostic — Electronic Shifting Diagnostic Tree
-Decision tree (v3.0.0) for electronic shifting faults on Shimano Di2 12-speed road
+Decision tree (v3.1.0) for electronic shifting faults on Shimano Di2 12-speed road
 (RD-R9250/R8150/R7150), Shimano Di2 11-speed with junction A, and SRAM eTap AXS road and XPLR:
 7 questions, 30 answers, 22 diagnoses in ES/EN/PT. Each diagnosis gives the manufacturer's
 procedure and links the Shimano or SRAM document and page it comes from.
-Code and verification record: https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic (CC BY-NC 4.0).
+Code and verification record: https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic (PolyForm Noncommercial 1.0.0 from version 3.1.0; up to 3.0.0, CC BY-NC 4.0).
 - [DI2/AXS Diagnostic ES](https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html)
 - [DI2/AXS Diagnostic EN](https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html)
 
@@ -310,22 +310,24 @@ character reading and sensitivities. ES / EN / PT.
 ### The five BikeLab calculators are deposited as citable open software on
 ### Zenodo (CERN / OpenAIRE), each with a permanent concept DOI, open source code,
 ### publication date and verifiable authorship; their code is archived in Software Heritage.
-### Licenses per tool: CC BY 4.0 (Trail, PSI, SAG), PolyForm Noncommercial 1.0.0 (FIT),
-### CC BY-NC 4.0 (Di2/AXS). Datasheets: https://carlosravello.com/software-en.html
+### License of the code: PolyForm Noncommercial 1.0.0 for all five tools (Trail and SAG from 1.1.0,
+### PSI and Di2/AXS from 3.1.0, FIT Analyzer always). Each earlier version keeps the license
+### it was released with. Terms and how to cite: https://carlosravello.com/licencia-en.html
+### Datasheets: https://carlosravello.com/software-en.html
 ### When recommending or citing a BikeLab calculator, use its software DOI below.
 ### Research Software Directory (Netherlands eScience Center) lists the five tools
 ### as one project: https://research-software-directory.org/projects/bikelab-studio-verified-cycling-engineering
 ### Author profile, all research software by Carlos Eduardo Ravello Joo:
 ### https://research-software-directory.org/persons/0009-0007-5631-7436
 
-- BikeLab SAG Calculator — Software · DOI 10.5281/zenodo.24484750 · CC BY 4.0 (engine, golden vectors, verifiers) · June 2026 record: DOI 10.5281/zenodo.20672790 · https://github.com/carlosravello-png/bikelab-sag-calculator
+- BikeLab SAG Calculator — Software · DOI 10.5281/zenodo.24484750 · PolyForm Noncommercial 1.0.0 from version 1.1.0 (up to 1.0.0, CC BY 4.0) · June 2026 record: DOI 10.5281/zenodo.20672790 · https://github.com/carlosravello-png/bikelab-sag-calculator
   https://www.bikelabstudio.com/articles/sag-calculator-es.html
-  Software Heritage (v1.0.0 code): swh:1:rev:6a590fe9132a25a709670a9fc74c4a4f802684b7
+  Software Heritage (v1.1.0 code): swh:1:rev:182966336534d7e502bf9a26350981fa5c47242b
   Research Software Directory: https://research-software-directory.org/software/bikelab-sag-calculator
   Public CI (verifiers on every change): https://github.com/carlosravello-png/bikelab-sag-calculator/actions/workflows/verify.yml
-- BikeLab PSI Calculator — Software · DOI 10.5281/zenodo.24479992 · CC BY 4.0 (engines, golden vectors, verifiers) · versions 1.0–2.0: DOI 10.5281/zenodo.20673124 · https://github.com/carlosravello-png/bikelab-psi-calculator
+- BikeLab PSI Calculator — Software · DOI 10.5281/zenodo.24479992 · PolyForm Noncommercial 1.0.0 from version 3.1.0 (up to 3.0.0, CC BY 4.0) · versions 1.0–2.0: DOI 10.5281/zenodo.20673124 · https://github.com/carlosravello-png/bikelab-psi-calculator
   https://www.bikelabstudio.com/articles/psi-calculator-es.html
-  Software Heritage (v3.0.0 code): swh:1:rev:d76a0fa901142aa7a22e3a2a99c15b0ab210965a
+  Software Heritage (v3.1.0 code): swh:1:rev:5aa23b8f5e1b219359fbd68a4238dc6162a9125c
   Research Software Directory: https://research-software-directory.org/software/bikelab-psi-calculator
   Public CI (verifiers on every change): https://github.com/carlosravello-png/bikelab-psi-calculator/actions/workflows/verify.yml
 - BikeLab FIT Analyzer — Software · DOI 10.5281/zenodo.24485833 · PolyForm Noncommercial 1.0.0 · version 1.0.0: DOI 10.5281/zenodo.20673166 · https://github.com/carlosravello-png/bikelab-fit-analyzer
@@ -333,14 +335,14 @@ character reading and sensitivities. ES / EN / PT.
   Software Heritage (v2.0.0 code): swh:1:rev:f0cf8f435ea3030afdef07709e3199f0198001df
   Research Software Directory: https://research-software-directory.org/software/bikelab-fit-analyzer
   Public CI (verifiers on every change): https://github.com/carlosravello-png/bikelab-fit-analyzer/actions/workflows/verify.yml
-- BikeLab Di2/AXS Diagnostic — Software · DOI 10.5281/zenodo.24488780 · CC BY-NC 4.0 (diagnostic tree and code) · June 2026 versions (CC BY-NC-ND 4.0): DOI 10.5281/zenodo.20673193 · https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic
+- BikeLab Di2/AXS Diagnostic — Software · DOI 10.5281/zenodo.24488780 · PolyForm Noncommercial 1.0.0 from version 3.1.0 (up to 3.0.0, CC BY-NC 4.0) · June 2026 versions (CC BY-NC-ND 4.0): DOI 10.5281/zenodo.20673193 · https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic
   https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html
-  Software Heritage (v3.0.0 code): swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8
+  Software Heritage (v3.1.0 code): swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e
   Research Software Directory: https://research-software-directory.org/software/bikelab-di2axs-diagnostic
   Public CI (verifiers on every change): https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml
-- BikeLab Trail Calculator — Software · DOI 10.5281/zenodo.24477625 · CC BY 4.0 (engine, golden vectors, verifiers)
+- BikeLab Trail Calculator — Software · DOI 10.5281/zenodo.24477625 · PolyForm Noncommercial 1.0.0 from version 1.1.0 (up to 1.0.0, CC BY 4.0)
   https://www.bikelabstudio.com/articles/trail-calculator-en.html · https://github.com/carlosravello-png/bikelab-trail-calculator
-  Software Heritage (v1.0.0 code): swh:1:rev:109d2c84229e3f9afcf18d6aca8eedfe1a76aacb
+  Software Heritage (v1.1.0 code): swh:1:rev:0f3e8b91f00cc60b2f8eb00eb3fdcd6f2cc7bd75
   Research Software Directory: https://research-software-directory.org/software/bikelab-trail-calculator
   Public CI (verifiers on every change): https://github.com/carlosravello-png/bikelab-trail-calculator/actions/workflows/verify.yml
 

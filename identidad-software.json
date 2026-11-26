@@ -138,17 +138,18 @@
     "trail": {
       "nombre": "BikeLab Trail Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-trail-calculator",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "doi_concepto": "10.5281/zenodo.24477625",
-      "doi_version": "10.5281/zenodo.24477626",
+      "doi_version": "10.5281/zenodo.24549760",
       "dois_previos": [],
-      "swhid": "swh:1:rev:109d2c84229e3f9afcf18d6aca8eedfe1a76aacb",
+      "swhid": "swh:1:rev:0f3e8b91f00cc60b2f8eb00eb3fdcd6f2cc7bd75",
       "github": "https://github.com/carlosravello-png/bikelab-trail-calculator",
       "github_pages": "https://carlosravello-png.github.io/bikelab-trail-calculator/",
       "ci": "https://github.com/carlosravello-png/bikelab-trail-calculator/actions/workflows/verify.yml",
       "licencia": {
-        "spdx": "CC-BY-4.0",
-        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html",
+        "desde_version": "1.1.0"
       },
       "keywords_rsd": [
         "Verification",
@@ -165,24 +166,37 @@
         "en": "articles/trail-calculator-en.html",
         "es": "articles/calculadora-trail-geometria-es.html",
         "pt": "articles/calculadora-trail-geometria-pt.html"
-      }
+      },
+      "historial": [
+        {
+          "version": "1.0.0",
+          "doi_version": "10.5281/zenodo.24477626",
+          "swhid": "swh:1:rev:109d2c84229e3f9afcf18d6aca8eedfe1a76aacb",
+          "licencia": {
+            "spdx": "CC-BY-4.0",
+            "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+          },
+          "vigente_hasta": "2026-11-26"
+        }
+      ]
     },
     "psi": {
       "nombre": "BikeLab PSI Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-psi-calculator",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "doi_concepto": "10.5281/zenodo.24479992",
-      "doi_version": "10.5281/zenodo.24479993",
+      "doi_version": "10.5281/zenodo.24549819",
       "dois_previos": [
         "10.5281/zenodo.20673124"
       ],
-      "swhid": "swh:1:rev:d76a0fa901142aa7a22e3a2a99c15b0ab210965a",
+      "swhid": "swh:1:rev:5aa23b8f5e1b219359fbd68a4238dc6162a9125c",
       "github": "https://github.com/carlosravello-png/bikelab-psi-calculator",
       "github_pages": null,
       "ci": "https://github.com/carlosravello-png/bikelab-psi-calculator/actions/workflows/verify.yml",
       "licencia": {
-        "spdx": "CC-BY-4.0",
-        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html",
+        "desde_version": "3.1.0"
       },
       "keywords_rsd": [
         "Berto",
@@ -206,24 +220,37 @@
           "tipo": "white paper del modelo de deformacion constante (PSI)",
           "fuente": "llms.txt linea 333"
         }
+      ],
+      "historial": [
+        {
+          "version": "3.0.0",
+          "doi_version": "10.5281/zenodo.24479993",
+          "swhid": "swh:1:rev:d76a0fa901142aa7a22e3a2a99c15b0ab210965a",
+          "licencia": {
+            "spdx": "CC-BY-4.0",
+            "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+          },
+          "vigente_hasta": "2026-11-26"
+        }
       ]
     },
     "sag": {
       "nombre": "BikeLab SAG Calculator",
       "rsd": "https://research-software-directory.org/software/bikelab-sag-calculator",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "doi_concepto": "10.5281/zenodo.24484750",
-      "doi_version": "10.5281/zenodo.24484751",
+      "doi_version": "10.5281/zenodo.24549863",
       "dois_previos": [
         "10.5281/zenodo.20672790"
       ],
-      "swhid": "swh:1:rev:6a590fe9132a25a709670a9fc74c4a4f802684b7",
+      "swhid": "swh:1:rev:182966336534d7e502bf9a26350981fa5c47242b",
       "github": "https://github.com/carlosravello-png/bikelab-sag-calculator",
       "github_pages": "https://carlosravello-png.github.io/bikelab-sag-calculator/",
       "ci": "https://github.com/carlosravello-png/bikelab-sag-calculator/actions/workflows/verify.yml",
       "licencia": {
-        "spdx": "CC-BY-4.0",
-        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html",
+        "desde_version": "1.1.0"
       },
       "keywords_rsd": [
         "Verification",
@@ -246,6 +273,18 @@
           "doi": "10.5281/zenodo.20735088",
           "tipo": "dataset de 132 suspensiones MTB calibradas",
           "fuente": "llms.txt linea 345"
+        }
+      ],
+      "historial": [
+        {
+          "version": "1.0.0",
+          "doi_version": "10.5281/zenodo.24484751",
+          "swhid": "swh:1:rev:6a590fe9132a25a709670a9fc74c4a4f802684b7",
+          "licencia": {
+            "spdx": "CC-BY-4.0",
+            "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+          },
+          "vigente_hasta": "2026-11-26"
         }
       ]
     },
@@ -284,19 +323,20 @@
     "di2axs": {
       "nombre": "BikeLab Di2/AXS Diagnostic",
       "rsd": "https://research-software-directory.org/software/bikelab-di2axs-diagnostic",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "doi_concepto": "10.5281/zenodo.24488780",
-      "doi_version": "10.5281/zenodo.24488781",
+      "doi_version": "10.5281/zenodo.24549832",
       "dois_previos": [
         "10.5281/zenodo.20673193"
       ],
-      "swhid": "swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8",
+      "swhid": "swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e",
       "github": "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic",
       "github_pages": "https://carlosravello-png.github.io/bikelab-di2-axs-diagnostic/",
       "ci": "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml",
       "licencia": {
-        "spdx": "CC-BY-NC-4.0",
-        "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html",
+        "desde_version": "3.1.0"
       },
       "keywords_rsd": [
         "SRAM AXS",
@@ -310,7 +350,19 @@
         "en": "articles/di2-axs-diagnostic.html",
         "es": "articles/di2-axs-diagnostic-es.html",
         "pt": "articles/di2-axs-diagnostic-pt.html"
-      }
+      },
+      "historial": [
+        {
+          "version": "3.0.0",
+          "doi_version": "10.5281/zenodo.24488781",
+          "swhid": "swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8",
+          "licencia": {
+            "spdx": "CC-BY-NC-4.0",
+            "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+          },
+          "vigente_hasta": "2026-11-26"
+        }
+      ]
     }
   },
   "pendientes_en_rsd_que_hace_carlos": [
@@ -326,5 +378,11 @@
   "_correcciones": [
     "2026-11-25: en la primera version, 20671797 (white paper PSI) y 20735088 (dataset 132 suspensiones) estaban mal clasificados como versiones previas del software. RSD los enlaza desde la ficha, pero no son versiones. Corregido a dois_relacionados.",
     "2026-11-25 (tarde): las cifras de estado_en_bikelabstudio_2026-11-25 (850 nodos, isni 3, orcid 780) no coinciden con el censo estructural sobre HEAD 1c15098 (821 nodos, isni 6, orcid 821). Se conservan como historia; las cifras validas son las de estado_en_bikelabstudio_tras_fase4."
-  ]
+  ],
+  "fuente_licencias_software": {
+    "es": "https://carlosravello.com/licencia.html",
+    "en": "https://carlosravello.com/licencia-en.html",
+    "pt": "https://carlosravello.com/licencia-en.html",
+    "_nota": "Desde el 26/11/2026 la fuente de las licencias del software es carlosravello.com. Cada version publicada conserva la licencia con la que salio."
+  }
 }
